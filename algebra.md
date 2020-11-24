@@ -76,11 +76,12 @@ in which `a` is called the base of the *logarithm*. [blinder]
 冪乗と冪根は逆演算である。冪乗のもうひとつの逆演算が「対数」である。`logₐx`における`a`を底(base)と呼ぶ。
 
 ```
-a⁰ = 1 ⟹ logₐ1 = 0 ⟺ log 1 = 0 (any base)
+a⁰ = 1 ⟹ logₐ1 = 0 ⟺ log 1 = 0
 a¹ = a ⟹ logₐa = 1
 x = aⁱ, y = aⁿ ⟺ i = logₐx, n = logₐy
- ⟹ xy = aⁱ⁺ⁿ ⟺ i + n = logₐ(xy)
- ⟹ log (xy) = log x + log y (any base)
+ ⟹ xy = aⁱ⁺ⁿ ⟺ i + n = logₐxy
+ ⟹ log xy = log x + log y
+ ⟹ log xⁿ = n × log x
 ```
 
 Logarithms to the base 10 are called *Briggsian* or *common logarithms*. [blinder]
@@ -90,6 +91,18 @@ Logarithms to the base 10 are called *Briggsian* or *common logarithms*. [blinde
 Of more fundamental mathematical significance are logarithms to the base `e = 2.71828...`, known as *natural logarithms*. [blinder]
 
 底を`e = 2.71828...`とする対数は数学上の基本的重要性を持っており、自然対数(natural logarithms)と呼ぶ。
+
+```
+log₂1    =  0
+log₂2    =  1
+log₂4    =  2
+log₂8    =  3
+log₂16   =  4
+log₂128  =  7   7 bits: [0, 127]
+log₂256  =  8   1 byte: [0, 255]
+log₂1024 = 10
+log₂4096 = 12
+```
 
 ## References:
 
