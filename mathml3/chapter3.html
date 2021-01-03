@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Chapter 3 Presentation Markup</title>
+    <style>
+        .math_color {
+            background-color: lightblue;
+            padding: 0.5em 1em;
+        }
+    </style>
+</head>
+<body>
+<h1>3 Presentation Markup</h1>
+<h2>3.2 Token Elements</h2>
+<h3>3.2.3 Identifier <code>&lt;mi&gt;</code></h3>
+<p>
+    Identifiers include function names such as "sin". 
+    Expressions such as "sin x" should be written using 
+    the character U+2061 (which also has the entity names
+    &amp;af; and &amp;ApplyFunction;) as shown below;
+</p>
+<math class="math_color">
+    <semantics>
+        <mrow>
+            <mi>sin</mi>
+            <mo>&ApplyFunction;</mo>
+            <mi>x</mi>
+        </mrow>
+        <annotation-xml encoding="MathML-Content">
+            <apply><sin/><ci>x</ci></apply>
+        </annotation-xml>
+    </semantics>
+</math>
+<p>
+    Miscellaneous text that should be treated as a "term" can 
+    also be represented by an <code>mi</code> element, as in:
+</p>
+<math class="math_color">
+    <semantics>
+        <mrow>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mi>&hellip;</mi>
+            <mo>+</mo>
+            <mi>n</mi>
+        </mrow>
+        <annotation-xml encoding="MathML-Content">
+            <apply><sin/><ci>x</ci></apply>
+        </annotation-xml>
+    </semantics>
+</math>
+
+<h3>3.2.5 Operator, Fence, Separator or Accent &lt;mo&gt;</h3>
+
+<h4>3.2.5.3 Operators</h4>
+
+<pre>
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mo&gt;&amp;plus;&lt;/mo&gt;
+&lt;mo&gt;&amp;lt;&lt;/mo&gt;
+&lt;mo&gt;and&lt;/mo&gt;
+&lt;mo&gt;if&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;is an integer&lt;/mo&gt;
+</pre>
+<math class="math_color">
+    <mo>+</mo><mo>;</mo>
+    <mo>&plus;</mo><mo>;</mo>
+    <mo>&lt;</mo><mo>;</mo>
+    <mo>and</mo><mo>;</mo>
+    <mo>if</mo><mi>x</mi><mo>is an integer</mo><mo>;</mo>
+</math>
+
+<h4>3.2.5.4 Fences</h4>
+
+<pre>
+&lt;mrow&gt;
+    &lt;mo&gt;(&lt;/mo&gt;
+    &lt;mrow&gt;
+        &lt;mi&gt;a&lt;/mi&gt;
+        &lt;mo&gt;+&lt;/mo&gt;
+        &lt;mi&gt;b&lt;/mi&gt;
+    &lt;/mrow&gt;
+    &lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+</pre>
+<math class="math_color">
+    <mrow>
+        <mo> ( </mo>
+        <mrow>
+            <mi> a </mi>
+            <mo> + </mo>
+            <mi> b </mi>
+        </mrow>
+        <mo> ) </mo>
+    </mrow>
+</math>
+
+<pre>
+&lt;mrow>
+    &lt;mi&gt;f&lt;/mi&gt;
+    &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+    &lt;mrow&gt;
+        &lt;mo&gt;(&lt;/mo&gt;
+        &lt;mrow&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+            &lt;mo&gt;,&lt;/mo&gt;
+            &lt;mi&gt;y&lt;/mi&gt;
+        &lt;/mrow&gt;
+        &lt;mo&gt;)&lt;/mo&gt;
+    &lt;/mrow&gt;
+&lt;/mrow&gt;
+</pre>
+<math class="math_color">
+    <mrow>
+        <mi>f</mi>
+        <mo>&ApplyFunction;</mo>
+        <mrow>
+            <mo>(</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>,</mo>
+                <mi>y</mi>
+            </mrow>
+            <mo>)</mo>
+        </mrow>
+    </mrow>
+</math>
+
+<h4>3.2.5.5 Invisible operators</h4>
+
+<pre>
+&lt;mrow&gt;
+    &lt;mn&gt;2&lt;/mn&gt;
+    &lt;mo&gt;&amp;#x2064;&lt;!--INVISIBLE PLUS--&gt; &lt;/mo&gt;
+    &lt;mfrac&gt;
+        &lt;mn&gt;3&lt;/mn&gt;
+        &lt;mn&gt;4&lt;/mn&gt;
+    &lt;/mfrac&gt;
+&lt;/mrow&gt;
+</pre>
+<math class="math_color">
+    <mrow>
+        <mn>2</mn>
+        <mo>&#x2064;<!--INVISIBLE PLUS--> </mo>
+        <mfrac>
+            <mn>3</mn>
+            <mn>4</mn>
+        </mfrac>
+    </mrow>
+</math>
+
+<h4>3.2.5.8 Stretching of operators, fences and accents</h4>
+
+<pre>
+&lt;mrow&gt;
+    &lt;mo&gt;(&lt;/mo&gt;
+    &lt;mfrac&gt;
+        &lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;
+    &lt;/mfrac&gt;
+    &lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+</pre>
+<math class="math_color">
+    <mrow>
+        <mo> ( </mo>
+        <mfrac>
+            <mi> a </mi> <mi> b </mi>
+        </mfrac>
+        <mo> ) </mo>
+    </mrow>
+</math>
+
+<pre>
+&lt;mrow&gt;
+    &lt;mi&gt;x&lt;/mi&gt;
+    &lt;munder&gt;
+        &lt;mo&gt;&amp;rightarrow;&lt;/mo&gt;
+        &lt;mtext&gt;maps to&lt;/mtext&gt;
+    &lt;/munder&gt;
+    &lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+</pre>
+<math class="math_color">
+    <mrow>
+        <mi>x</mi>
+        <munder>
+            <mo>&rightarrow;</mo>
+            <mtext>maps to</mtext>
+        </munder>
+        <mi>y</mi>
+    </mrow>
+</math>
+
+<h4>3.2.6.4 Mixing text and mathematics</h4>
+
+<pre>
+&lt;mrow&gt;
+    &lt;mo&gt;there exists&lt;/mo&gt;
+    &lt;mrow&gt;
+        &lt;mi&gt;&amp;delta;&lt;/mi&gt;
+        &lt;mo&gt;&amp;gt;&lt;/mo&gt;
+        &lt;mn&gt;0&lt;/mn&gt;
+    &lt;/mrow&gt;
+    &lt;mo&gt;such that&lt;/mo&gt;
+    &lt;mrow&gt;
+        &lt;mrow&gt;
+            &lt;mi&gt;f&lt;/mi&gt;
+            &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+            &lt;mrow&gt;
+                &lt;mo&gt;(&lt;/mo&gt;
+                &lt;mi&gt;x&lt;/mi&gt;
+                &lt;mo&gt;)&lt;/mo&gt;
+            &lt;/mrow&gt;
+        &lt;/mrow&gt;
+        &lt;mo&gt;&amp;lt;&lt;/mo&gt;
+        &lt;mn&gt;1&lt;/mn&gt;
+    &lt;/mrow&gt;
+&lt;/mrow&gt;
+</pre>
+<math class="math_color">
+    <mrow>
+        <mo>there exists</mo>
+        <mrow>
+            <mi>&delta;</mi>
+            <mo>&gt;</mo>
+            <mn>0</mn>
+        </mrow>
+        <mo>such that</mo>
+        <mrow>
+            <mrow>
+                <mi>f</mi>
+                <mo>&ApplyFunction;</mo>
+                <mrow>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mo>)</mo>
+                </mrow>
+            </mrow>
+            <mo>&lt;</mo>
+            <mn>1</mn>
+        </mrow>
+    </mrow>
+</math>
+
+<h3>3.3.8 Expression Inside Pair of Fences <code>&lt;mfenced&gt;</code></h3>
+
+<pre>
+&lt;mfenced&gt;
+    &lt;mrow&gt;
+        &lt;mi&gt;a&lt;/mi&gt;
+        &lt;mo&gt;+&lt;/mo&gt;
+        &lt;mi&gt;b&lt;/mi&gt;
+    &lt;/mrow&gt;
+&lt;/mfenced&gt;
+</pre>
+<math class="math_color">
+    <mfenced>
+        <mrow>
+            <mi>a</mi>
+            <mo>+</mo>
+            <mi>b</mi>
+        </mrow>
+    </mfenced>
+</math>
+
+<pre>
+&lt;mfenced open="[" close=")"&gt;
+    &lt;mn&gt;0&lt;/mn&gt;
+    &lt;mn&gt;1&lt;/mn&gt;
+&lt;/mfenced&gt;
+</pre>
+<math class="math_color">
+    <mfenced open="[" close=")">
+        <mn> 0 </mn>
+        <mn> 1 </mn>
+    </mfenced>
+</math>
+
+<pre>
+&lt;mfenced open="{" close="}"&gt;
+    &lt;mn&gt;0&lt;/mn&gt;
+    &lt;mn&gt;1&lt;/mn&gt;
+    &lt;mn&gt;4&lt;/mn&gt;
+    &lt;mn&gt;9&lt;/mn&gt;
+    &lt;mi&gt;&amp;hellip;&lt;/mi&gt;
+    &lt;mrow&gt;
+        &lt;msup&gt;
+            &lt;mi&gt;n&lt;/mi&gt;
+            &lt;mn&gt;2&lt;/mn&gt;
+        &lt;/msup&gt;
+    &lt;/mrow&gt;
+    &lt;mi&gt;&amp;hellip;&lt;/mi&gt;
+&lt;/mfenced&gt;
+</pre>
+<math class="math_color">
+    <mfenced open="{" close="}">
+        <mn>0</mn>
+        <mn>1</mn>
+        <mn>4</mn>
+        <mn>9</mn>
+        <mi>&hellip;</mi>
+        <mrow>
+            <msup>
+                <mi>n</mi>
+                <mn>2</mn>
+            </msup>
+        </mrow>
+        <mi>&hellip;</mi>
+    </mfenced>
+</math>
+
+<pre>
+&lt;mi&gt;S&lt;/mi&gt;
+&lt;mo&gt;=&lt;/mo&gt;
+&lt;mfenced open="{" close="}" separators=""&gt;
+    &lt;mrow&gt;
+        &lt;mfenced&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/mfenced&gt;
+        &lt;mo&gt;&amp;in;&lt;/mo&gt;
+        &lt;msup&gt;
+            &lt;mi&gt;&amp;reals;&lt;/mi&gt;
+            &lt;mn&gt;2&lt;/mn&gt;
+        &lt;/msup&gt;
+    &lt;/mrow&gt;
+    &lt;mo&gt;:&lt;/mo&gt;
+    &lt;mrow&gt;
+        &lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+        &lt;mo&gt;+&lt;/mo&gt;
+        &lt;msup&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+        &lt;mo&gt;=&lt;/mo&gt;
+        &lt;mn&gt;16&lt;/mn&gt;
+    &lt;/mrow&gt;
+&lt;/mfenced&gt;
+</pre>
+<math class="math_color">
+    <mi>S</mi>
+    <mo>=</mo>
+    <mfenced open="{" close="}" separators="">
+        <mrow>
+            <mfenced><mi>x</mi><mi>y</mi></mfenced>
+            <mo>&in;</mo>
+            <msup>
+                <mi>&reals;</mi>
+                <mn>2</mn>
+            </msup>
+        </mrow>
+        <mo>:</mo>
+        <mrow>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>+</mo>
+            <msup><mi>y</mi><mn>2</mn></msup>
+            <mo>=</mo>
+            <mn>16</mn>
+        </mrow>
+    </mfenced>
+</math>
+
+<h3>3.4.6 Underscript-overscript Pair <code>&lt;munderover&gt;</code></h3>
+
+<pre>
+&lt;munderover&gt;
+    &lt;mo&gt;&amp;Sigma;&lt;/mo&gt;
+    &lt;mrow&gt;
+        &lt;mi&gt;k&lt;/mi&gt;
+        &lt;mo&gt;=&lt;/mo&gt;
+        &lt;mn&gt;1&lt;/mn&gt;
+    &lt;/mrow&gt;
+    &lt;mi&gt;n&lt;/mi&gt;
+&lt;/munderover&gt;
+&lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+&lt;mrow&gt;
+    &lt;mfrac&gt;
+        &lt;mn&gt;1&lt;/mn&gt;
+        &lt;mrow&gt;
+            &lt;mfenced&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/mfenced&gt;
+            &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+            &lt;mfenced separators=""&gt;
+                &lt;mi&gt;k&lt;/mi&gt;
+                &lt;mo&gt;+&lt;/mo&gt;
+                &lt;mn&gt;1&lt;/mn&gt;
+            &lt;/mfenced&gt;
+        &lt;/mrow&gt;
+    &lt;/mfrac&gt;
+&lt;/mrow&gt;
+</pre>
+<math class="math_color">
+    <munderover>
+        <mo>&Sigma;</mo>
+        <mrow>
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+        </mrow>
+        <mi>n</mi>
+    </munderover>
+    <mo>&ApplyFunction;</mo>
+    <mrow>
+        <mfrac>
+            <mn>1</mn>
+            <mrow>
+                <mfenced><mi>k</mi></mfenced>
+                <mo>&InvisibleTimes;</mo>
+                <mfenced separators="">
+                    <mi>k</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                </mfenced>
+            </mrow>
+        </mfrac>
+    </mrow>
+</math>
+
+<h3>3.5.1 Table or Matrix <code>&lt;mtable&gt;</code></h3>
+
+<pre>
+&lt;mrow&gt;
+    &lt;mo&gt;(&lt;/mo&gt;
+    &lt;mtable&gt;
+        &lt;mtr&gt;
+            &lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;
+            &lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;
+            &lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;
+        &lt;/mtr&gt;
+        &lt;mtr&gt;
+            &lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;
+            &lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;
+            &lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;
+        &lt;/mtr&gt;
+        &lt;mtr&gt;
+            &lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;
+            &lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;
+            &lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;
+        &lt;/mtr&gt;
+    &lt;/mtable&gt;
+    &lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+</pre>
+<math class="math_color">
+    <mrow>
+        <mo> ( </mo>
+        <mtable>
+            <mtr>
+                <mtd> <mn>1</mn> </mtd>
+                <mtd> <mn>0</mn> </mtd>
+                <mtd> <mn>0</mn> </mtd>
+            </mtr>
+            <mtr>
+                <mtd> <mn>0</mn> </mtd>
+                <mtd> <mn>1</mn> </mtd>
+                <mtd> <mn>0</mn> </mtd>
+            </mtr>
+            <mtr>
+                <mtd> <mn>0</mn> </mtd>
+                <mtd> <mn>0</mn> </mtd>
+                <mtd> <mn>1</mn> </mtd>
+            </mtr>
+        </mtable>
+        <mo> ) </mo>
+    </mrow>
+</math>
+
+<h2>Appendix</h2>
+<p>
+    The names of symbolic constants should be represented as 
+    <code>mi</code> elements:
+</p>
+<ul>
+<li>
+    &Alpha;, &alpha;, alpha (アルファ)
+</li>
+<li>
+    &Beta;, &beta;, beta (ベータ)
+</li>
+<li>
+    &Gamma;, &gamma;, gamma (ガンマ)
+</li>
+<li>
+    &Delta;, &delta;, delta (デルタ)
+</li>
+<li>
+    &Epsilon;, &epsilon;, epsilon (イプシロン)
+</li>
+<li>
+    &Zeta;, &zeta;, zeta (ゼータ)
+</li>
+<li>
+    &Eta;, &eta;, eta (エータ)
+</li>
+<li>
+    &Theta;, &theta;, theta (テータ)
+</li>
+<li>
+    &Iota;, &iota;, iota (イオタ)
+</li>
+<li>
+    &Kappa;, &kappa;, kappa (カッパ)
+</li>
+<li>
+    &Lambda;, &lambda;, lambda (ラムダ)
+</li>
+<li>
+    &Mu;, &mu;, mu (ミュー)
+</li>
+<li>
+    &Nu;, &nu;, nu (ニュー)
+</li>
+<li>
+    &Xi;, &xi;, xi (クシー)
+</li>
+<li>
+    &Omicron;, &omicron;, omicron (オミクロン)
+</li>
+<li>
+    &Pi;, &pi;, pi (パイ)
+</li>
+<li>
+    &Rho;, &rho;, rho (ロー)
+</li>
+<li>
+    &Sigma;, &sigma;, sigma (シグマ)
+</li>
+<li>
+    &Tau;, &tau;, tau (タウ)
+</li>
+<li>
+    &Upsilon;, &upsilon;, upsilon (ユプシロン)
+</li>
+<li>
+    &Phi;, &phi;, phi (ファイ)
+</li>
+<li>
+    &Chi;, &chi;, chi (キー)
+</li>
+<li>
+    &Psi;, &psi;, psi (プサイ)
+</li>
+<li>
+    &Omega;, &omega;, omega (オメガ)
+</li>
+</ul>
+
+<p>The Unicode defines "Invisible operators:"</p>
+<ul>
+<li>
+    U+2061 &amp;ApplyFunction;&ApplyFunction;, FUNCTION APPLICATION
+</li>
+<li>
+    U+2062 &amp;InvisibleTimes;&InvisibleTimes;, INVISIBLE TIMES
+</li>
+<li>
+    U+2063 &amp;InvisibleComma;&InvisibleComma;, INVISIBLE SEPARATOR
+</li>
+</ul>
+
+<p>The Unicode defines "Letterlike symbols:"</p>
+<ul>
+<li>
+    U+2102 &complexes;, &amp;complexes;, the set of complex numbers (複素数)
+</li>
+<li>
+    U+2115 &naturals;, &amp;naturals;, the set of natural numbers (自然数)
+</li>
+<li>
+    U+2119 &primes;, &amp;primes;, the set of primes (素数)
+</li>
+<li>
+    U+211A &rationals;, &amp;rationals;, the set of rational numbers (有理数)
+</li>
+<li>
+    U+211D &reals;, &amp;reals;, the set of real numbers (実数)
+</li>
+<li>
+    U+2124 &integers;, &amp;integers;, the set of integers (整数)
+</li>
+</ul>
+
+<p>The Unicode defines "miscellaneous mathematical symbols:"</p>
+<ul>
+<li>
+    U+0028 &lpar;, &amp;lpar;, LEFT PARENTHESIS
+</li>
+<li>
+    U+0029 &rpar;, &amp;rpar;, RIGHT PARENTHESIS
+</li>
+<li>
+    U+002B &plus;, &amp;plus;, PLUS SIGN
+</li>
+<li>
+    U+002C &comma;, &amp;comma;, COMMA
+</li>
+<li>
+    U+002D -  hyphen-minus (see U+2212)
+</li>
+<li>
+    U+003C &lt;, &amp;lt;, LESS-THAN SIGN
+</li>
+<li>
+    U+003D &equals;, &amp;equals;, EQUALS SIGN
+</li>
+<li>
+    U+003E &gt;, &amp;gt;, GREATER-THAN SIGN
+</li>
+<li>
+    U+007B &lbrace;, &amp;lbrace;, LEFT CURLY BRACKET
+</li>
+<li>
+    U+007C &verbar;, &amp;verbar;, VERTICAL LINE
+</li>
+<li>
+    U+007D &rbrace;, &amp;rbrace;, RIGHT CURLY BRACKET
+</li>
+<li>
+    U+00AC &not;, &amp;not;, NOT SIGN (否定)
+</li>
+<li>
+    U+00B1 &PlusMinus;, &amp;PlusMinus;, PLUS-MINUS SIGN
+</li>
+<li>
+    U+00D7 &times;, &amp;times;, MULTIPLICATION SIGN (乗算)
+</li>
+<li>
+    U+00F7 &div;, &amp;div;, DIVISION SIGN (除算)
+</li>
+<li>
+    U+2026 &hellip;, &amp;hellip;, HORIZONTAL ELLIPSIS
+</li>
+<li>
+    U+2192 &rightarrow;, &amp;rightarrow;, RIGHTWARDS ARROW: z notation total function
+</li>
+<li>
+    U+2194 &leftrightarrow;, &amp;leftrightarrow;, LEFT RIGHT ARROW: z notation relation
+</li>
+<li>
+    U+21D2 &Implies;, &amp;Implies;, implies (含意)
+</li>
+<li>
+    U+21D4 &iff;, &amp;iff;, if and only if (see U+2261 equiv)
+</li>
+<li>
+    U+2200 &forall;, &amp;forall;, for all - universal quantifier (全称記号)
+</li>
+<li>
+    U+2203 &exist;, &amp;exist;, there exists - existential quantifier (存在記号)
+</li>
+<li>
+    U+2205 &emptyset;, &amp;emptyset;, empty set (空集合)
+</li>
+<li>
+    U+2208 &in;, &amp;in;, ELEMENT OF
+</li>
+<li>
+    U+2209 &notin;, &amp;notin;, NOT AN ELEMENT OF
+</li>
+<li>
+    U+220B &ni;, &amp;ni;, CONTAINS AS MEMBER
+</li>
+<li>
+    U+220C &notni;, &amp;notni;, DOES NOT CONTAIN AS MEMBER
+</li>
+<li>
+    U+220F &prod;, &amp;prod; N-ARY PRODUCT
+</li>
+<li>
+    U+2210 &coprod;, &amp;coprod;, N-ARY COPRODUCT
+</li>
+<li>
+    U+2211 &sum;, &amp;sum; N-ARY SUMMATION
+</li>
+<li>
+    U+2212 &minus;, &amp;minus;, MINUS SIGN (減算)
+</li>
+<li>
+    U+221E &infin;, &amp;infin;, INFINITY (無限)
+</li>
+<li>
+    U+2227 &and;, &amp;and;, LOGICAL AND (論理積、連言)
+</li>
+<li>
+    U+2228 &or;, &amp;or;, LOGICAL OR (論理和、選言)
+</li>
+<li>
+    U+2229 &cap;, &amp;cap;, INTERSECTION
+</li>
+<li>
+    U+222A &cup;, &amp;cup;, UNION
+</li>
+<li>
+    U+223C &Tilde;, &amp;Tilde;, TILDE OPERATOR, logical not
+</li>
+<li>
+    U+2260 &ne;, &amp;ne;, NOT EQUAL TO
+</li>
+<li>
+    U+2261 &equiv;, &amp;equiv;, IDENTICAL TO (see U+21D4 iff)
+</li>
+<li>
+    U+2264 &le;, &amp;le;, LESS-THAN OR EQUAL TO
+</li>
+<li>
+    U+2265 &ge;, &amp;ge;, GREATER-THAN OR EQUAL TO
+</li>
+<li>
+    U+2282 &subset;, &amp;subset;, SUBSET OF
+</li>
+<li>
+    U+2283 &supset;, &amp;supset;, SUPERSET OF
+</li>
+<li>
+    U+2284 &nsub;, &amp;nsub;, NOT A SUBSET OF
+</li>
+<li>
+    U+2285 &nsup;, &amp;nsup;, NOT A SUPERSET OF
+</li>
+<li>
+    U+2286 &subseteq;, &amp;subseteq;, SUBSET OF OR EQUAL TO
+</li>
+<li>
+    U+2287 &supseteq;, &amp;supseteq;, SUPERSET OF OR EQUAL TO
+</li>
+<li>
+    U+228A &subsetneq;, &amp;subsetneq;, SUBSET OF WITH NOT EQUAL TO
+</li>
+<li>
+    U+228B &supsetneq;, &amp;supsetneq;, SUPERSET OF WITH NOT EQUAL TO
+</li>
+</ul>
+</body>
+</html>

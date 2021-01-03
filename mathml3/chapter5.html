@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chapter 5 Mixing Markup Languages for Mathematical Expressions</title>
+    <style>
+        .math_color {
+            background-color: lightblue;
+            padding: 0.5em 1em;
+        }
+    </style>
+</head>
+<body>
+<math class="math_color">
+    <semantics>
+        <apply>
+            <plus/>
+            <apply><sin/><ci>x</ci></apply>
+            <cn>5</cn>
+        </apply>
+        <annotation-xml encoding="MathML-Presentation">
+            <mrow>
+                <mrow>
+                    <mi>sin</mi>
+                    <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+                    <mfenced open="(" close=")"><mi>x</mi></mfenced>
+                </mrow>
+                <mo>+</mo>
+                <mn>5</mn>
+            </mrow>
+        </annotation-xml>
+    </semantics>
+</math>
+<p>h</p>
+<math class="math_color">
+    <semantics>
+        <mrow>
+            <mrow>
+                <mi>sin</mi>
+                <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+                <mfenced open="(" close=")"><mi>x</mi></mfenced>
+            </mrow>
+            <mo>+</mo>
+            <mn>5</mn>
+        </mrow>
+        <annotation-xml encoding="MathML-Content">
+            <apply>
+                <plus/>
+                <apply><sin/><ci>x</ci></apply>
+                <cn>5</cn>
+            </apply>
+        </annotation-xml>
+    </semantics>
+</math>
+</body>
+</html>
