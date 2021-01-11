@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Unicode Technical Report #25 (rev. 15, 2017-05-30)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .math_color {
+            display: block;
+            background-color: lightblue;
+            text-align: left;
+            padding: 0.5em 1em;
+        }
+
+        .math th, .math td {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        .math th {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            text-align: left;
+            background-color: gray;
+            color: whitesmoke;
+        }
+        .math td {
+            border-bottom: 1px solid black;
+        }
+        .code {
+            font-family: monospace;
+        }
+        .glyph {
+            text-align: center;
+        }
+        .numeric {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Unicode Support for Mathematics</h1>
+    <h2>Unicode Technical Report #25</h2>
+    <table>
+        <tr>
+            <td>Date</td>
+            <td>2017-05-30</td>
+        </tr>
+        <tr>
+            <td>Revision</td>
+            <td>15</td>
+        </tr>
+    </table>
+</header>
+<main>
+<section>
+    <h2>2. Mathematical Character Repertoire</h2>
+    <p>
+        Unicode 9.0 contains a total of 2310 characters that have the Math property.
+        The repertoire of mathematical characters in Unicode is the result of input 
+        from many sources, notably from the STIX Project (Scientific and Technical 
+        Information Exchange), a collaborative project of scientific and technical 
+        publishers.
+    </p>
+
+    <h3>2.2 Mathematical Alphabets</h3>
+
+    <p>
+        <strong>Mathematical Alphabets.</strong> The alphanumeric symbols 
+        encountered in mathematics are given in the following table:
+    </p>
+    <table class="math">
+        <caption>Table 2.1 Mathematical Alphabets</caption>
+        <thead>
+            <tr>
+                <th>Style</th>
+                <th>Latin</th>
+                <th>Greek</th>
+                <th>Digits</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>plain</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+                <td>BMP</td>
+            </tr>
+            <tr>
+                <td>bold</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+                <td>Plane 1</td>
+            </tr>
+            <tr>
+                <td>italic</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td>Plane 1*</td>
+            </tr>
+            <tr>
+                <td>bold italic</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td>Plane 1</td>
+            </tr>
+            <tr>
+                <td>script</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td></td>
+                <td>Plane 1*</td>
+            </tr>
+            <tr>
+                <td>bold script</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td></td>
+                <td>Plane 1</td>
+            </tr>
+            <tr>
+                <td>Fraktur</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td></td>
+                <td>Plane 1*</td>
+            </tr>
+            <tr>
+                <td>bold Fraktur</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td></td>
+                <td>Plane 1</td>
+            </tr>
+            <tr>
+                <td>double-struck</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td>&#x2713;</td>
+                <td>Plane 1*</td>
+            </tr>
+            <tr>
+                <td>sans-serif</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td>&#x2713;</td>
+                <td>Plane 1</td>
+            </tr>
+            <tr>
+                <td>sans-serif bold</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+                <td>Plane 1</td>
+            </tr>
+            <tr>
+                <td>sans-serif italic</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td></td>
+                <td>Plane 1</td>
+            </tr>
+            <tr>
+                <td>sans-serif bold italic</td>
+                <td>&#x2713;</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td>Plane 1</td>
+            </tr>
+            <tr>
+                <td>monospace</td>
+                <td>&#x2713;</td>
+                <td></td>
+                <td>&#x2713;</td>
+                <td>Plane 1</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">
+                    * Some of these alphabets have characters in the BMP.
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>
+        The plain letters have been unified with the existing characters in 
+        the Basic Latin (U+0021..U+007E) and Greek (U+0370..U+03FF) blocks.
+        There are 24 double-struck, italic, Fraktur and script characters 
+        that already exist in the Letterlike Symbols block (U+2100..U+214F). 
+        These are explicitly unified with the characters in this block and 
+        corresponding holes have been left in the mathematical alphabets.
+    </p>
+    <table class="math">
+        <caption>Mathmatical Characters in Letterlike Symbols block</caption>
+        <thead>
+            <tr>
+                <th>LLike</th>
+                <th>L</th>
+                <th>Math</th>
+                <th>M</th>
+                <th>Name</th>
+                <th>Use</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="code">U+212C</td>
+                <td class="glyph">&#x212C;</td>
+                <td class="code">U+1D49D</td>
+                <td class="glyph">&#x1D49D;</td>
+                <td>script capital B</td>
+                <td>Bernoulli function</td>
+            </tr>
+            <!-- tr>
+                <td class="code">U+2130</td>
+                <td class="glyph">&#x2130;</td>
+                <td class="code">U+1D4A0</td>
+                <td class="glyph">&#x1D4A0;</td>
+                <td>script capital E</td>
+                <td>N/A</td>
+            </tr -->
+            <tr>
+                <td class="code">U+2131</td>
+                <td class="glyph">&#x2131;</td>
+                <td class="code">U+1D4A1</td>
+                <td class="glyph">&#x1D4A1;</td>
+                <td>script capital F</td>
+                <td>Fourier transform</td>
+            </tr>
+            <tr>
+                <td class="code">U+210B</td>
+                <td class="glyph">&#x210B;</td>
+                <td class="code">U+1D4A3</td>
+                <td class="glyph">&#x1D4A3;</td>
+                <td>script capital H</td>
+                <td>Hamiltonian operator</td>
+            </tr>
+            <!-- tr>
+                <td class="code">U+2110</td>
+                <td class="glyph">&#x2110;</td>
+                <td class="code">U+1D4A4</td>
+                <td class="glyph">&#x1D4A4;</td>
+                <td>script capital I</td>
+                <td>N/A</td>
+            </tr -->
+            <tr>
+                <td class="code">U+2112</td>
+                <td class="glyph">&#x2112;</td>
+                <td class="code">U+1D4A7</td>
+                <td class="glyph">&#x1D4A7;</td>
+                <td>script capital L</td>
+                <td>Laplace transform</td>
+            </tr>
+            <!-- tr>
+                <td class="code">U+2133</td>
+                <td class="glyph">&#x2133;</td>
+                <td class="code">U+1D4A8</td>
+                <td class="glyph">&#x1D4A8;</td>
+                <td>script capital M</td>
+                <td>M-matrix (physics)</td>
+            </tr -->
+            <tr>
+                <td class="code">U+2118</td>
+                <td class="glyph">&#x2118;</td>
+                <td class="code">U+1D4AB</td>
+                <td class="glyph">&#x1D4AB;</td>
+                <td>script capital P</td>
+                <td>Weierstrass Elliptic function</td>
+            </tr>
+            <tr>
+                <td class="code">U+211B</td>
+                <td class="glyph">&#x211B;</td>
+                <td class="code">U+1D4AD</td>
+                <td class="glyph">&#x1D4AD;</td>
+                <td>script capital R</td>
+                <td>Riemann Integra</td>
+            </tr>
+            <tr>
+                <td class="code">U+212F</td>
+                <td class="glyph">&#x212F;</td>
+                <td class="code">U+1D4BA</td>
+                <td class="glyph">&#x1D4BA;</td>
+                <td>script small E</td>
+                <td>the natural exponent</td>
+            </tr>
+            <tr>
+                <td class="code">U+210A</td>
+                <td class="glyph">&#x210A;</td>
+                <td class="code">U+1D4BC</td>
+                <td class="glyph">&#x1D4BC;</td>
+                <td>script small G</td>
+                <td>real number symbol</td>
+            </tr>
+            <tr>
+                <td class="code">U+2113</td>
+                <td class="glyph">&#x2113;</td>
+                <td class="code">U+1D4C1</td>
+                <td class="glyph">&#x1D4C1;</td>
+                <td>script small L</td>
+                <td>mathematical symbol 'ell'</td>
+            </tr>
+            <tr>
+                <td class="code">U+2134</td>
+                <td class="glyph">&#x2134;</td>
+                <td class="code">U+1D4C4</td>
+                <td class="glyph">&#x1D4C4;</td>
+                <td>script small O</td>
+                <td>order, of inferior order to</td>
+            </tr>
+            <!-- tr>
+                <td class="code">U+212D</td>
+                <td class="glyph">&#x212D;</td>
+                <td class="code">U+1D506</td>
+                <td class="glyph">&#x1D506;</td>
+                <td>black-letter capital C</td>
+                <td>N/A</td>
+            </tr -->
+            <tr>
+                <td class="code">U+210C</td>
+                <td class="glyph">&#x210C;</td>
+                <td class="code">U+1D50B</td>
+                <td class="glyph">&#x1D50B;</td>
+                <td>black-letter capital H</td>
+                <td>Hilbert space</td>
+            </tr>
+            <tr>
+                <td class="code">U+2111</td>
+                <td class="glyph">&#x2111;</td>
+                <td class="code">U+1D50C</td>
+                <td class="glyph">&#x1D50C;</td>
+                <td>black-letter capital I</td>
+                <td>imaginary part</td>
+            </tr>
+            <tr>
+                <td class="code">U+211C</td>
+                <td class="glyph">&#x211C;</td>
+                <td class="code">U+1D515</td>
+                <td class="glyph">&#x1D515;</td>
+                <td>black-letter capital R</td>
+                <td>real part</td>
+            </tr>
+            <!-- tr>
+                <td class="code">U+2128</td>
+                <td class="glyph">&#x2128;</td>
+                <td class="code">U+1D51D</td>
+                <td class="glyph">&#x1D51D;</td>
+                <td>black-letter capital Z</td>
+                <td>N/A</td>
+            </tr -->
+            <tr>
+                <td class="code">U+2102</td>
+                <td class="glyph">&#x2102;</td>
+                <td class="code">U+1D53A</td>
+                <td class="glyph">&#x1D53A;</td>
+                <td>double-struck capital C</td>
+                <td>complex numbers</td>
+            </tr>
+            <!-- tr>
+                <td class="code">U+210D</td>
+                <td class="glyph">&#x210D;</td>
+                <td class="code">U+1D53F</td>
+                <td class="glyph">&#x1D53F;</td>
+                <td>double-struck capital H</td>
+                <td>N/A</td>
+            </tr -->
+            <tr>
+                <td class="code">U+2115</td>
+                <td class="glyph">&#x2115;</td>
+                <td class="code">U+1D545</td>
+                <td class="glyph">&#x1D545;</td>
+                <td>double-struck capital N</td>
+                <td>natural number</td>
+            </tr>
+            <!-- tr>
+                <td class="code">U+2119</td>
+                <td class="glyph">&#x2119;</td>
+                <td class="code">U+1D547</td>
+                <td class="glyph">&#1D547;</td>
+                <td>double-struck capital P</td>
+                <td>N/A</td>
+            </tr -->
+            <tr>
+                <td class="code">U+211A</td>
+                <td class="glyph">&#x211A;</td>
+                <td class="code">U+1D548</td>
+                <td class="glyph">&#x1D548;</td>
+                <td>double-struck capital Q</td>
+                <td>rational numbers</td>
+            </tr>
+            <tr>
+                <td class="code">U+211D</td>
+                <td class="glyph">&#x211D;</td>
+                <td class="code">U+1D549</td>
+                <td class="glyph">&#x1D549;</td>
+                <td>double-struck capital R</td>
+                <td>real numbers</td>
+            </tr>
+            <tr>
+                <td class="code">U+2124</td>
+                <td class="glyph">&#x2124;</td>
+                <td class="code">U+1D551</td>
+                <td class="glyph">&#x1D551;</td>
+                <td>double-struck capital Z</td>
+                <td>integers</td>
+            </tr>
+            <!-- tr>
+                <td class="code">U+213C</td>
+                <td class="glyph">&#x213C;</td>
+                <td class="code">(n/a)</td>
+                <td class="glyph"></td>
+                <td>double-struck small pi</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td class="code">U+213D</td>
+                <td class="glyph">&#x213D;</td>
+                <td class="code">(n/a)</td>
+                <td class="glyph"></td>
+                <td>double-struck small gamma</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td class="code">U+213E</td>
+                <td class="glyph">&#x213E;</td>
+                <td class="code">(n/a)</td>
+                <td class="glyph"></td>
+                <td>double-struck capital gamma</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td class="code">U+213F</td>
+                <td class="glyph">&#x213F;</td>
+                <td class="code">(n/a)</td>
+                <td class="glyph"></td>
+                <td>double-struck capital pi</td>
+                <td>N/A</td>
+            </tr -->
+            <tr>
+                <td class="code">U+2140</td>
+                <td class="glyph">&#x2140;</td>
+                <td class="code">(n/a)</td>
+                <td class="glyph"></td>
+                <td>double-struck n-ary summation</td>
+                <td>n-ary summation</td>
+            </tr>
+            <tr>
+                <td class="code">U+2145</td>
+                <td class="glyph">&#x2145;</td>
+                <td class="code">(n/a)</td>
+                <td class="glyph"></td>
+                <td>double-struck italic capital D</td>
+                <td>sometimes the differential</td>
+            </tr>
+            <tr>
+                <td class="code">U+2146</td>
+                <td class="glyph">&#x2146;</td>
+                <td class="code">(n/a)</td>
+                <td class="glyph"></td>
+                <td>double-struck italic small D</td>
+                <td>sometimes the differential</td>
+            </tr>
+            <tr>
+                <td class="code">U+2147</td>
+                <td class="glyph">&#x2147;</td>
+                <td class="code">(n/a)</td>
+                <td class="glyph"></td>
+                <td>double-struck italic small E</td>
+                <td>sometimes the natural exponent</td>
+            </tr>
+            <tr>
+                <td class="code">U+2148</td>
+                <td class="glyph">&#x2148;</td>
+                <td class="code">(n/a)</td>
+                <td class="glyph"></td>
+                <td>double-struck italic small I</td>
+                <td>sometimes the imaginary unit</td>
+            </tr>
+            <tr>
+                <td class="code">U+2149</td>
+                <td class="glyph">&#x2149;</td>
+                <td class="code">(n/a)</td>
+                <td class="glyph"></td>
+                <td>double-struck italic small J</td>
+                <td>sometimes the imaginary unit</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <strong>Typical Uses.</strong> 
+        The following list catalogs examples of typical uses for some of 
+        these styles without intending to be exhaustive or exclusive.
+        <ul>
+            <li>lightface italic -- variables</li>
+            <li>double-struck -- sets</li>
+            <li>bold -- vectors (more physics and applied areas, usually lowercase)</li>
+            <li>bold italic -- matrices (uppercase)</li>
+            <li>lightface roman -- operator names (sin, cos, etc.), some constants, units</li>
+            <li>lowercase Greek -- angles</li>
+            <li>script (caps) -- various operators, functions and transforms</li>
+            <li>sans-serif -- dimensions of SI base quantities</li>
+            <li>bold italic sans-serif -- tensors</li>
+        </ul>
+    </p>
+
+    <h3>2.3 Fonts Used for Mathematical Alphabets</h3>
+
+    <p>
+        <strong>Typestyle for Script Characters.</strong> The two characters 
+        U+2113 &#x2113; SCRIPT SMALL L, 
+        and U+2118 &#x2118; SCRIPT CAPITAL P, 
+        are not regular script characters, despite their character names. 
+        The latter is the symbol for the Weierstrass elliptic function, a 
+        calligraphic letter shape based on the small p, and the former is derived
+        from a special italic letter shape called an 'ell', and is unified with the 
+        common non-SI symbol for the liter [SI]. 
+        The characters U+1D4C1 &#x1D4C1; MATHEMATICAL SCRIPT SMALL L and 
+        U+1D4AB &#x1D4AB; MATHEMATICAL SCRIPT CAPITAL P are the preferred characters
+        for the script style.
+    </p>
+
+    <h3>2.4 Locating Mathematical Characters</h3>
+
+    <table class="math">
+        <caption>Table 2.2 Locations of Mathematical Characters</caption>
+        <thead>
+            <tr>
+                <th>Block Name</th>
+                <th colspan="2">Range (size in decimal)</th>
+                <th>Character Types</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Basic Latin</td>
+                <td class="code">U+0021..U+007E</td>
+                <td class="numeric">94</td>
+                <td>Variables, operators, digits*</td>
+            </tr>
+            <tr>
+                <td>Greek and Coptic</td>
+                <td class="code">U+0370..U+03FF</td>
+                <td class="numeric">144</td>
+                <td>Variables*</td>
+            </tr>
+            <tr>
+                <td>General Punctuation</td>
+                <td class="code">U+2000..U+206F</td>
+                <td class="numeric">112</td>
+                <td>Spaces, Invisible operators*</td>
+            </tr>
+            <tr>
+                <td>Letterlike Symbols</td>
+                <td class="code">U+2100..U+214F</td>
+                <td class="numeric">80</td>
+                <td>Variables*</td>
+            </tr>
+            <tr>
+                <td>Arrows</td>
+                <td class="code">U+2190..U+21FF</td>
+                <td class="numeric">112</td>
+                <td>Arrows, arrow-like operators</td>
+            </tr>
+            <tr>
+                <td>Mathematical Operators</td>
+                <td class="code">U+2200..U+22FF</td>
+                <td class="numeric">256</td>
+                <td>Operators</td>
+            </tr>
+            <tr>
+                <td>Miscellaneous Technical</td>
+                <td class="code">U+2300..U+23FF</td>
+                <td class="numeric">256</td>
+                <td>Braces, operators*</td>
+            </tr>
+            <tr>
+                <td>Geometrical Shapes</td>
+                <td class="code">U+25A0..U+25FF</td>
+                <td class="numeric">96</td>
+                <td>Symbols</td>
+            </tr>
+            <tr>
+                <td>Misc. Mathematical Symbols-A</td>
+                <td class="code">U+27C0..U+27EF</td>
+                <td class="numeric">48</td>
+                <td>Symbols and operators</td>
+            </tr>
+            <tr>
+                <td>Supplemental Arrows-A</td>
+                <td class="code">U+27F0..U+27FF</td>
+                <td class="numeric">16</td>
+                <td>Arrows, arrow-like operators</td>
+            </tr>
+            <tr>
+                <td>Supplemental Arrows-B</td>
+                <td class="code">U+2900..U+297F</td>
+                <td class="numeric">128</td>
+                <td>Arrows, arrow-like operators</td>
+            </tr>
+            <tr>
+                <td>Misc. Mathematical Symbols-B</td>
+                <td class="code">U+2980..U+29FF</td>
+                <td class="numeric">128</td>
+                <td>Braces, symbols</td>
+            </tr>
+            <tr>
+                <td>Suppl. Mathematical Operators</td>
+                <td class="code">U+2A00..U+2AFF</td>
+                <td class="numeric">256</td>
+                <td>Operators</td>
+            </tr>
+            <tr>
+                <td>Misc. Symbols and Arrows</td>
+                <td class="code">U+2B00..U+2BFF</td>
+                <td class="numeric">256</td>
+                <td>Arrows, operators, symbols</td>
+            </tr>
+            <tr>
+                <td>Mathematical Alphanumeric Symbols</td>
+                <td class="code">U+1D400..U+1D7FF</td>
+                <td class="numeric">1024</td>
+                <td>Variables and digits</td>
+            </tr>
+            <tr>
+                <td>Arabic Math. Alphabetic Symbols</td>
+                <td class="code">U+1EE00..U+1EEFF</td>
+                <td class="numeric">256</td>
+                <td>Variables and functions</td>
+            </tr>
+            <tr>
+                <td>Geometric Shapes Extended</td>
+                <td class="code">U+1F780..U+1F7FF</td>
+                <td class="numeric">128</td>
+                <td>Symbols</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">
+                    * This block contains non-mathematical characters as well.
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h3>2.7 Operators</h3>
+
+    <p>
+        <strong>Semantics.</strong>
+        Mathematical operators often have more than one meaning in different 
+        subdisciplines or different contexts. [...]
+        For example, U+2218 &#x2218; RING OPERATOR may be the equivalent of
+        <ul>
+            <li>white small circle or</li>
+            <li>composite function or</li>
+            <li>APL jot.</li>
+        </ul>
+        The Unicode Standard does not attempt to distinguish all possible
+        semantic values that may be applied to mathematical operators or 
+        relational symbols. 
+        It is up to the application or user to distinguish such meanings 
+        according to the appropriate context.
+    </p>
+
+    <h3>2.14 Invisible Operators</h3>
+
+    <p>
+        In mathematics some operators or punctuation are often implied, 
+        but not displayed. This poses few problems to the human reader, 
+        as the meaning is usually clear from context. However, machine 
+        interpretation of mathematical expressions may need the intent 
+        be made more explicit. To support this without altering the appearance 
+        of the equation when displayed, the Unicode Standard provides 
+        several invisible operators that can be used to unambiguously 
+        denote the intent whenever an operator is implied, or more importantly 
+        when more than one operator could be implied. Use of invisible 
+        operators is optional and is not required or intended for interchange
+         with math-unaware programs.
+    </p>
+
+    <p>
+        <strong>Invisible Separator.</strong>
+        U+2063 <span class="code">INVISIBLE SEPARATOR</span> or 
+        <i>invisible comma</i> is intended for use in index expressions and 
+        other mathematical notation where two adjacent variables form a list 
+        and are not implicitly multiplied. 
+        In mathematical notation, commas are not always explicitly present, 
+        but need to be indicated for symbolic calculation software to help it 
+        disambiguate a sequence from a multiplication. For example, the double 
+        <math><mi>i</mi><mi>j</mi></math> 
+        subscript in the variable 
+        <math>
+            <msub>
+                <mi>a</mi>
+                <mrow>
+                    <mi>i</mi>
+                    <mo>&#x2063;<!--INVISIBLE SEPARATOR--></mo>
+                    <mi>j</mi>
+                </mrow>
+            </msub>
+        </math>
+        means
+        <math><msub><mi>a</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></math>
+        — that is, the <math><mi>i</mi></math> and <math><mi>j</mi></math> 
+        are separate indices and not a single variable with
+        the name <math><mi>i</mi><mi>j</mi></math> or even 
+        the product of <math><mi>i</mi></math> and <math><mi>j</mi></math>. 
+        Accordingly, to represent the implied list separation in the subscript 
+        <math><mi>i</mi><mi>j</mi></math>
+        one can insert a non-displaying <i>invisible separator</i> between 
+        the <math><mi>i</mi></math> and the <math><mi>j</mi></math>. 
+        In addition, use of the invisible comma might hint to 
+        a math layout program to set a small space between the variables if 
+        they are not in subscripts or superscripts.
+    </p>
+    <pre>
+    &lt;math&gt;
+        &lt;msub&gt;
+            &lt;mi&gt;a&lt;/mi&gt;
+            &lt;mrow&gt;
+                &lt;mi&gt;i&lt;/mi&gt;
+                &lt;mo&gt;&amp;#x2063;&lt;!--INVISIBLE SEPARATOR--&gt;&lt;/mo&gt;
+                &lt;mi&gt;j&lt;/mi&gt;
+            &lt;/mrow&gt;
+        &lt;/msub&gt;
+    &lt;/math&gt;
+    </pre>
+
+    <p>
+        <strong>Invisible Multiplication.</strong>
+        Similarly, an expression like
+        <math>
+            <mi>m</mi>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <msup>
+                <mi>c</mi>
+                <mn>2</mn>
+            </msup>
+        </math>
+        implies that the mass <math><mi>m</mi></math>
+        multiplies the square of the speed <math><mi>c</mi></math>. 
+        To represent the implied multiplication in
+        <math>
+            <mi>m</mi>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <msup>
+                <mi>c</mi>
+                <mn>2</mn>
+            </msup>
+        </math>
+        unambiguously, one can insert a non-displaying 
+        U+2062 <span class="code">INVISIBLE TIMES</span> 
+        between the <math><mi>m</mi></math> and the <math><mi>c</mi></math>. 
+    </p>
+    <pre>
+    &lt;math&gt;
+        &lt;mi&gt;m&lt;/mi&gt;
+        &lt;mo&gt;&amp;#x2062;&lt;!--INVISIBLE TIMES-->&lt;/mo&gt;
+        &lt;msup&gt;
+            &lt;mi&gt;c&lt;/mi&gt;
+            &lt;mn&gt;2&lt;/mn&gt;
+        &lt;/msup&gt;
+    &lt;/math&gt;
+    </pre>
+
+    <p>
+        Another example is the expression
+        <math>
+            <msup>
+                <mi>f</mi>
+                <mrow>
+                    <mi>i</mi>
+                    <mo>&#x2063;<!--INVISIBLE SEPARATOR--></mo>
+                    <mi>j</mi>
+                </mrow>
+            </msup>
+            <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+            <mfenced>
+                <mrow>
+                    <mi>cos</mi>
+                    <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>a</mi>
+                            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                            <mi>b</mi>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+            </mfenced>
+        </math>, 
+        which means the same as 
+        <math>
+            <msup>
+                <mi>f</mi>
+                <mrow>
+                    <mi>i</mi>
+                    <mo>,</mo>
+                    <mi>j</mi>
+                </mrow>
+            </msup>
+            <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+            <mfenced>
+                <mrow>
+                    <mi>cos</mi>
+                    <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>a</mi>
+                            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
+                            <mi>b</mi>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+            </mfenced>
+        </math>, 
+        where <math><mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo></math>
+        is used here to represent multiplication, not the cross product. 
+    </p>
+    <pre>
+    &lt;math&gt;
+        &lt;msup&gt;
+            &lt;mi&gt;f&lt;/mi&gt;
+            &lt;mrow&gt;
+                &lt;mi&gt;i&lt;/mi&gt;
+                &lt;mo&gt;&amp;#x2063;&lt;!--INVISIBLE SEPARATOR-->&lt;/mo&gt;
+                &lt;mi&gt;j&lt;/mi&gt;
+            &lt;/mrow&gt;
+        &lt;/msup&gt;
+        &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION-->&lt;/mo&gt;
+        &lt;mfenced&gt;
+            &lt;mrow&gt;
+                &lt;mi&gt;cos&lt;/mi&gt;
+                &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION-->&lt;/mo&gt;
+                &lt;mfenced&gt;
+                    &lt;mrow&gt;
+                        &lt;mi&gt;a&lt;/mi&gt;
+                        &lt;mo&gt;&amp;#x2062;&lt;!--INVISIBLE TIMES-->&lt;/mo&gt;
+                        &lt;mi&gt;b&lt;/mi&gt;
+                    &lt;/mrow&gt;
+                &lt;/mfenced&gt;
+            &lt;/mrow&gt;
+        &lt;/mfenced&gt;
+    &lt;/math&gt;
+    </pre>
+
+    <p>
+        Note that the spacing between characters may also depend on whether 
+        the adjacent variables are part of a list or are to be concatenated, 
+        that is, multiplied.
+    </p>
+
+    <p>
+        <strong>Invisible Function Application.</strong>
+        U+2061 <span class="code">FUNCTION APPLICATION</span> is used for an 
+        implied function dependence as in 
+        <math>
+            <mi>f</mi>
+            <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+            <mfenced separators="">
+                <mi>x</mi>
+                <mo>+</mo>
+                <mi>y</mi>
+            </mfenced>
+        </math>.
+        To indicate that this is the function <math><mi>f</mi></math> of the quantity 
+        <math><mfenced separators=""><mi>x</mi><mo>+</mo><mi>y</mi></mfenced></math>
+        and not the expression
+        <math>
+            <mrow><mi>f</mi><mo>&#x2062;<!--INVISIBLE TIMES--></mo><mi>x</mi></mrow>
+            <mo>+</mo>
+            <mrow><mi>f</mi><mo>&#x2062;<!--INVISIBLE TIMES--></mo><mi>y</mi></mrow>
+        </math>,
+        one can insert the non-displaying function application symbol between the 
+        <math><mi>f</mi></math> and the left parenthesis.
+    </p>
+    <pre>
+    &lt;math&gt;
+        &lt;mi&gt;f&lt;/mi&gt;
+        &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION--&gt;&lt;/mo&gt;
+        &lt;mfenced separators=""&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+            &lt;mo&gt;+&lt;/mo&gt;
+            &lt;mi&gt;y&lt;/mi&gt;
+        &lt;/mfenced&gt;
+    &lt;/math&gt;
+    </pre>
+
+    <p>
+        <strong>Invisible Plus.</strong>
+        The final member of this set of invisible operators that denote the 
+        implied intent of juxtaposition in uses where it is not possible to 
+        rely on a human reader to disam-biguate is the 
+        U+2064 <span class="code">INVISIBLE PLUS OPERATOR</span> character 
+        to unambiguously represent expressions like
+        <math>
+            <mn>3</mn>
+            <mo>&#x2064;<!--INVISIBLE PLUS OPERATOR--></mo>
+            <mn>&#x00BD;<!--VULGAR FRACTION ONE HALF--></mn>
+        </math>,
+        which occur frequently in school or engineering texts.
+        Specifically, to ensure that
+        <math>
+            <mn>3</mn>
+            <mo>&#x2064;<!--INVISIBLE PLUS OPERATOR--></mo>
+            <mn>&#x00BD;<!--VULGAR FRACTION ONE HALF--></mn>
+        </math>
+        means <math><mn>3</mn></math> <i>plus</i> <math><mn>½</mn></math>, 
+        one inserts the invisible plus symbol between 
+        the <math><mn>3</mn></math> and the <math><mn>½</mn></math>.
+        Not having an operator at all would imply multiplication as in the example
+        <figure>
+        <math>
+            <mn>3</mn>
+            <mo>&#x2064;<!--INVISIBLE PLUS OPERATOR--></mo>
+            <mfrac>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                    <mi>b</mi>
+                    <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                    <mi>c</mi>
+                </mrow>
+                <mi>d</mi>
+            </mfrac>
+        </math>
+        </figure>
+        where the <math><mn>3</mn></math> represents a factor multiplying the fraction 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                <mi>b</mi>
+                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                <mi>c</mi>
+            </mrow>
+            <mo>&#x2044;<!--FRACTION SLASH--></mo>
+            <mi>d</mi>
+        </math>.
+    </p>
+    <pre>
+    &lt;math&gt;
+        &lt;mn&gt;3&lt;/mn&gt;
+        &lt;mo&gt;&amp;#x2064;&lt;!--INVISIBLE PLUS OPERATOR--&gt;&lt;/mo&gt;
+        &lt;mn&gt;&amp;#x00BD;&lt;!--VULGAR FRACTION ONE HALF--&gt;&lt;/mn&gt;
+    &lt;/math&lt;
+
+    &lt;math&gt;
+        &lt;mn&gt;3&lt;/mn&gt;
+        &lt;mo&gt;&amp;#x2064;&lt;!--INVISIBLE PLUS OPERATOR--&gt;&lt;/mo&gt;
+        &lt;mfrac&gt;
+            &lt;mrow&gt;
+                &lt;mi&gt;a&lt;/mi&gt;
+                &lt;mo&gt;&amp;#x2062;&lt;!--INVISIBLE TIMES--&gt;&lt;/mo&gt;
+                &lt;mi&gt;b&lt;/mi&gt;
+                &lt;mo&gt;&amp;#x2062;&lt;!--INVISIBLE TIMES--&gt;&lt;/mo&gt;
+                &lt;mi&gt;c&lt;/mi&gt;
+            &lt;/mrow&gt;
+            &lt;mi&gt;d&lt;/mi&gt;
+        &lt;/mfrac&gt;
+    &lt;/math&gt;
+    </pre>
+
+    <h2>3. Mathematical Character Properties</h2>
+    <h3>3.2 Classification by Typographical Behavior</h3>
+    <h4>3.2.1 Alphabetic</h4>
+    <p>
+        In general, math italic Latin characters are used to represent 
+        single-character Latin variables (such as <math><mi>x</mi></math>, 
+        <math><mi>y</mi></math>, <math><mi>z</mi></math>). 
+        In contrast, mathematical function names like 
+        <math><mo>sin</mo></math>, <math><mo>cos</mo></math>, 
+        <math><mo>tan</mo></math>, <math><mo>tanh</mo></math>, etc., 
+        are represented by upright and 
+        usually serifed text to distinguish them from products of variables.
+    </p>
+    <p>
+        The five double-struck, italic characters, 
+        upper-case differential (U+2145 &#x2145;), 
+        differential d (U+2146 &#x2146;), 
+        exponential (U+2147 &#x2147;), and 
+        imaginary units (U+2148 &#x2148;, U+2149 &#x2149;) 
+        are useful for representing these mathematical entities unambiguously.
+    </p>
+
+    <h4>3.2.3 Large Operators</h4>
+
+    <p>
+        Large Operators include 𝑛-ary operators like summation and integration. 
+        They may expand in size to fit their associated expressions. 
+        They generally also take limits.
+    </p>
+    <figure>
+        <math displaystyle="true">
+            <munderover>
+                <mo>&#x2211;<!--N-ARY SUMMATION--></mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>=</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mi>&#x221E;<!--INFINITY--></mi>
+            </munderover>
+            <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+            <msub>
+                <mi>a</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+    </figure>
+    <pre>
+    &lt;math displaystyle="true"&gt;
+        &lt;munderover&gt;
+            &lt;mo&gt;&amp;#x2211;&lt;!--N-ARY SUMMATION--&gt;&lt;/mo&gt;
+            &lt;mrow&gt;
+                &lt;mi&gt;n&lt;/mi&gt;
+                &lt;mo&gt;=&lt;/mo&gt;
+                &lt;mn&gt;1&lt;/mn&gt;
+            &lt;/mrow&gt;
+            &lt;mi&gt;&amp;#x221E;&lt;!--INFINITY--&gt;&lt;/mi&gt;
+        &lt;/munderover&gt;
+        &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION--&gt;&lt;/mo&gt;
+        &lt;msub&gt;
+            &lt;mi&gt;a&lt;/mi&gt;
+            &lt;mi&gt;n&lt;/mi&gt;
+        &lt;/msub&gt;
+    &lt;/math&gt;
+    </pre>
+
+    <h4>3.2.6 Fences</h4>
+
+    <p>
+        Fences are similar to opening and closing delimiters, but may be 
+        used alone or as both opening and closing as the vertical bars in
+        the absolute value
+        <math>
+            <mfenced open="|" close="|" separators="">
+                <mi>x</mi>
+            </mfenced>
+        </math>.
+    </p>
+    <pre>
+    &lt;math&gt;
+        &lt;mfenced open="|" close="|" separators=""&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+        &lt;/mfenced&gt;
+    &lt;/math&gt;
+    </pre>
+
+    <h3>4.6 Some Examples of Mathematical Notation</h3>
+    <figure>
+        <math>
+            <mfenced open="|" close="|" separators="">
+                <mi>x</mi>
+            </mfenced>
+            <mo>=</mo>
+            <mrow>
+                <mo>{</mo>
+                <mtable>
+                    <mtr>
+                        <mtd>
+                            <mi>x</mi>
+                            <mo>if</mo>
+                            <mi>x</mi>
+                            <mo>></mo>
+                            <mn>0</mn>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mn>0</mn>
+                            <mo>if</mo>
+                            <mi>x</mi>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mo>&#x2212;<!--MINUS SIGN--></mo>
+                            <mi>x</mi>
+                            <mo>if</mo>
+                            <mi>x</mi>
+                            <mo>&lt;</mo>
+                            <mn>0</mn>
+                        </mtd>
+                    </mtr>
+                </mtable>
+            </mrow>
+        </math>
+    </figure>
+    <pre>
+    &lt;math&gt;
+        &lt;mfenced open="|" close="|" separators=""&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+        &lt;/mfenced&gt;
+        &lt;mo&gt;=&lt;/mo&gt;
+        &lt;mrow&gt;
+            &lt;mo&gt;{&lt;/mo&gt;
+            &lt;mtable&gt;
+                &lt;mtr&gt;
+                    &lt;mtd&gt;
+                        &lt;mi&gt;x&lt;/mi&gt;
+                        &lt;mo&gt;if&lt;/mo&gt;
+                        &lt;mi&gt;x&lt;/mi&gt;
+                        &lt;mo&gt;&gt;&lt;/mo&gt;
+                        &lt;mn&gt;0&lt;/mn&gt;
+                    &lt;/mtd&gt;
+                &lt;/mtr&gt;
+                &lt;mtr&gt;
+                    &lt;mtd&gt;
+                        &lt;mi&gt;0&lt;/mi&gt;
+                        &lt;mo&gt;if&lt;/mo&gt;
+                        &lt;mi&gt;x&lt;/mi&gt;
+                        &lt;mo&gt;=&lt;/mo&gt;
+                        &lt;mn&gt;0&lt;/mn&gt;
+                    &lt;/mtd&gt;
+                &lt;/mtr&gt;
+                &lt;mtr&gt;
+                    &lt;mtd&gt;
+                        &lt;mo&gt;&amp;#x2212;&lt;!--MINUS SIGN--&gt;&lt;/mo&gt;
+                        &lt;mi&gt;0&lt;/mi&gt;
+                        &lt;mo&gt;if&lt;/mo&gt;
+                        &lt;mi&gt;x&lt;/mi&gt;
+                        &lt;mo&gt;&lt;&lt;/mo&gt;
+                        &lt;mn&gt;0&lt;/mn&gt;
+                    &lt;/mtd&gt;
+                &lt;/mtr&gt;
+            &lt;/mtable&gt;
+        &lt;/mrow&gt;
+    &lt;/math&gt;
+    </pre>
+
+</section>
+</main>
+</body>
+</html>
+
+
+
