@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chapter 0: Preliminaries</title>
+    <style>
+        .math_block {
+            display: block;
+            background-color: lightblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Chapter 0: Preliminaries</h1>
+<h2>0.1 Proofs</h2>
+<h3>Implies</h3>
+<math class="math_block">
+    <mi>p</mi>
+    <mo>&#x21d2;<!--RIGHTWARDS DOUBLE ARROW--></mo>
+    <mi>q</mi>
+</math>
+<dl>
+    <dt>Meaning</dt>
+    <dd>If <math><mi>p</mi></math> is true, then <math><mi>q</mi></math> is true.</dd>
+    <dt>Read it as</dt>
+    <dd><math><mi>p</mi></math> implies <math><mi>q</mi></math>.</dd>
+</dl>
+<p>Here, <math><mi>p</mi></math> is the <i>hypothesis</i> and 
+    <math><mi>q</mi></math> the <i>conclusion</i> of the implication.
+</p>
+<p>Suppose that you are asked to verify that
+    <math>
+        <msup><mi>x</mi><mn>2</mn></msup>
+        <mo>&#x2265;<!--GREATER-THAN OR EQUAL TO--></mo><mn>0</mn>
+    </math>
+    for every integer <math><mi>n</mi></math>.
+    This expression is an implication: 
+    If <math><mi>x</mi></math> is an integer, then
+    <math>
+        <msup><mi>x</mi><mn>2</mn></msup>
+        <mo>&#x2265;<!--GREATER-THAN OR EQUAL TO--></mo><mn>0</mn>
+    </math>.
+</p>
+<math class="math_block">
+    <mrow>
+        <mi>x</mi>
+        <mo>is an integer</mo>
+    </mrow>
+    <mo>&#x21d2;<!--RIGHTWARDS DOUBLE ARROW--></mo>
+    <mrow>
+        <msup><mi>x</mi><mn>2</mn></msup>
+        <mo>&#x2265;<!--GREATER-THAN OR EQUAL TO--></mo>
+        <mn>0</mn>    
+    </mrow>
+</math>
+<dl>
+    <dt>Method of Reduction to Cases.</dt>
+    <dd>To prove
+        <math>
+            <mi>p</mi>
+            <mo>&#x21d2;<!--RIGHTWARDS DOUBLE ARROW--></mo>
+            <mi>q</mi>
+        </math>,
+        show that <math><mi>p</mi></math> implies at least one of a list
+        <math>
+            <msub><mi>p</mi><mn>1</mn></msub>
+            <mo>,</mo>
+            <msub><mi>p</mi><mn>2</mn></msub>
+            <mo>,</mo>
+            <mi> &#x2026;<!--HORIZONTAL ELLIPSIS--> </mi>
+            <mo>,</mo>
+            <msub><mi>p</mi><mi>n</mi></msub>
+        </math>
+        of statements (the cases) and that
+        <math>
+            <msub><mi>p</mi><mi>i</mi></msub>
+            <mo>&#x21d2;<!--RIGHTWARDS DOUBLE ARROW--></mo>
+            <mi>q</mi>
+        </math>
+        for each <math><mi>i</mi></math>.
+    </dd>
+    <dt>Method of Proof by Contradiction.</dt>
+    <dd>To prove
+        <math>
+            <mi>p</mi>
+            <mo>&#x21d2;<!--RIGHTWARDS DOUBLE ARROW--></mo>
+            <mi>q</mi>
+        </math>,
+        show that the assumption that both <math><mi>p</mi></math>
+        is true and <math><mi>q</mi></math> is false leads 
+        to a contradiction.
+    </dd>
+</dl>
+<p>Note that if you can find even one example for which an implication
+is not valid (<b>counterexample</b>), the implication is false. 
+Thus, disproving implications in a sense is easier than proving them.</p>
+
+<math class="math_block">
+    <mi>p</mi>
+    <mo>&#x21d4;<!--LEFT RIGHT DOUBLE ARROW--></mo>
+    <mi>q</mi>
+</math>
+<dl>
+    <dt>Meaning</dt>
+    <dd>If both
+        <math>
+            <mi>p</mi>
+            <mo>&#x21d2;<!--RIGHTWARDS DOUBLE ARROW--></mo>
+            <mi>q</mi>    
+        </math>
+        and
+        <math>
+            <mi>q</mi>
+            <mo>&#x21d2;<!--RIGHTWARDS DOUBLE ARROW--></mo>
+            <mi>p</mi>    
+        </math>
+        are valid, 
+        the statements <math><mi>p</mi></math> and <math><mi>q</mi></math>
+        are called logically equivalent.</dd>
+    <dt>Read it as</dt>
+    <dd><math><mi>p</mi></math> if and only if <math><mi>q</mi></math>.</dd>
+</dl>
+<p>Example 6. Show that</p>
+<math class="math_block">
+    <mrow>
+        <mo>If</mo>
+        <mi>n</mi>
+        <mo>is an integer,</mo>
+    </mrow>
+    <mrow>
+        <mi>n</mi>
+        <mo>is odd</mo>
+    </mrow>
+    <mo>&#x21d4;<!--LEFT RIGHT DOUBLE ARROW--></mo>
+    <mrow>
+        <mrow><msup><mi>n</mi><mn>2</mn></msup></mrow>
+        <mo>is odd</mo>
+    </mrow>
+</math>
+</body>
+</html>

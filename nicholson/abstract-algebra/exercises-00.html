@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chapter 0: Preliminaries</title>
+    <style>
+        .math_block {
+            display: block;
+            background-color: lightblue;
+            padding: 10px;
+        }
+        mtd {
+            text-align: left;
+        }
+        td {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    </style>
+</head>
+<body>
+<h1>Chapter 0: Preliminaries</h1>
+<h2>0.1 Proofs</h2>
+<p>
+    The most common methods of proof include:
+    <sl>
+        <li>Direct Proof</li>
+        <li>Reduction to Cases</li>
+        <li>Proof by Contradiction</li>
+    </sl>
+</p>
+<p>
+    <strong>1.</strong>
+    In each case, prove the result and either prove the converse or give a counterexample.
+</p>
+<p>
+    <strong>a.</strong>
+    If <math><mi>n</mi></math> is an even integer, then
+    <math><msup><mi>n</mi><mn>2</mn></msup></math> is a multiple of 4.
+</p>
+<p>
+    <strong>Solution to a.</strong>
+    If <math><mi>n</mi></math> is an even integer, it has the form 
+    <math>
+        <mi>n</mi>
+        <mo>=</mo>
+        <mrow>
+            <mn>2</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mi>k</mi>
+        </mrow>
+    </math>
+    for some integer <math><mi>k</mi></math>. Then
+    <math>
+        <msup><mi>n</mi><mn>2</mn></msup>
+        <mo>=</mo>
+        <mrow>
+            <mn>4</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <msup><mi>k</mi><mn>2</mn></msup>
+        </mrow>
+    </math>
+    is a multiple of 4 because <math><msup><mi>k</mi><mn>2</mn></msup></math>
+    is an integer. &#x220E; (Direct Proof)
+</p>
+<p>
+    <strong>The converse of a.</strong>
+    If <math><msup><mi>n</mi><mn>2</mn></msup></math> is a multiple of 4
+    then <math><mi>n</mi></math> is an even integer.
+</p>
+<p>
+    <strong>Proving the converse.</strong>
+    Suppose <math><mi>n</mi></math> is not an even integer so that
+    <math><mi>n</mi></math> is an odd, say
+    <math>
+        <mi>n</mi>
+        <mo>=</mo>
+        <mrow>
+            <mn>2</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+        </mrow>
+    </math>, where <math><mi>k</mi></math> is an integer. Then
+</p>
+<p>
+    <math>
+        <mtable>
+            <mtr>
+                <mtd>
+                    <msup><mi>n</mi><mn>2</mn></msup>
+                </mtd>
+                <mtd>
+                    <mo>=</mo>
+                </mtd>
+                <mtd>
+                    <msup>
+                        <mfenced>
+                            <mrow>
+                                <mn>2</mn>
+                                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                                <mi>k</mi>
+                                <mo>+</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </mfenced>
+                        <mn>2</mn>
+                    </msup>
+                </mtd>
+            </mtr>
+            <mtr>
+                <mtd></mtd>
+                <mtd>
+                    <mo>=</mo>
+                </mtd>
+                <mtd>
+                    <mrow>
+                        <mn>4</mn>
+                        <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                        <msup><mi>k</mi><mn>2</mn></msup>
+                    <mo>+</mo>
+                    <mrow>
+                        <mn>4</mn>
+                        <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                        <mi>k</mi>
+                    </mrow>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                </mtd>
+            </mtr>
+            <mtr>
+                <mtd></mtd>
+                <mtd>
+                    <mo>=</mo>
+                </mtd>
+                <mtd>
+                    <mrow>
+                        <mn>4</mn>
+                        <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                        <mfenced>
+                            <mrow>
+                                <msup><mi>k</mi><mn>2</mn></msup>
+                                <mo>+</mo>
+                                <mi>k</mi>
+                            </mrow>
+                        </mfenced>
+                    </mrow>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                </mtd>
+            </mtr>
+        </mtable>
+    </math>
+</p>
+<p>
+    As 
+    <math>
+        <mfenced>
+            <mrow>
+                <msup><mi>k</mi><mn>2</mn></msup>
+                <mo>+</mo>
+                <mi>k</mi>
+            </mrow>
+        </mfenced>
+    </math>
+    is an integer, <math><msup><mi>n</mi><mn>2</mn></msup></math>
+    is not a multiple of 4, a contradiction. &#x220E;
+    (Proof by Contradiction)
+</p>
+
+<p>
+    <strong>b.</strong>
+    If <math><mi>m</mi></math> is an even integer and
+    <math><mi>n</mi></math> is an odd integer, then
+    <math><mi>m</mi><mo>+</mo><mi>n</mi></math> is odd.
+</p>
+<p>
+    <strong>Solution to b.</strong>
+    If <math><mi>m</mi></math> is an even integer, say 
+    <math>
+        <mi>m</mi>
+        <mo>=</mo>
+        <mrow>
+            <mn>2</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mi>j</mi>
+        </mrow>
+    </math>
+    for some integer <math><mi>j</mi></math>, and
+    <math><mi>n</mi></math> is an odd integer, say 
+    <math>
+        <mi>n</mi>
+        <mo>=</mo>
+        <mrow>
+            <mn>2</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+        </mrow>
+    </math>
+    for some integer <math><mi>k</mi></math>, then
+    <math>
+        <mrow>
+            <mi>m</mi>
+            <mo>+</mo>
+            <mi>n</mi>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+            <mn>2</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mi>j</mi>
+            <mo>+</mo>
+            <mn>2</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+            <mn>2</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mfenced>
+                <mrow>
+                    <mi>j</mi>
+                    <mo>+</mo>
+                    <mi>k</mi>
+                </mrow>
+            </mfenced>
+            <mo>+</mo>
+            <mn>1</mn>
+        </mrow>
+    </math>
+    is odd. &#x220E; (Direct Proof)
+</p>
+<p>
+    <strong>The converse of b.</strong>
+    If <math><mi>m</mi><mo>+</mo><mi>n</mi></math> is odd, then
+    <math><mi>m</mi></math> is an even integer and
+    <math><mi>n</mi></math> is an odd integer.
+</p>
+<p>
+    <strong>Proving the converse.</strong>
+    With the same way as above, the following cases are proved:
+    <table>
+        <tr>
+            <th>#</td>
+            <th><math><mi>m</mi></math></th>
+            <th><math><mi>n</mi></math></th>
+            <th><math><mi>m</mi><mo>+</mo><mi>n</mi></math></th>
+        </tr>
+        <tr>
+            <td>(ⅰ)</td>
+            <td>even</td>
+            <td>even</td>
+            <td>even</td>
+        </tr>
+        <tr>
+            <td>(ⅱ)</td>
+            <td>even</td>
+            <td>odd</td>
+            <td>odd</td>
+        </tr>
+        <tr>
+            <td>(ⅲ)</td>
+            <td>odd</td>
+            <td>even</td>
+            <td>odd</td>
+        </tr>
+        <tr>
+            <td>(ⅳ)</td>
+            <td>odd</td>
+            <td>odd</td>
+            <td>even</td>
+            </td>
+        </tr>
+    </table>
+    Hence, from the case (ⅱ), the converse is true. &#x220E;
+    (Reduction to Cases)
+</p>
+
+
+<p>
+    <strong>c.</strong>
+    If <math><mi>x</mi><mo>=</mo><mn>2</mn></math> or
+    <math><mi>x</mi><mo>=</mo><mn>3</mn></math>, then
+    <math>
+        <msup><mi>x</mi><mn>3</mn></msup>
+        <mo>&#x2212<!--MINUS SIGN--></mo>
+        <mrow>
+            <mn>6</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <msup><mi>x</mi><mn>2</mn></msup>
+        </mrow>
+        <mo>+</mo>
+        <mrow>
+            <mn>11</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mi>x</mi>
+        </mrow>
+        <mo>&#x2212<!--MINUS SIGN--></mo>
+        <mn>6</mn>
+        <mo>=</mo>
+        <mn>0</mn>
+    </math>
+</p>
+<p>
+    <strong>Solution to c.</strong>
+    As
+    <math>
+        <mrow>
+            <msup><mi>x</mi><mn>3</mn></msup>
+            <mo>&#x2212<!--MINUS SIGN--></mo>
+            <mrow>
+                <mn>6</mn>
+                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                <msup><mi>x</mi><mn>2</mn></msup>
+            </mrow>
+            <mo>+</mo>
+            <mrow>
+                <mn>11</mn>
+                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                <mi>x</mi>
+            </mrow>
+            <mo>&#x2212<!--MINUS SIGN--></mo>
+            <mn>6</mn>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+            <mfenced>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&#x2212<!--MINUS SIGN--></mo>
+                    <mn>1</mn>
+                </mrow>
+            </mfenced>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mfenced>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&#x2212<!--MINUS SIGN--></mo>
+                    <mn>2</mn>
+                </mrow>
+            </mfenced>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mfenced>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&#x2212<!--MINUS SIGN--></mo>
+                    <mn>3</mn>
+                </mrow>
+            </mfenced>
+        </mrow>
+    </math>,
+    if <math><mi>x</mi><mo>=</mo><mn>2</mn></math> then
+    <math>
+        <mn>1</mn>
+        <mo>&#x00D7<!--MULTIPLICATION SIGN--></mo>
+        <mn>0</mn>
+        <mo>&#x00D7<!--MULTIPLICATION SIGN--></mo>
+        <mfenced>
+            <mrow>
+                <mo>&#x2212<!--MINUS SIGN--></mo>
+                <mn>1</mn>
+            </mrow>
+        </mfenced>
+        <mo>=</mo>
+        <mn>0</mn>
+    </math>, 
+    and
+    if <math><mi>x</mi><mo>=</mo><mn>3</mn></math> then
+    <math>
+        <mn>2</mn>
+        <mo>&#x00D7<!--MULTIPLICATION SIGN--></mo>
+        <mn>1</mn>
+        <mo>&#x00D7<!--MULTIPLICATION SIGN--></mo>
+        <mn>0</mn>
+        <mo>=</mo>
+        <mn>0</mn>
+    </math>. &#x220E; (Direct Proof)
+</p>
+
+</body>
+</html>

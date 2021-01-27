@@ -16,38 +16,43 @@
 <p>
     Identifiers include function names such as "sin". 
     Expressions such as "sin x" should be written using 
-    the character U+2061 (which also has the entity names
-    &amp;af; and &amp;ApplyFunction;) as shown below;
+    the character U+2061 as shown below;
 </p>
+<pre>
+&lt;mrow&gt;
+    &lt;mi&gt;sin&lt;/mi&gt;
+    &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION--&gt;&lt;/mo&gt;
+    &lt;mi&gt;x&lt;/mi&gt;
+&lt;/mrow&gt;
+</pre>
 <math class="math_color">
-    <semantics>
-        <mrow>
-            <mi>sin</mi>
-            <mo>&ApplyFunction;</mo>
-            <mi>x</mi>
-        </mrow>
-        <annotation-xml encoding="MathML-Content">
-            <apply><sin/><ci>x</ci></apply>
-        </annotation-xml>
-    </semantics>
+    <mrow>
+        <mi>sin</mi>
+        <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+        <mi>x</mi>
+    </mrow>
 </math>
 <p>
     Miscellaneous text that should be treated as a "term" can 
     also be represented by an <code>mi</code> element, as in:
 </p>
+<pre>
+&lt;mrow&gt;
+    &lt;mn&gt;1&lt;/mn&gt;
+    &lt;mo&gt;+&lt;/mo&gt;
+    &lt;mi&gt;&amp;#x2026;&lt;!--HIRIZONTAL ELLIPSIS--&gt;&lt;/mi&gt;
+    &lt;mo&gt;+&lt;/mo&gt;
+    &lt;mi&gt;n&lt;/mi&gt;
+&lt;/mrow&gt;
+</pre>
 <math class="math_color">
-    <semantics>
-        <mrow>
-            <mn>1</mn>
-            <mo>+</mo>
-            <mi>&hellip;</mi>
-            <mo>+</mo>
-            <mi>n</mi>
-        </mrow>
-        <annotation-xml encoding="MathML-Content">
-            <apply><sin/><ci>x</ci></apply>
-        </annotation-xml>
-    </semantics>
+    <mrow>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mi>&#x2026;<!--HIRIZONTAL ELLIPSIS--></mi>
+        <mo>+</mo>
+        <mi>n</mi>
+    </mrow>
 </math>
 
 <h3>3.2.5 Operator, Fence, Separator or Accent &lt;mo&gt;</h3>
@@ -55,15 +60,14 @@
 <h4>3.2.5.3 Operators</h4>
 
 <pre>
-&lt;mo&gt;+&lt;/mo&gt;
-&lt;mo&gt;&amp;plus;&lt;/mo&gt;
-&lt;mo&gt;&amp;lt;&lt;/mo&gt;
-&lt;mo&gt;and&lt;/mo&gt;
-&lt;mo&gt;if&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;is an integer&lt;/mo&gt;
+&lt;mo&gt;+&lt;/mo&gt;&lt;mo&gt;;&lt;/mo&gt;
+&lt;mo&gt;&amp;lt;&lt;/mo&gt;&lt;mo&gt;;&lt;/mo&gt;
+&lt;mo&gt;and&lt;/mo&gt;&lt;mo&gt;;&lt;/mo&gt;
+&lt;mo&gt;if&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;is an integer&lt;/mo&gt;&lt;mo&gt;;&lt;/mo&gt;
 </pre>
+
 <math class="math_color">
     <mo>+</mo><mo>;</mo>
-    <mo>&plus;</mo><mo>;</mo>
     <mo>&lt;</mo><mo>;</mo>
     <mo>and</mo><mo>;</mo>
     <mo>if</mo><mi>x</mi><mo>is an integer</mo><mo>;</mo>
@@ -95,9 +99,9 @@
 </math>
 
 <pre>
-&lt;mrow>
+&lt;mrow&gt;
     &lt;mi&gt;f&lt;/mi&gt;
-    &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+    &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION--&gt;&lt;/mo&gt;
     &lt;mrow&gt;
         &lt;mo&gt;(&lt;/mo&gt;
         &lt;mrow&gt;
@@ -109,10 +113,11 @@
     &lt;/mrow&gt;
 &lt;/mrow&gt;
 </pre>
+
 <math class="math_color">
     <mrow>
         <mi>f</mi>
-        <mo>&ApplyFunction;</mo>
+        <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
         <mrow>
             <mo>(</mo>
             <mrow>
@@ -173,7 +178,7 @@
 &lt;mrow&gt;
     &lt;mi&gt;x&lt;/mi&gt;
     &lt;munder&gt;
-        &lt;mo&gt;&amp;rightarrow;&lt;/mo&gt;
+        &lt;mo&gt;&amp#x2192;&lt;!--RIGHTWARDS ARROW--&gt;&lt;/mo&gt;
         &lt;mtext&gt;maps to&lt;/mtext&gt;
     &lt;/munder&gt;
     &lt;mi&gt;y&lt;/mi&gt;
@@ -183,7 +188,7 @@
     <mrow>
         <mi>x</mi>
         <munder>
-            <mo>&rightarrow;</mo>
+            <mo>&#x2192;<!--RIGHTWARDS ARROW--></mo>
             <mtext>maps to</mtext>
         </munder>
         <mi>y</mi>
@@ -204,7 +209,7 @@
     &lt;mrow&gt;
         &lt;mrow&gt;
             &lt;mi&gt;f&lt;/mi&gt;
-            &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+            &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION--&gt;&lt;/mo&gt;
             &lt;mrow&gt;
                 &lt;mo&gt;(&lt;/mo&gt;
                 &lt;mi&gt;x&lt;/mi&gt;
@@ -228,7 +233,7 @@
         <mrow>
             <mrow>
                 <mi>f</mi>
-                <mo>&ApplyFunction;</mo>
+                <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
                 <mrow>
                     <mo>(</mo>
                     <mi>x</mi>
@@ -281,14 +286,14 @@
     &lt;mn&gt;1&lt;/mn&gt;
     &lt;mn&gt;4&lt;/mn&gt;
     &lt;mn&gt;9&lt;/mn&gt;
-    &lt;mi&gt;&amp;hellip;&lt;/mi&gt;
+    &lt;mi&gt;&amp;#x2026;&lt;!--HIRIZONTAL ELLIPSIS--&gt;&lt;/mi&gt;
     &lt;mrow&gt;
         &lt;msup&gt;
             &lt;mi&gt;n&lt;/mi&gt;
             &lt;mn&gt;2&lt;/mn&gt;
         &lt;/msup&gt;
     &lt;/mrow&gt;
-    &lt;mi&gt;&amp;hellip;&lt;/mi&gt;
+    &lt;mi&gt;&amp;#x2026;&lt;!--HIRIZONTAL ELLIPSIS--&gt;&lt;/mi&gt;
 &lt;/mfenced&gt;
 </pre>
 <math class="math_color">
@@ -297,14 +302,14 @@
         <mn>1</mn>
         <mn>4</mn>
         <mn>9</mn>
-        <mi>&hellip;</mi>
+        <mi>&#x2026;<!--HIRIZONTAL ELLIPSIS--></mi>
         <mrow>
             <msup>
                 <mi>n</mi>
                 <mn>2</mn>
             </msup>
         </mrow>
-        <mi>&hellip;</mi>
+        <mi>&#x2026;<!--HIRIZONTAL ELLIPSIS--></mi>
     </mfenced>
 </math>
 
@@ -314,9 +319,9 @@
 &lt;mfenced open="{" close="}" separators=""&gt;
     &lt;mrow&gt;
         &lt;mfenced&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/mfenced&gt;
-        &lt;mo&gt;&amp;in;&lt;/mo&gt;
+        &lt;mo&gt;&amp;#x2208;&lt;!--ELEMENT OF--&gt;&lt;/mo&gt;
         &lt;msup&gt;
-            &lt;mi&gt;&amp;reals;&lt;/mi&gt;
+            &lt;mi&gt;&amp;#x211D;&lt;!--REAL NUMBERS--&gt;&lt;/mi&gt;
             &lt;mn&gt;2&lt;/mn&gt;
         &lt;/msup&gt;
     &lt;/mrow&gt;
@@ -336,9 +341,9 @@
     <mfenced open="{" close="}" separators="">
         <mrow>
             <mfenced><mi>x</mi><mi>y</mi></mfenced>
-            <mo>&in;</mo>
+            <mo>&#x2208;<!--ELEMENT OF--></mo>
             <msup>
-                <mi>&reals;</mi>
+                <mi>&#x211D;<!--REAL NUMBERS--></mi>
                 <mn>2</mn>
             </msup>
         </mrow>
@@ -356,34 +361,36 @@
 <h3>3.4.6 Underscript-overscript Pair <code>&lt;munderover&gt;</code></h3>
 
 <pre>
-&lt;munderover&gt;
-    &lt;mo&gt;&amp;Sigma;&lt;/mo&gt;
-    &lt;mrow&gt;
-        &lt;mi&gt;k&lt;/mi&gt;
-        &lt;mo&gt;=&lt;/mo&gt;
-        &lt;mn&gt;1&lt;/mn&gt;
-    &lt;/mrow&gt;
-    &lt;mi&gt;n&lt;/mi&gt;
-&lt;/munderover&gt;
-&lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
-&lt;mrow&gt;
-    &lt;mfrac&gt;
-        &lt;mn&gt;1&lt;/mn&gt;
+&lt;math displaystyle="true"&gt;
+    &lt;munderover&gt;
+        &lt;mo&gt;&amp;#x2211;&lt;!--N-ARY SUMMATION--&gt;&lt;/mo&gt;
         &lt;mrow&gt;
-            &lt;mfenced&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/mfenced&gt;
-            &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
-            &lt;mfenced separators=""&gt;
-                &lt;mi&gt;k&lt;/mi&gt;
-                &lt;mo&gt;+&lt;/mo&gt;
-                &lt;mn&gt;1&lt;/mn&gt;
-            &lt;/mfenced&gt;
+            &lt;mi&gt;k&lt;/mi&gt;
+            &lt;mo&gt;=&lt;/mo&gt;
+            &lt;mn&gt;1&lt;/mn&gt;
         &lt;/mrow&gt;
-    &lt;/mfrac&gt;
-&lt;/mrow&gt;
+        &lt;mi&gt;n&lt;/mi&gt;
+    &lt;/munderover&gt;
+    &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION--&gt;&lt;/mo&gt;
+    &lt;mrow&gt;
+        &lt;mfrac&gt;
+            &lt;mn&gt;1&lt;/mn&gt;
+            &lt;mrow&gt;
+                &lt;mfenced&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/mfenced&gt;
+                &lt;mo&gt;&amp;#x2062;&lt;!--INVISIBLE TIMES--&gt;&lt;/mo&gt;
+                &lt;mfenced separators=""&gt;
+                    &lt;mi&gt;k&lt;/mi&gt;
+                    &lt;mo&gt;+&lt;/mo&gt;
+                    &lt;mn&gt;1&lt;/mn&gt;
+                &lt;/mfenced&gt;
+            &lt;/mrow&gt;
+        &lt;/mfrac&gt;
+    &lt;/mrow&gt;
+&lt;/math&gt;
 </pre>
-<math class="math_color">
+<math displaystyle="true" class="math_color">
     <munderover>
-        <mo>&Sigma;</mo>
+        <mo>&#x2211;<!--N-ARY SUMMATION--></mo>
         <mrow>
             <mi>k</mi>
             <mo>=</mo>
@@ -391,13 +398,13 @@
         </mrow>
         <mi>n</mi>
     </munderover>
-    <mo>&ApplyFunction;</mo>
+    <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
     <mrow>
         <mfrac>
             <mn>1</mn>
             <mrow>
-                <mfenced><mi>k</mi></mfenced>
-                <mo>&InvisibleTimes;</mo>
+                <mi>k</mi>
+                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
                 <mfenced separators="">
                     <mi>k</mi>
                     <mo>+</mo>
