@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Mathematical Terms</title>
+    <style>
+        th {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            text-align: left;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        td {
+            border-bottom: 1px solid black;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    </style>
+</head>
+<body>
+<table>
+<tr>
+    <th>en</th>
+    <th>ja</th>
+    <th>math</th>
+</tr>
+<tr>
+    <td>discrete mathematics</td>
+    <td>離散数学</td>
+    <td></td>
+</tr>
+<tr>
+    <td>linear equations</td>
+    <td>一次方程式</td>
+    <td></td>
+</tr>
+<tr>
+    <td>linear inequalities</td>
+    <td>一次不等式</td>
+    <td></td>
+</tr>
+<tr>
+    <td>quadratic equations</td>
+    <td>二次方程式</td>
+    <td></td>
+</tr>
+<tr>
+    <td>quadratic inequalities</td>
+    <td>二次不等式</td>
+    <td></td>
+</tr>
+<tr>
+    <td>exponentiation</td>
+    <td>べき乗</td>
+    <td>
+        <math>
+            <msup><mi>m</mi><mi>n</mi></msup>
+            <mo>=</mo>
+            <mi>m</mi>
+            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
+            <mi>m</mi>
+            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
+            <mi>&#x2026;<!--HORIZONTAL ELLIPSIS--></mi>
+            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
+            <mi>m</mi>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>factorials</td>
+    <td>階乗</td>
+    <td>
+        <math>
+            <mi>n</mi><mo>!</mo>
+            <mo>=</mo>
+            <mi>n</mi>
+            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
+            <mfenced>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&#x2212;<!--MINUS SIGN--></mo>
+                    <mn>1</mn>
+                </mrow>
+            </mfenced>
+            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
+            <mi>&#x2026;<!--HORIZONTAL ELLIPSIS--></mi>
+            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
+            <mn>1</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>permutations</td>
+    <td>順列</td>
+    <td>
+        <math>
+            <mmultiscripts>
+                <mi>P</mi>
+                <mi>r</mi>
+                <none/>
+                <mprescripts/>
+                <mi>n</mi>
+                <none/>
+            </mmultiscripts>
+            <mo>=</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&#x2212<!--MINUS SIGN--></mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&#x2212<!--MINUS SIGN--></mo>
+                        <mn>2</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&#x2026;<!--HIRIZONTAL ELLIPSIS--></mo>
+                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&#x2212<!--MINUS SIGN--></mo>
+                        <mn>r</mn>
+                        <mo>+</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+            </mrow>
+            <mo>=</mo>
+            <mrow>
+                <mfrac>
+                    <mrow>
+                        <mn>n</mn><mo>!</mo>
+                    </mrow>
+                    <mrow>
+                        <mfenced>
+                            <mrow>
+                                <mi>n</mi>
+                                <mo>&#x2212<!--MINUS SIGN--></mo>
+                                <mn>r</mn>
+                            </mrow>
+                        </mfenced>
+                        <mo>!</mo>
+                    </mrow>
+                </mfrac>
+            </mrow>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>combinations</td>
+    <td>組合せ</td>
+    <td>
+        <math>
+            <mmultiscripts>
+                <mi>C</mi>
+                <mi>r</mi>
+                <none/>
+                <mprescripts/>
+                <mi>n</mi>
+                <none/>
+            </mmultiscripts>
+            <mo>=</mo>
+            <mfrac>
+                <mrow><mi>n</mi><mo>!</mo></mrow>
+                <mrow>
+                    <mi>r</mi><mo>!</mo>
+                    <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&#x2212<!--MINUS SIGN--></mo>
+                            <mi>r</mi>
+                        </mrow>
+                    </mfenced>
+                    <mo>!</mo>
+                </mrow>
+            </mfrac>
+            <mo>=</mo>
+            <mfrac>
+                <mmultiscripts>
+                    <mi>P</mi>
+                    <mi>r</mi>
+                    <none/>
+                    <mprescripts/>
+                    <mi>n</mi>
+                    <none/>
+                </mmultiscripts>
+                <mrow>
+                    <mi>r</mi><mo>!</mo>
+                </mrow>
+            </mfrac>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>coefficients</td>
+    <td>係数</td>
+    <td>
+        <math><mn>4</mn></math> in 
+        <math>
+            <mn>4</mn>
+            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mi>x</mi>
+            <mo>&#x2212;<!--MINUS SIGN--></mo>
+            <mn>7</mn>
+            <mo>=</mo>
+            <mn>5</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>circular permutations</td>
+    <td>円順列</td>
+    <td></td>
+</tr>
+<tr>
+    <td>binomial theorem</td>
+    <td>二項定理 (≔二項展開)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>binomial expansions</td>
+    <td>二項展開 (≔二項定理)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>binomial coefficients</td>
+    <td>二項係数</td>
+    <td>
+        <math>
+            <mrow>
+                <mo>(</mo>
+                <mfrac linethickness="0">
+                    <mrow><mi>n</mi></mrow>
+                    <mrow><mi>r</mi></mrow>
+                </mfrac>
+                <mo>)</mo>
+            </mrow>
+            <mo>=</mo>
+            <mfrac>
+                <mrow><mi>n</mi><mo>!</mo></mrow>
+                <mrow>
+                    <mi>r</mi><mo>!</mo>
+                    <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&#x2212<!--MINUS SIGN--></mo>
+                            <mi>r</mi>
+                        </mrow>
+                    </mfenced>
+                    <mo>!</mo>
+                </mrow>
+            </mfrac>
+            <mo>=</mo>
+            <mmultiscripts>
+                <mi>C</mi>
+                <mi>r</mi>
+                <none/>
+                <mprescripts/>
+                <mi>n</mi>
+                <none/>
+            </mmultiscripts>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>multinomial theorem</td>
+    <td>多項定理</td>
+    <td></td>
+</tr>
+<tr>
+    <td>multinomials</td>
+    <td>多項和</td>
+    <td></td>
+</tr>
+<tr>
+    <td>compositions of a positive integer</td>
+    <td>正の整数の合成</td>
+    <td></td>
+</tr>
+</table>
+</body>
+</html>
