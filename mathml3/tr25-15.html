@@ -696,19 +696,26 @@
         disambiguate a sequence from a multiplication. For example, the double 
         <math><mi>i</mi><mi>j</mi></math> 
         subscript in the variable 
+        <figure>
+            <math>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <mi>i</mi>
+                        <mo>&InvisibleComma;</mo>
+                        <mi>j</mi>
+                    </mrow>
+                </msub>
+            </math>
+        </figure>
+        means
         <math>
             <msub>
                 <mi>a</mi>
-                <mrow>
-                    <mi>i</mi>
-                    <mo>&#x2063;<!--INVISIBLE SEPARATOR--></mo>
-                    <mi>j</mi>
-                </mrow>
+                <mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow>
             </msub>
         </math>
-        means
-        <math><msub><mi>a</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></math>
-        — that is, the <math><mi>i</mi></math> and <math><mi>j</mi></math> 
+        &mdash; that is, the <math><mi>i</mi></math> and <math><mi>j</mi></math> 
         are separate indices and not a single variable with
         the name <math><mi>i</mi><mi>j</mi></math> or even 
         the product of <math><mi>i</mi></math> and <math><mi>j</mi></math>. 
@@ -726,7 +733,7 @@
             &lt;mi&gt;a&lt;/mi&gt;
             &lt;mrow&gt;
                 &lt;mi&gt;i&lt;/mi&gt;
-                &lt;mo&gt;&amp;#x2063;&lt;!--INVISIBLE SEPARATOR--&gt;&lt;/mo&gt;
+                &lt;mo&gt;&amp;InvisibleComma;&lt;/mo&gt;
                 &lt;mi&gt;j&lt;/mi&gt;
             &lt;/mrow&gt;
         &lt;/msub&gt;
@@ -736,20 +743,22 @@
     <p>
         <strong>Invisible Multiplication.</strong>
         Similarly, an expression like
-        <math>
-            <mi>m</mi>
-            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
-            <msup>
-                <mi>c</mi>
-                <mn>2</mn>
-            </msup>
-        </math>
+        <figure>
+            <math>
+                <mi>m</mi>
+                <mo>&InvisibleTimes;</mo>
+                <msup>
+                    <mi>c</mi>
+                    <mn>2</mn>
+                </msup>
+            </math>
+        </figure>
         implies that the mass <math><mi>m</mi></math>
         multiplies the square of the speed <math><mi>c</mi></math>. 
         To represent the implied multiplication in
         <math>
             <mi>m</mi>
-            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mo>&InvisibleTimes;</mo>
             <msup>
                 <mi>c</mi>
                 <mn>2</mn>
@@ -762,7 +771,7 @@
     <pre>
     &lt;math&gt;
         &lt;mi&gt;m&lt;/mi&gt;
-        &lt;mo&gt;&amp;#x2062;&lt;!--INVISIBLE TIMES-->&lt;/mo&gt;
+        &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
         &lt;msup&gt;
             &lt;mi&gt;c&lt;/mi&gt;
             &lt;mn&gt;2&lt;/mn&gt;
@@ -771,31 +780,33 @@
     </pre>
 
     <p>
-        Another example is the expression
-        <math>
-            <msup>
-                <mi>f</mi>
-                <mrow>
-                    <mi>i</mi>
-                    <mo>&#x2063;<!--INVISIBLE SEPARATOR--></mo>
-                    <mi>j</mi>
-                </mrow>
-            </msup>
-            <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
-            <mfenced>
-                <mrow>
-                    <mi>cos</mi>
-                    <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
-                    <mfenced>
-                        <mrow>
-                            <mi>a</mi>
-                            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
-                            <mi>b</mi>
-                        </mrow>
-                    </mfenced>
-                </mrow>
-            </mfenced>
-        </math>, 
+        Another example is the expression 
+        <figure>
+            <math>
+                <msup>
+                    <mi>f</mi>
+                    <mrow>
+                        <mi>i</mi>
+                        <mo>&InvisibleComma;</mo>
+                        <mi>j</mi>
+                    </mrow>
+                </msup>
+                <mo>&ApplyFunction;</mo>
+                <mfenced>
+                    <mrow>
+                        <mi>cos</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mfenced>
+                            <mrow>
+                                <mi>a</mi>
+                                <mo>&InvisibleTimes;</mo>
+                                <mi>b</mi>
+                            </mrow>
+                        </mfenced>
+                    </mrow>
+                </mfenced>
+            </math> 
+        </figure>
         which means the same as 
         <math>
             <msup>
@@ -806,22 +817,22 @@
                     <mi>j</mi>
                 </mrow>
             </msup>
-            <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+            <mo>&ApplyFunction;</mo>
             <mfenced>
                 <mrow>
                     <mi>cos</mi>
-                    <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+                    <mo>&ApplyFunction;</mo>
                     <mfenced>
                         <mrow>
                             <mi>a</mi>
-                            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
+                            <mo>&times;</mo>
                             <mi>b</mi>
                         </mrow>
                     </mfenced>
                 </mrow>
             </mfenced>
         </math>, 
-        where <math><mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo></math>
+        where <math><mo>&times;</mo></math>
         is used here to represent multiplication, not the cross product. 
     </p>
     <pre>
@@ -830,19 +841,19 @@
             &lt;mi&gt;f&lt;/mi&gt;
             &lt;mrow&gt;
                 &lt;mi&gt;i&lt;/mi&gt;
-                &lt;mo&gt;&amp;#x2063;&lt;!--INVISIBLE SEPARATOR-->&lt;/mo&gt;
+                &lt;mo&gt;&amp;InvisibleComma;&lt;/mo&gt;
                 &lt;mi&gt;j&lt;/mi&gt;
             &lt;/mrow&gt;
         &lt;/msup&gt;
-        &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION-->&lt;/mo&gt;
+        &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
         &lt;mfenced&gt;
             &lt;mrow&gt;
                 &lt;mi&gt;cos&lt;/mi&gt;
-                &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION-->&lt;/mo&gt;
+                &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
                 &lt;mfenced&gt;
                     &lt;mrow&gt;
                         &lt;mi&gt;a&lt;/mi&gt;
-                        &lt;mo&gt;&amp;#x2062;&lt;!--INVISIBLE TIMES-->&lt;/mo&gt;
+                        &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
                         &lt;mi&gt;b&lt;/mi&gt;
                     &lt;/mrow&gt;
                 &lt;/mfenced&gt;
@@ -861,22 +872,26 @@
         <strong>Invisible Function Application.</strong>
         U+2061 <span class="code">FUNCTION APPLICATION</span> is used for an 
         implied function dependence as in 
-        <math>
-            <mi>f</mi>
-            <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
-            <mfenced separators="">
-                <mi>x</mi>
-                <mo>+</mo>
-                <mi>y</mi>
-            </mfenced>
-        </math>.
+        <figure>
+            <math>
+                <mi>f</mi>
+                <mo>&ApplyFunction;</mo>
+                <mfenced>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>+</mo>
+                        <mi>y</mi>
+                    </mrow>
+                </mfenced>
+            </math>
+        </figure>
         To indicate that this is the function <math><mi>f</mi></math> of the quantity 
-        <math><mfenced separators=""><mi>x</mi><mo>+</mo><mi>y</mi></mfenced></math>
+        <math><mfenced><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mfenced></math>
         and not the expression
         <math>
-            <mrow><mi>f</mi><mo>&#x2062;<!--INVISIBLE TIMES--></mo><mi>x</mi></mrow>
+            <mrow><mi>f</mi><mo>&InvisibleTimes;</mo><mi>x</mi></mrow>
             <mo>+</mo>
-            <mrow><mi>f</mi><mo>&#x2062;<!--INVISIBLE TIMES--></mo><mi>y</mi></mrow>
+            <mrow><mi>f</mi><mo>&InvisibleTimes;</mo><mi>y</mi></mrow>
         </math>,
         one can insert the non-displaying function application symbol between the 
         <math><mi>f</mi></math> and the left parenthesis.
@@ -884,11 +899,13 @@
     <pre>
     &lt;math&gt;
         &lt;mi&gt;f&lt;/mi&gt;
-        &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION--&gt;&lt;/mo&gt;
-        &lt;mfenced separators=""&gt;
-            &lt;mi&gt;x&lt;/mi&gt;
-            &lt;mo&gt;+&lt;/mo&gt;
-            &lt;mi&gt;y&lt;/mi&gt;
+        &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+        &lt;mfenced&gt;
+            &lt;mrow&gt;
+                &lt;mi&gt;x&lt;/mi&gt;
+                &lt;mo&gt;+&lt;/mo&gt;
+                &lt;mi&gt;y&lt;/mi&gt;
+            &lt;/mrow&gt;
         &lt;/mfenced&gt;
     &lt;/math&gt;
     </pre>
@@ -917,28 +934,28 @@
         the <math><mn>3</mn></math> and the <math><mn>½</mn></math>.
         Not having an operator at all would imply multiplication as in the example
         <figure>
-        <math>
-            <mn>3</mn>
-            <mo>&#x2064;<!--INVISIBLE PLUS OPERATOR--></mo>
-            <mfrac>
-                <mrow>
-                    <mi>a</mi>
-                    <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
-                    <mi>b</mi>
-                    <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
-                    <mi>c</mi>
-                </mrow>
-                <mi>d</mi>
-            </mfrac>
-        </math>
+            <math>
+                <mn>3</mn>
+                <mo>&#x2064;<!--INVISIBLE PLUS OPERATOR--></mo>
+                <mfrac>
+                    <mrow>
+                        <mi>a</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>b</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>c</mi>
+                    </mrow>
+                    <mi>d</mi>
+                </mfrac>
+            </math>
         </figure>
         where the <math><mn>3</mn></math> represents a factor multiplying the fraction 
         <math>
             <mrow>
                 <mi>a</mi>
-                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                <mo>&InvisibleTimes;</mo>
                 <mi>b</mi>
-                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+                <mo>&InvisibleTimes;</mo>
                 <mi>c</mi>
             </mrow>
             <mo>&#x2044;<!--FRACTION SLASH--></mo>
@@ -949,18 +966,12 @@
     &lt;math&gt;
         &lt;mn&gt;3&lt;/mn&gt;
         &lt;mo&gt;&amp;#x2064;&lt;!--INVISIBLE PLUS OPERATOR--&gt;&lt;/mo&gt;
-        &lt;mn&gt;&amp;#x00BD;&lt;!--VULGAR FRACTION ONE HALF--&gt;&lt;/mn&gt;
-    &lt;/math&lt;
-
-    &lt;math&gt;
-        &lt;mn&gt;3&lt;/mn&gt;
-        &lt;mo&gt;&amp;#x2064;&lt;!--INVISIBLE PLUS OPERATOR--&gt;&lt;/mo&gt;
         &lt;mfrac&gt;
             &lt;mrow&gt;
                 &lt;mi&gt;a&lt;/mi&gt;
-                &lt;mo&gt;&amp;#x2062;&lt;!--INVISIBLE TIMES--&gt;&lt;/mo&gt;
+                &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
                 &lt;mi&gt;b&lt;/mi&gt;
-                &lt;mo&gt;&amp;#x2062;&lt;!--INVISIBLE TIMES--&gt;&lt;/mo&gt;
+                &lt;mo&gt;&amp;#InvisibleTimes;&lt;/mo&gt;
                 &lt;mi&gt;c&lt;/mi&gt;
             &lt;/mrow&gt;
             &lt;mi&gt;d&lt;/mi&gt;
@@ -993,46 +1004,72 @@
     <h4>3.2.3 Large Operators</h4>
 
     <p>
-        Large Operators include 𝑛-ary operators like summation and integration. 
+        Large Operators include <i>n-ary</i> operators like 
+        summation and integration. 
         They may expand in size to fit their associated expressions. 
         They generally also take limits.
-    </p>
-    <figure>
-        <math displaystyle="true">
+        The placement of the limits on an operator is different 
+        when it is used in-line compared to its use in displayed formulae. 
+        For example when the expression 
+        <math>
             <munderover>
-                <mo>&#x2211;<!--N-ARY SUMMATION--></mo>
+                <mo>&sum;</mo>
                 <mrow>
                     <mi>n</mi>
                     <mo>=</mo>
                     <mn>1</mn>
                 </mrow>
-                <mi>&#x221E;<!--INFINITY--></mi>
+                <mi>&infin;</mi>
             </munderover>
-            <mo>&#x2061;<!--FUNCTION APPLICATION--></mo>
+            <mo>&ApplyFunction;</mo>
             <msub>
                 <mi>a</mi>
                 <mi>n</mi>
             </msub>
         </math>
-    </figure>
+        is laid out in-line, 
+        the limits are placed at the top and bottom right hand side. 
+        However, when displayed out-of-line, as in
+
+        <figure>
+        <math displaystyle="true">
+            <munderover>
+                <mo>&sum;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>=</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mi>&infin;</mi>
+            </munderover>
+            <mo>&ApplyFunction;</mo>
+            <msub>
+                <mi>a</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        </figure>
     <pre>
     &lt;math displaystyle="true"&gt;
         &lt;munderover&gt;
-            &lt;mo&gt;&amp;#x2211;&lt;!--N-ARY SUMMATION--&gt;&lt;/mo&gt;
+            &lt;mo&gt;&amp;sum;&lt;/mo&gt;
             &lt;mrow&gt;
                 &lt;mi&gt;n&lt;/mi&gt;
                 &lt;mo&gt;=&lt;/mo&gt;
                 &lt;mn&gt;1&lt;/mn&gt;
             &lt;/mrow&gt;
-            &lt;mi&gt;&amp;#x221E;&lt;!--INFINITY--&gt;&lt;/mi&gt;
+            &lt;mi&gt;&amp;infin;&lt;/mi&gt;
         &lt;/munderover&gt;
-        &lt;mo&gt;&amp;#x2061;&lt;!--FUNCTION APPLICATION--&gt;&lt;/mo&gt;
+        &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
         &lt;msub&gt;
             &lt;mi&gt;a&lt;/mi&gt;
             &lt;mi&gt;n&lt;/mi&gt;
         &lt;/msub&gt;
     &lt;/math&gt;
     </pre>
+
+        the limits are normally placed above and below. The Unicode Standard does not specify any particular layout for limit expressions, instead, it assumes that implementations follow the accepted typographical practices for mathematical layout.
+    </p>
 
     <h4>3.2.6 Fences</h4>
 
@@ -1041,23 +1078,30 @@
         used alone or as both opening and closing as the vertical bars in
         the absolute value
         <math>
-            <mfenced open="|" close="|" separators="">
+            <mfenced open="|" close="|">
                 <mi>x</mi>
             </mfenced>
         </math>.
     </p>
     <pre>
     &lt;math&gt;
-        &lt;mfenced open="|" close="|" separators=""&gt;
+        &lt;mfenced open="|" close="|"&gt;
             &lt;mi&gt;x&lt;/mi&gt;
         &lt;/mfenced&gt;
     &lt;/math&gt;
     </pre>
+    <p>
+        <strong>Fences:</strong>
+        In typesetting, bracketing tokens like parentheses, braces, and 
+        brackets which usually appear in matched pairs. 
+        (§D Glossary, Mathematical Markup Language (MathML) Version 3.0 
+        2nd Edition, 10 April 2014)
+    </p>
 
     <h3>4.6 Some Examples of Mathematical Notation</h3>
     <figure>
         <math>
-            <mfenced open="|" close="|" separators="">
+            <mfenced open="|" close="|">
                 <mi>x</mi>
             </mfenced>
             <mo>=</mo>
@@ -1069,7 +1113,7 @@
                             <mi>x</mi>
                             <mo>if</mo>
                             <mi>x</mi>
-                            <mo>></mo>
+                            <mo>&gt;</mo>
                             <mn>0</mn>
                         </mtd>
                     </mtr>
@@ -1084,7 +1128,7 @@
                     </mtr>
                     <mtr>
                         <mtd>
-                            <mo>&#x2212;<!--MINUS SIGN--></mo>
+                            <mo>&minus;</mo>
                             <mi>x</mi>
                             <mo>if</mo>
                             <mi>x</mi>
@@ -1098,7 +1142,7 @@
     </figure>
     <pre>
     &lt;math&gt;
-        &lt;mfenced open="|" close="|" separators=""&gt;
+        &lt;mfenced open="|" close="|"&gt;
             &lt;mi&gt;x&lt;/mi&gt;
         &lt;/mfenced&gt;
         &lt;mo&gt;=&lt;/mo&gt;
@@ -1110,7 +1154,7 @@
                         &lt;mi&gt;x&lt;/mi&gt;
                         &lt;mo&gt;if&lt;/mo&gt;
                         &lt;mi&gt;x&lt;/mi&gt;
-                        &lt;mo&gt;&gt;&lt;/mo&gt;
+                        &lt;mo&gt;&amp;gt;&lt;/mo&gt;
                         &lt;mn&gt;0&lt;/mn&gt;
                     &lt;/mtd&gt;
                 &lt;/mtr&gt;
@@ -1125,11 +1169,11 @@
                 &lt;/mtr&gt;
                 &lt;mtr&gt;
                     &lt;mtd&gt;
-                        &lt;mo&gt;&amp;#x2212;&lt;!--MINUS SIGN--&gt;&lt;/mo&gt;
+                        &lt;mo&gt;&amp;minus;&lt;/mo&gt;
                         &lt;mi&gt;0&lt;/mi&gt;
                         &lt;mo&gt;if&lt;/mo&gt;
                         &lt;mi&gt;x&lt;/mi&gt;
-                        &lt;mo&gt;&lt;&lt;/mo&gt;
+                        &lt;mo&gt;&amp;lt;&lt;/mo&gt;
                         &lt;mn&gt;0&lt;/mn&gt;
                     &lt;/mtd&gt;
                 &lt;/mtr&gt;

@@ -55,14 +55,10 @@
     <td>
         <math>
             <msup><mi>m</mi><mi>n</mi></msup>
-            <mo>=</mo>
-            <mi>m</mi>
-            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
-            <mi>m</mi>
-            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
-            <mi>&#x2026;<!--HORIZONTAL ELLIPSIS--></mi>
-            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
-            <mi>m</mi>
+            <mo>&equals;</mo>
+            <mi>m</mi><mo>&times;</mo><mi>m</mi>
+            <mo>&times;</mo><mi>&hellip;</mi>
+            <mo>&times;</mo><mi>m</mi>
         </math>
     </td>
 </tr>
@@ -71,20 +67,18 @@
     <td>階乗</td>
     <td>
         <math>
-            <mi>n</mi><mo>!</mo>
-            <mo>=</mo>
+            <mi>n</mi><mo>&excl;</mo>
+            <mo>&equals;</mo>
             <mi>n</mi>
-            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
-            <mfenced>
-                <mrow>
-                    <mi>n</mi>
-                    <mo>&#x2212;<!--MINUS SIGN--></mo>
-                    <mn>1</mn>
-                </mrow>
-            </mfenced>
-            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
-            <mi>&#x2026;<!--HORIZONTAL ELLIPSIS--></mi>
-            <mo>&#x00D7;<!--MULTIPLICATION SIGN--></mo>
+            <mo>&times;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>n</mi><mo>&minus;</mo><mn>1</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&times;</mo>
+            <mi>&hellip;</mi>
+            <mo>&times;</mo>
             <mn>1</mn>
         </math>
     </td>
@@ -102,52 +96,42 @@
                 <mi>n</mi>
                 <none/>
             </mmultiscripts>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mrow>
                 <mi>n</mi>
-                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&#x2212<!--MINUS SIGN--></mo>
-                        <mn>1</mn>
-                    </mrow>
-                </mfenced>
-                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&#x2212<!--MINUS SIGN--></mo>
-                        <mn>2</mn>
-                    </mrow>
-                </mfenced>
-                <mo>&#x2026;<!--HIRIZONTAL ELLIPSIS--></mo>
-                <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&#x2212<!--MINUS SIGN--></mo>
-                        <mn>r</mn>
-                        <mo>+</mo>
-                        <mn>1</mn>
-                    </mrow>
-                </mfenced>
+                <mo>&times;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi><mo>&minus;</mo><mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&times;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi><mo>&minus;</mo><mn>2</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&hellip;</mo>
+                <mo>&times;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi><mo>&minus;</mo><mn>r</mn><mo>&plus;</mo><mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
             </mrow>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mrow>
                 <mfrac>
                     <mrow>
-                        <mn>n</mn><mo>!</mo>
+                        <mn>n</mn><mo>&excl;</mo>
                     </mrow>
                     <mrow>
-                        <mfenced>
-                            <mrow>
-                                <mi>n</mi>
-                                <mo>&#x2212<!--MINUS SIGN--></mo>
-                                <mn>r</mn>
-                            </mrow>
-                        </mfenced>
-                        <mo>!</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>n</mi><mo>&minus;</mo><mn>r</mn>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&excl;</mo>
                     </mrow>
                 </mfrac>
             </mrow>
@@ -167,23 +151,21 @@
                 <mi>n</mi>
                 <none/>
             </mmultiscripts>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mfrac>
-                <mrow><mi>n</mi><mo>!</mo></mrow>
+                <mrow><mi>n</mi><mo>&excl;</mo></mrow>
                 <mrow>
-                    <mi>r</mi><mo>!</mo>
-                    <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
-                    <mfenced>
-                        <mrow>
-                            <mi>n</mi>
-                            <mo>&#x2212<!--MINUS SIGN--></mo>
-                            <mi>r</mi>
-                        </mrow>
-                    </mfenced>
-                    <mo>!</mo>
+                    <mi>r</mi><mo>&excl;</mo>
+                    <mo>&times;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>n</mi><mo>&minus;</mo><mi>r</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&excl;</mo>
                 </mrow>
             </mfrac>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mfrac>
                 <mmultiscripts>
                     <mi>P</mi>
@@ -194,7 +176,7 @@
                     <none/>
                 </mmultiscripts>
                 <mrow>
-                    <mi>r</mi><mo>!</mo>
+                    <mi>r</mi><mo>&excl;</mo>
                 </mrow>
             </mfrac>
         </math>
@@ -207,11 +189,11 @@
         <math><mn>4</mn></math> in 
         <math>
             <mn>4</mn>
-            <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
+            <mo>&times;</mo>
             <mi>x</mi>
-            <mo>&#x2212;<!--MINUS SIGN--></mo>
+            <mo>&minus;</mo>
             <mn>7</mn>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>5</mn>
         </math>
     </td>
@@ -224,7 +206,44 @@
 <tr>
     <td>binomial theorem</td>
     <td>二項定理 (≔二項展開)</td>
-    <td></td>
+    <td>
+        <math displaystyle="true">
+            <msup>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>x</mi><mo>&plus;</mo><mi>y</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mi>n</mi>
+            </msup>
+            <mo>&equals;</mo>
+            <munderover>
+                <mi>&sum;</mi>
+                <mrow><mi>r</mi><mo>&equals;</mo><mn>0</mn></mrow>
+                <mi>n</mi>
+            </munderover>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+                <mfrac linethickness="0">
+                    <mi>n</mi>
+                    <mi>r</mi>
+                </mfrac>
+            <mo fence="true">&rpar;</mo>
+            <mo lspace="0.2em">&InvisibleTimes;</mo>
+            <msup><mi>x</mi><mi>r</mi></msup>
+            <mo>&InvisibleTimes;</mo>
+            <msup>
+                <mi>y</mi>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mi>r</mi>
+                </mrow>
+            </msup>
+        </math>
+    </td>
 </tr>
 <tr>
     <td>binomial expansions</td>
@@ -235,32 +254,28 @@
     <td>binomial coefficients</td>
     <td>二項係数</td>
     <td>
-        <math>
-            <mrow>
-                <mo>(</mo>
-                <mfrac linethickness="0">
-                    <mrow><mi>n</mi></mrow>
-                    <mrow><mi>r</mi></mrow>
-                </mfrac>
-                <mo>)</mo>
-            </mrow>
-            <mo>=</mo>
+        <math displaystyle="true">
+            <mo fence="true">&lpar;</mo>
+            <mfrac linethickness="0">
+                <mi>n</mi>
+                <mi>r</mi>
+            </mfrac>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
             <mfrac>
-                <mrow><mi>n</mi><mo>!</mo></mrow>
+                <mrow><mi>n</mi><mo>&excl;</mo></mrow>
                 <mrow>
-                    <mi>r</mi><mo>!</mo>
-                    <mo>&#x2062;<!--INVISIBLE TIMES--></mo>
-                    <mfenced>
-                        <mrow>
-                            <mi>n</mi>
-                            <mo>&#x2212<!--MINUS SIGN--></mo>
-                            <mi>r</mi>
-                        </mrow>
-                    </mfenced>
-                    <mo>!</mo>
+                    <mi>r</mi><mo>&excl;</mo>
+                    <mo>&times;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>n</mi><mo>&minus;</mo><mi>r</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&excl;</mo>
                 </mrow>
             </mfrac>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mmultiscripts>
                 <mi>C</mi>
                 <mi>r</mi>
@@ -283,9 +298,385 @@
     <td></td>
 </tr>
 <tr>
-    <td>compositions of a positive integer</td>
-    <td>正の整数の合成</td>
+    <td>intervals</td>
+    <td>区間</td>
     <td></td>
+</tr>
+<tr>
+    <td>closed intervals</td>
+    <td>閉区間</td>
+    <td>
+        <math>
+            <mo fence="true">&lsqb;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo separator="true">,</mo>
+                <mi>b</mi>
+            </mrow>
+            <mo fence="true">&rsqb;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>open intervals</td>
+    <td>開区間</td>
+    <td>
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mi>a</mi>
+            <mo separator="true">,</mo>
+            <mi>b</mi>
+            <mo fence="true">&rpar;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>half-open intervals</td>
+    <td>半開区間</td>
+    <td>
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo separator="true">,</mo>
+                <mi>b</mi>
+            </mrow>
+            <mo fence="true">&rsqb;</mo>
+        </math> and 
+        <math>
+            <mo fence="true">&lsqb;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo separator="true">,</mo>
+                <mi>b</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>Cartesian products</td>
+    <td>直積</td>
+    <td>
+        <math>
+            <mi>A</mi>
+            <mo>&times;</mo>
+            <mi>B</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo separator="true">,</mo>
+                    <mi>y</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo separator="true">:</mo>
+                <mi>x</mi><mo>&in;</mo><mi>A</mi>
+                <mo separator="true">,</mo>
+                <mi>y</mi><mo>&in;</mo><mi>B</mi>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>ordered pairs</td>
+    <td>順序二重対</td>
+    <td>
+        <math>
+            <mfenced><mi>x</mi><mi>y</mi></mfenced>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>reflexivie</td>
+    <td>反射律が成り立つ</td>
+    <td>
+        <math>
+            <mi>x</mi><mo>&Tilde;</mo><mi>x</mi>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>symmetric</td>
+    <td>対称律が成り立つ</td>
+    <td>
+        <math>
+            <mi>x</mi><mo>&Tilde;</mo><mi>y</mi>
+            <mo>&Implies;</mo>
+            <mi>y</mi><mo>&Tilde;</mo><mi>x</mi>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>antisymmetric</td>
+    <td>反対称律が成り立つ</td>
+    <td>
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>x</mi><mo>&Tilde;</mo><mi>y</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&and;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>y</mi><mo>&Tilde;</mo><mi>x</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&Implies;</mo>
+            <mi>x</mi><mo>&equals;</mo><mi>y</mi>
+        </math> 
+    </td>
+</tr>
+<tr>
+    <td>transitive</td>
+    <td>推移律が成り立つ</td>
+    <td>
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>x</mi><mo>&Tilde;</mo><mi>y</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&and;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>y</mi><mo>&Tilde;</mo><mi>z</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&Implies;</mo>
+            <mi>x</mi><mo>&Tilde;</mo><mi>z</mi>
+        </math> 
+    </td>
+</tr>
+<tr>
+    <td>equivalence relations</td>
+    <td>同値関係</td>
+    <td>
+        <math><mi>R</mi></math> is reflexive, symmetric and transitive. 
+    </td>
+</tr>
+<tr>
+    <td>partitions</td>
+    <td>分割</td>
+    <td>
+        <math displaystyle="true">
+            <mi>S</mi>
+            <mo>&equals;</mo>
+            <munder>
+                <mi>&cup;</mi>
+                <mrow>
+                    <mi>&lambda;</mi><mo>&in;</mo><mi>&Lambda;</mi>
+                </mrow>
+            </munder>
+            <mo>&ApplyFunction;</mo>
+            <msub>
+                <mi>A</mi><mi>&lambda;</mi>
+            </msub>
+        </math> 
+        where 
+        <math>
+            <msub>
+                <mi>A</mi>
+                <mi>&lambda;₁</mi>
+            </msub>
+            <mo>&cap;</mo>
+            <msub>
+                <mi>A</mi>
+                <mi>&lambda;₂</mi>
+            </msub>
+            <mo>&equals;</mo>
+            <mi>&emptyset;</mi>
+            <mo>if</mo>
+            <msub>
+                <mi>A</mi>
+                <mi>&lambda;₁</mi>
+            </msub>
+            <mo>&ne;</mo>
+            <msub>
+                <mi>A</mi>
+                <mi>&lambda;₂</mi>
+            </msub>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>(pairwise) disjoint</td>
+    <td>互いに素</td>
+    <td>
+        <math>
+            <mi>A</mi>
+            <mo>&cap;</mo>
+            <mi>A</mi>
+            <mo>&equals;</mo>
+            <mi>&emptyset;</mi>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>equivalence classes</td>
+    <td>同値類</td>
+    <td>
+        <math>
+            <mo>&lsqb;</mo><mi>x</mi><mo>&rsqb;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mi>y</mi><mo>&in;</mo><mi>S</mi>
+                <mo separator="true">:</mo>
+                <mi>x</mi><mo>R</mo><mi>y</mi>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>partial ordering</td>
+    <td>順序関係</td>
+    <td>
+        <math><mi>R</mi></math> is reflexive, anti-symmetric and transitive
+    </td>
+</tr>
+<tr>
+    <td>functions</td>
+    <td>関数</td>
+    <td>
+        <math>
+            <mi>f</mi>
+            <mo>:</mo>
+            <mrow>
+                <mi>A</mi>
+                <mo>&rightarrow;</mo>
+                <mi>B</mi>
+            </mrow>
+        </math> 
+    </td>
+</tr>
+<tr>
+    <td>domains</td>
+    <td>定義域</td>
+    <td>
+        <math>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mi>a</mi><mo>&in;</mo><mi>A</mi>
+                <mo separator="true">:</mo>
+                <mrow>
+                    <mo>&exist;</mo>
+                    <mi>b</mi><mo>&in;</mo><mi>B</mi>
+                    <mo fence="true" lspace="0.2em">&lpar;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>a</mi>
+                            <mo separator="true">,</mo>
+                            <mi>b</mi>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&in;</mo>
+                        <mi>f</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>target sets</td>
+    <td>終域</td>
+    <td>
+        The set <math><mi>B</mi></math> in 
+        <math>
+            <mi>f</mi>
+            <mo>:</mo>
+            <mrow>
+                <mi>A</mi>
+                <mo>&rightarrow;</mo>
+                <mi>B</mi>
+            </mrow>
+        </math> 
+    </td>
+</tr>
+<tr>
+    <td>ranges</td>
+    <td>値域</td>
+    <td>
+        <math>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mi>b</mi><mo>&in;</mo><mi>B</mi>
+                <mo separator="true">:</mo>
+                <mrow>
+                    <mo>&exist;</mo>
+                    <mi>a</mi><mo>&in;</mo><mi>A</mi>
+                    <mo fence="true" lspace="0.2em">&lpar;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>a</mi>
+                            <mo separator="true">,</mo>
+                            <mi>b</mi>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&in;</mo>
+                        <mi>f</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>onto</td>
+    <td>全射</td>
+    <td>
+        <math>
+            <mo>&forall;</mo>
+            <mi>y</mi><mo>&in;</mo><mi>B</mi>
+            <mrow>
+                <mo lspace="0.6em">&exist;</mo>
+                <mi>x</mi><mo>&in;</mo><mi>A</mi>
+                <mo fence="true" lspace="0.2em">&lpar;</mo>
+                <mrow>
+                    <mi>f</mi><mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>x</mi>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&equals;</mo>
+                    <mi>y</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math> 
+    </td>
+</tr>
+<tr>
+    <td>one-to-one</td>
+    <td>単射</td>
+    <td>
+        <math>
+            <mi>f</mi><mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <msub><mi>x</mi><mn>1</mn></msub>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mi>f</mi><mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <msub><mi>x</mi><mn>2</mn></msub>
+            <mo fence="true">&rpar;</mo>
+            <mo>implies that</mo>
+            <msub><mi>x</mi><mn>1</mn></msub>
+            <mo>&equals;</mo>
+            <msub><mi>x</mi><mn>2</mn></msub>
+        </math> 
+    </td>
 </tr>
 </table>
 </body>
