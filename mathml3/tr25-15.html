@@ -813,7 +813,7 @@
                 <mi>f</mi>
                 <mrow>
                     <mi>i</mi>
-                    <mo>,</mo>
+                    <mo>&comma;</mo>
                     <mi>j</mi>
                 </mrow>
             </msup>
@@ -879,18 +879,25 @@
                 <mfenced>
                     <mrow>
                         <mi>x</mi>
-                        <mo>+</mo>
+                        <mo>&plus;</mo>
                         <mi>y</mi>
                     </mrow>
                 </mfenced>
             </math>
         </figure>
         To indicate that this is the function <math><mi>f</mi></math> of the quantity 
-        <math><mfenced><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mfenced></math>
+        <math>
+            <mfenced>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&plus;</mo>
+                    <mi>y</mi></mrow>
+            </mfenced>
+        </math>
         and not the expression
         <math>
             <mrow><mi>f</mi><mo>&InvisibleTimes;</mo><mi>x</mi></mrow>
-            <mo>+</mo>
+            <mo>&plus;</mo>
             <mrow><mi>f</mi><mo>&InvisibleTimes;</mo><mi>y</mi></mrow>
         </math>,
         one can insert the non-displaying function application symbol between the 
@@ -903,7 +910,7 @@
         &lt;mfenced&gt;
             &lt;mrow&gt;
                 &lt;mi&gt;x&lt;/mi&gt;
-                &lt;mo&gt;+&lt;/mo&gt;
+                &lt;mo&gt;&amp;plus;&lt;/mo&gt;
                 &lt;mi&gt;y&lt;/mi&gt;
             &lt;/mrow&gt;
         &lt;/mfenced&gt;
@@ -920,18 +927,18 @@
         <math>
             <mn>3</mn>
             <mo>&#x2064;<!--INVISIBLE PLUS OPERATOR--></mo>
-            <mn>&#x00BD;<!--VULGAR FRACTION ONE HALF--></mn>
+            <mn>&frac12;</mn>
         </math>,
         which occur frequently in school or engineering texts.
         Specifically, to ensure that
         <math>
             <mn>3</mn>
             <mo>&#x2064;<!--INVISIBLE PLUS OPERATOR--></mo>
-            <mn>&#x00BD;<!--VULGAR FRACTION ONE HALF--></mn>
+            <mn>&frac12;</mn>
         </math>
-        means <math><mn>3</mn></math> <i>plus</i> <math><mn>½</mn></math>, 
+        means <math><mn>3</mn></math> <i>plus</i> <math><mn>&frac12;</mn></math>, 
         one inserts the invisible plus symbol between 
-        the <math><mn>3</mn></math> and the <math><mn>½</mn></math>.
+        the <math><mn>3</mn></math> and the <math><mn>&frac12;</mn></math>.
         Not having an operator at all would imply multiplication as in the example
         <figure>
             <math>
@@ -1016,7 +1023,7 @@
                 <mo>&sum;</mo>
                 <mrow>
                     <mi>n</mi>
-                    <mo>=</mo>
+                    <mo>&equals;</mo>
                     <mn>1</mn>
                 </mrow>
                 <mi>&infin;</mi>
@@ -1029,6 +1036,43 @@
         </math>
         is laid out in-line, 
         the limits are placed at the top and bottom right hand side. 
+        <figure>
+            <math>
+                <munderover>
+                    <mo>&sum;</mo>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&equals;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                    <mi>&infin;</mi>
+                </munderover>
+                <mo>&ApplyFunction;</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mi>n</mi>
+                </msub>
+            </math>
+        </figure>
+    <pre>
+    &lt;math&gt;
+        &lt;munderover&gt;
+            &lt;mo&gt;&amp;sum;&lt;/mo&gt;
+            &lt;mrow&gt;
+                &lt;mi&gt;n&lt;/mi&gt;
+                &lt;mo&gt;&amp;equals;&lt;/mo&gt;
+                &lt;mn&gt;1&lt;/mn&gt;
+            &lt;/mrow&gt;
+            &lt;mi&gt;&amp;infin;&lt;/mi&gt;
+        &lt;/munderover&gt;
+        &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+        &lt;msub&gt;
+            &lt;mi&gt;a&lt;/mi&gt;
+            &lt;mi&gt;n&lt;/mi&gt;
+        &lt;/msub&gt;
+    &lt;/math&gt;
+    </pre>
+
         However, when displayed out-of-line, as in
 
         <figure>
@@ -1037,7 +1081,7 @@
                 <mo>&sum;</mo>
                 <mrow>
                     <mi>n</mi>
-                    <mo>=</mo>
+                    <mo>&equals;</mo>
                     <mn>1</mn>
                 </mrow>
                 <mi>&infin;</mi>
@@ -1051,20 +1095,7 @@
         </figure>
     <pre>
     &lt;math displaystyle="true"&gt;
-        &lt;munderover&gt;
-            &lt;mo&gt;&amp;sum;&lt;/mo&gt;
-            &lt;mrow&gt;
-                &lt;mi&gt;n&lt;/mi&gt;
-                &lt;mo&gt;=&lt;/mo&gt;
-                &lt;mn&gt;1&lt;/mn&gt;
-            &lt;/mrow&gt;
-            &lt;mi&gt;&amp;infin;&lt;/mi&gt;
-        &lt;/munderover&gt;
-        &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
-        &lt;msub&gt;
-            &lt;mi&gt;a&lt;/mi&gt;
-            &lt;mi&gt;n&lt;/mi&gt;
-        &lt;/msub&gt;
+        &hellip;
     &lt;/math&gt;
     </pre>
 
@@ -1078,16 +1109,16 @@
         used alone or as both opening and closing as the vertical bars in
         the absolute value
         <math>
-            <mfenced open="|" close="|">
-                <mi>x</mi>
-            </mfenced>
+            <mo fence="true">&verbar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&verbar;</mo>
         </math>.
     </p>
     <pre>
     &lt;math&gt;
-        &lt;mfenced open="|" close="|"&gt;
-            &lt;mi&gt;x&lt;/mi&gt;
-        &lt;/mfenced&gt;
+        &lt;mo fence="true"&gt;&amp;verbar;&lt;/mo&gt;
+        &lt;mi&gt;x&lt;/mi&gt;
+        &lt;mo fence="true"&gt;&amp;verbar;&lt;/mo&gt;
     &lt;/math&gt;
     </pre>
     <p>
@@ -1101,16 +1132,20 @@
     <h3>4.6 Some Examples of Mathematical Notation</h3>
     <figure>
         <math>
-            <mfenced open="|" close="|">
-                <mi>x</mi>
-            </mfenced>
-            <mo>=</mo>
             <mrow>
-                <mo>{</mo>
+                <mo fence="true">&verbar;</mo>
+                <mi>x</mi>
+                <mo fence="true">&verbar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
                 <mtable>
                     <mtr>
                         <mtd>
                             <mi>x</mi>
+                        </mtd>
+                        <mtd>
                             <mo>if</mo>
                             <mi>x</mi>
                             <mo>&gt;</mo>
@@ -1120,9 +1155,11 @@
                     <mtr>
                         <mtd>
                             <mn>0</mn>
+                        </mtd>
+                        <mtd>
                             <mo>if</mo>
                             <mi>x</mi>
-                            <mo>=</mo>
+                            <mo>&equals;</mo>
                             <mn>0</mn>
                         </mtd>
                     </mtr>
@@ -1130,6 +1167,8 @@
                         <mtd>
                             <mo>&minus;</mo>
                             <mi>x</mi>
+                        </mtd>
+                        <mtd>
                             <mo>if</mo>
                             <mi>x</mi>
                             <mo>&lt;</mo>
@@ -1142,16 +1181,20 @@
     </figure>
     <pre>
     &lt;math&gt;
-        &lt;mfenced open="|" close="|"&gt;
-            &lt;mi&gt;x&lt;/mi&gt;
-        &lt;/mfenced&gt;
-        &lt;mo&gt;=&lt;/mo&gt;
         &lt;mrow&gt;
-            &lt;mo&gt;{&lt;/mo&gt;
+            &lt;mo fence="true"&gt;&amp;verbar;&lt;/mo&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+            &lt;mo fence="true"&gt;&amp;verbar;&lt;/mo&gt;
+        &lt;/mrow&gt;
+        &lt;mo&gt;&amp;equals;&lt;/mo&gt;
+        &lt;mrow&gt;
+            &lt;mo fence="true"&gt;&amp;lbrace;&lt;/mo&gt;
             &lt;mtable&gt;
                 &lt;mtr&gt;
                     &lt;mtd&gt;
                         &lt;mi&gt;x&lt;/mi&gt;
+                    &lt;mtd&gt;
+                    &lt;/mtd&gt;
                         &lt;mo&gt;if&lt;/mo&gt;
                         &lt;mi&gt;x&lt;/mi&gt;
                         &lt;mo&gt;&amp;gt;&lt;/mo&gt;
@@ -1161,16 +1204,20 @@
                 &lt;mtr&gt;
                     &lt;mtd&gt;
                         &lt;mi&gt;0&lt;/mi&gt;
+                    &lt;mtd&gt;
+                    &lt;/mtd&gt;
                         &lt;mo&gt;if&lt;/mo&gt;
                         &lt;mi&gt;x&lt;/mi&gt;
-                        &lt;mo&gt;=&lt;/mo&gt;
+                        &lt;mo&gt;&amp;equals;&lt;/mo&gt;
                         &lt;mn&gt;0&lt;/mn&gt;
                     &lt;/mtd&gt;
                 &lt;/mtr&gt;
                 &lt;mtr&gt;
                     &lt;mtd&gt;
                         &lt;mo&gt;&amp;minus;&lt;/mo&gt;
-                        &lt;mi&gt;0&lt;/mi&gt;
+                        &lt;mi&gt;x&lt;/mi&gt;
+                    &lt;mtd&gt;
+                    &lt;/mtd&gt;
                         &lt;mo&gt;if&lt;/mo&gt;
                         &lt;mi&gt;x&lt;/mi&gt;
                         &lt;mo&gt;&amp;lt;&lt;/mo&gt;

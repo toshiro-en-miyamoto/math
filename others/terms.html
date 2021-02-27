@@ -25,6 +25,36 @@
     <th>math</th>
 </tr>
 <tr>
+    <td>definitions</td>
+    <td>定義</td>
+    <td></td>
+</tr>
+<tr>
+    <td>axioms</td>
+    <td>公理</td>
+    <td></td>
+</tr>
+<tr>
+    <td>theorems</td>
+    <td>定理</td>
+    <td></td>
+</tr>
+<tr>
+    <td>propositions</td>
+    <td>命題</td>
+    <td></td>
+</tr>
+<tr>
+    <td>lemmas</td>
+    <td>補題</td>
+    <td></td>
+</tr>
+<tr>
+    <td>corollaries</td>
+    <td>系</td>
+    <td></td>
+</tr>
+<tr>
     <td>discrete mathematics</td>
     <td>離散数学</td>
     <td></td>
@@ -456,7 +486,7 @@
     <td>equivalence relations</td>
     <td>同値関係</td>
     <td>
-        <math><mi>R</mi></math> is reflexive, symmetric and transitive. 
+        <math><mi>R</mi></math> is reflexive, symmetric, and transitive. 
     </td>
 </tr>
 <tr>
@@ -504,13 +534,13 @@
     </td>
 </tr>
 <tr>
-    <td>(pairwise) disjoint</td>
+    <td>pairwise disjoint</td>
     <td>互いに素</td>
     <td>
         <math>
             <mi>A</mi>
             <mo>&cap;</mo>
-            <mi>A</mi>
+            <mi>B</mi>
             <mo>&equals;</mo>
             <mi>&emptyset;</mi>
         </math>
@@ -537,12 +567,27 @@
     <td>partial ordering</td>
     <td>順序関係</td>
     <td>
-        <math><mi>R</mi></math> is reflexive, anti-symmetric and transitive
+        <math><mi>R</mi></math> is reflexive, anti-symmetric, and transitive
     </td>
 </tr>
 <tr>
     <td>functions</td>
     <td>関数</td>
+    <td>
+        <math>
+            <mi>f</mi>
+            <mo>:</mo>
+            <mrow>
+                <mi>A</mi>
+                <mo>&rightarrow;</mo>
+                <mi>B</mi>
+            </mrow>
+        </math> 
+    </td>
+</tr>
+<tr>
+    <td>mappings</td>
+    <td>写像</td>
     <td>
         <math>
             <mi>f</mi>
@@ -634,31 +679,7 @@
     </td>
 </tr>
 <tr>
-    <td>onto</td>
-    <td>全射</td>
-    <td>
-        <math>
-            <mo>&forall;</mo>
-            <mi>y</mi><mo>&in;</mo><mi>B</mi>
-            <mrow>
-                <mo lspace="0.6em">&exist;</mo>
-                <mi>x</mi><mo>&in;</mo><mi>A</mi>
-                <mo fence="true" lspace="0.2em">&lpar;</mo>
-                <mrow>
-                    <mi>f</mi><mo>&ApplyFunction;</mo>
-                    <mo fence="true">&lpar;</mo>
-                    <mi>x</mi>
-                    <mo fence="true">&rpar;</mo>
-                    <mo>&equals;</mo>
-                    <mi>y</mi>
-                </mrow>
-                <mo fence="true">&rpar;</mo>
-            </mrow>
-        </math> 
-    </td>
-</tr>
-<tr>
-    <td>one-to-one</td>
+    <td>one-to-one (injective)</td>
     <td>単射</td>
     <td>
         <math>
@@ -676,6 +697,109 @@
             <mo>&equals;</mo>
             <msub><mi>x</mi><mn>2</mn></msub>
         </math> 
+    </td>
+</tr>
+<tr>
+    <td>onto (surjective)</td>
+    <td>全射</td>
+    <td>
+        <math>
+            <mo>&forall;</mo>
+            <mi>y</mi><mo>&in;</mo><mi>B</mi>
+            <mrow>
+                <mo lspace="0.6em">&exist;</mo>
+                <mi>x</mi><mo>&in;</mo><mi>A</mi>
+                <mo fence="true" lspace="0.2em">&lpar;</mo>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>x</mi>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&equals;</mo>
+                    <mi>y</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math> 
+    </td>
+</tr>
+<tr>
+    <td>bijective</td>
+    <td>全単射</td>
+    <td>one-to-one and onto</td>
+</tr>
+<tr>
+    <td>identity map</td>
+    <td>恒等写像</td>
+    <td>
+        <math>
+            <msub><mn>1</mn><mi>A</mi></msub>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mi>a</mi>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>predicates</td>
+    <td>述語</td>
+    <td>
+        <math>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&minus;</mo><mn>1</mn>
+            <mo>=</mo><mn>0</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>bound variables</td>
+    <td>束縛変数</td>
+    <td>
+        <math>
+            <mo>for all</mo><mi>x</mi>
+            <mo>&in;</mo>
+            <mi>&reals;</mi>
+            <mo>,</mo>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&minus;</mo><mn>1</mn>
+            <mo>=</mo><mn>0</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>universal quantifiers</td>
+    <td>全称記号</td>
+    <td>
+        <math>
+            <mo>&forall;</mo><mi>x</mi>
+            <mo>&in;</mo>
+            <mi>&reals;</mi>
+            <mo lspace="0.2em">&ApplyFunction;</mo>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&minus;</mo><mn>1</mn>
+            <mo>=</mo><mn>0</mn>
+            <mo>(for all real numbers x, &hellip;)</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>existential quantifiers</td>
+    <td>存在記号</td>
+    <td>
+        <math>
+            <mo>&exist;</mo><mi>x</mi>
+            <mo>&in;</mo>
+            <mi>&reals;</mi>
+            <mo lspace="0.2em">&ApplyFunction;</mo>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&minus;</mo><mn>1</mn>
+            <mo>=</mo><mn>0</mn>
+            <mo>(there exists a real number x such that &hellip;)</mo>
+        </math>
     </td>
 </tr>
 </table>
