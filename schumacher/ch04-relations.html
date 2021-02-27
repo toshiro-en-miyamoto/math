@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Chapter 4 Relations and Orderings
+        — Chapter Zero</title>
+        <link rel="stylesheet" href="../math.css" type="text/css">
+    </style>
+</head>
+<body>
+<h1>4 Relations and Orderings</h1>
+<h2>4.1 Relations</h2>
+<section id="4-1-3" class="definition">
+    <h4>4.1.3 Definition &ndash; Relations</h4>
+    <p>
+        If <math><mi>A</mi></math> and <math><mi>B</mi></math> are sets, 
+        then any subset <math><mi>&rho;</mi></math> of 
+        <math><mi>A</mi><mo>&times;</mo><mi>B</mi></math> is called 
+        a <strong>relation</strong> between 
+        <math><mi>A</mi></math> and <math><mi>B</mi></math>. 
+    </p>
+    <p>
+        A subset of <math><mi>A</mi><mo>&times;</mo><mi>A</mi></math> 
+        is called a relation on <math><mi>A</mi></math>.
+    </p>
+</section>
+
+<section id="4-1-4" class="example">
+    <h4>4.1.4 Example &ndash; Relations</h4>
+    <p>
+        On the set <math><mi>&reals;</mi></math>, 
+        let <math><mi>&rho;</mi></math> be 
+        the relation <math><mo>&le;</mo></math>. 
+        Then 
+        <math><mfenced><mn>2</mn><mn>3</mn></mfenced><mo>&in;</mo><mi>&rho;</mi></math>, 
+        since <math><mn>2</mn><mo>&le;</mo><mn>3</mn></math> but 
+        <math><mfenced><mn>4</mn><mn>3</mn></mfenced><mo>&notin;</mo><mi>&rho;</mi></math>. 
+    </p>
+    <p>
+        <i>Remark.</i>
+        If <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>
+        and <math><mi>b</mi><mo>&in;</mo><mi>B</mi></math>
+        and <math><mi>&rho;</mi></math> is a relation between 
+        <math><mi>A</mi></math> and <math><mi>B</mi></math>, 
+        we usually avoid the cubersome notion 
+        <math><mfenced><mi>a</mi><mi>b</mi></mfenced><mo>&in;</mo><mi>&rho;</mi></math>
+        and write <math><mi>a</mi><mo>&Tilde;</mo><mi>b</mi></math> instead. 
+        <math><mi>a</mi><mo>&Tilde;</mo><mi>b</mi></math> is read 
+        "<math><mi>a</mi></math> is related to <math><mi>b</mi></math>." 
+        In fact, in this case we will probably say 
+        "let <math><mo>&Tilde;</mo></math> be a relation," 
+        referring to the relation by the symbol associated with it. 
+        In some special cases, other symbols are associated with particular relations. 
+        For instance, in the case of Example 4.1.4 we ordinarily write 
+        <math><mi>a</mi><mo>&le;</mo><mi>b</mi></math> instead of 
+        <math><mi>a</mi><mo>&Tilde;</mo><mi>b</mi></math>. 
+    </p>
+</section>
+
+<section id="4-1-6" class="definition">
+    <p>
+        We often consider relations that have conveient special properties. 
+        Reflexivity, symmetry, antisymmetry, and transitivity are 
+        some of these properties. 
+    </p>
+    <h4>4.1.6 Definition &ndash; Relation Properties</h4>
+    <p>
+        Let <math><mo>&Tilde;</mo></math> be a relation 
+        on a set A. For 
+        <math>
+            <mfenced open="" close="">
+                <mi>x</mi><mi>y</mi><mi>z</mi>
+            </mfenced>
+            <mo>&in;</mo><mi>A</mi>
+        </math>, 
+        <table>
+            <tr>
+                <td></td>
+                <td><math><mo>&Tilde;</mo></math>is</td>
+                <td>if</td>
+                <td>then</td>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <th>reflexive</th>
+                <td></td>
+                <td>
+                    <math>
+                        <mi>x</mi><mo>&Tilde;</mo><mi>x</mi>
+                    </math> 
+                </td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <th>symmetric</th>
+                <td>
+                    <math>
+                        <mi>x</mi><mo>&Tilde;</mo><mi>y</mi>
+                    </math> 
+                </td>
+                <td>
+                    <math>
+                        <mi>y</mi><mo>&Tilde;</mo><mi>x</mi>
+                    </math> 
+                </td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <th>antisymmetric</th>
+                <td>
+                    <math>
+                        <mfenced>
+                            <mrow>
+                                <mi>x</mi><mo>&Tilde;</mo><mi>y</mi>
+                            </mrow>
+                        </mfenced>
+                        <mo>&and;</mo>
+                        <mfenced>
+                            <mrow>
+                                <mi>y</mi><mo>&Tilde;</mo><mi>x</mi>
+                            </mrow>
+                        </mfenced>
+                    </math> 
+                </td>
+                <td>
+                    <math>
+                        <mi>x</mi><mo>&equals;</mo><mi>y</mi>
+                    </math> 
+                </td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <th>transitive</th>
+                <td>
+                    <math>
+                        <mfenced>
+                            <mrow>
+                                <mi>x</mi><mo>&Tilde;</mo><mi>y</mi>
+                            </mrow>
+                        </mfenced>
+                        <mo>&and;</mo>
+                        <mfenced>
+                            <mrow>
+                                <mi>y</mi><mo>&Tilde;</mo><mi>z</mi>
+                            </mrow>
+                        </mfenced>
+                    </math> 
+                </td>
+                <td>
+                    <math>
+                        <mi>x</mi><mo>&Tilde;</mo><mi>z</mi>
+                    </math> 
+                </td>
+            </tr>
+        </table>
+    </p>
+</section>
+
+<h2>4.2 Orderings</h2>
+<p class="description">
+    In the previous section we mentioned the order 
+    <math><mo>&le;</mo></math> on <math><mi>&reals;</mi></math>
+    as a familiar example of a relation. 
+    Order relations are funcdamental to many branches of mathmatics. 
+</p>
+
+<section id="partially-orderings" class="definition">
+    <h4>4.2.1 Definition &ndash; Partial Orderings</h4>
+    <p>
+        A relation <math><mo>&le;</mo></math> on a set <math><mi>A</mi></math>
+        is called a <strong>partial ordering</strong> 
+        if <math><mo>&le;</mo></math> is 
+        reflexive, antisymmetric, and transitive. 
+        A set with a partial ordering on it is called 
+        a <strong>partially ordered set</strong>. 
+    </p>
+</section>
+
+</body>
+</html>
