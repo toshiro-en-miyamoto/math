@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercises of 0.1 Proofs &ndash; Chapter 0: Preliminaries</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>0.1 Proofs</h2>
+<section class="description">
+    <p>
+        The most common methods of proof include:
+        <sl>
+            <li>Direct Proof</li>
+            <li>Reduction to Cases</li>
+            <li>Proof by Contradiction</li>
+        </sl>
+    </p>    
+</section>
+
+<!-- -------------------------------------------------------------- -->
+<h3>Exercise 0.1-1</h3>
+<section class="description">
+    <p>
+        In each case, prove the result and either prove the converse or 
+        give a counterexample.
+    </p>
+</section>
+
+<section class="example">
+    <h4>0.1-1-(a)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>n</mi></math> is an even integer, then
+            <math><msup><mi>n</mi><mn>2</mn></msup></math> is a multiple of 4.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            If <math><mi>n</mi></math> is an even integer, it has the form 
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>2</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>k</mi>
+                </mrow>
+            </math>
+            for some integer <math><mi>k</mi></math>. Then
+            <math>
+                <msup><mi>n</mi><mn>2</mn></msup>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>4</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <msup><mi>k</mi><mn>2</mn></msup>
+                </mrow>
+            </math>
+            is a multiple of 4 because <math><msup><mi>k</mi><mn>2</mn></msup></math>
+            is an integer. &marker; (Direct Proof)
+        </dd>
+        <dt>The converse</dt>
+        <dd>
+            If <math><msup><mi>n</mi><mn>2</mn></msup></math> is a multiple of 4
+            then <math><mi>n</mi></math> is an even integer.
+        </dd>
+        <dt>Solution to the converse</dt>
+        <dd>
+            <i>The converse is true.</i>
+            Suppose <math><mi>n</mi></math> is not an even integer so that
+            <math><mi>n</mi></math> is an odd, say
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>2</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </math>, where <math><mi>k</mi></math> is an integer. Then 
+            <math>
+                <mrow>
+                    <msup><mi>n</mi><mn>2</mn></msup>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msup>
+                        <mfenced>
+                            <mrow>
+                                <mn>2</mn>
+                                <mo>&InvisibleTimes;</mo>
+                                <mi>k</mi>
+                                <mo>&plus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </mfenced>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mrow>
+                        <mn>4</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup><mi>k</mi><mn>2</mn></msup>
+                    <mo>&plus;</mo>
+                    <mrow>
+                        <mn>4</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>k</mi>
+                    </mrow>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mrow>
+                        <mn>4</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mfenced>
+                            <mrow>
+                                <msup><mi>k</mi><mn>2</mn></msup>
+                                <mo>&plus;</mo>
+                                <mi>k</mi>
+                            </mrow>
+                        </mfenced>
+                    </mrow>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </math>. 
+            As 
+            <math>
+                <mfenced>
+                    <mrow>
+                        <msup><mi>k</mi><mn>2</mn></msup>
+                        <mo>&plus;</mo>
+                        <mi>k</mi>
+                    </mrow>
+                </mfenced>
+            </math>
+            is an integer, <math><msup><mi>n</mi><mn>2</mn></msup></math>
+            is not a multiple of 4, a contradiction. &marker;
+            (Proof by Contradiction)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-1-(b)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>m</mi></math> is an even integer and
+            <math><mi>n</mi></math> is an odd integer, then
+            <math><mi>m</mi><mo>&plus;</mo><mi>n</mi></math> is odd.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            If <math><mi>m</mi></math> is an even integer, say 
+            <math>
+                <mi>m</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>2</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>j</mi>
+                </mrow>
+            </math>
+            for some integer <math><mi>j</mi></math>, and
+            <math><mi>n</mi></math> is an odd integer, say 
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>2</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </math>
+            for some integer <math><mi>k</mi></math>, then
+            <math>
+                <mrow>
+                    <mi>m</mi>
+                    <mo>&plus;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>2</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>j</mi>
+                    <mo>&plus;</mo>
+                    <mn>2</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>2</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>j</mi>
+                            <mo>&plus;</mo>
+                            <mi>k</mi>
+                        </mrow>
+                    </mfenced>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </math>
+            is odd. &marker; (Direct Proof)
+        </dd>
+        <dt>Converse</dt>
+        <dd>
+            If <math><mi>m</mi><mo>&plus;</mo><mi>n</mi></math> is odd, then
+            <math><mi>m</mi></math> is an even integer and
+            <math><mi>n</mi></math> is an odd integer.
+        </dd>
+        <dt>Solution to the converse</dt>
+        <dd>
+            <i>The converse is true.</i>
+            With the same way as above, the following cases are proved:
+            <table>
+                <tr>
+                    <th>#</td>
+                    <th><math><mi>m</mi></math></th>
+                    <th><math><mi>n</mi></math></th>
+                    <th><math><mi>m</mi><mo>&plus;</mo><mi>n</mi></math></th>
+                </tr>
+                <tr>
+                    <td>(ⅰ)</td>
+                    <td>even</td>
+                    <td>even</td>
+                    <td>even</td>
+                </tr>
+                <tr>
+                    <td>(ⅱ)</td>
+                    <td>even</td>
+                    <td>odd</td>
+                    <td>odd</td>
+                </tr>
+                <tr>
+                    <td>(ⅲ)</td>
+                    <td>odd</td>
+                    <td>even</td>
+                    <td>odd</td>
+                </tr>
+                <tr>
+                    <td>(ⅳ)</td>
+                    <td>odd</td>
+                    <td>odd</td>
+                    <td>even</td>
+                    </td>
+                </tr>
+            </table>
+            Hence, from the case (ⅱ), the converse is true. &marker;
+            (Reduction to Cases)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-1-(c)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>x</mi><mo>&equals;</mo><mn>2</mn></math> or
+            <math><mi>x</mi><mo>&equals;</mo><mn>3</mn></math>, then
+            <math>
+                <msup><mi>x</mi><mn>3</mn></msup>
+                <mo>&minus;</mo>
+                <mrow>
+                    <mn>6</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <msup><mi>x</mi><mn>2</mn></msup>
+                </mrow>
+                <mo>&plus;</mo>
+                <mrow>
+                    <mn>11</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>x</mi>
+                </mrow>
+                <mo>&minus;</mo>
+                <mn>6</mn>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            As
+            <math>
+                <mrow>
+                    <msup><mi>x</mi><mn>3</mn></msup>
+                    <mo>&minus;</mo>
+                    <mrow>
+                        <mn>6</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup><mi>x</mi><mn>2</mn></msup>
+                    </mrow>
+                    <mo>&plus;</mo>
+                    <mrow>
+                        <mn>11</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>x</mi>
+                    </mrow>
+                    <mo>&minus;</mo>
+                    <mn>6</mn>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mfenced>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </mfenced>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&minus;</mo>
+                            <mn>2</mn>
+                        </mrow>
+                    </mfenced>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&minus;</mo>
+                            <mn>3</mn>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+            </math>,
+            if <math><mi>x</mi><mo>&equals;</mo><mn>2</mn></math> then
+            <math>
+                <mn>1</mn>
+                <mo>&times;</mo>
+                <mn>0</mn>
+                <mo>&times;</mo>
+                <mfenced>
+                    <mrow>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>, 
+            and
+            if <math><mi>x</mi><mo>&equals;</mo><mn>3</mn></math> then
+            <math>
+                <mn>2</mn>
+                <mo>&times;</mo>
+                <mn>1</mn>
+                <mo>&times;</mo>
+                <mn>0</mn>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>. &marker; (Direct Proof)
+        </dd>
+        <dt>Converse</dt>
+        <dd>
+            If
+            <math>
+                <msup><mi>x</mi><mn>3</mn></msup>
+                <mo>&minus;</mo>
+                <mrow>
+                    <mn>6</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <msup><mi>x</mi><mn>2</mn></msup>
+                </mrow>
+                <mo>&plus;</mo>
+                <mrow>
+                    <mn>11</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>x</mi>
+                </mrow>
+                <mo>&minus;</mo>
+                <mn>6</mn>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>, then
+            <math><mi>x</mi><mo>&equals;</mo><mn>2</mn></math> or
+            <math><mi>x</mi><mo>&equals;</mo><mn>3</mn></math>.
+        </dd>
+        <dt>Solution to the converse</dt>
+        <dd>
+            <i>The converse is false.</i>
+            As
+            <math>
+                <mrow>
+                    <msup><mi>x</mi><mn>3</mn></msup>
+                    <mo>&minus;</mo>
+                    <mrow>
+                        <mn>6</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup><mi>x</mi><mn>2</mn></msup>
+                    </mrow>
+                    <mo>&plus;</mo>
+                    <mrow>
+                        <mn>11</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>x</mi>
+                    </mrow>
+                    <mo>&minus;</mo>
+                    <mn>6</mn>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mfenced>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </mfenced>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&minus;</mo>
+                            <mn>2</mn>
+                        </mrow>
+                    </mfenced>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&minus;</mo>
+                            <mn>3</mn>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>,
+            <math>
+                <mfenced>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math> or
+            <math>
+                <mfenced>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>&minus;</mo>
+                        <mn>2</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math> or
+            <math>
+                <mfenced>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>&minus;</mo>
+                        <mn>3</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>. Hence, not only
+            <math><mi>x</mi><mo>&equals;</mo><mn>2</mn></math> or
+            <math><mi>x</mi><mo>&equals;</mo><mn>3</mn></math>
+            but also
+            <math><mi>x</mi><mo>&equals;</mo><mn>1</mn></math>.
+            &marker; (Counterexample)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-1-(d)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If 
+            <math>
+                <msup><mi>x</mi><mn>2</mn></msup>
+                <mo>&minus;</mo>
+                <mrow>
+                    <mn>5</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>x</mi>
+                </mrow>
+                <mo>&plus;</mo>
+                <mn>6</mn>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>, then
+            <math><mi>x</mi><mo>&equals;</mo><mn>2</mn></math> or
+            <math><mi>x</mi><mo>&equals;</mo><mn>3</mn></math>.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            As
+            <math>
+                <msup><mi>x</mi><mn>2</mn></msup>
+                <mo>&minus;</mo>
+                <mrow>
+                    <mn>5</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>x</mi>
+                </mrow>
+                <mo>&plus;</mo>
+                <mn>6</mn>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mfenced>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&minus;</mo>
+                            <mn>2</mn>
+                        </mrow>
+                    </mfenced>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&minus;</mo>
+                            <mn>3</mn>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>,
+            <math>
+                <mfenced>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>&minus;</mo>
+                        <mn>2</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math> or
+            <math>
+                <mfenced>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>&minus;</mo>
+                        <mn>3</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>. Hence,
+            <math><mi>x</mi><mo>&equals;</mo><mn>2</mn></math> or
+            <math><mi>x</mi><mo>&equals;</mo><mn>3</mn></math>.
+            &marker; (Direct Proof)        
+        </dd>
+        <dt>Converse</dt>
+        <dd>
+            If 
+            <math><mi>x</mi><mo>&equals;</mo><mn>2</mn></math> or
+            <math><mi>x</mi><mo>&equals;</mo><mn>3</mn></math>. then
+            <math>
+                <msup><mi>x</mi><mn>2</mn></msup>
+                <mo>&minus;</mo>
+                <mrow>
+                    <mn>5</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>x</mi>
+                </mrow>
+                <mo>&plus;</mo>
+                <mn>6</mn>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>.
+        </dd>
+        <dt>Solution to the converse</dt>
+        <dd>
+            <i>The converse is true.</i>
+            As
+            <math>
+                <msup><mi>x</mi><mn>2</mn></msup>
+                <mo>&minus;</mo>
+                <mrow>
+                    <mn>5</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>x</mi>
+                </mrow>
+                <mo>&plus;</mo>
+                <mn>6</mn>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mfenced>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&minus;</mo>
+                            <mn>2</mn>
+                        </mrow>
+                    </mfenced>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&minus;</mo>
+                            <mn>3</mn>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+            </math>,
+            if <math><mi>x</mi><mo>&equals;</mo><mn>2</mn></math> then
+            <math>
+                <mn>0</mn>
+                <mo>&times;</mo>
+                <mfenced>
+                    <mrow>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>, 
+            and
+            if <math><mi>x</mi><mo>&equals;</mo><mn>3</mn></math> then
+            <math>
+                <mn>1</mn>
+                <mo>&times;</mo>
+                <mn>0</mn>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>. &marker; (Direct Proof)
+        </dd>
+    </dl>
+</section>
+
+<!-- -------------------------------------------------------------- -->
+<h3>Exercise 0.1-2</h3>
+<section class="description">
+    <p>
+        In each case, prove the result 
+        by splitting into cases or give a counterexample.
+    </p>
+</section>
+
+<section class="example">
+    <h4>0.1-2-(a)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>n</mi></math> is any integer, then
+            <math>
+                <msup><mi>n</mi><mn>2</mn></msup>
+                <mo>&equals;</mo>
+                <mn>4</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>1</mn>
+            </math> for some integer <math><mi>k</mi></math>.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            <i>The Implication is false.</i>
+            When <math><mi>n</mi><mo>&equals;</mo><mn>2</mn></math>,
+            <math>
+                <mn>4</mn>
+                <mo>&equals;</mo>
+                <mn>4</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>1</mn>
+            </math>, hence 
+            <math>
+                <mi>k</mi>
+                <mo>&equals;</mo>
+                <mn>3</mn>
+                <mo>&div;</mo>
+                <mn>4</mn>
+            </math> is a fraction. &marker; (Counterexample)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-2-(b)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>n</mi></math> is any odd integer, then
+            <math>
+                <msup><mi>n</mi><mn>2</mn></msup>
+                <mo>&equals;</mo>
+                <mn>8</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>1</mn>
+            </math>
+            for some integer <math><mi>k</mi></math>.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            <i>The Implication is true.</i>
+            As <math><mi>n</mi></math> is an odd integer, say
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>j</mi>
+                <mo>&plus;</mo>
+                <mn>1</mn>
+            </math>
+            for some integer <math><mi>j</mi></math>,
+            <math>
+                <msup><mi>n</mi><mn>2</mn></msup>
+                <mo>&equals;</mo>
+                <msup>
+                    <mfenced>
+                        <mrow>
+                            <mn>2</mn>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>j</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </mfenced>
+                    <mn>2</mn>
+                </msup>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>4</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <msup><mi>j</mi><mn>2</mn></msup>
+                    <mo>&plus;</mo>
+                    <mn>4</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>j</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>8</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </math>, hence 
+            <math>
+                <mrow>
+                    <mi>j</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>j</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>2</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>k</mi>
+                </mrow>
+            </math>, which is true because:
+            if <math><mi>n</mi></math> is even then
+            <math>
+                <mi>j</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mfenced>
+                    <mrow>
+                        <mi>j</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+            </math> is even;
+            if <math><mi>n</mi></math> is odd then
+            <math><mi>n</mi><mo>&plus;</mo><mn>1</mn></math> is even so
+            <math>
+                <mi>j</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mfenced>
+                    <mrow>
+                        <mi>j</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+            </math> is even as well.
+            &marker; (Reduction to Cases)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-2-(c)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>n</mi></math> is any integer, then
+            <math>
+                <mrow>
+                    <msup><mi>n</mi><mn>3</mn></msup>
+                    <mo>&minus;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>3</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>k</mi>
+                </mrow>
+            </math>
+            for some integer <math><mi>k</mi></math>.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            <i>The Implication is true.</i>
+            As
+            <math>
+                <mrow>
+                    <msup><mi>n</mi><mn>3</mn></msup>
+                    <mo>&minus;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </mfenced>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>3</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>k</mi>
+                </mrow>
+            </math>, the Implication is true because:
+            if 
+            <math>
+                <mi>n</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo>mod</mo>
+                <mo>&ApplyFunction;</mo>
+                <mn>3</mn>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>
+            then
+            <math>
+                <mi>n</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&InvisibleTimes;</mo>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+            </math> is a multiple of 3;
+            if 
+            <math>
+                <mi>n</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo>mod</mo>
+                <mo>&ApplyFunction;</mo>
+                <mn>3</mn>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>
+            then
+            <math>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&ApplyFunction;</mo>
+                <mo>mod</mo>
+                <mo>&ApplyFunction;</mo>
+                <mn>3</mn>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>
+            so
+            <math>
+                <mi>n</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&InvisibleTimes;</mo>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+            </math> is a multiple of 3;
+            and if 
+            <math>
+                <mi>n</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo>mod</mo>
+                <mo>&ApplyFunction;</mo>
+                <mn>3</mn>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+            </math>
+            then
+            <math>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&ApplyFunction;</mo>
+                <mo>mod</mo>
+                <mo>&ApplyFunction;</mo>
+                <mn>3</mn>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>
+            so
+            <math>
+                <mi>n</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+                <mo>&InvisibleTimes;</mo>
+                <mfenced>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfenced>
+            </math> is a multiple of 3.
+            &marker; (Reduction to Cases)
+        </dd>
+    </dl>
+</section>
+
+<!-- -------------------------------------------------------------- -->
+<h3>Exercise 0.1-3</h3>
+<section class="description">
+    <p>
+        In each case, prove the result by contradiction and
+        either prove the converse or give a counterexample.
+    </p>
+</section>
+
+<section class="example">
+    <h4>0.1-3-(a)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>n</mi><mo>&gt;</mo><mn>2</mn></math> is a prime 
+            integer, then <math><mi>n</mi></math> is odd.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            <i>The Implication is true.</i>
+            If we assume that <math><mi>n</mi></math> is even,
+            <math><mi>n</mi></math> is a multiple of 2 and
+            not any prime integer, a contradiction. 
+            &marker; (Proof by Contradiction)
+        </dd>
+        <dt>Converse</dt>
+        <dd>
+            If <math><mi>n</mi></math> is odd, then
+            <math><mi>n</mi><mo>&gt;</mo><mn>2</mn></math> is a prime integer.
+        </dd>
+        <dt>Solution to the converse</dt>
+        <dd>
+            <i>The converse is false.</i>
+            <math><mi>n</mi><mo>&equals;</mo><mn>9</mn></math> is odd
+            but not a prime:
+            <math>
+                <mn>9</mn>
+                <mo>&equals;</mo>
+                <mn>3</mn>
+                <mo>&times;</mo>
+                <mn>3</mn>
+            </math>.
+            &marker; (Counterexample)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-3-(b)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>n</mi><mo>&plus;</mo><mi>m</mi><mo>&equals;</mo><mn>25</mn></math>,
+            where <math><mi>n</mi></math> and <math><mi>m</mi></math> are integer, 
+            one of <math><mi>n</mi></math> and <math><mi>m</mi></math> is 
+            greater than <math><mn>12</mn></math>.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            <i>The Implication is true.</i>
+            If we assume that 
+            <math><mi>n</mi><mo>&le;</mo><mn>12</mn></math> 
+            and 
+            <math><mi>m</mi><mo>&le;</mo><mn>12</mn></math>
+            — the negation of
+            "one of <math><mi>n</mi></math> and <math><mi>m</mi></math> is 
+            greater than <math><mn>12</mn></math>," then
+            <math>
+                <mrow><mi>n</mi><mo>&plus;</mo><mi>m</mi></mrow>
+                <mo>&le;</mo>
+                <mn>24</mn>
+            </math>, a contradiction.
+            &marker; (Proof by Contradiction)
+        </dd>
+        <dt>Converse</dt>
+        <dd>
+            If one of <math><mi>n</mi></math> and <math><mi>m</mi></math>,
+            where <math><mi>n</mi></math> and <math><mi>m</mi></math> are integer, 
+            is greater than <math><mn>12</mn></math>, then
+            <math><mi>n</mi><mo>&plus;</mo><mi>m</mi><mo>&equals;</mo><mn>25</mn></math>.
+        </dd>
+        <dt>Solution to the converse</dt>
+        <dd>
+            <i>The converse is false.</i>
+            <math>
+                <mn>13</mn><mo>&plus;</mo><mn>1</mn>
+                <mo>&equals;</mo><mn>14</mn>
+                <mo>&ne;</mo><mn>25</mn>
+            </math>. &marker;
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-3-(c)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>a</mi></math> and <math><mi>b</mi></math> 
+            are positive numbers and 
+            <math>
+                <mi>a</mi>
+                <mo>&le;</mo>
+                <mi>b</mi>
+            </math>, then
+            <math>
+                <msqrt><mi>a</mi></msqrt>
+                <mo>&le;</mo>
+                <msqrt><mi>b</mi></msqrt>
+            </math>.
+        </dd>
+        <dt>Solution to the imlication</dt>
+        <dd>
+            <i>The Implication is true.</i>
+            Assume
+            <math>
+                <mrow>
+                    <msqrt><mi>a</mi></msqrt>
+                    <mo>&minus;</mo>
+                    <msqrt><mi>b</mi></msqrt>
+                </mrow>
+                <mo>&gt;</mo>
+                <mn>0</mn>
+            </math>. 
+            As 
+            <math>
+                <msqrt><mi>a</mi></msqrt>
+                <mo>&plus;</mo>
+                <msqrt><mi>b</mi></msqrt>
+                <mo>&gt;</mo>
+                <mn>0</mn>
+            </math>
+            where <math><mi>a</mi></math> and <math><mi>b</mi></math> are positive numbers, 
+            <math>
+                <mrow>
+                    <mfenced>
+                        <mrow>
+                            <msqrt><mi>a</mi></msqrt>
+                            <mo>&minus;</mo>
+                            <msqrt><mi>b</mi></msqrt>
+                        </mrow>
+                    </mfenced>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <msqrt><mi>a</mi></msqrt>
+                            <mo>&plus;</mo>
+                            <msqrt><mi>b</mi></msqrt>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&minus;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo>&gt;</mo>
+                <mn>0</mn>
+            </math>, a contradiction.
+            &marker; (Proof by Contradiction)
+        </dd>
+        <dt>Converse</dt>
+        <dd>
+            If 
+            <math><mi>a</mi></math> and <math><mi>b</mi></math> 
+            are positive numbers and 
+            <math>
+                <msqrt><mi>a</mi></msqrt>
+                <mo>&le;</mo>
+                <msqrt><mi>b</mi></msqrt>
+            </math>, 
+            then
+            <math>
+                <mi>a</mi>
+                <mo>&le;</mo>
+                <mi>b</mi>
+            </math>.
+        </dd>
+        <dt>Solution to the converse</dt>
+        <dd>
+            <i>The converse is true.</i>
+            As 
+            <math>
+                <msqrt><mi>b</mi></msqrt>
+                <mo>&plus;</mo>
+                <msqrt><mi>a</mi></msqrt>
+                <mo>&ge;</mo>
+                <mn>0</mn>
+            </math> for any positive integers,
+            <math>
+                <mrow>
+                    <mfenced>
+                        <mrow>
+                            <msqrt><mi>b</mi></msqrt>
+                            <mo>&minus;</mo>
+                            <msqrt><mi>a</mi></msqrt>
+                        </mrow>
+                    </mfenced>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <msqrt><mi>b</mi></msqrt>
+                            <mo>&plus;</mo>
+                            <msqrt><mi>a</mi></msqrt>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>b</mi>
+                    <mo>&minus;</mo>
+                    <mi>a</mi>
+                </mrow>
+                <mo>&ge;</mo>
+                <mn>0</mn>
+            </math>, hence 
+            <math>
+                <mi>a</mi>
+                <mo>&le;</mo>
+                <mi>b</mi>
+            </math>.
+            &marker; (Direct Proof)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-3-(d)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>m</mi></math> and <math><mi>n</mi></math> are integers and 
+            <math><mi>m</mi><mo>&InvisibleTimes;</mo><mi>n</mi></math> is even, 
+            then <math><mi>m</mi></math> is even or <math><mi>n</mi></math> is even.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            <i>The Implication is true.</i> If we assume that
+            some integers <math><mi>m</mi></math> and <math><mi>n</mi></math> are odd, 
+            <math>
+                <mrow>
+                    <mi>m</mi><mo>&InvisibleTimes;</mo><mi>n</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mfenced>
+                        <mrow>
+                            <mn>2</mn>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>j</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </mfenced>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mn>2</mn>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>k</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </mfenced>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>2</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mn>2</mn>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>j</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>k</mi>
+                            <mo>&plus;</mo>
+                            <mi>j</mi>
+                            <mo>&plus;</mo>
+                            <mi>k</mi>
+                        </mrow>
+                    </mfenced>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </math> is odd, a contradiction.
+            &marker; (Proof by Contradiction)
+        </dd>
+        <dt>Converse</dt>
+        <dd>
+            If <math><mi>m</mi></math> and <math><mi>n</mi></math> are integers and 
+            <math><mi>m</mi></math> is even or <math><mi>n</mi></math> is even, then
+            <math><mi>m</mi><mo>&InvisibleTimes;</mo><mi>n</mi></math> is even.
+        </dd>
+        <dt>Solution to the converse</dt>
+        <dd>
+            <i>The converse is true.</i>
+            If <math><mi>m</mi></math> is even then
+            <math><mi>m</mi><mo>&InvisibleTimes;</mo><mi>n</mi></math>
+            has the form 
+            <math>
+                <mn>2</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>j</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+            </math>, and
+            if <math><mi>n</mi></math> is even then
+            <math><mi>m</mi><mo>&InvisibleTimes;</mo><mi>n</mi></math>
+            has the form 
+            <math>
+                <mn>2</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>j</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>m</mi>
+            </math>. &marker; (Direct Proof)
+        </dd>
+    </dl>
+</section>
+
+<!-- -------------------------------------------------------------- -->
+<h3>Exercise 0.1-4</h3>
+<section class="description">
+    <p>
+        Prove each implication by contradiction.
+    </p>
+</section>
+
+<section class="example">
+    <h4>0.1-4-(a)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>x</mi></math> and <math><mi>y</mi></math> 
+            are positive numbers, then
+            <math>
+                <msqrt><mi>x</mi><mo>&plus;</mo><mi>y</mi></msqrt>
+                <mo>&ne;</mo>
+                <msqrt><mi>x</mi></msqrt>
+                <mo>&plus;</mo>
+                <msqrt><mi>y</mi></msqrt>
+            </math>
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            If we assume
+            <math>
+                <msqrt><mi>x</mi><mo>&plus;</mo><mi>y</mi></msqrt>
+                <mo>&equals;</mo>
+                <msqrt><mi>x</mi></msqrt>
+                <mo>&plus;</mo>
+                <msqrt><mi>y</mi></msqrt>
+            </math>, then 
+            <figure>
+                <math>
+                    <mtable>
+                        <mtr>
+                            <mtd>
+                                <msup>
+                                    <mfenced>
+                                        <mrow>
+                                            <msqrt>
+                                                <mi>x</mi>
+                                                <mo>&plus;</mo>
+                                                <mi>y</mi>
+                                            </msqrt>
+                                        </mrow>
+                                    </mfenced>
+                                    <mn>2</mn>
+                                </msup>
+                            </mtd>
+                            <mtd><mo>&equals;</mo></mtd>
+                            <mtd>
+                                <msup>
+                                    <mfenced>
+                                        <mrow>
+                                            <msqrt>
+                                                <mi>x</mi>
+                                            </msqrt>
+                                            <mo>&plus;</mo>
+                                            <msqrt>
+                                                <mi>y</mi>
+                                            </msqrt>
+                                        </mrow>
+                                    </mfenced>
+                                    <mn>2</mn>
+                                </msup>
+                            </mtd>
+                        </mtr>
+                        <mtr>
+                            <mtd>
+                                <mi>x</mi>
+                                <mo>&plus;</mo>
+                                <mi>y</mi>
+                            </mtd>
+                            <mtd><mo>&equals;</mo></mtd>
+                            <mtd>
+                                <mi>x</mi>
+                                <mo>&plus;</mo>
+                                <mi>y</mi>
+                                <mo>&plus;</mo>
+                                <mn>2</mn>
+                                <mo>&InvisibleTimes;</mo>
+                                <msqrt>
+                                    <mi>x</mi>
+                                    <mo>&InvisibleTimes;</mo>
+                                    <mi>y</mi>
+                                </msqrt>
+                            </mtd>
+                        </mtr>
+                    </mtable>
+                </math>
+            </figure>
+            Hence 
+            <math>
+                <msqrt>
+                    <mi>x</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>y</mi>
+                </msqrt>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>, 
+            which means 
+            <math><mi>x</mi><mo>&equals;</mo><mn>0</mn></math> or 
+            <math><mi>y</mi><mo>&equals;</mo><mn>0</mn></math>, a contrdiction.
+            &marker; (Proof by Contrdiction)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-4-(b)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>x</mi></math> is irrational and 
+            <math><mi>y</mi></math> is rational, 
+            then <math><mi>x</mi><mo>&plus;</mo><mi>y</mi></math> is irrational.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            If we assume <math><mi>x</mi><mo>&plus;</mo><mi>y</mi></math> is rational 
+            having the form of 
+            <math><mfrac><mi>n</mi><mi>m</mi></mfrac></math> 
+            where <math><mi>n</mi></math> and <math><mi>m</mi></math> 
+            are some integers, then
+            <math>
+                <mi>x</mi>
+                <mo>&equals;</mo>
+                <mfrac>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mi>y</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mi>m</mi>
+                </mfrac>
+            </math>. 
+            A contradiction because 
+            <math><mi>x</mi></math> has the form of a fraction. 
+            &marker; (Proof by Contrdiction)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-4-(c)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If 13 people are selected, at least 2 have birthdays in the same month.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            Assume all have birthdays in different months, then
+            there can be at most 12 people, one for each month, 
+            a contradiction. &marker; (Proof by Contrdiction)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-4-(d)</h4>
+    <dl>
+        <dt>Implication</dt>
+        <dd>
+            If <math><mi>n</mi><mo>&plus;</mo><mn>1</mn></math> pigeons 
+            are placed in <math><mi>n</mi></math> holes, 
+            some hole contains at least two pigeons.
+        </dd>
+        <dt>Solution to the implication</dt>
+        <dd>
+            Suppose each hole contains at most one pigeon, then 
+            the total number of pigeons is at most <math><mi>n</mi></math>,
+            a contradiction. &marker; (Proof by Contrdiction)
+        </dd>
+    </dl>
+</section>
+
+<!-- -------------------------------------------------------------- -->
+<h3>Exercise 0.1-5</h3>
+<section class="description">
+    <p>
+        Disprove each statement by giving a counterexample.
+    </p>
+</section>
+
+<section class="example">
+    <h4>0.1-5-(a)</h4>
+    <dl>
+        <dt>Statement</dt>
+        <dd>
+            <math>
+                <msup><mi>n</mi><mn>2</mn></msup>
+                <mo>&plus;</mo>
+                <mi>n</mi>
+                <mo>&plus;</mo>
+                <mn>11</mn>
+            </math>
+            is a prime for all positive integers <math><mi>n</mi></math>.
+        </dd>
+        <dt>Solution to the statement</dt>
+        <dd>
+            <math>
+                <msup><mi>n</mi><mn>2</mn></msup>
+                <mo>&plus;</mo>
+                <mi>n</mi>
+                <mo>&plus;</mo>
+                <mn>11</mn>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfenced>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </mfenced>
+                    <mo>&plus;</mo>
+                    <mn>11</mn>
+                </mrow>
+            </math>, hence 
+            if <math><mi>n</mi></math> is a multiple of 11, say 11, then
+            <math>
+                <mn>11</mn>
+                <mo>&times;</mo>
+                <mn>12</mn>
+                <mo>&plus;</mo>
+                <mn>11</mn>
+                <mo>&equals;</mo>
+                <mn>11</mn>
+                <mo>&times;</mo>
+                <mn>13</mn>
+            </math>. 
+            Likewise if <math><mi>n</mi><mo>&plus;</mo><mi>1</mi></math> 
+            is a multiple of 11, say 
+            <math><mi>n</mi><mo>&equals;</mo><mi>10</mi></math> then
+            <math>
+                <mn>10</mn>
+                <mo>&times;</mo>
+                <mn>11</mn>
+                <mo>&plus;</mo>
+                <mn>11</mn>
+                <mo>&equals;</mo>
+                <mn>11</mn>
+                <mo>&times;</mo>
+                <mn>11</mn>
+            </math>. &marker; (Counterexample)
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-5-(b)</h4>
+    <dl>
+        <dt>Statement</dt>
+        <dd>
+            <math>
+                <msup><mi>n</mi><mn>3</mn></msup>
+                <mo>&ge;</mo>
+                <msup><mn>2</mn><mi>n</mi></msup>
+            </math>
+            for all integers
+            <math>
+                <mi>n</mi>
+                <mo>&ge;</mo>
+                <mn>2</mn>
+            </math>.
+        </dd>
+        <dt>Solution to the statement</dt>
+        <dd>
+            <math>
+                <mtable>
+                    <mtr>
+                        <mtd><mi>n</mi></mtd>
+                        <mtd><msup><mi>n</mi><mn>3</mn></msup></mtd>
+                        <mtd></mtd>
+                        <mtd></mtd>
+                        <mtd><msup><mn>2</mn><mi>n</mi></msup></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><msup><mi>2</mi><mn>3</mn></msup></mtd>
+                        <mtd></mtd>
+                        <mtd><mo>&gt;</mo></mtd>
+                        <mtd><msup><mi>2</mi><mn>2</mn></msup></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd>
+                            <msup><mi>4</mi><mn>3</mn></msup>
+                        </mtd>
+                        <mtd>
+                            <mo>&equals;</mo>
+                            <msup>
+                                <mi>2</mi>
+                                <mrow>
+                                    <mn>2</mn>
+                                    <mo>&times;</mo>
+                                    <mn>3</mn>
+                                </mrow>
+                            </msup>
+                        </mtd>
+                        <mtd><mo>&gt;</mo></mtd>
+                        <mtd><msup><mi>2</mi><mn>4</mn></msup></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>8</mn></mtd>
+                        <mtd>
+                            <msup><mi>8</mi><mn>3</mn></msup>
+                        </mtd>
+                        <mtd>
+                            <mo>&equals;</mo>
+                            <msup>
+                                <mi>2</mi>
+                                <mrow>
+                                    <mn>3</mn>
+                                    <mo>&times;</mo>
+                                    <mn>3</mn>
+                                </mrow>
+                            </msup>
+                        </mtd>
+                        <mtd><mo>&gt;</mo></mtd>
+                        <mtd><msup><mi>2</mi><mn>8</mn></msup></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>16</mn></mtd>
+                        <mtd>
+                            <msup><mi>16</mi><mn>3</mn></msup>
+                        </mtd>
+                        <mtd>
+                            <mo>&equals;</mo>
+                            <msup>
+                                <mi>2</mi>
+                                <mrow>
+                                    <mn>4</mn>
+                                    <mo>&times;</mo>
+                                    <mn>3</mn>
+                                </mrow>
+                            </msup>
+                        </mtd>
+                        <mtd><mo>&lt;</mo></mtd>
+                        <mtd><msup><mi>2</mi><mn>16</mn></msup></mtd>
+                    </mtr>
+                </mtable>
+            </math>
+        </dd>
+    </dl>
+</section>
+
+<section class="example">
+    <h4>0.1-5-(c)</h4>
+    <dl>
+        <dt>Statement</dt>
+        <dd>
+            If <math><mi>n</mi></math> points are arranged on a circle
+            in such a way that no three of the lines joining them 
+            have a common point, 
+            these lines divide the circle into
+            <math>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msup>
+            </math> regions. For example,
+            if <math><mi>n</mi><mo>&equals;</mo><mn>4</mn></math>, there are 
+            <math>
+                <mn>8</mn>
+                <mo>&equals;</mo>
+                <msup><mn>2</mn><mn>3</mn></msup>
+            </math> regions.
+        </dd>
+        <dt>Solution to the statement</dt>
+        <dd>
+            <math><mi>n</mi><mo>&equals;</mo><mn>6</mn></math> is a counterexample.
+            There are then 31 regions.
+        </dd>
+    </dl>
+</section>
+
+<!-- -------------------------------------------------------------- -->
+<h3>Exercise 0.1-6</h3>
+<section class="description">
+    <p>
+        If <math><mi>p</mi></math> is a statement, let 
+        <math>
+            <mo>&Tilde;</mo>
+            <mi>p</mi>
+        </math>
+        denote the statement "not p," 
+        called the negation of <math><mi>p</mi></math>.
+        Thus, 
+        <math>
+            <mo>&Tilde;</mo>
+            <mi>p</mi>
+        </math>
+        is true when <math><mi>p</mi></math> is false,
+        and false when <math><mi>p</mi></math> is true.
+        Show that if
+        <math>
+            <mo>&Tilde;</mo>
+            <mi>q</mi>
+            <mo>&Implies;</mo>
+            <mo>&Tilde;</mo>
+            <mi>p</mi>
+        </math>, then
+        <math>
+            <mi>p</mi>
+            <mo>&Implies;</mo>
+            <mi>q</mi>
+        </math>.
+    </p>
+    <dl>
+        <dt>Solution to the implication</dt>
+        <dd>
+            The following truth table shows that 
+            <math>
+                <mo>&Tilde;</mo>
+                <mi>q</mi>
+                <mo>&Implies;</mo>
+                <mo>&Tilde;</mo>
+                <mi>p</mi>
+            </math>
+            and 
+            <math>
+                <mi>p</mi>
+                <mo>&Implies;</mo>
+                <mi>q</mi>
+            </math>
+            share the same truth values in all scenarios: 
+            <figure>
+                <table>
+                    <tr>
+                        <th><i>p</i></th>
+                        <th><i>q</i></th>
+                        <th><i>&Tilde;p</i></th>
+                        <th><i>&Tilde;q</i></th>
+                        <th><i>p&Implies;q</i></th>
+                        <th><i>&Tilde;q&Implies;&Tilde;p</i></th>
+                    </tr>
+                    <tr>
+                        <td>T</td>
+                        <td>T</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>T</td>
+                        <td>T</td>
+                    </tr>
+                    <tr>
+                        <td>T</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>T</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>T</td>
+                        <td>T</td>
+                        <td>F</td>
+                        <td>T</td>
+                        <td>T</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>T</td>
+                        <td>T</td>
+                        <td>T</td>
+                        <td>T</td>
+                    </tr>
+                </table>
+            </figure>
+            Hence 
+            <math>
+                <mo>&Tilde;</mo>
+                <mi>q</mi>
+                <mo>&Implies;</mo>
+                <mo>&Tilde;</mo>
+                <mi>p</mi>
+            </math> 
+            if and only if
+            <math>
+                <mi>p</mi>
+                <mo>&Implies;</mo>
+                <mi>q</mi>
+            </math>.
+        </dd>
+    </dl>
+    <p>
+        <math>
+            <mo>&Tilde;</mo>
+            <mi>q</mi>
+            <mo>&Implies;</mo>
+            <mo>&Tilde;</mo>
+            <mi>p</mi>
+        </math> is called the <i>contrapositive</i> of 
+        <math>
+            <mi>p</mi>
+            <mo>&Implies;</mo>
+            <mi>q</mi>
+        </math>.
+    </p>
+</section>
+
+
+</body>
+</html>

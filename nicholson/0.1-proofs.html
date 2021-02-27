@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>0.1 Proofs</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>0.1 Proofs</h2>
+
+<section id="logic-implies" class="definition">
+    <h4>Implies</h4>
+    <figure>
+        <math>
+            <mi>p</mi>
+            <mo>&Implies;</mo>
+            <mi>q</mi>
+        </math>
+    </figure>
+    <dl>
+        <dt>Meaning</dt>
+        <dd>
+            If <math><mi>p</mi></math> is true, 
+            then <math><mi>q</mi></math> is true.
+        </dd>
+        <dt>Read it as</dt>
+        <dd><math><mi>p</mi></math> implies <math><mi>q</mi></math>.</dd>
+    </dl>
+    <p>
+        Here, <math><mi>p</mi></math> is the <i>hypothesis</i> and 
+        <math><mi>q</mi></math> the <i>conclusion</i> of the implication.
+    </p>
+</section>
+
+<section class="description">
+    <h4>Method of Direct Proof</h4>
+    <p>
+        To prove 
+        <math>
+            <mi>p</mi>
+            <mo>&Implies;</mo>
+            <mi>q</mi>
+        </math>, 
+        demonstrate directly 
+        that <math><mi>q</mi></math> is true 
+        whenever <math><mi>p</mi></math> is true.
+    </p>
+    <p>
+        <i>Example 1.</i>
+        If <math><mi>n</mi></math> is an odd integer, 
+        show that 
+        <math><msup><mi>n</mi><mn>2</mn></msup></math>
+        is odd.
+    </p>
+    <p>
+        <i>Solution.</i>
+        If <math><mi>n</mi></math> is odd, it has the form 
+        <math>
+            <mi>n</mi>
+            <mo>&equals;</mo>
+            <mn>2</mn><mo>&InvisibleTimes;</mo><mi>k</mi>
+            <mo>&plus;</mo>
+            <mn>1</mn>
+        </math>
+        for some integer <math><mi>k</mi></math>. 
+        Then 
+        <math>
+            <msup><mi>n</mi><mn>2</mn></msup>
+            <mo>&equals;</mo>
+            <mn>4</mn><mo>&InvisibleTimes;</mo><msup><mi>k</mi><mn>2</mn></msup>
+            <mo>&plus;</mo>
+            <mn>4</mn><mo>&InvisibleTimes;</mo><mi>k</mi>
+            <mo>&plus;</mo>
+            <mn>1</mn>
+            <mo>&equals;</mo>
+            <mn>2</mn><mo>&InvisibleTimes;</mo>
+            <mo fence="true">&lpar;</mo>
+                <mn>2</mn><mo>&InvisibleTimes;</mo><msup><mi>k</mi><mn>2</mn></msup>
+                <mo>&plus;</mo>
+                <mn>2</mn><mo>&InvisibleTimes;</mo><mi>k</mi>
+            <mo fence="true">&rpar;</mo>
+            <mo>&plus;</mo>
+            <mn>1</mn>
+    </math>
+        is also odd because 
+        <math>
+            <mn>2</mn><mo>&InvisibleTimes;</mo><msup><mi>k</mi><mn>2</mn></msup>
+            <mo>&plus;</mo>
+            <mn>2</mn><mo>&InvisibleTimes;</mo><mi>k</mi>
+        </math>
+        is an integer.
+    </p>
+</section>
+
+<section class="description">
+    <h4>Method to Reduction to Cases</h4>    
+    <p>Suppose that you are asked to verify that
+        <math>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&ge;</mo>
+            <mn>0</mn>
+        </math>
+        for every integer <math><mi>n</mi></math>.
+        This expression is an implication: 
+        If <math><mi>x</mi></math> is an integer, then
+        <math>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&ge;</mo>
+            <mn>0</mn>
+        </math>.
+        To prove it, you might consider separately the cases that 
+        <math><mi>n</mi><mo>&gt;</mo><mn>0</mn></math>, 
+        <math><mi>n</mi><mo>&equals;</mo><mn>0</mn></math>, and 
+        <math><mi>n</mi><mo>&lt;</mo><mn>0</mn></math>
+        and then show that 
+        <math>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&ge;</mo>
+            <mn>0</mn>
+        </math>
+        in each case.
+    </p>
+    <p>
+        To prove
+        <math>
+            <mi>p</mi>
+            <mo>&Implies;</mo>
+            <mi>q</mi>
+        </math>,
+        show that <math><mi>p</mi></math> implies at least one of a list
+        <math>
+            <msub><mi>p</mi><mn>1</mn></msub>
+            <mo>,</mo>
+            <msub><mi>p</mi><mn>2</mn></msub>
+            <mo>,</mo>
+            <mi>&hellip;</mi>
+            <mo>,</mo>
+            <msub><mi>p</mi><mi>n</mi></msub>
+        </math>
+        of statements (the cases) and that
+        <math>
+            <msub><mi>p</mi><mi>i</mi></msub>
+            <mo>&Implies;</mo>
+            <mi>q</mi>
+        </math>
+        for each <math><mi>i</mi></math>.
+    </p>
+</section>
+
+<section class="description">
+    <h4>Method of Proof by Contradiction</h4>
+    <p>
+        The method is a formal version of a debating strategy 
+        whereby the debater assumes the truth of an opponent's position 
+        and shows that it leads to an absurd conclusion.
+    </p>
+    <p>
+        To prove
+        <math>
+            <mi>p</mi>
+            <mo>&Implies;</mo>
+            <mi>q</mi>
+        </math>,
+        show that the assumption that both <math><mi>p</mi></math>
+        is true and <math><mi>q</mi></math> is false leads 
+        to a contradiction.
+    </p>
+</section>
+
+<section class="description">
+    <h4>Counterexamples</h4>
+    <p>
+        Note that if you can find even one example for which an implication
+        is not valid (<i>counterexample</i>), the implication is false. 
+        Thus, disproving implications in a sense is easier than proving them.
+    </p>
+</section>
+
+<section id="logic-equiv" class="definition">
+    <h4>Logical Equivalence</h4>
+    <figure>
+        <math>
+            <mi>p</mi>
+            <mo>&iff;</mo>
+            <mi>q</mi>
+        </math>
+    </figure>
+    <dl>
+        <dt>Meaning</dt>
+        <dd>
+            If both
+            <math>
+                <mi>p</mi>
+                <mo>&Implies;</mo>
+                <mi>q</mi>    
+            </math>
+            and
+            <math>
+                <mi>q</mi>
+                <mo>&Implies;</mo>
+                <mi>p</mi>    
+            </math>
+            are valid, 
+            the statements <math><mi>p</mi></math> and <math><mi>q</mi></math>
+            are called logically equivalent.
+        </dd>
+        <dt>Read it as</dt>
+        <dd>
+            <math><mi>p</mi></math> if and only if <math><mi>q</mi></math>.
+        </dd>
+    </dl>
+    </section>
+</body>
+</html>

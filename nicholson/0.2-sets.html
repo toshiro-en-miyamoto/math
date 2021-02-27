@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>0.2 Sets</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>0.2 Sets</h2>
+
+<section class="description">
+    <h4>Sets and Elements</h4>
+    <p>
+        Sets are usually denoted by uppercase letters and 
+        elements by lowercase letters. 
+        The fact that <math><mi>a</mi></math> 
+        is an element of set <math><mi>A</mi></math> 
+        is denoted
+        <figure>
+            <math>
+                <mi>a</mi><mo>&in;</mo><mi>A</mi>
+            </math>
+        </figure>
+    </p>
+</section>
+
+<section class="description">
+    <h4>Subsets</h4>
+    <p>
+        If <math><mi>A</mi></math> and <math><mi>B</mi></math> are sets, 
+        we say that 
+        <math><mi>A</mi></math> is contained in 
+        <math><mi>B</mi></math> if every element of 
+        <math><mi>A</mi></math> is an element of 
+        <math><mi>B</mi></math>.  
+        In this case, we say that 
+        <math><mi>A</mi></math> is a subset of 
+        <math><mi>B</mi></math> and write
+        <figure>
+            <math>
+                <mi>A</mi><mo>&subseteq;</mo><mi>B</mi>
+            </math>
+        </figure>
+    </p>
+</section>
+
+<section class="definition">
+    <h4>Set Equality</h4>
+    <p>
+        If <math><mi>A</mi></math> and <math><mi>B</mi></math> are sets, then 
+        <figure>
+            <math>
+                <mi>A</mi><mo>&equals;</mo><mi>B</mi>
+                <mo>if and only if</mo>
+                <mi>A</mi><mo>&subseteq;</mo><mi>B</mi>
+                <mo>and</mo>
+                <mi>B</mi><mo>&subseteq;</mo><mi>A</mi>
+            </math>
+        </figure>
+    </p>
+</section>
+
+<section class="description">
+    <h4>Proper Subsets</h4>
+    <p>
+        If 
+        <math>
+            <mi>A</mi><mo>&subseteq;</mo><mi>B</mi>
+            <mo>but</mo>
+            <mi>A</mi><mo>&ne;</mo><mi>B</mi>
+        </math>, 
+        we write 
+        <math>
+            <mi>A</mi><mo>&subset;</mo><mi>B</mi>
+        </math> 
+        and refer to <math><mi>A</mi></math>
+        as a proper subset of <math><mi>B</mi></math>.
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>The Empty Set</h4>
+    <p>
+        We assume (this is an axiom) that there exists a set with no elements. 
+        This set is called the empty set and is denoted 
+        <math><mi>&emptyset;</mi></math>. 
+    </p>
+    <figure>
+        <math>
+            <mi>&emptyset;</mi><mo>&subseteq;</mo><mi>A</mi>
+            <mo>for every set</mo>
+            <mi>A</mi>
+        </math>
+    </figure>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        Observe that 
+        <math>
+            <mi>&emptyset;</mi><mo>&nsubseteq;</mo><mi>A</mi>
+            <mo>for every set</mo>
+            <mi>A</mi>
+        </math>
+        implies the existence of an element 
+        <math>
+            <mi>x</mi><mo>&in;</mo><mi>&emptyset;</mi>
+        </math>
+        such that 
+        <math>
+            <mi>x</mi><mo>&notin;</mo><mi>A</mi>
+        </math>, 
+        a contradiction since 
+        <math><mi>&emptyset;</mi></math> has no element.
+        &marker;
+    </p>
+</section>
+
+<section class="description">
+    <H4>Unions and Intersections</H4>
+    <p>
+        Let 
+        <math>
+            <msub><mi>A</mi><mn>1</mn></msub><mo>&comma;</mo>
+            <msub><mi>A</mi><mn>2</mn></msub><mo>&comma;</mo>
+            <mi>&hellip;</mi><mo>&comma;</mo>
+            <msub><mi>A</mi><mi>n</mi></msub>
+        </math>
+        be sets. We define their union and intersection as 
+        <figure>
+            <math>
+                <mrow>
+                    <msub><mi>A</mi><mn>1</mn></msub>
+                    <mo>&cup;</mo>
+                    <msub><mi>A</mi><mn>2</mn></msub>
+                    <mo>&cup;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&cup;</mo>
+                    <msub><mi>A</mi><mi>n</mi></msub>
+                </mrow>
+                <mo>&equals;</mo>
+                <mo fence="true">&lbrace;</mo>
+                    <mi>x</mi>
+                <mo separator="true">&verbar;</mo>
+                    <mi>x</mi><mo>&in;</mo>
+                    <msub><mi>A</mi><mi>i</mi></msub>
+                    <mo>for some</mo>
+                    <mi>i</mi>
+                    <mo>&equals;</mo>
+                    <mn>1</mn><mo>&comma;</mo>
+                    <mn>2</mn><mo>&comma;</mo>
+                    <mi>&hellip;</mi><mo>&comma;</mo>
+                    <mi>n</mi>
+                <mo fence="true">&rbrace;</mo>
+            </math>
+        </figure>
+        <figure>
+            <math>
+                <mrow>
+                    <msub><mi>A</mi><mn>1</mn></msub>
+                    <mo>&cap;</mo>
+                    <msub><mi>A</mi><mn>2</mn></msub>
+                    <mo>&cap;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&cap;</mo>
+                    <msub><mi>A</mi><mi>n</mi></msub>
+                </mrow>
+                <mo>&equals;</mo>
+                <mo fence="true">&lbrace;</mo>
+                    <mi>x</mi>
+                <mo separator="true">&verbar;</mo>
+                    <mi>x</mi><mo>&in;</mo>
+                    <msub><mi>A</mi><mi>i</mi></msub>
+                    <mo>for every</mo>
+                    <mi>i</mi>
+                    <mo>&equals;</mo>
+                    <mn>1</mn><mo>&comma;</mo>
+                    <mn>2</mn><mo>&comma;</mo>
+                    <mi>&hellip;</mi><mo>&comma;</mo>
+                    <mi>n</mi>
+                <mo fence="true">&rbrace;</mo>
+            </math>
+        </figure>
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        Using the principle of set equality, the following properties 
+        can be proved for arbitrary sets <math><mi>A</mi></math>, 
+        <math><mi>B</mi></math> and <math><mi>C</mi></math>: 
+        <table>
+            <tr>
+                <th>law</th>
+                <th>union</th>
+                <th>intersection</th>
+            </tr>
+            <tr>
+                <td>idempotent</td>
+                <td>
+                    <math>
+                        <mi>A</mi>
+                        <mo>&cup;</mo>
+                        <mi>A</mi>
+                        <mo>&equals;</mo>
+                        <mi>A</mi>
+                    </math>
+                </td>
+                <td>
+                    <math>
+                        <mi>A</mi>
+                        <mo>&cap;</mo>
+                        <mi>A</mi>
+                        <mo>&equals;</mo>
+                        <mi>A</mi>
+                    </math>
+                </td>
+            </tr>
+            <tr>
+                <td>commutative</td>
+                <td>
+                    <math>
+                        <mi>A</mi>
+                        <mo>&cup;</mo>
+                        <mi>B</mi>
+                        <mo>&equals;</mo>
+                        <mi>B</mi>
+                        <mo>&cup;</mo>
+                        <mi>A</mi>
+                    </math>
+                </td>
+                <td>
+                    <math>
+                        <mi>A</mi>
+                        <mo>&cap;</mo>
+                        <mi>B</mi>
+                        <mo>&equals;</mo>
+                        <mi>B</mi>
+                        <mo>&cap;</mo>
+                        <mi>A</mi>
+                    </math>
+                </td>
+            </tr>
+            <tr>
+                <td>associative</td>
+                <td>
+                    <math>
+                        <mi>A</mi>
+                        <mo>&cup;</mo>
+                        <mo fence="true">&lpar;</mo>
+                            <mi>B</mi>
+                            <mo>&cup;</mo>
+                            <mi>C</mi>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&equals;</mo>
+                        <mo fence="true">&lpar;</mo>
+                            <mi>A</mi>
+                            <mo>&cup;</mo>
+                            <mi>B</mi>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&cup;</mo>
+                        <mi>C</mi>
+                    </math>
+                </td>
+                <td>
+                    <math>
+                        <mi>A</mi>
+                        <mo>&cap;</mo>
+                        <mo fence="true">&lpar;</mo>
+                            <mi>B</mi>
+                            <mo>&cap;</mo>
+                            <mi>C</mi>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&equals;</mo>
+                        <mo fence="true">&lpar;</mo>
+                            <mi>A</mi>
+                            <mo>&cap;</mo>
+                            <mi>B</mi>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&cap;</mo>
+                        <mi>C</mi>
+                    </math>
+                </td>
+            </tr>
+            <tr>
+                <td>distributive</td>
+                <td>
+                    <math>
+                        <mi>A</mi>
+                        <mo>&cup;</mo>
+                        <mo fence="true">&lpar;</mo>
+                            <mi>B</mi>
+                            <mo>&cap;</mo>
+                            <mi>C</mi>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&equals;</mo>
+                        <mo fence="true">&lpar;</mo>
+                            <mi>A</mi>
+                            <mo>&cup;</mo>
+                            <mi>B</mi>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&cap;</mo>
+                        <mo fence="true">&lpar;</mo>
+                            <mi>A</mi>
+                            <mo>&cup;</mo>
+                            <mi>C</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </math>
+                </td>
+                <td>
+                    <math>
+                        <mi>A</mi>
+                        <mo>&cap;</mo>
+                        <mo fence="true">&lpar;</mo>
+                            <mi>B</mi>
+                            <mo>&cup;</mo>
+                            <mi>C</mi>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&equals;</mo>
+                        <mo fence="true">&lpar;</mo>
+                            <mi>A</mi>
+                            <mo>&cap;</mo>
+                            <mi>B</mi>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&cup;</mo>
+                        <mo fence="true">&lpar;</mo>
+                            <mi>A</mi>
+                            <mo>&cap;</mo>
+                            <mi>C</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </math>
+                </td>
+            </tr>
+        </table>
+    </p>
+</section>
+
+<section class="description">
+    <h4>Differences</h4>
+    <p>
+        The difference 
+        <math>
+            <mi>A</mi>
+            <mo>&setminus;</mo>
+            <mi>B</mi>
+        </math>
+        of two sets consists of the elements of <math><mi>A</mi></math>
+        that are not in <math><mi>B</mi></math>, more formally
+        <figure>
+            <math>
+                <mi>A</mi>
+                <mo>&setminus;</mo>
+                <mi>B</mi>
+                <mo>&equals;</mo>
+                <mo fence="true">&lbrace;</mo>
+                    <mi>x</mi>
+                <mo separator="true">&verbar;</mo>
+                    <mi>x</mi><mo>&in;</mo><mi>A</mi>
+                    <mo>and</mo>
+                    <mi>x</mi><mo>&notin;</mo><mi>B</mi>
+                <mo fence="true">&rbrace;</mo>
+            </math>
+        </figure>
+    </p>
+</section>
+
+<section class="description">
+    <h4>Ordered Pairs</h4>
+    <p>
+        The sets 
+        <math>
+            <mo fence="true">&lbrace;</mo>
+                <mi>a</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>b</mi>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+        and 
+        <math>
+            <mo fence="true">&lbrace;</mo>
+                <mi>b</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>a</mi>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+        are equal because the order in which the elements of a set 
+        are listed is irrelevant.
+        However, taking the order into consideration is frequently useful.
+    </p>
+    <p>
+        A pair of elements is called an <i>ordered pair</i> 
+        when they are taken to be in a definite order. The notation
+        <figure>
+            <math>
+                <mo fence="true">&lpar;</mo>
+                    <mi>a</mi>
+                <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                <mo fence="true">&rpar;</mo>
+            </math>
+        </figure>
+        denotes the ordered pair in which 
+        the first member is <math><mi>a</mi></math> and 
+        the second is <math><mi>b</mi></math>. 
+        The defining property is
+        <figure>
+            <math>
+                <mo fence="true">&lpar;</mo>
+                    <mi>a</mi>
+                <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                <mo fence="true">&rpar;</mo>
+                <mo>&equals;</mo>
+                <mo fence="true">&lpar;</mo>
+                    <msub><mi>a</mi><mn>1</mn></msub>
+                <mo separator="true">&comma;</mo>
+                    <msub><mi>b</mi><mn>1</mn></msub>
+                <mo fence="true">&rpar;</mo>
+                <mo>if and only if</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&equals;</mo>
+                    <msub><mi>a</mi><mn>1</mn></msub>
+                    <mo>and</mo>
+                    <mi>b</mi>
+                    <mo>&equals;</mo>
+                    <msub><mi>b</mi><mn>1</mn></msub>
+                </mrow>
+            </math>
+        </figure>
+    </p>
+</section>
+
+<section class="description">
+    <h4>The Cartesian Product</h4>
+    <p>
+        The cartesian product 
+        <math><mi>A</mi><mo>&times;</mo><mi>B</mi></math>
+        of two sets <math><mi>A</mi></math> and <math><mi>B</mi></math> 
+        is defined to be the set
+        <figure>
+            <math>
+                <mi>A</mi><mo>&times;</mo><mi>B</mi>
+                <mo>&equals;</mo>
+                <mo fence="true">&lbrace;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mi>a</mi>
+                        <mo separator="true">&comma;</mo>
+                        <mi>b</mi>
+                    <mo fence="true">&rpar;</mo>
+                <mo separator="true">&verbar;</mo>
+                    <mi>a</mi><mo>&in;</mo><mi>A</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>b</mi><mo>&in;</mo><mi>B</mi>
+                <mo fence="true">&rbrace;</mo>
+            </math>
+        </figure>
+        of all ordered pairs 
+        with the first component from <math><mi>A</mi></math> 
+        and the second component from <math><mi>B</mi></math>. 
+        For example, if 
+        <math>
+            <mi>A</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+                <mn>1</mn>
+                <mo seprator="true">&comma;</mo>
+                <mn>2</mn>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+        and 
+        <math>
+            <mi>B</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+                <mn>1</mn>
+                <mo seprator="true">&comma;</mo>
+                <mn>2</mn>
+                <mo seprator="true">&comma;</mo>
+                <mn>3</mn>
+            <mo fence="true">&rbrace;</mo>
+        </math>, 
+        <figure>
+            <math>
+                <mi>A</mi><mo>&times;</mo><mi>B</mi>
+                <mo>&equals;</mo>
+                <mo fence="true">&lbrace;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mn>1</mn>
+                        <mo seprator="true">&comma;</mo>
+                        <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                    <mo seprator="true">&comma;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mn>1</mn>
+                        <mo seprator="true">&comma;</mo>
+                        <mn>2</mn>
+                    <mo fence="true">&rpar;</mo>
+                    <mo seprator="true">&comma;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mn>1</mn>
+                        <mo seprator="true">&comma;</mo>
+                        <mn>3</mn>
+                    <mo fence="true">&rpar;</mo>
+                    <mo seprator="true">&comma;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mn>2</mn>
+                        <mo seprator="true">&comma;</mo>
+                        <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                    <mo seprator="true">&comma;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mn>2</mn>
+                        <mo seprator="true">&comma;</mo>
+                        <mn>2</mn>
+                    <mo fence="true">&rpar;</mo>
+                    <mo seprator="true">&comma;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mn>2</mn>
+                        <mo seprator="true">&comma;</mo>
+                        <mn>3</mn>
+                    <mo fence="true">&rpar;</mo>
+                <mo fence="true">&rbrace;</mo>
+            </math>
+        </figure>
+    </p>
+    <p>
+        The sets <math><mi>A</mi></math> and <math><mi>B</mi></math> 
+        can be equal here, and 
+        <math>
+            <mi>A</mi><mo>&times;</mo><mi>A</mi>
+        </math>
+        is sometimes expressed as 
+        <math>
+            <msup><mi>A</mi><mn>2</mn></msup>
+        </math>. 
+        <figure>
+            <math>
+                <mi>A</mi><mo>&times;</mo><mi>A</mi>
+                <mo>&equals;</mo>
+                <msup><mi>A</mi><mn>2</mn></msup>
+                <mo>&equals;</mo>
+                <mo fence="true">&lbrace;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mn>1</mn>
+                        <mo seprator="true">&comma;</mo>
+                        <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                    <mo seprator="true">&comma;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mn>1</mn>
+                        <mo seprator="true">&comma;</mo>
+                        <mn>2</mn>
+                    <mo fence="true">&rpar;</mo>
+                    <mo seprator="true">&comma;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mn>2</mn>
+                        <mo seprator="true">&comma;</mo>
+                        <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                    <mo seprator="true">&comma;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <mn>2</mn>
+                        <mo seprator="true">&comma;</mo>
+                        <mn>2</mn>
+                    <mo fence="true">&rpar;</mo>
+                <mo fence="true">&rbrace;</mo>
+            </math>
+        </figure>
+    </p>
+    <p>
+        If 
+        <math>
+            <msub><mi>A</mi><mn>1</mn></msub><mo>&comma;</mo>
+            <msub><mi>A</mi><mn>2</mn></msub><mo>&comma;</mo>
+            <mi>&hellip;</mi><mo>&comma;</mo>
+            <msub><mi>A</mi><mi>n</mi></msub>
+        </math>
+        are sets, their cartesian product 
+        is defined to be the set
+        <figure>
+            <math>
+                <msub><mi>A</mi><mn>1</mn></msub><mo>&times;</mo>
+                <msub><mi>A</mi><mn>2</mn></msub><mo>&times;</mo>
+                <mi>&hellip;</mi><mo>&times;</mo>
+                <msub><mi>A</mi><mi>n</mi></msub>
+                <mo>&equals;</mo>
+                <mo fence="true">&lbrace;</mo>
+                    <mo fence="true">&lpar;</mo>
+                        <msub><mi>a</mi><mn>1</mn></msub>
+                        <mo separator="true">&comma;</mo>
+                        <msub><mi>a</mi><mn>2</mn></msub>
+                        <mo separator="true">&comma;</mo>
+                        <mi>&hellip;</mi>
+                        <mo separator="true">&comma;</mo>
+                        <msub><mi>a</mi><mi>n</mi></msub>
+                    <mo fence="true">&rpar;</mo>
+                <mo separator="true">&verbar;</mo>
+                    <msub><mi>a</mi><mi>i</mi></msub>
+                    <mo>&in;</mo>
+                    <msub><mi>A</mi><mi>i</mi></msub>
+                    <mo>for each</mo>
+                    <mi>i</mi>
+                <mo fence="true">&rbrace;</mo>
+            </math>
+        </figure>
+        of all ordered <i>n-tuples</i> whose 
+        <i>i</i>th component belongs to 
+        <math>
+            <msub><mi>A</mi><mi>i</mi></msub>
+            <mo>for each</mo>
+            <mi>i</mi>
+        </math>. 
+    </p>
+</section>
+</body>
+</html>

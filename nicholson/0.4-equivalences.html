@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>0.4 Equivalences</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>0.4 Equivalences</h2>
+
+<section class="definition">
+    <h4>Relations</h4>
+    <p>
+        If <math><mi>A</mi></math> is a set, 
+        a subset <math><mi>&Tilde;</mi></math> of 
+        <math><mi>A</mi><mo>&times;</mo><mi>A</mi></math>
+        is called a <i>relation</i> on <math><mi>A</mi></math>. 
+        For elements <math><mi>a</mi></math> and <math><mi>b</mi></math> 
+        in <math><mi>A</mi></math>, we customarily write: 
+        <ul>
+            <li>
+                <math><mi>a</mi><mo>&Tilde;</mo><mi>b</mi></math>
+                to mean 
+                <math>
+                    <mfenced><mi>a</mi><mi>b</mi></mfenced>
+                    <mo>&in;</mo><mi>&Tilde;</mi>
+                </math>
+            </li>
+            <li>
+                <math><mi>a</mi><mo>&NotTilde;</mo><mi>b</mi></math>
+                to mean 
+                <math>
+                    <mfenced><mi>a</mi><mi>b</mi></mfenced>
+                    <mo>&notin;</mo><mi>&Tilde;</mi>
+                </math>
+            </li>
+        </ul>
+    </p>
+    <h4>Equivalences</h4>
+    <p>
+        A relation <math><mi>&equiv;</mi></math> on a set <math><mi>A</mi></math> 
+        is called an <i>equivalence on <math><mi>A</mi></math></i> 
+        if it satisfies the following conditions, where 
+        <math>
+            <mi>a</mi><mo>,</mo>
+            <mi>b</mi><mo>, and</mo>
+            <mi>c</mi>
+            <mo>&in;</mo><mi>A</mi>
+        </math>: 
+        <table>
+            <tr>
+                <th></th>
+                <th>condition</th>
+                <th>property</th>
+            </tr>
+            <tr>
+                <td>(1)</td>
+                <td>
+                    <math>
+                        <mo>for all</mo>
+                        <mi>a</mi><mo>&in;</mo><mi>A</mi>
+                        <mo>&comma;</mo>
+                        <mi>a</mi><mo>&equiv;</mo><mi>a</mi>
+                    </math>
+                </td>
+                <td>reflexive</td>
+            </tr>
+            <tr>
+                <td>(2)</td>
+                <td>
+                    <math>
+                        <mo>if</mo>
+                        <mi>a</mi><mo>&equiv;</mo><mi>b</mi>
+                        <mo>, then</mo>
+                        <mi>b</mi><mo>&equiv;</mo><mi>a</mi>
+                    </math>
+                </td>
+                <td>symmetric</td>
+            </tr>
+            <tr>
+                <td>(3)</td>
+                <td>
+                    <math>
+                        <mo>if</mo>
+                        <mi>a</mi><mo>&equiv;</mo><mi>b</mi>
+                        <mo>and</mo>
+                        <mi>b</mi><mo>&equiv;</mo><mi>c</mi>
+                        <mo>, then</mo>
+                        <mi>a</mi><mo>&equiv;</mo><mi>c</mi>
+                    </math>
+                </td>
+                <td>transitive</td>
+            </tr>
+        </table>
+    </p>
+</section>
+
+<section class="description">
+    <p>
+        If 
+        <math><mo>&equiv;</mo></math>
+        is an equivalence on a set <math><mi>A</mi></math>, 
+        the statement 
+        <math>
+            <mi>a</mi><mo>&equiv;</mo><mi>b</mi>
+        </math>
+        is read as 
+        “<math><mi>a</mi></math> is equivalent to <math><mi>b</mi></math>.” 
+    </p>
+</section>
+
+<section class="definition">
+    <h4>Equivalnece Classes</h4>
+    <p>
+        Let <math><mo>&equiv;</mo></math> be 
+        an equivalence on a set <math><mi>A</mi></math>. 
+        Given <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>, 
+        the equivalence class 
+        <math>
+            <mo fence="true">&lsqb;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rsqb;</mo>
+        </math> 
+        of <math><mi>a</mi></math> is defined as 
+        the set of all elements of <math><mi>A</mi></math> 
+        that are equivalent to <math><mi>a</mi></math>: 
+        <figure>
+            <math>
+                <mrow>
+                    <mo fence="true">&lsqb;</mo>
+                    <mi>a</mi>
+                    <mo fence="true">&rsqb;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lbrace;</mo>
+                    <mi>x</mi><mo>&in;</mo><mi>A</mi>
+                    <mo separator="true">&verbar;</mo>
+                    <mi>x</mi><mo>&equiv;</mo><mi>a</mi>
+                    <mo fence="true">&rbrace;</mo>
+                </mrow>
+            </math> 
+        </figure>
+    </p>
+</section>
+
+<section class="example">
+    <p>Examples 1–5 illustrate equivalences.</p>
+    <p>
+        <i>Example 1.</i>
+        Equality is an equivalence on any set <math><mi>A</mi></math>. 
+        If <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>, 
+        the equivalence class of <math><mi>a</mi></math> is 
+        <math>
+            <mrow>
+                <mo fence="true">&lsqb;</mo>
+                <mi>a</mi>
+                <mo fence="true">&rsqb;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
+                <mi>x</mi><mo>&in;</mo><mi>A</mi>
+                <mo separator="true">&verbar;</mo>
+                <mi>x</mi><mo>&equals;</mo><mi>a</mi>
+                <mo fence="true">&rbrace;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
+                <mi>a</mi>
+                <mo fence="true">&rbrace;</mo>
+            </mrow>
+        </math>, 
+        the singleton.
+    </p>
+    <p>
+        <i>Solution 1.</i>
+        <ol>
+            <li>
+                <i>Reflexive:</i>
+                <math>
+                    <mfenced><mi>a</mi><mi>a</mi></mfenced>
+                    <mo>&in;</mo><mi>&equiv;</mi>
+                </math>
+                because 
+                for all 
+                <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>, 
+                <math>
+                    <mi>a</mi><mo>&equals;</mo><mi>a</mi>
+                </math>. 
+            </li>
+            <li>
+                <i>Symmetric:</i>
+                If 
+                <math>
+                    <mi>a</mi><mo>&equiv;</mo><mi>b</mi>
+                </math>, 
+                then 
+                <math>
+                    <mi>a</mi><mo>&equals;</mo><mi>b</mi>
+                </math>, 
+                which means 
+                <math>
+                    <mi>b</mi><mo>&equals;</mo><mi>a</mi>
+                </math>, 
+                hence 
+                <math>
+                    <mi>b</mi><mo>&equiv;</mo><mi>a</mi>
+                </math>. 
+            </li>
+            <li>
+                <i>Transitive:</i>
+                If 
+                <math>
+                    <mi>a</mi><mo>&equiv;</mo><mi>b</mi>
+                </math>
+                and 
+                <math>
+                    <mi>b</mi><mo>&equiv;</mo><mi>c</mi>
+                </math>, 
+                then 
+                <math>
+                    <mi>a</mi>
+                    <mo>&equals;</mo><mi>b</mi>
+                    <mo>&equals;</mo><mi>c</mi>
+                </math>, 
+                which means 
+                <math>
+                    <mi>a</mi><mo>&equals;</mo><mi>c</mi>
+                </math>, 
+                hence 
+                <math>
+                    <mi>a</mi><mo>&equiv;</mo><mi>c</mi>
+                </math>. 
+            </li>
+        </ol>
+        To show that the equivalnece class of <math><mi>a</mi></math> 
+        is the singleton, suppose the class has two elements as 
+        <math>
+            <mo fence="true">&lsqb;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rsqb;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mi>a</mi>
+            <mo fence="true">&comma;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub>
+            <mo fence="true">&rbrace;</mo>
+        </math>; 
+        then we have 
+        <math>
+            <mi>a</mi>
+            <mo>&equiv;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub>
+        </math>
+        meaning 
+        <math>
+            <mi>a</mi>
+            <mo>&equals;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub>
+        </math>, 
+        hence
+        <math>
+            <mo fence="true">&lsqb;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rsqb;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rbrace;</mo>
+        </math>, the singleton.
+    </p>
+    <p>
+        <i>Example 2.</i>
+        Being parallel is an equivalence on the set of lines in the plane. 
+        The equivalence class of a given line consists of all lines parallel to it.
+    </p>
+    <p>
+        <i>Solution 2.</i>
+        <ol>
+            <li>
+                <i>Reflexive:</i>
+                Let <math><mi>l</mi></math> be a line in the plane. 
+                The line is parallel to itself, hence 
+                <math><mi>l</mi><mo>&equals;</mo><mi>l</mi></math>. 
+            </li>
+            <li>
+                <i>Symmetric:</i>
+                Let <math><mi>l</mi></math> and <math><mi>l₁</mi></math> 
+                be lines in the plane. 
+                If 
+                <math><mi>l</mi><mo>&parallel;</mo><mi>l₁</mi></math>, 
+                then 
+                <math><mi>l₁</mi><mo>&parallel;</mo><mi>l</mi></math>. 
+            </li>
+            <li>
+                <i>Transitive:</i>
+                Let <math><mi>l</mi></math>, <math><mi>l₁</mi></math>, 
+                and <math><mi>l₂</mi></math> 
+                be lines in the plane. 
+                If 
+                <math><mi>l</mi><mo>&parallel;</mo><mi>l₁</mi></math>
+                and 
+                <math><mi>l₁</mi><mo>&parallel;</mo><mi>l₂</mi></math>, 
+                then apparently 
+                <math><mi>l</mi><mo>&parallel;</mo><mi>l₂</mi></math>. 
+            </li>
+        </ol>
+    </p>
+    <p>
+        <i>Example 3.</i>
+        If 
+        <math><mi>X</mi></math> and <math><mi>Y</mi></math>
+        are subsets of a finite set <math><mi>U</mi></math>, 
+        write 
+        <math>
+            <mi>X</mi><mo>&equiv;</mo><mi>Y</mi>
+        </math>
+        to mean 
+        <math>
+            <mo fence="true">&verbar;</mo>
+            <mi>X</mi>
+            <mo fence="true">&verbar;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&verbar;</mo>
+            <mi>Y</mi>
+            <mo fence="true">&verbar;</mo>
+        </math>. 
+        Then <math><mo>&equiv;</mo></math> is an equivalence 
+        on the set of subsets of <math><mi>U</mi></math>, and 
+        <math>
+            <mo fence="true">&verbar;</mo>
+            <mi>X</mi>
+            <mo fence="true">&verbar;</mo>
+        </math> 
+        consists of all subsets with the same number of elements 
+        as <math><mi>X</mi></math>.
+    </p>
+    <p>
+        <i>Solution 3.</i>
+        <ol>
+            <li>
+                <i>Reflexive:</i>
+                Let <math><mi>X</mi></math> be 
+                a subset of <math><mi>U</mi></math>. 
+                Apparently 
+                <math>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                </math>. 
+            </li>
+            <li>
+                <i>Symmetric:</i>
+                Let <math><mi>X</mi></math> 
+                and <math><mi>Y</mi></math> be 
+                subsets of <math><mi>U</mi></math>. 
+                If 
+                <math>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>Y</mi>
+                    <mo fence="true">&verbar;</mo>
+                </math>, 
+                which means 
+                <math><mi>X</mi></math> and <math><mi>Y</mi></math> 
+                have the same number of elements, hence 
+                <math>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>Y</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                </math>. 
+            </li>
+            <li>
+                <i>Transitive:</i>
+                Let <math><mi>X</mi></math>, <math><mi>Y</mi></math>, 
+                and <math><mi>Z</mi></math> be 
+                subsets of <math><mi>U</mi></math>. 
+                If 
+                <math>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>Y</mi>
+                    <mo fence="true">&verbar;</mo>
+                </math> 
+                and 
+                <math>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>Y</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>Z</mi>
+                    <mo fence="true">&verbar;</mo>
+                </math>, 
+                which means 
+                <math><mi>X</mi></math>, <math><mi>Y</mi></math>, 
+                and <math><mi>Z</mi></math>
+                have the same number of elements, hence 
+                <math>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>Z</mi>
+                    <mo fence="true">&verbar;</mo>
+                </math>. 
+            </li>
+        </ol>
+        To prove that 
+        <math>
+            <mo fence="true">&verbar;</mo>
+            <mi>X</mi>
+            <mo fence="true">&verbar;</mo>
+        </math> 
+        consists of all subsets with the same number of elements 
+        as <math><mi>X</mi></math>, 
+        let 
+        <math>
+            <mo fence="true">&verbar;</mo>
+            <mi>X</mi>
+            <mo fence="true">&verbar;</mo>
+            <mo>&equals;</mo>
+            <mi>n</mi>
+        </math>, 
+        then 
+        <math>
+            <mrow>
+                <mo fence="true">&lbrack;</mo>
+                <mi>X</mi>
+                <mo fence="true">&rbrack;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
+                <mrow>
+                    <mi>A</mi>
+                    <mo>is a subset of</mo>
+                    <mi>U</mi>
+                </mrow>
+                <mo separator="true">&verbar;</mo>
+                <mrow>
+                    <mi>A</mi>
+                    <mi>&equiv;</mi>
+                    <mi>X</mi>
+                </mrow>
+                <mo fence="true">&rbrace;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
+                <mrow>
+                    <mi>A</mi>
+                    <mo>is a subset of</mo>
+                    <mi>U</mi>
+                </mrow>
+                <mo separator="true">&verbar;</mo>
+                <mrow>
+                    <mi>A</mi>
+                    <mo>has</mo>
+                    <mi>n</mi>
+                    <mo>elements</mo>
+                </mrow>
+                <mo fence="true">&rbrace;</mo>
+            </mrow>
+        </math>, 
+        which means all subsets with the same number of elements as 
+        <math><mi>X</mi></math>. 
+    </p>
+    <p>
+        <i>Example 4.</i>
+        Let 
+        <math>
+            <mi>&alpha;</mi>
+            <mo separator="true">&verbar;</mo>
+            <mi>A</mi>
+            <mo>&rightarrow;</mo>
+            <mi>B</mi>
+        </math>
+        be a mapping. If 
+        <math><mi>a</mi></math> and 
+        <math><msub><mi>a</mi><mn>1</mn></msub></math>
+        are elements of <math><mi>A</mi></math>, 
+        write 
+        <math>
+            <mi>a</mi>
+            <mo>&equiv;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub>
+        </math>
+        to mean 
+        <math>
+            <mrow>
+                <mi>&alpha;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>a</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&alpha;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <msub><mi>a</mi><mn>1</mn></msub>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+        Then <math><mo>&equiv;</mo></math> is 
+        an equivalence on <math><mi>A</mi></math>, 
+        called the <i>kernel equivalence</i> of 
+        <math><mi>&alpha;</mi></math>, 
+        and 
+        <math>
+            <mrow>
+                <mo fence="true">&lbrack;</mo>
+                <mi>a</mi>
+                <mo fence="true">&rbrack;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&in;</mo>
+                    <mi>A</mi>
+                </mrow>
+                <mo separator="true">&verbar;</mo>
+                <mrow>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>x</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>a</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </mrow>
+                <mo fence="true">&rbrace;</mo>
+            </mrow>
+        </math>
+        for each 
+        <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>. 
+    </p>
+    <p>
+        <i>Solution 4.</i>
+        <ol>
+            <li>
+                <i>Reflexive:</i>
+
+            </li>
+            <li>
+                <i>Symmetric:</i>
+            </li>
+            <li>
+                <i>Transitive:</i>
+            </li>
+        </ol>
+    </p>
+    <p>
+        <i>Example 5.</i>
+    </p>
+    <p>
+        <i>Solution 5.</i>
+        <ol>
+            <li>
+                <i>Reflexive:</i>
+
+            </li>
+            <li>
+                <i>Symmetric:</i>
+            </li>
+            <li>
+                <i>Transitive:</i>
+            </li>
+        </ol>
+    </p>
+</section>
+
+</body>
+</html>
