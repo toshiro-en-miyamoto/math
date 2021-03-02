@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>Mathematical Terms</title>
+    <title>Math Terms</title>
     <style>
         th {
             border-top: 2px solid black;
@@ -416,7 +416,13 @@
     <td>順序二重対</td>
     <td>
         <math>
-            <mfenced><mi>x</mi><mi>y</mi></mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>y</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
         </math>
     </td>
 </tr>
@@ -560,6 +566,17 @@
                 <mi>x</mi><mo>R</mo><mi>y</mi>
             </mrow>
             <mo fence="true">&rbrace;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>quotient sets</td>
+    <td>商集合</td>
+    <td>
+        <math>
+            <msub><mi>A</mi><mi>&equiv;</mi></msub>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
         </math>
     </td>
 </tr>

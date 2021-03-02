@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercises of 0.4 Equivalences</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>0.4 Equivalences</h2>
+
+<!-- -------------------------------------------------------------- -->
+<section class="example">
+    <p>
+        Examples 1–5 illustrate equivalences.
+    </p>
+
+    <h4>Example 1</h4>
+    <p>
+        Equality is an equivalence on any set <math><mi>A</mi></math>. 
+        If <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>, 
+        the equivalence class of <math><mi>a</mi></math> is 
+        <math>
+            <mrow>
+                <mo fence="true">&lsqb;</mo>
+                <mi>a</mi>
+                <mo fence="true">&rsqb;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
+                <mi>x</mi><mo>&in;</mo><mi>A</mi>
+                <mo separator="true">&verbar;</mo>
+                <mi>x</mi><mo>&equals;</mo><mi>a</mi>
+                <mo fence="true">&rbrace;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
+                <mi>a</mi>
+                <mo fence="true">&rbrace;</mo>
+            </mrow>
+        </math>, 
+        the singleton.
+    </p>
+    <p>
+        <i>Solution 1.</i>
+        <ol>
+            <li>
+                <i>Reflexive:</i>
+                For all 
+                <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>, 
+                <math>
+                    <mi>a</mi><mo>&equals;</mo><mi>a</mi>
+                </math>. 
+                Thus 
+                <math>
+                    <mi>a</mi>
+                    <mo>&equiv;</mo>
+                    <mi>a</mi>
+                </math>. 
+            </li>
+            <li>
+                <i>Symmetric:</i>
+                If 
+                <math>
+                    <mi>a</mi><mo>&equiv;</mo><mi>b</mi>
+                </math>, 
+                then 
+                <math>
+                    <mi>a</mi><mo>&equals;</mo><mi>b</mi>
+                </math>, 
+                which means 
+                <math>
+                    <mi>b</mi><mo>&equals;</mo><mi>a</mi>
+                </math>, 
+                hence 
+                <math>
+                    <mi>b</mi><mo>&equiv;</mo><mi>a</mi>
+                </math>. 
+            </li>
+            <li>
+                <i>Transitive:</i>
+                If 
+                <math>
+                    <mi>a</mi><mo>&equiv;</mo><mi>b</mi>
+                </math>
+                and 
+                <math>
+                    <mi>b</mi><mo>&equiv;</mo><mi>c</mi>
+                </math>, 
+                then 
+                <math>
+                    <mi>a</mi>
+                    <mo>&equals;</mo><mi>b</mi>
+                    <mo>&equals;</mo><mi>c</mi>
+                </math>, 
+                so 
+                <math>
+                    <mi>a</mi><mo>&equals;</mo><mi>c</mi>
+                </math>, 
+                hence 
+                <math>
+                    <mi>a</mi><mo>&equiv;</mo><mi>c</mi>
+                </math>. 
+            </li>
+        </ol>
+        Suppose the equivalence class 
+        <math>
+            <mo fence="true">&lsqb;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rsqb;</mo>
+        </math> 
+        has two elements, say 
+        <math>
+            <mo fence="true">&lsqb;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rsqb;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mi>a</mi>
+            <mo fence="true">&comma;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub>
+            <mo fence="true">&rbrace;</mo>
+        </math>, 
+        then 
+        <math>
+            <mi>a</mi>
+            <mo>&equiv;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub>
+        </math>, 
+        so 
+        <math>
+            <mi>a</mi>
+            <mo>&equals;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub>
+        </math>. 
+        Hence
+        <math>
+            <mo fence="true">&lsqb;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rsqb;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mi>a</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rbrace;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rbrace;</mo>
+        </math>, the singleton.
+    </p>
+
+    <h4>Example 2</h4>
+    <p>
+        Being parallel is an equivalence on the set of lines in the plane. 
+        The equivalence class of a given line consists of all lines parallel to it.
+    </p>
+    <p>
+        <i>Solution 2.</i>
+        <ol>
+            <li>
+                <i>Reflexive:</i>
+                Given a line <math><mi>l</mi></math> in the plane, 
+                the line is parallel to itself, hence 
+                <math><mi>l</mi><mo>&equiv;</mo><mi>l</mi></math>. 
+            </li>
+            <li>
+                <i>Symmetric:</i>
+                Let <math><mi>l</mi></math> and 
+                <math><msub><mi>l</mi><mn>1</mn></msub></math> 
+                be lines in the plane. 
+                If 
+                <math>
+                    <mi>l</mi>
+                    <mo>&equiv;</mo>
+                    <msub><mi>l</mi><mn>1</mn></msub> 
+                </math>, 
+                then 
+                <math>
+                    <mi>l</mi>
+                    <mo>&parallel;</mo>
+                    <msub><mi>l</mi><mn>1</mn></msub> 
+                </math> 
+                so 
+                <math>
+                    <msub><mi>l</mi><mn>1</mn></msub> 
+                    <mo>&parallel;</mo>
+                    <mi>l</mi>
+                </math>. 
+                Hence 
+                <math>
+                    <msub><mi>l</mi><mn>1</mn></msub> 
+                    <mo>&equiv;</mo>
+                    <mi>l</mi>
+                </math>. 
+            </li>
+            <li>
+                <i>Transitive:</i>
+                Let <math><mi>l</mi></math>, 
+                <math><msub><mi>l</mi><mn>1</mn></msub></math>, 
+                and 
+                <math><msub><mi>l</mi><mn>2</mn></msub></math>
+                be lines in the plane. 
+                If 
+                <math>
+                    <mi>l</mi>
+                    <mo>&equiv;</mo>
+                    <msub><mi>l</mi><mn>1</mn></msub>
+                </math> 
+                and 
+                <math>
+                    <msub><mi>l</mi><mn>1</mn></msub>
+                    <mo>&equiv;</mo>
+                    <msub><mi>l</mi><mn>2</mn></msub>
+                </math>, 
+                then 
+                <math>
+                    <mi>l</mi>
+                    <mo>&parallel;</mo>
+                    <msub><mi>l</mi><mn>1</mn></msub>
+                    <mo>&parallel;</mo>
+                    <msub><mi>l</mi><mn>2</mn></msub>
+                </math>. 
+                Hence 
+                <math>
+                    <mi>l</mi>
+                    <mo>&equiv;</mo>
+                    <msub><mi>l</mi><mn>2</mn></msub>
+                </math>. 
+            </li>
+        </ol>
+    </p>
+
+    <h4>Example 3</h4>
+    <p>
+        If 
+        <math><mi>X</mi></math> and <math><mi>Y</mi></math>
+        are subsets of a finite set <math><mi>U</mi></math>, 
+        write 
+        <math>
+            <mi>X</mi><mo>&equiv;</mo><mi>Y</mi>
+        </math>
+        to mean 
+        <math>
+            <mo fence="true">&verbar;</mo>
+            <mi>X</mi>
+            <mo fence="true">&verbar;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&verbar;</mo>
+            <mi>Y</mi>
+            <mo fence="true">&verbar;</mo>
+        </math>. 
+        Then <math><mo>&equiv;</mo></math> is an equivalence 
+        on the set of subsets of <math><mi>U</mi></math>, and 
+        <math>
+            <mo fence="true">&lbrack;</mo>
+            <mi>X</mi>
+            <mo fence="true">&rbrack;</mo>
+        </math> 
+        consists of all subsets with the same number of elements 
+        as <math><mi>X</mi></math>. 
+    </p>
+    <p>
+        <i>Solution 3.</i>
+        <ol>
+            <li>
+                <i>Reflexive:</i>
+                Given a finite set <math><mi>X</mi></math>, 
+                <math>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                </math>. 
+                Thus 
+                <math>
+                    <mi>X</mi>
+                    <mo>&equiv;</mo>
+                    <mi>X</mi>
+                </math>. 
+            </li>
+            <li>
+                <i>Symmetric:</i>
+                If 
+                <math>
+                    <mi>X</mi>
+                    <mo>&equiv;</mo>
+                    <mi>Y</mi>
+                </math>, 
+                then 
+                <math>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>Y</mi>
+                    <mo fence="true">&verbar;</mo>
+                </math>, 
+                so 
+                <math>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>Y</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                </math>. 
+                Thus 
+                <math>
+                    <mi>Y</mi>
+                    <mo>&equiv;</mo>
+                    <mi>X</mi>
+                </math>. 
+            </li>
+            <li>
+                <i>Transitive:</i>
+                Let <math><mi>X</mi></math>, <math><mi>Y</mi></math>, 
+                and <math><mi>Z</mi></math> be 
+                subsets of <math><mi>U</mi></math>. 
+                If 
+                <math>
+                    <mi>X</mi>
+                    <mo>&equiv;</mo>
+                    <mi>Y</mi>
+                </math> 
+                and 
+                <math>
+                    <mi>Y</mi>
+                    <mo>&equiv;</mo>
+                    <mi>Z</mi>
+                </math>, 
+                then 
+                <math>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>X</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>Y</mi>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&verbar;</mo>
+                    <mi>Z</mi>
+                    <mo fence="true">&verbar;</mo>
+                </math>. 
+                Hence 
+                <math>
+                    <mi>X</mi>
+                    <mo>&equiv;</mo>
+                    <mi>Z</mi>
+                </math>. 
+            </li>
+        </ol>
+        Let 
+        <math>
+            <mo fence="true">&verbar;</mo>
+            <mi>X</mi>
+            <mo fence="true">&verbar;</mo>
+            <mo>&equals;</mo>
+            <mi>n</mi>
+        </math>, 
+        then 
+        <math>
+            <mrow>
+                <mo fence="true">&lbrack;</mo>
+                <mi>X</mi>
+                <mo fence="true">&rbrack;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
+                <mrow>
+                    <mi>A</mi>
+                    <mo>is a subset of</mo>
+                    <mi>U</mi>
+                </mrow>
+                <mo separator="true">&verbar;</mo>
+                <mrow>
+                    <mi>A</mi>
+                    <mi>&equiv;</mi>
+                    <mi>X</mi>
+                </mrow>
+                <mo fence="true">&rbrace;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
+                <mrow>
+                    <mi>A</mi>
+                    <mo>is a subset of</mo>
+                    <mi>U</mi>
+                </mrow>
+                <mo separator="true">&verbar;</mo>
+                <mrow>
+                    <mi>A</mi>
+                    <mo>has</mo>
+                    <mi>n</mi>
+                    <mo>elements</mo>
+                </mrow>
+                <mo fence="true">&rbrace;</mo>
+            </mrow>
+        </math>, 
+        thus 
+        <math>
+            <mrow>
+                <mo fence="true">&lbrack;</mo>
+                <mi>X</mi>
+                <mo fence="true">&rbrack;</mo>
+            </mrow>
+        </math>
+        contains all subsets with the same number of elements as 
+        <math><mi>X</mi></math>. 
+    </p>
+
+    <h4>Example 4</h4>
+    <p>
+        Let 
+        <math>
+            <mi>&alpha;</mi>
+            <mo separator="true">&colon;</mo>
+            <mi>A</mi>
+            <mo>&rightarrow;</mo>
+            <mi>B</mi>
+        </math>
+        be a mapping. If 
+        <math><mi>a</mi></math> and 
+        <math><msub><mi>a</mi><mn>1</mn></msub></math>
+        are elements of <math><mi>A</mi></math>, 
+        write 
+        <math>
+            <mi>a</mi>
+            <mo>&equiv;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub>
+        </math>
+        to mean 
+        <math>
+            <mrow>
+                <mi>&alpha;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>a</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&alpha;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <msub><mi>a</mi><mn>1</mn></msub>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+        Then <math><mo>&equiv;</mo></math> is 
+        an equivalence on <math><mi>A</mi></math>, 
+        called the <i>kernel equivalence</i> of 
+        <math><mi>&alpha;</mi></math>, 
+        and 
+        <math>
+            <mrow>
+                <mo fence="true">&lbrack;</mo>
+                <mi>a</mi>
+                <mo fence="true">&rbrack;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lbrace;</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&in;</mo>
+                    <mi>A</mi>
+                </mrow>
+                <mo separator="true">&colon;</mo>
+                <mrow>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>x</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>a</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </mrow>
+                <mo fence="true">&rbrace;</mo>
+            </mrow>
+        </math>
+        for each 
+        <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>. 
+    </p>
+    <p>
+        <i>Solution 4.</i>
+        <ol>
+            <li>
+                <i>Reflexive:</i>
+                A mapping is a rule that assigns to every element 
+                <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>
+                <i>exactly one</i> element 
+                <math>
+                    <mi>&alpha;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>a</mi>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&in;</mo>
+                    <mi>B</mi>
+                </math>, 
+                so 
+                <math>
+                    <mi>&alpha;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>a</mi>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&equals;</mo>
+                    <mi>&alpha;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>a</mi>
+                    <mo fence="true">&rpar;</mo>
+                </math> 
+                for each 
+                <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>. 
+                Hence 
+                <math>
+                    <mi>a</mi><mo>&equiv;</mo><mi>a</mi>
+                </math>. 
+            </li>
+            <li>
+                <i>Symmetric:</i>
+                If 
+                <math>
+                    <mi>a</mi>
+                    <mo>&equiv;</mo>
+                    <msub><mi>a</mi><mn>1</mn></msub>
+                </math>, 
+                then 
+                <math>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>a</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <msub><mi>a</mi><mn>1</mn></msub>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>, 
+                so 
+                <math>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <msub><mi>a</mi><mn>1</mn></msub>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>a</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>. 
+                Hence 
+                <math>
+                    <msub><mi>a</mi><mn>1</mn></msub>
+                    <mo>&equiv;</mo>
+                    <mi>a</mi>
+                </math>. 
+            </li>
+            <li>
+                <i>Transitive:</i>
+                Let  
+                <math>
+                    <mi>a</mi>
+                    <mo>&comma;</mo>
+                    <msub><mi>a</mi><mn>1</mn></msub>
+                    <mo>&comma;</mo>
+                    <mo>and</mo>
+                    <msub><mi>a</mi><mn>2</mn></msub>
+                    <mo>&in;</mo>
+                    <mi>A</mi>
+                </math>. 
+                If 
+                <math>
+                    <mi>a</mi>
+                    <mo>&equiv;</mo>
+                    <msub><mi>a</mi><mn>1</mn></msub>
+                </math>
+                and 
+                <math>
+                    <msub><mi>a</mi><mn>1</mn></msub>
+                    <mo>&equiv;</mo>
+                    <msub><mi>a</mi><mn>2</mn></msub>
+                </math>,
+                then 
+                <math>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>a</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <msub><mi>a</mi><mn>1</mn></msub>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&alpha;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <msub><mi>a</mi><mn>2</mn></msub>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>. 
+                Hence 
+                <math>
+                    <mi>a</mi>
+                    <mo>&equiv;</mo>
+                    <msub><mi>a</mi><mn>2</mn></msub>
+                </math>. 
+            </li>
+        </ol>
+    </p>
+
+    <h4>Example 5</h4>
+    <p>
+        If 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        are integers, define 
+        <math><mi>m</mi><mo>&equiv;</mo><mi>n</mi></math>
+        to mean that 
+        <math><mi>m</mi><mo>&minus;</mo><mi>n</mi></math>
+        is even. Then 
+        <math><mi>&equiv;</mi></math>
+        is an equivalence on <math><mi>&integers;</mi></math>. 
+        In this case, 
+        <figure>
+            <math>
+                <mrow>
+                    <mo fence="true">&lbrack;</mo>
+                    <mn>0</mn>
+                    <mo fence="true">&rbrack;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lbrace;</mo>
+                    <mi>x</mi><mo>&in;</mo><mi>&integers;</mi>
+                    <mo separator="true">&verbar;</mo>
+                    <mi>x</mi><mo>&equiv;</mo><mn>0</mn>
+                    <mo fence="true">&rbrace;</mo>
+                </mrow>
+            </math>
+            is the set of even integers, and <br>
+            <math>
+                <mrow>
+                    <mo fence="true">&lbrack;</mo>
+                    <mn>1</mn>
+                    <mo fence="true">&rbrack;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lbrace;</mo>
+                    <mi>x</mi><mo>&in;</mo><mi>&integers;</mi>
+                    <mo separator="true">&verbar;</mo>
+                    <mi>x</mi><mo>&equiv;</mo><mn>1</mn>
+                    <mo fence="true">&rbrace;</mo>
+                </mrow>
+            </math>
+            is the set of odd integers.
+        </figure>
+    </p>
+    <p>
+        <i>Solution 5.</i>
+        <ol>
+            <li>
+                <i>Reflexive:</i>
+                <math>
+                    <mi>m</mi>
+                    <mo>&equiv;</mo>
+                    <mi>m</mi>
+                </math>
+                holds because 
+                <math>
+                    <mi>m</mi>
+                    <mo>&minus;</mo>
+                    <mi>m</mi>
+                    <mo>&equals;</mo>
+                    <mn>0</mn>
+                </math>
+                is even. 
+            </li>
+            <li>
+                <i>Symmetric:</i>
+                If 
+                <math>
+                    <mi>m</mi>
+                    <mo>&equiv;</mo>
+                    <mi>n</mi>
+                </math>, 
+                then 
+                <math>
+                    <mi>m</mi>
+                    <mo>&minus;</mo>
+                    <mi>n</mi>
+                </math>
+                is even, so 
+                <math>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mo>&minus;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>m</mi>
+                        <mo>&minus;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </math> 
+                is also even. Hence 
+                <math>
+                    <mi>n</mi>
+                    <mo>&equiv;</mo>
+                    <mi>m</mi>
+                </math>. 
+            </li>
+            <li>
+                <i>Transitive:</i>
+                If 
+                <math><mi>m</mi><mo>&equiv;</mo><mi>n</mi></math>
+                and 
+                <math><mi>n</mi><mo>&equiv;</mo><mi>k</mi></math>, 
+                then both 
+                <math><mi>m</mi><mo>&minus;</mo><mi>n</mi></math>
+                and 
+                <math><mi>n</mi><mo>&minus;</mo><mi>k</mi></math>
+                are even, so 
+                <math>
+                    <mi>m</mi><mo>&minus;</mo><mi>k</mi>
+                    <mo>&equals;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>m</mi><mo>&minus;</mo><mi>n</mi>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&plus;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>n</mi><mo>&minus;</mo><mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </math>
+                is also even. Thus, 
+                <math><mi>m</mi><mo>&equiv;</mo><mi>k</mi></math>. 
+            </li>
+        </ol>
+        If 
+        <math>
+            <mi>x</mi><mo>&in;</mo><mo>&integers;</mo>
+        </math>
+        is even, then 
+        <math>
+            <mi>x</mi><mo>&minus;</mo><mn>0</mn>
+        </math>
+        is even, so 
+        <math>
+            <mi>x</mi><mo>&equiv;</mo><mn>0</mn>
+        </math>. 
+        Thus, 
+        <math>
+            <mo fence="true">&lbrack;</mo>
+            <mn>0</mn>
+            <mo fence="true">&rbrack;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mi>x</mi><mo>&in;</mo><mi>&integers;</mi>
+                <mo separator="true">&verbar;</mo>
+                <mi>x</mi><mo>&equiv;</mo><mn>0</mn>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+        for every even integer. 
+        If 
+        <math><mi>x</mi></math>
+        is odd, then 
+        <math>
+            <mi>x</mi><mo>&minus;</mo><mn>1</mn>
+        </math>
+        is even, so 
+        <math>
+            <mi>x</mi><mo>&equiv;</mo><mn>1</mn>
+        </math>. 
+        Thus, 
+        <math>
+            <mo fence="true">&lbrack;</mo>
+            <mn>1</mn>
+            <mo fence="true">&rbrack;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mi>x</mi><mo>&in;</mo><mi>&integers;</mi>
+                <mo separator="true">&verbar;</mo>
+                <mi>x</mi><mo>&equiv;</mo><mn>1</mn>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+        for every odd integer. 
+    </p>
+</section>
+
+</body>
+</html>

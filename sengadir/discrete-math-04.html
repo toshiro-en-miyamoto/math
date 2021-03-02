@@ -55,7 +55,7 @@
         Show that the number of ways of placing <math><mi>n</mi></math>
         distinct objects into <math><mi>m</mi></math> distinct boxes is 
         <math>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <msup>
                 <mi>m</mi>
                 <mi>n</mi>
@@ -76,7 +76,7 @@
             <mo>&times;</mo>
             <mi>&hellip;</mi>
             <mo>, n times</mo>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <msup>
                 <mi>m</mi>
                 <mi>n</mi>
@@ -109,7 +109,7 @@
             <mi>4</mi>
             <mo>&times;</mo>
             <mi>4</mi>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <msup>
                 <mn>4</mn>
                 <mn>6</mn>
@@ -122,7 +122,7 @@
     <p>
         Find the number of all possible 3-digit numbers that can be 
         formed by using digits 5 and 9. The answer is
-        <math><msup><mn>2</mn><mn>3</mn></msup><mo>=</mo><mn>8</mn></math>.
+        <math><msup><mn>2</mn><mn>3</mn></msup><mo>&equals;</mo><mn>8</mn></math>.
     </p>
     
     <p>
@@ -141,14 +141,18 @@
         Let <math><mi>A</mi></math> and <math><mi>B</mi></math> 
         be finite sets with 
         <math>
-            <mfenced open="|" close="|"><mi>A</mi></mfenced>
-            <mo>=</mo>
+            <mo fence="true">&verbar;</mo>
+            <mi>A</mi>
+            <mo fence="true">&verbar;</mo>
+            <mo>&equals;</mo>
             <mi>n</mi>
         </math>
         and
         <math>
-            <mfenced open="|" close="|"><mi>B</mi></mfenced>
-            <mo>=</mo>
+            <mo fence="true">&verbar;</mo>
+            <mi>B</mi>
+            <mo fence="true">&verbar;</mo>
+            <mo>&equals;</mo>
             <mi>m</mi>
         </math>.
         The number of all functions from 
@@ -165,28 +169,43 @@
         Let 
         <math>
             <mi>A</mi>
-            <mo>=</mo>
-            <mfenced open="{" close="}">
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
                 <msub><mi>x</mi><mn>1</mn></msub>
+                <mo separator="true">&comma;</mo>
                 <msub><mi>x</mi><mn>2</mn></msub>
+                <mo separator="true">&comma;</mo>
                 <mi>&hellip;</mi>
+                <mo separator="true">&comma;</mo>
                 <msub><mi>x</mi><mn>n</mn></msub>
-            </mfenced>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
         </math>.
-        <math><mo>f</mo><mfenced><msub><mi>x</mi><mn>1</mn></msub></mfenced></math>
+        <math>
+            <mo>f</mo>
+            <mo fence="true">&lpar;</mo>
+            <msub><mi>x</mi><mn>1</mn></msub>
+            <mo fence="true">&rpar;</mo>
+        </math>
         can be defined in <math><mi>m</mi></math> possible ways, 
-        <math><mo>f</mo><mfenced><msub><mi>x</mi><mn>2</mn></msub></mfenced></math>
+        <math>
+            <mo>f</mo>
+            <mo fence="true">&lpar;</mo>
+            <msub><mi>x</mi><mn>2</mn></msub>
+            <mo fence="true">&rpar;</mo>
+        </math>
         can be defined in <math><mi>m</mi></math> possible ways and so on. 
         Thus, the number of all possible functions 
         <math>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mi>m</mi>
             <mo>&times;</mo>
             <mi>m</mi>
             <mo>&times;</mo>
             <mi>&hellip;</mi>
             <mo>, n times</mo>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <msup><mi>m</mi><mi>n</mi></msup>
         </math>.
     </p>
@@ -210,9 +229,9 @@
         <math>
             <mi>f</mi>
             <mo>&ApplyFunction;</mo>
-            <mo fence="true">(</mo>
-                <mi>x</mi>
-            <mo fence="true">)</mo>
+            <mo fence="true"><mo>&lpar;</mo></mo>
+            <mi>x</mi>
+            <mo fence="true"><mo>&rpar;</mo></mo>
         </math>
         is a unique element of <math><mi>B</mi></math>.
     </p>    
@@ -224,7 +243,7 @@
         Show that the number of ways of placing <math><mi>n</mi></math>
         distinct objects into <math><mi>m</mi></math> distinct boxes is 
         <math>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <msup>
                 <mi>m</mi>
                 <mi>n</mi>
@@ -241,9 +260,9 @@
         <math>
             <mi>f</mi>
             <mo>&ApplyFunction;</mo>
-            <mo fence="true">(</mo>
-                <mi>x</mi>
-            <mo fence="true">)</mo>
+            <mo fence="true"><mo>&lpar;</mo></mo>
+            <mi>x</mi>
+            <mo fence="true"><mo>&rpar;</mo></mo>
         </math>
         is the box into which object <math><mi>x</mi></math> has been placed. 
         Thus, the required number is nothing but the number functions from an 
@@ -266,9 +285,9 @@
         <math>
             <mi>f</mi>
             <mo>&ApplyFunction;</mo>
-            <mo fence="true">(</mo>
-                <mi>x</mi>
-            <mo fence="true">)</mo>
+            <mo fence="true"><mo>&lpar;</mo></mo>
+            <mi>x</mi>
+            <mo fence="true"><mo>&rpar;</mo></mo>
         </math>
         as the place taken by <math><mi>x</mi></math>. 
     </p>
@@ -279,15 +298,23 @@
         So we take <math><mi>A</mi></math> as the set of all places and 
         <math>
             <mi>B</mi>
-            <mo>=</mo>
-            <mfenced open="{" close="}">
-                <mn>2</mn><mn>6</mn><mn>8</mn><mn>9</mn>
-            </mfenced>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>6</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>8</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>9</mn>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
         </math>.
         For a specific six-digit number, we define a function 
         <math>
             <mi>f</mi>
-            <mo>:</mo>
+            <mo separator="true">&colon;</mo>
             <mi>A</mi>
             <mo>&rightarrow;</mo>
             <mi>B</mi>
@@ -296,9 +323,9 @@
         <math>
             <mi>f</mi>
             <mo>&ApplyFunction;</mo>
-            <mo fence="true">(</mo>
-                <mi>x</mi>
-            <mo fence="true">)</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
         </math>
         is the number from the set <math><mi>B</mi></math>, 
         which goes into <math><mi>x</mi></math>. 
@@ -332,7 +359,7 @@
                 <mo>&times;</mo>
                 <mn>10</mn>
             </mrow>
-            <mo>+</mo>
+            <mo>&plus;</mo>
             <mrow>
                 <mn>10</mn>
                 <mo>&times;</mo>
@@ -356,7 +383,7 @@
     <h4>Proposition 4.2</h4>
     <p>
         <math><mi>r</mi></math> objects can be arranged in 
-        <math><mi>r</mi><mo>!</mo></math> ways.
+        <math><mi>r</mi><mo>&excl;</mo></math> ways.
     </p>
 </section>
 
@@ -383,7 +410,7 @@
     <p>
         But now, consider a package consisting of three boxes. 
         After deciding to buy T, E and J, these toys can be packed in 
-        <math><mn>3</mn><mo>!</mo></math> ways in the package.
+        <math><mn>3</mn><mo>&excl;</mo></math> ways in the package.
     </p>
     <pre>
     {T, E, J}, {T, J, E},
@@ -392,13 +419,13 @@
     </pre>
     <p>
         For each choice of three toys, 
-        there are <math><mn>3</mn><mo>!</mo></math> ways of packing them. 
+        there are <math><mn>3</mn><mo>&excl;</mo></math> ways of packing them. 
         Thus, the boy can <i>choose and pack</i> three toys out of the five toys in 
         <math>
             <mn>10</mn>
             <mo>&times;</mo>
-            <mn>3</mn><mo>!</mo>
-            <mo>=</mo>
+            <mn>3</mn><mo>&excl;</mo>
+            <mo>&equals;</mo>
             <mn>60</mn>
         </math>.
     </p>
@@ -452,53 +479,53 @@
                 <mprescripts/>
                 <mi>n</mi><none/>
             </mmultiscripts>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mrow>
                 <mi>n</mi>
                 <mo>&InvisibleTimes;</mo>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&minus;</mo>
-                        <mn>1</mn>
-                    </mrow>
-                </mfenced>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
                 <mo>&InvisibleTimes;</mo>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&minus;</mo>
-                        <mn>2</mn>
-                    </mrow>
-                </mfenced>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>2</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
                 <mo>&InvisibleTimes;</mo>
                 <mi>&hellip;</mi>
                 <mo>&InvisibleTimes;</mo>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&minus;</mo>
-                        <mn>r</mn>
-                        <mo>+</mo>
-                        <mn>1</mn>
-                    </mrow>
-                </mfenced>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>r</mn>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
             </mrow>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mrow>
                 <mfrac>
                     <mrow>
-                        <mn>n</mn><mo>!</mo>
+                        <mn>n</mn><mo>&excl;</mo>
                     </mrow>
                     <mrow>
-                        <mfenced>
-                            <mrow>
-                                <mi>n</mi>
-                                <mo>&minus;</mo>
-                                <mn>r</mn>
-                            </mrow>
-                        </mfenced>
-                        <mo>!</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&minus;</mo>
+                            <mn>r</mn>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&excl;</mo>
                     </mrow>
                 </mfrac>
             </mrow>
@@ -514,25 +541,25 @@
             <mprescripts/>
             <mi>n</mi><none/>
         </mmultiscripts>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mrow>
             <mfrac>
                 <mrow>
-                    <mn>n</mn><mo>!</mo>
+                    <mn>n</mn><mo>&excl;</mo>
                 </mrow>
                 <mrow>
-                    <mfenced>
-                        <mrow>
-                            <mi>n</mi>
-                            <mo>&minus;</mo>
-                            <mn>0</mn>
-                        </mrow>
-                    </mfenced>
-                    <mo>!</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>0</mn>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&excl;</mo>
                 </mrow>
             </mfrac>
         </mrow>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mn>1</mn>
     </math>
 </p>
@@ -544,7 +571,7 @@
             <mprescripts/>
             <mi>n</mi><none/>
         </mmultiscripts>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mi>n</mi>
     </math>
 </p>
@@ -561,32 +588,32 @@
             <mprescripts/>
             <mi>n</mi><none/>
         </mmultiscripts>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mrow>
             <mi>n</mi>
             <mo>&InvisibleTimes;</mo>
-            <mfenced>
-                <mrow>
-                    <mi>n</mi>
-                    <mo>&minus;</mo>
-                    <mn>1</mn>
-                </mrow>
-            </mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&minus;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
             <mo>&InvisibleTimes;</mo>
-            <mfenced>
-                <mrow>
-                    <mi>n</mi>
-                    <mo>&minus;</mo>
-                    <mn>2</mn>
-                </mrow>
-            </mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&minus;</mo>
+                <mn>2</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
             <mo>&InvisibleTimes;</mo>
             <mi>&hellip;</mi>
             <mo>&InvisibleTimes;</mo>
             <mn>2</mn>
         </mrow>
-        <mo>=</mo>
-        <mn>n</mn><mo>!</mo>
+        <mo>&equals;</mo>
+        <mn>n</mn><mo>&excl;</mo>
     </math>
 </p>
 <p class="lemma">
@@ -597,25 +624,25 @@
             <mprescripts/>
             <mi>n</mi><none/>
         </mmultiscripts>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mrow>
             <mi>n</mi>
             <mo>&InvisibleTimes;</mo>
-            <mfenced>
-                <mrow>
-                    <mi>n</mi>
-                    <mo>&minus;</mo>
-                    <mn>1</mn>
-                </mrow>
-            </mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&minus;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
             <mo>&InvisibleTimes;</mo>
-            <mfenced>
-                <mrow>
-                    <mi>n</mi>
-                    <mo>&minus;</mo>
-                    <mn>2</mn>
-                </mrow>
-            </mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&minus;</mo>
+                <mn>2</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
             <mo>&InvisibleTimes;</mo>
             <mi>&hellip;</mi>
             <mo>&InvisibleTimes;</mo>
@@ -623,8 +650,8 @@
             <mo>&times;</mo>
             <mn>1</mn>
         </mrow>
-        <mo>=</mo>
-        <mn>n</mn><mo>!</mo>
+        <mo>&equals;</mo>
+        <mn>n</mn><mo>&excl;</mo>
     </math>
 </p>
 
@@ -643,12 +670,12 @@
                 <mprescripts/>
                 <mn>5</mn><none/>
             </mmultiscripts>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mfrac>
-                <mrow><mn>5</mn><mo>!</mo></mrow>
-                <mrow><mn>2</mn><mo>!</mo></mrow>
+                <mrow><mn>5</mn><mo>&excl;</mo></mrow>
+                <mrow><mn>2</mn><mo>&excl;</mo></mrow>
             </mfrac>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mrow>
                 <mn>5</mn>
                 <mo>&times;</mo>
@@ -656,7 +683,7 @@
                 <mo>&times;</mo>
                 <mn>3</mn>
             </mrow>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>60</mn>
         </math>
     </p>    
@@ -673,7 +700,7 @@
                 <mprescripts/>
                 <mn>10</mn><none/>
             </mmultiscripts>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>5040</mn>
         </math>. 
         But the numbers chosen and arranged in such a way include three-digit 
@@ -685,7 +712,7 @@
                 <mprescripts/>
                 <mn>9</mn><none/>
             </mmultiscripts>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>504</mn>
         </math>. 
         Hence the answer is 
@@ -705,13 +732,13 @@
                     <mn>9</mn><none/>
                 </mmultiscripts>
                 </mrow>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mrow>
                 <mn>5040</mn>
                 <mo>&minus;</mo>
                 <mn>504</mn>
             </mrow>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>4536</mn>
         </math>. 
     </p>    
@@ -795,18 +822,20 @@
                 <mprescripts/>
                 <mi>n</mi><none/>
             </mmultiscripts>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mfrac>
-                <mrow><mi>n</mi><mo>!</mo></mrow>
+                <mrow><mi>n</mi><mo>&excl;</mo></mrow>
                 <mrow>
-                    <mi>r</mi><mo>!</mo>
+                    <mi>r</mi><mo>&excl;</mo>
                     <mo>&InvisibleTimes;</mo>
-                    <mo fence="true">(</mo>
+                    <mo fence="true"><mo>&lpar;</mo>
+                    <mrow>
                         <mi>n</mi>
                         <mo>&minus;</mo>
                         <mi>r</mi>
-                    <mo fence="true">)</mo>
-                    <mo>!</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&excl;</mo>
                 </mrow>
             </mfrac>
         </math>
@@ -821,23 +850,23 @@
             <mprescripts/>
             <mi>n</mi><none/>
         </mmultiscripts>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mfrac>
-            <mrow><mi>n</mi><mo>!</mo></mrow>
+            <mrow><mi>n</mi><mo>&excl;</mo></mrow>
             <mrow>
-                <mn>0</mn><mo>!</mo>
+                <mn>0</mn><mo>&excl;</mo>
                 <mo>&InvisibleTimes;</mo>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&minus;</mo>
-                        <mn>0</mn>
-                    </mrow>
-                </mfenced>
-                <mo>!</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>0</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&excl;</mo>
             </mrow>
         </mfrac>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mn>1</mn>
     </math>
 </p>
@@ -849,23 +878,23 @@
             <mprescripts/>
             <mi>n</mi><none/>
         </mmultiscripts>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mfrac>
-            <mrow><mi>n</mi><mo>!</mo></mrow>
+            <mrow><mi>n</mi><mo>&excl;</mo></mrow>
             <mrow>
-                <mn>1</mn><mo>!</mo>
+                <mn>1</mn><mo>&excl;</mo>
                 <mo>&InvisibleTimes;</mo>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&minus;</mo>
-                        <mn>1</mn>
-                    </mrow>
-                </mfenced>
-                <mo>!</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&excl;</mo>
             </mrow>
         </mfrac>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mi>n</mi>
     </math>
 </p>
@@ -882,23 +911,23 @@
             <mprescripts/>
             <mi>n</mi><none/>
         </mmultiscripts>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mfrac>
-            <mrow><mi>n</mi><mo>!</mo></mrow>
+            <mrow><mi>n</mi><mo>&excl;</mo></mrow>
             <mrow>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&minus;</mo>
-                        <mn>1</mn>
-                    </mrow>
-                </mfenced>
-                <mo>!</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&excl;</mo>
                 <mo>&InvisibleTimes;</mo>
-                <mn>1</mn><mo>!</mo>
+                <mn>1</mn><mo>&excl;</mo>
             </mrow>
         </mfrac>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mi>n</mi>
     </math>
 </p>
@@ -910,23 +939,23 @@
             <mprescripts/>
             <mi>n</mi><none/>
         </mmultiscripts>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mfrac>
-            <mrow><mi>n</mi><mo>!</mo></mrow>
+            <mrow><mi>n</mi><mo>&excl;</mo></mrow>
             <mrow>
-                <mi>n</mi><mo>!</mo>
+                <mi>n</mi><mo>&excl;</mo>
                 <mo>&InvisibleTimes;</mo>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&minus;</mo>
-                        <mi>n</mi>
-                    </mrow>
-                </mfenced>
-                <mo>!</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>n</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&excl;</mo>
             </mrow>
         </mfrac>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mn>1</mn>
     </math>
 </p>
@@ -934,7 +963,7 @@
 <p class="description">
     <strong>Proof:</strong>
     Let us choose <math><mi>r</mi></math> objects and then 
-    we can arrange them in <math><mi>r</mi><mo>!</mo></math> ways. 
+    we can arrange them in <math><mi>r</mi><mo>&excl;</mo></math> ways. 
     So, the number of ways of choosing and arranging 
     <math><mi>r</mi></math> objects out of <math><mi>n</mi></math> is 
     <math>
@@ -945,8 +974,8 @@
             <mi>n</mi><none/>
         </mmultiscripts>
         <mo>&times;</mo>
-        <mn>r</mn><mo>!</mo>
-        <mo>=</mo>
+        <mn>r</mn><mo>&excl;</mo>
+        <mo>&equals;</mo>
         <mmultiscripts>
             <mi>P</mi>
             <mi>r</mi><none/>
@@ -984,23 +1013,15 @@
                 </mmultiscripts>
                 <mo id="equal">=</mo>
                 <mfrac>
-                    <mrow><mn>7</mn><mo>!</mo></mrow>
+                    <mrow><mn>7</mn><mo>&excl;</mo></mrow>
                     <mrow>
-                        <mfenced>
-                            <mrow>
-                                <mn>3</mn><mo>!</mo>
-                            </mrow>
-                        </mfenced>
-                        <mo>&InvisibleTimes;</mo>
-                        <mfenced>
-                            <mrow>
-                                <mn>4</mn><mo>!</mo>
-                            </mrow>
-                        </mfenced>
+                        <mn>3</mn><mo>&excl;</mo>
+                        <mo>&times;</mo>
+                        <mn>4</mn><mo>&excl;</mo>
                     </mrow>
                 </mfrac>
                 <mspace linebreak="newline" indentalign="id" indenttarget="equal"/>
-                <mo>=</mo>
+                <mo>&equals;</mo>
                 <mfrac>
                     <mrow>
                         <mn>7</mn>
@@ -1017,7 +1038,7 @@
                         <mn>1</mn>
                     </mrow>
                 </mfrac>
-                <mo>=</mo>
+                <mo>&equals;</mo>
                 <mn>35</mn>
             </math>
         </figure>
@@ -1041,7 +1062,7 @@
     </pre>
     <p>
         Now, we have nine places where the five politicians can be seated. 
-        The eight scientists can be seated in <math><mn>8</mn><mo>!</mo></math> 
+        The eight scientists can be seated in <math><mn>8</mn><mo>&excl;</mo></math> 
         ways and the nine places can be allotted to the five politicians in 
         <math>
             <mmultiscripts>
@@ -1053,7 +1074,7 @@
         </math> ways. 
         So the required answer is 
         <math>
-            <mn>8</mn><mo>!</mo>
+            <mn>8</mn><mo>&excl;</mo>
             <mo>&times;</mo>
             <mmultiscripts>
                 <mi>P</mi>
@@ -1087,7 +1108,7 @@
                 <mprescripts/>
                 <mn>6</mn><none/>
             </mmultiscripts>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>6</mn><mo>&times;</mo>
             <mn>6</mn><mo>&times;</mo>
             <mn>5</mn><mo>&times;</mo>
@@ -1129,7 +1150,7 @@
                 <mprescripts/>
                 <mn>6</mn><none/>
             </mmultiscripts>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>7</mn><mo>&times;</mo>
             <mn>6</mn><mo>&times;</mo>
             <mn>5</mn><mo>&times;</mo>
@@ -1138,7 +1159,7 @@
             <mn>6</mn><mo>&times;</mo>
             <mn>5</mn><mo>&times;</mo>
             <mn>4</mn>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>6</mn><mo>&times;</mo>
             <mn>6</mn><mo>&times;</mo>
             <mn>5</mn><mo>&times;</mo>
@@ -1205,14 +1226,14 @@
     <p>
         The number of circular permutations of <math><mi>n</mi></math> objects is 
         <math>
-            <mfenced>
-                <mrow>
-                    <mi>n</mi>
-                    <mo>&minus;</mo>
-                    <mn>1</mn>
-                </mrow>
-            </mfenced>
-            <mo>!</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&minus;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&excl;</mo>
         </math>. 
     </p>
 </section>
@@ -1222,21 +1243,21 @@
     A single circular permutation is represented by <math><mi>n</mi></math> 
     circular arrangements. As there are <math><mi>n</mi></math> objects and 
     <math><mi>n</mi></math> places to be filled, there are 
-    <math><mi>n</mi><mo>!</mo></math> different circular arrangements. 
+    <math><mi>n</mi><mo>&excl;</mo></math> different circular arrangements. 
     Thus, the number of circular permutations is 
     <math>
-        <mi>n</mi><mo>!</mo>
+        <mi>n</mi><mo>&excl;</mo>
         <mo>&div;</mo>
         <mi>n</mi>
-        <mo>=</mo>
-        <mfenced>
-            <mrow>
-                <mi>n</mi>
-                <mo>&minus;</mo>
-                <mn>1</mn>
-            </mrow>
-        </mfenced>
-        <mo>!</mo>
+        <mo>&equals;</mo>
+        <mo fence="true">&lpar;</mo>
+        <mrow>
+            <mi>n</mi>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+        </mrow>
+        <mo fence="true">&rpar;</mo>
+        <mo>&excl;</mo>
     </math>. 
 </p>
 
@@ -1249,26 +1270,26 @@
         Let us say she picks up two cards of 2, four cards of 5 and 
         nine cards of 6. 
         Now these 15 cards can actually be arranged in 
-        <math><mn>15</mn><mo>!</mo></math> different ways. 
+        <math><mn>15</mn><mo>&excl;</mo></math> different ways. 
         But among them, many of them would represent the same figures. 
         Each figure will be counted 
         <math>
-            <mn>2</mn><mo>!</mo>
+            <mn>2</mn><mo>&excl;</mo>
             <mo>&times;</mo>
-            <mn>4</mn><mo>!</mo>
+            <mn>4</mn><mo>&excl;</mo>
             <mo>&times;</mo>
-            <mn>9</mn><mo>!</mo>
+            <mn>9</mn><mo>&excl;</mo>
         </math> times. 
         Hence, the number of distinct figures that can be formed is 
         <math>
             <mfrac>
-                <mrow><mn>15</mn><mo>!</mo></mrow>
+                <mrow><mn>15</mn><mo>&excl;</mo></mrow>
                 <mrow>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>4</mn><mo>!</mo>
+                    <mn>4</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>9</mn><mo>!</mo>
+                    <mn>9</mn><mo>&excl;</mo>
                 </mrow>
             </mfrac>
         </math>. 
@@ -1286,27 +1307,27 @@
         <math>
             <mfrac>
                 <mrow>
-                    <mfenced>
-                        <mrow>
-                            <msub><mi>m</mi><mn>1</mn></msub>
-                            <mo>+</mo>
-                            <msub><mi>m</mi><mn>2</mn></msub>
-                            <mo>+</mo>
-                            <mi>&hellip;</mi>
-                            <mo>+</mo>
-                            <msub><mi>m</mi><mn>k</mn></msub>
-                        </mrow>
-                    </mfenced>
-                    <mo>!</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <msub><mi>m</mi><mn>1</mn></msub>
+                        <mo>&plus;</mo>
+                        <msub><mi>m</mi><mn>2</mn></msub>
+                        <mo>&plus;</mo>
+                        <mi>&hellip;</mi>
+                        <mo>&plus;</mo>
+                        <msub><mi>m</mi><mn>k</mn></msub>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&excl;</mo>
                 </mrow>
                 <mrow>
-                    <msub><mi>m</mi><mn>1</mn></msub><mo>!</mo>
+                    <msub><mi>m</mi><mn>1</mn></msub><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <msub><mi>m</mi><mn>2</mn></msub><mo>!</mo>
+                    <msub><mi>m</mi><mn>2</mn></msub><mo>&excl;</mo>
                     <mo>&times;</mo>
                     <mi>&hellip;</mi>
                     <mo>&times;</mo>
-                    <msub><mi>m</mi><mn>k</mn></msub><mo>!</mo>
+                    <msub><mi>m</mi><mn>k</mn></msub><mo>&excl;</mo>
                 </mrow>
             </mfrac>
         </math>
@@ -1325,30 +1346,33 @@
         <strong>Solution 1:</strong>
         We shall denote the single rooms by 
         <math>
-            <mfenced open="" close="">
-                <msub><mi>S</mi><mn>1</mn></msub>
-                <msub><mi>S</mi><mn>2</mn></msub>
-                <mi>&hellip;</mi>
-                <msub><mi>S</mi><mn>6</mn></msub>
-            </mfenced>
+            <msub><mi>S</mi><mn>1</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>S</mi><mn>2</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>S</mi><mn>6</mn></msub>
         </math>, 
         the double rooms by 
         <math>
-            <mfenced open="" close="">
-                <msub><mi>D</mi><mn>1</mn></msub>
-                <msub><mi>D</mi><mn>2</mn></msub>
-                <mi>&hellip;</mi>
-                <msub><mi>D</mi><mn>6</mn></msub>
-            </mfenced>
+            <msub><mi>D</mi><mn>1</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>D</mi><mn>2</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>D</mi><mn>6</mn></msub>
         </math>, 
         and the rooms that would accommodate three persons by 
         <math>
-            <mfenced open="" close="">
-                <msub><mi>T</mi><mn>1</mn></msub>
-                <msub><mi>T</mi><mn>2</mn></msub>
-                <msub><mi>T</mi><mn>3</mn></msub>
-                <msub><mi>T</mi><mn>4</mn></msub>
-            </mfenced>
+            <msub><mi>T</mi><mn>1</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>T</mi><mn>2</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>T</mi><mn>3</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>T</mi><mn>4</mn></msub>
         </math>. 
         Now, we shall allot a unique room to each person. 
         Let us say that 
@@ -1357,12 +1381,13 @@
         the third person stays in <math><msub><mi>D</mi><mn>4</mn></msub></math>, etc.
         This is listed as  
         <math>
-            <mfenced open="" close="">
-                <msub><mi>S</mi><mn>6</mn></msub>
-                <msub><mi>T</mi><mn>2</mn></msub>
-                <msub><mi>D</mi><mn>4</mn></msub>
-                <mi>&hellip;</mi>
-            </mfenced>
+            <msub><mi>S</mi><mn>6</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>T</mi><mn>2</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>D</mi><mn>4</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
         </math>. 
         Now, the double room will be allotted to two individuals and 
         hence each of the D's will occur twice in the list; 
@@ -1372,40 +1397,40 @@
         <math>
             <mfrac>
                 <mrow>
-                    <mn>30</mn><mo>!</mo>
+                    <mn>30</mn><mo>&excl;</mo>
                 </mrow>
                 <mrow>
-                    <mn>1</mn><mo>!</mo>
+                    <mn>1</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>1</mn><mo>!</mo>
+                    <mn>1</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>1</mn><mo>!</mo>
+                    <mn>1</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>1</mn><mo>!</mo>
+                    <mn>1</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>1</mn><mo>!</mo>
+                    <mn>1</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>1</mn><mo>!</mo>
+                    <mn>1</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>3</mn><mo>!</mo>
+                    <mn>3</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>3</mn><mo>!</mo>
+                    <mn>3</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>3</mn><mo>!</mo>
+                    <mn>3</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>3</mn><mo>!</mo>
+                    <mn>3</mn><mo>&excl;</mo>
                 </mrow>
             </mfrac>
         </math>
@@ -1492,31 +1517,31 @@
             </mmultiscripts>
         </math> <br> 
         <math>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mfrac>
                 <mrow>
-                    <mn>30</mn><mo>!</mo>
+                    <mn>30</mn><mo>&excl;</mo>
                 </mrow>
                 <mrow>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>2</mn><mo>!</mo>
+                    <mn>2</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>3</mn><mo>!</mo>
+                    <mn>3</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>3</mn><mo>!</mo>
+                    <mn>3</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>3</mn><mo>!</mo>
+                    <mn>3</mn><mo>&excl;</mo>
                     <mo>&times;</mo>
-                    <mn>3</mn><mo>!</mo>
+                    <mn>3</mn><mo>&excl;</mo>
                 </mrow>
             </mfrac>
         </math>
@@ -1530,15 +1555,17 @@
     Consider the expansion 
     <math>
         <msup>
-            <mfenced>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
                 <mrow>
                     <mi>x</mi>
-                    <mo>+</mo>
+                    <mo>&plus;</mo>
                     <mi>y</mi>
-                    <mo>+</mo>
+                    <mo>&plus;</mo>
                     <mi>z</mi>
                 </mrow>
-            </mfenced>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
             <mn>10</mn>
         </msup>
     </math>. 
@@ -1554,18 +1581,18 @@
     <math>
         <mrow>
             <mi>i</mi>
-            <mo>+</mo>
+            <mo>&plus;</mo>
             <mi>j</mi>
-            <mo>+</mo>
+            <mo>&plus;</mo>
             <mi>k</mi>
         </mrow>
-        <mo>=</mo>
+        <mo>&equals;</mo>
         <mn>10</mn>
     </math>. 
     Take 
-    <math><mi>i</mi><mo>=</mo><mn>5</mn></math>, 
-    <math><mi>j</mi><mo>=</mo><mn>2</mn></math> and 
-    <math><mi>k</mi><mo>=</mo><mn>3</mn></math>. 
+    <math><mi>i</mi><mo>&equals;</mo><mn>5</mn></math>, 
+    <math><mi>j</mi><mo>&equals;</mo><mn>2</mn></math> and 
+    <math><mi>k</mi><mo>&equals;</mo><mn>3</mn></math>. 
     The term 
     <math>
         <msup><mi>x</mi><mi>5</mi></msup>
@@ -1654,17 +1681,17 @@
         <mfrac>
             <mrow>
                 <mn>10</mn>
-                <mo>!</mo>
+                <mo>&excl;</mo>
             </mrow>
             <mrow>
                 <mn>5</mn>
-                <mo>!</mo>
+                <mo>&excl;</mo>
                 <mo>&InvisibleTimes;</mo>
                 <mn>2</mn>
-                <mo>!</mo>
+                <mo>&excl;</mo>
                 <mo>&InvisibleTimes;</mo>
                 <mn>3</mn>
-                <mo>!</mo>
+                <mo>&excl;</mo>
             </mrow>
         </mfrac>
     </math>. 
@@ -1679,15 +1706,17 @@
     in the expansion of 
     <math>
         <msup>
-            <mfenced>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
                 <mrow>
                     <mi>x</mi>
-                    <mo>+</mo>
+                    <mo>&plus;</mo>
                     <mi>y</mi>
-                    <mo>+</mo>
+                    <mo>&plus;</mo>
                     <mi>z</mi>
                 </mrow>
-            </mfenced>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
             <mn>10</mn>
         </msup>
     </math>. 
@@ -1715,32 +1744,34 @@
     in the expansion of 
     <math>
         <msup>
-            <mfenced>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
                 <mrow>
                     <msub><mi>x</mi><mn>1</mn></msub>
-                    <mo>+</mo>
+                    <mo>&plus;</mo>
                     <msub><mi>x</mi><mn>2</mn></msub>
-                    <mo>+</mo>
+                    <mo>&plus;</mo>
                     <mi>&hellip;</mi>
-                    <mo>+</mo>
+                    <mo>&plus;</mo>
                     <msub><mi>x</mi><mi>m</mi></msub>
                 </mrow>
-            </mfenced>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
             <mi>n</mi>
         </msup>
     </math> 
     is 
     <math>
         <mfrac>
-            <mrow><mi>m</mi><mo>!</mo></mrow>
+            <mrow><mi>m</mi><mo>&excl;</mo></mrow>
             <mrow>
-                <msub><mi>i</mi><mn>1</mn></msub><mo>!</mo>
+                <msub><mi>i</mi><mn>1</mn></msub><mo>&excl;</mo>
                 <mo>&times;</mo>
-                <msub><mi>i</mi><mn>2</mn></msub><mo>!</mo>
+                <msub><mi>i</mi><mn>2</mn></msub><mo>&excl;</mo>
                 <mo>&times;</mo>
                 <mi>&hellip;</mi>
                 <mo>&times;</mo>
-                <msub><mi>i</mi><mi>m</mi></msub><mo>!</mo>
+                <msub><mi>i</mi><mi>m</mi></msub><mo>&excl;</mo>
             </mrow>
         </mfrac>
     </math>. 
@@ -1752,51 +1783,55 @@
     <p>
         <math displaystyle="true">
             <msup>
-                <mfenced>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
                     <mrow>
                         <msub><mi>x</mi><mn>1</mn></msub>
-                        <mo>+</mo>
+                        <mo>&plus;</mo>
                         <msub><mi>x</mi><mn>2</mn></msub>
-                        <mo>+</mo>
+                        <mo>&plus;</mo>
                         <mi>&hellip;</mi>
-                        <mo>+</mo>
+                        <mo>&plus;</mo>
                         <msub><mi>x</mi><mi>m</mi></msub>
                     </mrow>
-                </mfenced>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
                 <mi>n</mi>
             </msup>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <munder>
                 <mo>&sum;</mo>
                 <mrow>
                     <msub><mi>i</mi><mn>1</mn></msub>
-                    <mo>+</mo>
+                    <mo>&plus;</mo>
                     <msub><mi>i</mi><mn>2</mn></msub>
-                    <mo>+</mo>
+                    <mo>&plus;</mo>
                     <mi>&hellip;</mi>
-                    <mo>+</mo>
+                    <mo>&plus;</mo>
                     <msub><mi>i</mi><mn>m</mn></msub>
-                    <mo>=</mo>
+                    <mo>&equals;</mo>
                     <mi>n</mi>
                 </mrow>
             </munder>
             <mo lspace="0.2em">&ApplyFunction;</mo>
             <mrow>
-                <mfenced>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
                     <mfrac>
-                        <mrow><mi>n</mi><mo>!</mo></mrow>
+                        <mrow><mi>n</mi><mo>&excl;</mo></mrow>
                         <mrow>
-                            <msub><mi>i</mi><mn>1</mn></msub><mo>!</mo>
-                            <mo lspace="0.5em">&InvisibleTimes;</mo>
-                            <msub><mi>i</mi><mn>2</mn></msub><mo>!</mo>
+                            <msub><mi>i</mi><mn>1</mn></msub><mo>&excl;</mo>
+                            <mo>&InvisibleTimes;</mo>
+                            <msub><mi>i</mi><mn>2</mn></msub><mo>&excl;</mo>
                             <mo>&InvisibleTimes;</mo>
                             <mi>&hellip;</mi>
                             <mo>&InvisibleTimes;</mo>
-                            <msub><mi>i</mi><mi>m</mi></msub><mo>!</mo>
+                            <msub><mi>i</mi><mi>m</mi></msub><mo>&excl;</mo>
                         </mrow>
                     </mfrac>
-                </mfenced>
-                <mo lspace="0.2em">&InvisibleTimes;</mo>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
                 <msubsup>
                     <mi>x</mi><mn>1</mn>
                     <msub><mi>i</mi><mn>1</mn></msub>
@@ -1823,25 +1858,31 @@
     <p>
         <math displaystyle="true">
             <msup>
-                <mfenced>
-                    <mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>
-                </mfenced>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>x</mi><mo>&plus;</mo><mi>y</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
                 <mi>n</mi>
             </msup>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <munderover>
                 <mi>&sum;</mi>
-                <mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow>
+                <mrow><mi>r</mi><mo>&equals;</mo><mn>0</mn></mrow>
                 <mi>n</mi>
             </munderover>
             <mo>&ApplyFunction;</mo>
-            <mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
                 <mfrac linethickness="0">
                     <mi>n</mi>
                     <mi>r</mi>
                 </mfrac>
-            </mfenced>
-            <mo lspace="0.2em">&InvisibleTimes;</mo>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&InvisibleTimes;</mo>
             <msup><mi>x</mi><mi>r</mi></msup>
             <mo>&InvisibleTimes;</mo>
             <msup>
@@ -1862,26 +1903,26 @@
         Prove the special case of binomial theorem. <br/>
         <strong>Proof:</strong>
         By taking 
-        <math><mi>m</mi><mo>=</mo><mn>2</mn></math>,  
+        <math><mi>m</mi><mo>&equals;</mo><mn>2</mn></math>,  
         <math>
             <msub><mi>x</mi><mn>1</mn></msub>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mi>x</mi>
         </math>, 
         <math>
             <msub><mi>x</mi><mn>2</mn></msub>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mi>y</mi>
         </math>, 
         <math>
             <msub><mi>i</mi><mn>1</mn></msub>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mtd><mi>r</mi></mtd>
         </math> 
         and 
         <math>
             <msub><mi>i</mi><mn>2</mn></msub>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mrow>
                 <mi>n</mi>
                 <mo>&minus;</mo>
@@ -1891,9 +1932,9 @@
         (as 
         <math>
             <msub><mi>i</mi><mn>1</mn></msub>
-            <mo>+</mo>
+            <mo>&plus;</mo>
             <msub><mi>i</mi><mn>2</mn></msub>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mi>n</mi>
         </math>
         ) in Multinomial Theorem, where 
@@ -1907,34 +1948,41 @@
         we get 
         <math>
             <msup>
-                <mfenced>
-                    <mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow>
-                </mfenced>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>x</mi><mo>&plus;</mo><mi>y</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
                 <mi>n</mi>
             </msup>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <munderover>
                 <mi>&sum;</mi>
-                <mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow>
+                <mrow>
+                    <mi>r</mi><mo>&equals;</mo><mn>0</mn>
+                </mrow>
                 <mi>n</mi>
             </munderover>
-            <mo lspace="0.2em">&ApplyFunction;</mo>
+            <mo>&ApplyFunction;</mo>
             <mrow>
                 <mfrac>
-                    <mrow><mi>n</mi><mo>!</mo></mrow>
+                    <mrow><mi>n</mi><mo>&excl;</mo></mrow>
                     <mrow>
-                        <mi>r</mi><mo>!</mo>
+                        <mi>r</mi><mo>&excl;</mo>
                         <mo>&InvisibleTimes;</mo>
-                        <mfenced>
-                            <mrow>
-                                <mi>n</mi>
-                                <mo>&minus;</mo>
-                                <mi>r</mi>
-                            </mrow>
-                        </mfenced><mo>!</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&minus;</mo>
+                            <mi>r</mi>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&excl;</mo>
                     </mrow>
                 </mfrac>
-                <mo lspace="0.2em">&InvisibleTimes;</mo>
+                <mo>&InvisibleTimes;</mo>
                 <msup><mi>x</mi><mi>r</mi></msup>
                 <mo>&InvisibleTimes;</mo>
                 <msup>
@@ -1946,20 +1994,22 @@
                     </mrow>
                 </msup>
             </mrow>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <munderover>
                 <mi>&sum;</mi>
-                <mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow>
+                <mrow><mi>r</mi><mo>&equals;</mo><mn>0</mn></mrow>
                 <mi>n</mi>
             </munderover>
             <mo>&ApplyFunction;</mo>
-            <mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
                 <mfrac linethickness="0">
                     <mi>n</mi>
                     <mi>r</mi>
                 </mfrac>
-            </mfenced>
-            <mo lspace="0.2em">&InvisibleTimes;</mo>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&InvisibleTimes;</mo>
             <msup><mi>x</mi><mi>r</mi></msup>
             <mo>&InvisibleTimes;</mo>
             <msup>
@@ -1979,19 +2029,23 @@
     <p>
         If 
         <math>
-            <mfenced open="|" close="|"><mi>A</mi></mfenced>
-            <mo>=</mo>
+            <mo fence="true">&verbar;</mo>
+            <mi>A</mi>
+            <mo fence="true">&verbar;</mo>
+            <mo>&equals;</mo>
             <mi>n</mi>
         </math>, then 
         <math>
-            <mfenced open="|" close="|">
-                <mrow>
-                    <mi>P</mi>
-                    <mo lspace="0.2em">&ApplyFunction;</mo>
-                    <mfenced><mi>A</mi></mfenced>
-                </mrow>
-            </mfenced>
-            <mo>=</mo>
+            <mo fence="true">&verbar;</mo>
+            <mrow>
+                <mi>P</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>A</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo fence="true">&verbar;</mo>
+            <mo>&equals;</mo>
             <msup>
                 <mn>2</mn>
                 <mi>n</mi>
@@ -2003,9 +2057,11 @@
         Let <math><mi>A</mi></math> be a set. 
         The power set of a set 
         <math>
-            <mi>P</mi>
-            <mo lspace="0.2em">&ApplyFunction;</mo>
-            <mfenced><mi>A</mi></mfenced>
+            <mi>&Pscr;</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>A</mi>
+            <mo fence="true">&rpar;</mo>
         </math>
         is defined as the set of all subsets of <math><mi>A</mi></math>. 
         (Definition 2.1)
@@ -2029,49 +2085,57 @@
         <math displaystyle="true">
             <munderover>
                 <mo largeop="true">&sum;</mo>
-                <mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow>
+                <mrow><mi>r</mi><mo>&equals;</mo><mn>0</mn></mrow>
                 <mi>n</mi>
             </munderover>
             <mo>&ApplyFunction;</mo>
-            <mo fence="true">(</mo>
-                <mfrac linethickness="0">
-                    <mi>n</mi>
-                    <mi>r</mi>
-                </mfrac>
-            <mo fence="true">)</mo>
+            <mo fence="true"><mo>&lpar;</mo></mo>
+            <mfrac linethickness="0">
+                <mi>n</mi>
+                <mi>r</mi>
+            </mfrac>
+            <mo fence="true">&rpar;</mo>
         </math>. 
         By taking 
-        <math><mi>x</mi><mo>=</mo><mn>1</mn></math> and 
-        <math><mi>y</mi><mo>=</mo><mn>1</mn></math>
+        <math><mi>x</mi><mo>&equals;</mo><mn>1</mn></math> and 
+        <math><mi>y</mi><mo>&equals;</mo><mn>1</mn></math>
         in the binomial theorem, we get 
         <math displaystyle="true">
             <msup>
-                <mfenced>
-                    <mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow>
-                </mfenced>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mn>1</mn><mo>&plus;</mo><mn>1</mn>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
                 <mi>n</mi>
             </msup>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <munderover>
                 <mo largeop="true">&sum;</mo>
-                <mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow>
+                <mrow><mi>r</mi><mo>&equals;</mo><mn>0</mn></mrow>
                 <mi>n</mi>
             </munderover>
             <mo>&ApplyFunction;</mo>
-            <mo fence="true">(</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
                 <mfrac linethickness="0">
                     <mi>n</mi>
                     <mi>r</mi>
                 </mfrac>
-            <mo fence="true">)</mo>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
         </math>. 
         Hence, the number of all subsets of <math><mi>A</mi></math> 
         or the number of elements of 
         <math>
-            <mi>P</mi>
-            <mo lspace="0.2em">&ApplyFunction;</mo>
-            <mfenced><mi>A</mi></mfenced>
-            <mo>=</mo>
+            <mi>&Pscr;</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>A</mi>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
             <msup>
                 <mn>2</mn><mi>n</mi>
             </msup>
@@ -2093,46 +2157,52 @@
     </math>
     and written as 
     <math>
-        <mo fence="true">(</mo>
-            <mfrac linethickness="0">
-                <mi>n</mi>
-                <mi>r</mi>
-            </mfrac>
-        <mo fence="true">)</mo>
+        <mo fence="true"><mo>&lpar;</mo>
+        <mfrac linethickness="0">
+            <mi>n</mi>
+            <mi>r</mi>
+        </mfrac>
+        <mo fence="true">&rpar;</mo>
     </math>. 
     It is the coefficient of the 
     <math><msup><mi>x</mi><mi>r</mi></msup></math> term 
     in the polynomial expansion of the binomial power 
     <math>
         <msup>
-            <mfenced>
-                <mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow>
-            </mfenced>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn><mo>&plus;</mo><mi>x</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
             <mi>n</mi>
         </msup>
     </math>, 
     and is given by the formula 
     <math>
-        <mo fence="true">(</mo>
+        <mo fence="true">&lpar;</mo>
+        <mrow>
             <mfrac linethickness="0">
                 <mi>n</mi>
                 <mi>r</mi>
             </mfrac>
-        <mo fence="true">)</mo>
-        <mo>=</mo>
+        </mrow>
+        <mo fence="true">&rpar;</mo>
+        <mo>&equals;</mo>
         <mfrac>
-            <mrow><mi>n</mi><mo>!</mo></mrow>
+            <mrow><mi>n</mi><mo>&excl;</mo></mrow>
             <mrow>
-                <mi>r</mi><mo>!</mo>
+                <mi>r</mi><mo>&excl;</mo>
                 <mo>&InvisibleTimes;</mo>
-                <mfenced>
-                    <mrow>
-                        <mi>n</mi>
-                        <mo>&minus;</mo>
-                        <mi>r</mi>
-                    </mrow>
-                </mfenced>
-                <mo>!</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mi>r</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&excl;</mo>
             </mrow>
         </mfrac>
     </math>. 
@@ -2146,13 +2216,17 @@
     <p>
         Let <math><mi>A</mi></math> and <math><mi>B</mi></math> be finite sets with 
         <math>
-            <mfenced open="|" close="|"><mi>A</mi></mfenced>
-            <mo>=</mo><mi>n</mi>
+            <mo fence="true">&verbar;</mo>
+            <mi>A</mi>
+            <mo fence="true">&verbar;</mo>
+            <mo>&equals;</mo><mi>n</mi>
         </math>
         and 
         <math>
-            <mfenced open="|" close="|"><mi>B</mi></mfenced>
-            <mo>=</mo><mi>m</mi>
+            <mo fence="true">&verbar;</mo>
+            <mi>B</mi>
+            <mo fence="true">&verbar;</mo>
+            <mo>&equals;</mo><mi>m</mi>
         </math>
         and 
         <math>
@@ -2165,34 +2239,34 @@
         <math>
             <mi>m</mi>
             <mo>&InvisibleTimes;</mo>
-            <mfenced>
-                <mrow>
-                    <mi>m</mi>
-                    <mo>&minus;</mo>
-                    <mn>1</mn>
-                </mrow>
-            </mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>m</mi>
+                <mo>&minus;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
             <mo>&InvisibleTimes;</mo>
-            <mfenced>
-                <mrow>
-                    <mi>m</mi>
-                    <mo>&minus;</mo>
-                    <mn>2</mn>
-                </mrow>
-            </mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>m</mi>
+                <mo>&minus;</mo>
+                <mn>2</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
             <mo>&InvisibleTimes;</mo>
             <mi>&hellip;</mi>
             <mo>&InvisibleTimes;</mo>
-            <mfenced>
-                <mrow>
-                    <mi>m</mi>
-                    <mo>&minus;</mo>
-                    <mi>n</mi>
-                    <mo>+</mo>
-                    <mn>1</mn>
-                </mrow>
-            </mfenced>
-            <mo>=</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>m</mi>
+                <mo>&minus;</mo>
+                <mi>n</mi>
+                <mo>&plus;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
             <mmultiscripts>
                 <mi>P</mi>
                 <mi>n</mi><none/>
@@ -2208,42 +2282,51 @@
     Let 
     <math>
         <mi>A</mi>
-        <mo>=</mo>
-        <mfenced open="{" close="}">
+        <mo>&equals;</mo>
+        <mo fence="true">&lbrace;</mo>
+        <mrow>
             <msub><mi>x</mi><mn>1</mn></msub>
+            <mo separator="true">&comma;</mo>
             <msub><mi>x</mi><mn>2</mn></msub>
+            <mo separator="true">&comma;</mo>
             <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
             <msub><mi>x</mi><mn>n</mn></msub>
-        </mfenced>
+        </mrow>
+        <mo fence="true">&rbrace;</mo>
     </math>. 
     <math>
         <mi>f</mi>
         <mo>&ApplyFunction;</mo>
-        <mfenced>
-            <msub><mi>x</mi><mn>1</mn></msub>
-        </mfenced>
+        <mo fence="true">&lpar;</mo>
+        <msub><mi>x</mi><mn>1</mn></msub>
+        <mo fence="true">&rpar;</mo>
     </math>
     can be defined in <math><mi>m</mi></math> possible ways. 
     Since for a one-to-one function, 
     <math>
-        <mi>f</mi>
-        <mo>&ApplyFunction;</mo>
-        <mfenced>
+        <mrow>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
             <msub><mi>x</mi><mn>1</mn></msub>
-        </mfenced>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
         <mo>&ne;</mo>
-        <mi>f</mi>
-        <mo>&ApplyFunction;</mo>
-        <mfenced>
+        <mrow>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
             <msub><mi>x</mi><mn>2</mn></msub>
-        </mfenced>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
     </math>, 
     <math>
         <mi>f</mi>
         <mo>&ApplyFunction;</mo>
-        <mfenced>
-            <msub><mi>x</mi><mn>2</mn></msub>
-        </mfenced>
+        <mo fence="true">&lpar;</mo>
+        <msub><mi>x</mi><mn>2</mn></msub>
+        <mo fence="true">&rpar;</mo>
     </math>
     can be defined in 
     <math>
@@ -2258,8 +2341,25 @@
     <h4>Example 4.38</h4>
     <p>
         Find the number of staircase paths from 
-        <math><mfenced><mn>2</mn><mn>5</mn></mfenced></math> and 
-        <math><mfenced><mn>8</mn><mn>9</mn></mfenced></math>. 
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>5</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        and 
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>8</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>9</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>. 
     </p>
     <img src="staircase_path.svg" 
         alt="staircase path: from (2,5) to (8,9) you go R R Up Up Up R R Up R R">
@@ -2267,33 +2367,64 @@
         <strong>Solution:</strong>
         We give the precise meaning of such a path. 
         From a given junction 
-        <math><mfenced><mi>x</mi><mi>y</mi></mfenced></math>, 
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>y</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>, 
         we can either go to 
         <math>
-            <mfenced>
-                <mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>x</mi><mo>&plus;</mo><mn>1</mn>
+                <mo separator="true">&comma;</mo>
                 <mi>y</mi>
-            </mfenced>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
         </math>
         moving one unit right horizontally or to 
         <math>
-            <mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
                 <mi>x</mi>
-                <mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow>
-            </mfenced>
+                <mo separator="true">&comma;</mo>
+                <mi>y</mi><mo>&plus;</mo><mn>1</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
         </math>
         moving one unit up vertically.
     </p>
     <p>
-        Now to reach (8, 9) from (2, 5) 
-        <math><mfenced><mn>8</mn><mn>9</mn></mfenced></math> from 
-        <math><mfenced><mn>2</mn><mn>5</mn></mfenced></math>, 
+        Now to reach 
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>8</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>9</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        from 
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>5</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>, 
         we have to move 
         <math>
             <mn>8</mn>
             <mo>&minus;</mo>
             <mn>2</mn>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>6</mn>
         </math> 
         units horizontally and 
@@ -2301,7 +2432,7 @@
             <mn>9</mn>
             <mo>&minus;</mo>
             <mn>5</mn>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>4</mn>
         </math> 
         units vertically. 
@@ -2313,14 +2444,14 @@
         six R's and four U's, which is given by 
         <math>
             <mfrac>
-                <mrow><mn>10</mn><mo>!</mo></mrow>
+                <mrow><mn>10</mn><mo>&excl;</mo></mrow>
                 <mrow>
-                    <mn>6</mn><mo>!</mo>
-                    <mo lspace=0.2em>&InvisibleTimes;</mo>
-                    <mn>4</mn><mo>!</mo>
+                    <mn>6</mn><mo>&excl;</mo>
+                    <mo>&InvisibleTimes;</mo>
+                    <mn>4</mn><mo>&excl;</mo>
                 </mrow>
             </mfrac>
-            <mo>=</mo>
+            <mo>&equals;</mo>
             <mn>210</mn>
         </math>. 
     </p>    
