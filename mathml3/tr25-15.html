@@ -792,19 +792,19 @@
                     </mrow>
                 </msup>
                 <mo>&ApplyFunction;</mo>
-                <mfenced>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>cos</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
                     <mrow>
-                        <mi>cos</mi>
-                        <mo>&ApplyFunction;</mo>
-                        <mfenced>
-                            <mrow>
-                                <mi>a</mi>
-                                <mo>&InvisibleTimes;</mo>
-                                <mi>b</mi>
-                            </mrow>
-                        </mfenced>
+                        <mi>a</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>b</mi>
                     </mrow>
-                </mfenced>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
             </math> 
         </figure>
         which means the same as 
@@ -818,19 +818,19 @@
                 </mrow>
             </msup>
             <mo>&ApplyFunction;</mo>
-            <mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>cos</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
                 <mrow>
-                    <mi>cos</mi>
-                    <mo>&ApplyFunction;</mo>
-                    <mfenced>
-                        <mrow>
-                            <mi>a</mi>
-                            <mo>&times;</mo>
-                            <mi>b</mi>
-                        </mrow>
-                    </mfenced>
+                    <mi>a</mi>
+                    <mo>&times;</mo>
+                    <mi>b</mi>
                 </mrow>
-            </mfenced>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
         </math>, 
         where <math><mo>&times;</mo></math>
         is used here to represent multiplication, not the cross product. 
@@ -846,19 +846,19 @@
             &lt;/mrow&gt;
         &lt;/msup&gt;
         &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
-        &lt;mfenced&gt;
+        &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
+        &lt;mrow&gt;
+            &lt;mi&gt;cos&lt;/mi&gt;
+            &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+            &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
             &lt;mrow&gt;
-                &lt;mi&gt;cos&lt;/mi&gt;
-                &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
-                &lt;mfenced&gt;
-                    &lt;mrow&gt;
-                        &lt;mi&gt;a&lt;/mi&gt;
-                        &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
-                        &lt;mi&gt;b&lt;/mi&gt;
-                    &lt;/mrow&gt;
-                &lt;/mfenced&gt;
+                &lt;mi&gt;a&lt;/mi&gt;
+                &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+                &lt;mi&gt;b&lt;/mi&gt;
             &lt;/mrow&gt;
-        &lt;/mfenced&gt;
+            &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
+        &lt;/mrow&gt;
+        &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
     &lt;/math&gt;
     </pre>
 
@@ -876,23 +876,24 @@
             <math>
                 <mi>f</mi>
                 <mo>&ApplyFunction;</mo>
-                <mfenced>
-                    <mrow>
-                        <mi>x</mi>
-                        <mo>&plus;</mo>
-                        <mi>y</mi>
-                    </mrow>
-                </mfenced>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&plus;</mo>
+                    <mi>y</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
             </math>
         </figure>
         To indicate that this is the function <math><mi>f</mi></math> of the quantity 
         <math>
-            <mfenced>
-                <mrow>
-                    <mi>x</mi>
-                    <mo>&plus;</mo>
-                    <mi>y</mi></mrow>
-            </mfenced>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>&plus;</mo>
+                <mi>y</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
         </math>
         and not the expression
         <math>
@@ -907,13 +908,13 @@
     &lt;math&gt;
         &lt;mi&gt;f&lt;/mi&gt;
         &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
-        &lt;mfenced&gt;
-            &lt;mrow&gt;
-                &lt;mi&gt;x&lt;/mi&gt;
-                &lt;mo&gt;&amp;plus;&lt;/mo&gt;
-                &lt;mi&gt;y&lt;/mi&gt;
-            &lt;/mrow&gt;
-        &lt;/mfenced&gt;
+        &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
+        &lt;mrow&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+            &lt;mo&gt;&amp;plus;&lt;/mo&gt;
+            &lt;mi&gt;y&lt;/mi&gt;
+        &lt;/mrow&gt;
+        &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
     &lt;/math&gt;
     </pre>
 
