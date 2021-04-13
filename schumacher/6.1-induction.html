@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>6.1 Mathematical Induction</title>
+        <link rel="stylesheet" href="../math.css" type="text/css">
+    </style>
+</head>
+<body>
+
+<h3>6.1 Mathematical Induction</h3>
+
+<section class="definition">
+    <h4>6.1.3 Axiom (The axiom of induction)</h4>
+    <p>
+        Let <math><mi>S</mi></math> be a subset of 
+        <math><mi>&naturals;</mi></math> satisfying 
+    </p>
+    <ul>
+        <li>
+            <math>
+                <mn>1</mn><mo>&in;</mo><mi>S</mi>
+            </math>
+            and
+        </li>
+        <li>
+            if 
+            <math>
+                <mi>k</mi>
+                <mo>&in;</mo><mi>S</mi>
+            </math>, 
+            then 
+            <math>
+                <mi>k</mi><mo>&plus;</mo><mn>1</mn>
+                <mo>&in;</mo><mi>S</mi>
+            </math>
+        </li>
+    </ul>
+    <p>
+        Then 
+        <math>
+            <mi>S</mi><mo>&equals;</mo><mi>&naturals;</mi>
+        </math>. 
+    </p>
+</section>
+
+<section class="description">
+    <p>
+        We conjectured that for all natural numbers 
+        <math><mi>n</mi></math>, 
+    </p>
+    <figure>
+        <math displaystyle="true">
+            <mrow>
+                <munderover>
+                    <mo>&sum;</mo>
+                    <mrow>
+                        <mi>k</mi><mo>&equals;</mo><mn>1</mn>
+                    </mrow>
+                    <mi>n</mi>
+                </munderover>
+                <mo>&ApplyFunction;</mo>
+                <mrow>
+                    <mfrac>
+                        <mn>1</mn>
+                        <mrow>
+                            <mi>k</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>k</mi>
+                                <mo>&plus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                    </mfrac>
+                </mrow>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mfrac>
+                    <mi>n</mi>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mfrac>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        This is in fact a separate statement for each nutural numbers 
+        <math><mi>&naturals;</mi></math> 
+        &mdash; a <i>sequence of distinct statements</i>. 
+        [&hellip;] 
+        If the truth of each statement in a sequence of statements 
+        can be shown to follow from the truth of the previous one, 
+        and if the first statement in that sequence can be shown 
+        to be true, then all of the statements must be true 
+        &mdash; the next theorem shows that 
+        this follows from the induction axiom. 
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>6.1.5 Theorem (Principle of mathematical induction)</h4>
+    <p>
+        Let 
+        <math>
+            <msub><mi>P</mi><mi>n</mi></msub>
+        </math>
+        be a sequence of statements. Suppose that 
+        <ul>
+            <li>
+                <math>
+                    <msub><mi>P</mi><mn>1</mn></msub>
+                </math>
+                is true and
+            </li>
+            <li>
+                if 
+                <math>
+                    <msub><mi>P</mi><mi>k</mi></msub>
+                </math>
+                is true, then 
+                <math>
+                    <msub>
+                        <mi>P</mi>
+                        <mrow>
+                            <mi>k</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                </math>
+                is true 
+            </li>
+        </ul>
+        Then 
+        <math>
+            <msub><mi>P</mi><mi>n</mi></msub>
+        </math>
+        is true for all 
+        <math>
+            <mi>n</mi><mo>&in;</mo><mi>&naturals;</mi>
+        </math>. 
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        To apply the induction axiom, we must have a subset of 
+        <math><mi>&naturals;</mi></math>. 
+        Consider the subset
+    </p>
+    <figure>
+        <math>
+            <mi>S</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mi>n</mi><mo>&in;</mo><mi>&naturals;</mi>
+                <mo separator="true">&colon;</mo>
+                <msub><mi>P</mi><mi>n</mi></msub>
+                <mo>is true</mo>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+    </figure>
+    <p>
+        Because 
+        <math>
+            <msub><mi>P</mi><mn>1</mn></msub>
+        </math>
+        is true, 
+        <math>
+            <mn>1</mn><mo>&in;</mo><mi>S</mi>
+        </math>. 
+        Now we prove the conditional statemt "If 
+        <math>
+            <mi>k</mi><mo>&in;</mo><mi>S</mi>
+        </math>, 
+        then 
+        <math>
+            <mi>k</mi><mo>&plus;</mo><mn>1</mn>
+            <mo>&in;</mo><mi>S</mi>
+        </math>." 
+        Thus we suppose that 
+        <math>
+            <mi>k</mi><mo>&in;</mo><mi>S</mi>
+        </math>.&sup1; 
+        This means that 
+        <math>
+            <msub><mi>P</mi><mi>k</mi></msub>
+        </math>
+        is true. 
+        By the second hypothesis in our theorem we know that 
+        "if 
+        <math>
+            <msub><mi>P</mi><mi>k</mi></msub>
+        </math>
+        is true, then 
+        <math>
+            <msub>
+                <mi>P</mi>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+        </math>
+        is true." Therefore
+        <math>
+            <msub>
+                <mi>P</mi>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+        </math> 
+        is true, and 
+        <math>
+            <mrow>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo>&in;</mo><mi>S</mi>
+        </math>. 
+        Then induction axiom then allows us to conclude that 
+        <math>
+            <mi>S</mi><mo>&equals;</mo><mi>&naturals;</mi>
+        </math>. 
+        That is, 
+        <math>
+            <msub><mi>P</mi><mi>n</mi></msub>
+        </math>
+        is true for all 
+        <math>
+            <mi>n</mi><mo>&in;</mo><mi>&naturals;</mi>
+        </math>. 
+        &marker;
+    </p>
+    <p>
+        &sup1;
+        In an induction argument, when we go from 
+        <math><mi>k</mi></math> to 
+        <math>
+            <mi>k</mi><mo>&plus;</mo><mn>1</mn>
+        </math>, 
+        we assume that the <math><mi>k</mi></math> 
+        th statement is true and use this to prove the 
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mi>k</mi><mo>&plus;</mo><mn>1</mn>
+            <mo fence="true">&rpar;</mo>
+        </math> 
+        st statement. The assumption that the 
+        <math><mi>k</mi></math> th statement is true is called 
+        the <strong>induction hypothesis</strong>. 
+    </p>
+</section>
+
+<section id="well-ordering" class="definition">
+    <h4>Well-ordering</h4>
+    <p>
+        A totally ordered set in which every nonempty subset has a 
+        least element is said to be <i>well-ordered</i>.
+    </p>
+    <h4>Theorem (Well-ordering of <math><mi>&naturals;</mi></math>)</h4>
+    <p>
+        <math><mi>&naturals;</mi></math> is well-ordered.
+    </p>
+</section>
+<section class="description">
+    <p>
+        The well-ordering of 
+        <math><mi>&naturals;</mi></math> 
+        is esspecially relevant to us because it is essential to proving 
+        many important facts about the natural numbers and the integers. 
+        It is a standard proof technique to identify a nonempty set 
+        <math><mi>S</mi></math> of those natural numbers that have a 
+        certain property. 
+        Because we are guranteed that <math><mi>S</mi></math> has 
+        a least element <math><mi>l</mi></math>, we can then use the 
+        existence of <math><mi>l</mi></math> to achive some purpose. 
+        This is useful in two general sorts of circumstances. 
+    </p>
+    <ol>
+        <li>
+            The first is straightforward:
+            In an existence proof (one in which we need to show
+            something exists) the thing we are trying to pinpoint 
+            may be the smallest of all natural numbers (or integers) 
+            that have a particular property, as in the proof of 
+            the division algorithm (Theorem 7.2.1).
+        </li>
+        <li>
+            The second, less obvious, is in proof by contradiction. 
+            The trick is to use a supposed least element 
+            <math><mi>l</mi></math> of a nonempty 
+            <math>
+                <mi>S</mi><mo>&subseteq;</mo><mi>&naturals;</mi>
+            </math>
+            to construct another natural number 
+            <math>
+                <mi>l</mi><mo>&prime;</mo>
+                <mo>&in;</mo>
+                <mi>S</mi>
+            </math>
+            that is even smaller than <math><mi>l</mi></math>, 
+            thus forcing a contradiction.
+        </li>
+    </ol>
+</section>
+
+</body>
+</html>
