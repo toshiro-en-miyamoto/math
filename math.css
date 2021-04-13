@@ -10,14 +10,17 @@ th {
 mtd {
     text-align: left;
 }
+.center-aligned {
+    text-align: center;
+}
 .proof, .example, .description {
     padding: 0 1.5em;
 }
-.definition, .theorem, .proposition, .lemma, .corollary {
+.summary, .definition, .theorem, .proposition, .lemma, .corollary {
     margin: 2px 0;
     padding: 0.2em 1.5em;
 }
-.definition, .theorem {
+.summary, .definition, .theorem {
     background-color: lightgrey;
     border-radius: 10px;
 }

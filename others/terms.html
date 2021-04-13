@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+f<!DOCTYPE html>
 <html lang="ja">
 <head>
     <title>Math Terms</title>
@@ -25,63 +25,571 @@
     <th>math</th>
 </tr>
 <tr>
-    <td>definitions</td>
-    <td>定義</td>
+    <td>definition</td>
+    <td>
+        <ruby>
+            定義
+            <rt>ていぎ</rt>
+        </ruby>
+    </td>
     <td></td>
 </tr>
 <tr>
     <td>axioms</td>
-    <td>公理</td>
+    <td>
+        <ruby>
+            公理
+            <rt>こうり</rt>
+        </ruby>
+    </td>
+    <td>basic assumptions</td>
+</tr>
+<tr>
+    <td>theorem</td>
+    <td>
+        <ruby>
+            定理
+            <rt>ていり</rt>
+        </ruby>
+    </td>
+    <td>consequences deduced from axioms</td>
+</tr>
+<tr>
+    <td>proposition</td>
+    <td>
+        <ruby>
+            命題
+            <rt>めいだい</rt>
+        </ruby>
+    </td>
     <td></td>
 </tr>
 <tr>
-    <td>theorems</td>
-    <td>定理</td>
+    <td>lemma</td>
+    <td>
+        <ruby>
+            補題
+            <rt>ほだい</rt>
+        </ruby>
+    </td>
     <td></td>
 </tr>
 <tr>
-    <td>propositions</td>
-    <td>命題</td>
+    <td>corollary</td>
+    <td>
+        <ruby>
+            系
+            <rt>けい</rt>
+        </ruby>
+    </td>
     <td></td>
 </tr>
 <tr>
-    <td>lemmas</td>
-    <td>補題</td>
+    <td>infer (&vscr;)</td>
+    <td>
+        <ruby>
+            推測
+            <rt>すいそく</rt>
+        </ruby>
+        する
+    </td>
+    <td>to decide that something is probably true</td>
+</tr>
+<tr>
+    <td>deduce (&vscr;)</td>
+    <td>
+        <ruby>
+            推論
+            <rt>すいろん</rt>
+        </ruby>
+        &comma;
+        <ruby>
+            演繹
+            <rt>えんえき</rt>
+        </ruby>
+        する
+    </td>
+    <td>to decide that something must be true</td>
+</tr>
+<tr>
+    <td>induce (&vscr;)</td>
+    <td>
+        <ruby>
+            帰納的
+            <rt>きのうてき</rt>
+        </ruby>
+        に
+        <ruby>
+            推論
+            <rt>すいろん</rt>
+        </ruby>
+        する
+    </td>
+    <td>&leftrightarrow; deduce</td>
+</tr>
+<tr>
+    <td>conjecture</td>
+    <td>
+        <ruby>
+            予想
+            <rt>よそう</rt>
+        </ruby>
+    </td>
+    <td>e.g, Goldbach's conjecture</td>
+</tr>
+<tr>
+    <td>mathematical induction</td>
+    <td>
+        <ruby>
+            数学的
+            <rt>すうがくてき</rt>
+        </ruby>
+        <ruby>
+            帰納法
+            <rt>きのうほう</rt>
+        </ruby>
+    </td>
+    <td>
+        if 
+        <math>
+            <mi>P</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mn>1</mn>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        and 
+        <math>
+            <mrow>
+                <mi>P</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>n</mi>
+                <mo>&minus;</mo>
+                <mn>1</mn>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&Implies;</mo>
+            <mrow>
+                <mi>P</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>, 
+        then 
+        <math>
+            <mo>&forall;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&ge;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo>&comma;</mo>
+            <mrow>
+                <mi>P</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>induction hypothesis</td>
+    <td>
+        <ruby>
+            帰納法
+            <rt>きのうほう</rt>
+        </ruby>
+        の
+        <ruby>
+            仮定
+            <rt>かてい</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mi>P</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>n</mi>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        in mathematical induction
+    </td>
+</tr>
+<tr>
+    <td>complete induction</td>
+    <td>
+        <ruby>
+            完全
+            <rt>かんぜん</rt>
+        </ruby>
+        <ruby>
+            帰納法
+            <rt>きのうほう</rt>
+        </ruby>
+    </td>
+    <td>sometimes called <i>strong induction</i></td>
+</tr>
+<tr>
+    <td>recursion theorem</td>
+    <td>
+        <ruby>
+            再帰
+            <rt>さいき</rt>
+        </ruby>
+        <ruby>
+            定理
+            <rt>ていり</rt>
+        </ruby>
+    </td>
+    <td>
+        inductive definition determines sequences
+    </td>
+</tr>
+<tr>
+    <td>inductive definition</td>
+    <td>
+        <ruby>
+            帰納的
+            <rt>きのうてき</rt>
+        </ruby>
+        <ruby>
+            定義
+            <rt>ていぎ</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <msub><mi>a</mi><mn>0</mn></msub>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>
+        and 
+        <math>
+            <msub><mi>a</mi><mi>n</mi></msub>
+            <mo>&equals;</mo>
+            <mn>2</mn>
+            <mo>&times;</mo>
+            <msub>
+                <mi>a</mi>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+        </math>
+        for each 
+        <math>
+            <mi>n</mi><mo>&ge;</mo><mn>1</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>well-ordered set</td>
+    <td>
+        <ruby>
+            整列
+            <rt>せいれつ</rt>
+        </ruby>
+        <ruby>
+            集合
+            <rt>しゅうごう</rt>
+        </ruby>
+    </td>
+    <td>
+        every nonempty subset has a least element 
+    </td>
+</tr>
+<tr>
+    <td>expression</td>
+    <td>
+        <ruby>
+            数式
+            <rt>すうしき</rt>
+        </ruby>
+    </td>
+    <td>
+        an expression denotes a math object;
+        <math>
+            <mn>4</mn>
+            <mo>&InvisibleTimes;</mo>
+            <mi>x</mi>
+            <mo>&minus;</mo>
+            <mn>5</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>formulae (<i>pl.</i> formulae)</td>
+    <td>
+        <ruby>
+            数式
+            <rt>すうしき</rt>
+        </ruby>
+    </td>
+    <td>
+        a statement about objects;
+        <math>
+            <mrow>
+                <mn>4</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>x</mi>
+                <mo>&minus;</mo>
+                <mn>5</mn>
+            </mrow>
+            <mo>&le;</mo>
+            <mn>0</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>linear equation</td>
+    <td>
+        <ruby>
+            一次
+            <rt>いちじ</rt>
+        </ruby>
+        <ruby>
+            方程式
+            <rt>ほうていしき</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mrow>
+                <mn>4</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>x</mi>
+                <mo>&minus;</mo>
+                <mn>5</mn>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>linear inequality</td>
+    <td>
+        <ruby>
+            一次
+            <rt>いちじ</rt>
+        </ruby>
+        <ruby>
+            不等式
+            <rt>ふとうしき</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mrow>
+                <mn>4</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>x</mi>
+                <mo>&minus;</mo>
+                <mn>5</mn>
+            </mrow>
+            <mo>&le;</mo>
+            <mn>0</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>quadratic equation</td>
+    <td>
+        <ruby>
+            二次
+            <rt>にじ</rt>
+        </ruby>
+        <ruby>
+            方程式
+            <rt>ほうていしき</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mrow>
+                <msup><mi>x</mi><mn>2</mn></msup>
+                <mo>&plus;</mo>
+                <mn>4</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>x</mi>
+                <mo>&minus;</mo>
+                <mn>5</mn>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>quadratic inequality</td>
+    <td>
+        <ruby>
+            二次
+            <rt>にじ</rt>
+        </ruby>
+        <ruby>
+            不等式
+            <rt>ふとうしき</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mrow>
+                <msup><mi>x</mi><mn>2</mn></msup>
+                <mo>&plus;</mo>
+                <mn>4</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>x</mi>
+                <mo>&minus;</mo>
+                <mn>5</mn>
+            </mrow>
+            <mo>&le;</mo>
+            <mn>0</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>logic</td>
+    <td>
+        <ruby>
+            論理
+            <rt>ろんり</rt>
+        </ruby>
+    </td>
     <td></td>
 </tr>
 <tr>
-    <td>corollaries</td>
-    <td>系</td>
-    <td></td>
+    <td>predicate</td>
+    <td>
+        <ruby>
+            述語
+            <rt>じゅつご</rt>
+        </ruby>
+    </td>
+    <td>
+        let
+        <math>
+            <mi>P</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>x</mi>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        be 
+        <math>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+        </math>
+        where 
+        <math>
+            <mi>x</mi>
+            <mo>&in;</mo>
+            <mi>&reals;</mi>
+        </math>
+    </td>
 </tr>
 <tr>
-    <td>discrete mathematics</td>
-    <td>離散数学</td>
-    <td></td>
+    <td>bound variable</td>
+    <td>
+        <ruby>
+            束縛
+            <rt>そくばく</rt>
+        </ruby>
+        <ruby>
+            変数
+            <rt>へんすう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mo>for all</mo><mi>x</mi>
+            <mo>&in;</mo>
+            <mi>&reals;</mi>
+            <mo>&comma;</mo>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+        </math>
+    </td>
 </tr>
 <tr>
-    <td>linear equations</td>
-    <td>一次方程式</td>
-    <td></td>
+    <td>universal quantifier</td>
+    <td>
+        <ruby>
+            全称
+            <rt>ぜんしょう</rt>
+        </ruby>
+        <ruby>
+            記号
+            <rt>きごう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mo>&forall;</mo><mi>x</mi>
+            <mo>&in;</mo>
+            <mi>&reals;</mi>
+            <mo>&comma;</mo>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+            <mo>(for all real numbers x, &hellip;)</mo>
+        </math>
+    </td>
 </tr>
 <tr>
-    <td>linear inequalities</td>
-    <td>一次不等式</td>
-    <td></td>
-</tr>
-<tr>
-    <td>quadratic equations</td>
-    <td>二次方程式</td>
-    <td></td>
-</tr>
-<tr>
-    <td>quadratic inequalities</td>
-    <td>二次不等式</td>
-    <td></td>
+    <td>existential quantifier</td>
+    <td>
+        <ruby>
+            存在
+            <rt>そんざい</rt>
+        </ruby>
+        <ruby>
+            記号
+            <rt>きごう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mo>&exist;</mo><mi>x</mi>
+            <mo>&in;</mo>
+            <mi>&reals;</mi>
+            <mo>,</mo>
+            <msup><mi>x</mi><mn>2</mn></msup>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+            <mo>(there exists x in &reals; such that &hellip;)</mo>
+        </math>
+    </td>
 </tr>
 <tr>
     <td>exponentiation</td>
-    <td>べき乗</td>
+    <td>
+        べき
+        <ruby>
+            乗
+            <rt>じょう</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <msup><mi>m</mi><mi>n</mi></msup>
@@ -93,8 +601,13 @@
     </td>
 </tr>
 <tr>
-    <td>factorials</td>
-    <td>階乗</td>
+    <td>factorial</td>
+    <td>
+        <ruby>
+            階乗
+            <rt>かいじょう</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mi>n</mi><mo>&excl;</mo>
@@ -114,8 +627,13 @@
     </td>
 </tr>
 <tr>
-    <td>permutations</td>
-    <td>順列</td>
+    <td>permutation</td>
+    <td>
+        <ruby>
+            順列
+            <rt>じゅんれつ</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mmultiscripts>
@@ -169,8 +687,13 @@
     </td>
 </tr>
 <tr>
-    <td>combinations</td>
-    <td>組合せ</td>
+    <td>combination</td>
+    <td>
+        <ruby>
+            組合
+            <rt>くみあわ</rt>
+        </ruby>せ
+    </td>
     <td>
         <math>
             <mmultiscripts>
@@ -213,8 +736,13 @@
     </td>
 </tr>
 <tr>
-    <td>coefficients</td>
-    <td>係数</td>
+    <td>coefficient</td>
+    <td>
+        <ruby>
+            係数
+            <rt>けいすう</rt>
+        </ruby>
+    </td>
     <td>
         <math><mn>4</mn></math> in 
         <math>
@@ -229,13 +757,31 @@
     </td>
 </tr>
 <tr>
-    <td>circular permutations</td>
-    <td>円順列</td>
+    <td>circular permutation</td>
+    <td>
+        <ruby>
+            円
+            <rt>えん</rt>
+        </ruby>
+        <ruby>
+            順列
+            <rt>じゅんれつ</rt>
+        </ruby>
+    </td>
     <td></td>
 </tr>
 <tr>
     <td>binomial theorem</td>
-    <td>二項定理 (≔二項展開)</td>
+    <td>
+        <ruby>
+            二項
+            <rt>にこう</rt>
+        </ruby>
+        <ruby>
+            定理
+            <rt>ていり</rt>
+        </ruby>
+    </td>
     <td>
         <math displaystyle="true">
             <msup>
@@ -276,13 +822,31 @@
     </td>
 </tr>
 <tr>
-    <td>binomial expansions</td>
-    <td>二項展開 (≔二項定理)</td>
-    <td></td>
+    <td>binomial expansion</td>
+    <td>
+        <ruby>
+            二項
+            <rt>にこう</rt>
+        </ruby>
+        <ruby>
+            展開
+            <rt>てんかい</rt>
+        </ruby>
+    </td>
+    <td>≔二項定理</td>
 </tr>
 <tr>
-    <td>binomial coefficients</td>
-    <td>二項係数</td>
+    <td>binomial coefficient</td>
+    <td>
+        <ruby>
+            二項
+            <rt>にこう</rt>
+        </ruby>
+        <ruby>
+            係数
+            <rt>けいすう</rt>
+        </ruby>
+    </td>
     <td>
         <math displaystyle="true">
             <mo fence="true">&lpar;</mo>
@@ -319,22 +883,54 @@
 </tr>
 <tr>
     <td>multinomial theorem</td>
-    <td>多項定理</td>
+    <td>
+        <ruby>
+            多項
+            <rt>たこう</rt>
+        </ruby>
+        <ruby>
+            定理
+            <rt>ていり</rt>
+        </ruby>
+    </td>
     <td></td>
 </tr>
 <tr>
-    <td>multinomials</td>
-    <td>多項和</td>
+    <td>multinomial</td>
+    <td>
+        <ruby>
+            多項
+            <rt>たこう</rt>
+        </ruby>
+        <ruby>
+            和
+            <rt>わ</rt>
+        </ruby>
+    </td>
     <td></td>
 </tr>
 <tr>
-    <td>intervals</td>
-    <td>区間</td>
+    <td>interval</td>
+    <td>
+        <ruby>
+            区間
+            <rt>くかん</rt>
+        </ruby>
+    </td>
     <td></td>
 </tr>
 <tr>
-    <td>closed intervals</td>
-    <td>閉区間</td>
+    <td>closed interval</td>
+    <td>
+        <ruby>
+            閉
+            <rt>へい</rt>
+        </ruby>
+        <ruby>
+            区間
+            <rt>くかん</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mo fence="true">&lsqb;</mo>
@@ -348,8 +944,17 @@
     </td>
 </tr>
 <tr>
-    <td>open intervals</td>
-    <td>開区間</td>
+    <td>open interval</td>
+    <td>
+        <ruby>
+            開
+            <rt>かい</rt>
+        </ruby>
+        <ruby>
+            区間
+            <rt>くかん</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mo fence="true">&lpar;</mo>
@@ -361,8 +966,21 @@
     </td>
 </tr>
 <tr>
-    <td>half-open intervals</td>
-    <td>半開区間</td>
+    <td>half-open interval</td>
+    <td>
+        <ruby>
+            半
+            <rt>はん</rt>
+        </ruby>
+        <ruby>
+            開
+            <rt>かい</rt>
+        </ruby>
+        <ruby>
+            区間
+            <rt>くかん</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mo fence="true">&lpar;</mo>
@@ -385,8 +1003,13 @@
     </td>
 </tr>
 <tr>
-    <td>Cartesian products</td>
-    <td>直積</td>
+    <td>Cartesian product</td>
+    <td>
+        <ruby>
+            直積
+            <rt>ちょくせき</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mi>A</mi>
@@ -412,8 +1035,21 @@
     </td>
 </tr>
 <tr>
-    <td>ordered pairs</td>
-    <td>順序二重対</td>
+    <td>ordered pair</td>
+    <td>
+        <ruby>
+            順序
+            <rt>じゅんじょ</rt>
+        </ruby>
+        <ruby>
+            二重
+            <rt>にじゅう</rt>
+        </ruby>
+        <ruby>
+            対
+            <rt>つい</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mo fence="true">&lpar;</mo>
@@ -427,8 +1063,127 @@
     </td>
 </tr>
 <tr>
+    <td>commutative</td>
+    <td>
+        <ruby>
+            交換
+            <rt>こうかん</rt>
+        </ruby>
+        <ruby>
+            律
+            <rt>りつ</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mrow>
+                <mi>x</mi>
+                <mo>&lowast;</mo>
+                <mi>y</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>y</mi>
+                <mo>&lowast;</mo>
+                <mi>x</mi>
+            </mrow>
+        </math>, 
+        <ruby>
+            可換
+            <rt>かかん</rt>
+        </ruby>
+        <ruby>
+            律
+            <rt>りつ</rt>
+        </ruby>
+        とも呼ばれる
+    </td>
+</tr>
+<tr>
+    <td>associative</td>
+    <td>
+        <ruby>
+            結合
+            <rt>けつごう</rt>
+        </ruby>
+        <ruby>
+            律
+            <rt>りつ</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&lowast;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>b</mi>
+                <mo>&lowast;</mo>
+                <mi>c</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mi>a</mi>
+                <mo>&lowast;</mo>
+                <mi>b</mi>
+                <mo fence="true">&rpar;</mo>
+                <mo>&lowast;</mo>
+                <mi>c</mi>
+            </mrow>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>distributive</td>
+    <td>
+        <ruby>
+            分配
+            <rt>ぶんぱい</rt>
+        </ruby>
+        <ruby>
+            律
+            <rt>りつ</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>b</mi>
+                <mi>&plus;</mi>
+                <mi>c</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+                <mo>&plus;</mo>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>c</mi>
+            </mrow>
+        </math> 
+        (&times; distributes over &plus;)
+    </td>
+</tr>
+<tr>
     <td>reflexivie</td>
-    <td>反射律が成り立つ</td>
+    <td>
+        <ruby>
+            反射
+            <rt>はんしゃ</rt>
+        </ruby>
+        <ruby>
+            律
+            <rt>りつ</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mi>x</mi><mo>&Tilde;</mo><mi>x</mi>
@@ -437,7 +1192,16 @@
 </tr>
 <tr>
     <td>symmetric</td>
-    <td>対称律が成り立つ</td>
+    <td>
+        <ruby>
+            対称
+            <rt>たいしょう</rt>
+        </ruby>
+        <ruby>
+            律
+            <rt>りつ</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mi>x</mi><mo>&Tilde;</mo><mi>y</mi>
@@ -448,7 +1212,20 @@
 </tr>
 <tr>
     <td>antisymmetric</td>
-    <td>反対称律が成り立つ</td>
+    <td>
+        <ruby>
+            反
+            <rt>はん</rt>
+        </ruby>
+        <ruby>
+            対称
+            <rt>たいしょう</rt>
+        </ruby>
+        <ruby>
+            律
+            <rt>りつ</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mo fence="true">&lpar;</mo>
@@ -469,7 +1246,16 @@
 </tr>
 <tr>
     <td>transitive</td>
-    <td>推移律が成り立つ</td>
+    <td>
+        <ruby>
+            推移
+            <rt>すいい</rt>
+        </ruby>
+        <ruby>
+            律
+            <rt>りつ</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mo fence="true">&lpar;</mo>
@@ -489,15 +1275,30 @@
     </td>
 </tr>
 <tr>
-    <td>equivalence relations</td>
-    <td>同値関係</td>
+    <td>equivalence relation</td>
     <td>
-        <math><mi>R</mi></math> is reflexive, symmetric, and transitive. 
+        <ruby>
+            同値
+            <rt>どうち</rt>
+        </ruby>
+        <ruby>
+            関係
+            <rt>かんけい</rt>
+        </ruby>
+    </td>
+    <td>
+        reflexive, symmetric, and transitive 
+        (<math><mi>&equiv;</mi></math>)
     </td>
 </tr>
 <tr>
-    <td>partitions</td>
-    <td>分割</td>
+    <td>partition</td>
+    <td>
+        <ruby>
+            分割
+            <rt>ぶんかつ</rt>
+        </ruby>
+    </td>
     <td>
         <math displaystyle="true">
             <mi>S</mi>
@@ -517,31 +1318,85 @@
         <math>
             <msub>
                 <mi>A</mi>
-                <mi>&lambda;₁</mi>
+                <msub><mi>&lambda;</mi><mn>1</mn></msub>
             </msub>
             <mo>&cap;</mo>
             <msub>
                 <mi>A</mi>
-                <mi>&lambda;₂</mi>
+                <msub><mi>&lambda;</mi><mn>2</mn></msub>
             </msub>
             <mo>&equals;</mo>
             <mi>&emptyset;</mi>
             <mo>if</mo>
             <msub>
                 <mi>A</mi>
-                <mi>&lambda;₁</mi>
+                <msub><mi>&lambda;</mi><mn>1</mn></msub>
             </msub>
             <mo>&ne;</mo>
             <msub>
                 <mi>A</mi>
-                <mi>&lambda;₂</mi>
+                <msub><mi>&lambda;</mi><mn>2</mn></msub>
             </msub>
         </math>
     </td>
 </tr>
 <tr>
     <td>pairwise disjoint</td>
-    <td>互いに素</td>
+    <td>
+        <ruby>
+            互
+            <rt>たが</rt>
+        </ruby>
+        いに
+        <ruby>
+            素
+            <rt>そ</rt>
+        </ruby>
+    </td>
+    <td>
+        let 
+        <math>
+            <mi>&lambda;</mi><mo>&in;</mo><mi>&Lambda;</mi>
+        </math>
+        then 
+        <math>
+            <msub>
+                <mi>A</mi>
+                <msub><mi>&lambda;</mi><mn>1</mn></msub>
+            </msub>
+            <mo>&cap;</mo>
+            <msub>
+                <mi>A</mi>
+                <msub><mi>&lambda;</mi><mn>2</mn></msub>
+            </msub>
+            <mo>&equals;</mo>
+            <mi>&emptyset;</mi>
+            <mo>if</mo>
+            <msub>
+                <mi>A</mi>
+                <msub><mi>&lambda;</mi><mn>1</mn></msub>
+            </msub>
+            <mo>&ne;</mo>
+            <msub>
+                <mi>A</mi>
+                <msub><mi>&lambda;</mi><mn>2</mn></msub>
+            </msub>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>disjoint</td>
+    <td>
+        <ruby>
+            互
+            <rt>たが</rt>
+        </ruby>
+        いに
+        <ruby>
+            素
+            <rt>そ</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mi>A</mi>
@@ -553,8 +1408,46 @@
     </td>
 </tr>
 <tr>
-    <td>equivalence classes</td>
-    <td>同値類</td>
+    <td>relatiely prime</td>
+    <td>
+        <ruby>
+            互
+            <rt>たが</rt>
+        </ruby>
+        いに
+        <ruby>
+            素
+            <rt>そ</rt>
+        </ruby>
+    </td>
+    <td>
+        <math><mi>a</mi></math> and <math><mi>b</mi></math> 
+        is relatively prime if 
+        <math>
+            <mo>gcd</mo>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>a</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>b</mi>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>equivalence class</td>
+    <td>
+        <ruby>
+            同値
+            <rt>どうち</rt>
+        </ruby>
+        <ruby>
+            類
+            <rt>るい</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mo>&lsqb;</mo><mi>x</mi><mo>&rsqb;</mo>
@@ -563,33 +1456,66 @@
             <mrow>
                 <mi>y</mi><mo>&in;</mo><mi>S</mi>
                 <mo separator="true">:</mo>
-                <mi>x</mi><mo>R</mo><mi>y</mi>
+                <mi>x</mi><mo>&equiv;</mo><mi>y</mi>
             </mrow>
             <mo fence="true">&rbrace;</mo>
         </math>
     </td>
 </tr>
 <tr>
-    <td>quotient sets</td>
-    <td>商集合</td>
+    <td>quotient set</td>
+    <td>
+        <ruby>
+            商
+            <rt>しょう</rt>
+        </ruby>
+        <ruby>
+            集合
+            <rt>しゅうごう</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <msub><mi>A</mi><mi>&equiv;</mi></msub>
             <mo>&equals;</mo>
             <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mo fence="true">&lbrack;</mo>
+                <mi>a</mi>
+                <mo fence="true">&rbrack;</mo>
+            </mrow>
+            <mo separator="true">&colon;</mo>
+            <mrow>
+                <mi>a</mi><mo>&in;</mo><mi>A</mi>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
         </math>
     </td>
 </tr>
 <tr>
     <td>partial ordering</td>
-    <td>順序関係</td>
     <td>
-        <math><mi>R</mi></math> is reflexive, anti-symmetric, and transitive
+        <ruby>
+            順序
+            <rt>じゅんじょ</rt>
+        </ruby>
+        <ruby>
+            関係
+            <rt>かんけい</rt>
+        </ruby>
+    </td>
+    <td>
+        reflexive, anti-symmetric, and transitive 
     </td>
 </tr>
 <tr>
-    <td>functions</td>
-    <td>関数</td>
+    <td>function</td>
+    <td>
+        <ruby>
+            関数
+            <rt>かんすう</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mi>f</mi>
@@ -603,8 +1529,13 @@
     </td>
 </tr>
 <tr>
-    <td>mappings</td>
-    <td>写像</td>
+    <td>mapping</td>
+    <td>
+        <ruby>
+            写像
+            <rt>しゃぞう</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mi>f</mi>
@@ -618,18 +1549,27 @@
     </td>
 </tr>
 <tr>
-    <td>domains</td>
-    <td>定義域</td>
+    <td>domain</td>
+    <td>
+        <ruby>
+            定義
+            <rt>ていぎ</rt>
+        </ruby>
+        <ruby>
+            域
+            <rt>いき</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mo fence="true">&lbrace;</mo>
             <mrow>
                 <mi>a</mi><mo>&in;</mo><mi>A</mi>
-                <mo separator="true">:</mo>
+                <mo separator="true">&colon;</mo>
                 <mrow>
                     <mo>&exist;</mo>
                     <mi>b</mi><mo>&in;</mo><mi>B</mi>
-                    <mo fence="true" lspace="0.2em">&lpar;</mo>
+                    <mo>&comma;</mo>
                     <mrow>
                         <mo fence="true">&lpar;</mo>
                         <mrow>
@@ -641,7 +1581,6 @@
                         <mo>&in;</mo>
                         <mi>f</mi>
                     </mrow>
-                    <mo fence="true">&rpar;</mo>
                 </mrow>
             </mrow>
             <mo fence="true">&rbrace;</mo>
@@ -649,8 +1588,17 @@
     </td>
 </tr>
 <tr>
-    <td>target sets</td>
-    <td>終域</td>
+    <td>target set</td>
+    <td>
+        <ruby>
+            終
+            <rt>しゅう</rt>
+        </ruby>
+        <ruby>
+            域
+            <rt>いき</rt>
+        </ruby>
+    </td>
     <td>
         The set <math><mi>B</mi></math> in 
         <math>
@@ -665,30 +1613,36 @@
     </td>
 </tr>
 <tr>
-    <td>ranges</td>
-    <td>値域</td>
+    <td>range</td>
+    <td>
+        <ruby>
+            値
+            <rt>ち</rt>
+        </ruby>
+        <ruby>
+            域
+            <rt>いき</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mo fence="true">&lbrace;</mo>
             <mrow>
                 <mi>b</mi><mo>&in;</mo><mi>B</mi>
-                <mo separator="true">:</mo>
+                <mo separator="true">&colon;</mo>
                 <mrow>
                     <mo>&exist;</mo>
                     <mi>a</mi><mo>&in;</mo><mi>A</mi>
-                    <mo fence="true" lspace="0.2em">&lpar;</mo>
+                    <mo>&comma;</mo>
                     <mrow>
-                        <mo fence="true">&lpar;</mo>
                         <mrow>
                             <mi>a</mi>
-                            <mo separator="true">,</mo>
+                            <mo separator="true">&comma;</mo>
                             <mi>b</mi>
                         </mrow>
-                        <mo fence="true">&rpar;</mo>
                         <mo>&in;</mo>
                         <mi>f</mi>
                     </mrow>
-                    <mo fence="true">&rpar;</mo>
                 </mrow>
             </mrow>
             <mo fence="true">&rbrace;</mo>
@@ -697,7 +1651,12 @@
 </tr>
 <tr>
     <td>one-to-one (injective)</td>
-    <td>単射</td>
+    <td>
+        <ruby>
+            単射
+            <rt>たんしゃ</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mi>f</mi><mo>&ApplyFunction;</mo>
@@ -709,7 +1668,7 @@
             <mo fence="true">&lpar;</mo>
             <msub><mi>x</mi><mn>2</mn></msub>
             <mo fence="true">&rpar;</mo>
-            <mo>implies that</mo>
+            <mo>&Implies;</mo>
             <msub><mi>x</mi><mn>1</mn></msub>
             <mo>&equals;</mo>
             <msub><mi>x</mi><mn>2</mn></msub>
@@ -718,15 +1677,21 @@
 </tr>
 <tr>
     <td>onto (surjective)</td>
-    <td>全射</td>
+    <td>
+        <ruby>
+            全射
+            <rt>ぜんしゃ</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <mo>&forall;</mo>
             <mi>y</mi><mo>&in;</mo><mi>B</mi>
+            <mo>&comma;</mo>
             <mrow>
-                <mo lspace="0.6em">&exist;</mo>
+                <mo>&exist;</mo>
                 <mi>x</mi><mo>&in;</mo><mi>A</mi>
-                <mo fence="true" lspace="0.2em">&lpar;</mo>
+                <mo>&comma;</mo>
                 <mrow>
                     <mi>f</mi>
                     <mo>&ApplyFunction;</mo>
@@ -736,19 +1701,32 @@
                     <mo>&equals;</mo>
                     <mi>y</mi>
                 </mrow>
-                <mo fence="true">&rpar;</mo>
             </mrow>
         </math> 
     </td>
 </tr>
 <tr>
     <td>bijective</td>
-    <td>全単射</td>
+    <td>
+        <ruby>
+            全単射
+            <rt>ぜんたんしゃ</rt>
+        </ruby>
+    </td>
     <td>one-to-one and onto</td>
 </tr>
 <tr>
     <td>identity map</td>
-    <td>恒等写像</td>
+    <td>
+        <ruby>
+            恒等
+            <rt>こうとう</rt>
+        </ruby>
+        <ruby>
+            写像
+            <rt>しゃぞう</rt>
+        </ruby>
+    </td>
     <td>
         <math>
             <msub><mn>1</mn><mi>A</mi></msub>
@@ -762,61 +1740,630 @@
     </td>
 </tr>
 <tr>
-    <td>predicates</td>
-    <td>述語</td>
+    <td>vertex (<i>pl.</i> vertices)</td>
+    <td>
+        <ruby>
+            頂点
+            <rt>ちょうてん</rt>
+        </ruby>
+    </td>
+    <td>a point where two lines meet</td>
+</tr>
+<tr>
+    <td>remainder</td>
+    <td>
+        <ruby>
+            剰余
+            <rt>じょうよ</rt>
+        </ruby>
+    </td>
     <td>
         <math>
-            <msup><mi>x</mi><mn>2</mn></msup>
-            <mo>&minus;</mo><mn>1</mn>
-            <mo>=</mo><mn>0</mn>
+            <mo fence="true">&lpar;</mo>
+            <mi>r</mi>
+            <mo fence="true" rspace="0.4em">&rpar;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mi>q</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+                <mo>&plus;</mo>
+                <mi>r</mi>
+            </mrow>
+            <mo separator="true">&comma;</mo>
+            <mo>where</mo>
+            <mrow>
+                <mn>0</mn>
+                <mo>&le;</mo>
+                <mi>r</mi>
+                <mo>&lt;</mo>
+                <mi>d</mi>
+            </mrow>
         </math>
     </td>
 </tr>
 <tr>
-    <td>bound variables</td>
-    <td>束縛変数</td>
+    <td>quotient</td>
+    <td>
+        <ruby>
+            商
+            <rt>しょう</rt>
+        </ruby>
+    </td>
     <td>
         <math>
-            <mo>for all</mo><mi>x</mi>
-            <mo>&in;</mo>
-            <mi>&reals;</mi>
-            <mo>,</mo>
-            <msup><mi>x</mi><mn>2</mn></msup>
-            <mo>&minus;</mo><mn>1</mn>
-            <mo>=</mo><mn>0</mn>
+            <mo fence="true">&lpar;</mo>
+            <mi>q</mi>
+            <mo fence="true" rspace="0.4em">&rpar;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mi>q</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+                <mo>&plus;</mo>
+                <mi>r</mi>
+            </mrow>
+            <mo separator="true">&comma;</mo>
+            <mo>where</mo>
+            <mrow>
+                <mn>0</mn>
+                <mo>&le;</mo>
+                <mi>r</mi>
+                <mo>&lt;</mo>
+                <mi>d</mi>
+            </mrow>
         </math>
     </td>
 </tr>
 <tr>
-    <td>universal quantifiers</td>
-    <td>全称記号</td>
+    <td>divisor</td>
     <td>
+        <ruby>
+            約数
+            <rt>やくすう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math><mn>3</mn></math>
+        is a divisor of 
+        <math><mn>15</mn></math>; 
+        write 
         <math>
-            <mo>&forall;</mo><mi>x</mi>
-            <mo>&in;</mo>
-            <mi>&reals;</mi>
-            <mo lspace="0.2em">&ApplyFunction;</mo>
-            <msup><mi>x</mi><mn>2</mn></msup>
-            <mo>&minus;</mo><mn>1</mn>
-            <mo>=</mo><mn>0</mn>
-            <mo>(for all real numbers x, &hellip;)</mo>
+            <mn>3</mn>
+            <mo>&mid;</mo>
+            <mn>15</mn>
         </math>
     </td>
 </tr>
 <tr>
-    <td>existential quantifiers</td>
-    <td>存在記号</td>
+    <td>common divisior</td>
+    <td>
+        <ruby>
+            公約数
+            <rt>こうやくすう</rt>
+        </ruby>
+    </td>
     <td>
         <math>
-            <mo>&exist;</mo><mi>x</mi>
-            <mo>&in;</mo>
-            <mi>&reals;</mi>
-            <mo lspace="0.2em">&ApplyFunction;</mo>
-            <msup><mi>x</mi><mn>2</mn></msup>
-            <mo>&minus;</mo><mn>1</mn>
-            <mo>=</mo><mn>0</mn>
-            <mo>(there exists a real number x such that &hellip;)</mo>
+            <mn>1</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>4</mn>
+        </math> 
+        are common divisors of 
+        <math><mn>36</mn></math>
+        and 
+        <math><mn>40</mn></math>
+    </td>
+</tr>
+<tr>
+    <td>greatest common divisor</td>
+    <td>
+        <ruby>
+            最大
+            <rt>さいだい</rt>
+        </ruby>
+        <ruby>
+            公約数
+            <rt>こうやくすう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>28</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>36</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>40</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mn>4</mn>
         </math>
+    </td>
+</tr>
+<tr>
+    <td>Euclidean algorithm</td>
+    <td>
+        ユークリッド
+        <ruby>
+            互除法
+            <rt>ごじょほう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mrow>
+                <mi>m</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>q</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo>&plus;</mo>
+                <msub>
+                    <mi>r</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+            <mo separator="true" rspace="0.2em">&semi;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>q</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>r</mi>
+                        <mn>1</mn>
+                    </msub>
+                </mrow>
+                <mo>&plus;</mo>
+                <msub>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                </msub>
+            </mrow>
+            <mo separator="true">&semi;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&semi;</mo>
+            <mrow>
+                <msub>
+                    <mi>r</mi>
+                    <mrow>
+                        <mi>t</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msub>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>q</mi>
+                        <mrow>
+                            <mi>t</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>r</mi>
+                        <mi>t</mi>
+                    </msub>
+                </mrow>
+                <mo>&plus;</mo>
+                <mn>0</mn>
+            </mrow>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>prime</td>
+    <td>
+        <ruby>
+            素数
+            <rt>そすう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>3</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>5</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>7</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>11</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>13</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>17</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>19</mn>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>factorization</td>
+    <td>
+        <ruby>
+            因数
+            <rt>いんすう</rt>
+        </ruby>
+        <ruby>
+            分解
+            <rt>ぶんかい</rt>
+        </ruby>
+    </td>
+    <td></td>
+</tr>
+<tr>
+    <td>prime factorization</td>
+    <td>
+        <ruby>
+            素因数
+            <rt>そいんすう</rt>
+        </ruby>
+        <ruby>
+            分解
+            <rt>ぶんかい</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mn>180</mn>
+            <mo>&equals;</mo>
+            <mrow>
+                <msup>
+                    <mn>2</mn>
+                    <mn>2</mn>
+                </msup>
+                <mo>&middot;</mo>
+                <msup>
+                    <mn>3</mn>
+                    <mn>2</mn>
+                </msup>
+                <mo>&middot;</mo>
+                <msup>
+                    <mn>5</mn>
+                    <mn>1</mn>
+                </msup>
+            </mrow>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>fundamental theorem of arithmetic</td>
+    <td>
+        <ruby>
+            算術
+            <rt>さんじゅつ</rt>
+        </ruby>
+        の
+        <ruby>
+            基本
+            <rt>きほん</rt>
+        </ruby>
+        <ruby>
+            定理
+            <rt>ていり</rt>
+        </ruby>
+    </td>
+    <td>
+        every integer is a unique product of primes
+    </td>
+</tr>
+<tr>
+    <td>multiple</td>
+    <td>
+        <ruby>
+            倍数
+            <rt>ばいすう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <msup>
+                <mi>n</mi>
+                <mn>3</mn>
+            </msup>
+            <mo>&minus;</mo>
+            <mi>n</mi>
+        </math>
+        is a multiple of <math><mn>3</mn></math> for all 
+        <math>
+            <mi>n</mi>
+            <mo>&ge;</mo>
+            <mn>1</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>common multiple</td>
+    <td>
+        <ruby>
+            公
+            <rt>こう</rt>
+        </ruby>
+        <ruby>
+            倍数
+            <rt>ばいすう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math><mn>60</mn></math> is a common multiple of 
+        <math><mn>4</mn></math> and <math><mn>10</mn></math>
+    </td>
+</tr>
+<tr>
+    <td>least common multiple</td>
+    <td>
+        <ruby>
+            最小
+            <rt>さいしょう</rt>
+        </ruby>
+        <ruby>
+            公
+            <rt>こう</rt>
+        </ruby>
+        <ruby>
+            倍数
+            <rt>ばいすう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mi>lcm</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>4</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>6</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>10</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mn>60</mn>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>congruent modulo n</td>
+    <td>
+        nを
+        <ruby>
+            法
+            <rt>ほう</rt>
+        </ruby>
+        として
+        <ruby>
+            合同
+            <rt>ごうどう</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mi>a</mi>
+            <mo>and</mo>
+            <mi>b</mi>
+            <mo>are congruent modulo</mo>
+            <mi>n</mi>
+            <mo>if</mo>
+            <mi>n</mi>
+            <mo>&mid;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo>&minus;</mo>
+                <mi>b</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>modulus (<i>pl.</i> moduli)</td>
+    <td>
+        <ruby>
+            法
+            <rt>ほう</rt>
+        </ruby>
+    </td>
+    <td>
+        "n" in 
+        <math>
+            <mi>a</mi>
+            <mo>&equiv;</mo>
+            <mi>b</mi>
+            <mo rspace="0.4em">&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>mod</mi>
+                <mo>&ApplyFunction;</mo>
+                <mi>n</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>residue class</td>
+    <td>
+        <ruby>
+            剰余
+            <rt>じょうよ</rt>
+        </ruby>
+        <ruby>
+            類
+            <rt>るい</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mover>
+                <mi>a</mi>
+                <mo>&OverBar;</mo>
+            </mover>
+            <mo>&equals;</mo>
+            <mo fence="true">&lsqb;</mo>
+            <mi>a</mi>
+            <mo fence="true">&rsqb;</mo>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&in;</mo>
+                    <mi>&integers;</mi>
+                </mrow>
+                <mo separator="true">&verbar;</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&equiv;</mo>
+                    <mi>a</mi>
+                    <mo rspace="0.2em">&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>mod</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>Chinese remainder theorem</td>
+    <td>
+        <ruby>
+            中国
+            <rt>
+                ちゅうごく
+            </rt>
+        </ruby>
+        <ruby>
+            剰余
+            <rt>じょうよ</rt>
+        </ruby>
+        <ruby>
+            定理
+            <rt>ていり</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mo>&exist;</mo>
+                <mi>x</mi>
+                <mo>&in;</mo>
+                <mi>&integers;</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo rspace="0.2em">&ApplyFunction;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>&equiv;</mo>
+                <mrow>
+                    <mi>s</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>mod</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+            <mo>&and;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>&equiv;</mo>
+                <mrow>
+                    <mi>t</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>mod</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>inverse</td>
+    <td>
+        <ruby>
+            逆
+            <rt>ぎゃく</rt>
+        </ruby>
+        <ruby>
+            元
+            <rt>げん</rt>
+        </ruby>
+    </td>
+    <td>
+        <math>
+            <mrow>
+                <mover>
+                    <mi>b</mi>
+                    <mo>&OverBar;</mo>
+                </mover>
+                <mo>&middot;</mo>
+                <mover>
+                    <mi>a</mi>
+                    <mo>&OverBar;</mo>
+                </mover>
+            </mrow>
+            <mo>&equals;</mo>
+            <mover>
+                <mn>1</mn>
+                <mo>&OverBar;</mo>
+            </mover>
+        </math>
+    </td>
+</tr>
+<tr>
+    <td>field</td>
+    <td>
+        <ruby>
+            体
+            <rt>
+                たい
+            </rt>
+        </ruby>
+    </td>
+    <td>
+        every nonzero element has an inverse.
     </td>
 </tr>
 </table>
