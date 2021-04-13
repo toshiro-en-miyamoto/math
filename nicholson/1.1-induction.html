@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>1.1 Induction</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>1.1 Induction</h2>
+
+<section class="definition">
+    <h4>Principle of Mathematical Induction</h4>
+    <p>
+        Let 
+        <math>
+            <msub><mi>p</mi><mi>n</mi></msub>
+        </math>
+        be a statement for each integer 
+        <math>
+            <mi>n</mi><mo>&ge;</mo><mn>1</mn>
+        </math>. 
+        Suppose that the following conditions are satisfied:
+        <ol>
+            <li>
+                <math>
+                    <msub><mi>p</mi><mn>1</mn></msub>
+                </math>
+                is true. 
+            </li>
+            <li>
+                <math>
+                    <msub><mi>p</mi><mi>k</mi></msub>
+                    <mo>&Implies;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mrow>
+                            <mi>k</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                    <mo>for every</mo>
+                    <mi>k</mi><mo>&ge;</mo><mn>1</mn>
+                </math>. 
+            </li>
+        </ol>
+        Then 
+        <math>
+            <msub><mi>p</mi><mi>n</mi></msub>
+        </math>
+        is true for every 
+        <math>
+            <mi>n</mi><mo>&ge;</mo><mn>1</mn>
+        </math>. 
+    </p>
+</section>
+<section class="description">
+    <p>
+        In the proof that 
+        <math>
+            <msub><mi>p</mi><mi>k</mi></msub>
+            <mo>&Implies;</mo>
+            <msub>
+                <mi>p</mi>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+        </math>, 
+        we assume that 
+        <math>
+            <msub><mi>p</mi><mi>k</mi></msub>
+        </math> 
+        is true and use it to prove that 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+        </math> 
+        is also true. The assumption that 
+        <math>
+            <msub><mi>p</mi><mi>k</mi></msub>
+        </math> 
+        is true is called the <strong>induction hypothesis</strong>.
+    </p>
+</section>
+<section class="example">
+    <p>
+        <strong>Example 1.</strong>
+        Prove Gauss' Formula:
+        <math>
+            <mrow>
+                <mn>1</mn>
+                <mo>&plus;</mo>
+                <mn>2</mn>
+                <mo>&plus;</mo>
+                <mi>&hellip;</mi>
+                <mo>&plus;</mo>
+                <mi>n</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mn>&frac12;</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>for all</mo>
+                <mi>n</mi><mo>&ge;</mo><mn>1</mn>
+            </mrow>
+        </math>
+    </p>
+    <p>
+        <i>Solution.</i>
+        Let 
+        <math>
+            <msub><mi>p</mi><mi>n</mi></msub>
+        </math>
+        denote the statement. Then 
+        <math>
+            <msub><mi>p</mi><mn>1</mn></msub>
+        </math>
+        is true because 
+        <math>
+            <mn>1</mn>
+            <mo>&equals;</mo>
+            <mn>&frac12;</mn>
+            <mo>&InvisibleTimes;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>1</mn>
+                <mo>&plus;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>. 
+        If we assume that 
+        <math>
+            <msub><mi>p</mi><mi>k</mi></msub>
+        </math>
+        is true for some 
+        <math>
+            <mi>k</mi><mo>&ge;</mo><mn>1</mn>
+        </math>, 
+        we get 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mn>1</mn>
+                <mo>&plus;</mo>
+                <mn>2</mn>
+                <mo>&plus;</mo>
+                <mn>3</mn>
+                <mo>&plus;</mo>
+                <mi>&hellip;</mi>
+                <mo>&plus;</mo>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mn>&frac12;</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>k</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&plus;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mn>&frac12;</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>2</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        which shows that 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+        </math>
+        is true. Hence, 
+        <math>
+            <msub><mi>p</mi><mi>n</mi></msub>
+        </math>
+        is true for all 
+        <math>
+            <mi>n</mi><mo>&ge;</mo><mn>1</mn>
+        </math>
+        by the principle of mathematical induction. 
+        &marker;
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>Theorem 1 &ndash; Principle of Mathematical Induction</h4>
+    <p>
+        If <math><mi>m</mi></math> is any integer, let 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mi>m</mi>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>p</mi>
+                <mrow>
+                    <mi>m</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>p</mi>
+                <mrow>
+                    <mi>m</mi>
+                    <mo>&plus;</mo>
+                    <mn>2</mn>
+                </mrow>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+        </math>
+        be statements such that
+        <ol>
+            <li>
+                <math>
+                    <msub>
+                        <mi>p</mi>
+                        <mi>m</mi>
+                    </msub>
+                </math>
+                is true 
+            </li>
+            <li>
+                <math>
+                    <msub>
+                        <mi>p</mi>
+                        <mi>k</mi>
+                    </msub>
+                    <mo>&Implies;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mrow>
+                            <mi>k</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                    <mo>for every</mo>
+                    <mi>k</mi>
+                    <mo>&ge;</mo>
+                    <mi>m</mi>
+                </math>
+            </li>
+        </ol>
+        Then 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        is true for each 
+        <math>
+            <mi>n</mi>
+            <mo>&ge;</mo>
+            <mi>m</mi>
+        </math>. 
+    </p>
+</section>
+<section class="example">
+    <p>
+        <strong>Example 5.</strong>
+        Show that 
+        <math>
+            <msup><mn>2</mn><mi>n</mi></msup>
+            <mo>&lt;</mo>
+            <mi>n</mi><mo>&excl;</mo>
+        </math>
+        for all 
+        <math>
+            <mi>n</mi><mo>&ge;</mo><mn>4</mn>
+        </math>. 
+    </p>
+    <p>
+        <i>Solution.</i>
+        If 
+        <math>
+            <msub><mi>p</mi><mi>k</mi></msub>
+        </math>
+        is the statement 
+        <math>
+            <msup><mn>2</mn><mi>k</mi></msup>
+            <mo>&lt;</mo>
+            <mi>k</mi><mo>&excl;</mo>
+        </math>, 
+        note that 
+        <math>
+            <msub><mi>p</mi><mn>1</mn></msub>
+        </math>, 
+        <math>
+            <msub><mi>p</mi><mn>2</mn></msub>
+        </math>, and 
+        <math>
+            <msub><mi>p</mi><mn>3</mn></msub>
+        </math>
+        are actually false, but 
+        <math>
+            <msub><mi>p</mi><mn>4</mn></msub>
+        </math>
+        is true because 
+        <math>
+            <msup><mn>2</mn><mn>4</mn></msup>
+            <mo>&equals;</mo>
+            <mn>16</mn>
+            <mo>&lt;</mo>
+            <mn>24</mn>
+            <mo>&equals;</mo>
+            <mn>4</mn><mo>&excl;</mo>
+        </math>. 
+        If 
+        <math>
+            <msub><mi>p</mi><mi>k</mi></msub>
+        </math>
+        is true where 
+        <math>
+            <mi>k</mi><mo>&ge;</mo><mn>4</mn>
+        </math>, 
+        then 
+        <math>
+            <msup><mn>2</mn><mi>k</mi></msup>
+            <mo>&lt;</mo>
+            <mi>k</mi><mo>&excl;</mo>
+        </math>, 
+        so 
+        <math>
+            <msup>
+                <mn>2</mn>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msup>
+            <mo>&equals;</mo>
+            <mrow>
+                <mn>2</mn>
+                <mo>&middot;</mo>
+                <msup><mn>2</mn><mi>k</mi></msup>
+            </mrow>
+            <mo>&lt;</mo>
+            <mrow>
+                <mn>2</mn>
+                <mo>&middot;</mo>
+                <mi>k</mi><mo>&excl;</mo>
+            </mrow>
+            <mo>&lt;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mi>k</mi><mo>&excl;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&excl;</mo>
+            </mrow>
+        </math>
+        Hence, 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+        </math>
+        is true and the induction is complete. 
+        &marker;
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>Theorem 2 &ndash; Principle of Strong Induction</h4>
+    <p>
+        Let <math><mi>m</mi></math> be an integer and, for each 
+        <math>
+            <mi>n</mi><mo>&ge;</mo><mi>m</mi>
+        </math>, 
+        let 
+        <math>
+            <msub><mi>p</mi><mi>n</mi></msub>
+        </math>
+        be a statement. Suppose the following conditions are satisfied.
+        <ol>
+            <li>
+                <math>
+                    <msub><mi>p</mi><mi>m</mi></msub>
+                </math>
+                is true. 
+            </li>
+            <li>
+                If 
+                <math>
+                    <mi>k</mi><mo>&ge;</mo><mi>m</mi>
+                </math> 
+                and all of 
+                <math>
+                    <msub><mi>p</mi><mi>m</mi></msub>
+                    <mo separator="true">&comma;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mrow>
+                            <mi>m</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                    <mo separator="true">&comma;</mo>
+                    <mi>&hellip;</mi>
+                    <mo separator="true">&comma;</mo>
+                    <msub><mi>p</mi><mi>k</mi></msub>
+                </math>
+                are true, then 
+                <math>
+                    <msub>
+                        <mi>p</mi>
+                        <mrow>
+                            <mi>k</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                </math>
+                is also true.
+            </li>
+        </ol>
+        Then 
+        <math>
+            <msub><mi>p</mi><mi>n</mi></msub>
+        </math>
+        is true for every 
+        <math>
+            <mi>n</mi><mo>&ge;</mo><mi>m</mi>
+        </math>. 
+    </p>
+</section>
+<section class="example">
+    <p>
+        <strong>Example 7.</strong>
+        Show that every integer 
+        <math>
+            <mi>n</mi><mo>&ge;</mo><mn>2</mn>
+        </math>
+        is a product of (one or more) primes.
+    </p>
+    <p>
+        <i>Solution.</i>
+        This assertion is true if 
+        <math>
+            <mi>n</mi><mo>&equals;</mo><mn>2</mn>
+        </math>
+        because <math><mn>2</mn></math> is a prime.
+        If 
+        <math>
+            <mi>k</mi><mo>&ge;</mo><mn>2</mn>
+        </math>, 
+        we assume inductively that 
+        <math>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>3</mn>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>k</mi>
+        </math>
+        are all products of primes.
+        To apply strong induction, we must show that 
+        <math>
+            <mi>k</mi><mo>&plus;</mo><mn>1</mn>
+        </math>
+        is a product of primes.
+        This is clear if 
+        <math>
+            <mi>k</mi><mo>&plus;</mo><mn>1</mn>
+        </math>
+        is itself prime; otherwise, 
+        let 
+        <math>
+            <mrow>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+            </mrow>
+        </math>, 
+        where 
+        <math>
+            <mn>2</mn>
+            <mo>&le;</mo>
+            <mi>a</mi>
+            <mo>&le;</mo>
+            <mi>k</mi>
+        </math>
+        and 
+        <math>
+            <mn>2</mn>
+            <mo>&le;</mo>
+            <mi>b</mi>
+            <mo>&le;</mo>
+            <mi>k</mi>
+        </math>. 
+        Then both 
+        <math><mi>a</mi></math> and <math><mi>b</mi></math>
+        are products of primes by the induction hypothesis, so 
+        <math>
+            <mrow>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+            </mrow>
+        </math> 
+        is also a product of primes. 
+        &marker;
+    </p>
+</section>
+
+<section id="well-ordering" class="definition">
+    <h4>Well-Ordered</h4>
+    <p>
+        A totally ordered set in which every nonempty subset has 
+        a least element is said to be <i>well-ordered</i>. 
+        (Carol Schumacher)
+    </p>
+    <p>
+        <math><mi>&naturals;</mi></math> is well-ordered; 
+        Every nonempty set of nonnegative integers has a smallest member.
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        If the principle is false, let 
+        <math>
+            <mi>X</mi>
+            <mo>&in;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mn>0</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>1</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+        be a nonempty set that has no smallest member. For each 
+        <math>
+            <mi>n</mi><mo>&ge;</mo><mn>0</mn>
+        </math>, 
+        let 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        be the statement 
+        <math>
+            <mi>n</mi>
+            <mo>&notin;</mo>
+            <mi>X</mi>
+        </math>.
+        
+        It suffices to show that 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        is true for all 
+        <math>
+            <mi>n</mi>
+            <mo>&ge;</mo>
+            <mn>0</mn>
+        </math>
+        &mdash; since then X is empty, 
+        contrary to our assumption. We prove this by strong induction. 
+    </p>
+    <ul>
+        <li>
+            First, 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mn>0</mn>
+                </msub>
+            </math>
+            is true because if 
+            <math>
+                <mn>0</mn>
+                <mo>&in;</mo>
+                <mi>X</mi>
+            </math>, 
+            then it is the smallest member of <math><mi>X</mi></math>
+            (because 
+            <math>
+                <mi>X</mi>
+                <mo>&in;</mo>
+                <mo fence="true">&lbrace;</mo>
+                <mn>0</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>1</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+                <mo fence="true">&rbrace;</mo>
+            </math>). 
+        </li>
+        <li>
+            Now assume inductively that 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mn>0</mn>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>p</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>p</mi>
+                    <mi>k</mi>
+                </msub>
+            </math>
+            are all true, so that none of 
+            <math>
+                <mn>0</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>1</mn>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>k</mi>
+            </math>
+            is in <math><mi>X</mi></math>. 
+            This implies that 
+            <math>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo>&notin;</mo>
+                <mi>X</mi>
+        </math>
+            since otherwise it would be the smallest member of 
+            <math><mi>X</mi></math>. 
+            This means 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msub>
+            </math>
+            is true, 
+        </li>
+    </ul>
+    <p>
+        and so completes the induction. 
+        &marker;
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>Theorem 3 &ndash; Recursion Theorem</h4>
+    <p>
+        Given a set <math><mi>A</mi></math> and 
+        <math>
+            <mi>a</mi><mo>&in;</mo><mi>A</mi>
+        </math>, 
+        there is exactly one sequence 
+        <math>
+            <msub><mi>a</mi><mn>0</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>a</mi><mn>2</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>a</mi><mn>3</mn></msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>a</mi><mi>n</mi></msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+        </math>
+        from <math><mi>A</mi></math> 
+        that satisfies the following requirements:
+        <ol>
+            <li>
+                <math>
+                    <msub><mi>a</mi><mn>0</mn></msub>
+                    <mo>&equals;</mo>
+                    <mi>a</mi>
+                </math>
+            </li>
+            <li>
+                For each 
+                <math>
+                    <mi>n</mi><mo>&ge;</mo><mn>1</mn>
+                </math>, 
+                the term an is uniquely determined by the preceding terms 
+                <math>
+                    <msub><mi>a</mi><mn>0</mn></msub>
+                    <mo separator="true">&comma;</mo>
+                    <msub><mi>a</mi><mn>1</mn></msub>
+                    <mo separator="true">&comma;</mo>
+                    <msub><mi>a</mi><mn>2</mn></msub>
+                    <mo separator="true">&comma;</mo>
+                    <mi>&hellip;</mi>
+                    <mo separator="true">&comma;</mo>
+                    <msub>
+                        <mi>a</mi>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                </math>
+            </li>
+        </ol>
+    </p>
+</section>
+
+<section class="description">
+    <h4>Inductive Definition</h4>
+    <p>
+        <math>
+            <mn>1</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>4</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>8</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>16</mn>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+        </math>
+        are the first five terms of the <i>sequence</i> 
+        <math>
+            <msub><mi>a</mi><mi>n</mi></msub>
+            <mo>&equals;</mo>
+            <msup><mn>2</mn><mi>n</mi></msup>
+            <mo>from</mo>
+            <mi>&integers;</mi>
+        </math>. 
+        This sequence can be compactly described as follows:
+    </p>
+    <figure>
+        <math>
+            <msub><mi>a</mi><mn>0</mn></msub>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>
+        and <br>
+        <math>
+            <msub><mi>a</mi><mi>n</mi></msub>
+            <mo>&equals;</mo>
+            <mn>2</mn>
+            <mo>&middot;</mo>
+            <msub>
+                <mi>a</mi>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+            <mo>for each</mo>
+            <mi>n</mi>
+            <mo>&ge;</mo>
+            <mn>1</mn>
+        </math>
+    </figure>
+    <p>
+        These conditions uniquely describe the sequence, 
+        and for this reason the above definition is 
+        called an <i>inductive definition</i>. 
+        Theorem 3 shows that 
+        such a sequence always exists and is uniquely determined.
+    </p>
+</section>
+</body>
+</html>

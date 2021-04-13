@@ -1,0 +1,4427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>1.2 Divisors and Prime Factorization</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>1.2 Divisors and Prime Factorization</h2>
+
+<h3>The Greatest Common Divisor</h3>
+<section class="description">
+    <p>
+        When we write 
+        <math>
+            <mn>22</mn>
+            <mo>&frasl;</mo>
+            <mn>7</mn>
+        </math>
+        in the form 
+        <math>
+            <mn>3</mn>
+            <mo>&#x2064<!--Invisible Plus--></mo>
+            <mfrac>
+                <mn>1</mn>
+                <mn>7</mn>
+            </mfrac>
+        </math>
+        we are using the fact that 
+        <math>
+            <mn>22</mn>
+            <mo>&equals;</mo>
+            <mn>3</mn>
+            <mo>&middot;</mo>
+            <mn>7</mn>
+            <mo>&plus;</mo>
+            <mn>1</mn>
+        </math>; 
+        that is, <math><mn>22</mn></math> leaves 
+        a remainder of <math><mn>1</mn></math>
+        when divided by <math><mn>7</mn></math>. 
+        The general result is a consequence of the well-ordering axiom.
+    </p>
+</section>
+<section id="division" class="theorem">
+    <h4>Theorem 1 &ndash; Division Algorithm</h4>
+    <p>
+        Let 
+        <math>
+            <mi>n</mi>
+            <mo>&in;</mo>
+            <mi>&integers;</mi>
+        </math>
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&in;</mo>
+            <mi>&naturals;</mi>
+        </math>
+        with 
+        <math>
+            <mn>0</mn>
+            <mo>&lt;</mo>
+            <mi>d</mi>
+        </math>. 
+        Then there exist uniquely determined integers 
+        <math><mi>q</mi></math> and <math><mi>r</mi></math> 
+        such that 
+    </p>
+    <figure>
+        <math>
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mi>n</mi>
+                        <mo>&equals;</mo>
+                        <mi>q</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>d</mi>
+                        <mo>&plus;</mo>
+                        <mi>r</mi>
+                    </mtd>
+                    <mtd>
+                        <mtext>and</mtext>
+                    </mtd>
+                    <mtd>
+                        <mn>0</mn>
+                        <mo>&le;</mo>
+                        <mi>r</mi>
+                        <mo>&lt;</mo>
+                        <mi>d</mi>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </figure>
+    <p>
+        Where 
+        (<code>q</code>) is called the <i>quotient</i>; 
+        (<code>r</code>) <i>remainder</i>; 
+    </p>
+</section>
+<section class="example">
+    <p>
+        If 
+        <math>
+            <mi>n</mi>
+            <mo>&equals;</mo>
+            <mn>4187</mn>
+        </math>
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mn>129</mn>
+        </math>, 
+        then we have 
+        <math>
+            <mi>n</mi>
+            <mo>&frasl;</mo>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mn>32.457</mn>
+        </math>
+        approximately, so 
+    </p>
+    <ul>
+        <li>
+            the quotient 
+            <math>
+                <mi>q</mi>
+                <mo>&equals;</mo>
+                <mn>32</mn>
+            </math>
+        </li>
+        <li>
+            the remainder 
+            <math>
+                <mi>r</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mi>d</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>q</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>59</mn>
+            </math>
+        </li>
+    </ul>
+</section>
+
+<section id="divisor" class="definition">
+    <h4>Divisor</h4>
+    <p>
+        Let 
+        <math>
+            <mi>n</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>d</mi>
+            <mo>&in;</mo>
+            <mi>&integers;</mi>
+        </math>. 
+        <math><mi>d</mi></math>
+        is called a <i>divisor</i> of 
+        <math><mi>n</mi></math> 
+        if 
+    </p>
+    <figure>
+        there exists 
+        <math>
+            <mi>q</mi>
+            <mo>&in;</mo>
+            <mi>&integers;</mi>
+        </math>
+        such that 
+        <math>
+            <mi>n</mi>
+            <mo>&equals;</mo>
+            <mi>q</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>d</mi>
+        </math>
+    </figure>
+    <p>
+        Then we write 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>n</mi>
+        </math>. 
+    </p>
+</section>
+<section class="example">
+    <p>
+        If 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>n</mi>
+        </math> 
+        is not true, we write 
+        <math>
+            <mi>d</mi>
+            <mo>&nmid;</mo>
+            <mi>n</mi>
+        </math>. 
+        Thus 
+        <math>
+            <mn>7</mn>
+            <mo>&mid;</mo>
+            <mn>84</mn>
+        </math>
+        but 
+        <math>
+            <mn>7</mn>
+            <mo>&nmid;</mo>
+            <mn>85</mn>
+        </math>. 
+    </p>
+    <ul>
+        <li>
+            <math>
+                <mn>1</mn>
+                <mo>&mid;</mo>
+                <mi>n</mi>
+            </math>
+            for all integers <math><mi>n</mi></math>, 
+            because there exists 
+            <math>
+                <mi>q</mi>
+                <mo>&equals;</mo>
+                <mi>n</mi>
+            </math>
+            such that 
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mi>n</mi>
+                <mo>&middot;</mo>
+                <mn>1</mn>
+            </math>. 
+        </li>
+        <li>
+            <math>
+                <mi>d</mi>
+                <mo>&mid;</mo>
+                <mn>0</mn>
+            </math>
+            for all integers <math><mi>d</mi></math>, 
+            because 
+            there exists 
+            <math>
+                <mi>q</mi>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>
+            such that 
+            <math>
+                <mn>0</mn>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+                <mo>&middot;</mo>
+                <mi>d</mi>
+            </math>.
+    
+        </li>
+    </ul>
+</section>
+
+<section class="theorem">
+    <h4>Theorem 2</h4>
+    <p>
+        Let 
+        <math>
+            <mi>m</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo>and</mo>
+            <mi>d</mi>
+        </math>
+        denote integers.
+    </p>
+    <ol>
+        <li>
+            for all integers <math><mi>n</mi></math>,
+            <math>
+                <mi>n</mi>
+                <mo>&mid;</mo>
+                <mi>n</mi>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>d</mi>
+                        <mo>&mid;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&and;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>m</mi>
+                        <mo>&mid;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&mid;</mo>
+                    <mi>n</mi>
+                </mrow>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>d</mi>
+                        <mo>&mid;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&and;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&mid;</mo>
+                        <mi>d</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&equals;</mo>
+                    <mo>&PlusMinus;</mo>
+                    <mi>n</mi>
+                </mrow>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>d</mi>
+                        <mo>&mid;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&and;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>d</mi>
+                        <mo>&mid;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&mid;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>n</mi>
+                        <mo>&plus;</mo>
+                        <mi>y</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>
+            for all integers 
+            <math><mi>x</mi></math> and <math><mi>y</mi></math>
+        </li>
+    </ol>
+</section>
+
+<section class="example">
+    <p>
+        <strong>Linear Combinations:</strong>
+        As in Theorem 2 (4), expressions of the form 
+        <math>
+            <mi>x</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>n</mi>
+            <mo>&plus;</mo>
+            <mi>y</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>m</mi>
+        </math>, 
+        where 
+        <math><mi>x</mi></math> and <math><mi>y</mi></math>
+        are integers, are called 
+        <i>linear combinations</i> of 
+        <math><mi>n</mi></math> and <math><mi>m</mi></math>. 
+    </p>
+</section>
+<section class="example">
+    <p>
+        <i>Example 2.</i>
+        If 
+        <math>
+            <mi>d</mi>
+            <mo>&ge;</mo>
+            <mn>1</mn>
+        </math>
+        is such that 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>3</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>5</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>7</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>2</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        for some <math><mi>k</mi></math>, 
+        show that 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>
+        or 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mn>29</mn>
+        </math>. 
+    </p>
+    <p>
+        <i>Solutions.</i>
+        The hypotheses and (4) of Theorem 2 imply that 
+        <math><mi>d</mi></math> divides the linear combination 
+        <math>
+            <mrow>
+                <mrow>
+                    <mn>7</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mn>3</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>k</mi>
+                        <mo>&plus;</mo>
+                        <mn>5</mn>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&minus;</mo>
+                <mrow>
+                    <mn>3</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mn>7</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>k</mi>
+                        <mo>&plus;</mo>
+                        <mn>2</mn>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mn>35</mn>
+                <mo>&minus;</mo>
+                <mn>6</mn>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>29</mn>
+        </math>. 
+        Hence, <math><mi>d</mi></math> 
+        is a positive divisor of <math><mn>29</mn></math>, so 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>
+        or 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mn>29</mn>
+        </math>. 
+    </p>
+</section>
+
+<section id="common-divisor" class="definition">
+    <h4>Common Divisors</h4>
+    <p>
+        An integer <math><mi>d</mi></math> is called 
+        a <i>common divisor</i> of two integers 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        if 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>m</mi>
+        </math>
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>n</mi>
+        </math>. 
+    </p>
+</section>
+<section class="example">
+    <p>
+        Consider the positive divisors of 36 and 84:
+    </p>
+    <ul>
+        <li>
+            Positive divisors of 
+            <math><mn>36</mn></math>: 
+            <math>
+                <mn>1</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>3</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>4</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>6</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>9</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>12</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>18</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>36</mn>
+            </math>
+        </li>
+        <li>
+            Positive divisors of 
+            <math><mn>84</mn></math>: 
+            <math>
+                <mn>1</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>3</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>4</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>6</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>7</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>12</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>14</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>21</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>28</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>42</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>84</mn>
+            </math>
+        </li>
+        <li>
+            Common divisors: 
+            <math>
+                <mn>1</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>3</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>4</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>6</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>12</mn>
+            </math>
+        </li>
+    </ul>
+</section>
+
+<section id="gcd" class="definition">
+    <h4>Greatest Common Divisors</h4>
+    <p>
+        Let 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        be integers.
+        An integer <math><mi>d</mi></math>
+        is called a <i>greatest common divisor</i> of 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        if: 
+    </p>
+    <ol>
+        <li>
+            <math>
+                <mi>d</mi>
+                <mo>&ge;</mo>
+                <mn>1</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&mid;</mo>
+                    <mi>m</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&and;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&mid;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </math>     
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo>&mid;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&and;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo>&mid;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&mid;</mo>
+                    <mi>d</mi>
+                </mrow>
+            </math>
+        </li>
+    </ol>
+    <p>
+        When it exists we write 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>m</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo fence="true">&rpar;</mo>
+        </math>. 
+    </p>
+</section>
+<section class="example">
+    <p>
+        For example, 
+        <math>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mn>18</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>30</mn>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mn>6</mn>
+        </math>, 
+        <math>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mn>6</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>7</mn>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>, 
+        and 
+        <math>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mo>&minus;</mo><mn>9</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>15</mn>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mn>3</mn>
+        </math>. 
+    </p>
+</section>
+<section class="description">
+    <p>
+        <math>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>m</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo fence="true">&rpar;</mo>
+        </math> 
+        is a common divisor of 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        by (2), which is a multiple of every common divisor by (3). 
+        If it exists, 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>m</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo fence="true">&rpar;</mo>
+        </math> 
+        is unique. In fact, if 
+        <math><mi>d</mi><mo>&prime;</mo></math>
+        is another integer satisfying (1), (2), and (3), then 
+        <math>
+            <mi>d</mi><mo>&prime;</mo>
+            <mo>&mid;</mo>
+            <mi>d</mi>
+        </math>
+        by (3). Similarly, 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>d</mi><mo>&prime;</mo>
+        </math>
+        so 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mo>&PlusMinus;</mo><mi>d</mi><mo>&prime;</mo>
+        </math>
+        by Theorem 2. But then 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mi>d</mi><mo>&prime;</mo>
+        </math>
+        because we insist that greatest common divisors are positive.
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>Theorem 3</h4>
+    <p>
+        Let 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        be integers, not both zero. Then 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>m</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo fence="true">&rpar;</mo>
+        </math> 
+        exists and 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>m</mi>
+                <mo>&plus;</mo>
+                <mi>y</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+            </mrow>
+        </math>
+        for some integers 
+        <math><mi>x</mi></math> and <math><mi>y</mi></math>. 
+    </p>
+</section>
+<section class="example">
+    <p>
+        The greatest common divisor of 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math> 
+        can be a linear combination of 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math> 
+        in more than one way.
+        For example, 
+        <math>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mn>36</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>84</mn>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mn>12</mn>
+        </math>
+        and we have 
+    </p>
+    <figure>
+        <math>
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&equals;</mo>
+                            <mn>5</mn>
+                        </mrow>
+                        <mo separator="true">&comma;</mo>
+                        <mrow>
+                            <mi>y</mi>
+                            <mo>&equals;</mo>
+                            <mo>&minus;</mo><mn>2</mn>
+                        </mrow>
+                        <mo separator="true">&colon;</mo>
+                    </mtd>
+                    <mtd>
+                        <mrow>
+                            <mn>5</mn>
+                            <mo>&middot;</mo>
+                            <mn>36</mn>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <mrow>
+                            <mo fence="true">&lpar;</mo>
+                            <mo>&minus;</mo><mn>2</mn>
+                            <mo fence="true">&rpar;</mo>
+                            <mo>&middot;</mo>
+                            <mn>84</mn>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mn>180</mn>
+                            <mo>&minus;</mo>
+                            <mn>168</mn>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&equals;</mo>
+                            <mo>&minus;</mo><mn>2</mn>
+                        </mrow>
+                        <mo separator="true">&comma;</mo>
+                        <mrow>
+                            <mi>y</mi>
+                            <mo>&equals;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                        <mo separator="true">&colon;</mo>
+                    </mtd>
+                    <mtd>
+                        <mrow>
+                            <mo fence="true">&lpar;</mo>
+                            <mo>&minus;</mo><mn>2</mn>
+                            <mo fence="true">&rpar;</mo>
+                            <mo>&middot;</mo>
+                            <mn>36</mn>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <mrow>
+                            <mn>1</mn>
+                            <mo>&middot;</mo>
+                            <mn>84</mn>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mo>&minus;</mo><mn>72</mn>
+                            <mo>&plus;</mo>
+                            <mn>84</mn>
+                        </mrow>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </figure>
+</section>
+<section class="example">
+    <p>
+        <strong>Example 3.</strong>
+        If 
+        <math><mi>p</mi></math> and <math><mi>q</mi></math>
+        are distinct primes, then 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>p</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>q</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>
+    </figure>
+    <p>
+        <i>Solution.</i> Write 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>p</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>q</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+        Then 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>p</mi>
+        </math>,
+        so 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+            <mo>or</mo>
+            <mi>p</mi>
+        </math>
+        (because <math><mi>p</mi></math> is a prime). 
+        Similarly, 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+            <mo>or</mo>
+            <mi>q</mi>
+        </math>. 
+        Therefore 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>
+        because, otherwise, 
+        <math>
+            <mi>p</mi>
+            <mo>&equals;</mo>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mi>q</mi>
+        </math>
+        is contrary to the assumption that 
+        <math>
+            <mi>p</mi>
+            <mo>&ne;</mo>
+            <mi>q</mi>
+        </math>. 
+    </p>
+</section>
+<section class="example">
+    <p>
+        <strong>Example 4.</strong>
+        If 
+        <math>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>q</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+                <mo>&plus;</mo>
+                <mi>r</mi>
+            </mrow>
+        </math>, 
+        then 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>n</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>r</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        <i>Solution.</i> Write 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+        and 
+        <math>
+            <mi>k</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>n</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>r</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+        Then <math><mi>k</mi></math> divides both 
+        <math><mi>n</mi></math> and <math><mi>r</mi></math>
+        and so divides 
+        <math>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>q</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+                <mo>&plus;</mo>
+                <mi>r</mi>
+            </mrow>
+        </math>. 
+        Thus, <math><mi>k</mi></math> is a common divisor of 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>, 
+        so 
+        <math>
+            <mi>k</mi>
+            <mo>&mid;</mo>
+            <mi>d</mi>
+        </math>
+        because 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+        A similar argument (using 
+        <math>
+            <mi>r</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo>&minus;</mo>
+                <mi>q</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+                <mo>&plus;</mo>
+                <mi>m</mi>
+            </mrow>
+        </math>) 
+        shows that 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>k</mi>
+        </math>, 
+        so 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mo>&PlusMinus;</mo>
+            <mi>k</mi>
+        </math>
+        by (3) of Theorem 2. Hence, 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mi>k</mi>
+        </math>, 
+        because both 
+        <math><mi>d</mi></math> and <math><mi>k</mi></math>
+        are positive.
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>The Euclidean algorithm</h4>
+    <p>
+        How do we compute 
+    </p>
+    <figure>
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        in general? For positive integers 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>, 
+        not both zero, we use the division algorithm repeatedly:
+    </p>
+    <figure>
+        <math>
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mi>m</mi>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <msub>
+                                <mi>q</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>n</mi>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <msub>
+                            <mi>r</mi>
+                            <mn>1</mn>
+                        </msub>
+                    </mtd>
+                    <mtd>
+                        &Implies;
+                    </mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>gcd</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>m</mi>
+                                <mo separator="true">&comma;</mo>
+                                <mi>n</mi>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>gcd</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>n</mi>
+                                <mo separator="true">&comma;</mo>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mn>1</mn>
+                                </msub>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mi>n</mi>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <msub>
+                                <mi>q</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo>&InvisibleTimes;</mo>
+                            <msub>
+                                <mi>r</mi>
+                                <mn>1</mn>
+                            </msub>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <msub>
+                            <mi>r</mi>
+                            <mn>2</mn>
+                        </msub>
+                    </mtd>
+                    <mtd>
+                        &Implies;
+                    </mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>gcd</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>n</mi>
+                                <mo separator="true">&comma;</mo>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mn>1</mn>
+                                </msub>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>gcd</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo separator="true">&comma;</mo>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mn>2</mn>
+                                </msub>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <msub>
+                            <mi>r</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <msub>
+                                <mi>q</mi>
+                                <mn>3</mn>
+                            </msub>
+                            <mo>&InvisibleTimes;</mo>
+                            <msub>
+                                <mi>r</mi>
+                                <mn>2</mn>
+                            </msub>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <msub>
+                            <mi>r</mi>
+                            <mn>3</mn>
+                        </msub>
+                    </mtd>
+                    <mtd>
+                        &Implies;
+                    </mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>gcd</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo separator="true">&comma;</mo>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mn>2</mn>
+                                </msub>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>gcd</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo separator="true">&comma;</mo>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mn>3</mn>
+                                </msub>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd class="center-aligned">&vellip;</mtd>
+                    <mtd class="center-aligned">&vellip;</mtd>
+                    <mtd class="center-aligned">&vellip;</mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <msub>
+                            <mi>r</mi>
+                            <mrow>
+                                <mi>t</mi>
+                                <mo>&minus;</mo>
+                                <mn>2</mn>
+                            </mrow>
+                        </msub>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <msub>
+                                <mi>q</mi>
+                                <mi>t</mi>
+                            </msub>
+                            <mo>&InvisibleTimes;</mo>
+                            <msub>
+                                <mi>r</mi>
+                                <mrow>
+                                    <mi>t</mi>
+                                    <mo>&minus;</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                            </msub>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <msub>
+                            <mi>r</mi>
+                            <mi>t</mi>
+                        </msub>
+                    </mtd>
+                    <mtd>
+                        &Implies;
+                    </mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>gcd</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mrow>
+                                        <mi>t</mi>
+                                        <mo>&minus;</mo>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msub>
+                                <mo separator="true">&comma;</mo>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mrow>
+                                        <mi>t</mi>
+                                        <mo>&minus;</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                </msub>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>gcd</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mrow>
+                                        <mi>t</mi>
+                                        <mo>&minus;</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                </msub>
+                                <mo separator="true">&comma;</mo>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mi>t</mi>
+                                </msub>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <msub>
+                            <mi>r</mi>
+                            <mrow>
+                                <mi>t</mi>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msub>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <msub>
+                                <mi>q</mi>
+                                <mrow>
+                                    <mi>t</mi>
+                                    <mo>&plus;</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                            </msub>
+                            <mo>&InvisibleTimes;</mo>
+                            <msub>
+                                <mi>r</mi>
+                                <mi>t</mi>
+                            </msub>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <mn>0</mn>
+                    </mtd>
+                    <mtd>
+                        &Implies;
+                    </mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>gcd</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mrow>
+                                        <mi>t</mi>
+                                        <mo>&minus;</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                </msub>
+                                <mo separator="true">&comma;</mo>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mi>t</mi>
+                                </msub>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>gcd</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <msub>
+                                    <mi>r</mi>
+                                    <mi>t</mi>
+                                </msub>
+                                <mo separator="true">&comma;</mo>
+                                <mn>0</mn>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                    </mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <msub>
+                                <mi>r</mi>
+                                <mi>t</mi>
+                            </msub>
+                        </mrow>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </figure>
+</section>
+<section class="example">
+    <p>
+        To illustrate how it works, consider the numbers 
+        <math><mn>78</mn></math> and <math><mn>30</mn></math>. 
+        The idea is to use the division algorithm repeatedly. 
+        First divide 
+        <math><mn>78</mn></math> by <math><mn>30</mn></math>. 
+        At each stage (after the first) we divide the divisor 
+        at the previous stage by the remainder at that stage. 
+        The last nonzero remainder is 6, and this equals 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mn>78</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>30</mn>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+    </p>
+    <figure>
+        <math>
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mn>78</mn>
+                        <mo>&equals;</mo>
+                        <mn>2</mn>
+                        <mo>&middot;</mo>
+                        <mn>30</mn>
+                        <mo>&plus;</mo>
+                        <mn>18</mn>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mn>30</mn>
+                        <mo>&equals;</mo>
+                        <mn>1</mn>
+                        <mo>&middot;</mo>
+                        <mn>18</mn>
+                        <mo>&plus;</mo>
+                        <mn>12</mn>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mn>18</mn>
+                        <mo>&equals;</mo>
+                        <mn>1</mn>
+                        <mo>&middot;</mo>
+                        <mn>12</mn>
+                        <mo>&plus;</mo>
+                        <mn>6</mn>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mn>12</mn>
+                        <mo>&equals;</mo>
+                        <mn>2</mn>
+                        <mo>&middot;</mo>
+                        <mn>6</mn>
+                        <mo>&plus;</mo>
+                        <mn>0</mn>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </figure>
+    <p>
+        To express <math><mn>6</mn></math> as a linear combination of 
+        <math><mn>78</mn></math> and <math><mn>30</mn></math>, 
+        eliminate the remainders from the second last lineup:
+    </p>
+    <figure>
+        <math>
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mn>6</mn>
+                    </mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <mn>18</mn>
+                        <mo>&minus;</mo>
+                        <mrow>
+                            <mn>1</mn>
+                            <mo>&middot;</mo>
+                            <mn>12</mn>
+                        </mrow>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd></mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <mn>18</mn>
+                        <mo>&minus;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mn>30</mn>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                            <mo>&middot;</mo>
+                            <mn>18</mn>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd></mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mn>2</mn>
+                            <mo>&middot;</mo>
+                            <mn>18</mn>
+                        </mrow>
+                        <mo>&minus;</mo>
+                        <mn>30</mn>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd></mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <mn>2</mn>
+                        <mo>&middot;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mn>78</mn>
+                            <mo>&minus;</mo>
+                            <mn>2</mn>
+                            <mo>&middot;</mo>
+                            <mn>30</mn>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&minus;</mo>
+                        <mn>30</mn>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd></mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mn>2</mn>
+                            <mo>&middot;</mo>
+                            <mn>78</mn>
+                        </mrow>
+                        <mo>&minus;</mo>
+                        <mrow>
+                            <mn>5</mn>
+                            <mo>&middot;</mo>
+                            <mn>30</mn>
+                        </mrow>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </figure>
+</section>
+
+<section id="relatively-prime" class="definition">
+    <h4>Relatively Prime</h4>
+    <p>
+        Two integers 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        are called <i>relatively prime</i> if 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math> 
+    </figure>
+
+    <h4>Theorem 4</h4>
+    <p>
+        Let 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        be integers, not both zero. Then 
+    </p>
+    <figure>
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        are relatively prime
+        <math>
+            <mo>&iff;</mo>
+            <mrow>
+                <mrow>
+                    <mo>&exist;</mo>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo separator="true">&comma;</mo>
+                        <mi>y</mi>
+                        <mo>&in;</mo>
+                        <mi>&integers;</mi>
+                    </mrow>
+                    <mo lspace="0.5em">&ApplyFunction;</mo>
+                    <mrow>
+                        <mn>1</mn>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>m</mi>
+                            <mo>&plus;</mo>
+                            <mi>y</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>n</mi>
+                        </mrow>
+                    </mrow>
+                </mrow>
+            </mrow>
+        </math>        
+    </figure>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        If 
+        <math>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>, 
+        then 
+        <math>
+            <mrow>
+                <mn>1</mn>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>m</mi>
+                    <mo>&plus;</mo>
+                    <mi>y</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>n</mi>
+                </mrow>
+            </mrow>
+        </math>
+        by Theorem 3. Conversely, if 
+        <math>
+            <mrow>
+                <mn>1</mn>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>m</mi>
+                    <mo>&plus;</mo>
+                    <mi>y</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>n</mi>
+                </mrow>
+            </mrow>
+        </math>, 
+        then any common divisor of 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        must divide <math><mn>1</mn></math>. 
+        In particular, 
+        <math>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>. 
+        &marker;
+    </p>
+</section>
+<section class="example">
+    <ul>
+        <li>
+            any two consecutive integers 
+            <math><mi>k</mi></math>
+            and 
+            <math>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>1</mn>
+            </math>
+            are relatively prime, because 
+            <math>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&minus;</mo>
+                    <mi>k</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>. 
+        </li>
+        <li>
+            <math>
+                <mn>6</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>5</mn>
+            </math>
+            and 
+            <math>
+                <mn>5</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>k</mi>
+                <mo>&plus;</mo>
+                <mn>4</mn>
+            </math>
+            are relatively prime for any integer <math><mi>k</mi></math>, 
+            because 
+            <math>
+                <mrow>
+                    <mn>5</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mn>6</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>k</mi>
+                        <mo>&plus;</mo>
+                        <mn>5</mn>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&minus;</mo>
+                <mrow>
+                    <mn>6</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mn>5</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>k</mi>
+                        <mo>&plus;</mo>
+                        <mn>4</mn>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>. 
+        </li>
+    </ul>
+</section>
+
+<section class="corollary">
+    <p>
+        <strong>Corollary.</strong>
+        If 
+        <math>
+            <mi>m</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo>&in;</mo>
+            <mi>&integers;</mi>
+        </math>
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>, 
+        then 
+    </p>
+    <figure>
+        <math>
+            <mfrac>
+                <mi>m</mi>
+                <mi>d</mi>
+            </mfrac>
+        </math>
+        and 
+        <math>
+            <mfrac>
+                <mi>n</mi>
+                <mi>d</mi>
+            </mfrac>
+        </math>
+        are relatively prime. 
+    </figure>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        If 
+        <math>
+            <mi>x</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>y</mi>
+            <mo>&in;</mo>
+            <mi>&integers;</mi>
+        </math>
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>m</mi>
+                <mo>&plus;</mo>
+                <mi>y</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+            </mrow>
+        </math>, 
+        then dividing by <math><mi>d</mi></math> gives 
+        <math>
+            <mn>1</mn>
+            <mo>&equals;</mo>
+            <mrow>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfrac>
+                        <mi>m</mi>
+                        <mi>d</mi>
+                    </mfrac>
+                </mrow>
+                <mo>&plus;</mo>
+                <mrow>
+                    <mi>y</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mfrac>
+                        <mi>n</mi>
+                        <mi>d</mi>
+                    </mfrac>
+                </mrow>
+            </mrow>
+        </math>. 
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>Theorem 5</h4>
+    <p>
+        Let 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        be relatively prime integers.
+    </p>
+    <ol>
+        <li>
+            <math>
+                <mrow>
+                    <mrow>
+                        <mo>&exist;</mo>
+                        <mi>k</mi>
+                        <mo>&in;</mo>
+                        <mi>&integers;</mi>
+                    </mrow>
+                    <mo rspace="0.4em">&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mo fence="true" lspace="0.2em">&lpar;</mo>
+                        <mrow>
+                            <mi>m</mi>
+                            <mo>&mid;</mo>
+                            <mi>k</mi>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&and;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&mid;</mo>
+                            <mi>k</mi>
+                        </mrow>
+                        <mo fence="true" rspace="0.2em">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mrow>
+                        <mi>m</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo>&mid;</mo>
+                    <mi>k</mi>
+                </mrow>
+            </math>. 
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mrow>
+                        <mo>&exist;</mo>
+                        <mi>k</mi>
+                        <mo>&in;</mo>
+                        <mi>&integers;</mi>
+                    </mrow>
+                    <mo rspace="0.4em">&ApplyFunction;</mo>
+                    <mrow>
+                        <mi>m</mi>
+                        <mo>&mid;</mo>
+                        <mrow>
+                            <mi>k</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>n</mi>
+                        </mrow>
+                    </mrow>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mi>m</mi>
+                    <mo>&mid;</mo>
+                    <mi>k</mi>
+                </mrow>
+            </math>. 
+        </li>
+    </ol>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        By Theorem 4, let 
+        <math>
+            <mn>1</mn>
+            <mo>&equals;</mo>
+            <mrow>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>m</mi>
+                </mrow>
+                <mo>&plus;</mo>
+                <mrow>
+                    <mi>y</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>n</mi>
+                </mrow>
+            </mrow>
+        </math>, 
+        where 
+        <math><mi>x</mi></math> and <math><mi>y</mi></math>
+        are integers. 
+    </p>
+    <ol>
+        <li>
+            Let 
+            <math>
+                <mi>k</mi>
+                <mo>&equals;</mo>
+                <mi>q</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>m</mi>
+            </math>
+            and 
+            <math>
+                <mi>k</mi>
+                <mo>&equals;</mo>
+                <mi>p</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+            </math>
+            where 
+            <math><mi>p</mi></math> and <math><mi>q</mi></math>
+            are integers, then
+            <figure>
+                <math>
+                    <mi>k</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mn>1</mn>
+                        <mo>&middot;</mo>
+                        <mi>k</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>m</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>k</mi>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <mrow>
+                            <mi>y</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>n</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>k</mi>
+                        </mrow>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>m</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>p</mi>
+                                <mo>&InvisibleTimes;</mo>
+                                <mi>n</mi>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <mrow>
+                            <mi>y</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>n</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>q</mi>
+                                <mo>&InvisibleTimes;</mo>
+                                <mi>m</mi>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>p</mi>
+                            <mo>&plus;</mo>
+                            <mi>y</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>q</mi>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>n</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            Let 
+            <math>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>k</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>q</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>m</mi>
+                </mrow>
+            </math>
+            where <math><mi>q</mi></math> is an integer. 
+            Then,
+            <figure>
+                <math>
+                    <mi>k</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mn>1</mn>
+                        <mo>&middot;</mo>
+                        <mi>k</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>m</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>k</mi>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <mrow>
+                            <mi>y</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>n</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>k</mi>
+                        </mrow>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>m</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>k</mi>
+                        </mrow>
+                        <mo>&plus;</mo>
+                        <mrow>
+                            <mi>y</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>q</mi>
+                                <mo>&InvisibleTimes;</mo>
+                                <mi>m</mi>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>x</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>k</mi>
+                            <mo>&plus;</mo>
+                            <mi>y</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>q</mi>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                </math>. 
+            </figure>
+        </li>
+    </ol>
+</sectin>
+
+<h3>Prime Factorization</h3>
+
+<section id="primes" class="definition">
+    <h4>Primes</h4>
+    <p>
+        An integer <math><mi>p</mi></math> is called 
+        a <i>prime</i> if
+    </p>
+    <ol>
+        <li>
+            <math>
+                <mi>p</mi>
+                <mo>&ge;</mo>
+                <mn>2</mn>
+            </math>
+        </li>
+        <li>
+            Let 
+            <math>
+                <mi>d</mi>
+                <mo>&in;</mo>
+                <mi>&integers;</mi>
+            </math>
+            with 
+            <math>
+                <mi>d</mi>
+                <mo>&gt;</mo>
+                <mn>0</mn>
+            </math>, 
+            then 
+            <math>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&mid;</mo>
+                    <mi>p</mi>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>d</mi>
+                        <mo>&equals;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&or;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>d</mi>
+                        <mo>&equals;</mo>
+                        <mi>p</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>
+        </li>
+    </ol>
+</section>
+<section class="description">
+    <p>
+        Thus, the first few primes are 
+        <math>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>3</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>5</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>7</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>11</mn>
+            <mo separator="true">&comma;</mo>
+            <mn>13</mn>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+        </math>. 
+        Every integer greater than <math><mn>1</mn></math> 
+        is a product of primes; 
+        the reason for not regarding <math><mn>1</mn></math> 
+        as a prime is to ensure that this factorization is unique. 
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>Theorem 6 &mdash; Euclid's Lemma</h4>
+    <p>
+        Let <math><mi>p</mi></math> denote a prime.
+    </p>
+    <ol>
+        <li>
+            Let 
+            <math>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+                <mo>&in;</mo>
+                <mi>&integers;</mi>
+            </math>, 
+            then 
+            <math>
+                <mrow>
+                    <mi>p</mi>
+                    <mo>&mid;</mo>
+                    <mrow>
+                        <mi>m</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>p</mi>
+                    <mo>&mid;</mo>
+                    <mi>m</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&or;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>p</mi>
+                    <mo>&mid;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </math>
+        </li>
+        <li>
+            Let 
+            <math>
+                <msub>
+                    <mi>m</mi>
+                    <mi>i</mi>
+                </msub>
+                <mo>&in;</mo>
+                <mi>&integers;</mi>
+            </math>, 
+            then 
+            <math>
+                <mrow>
+                    <mi>p</mi>
+                    <mo>&mid;</mo>
+                    <mrow>
+                        <msub>
+                            <mi>m</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo>&InvisibleTimes;</mo>
+                        <msub>
+                            <mi>m</mi>
+                            <mn>2</mn>
+                        </msub>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>&hellip;</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msub>
+                            <mi>m</mi>
+                            <mi>r</mi>
+                        </msub>
+                    </mrow>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mo>&exist;</mo>
+                    <mi>i</mi>
+                    <mo rspace="0.4em">&ApplyFunction;</mo>
+                    <mrow>
+                        <mi>p</mi>
+                        <mo>&mid;</mo>
+                        <msub>
+                            <mi>m</mi>
+                            <mi>i</mi>
+                        </msub>
+                    </mrow>
+                </mrow>
+            </math>
+        </li>
+    </ol>
+</section>
+<section class="example">
+    <p>
+        For example, 
+        <math>
+            <mn>3</mn>
+            <mo>&mid;</mo>
+            <mn>3</mn>
+            <mo>&middot;</mo>
+            <mn>4</mn>
+        </math>.
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+    </p>
+    <ol>
+        <li>
+            Let 
+            <math>
+                <mi>d</mi>
+                <mo>&equals;</mo>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>p</mi>
+                <mo fence="true">&rpar;</mo>
+            </math>, 
+            then 
+            because <math><mi>p</mi></math> is a prime, 
+            <math>
+                <mi>d</mi>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>
+            or 
+            <math>
+                <mi>d</mi>
+                <mo>&equals;</mo>
+                <mn>p</mn>
+            </math>. 
+            <ul>
+                <li>
+                    If 
+                    <math>
+                        <mi>d</mi>
+                        <mo>&equals;</mo>
+                        <mi>p</mi>
+                    </math>, 
+                    then 
+                    <math>
+                        <mi>p</mi>
+                        <mo>&mid;</mo>
+                        <mi>m</mi>
+                    </math>
+                    because 
+                    <math>
+                        <mi>d</mi>
+                        <mo>&mid;</mo>
+                        <mi>m</mi>
+                    </math>. 
+                </li>
+                <li>
+                    If 
+                    <math>
+                        <mi>d</mi>
+                        <mo>&equals;</mo>
+                        <mn>1</mn>
+                    </math>, 
+                    then 
+                    <math>
+                        <mi>p</mi>
+                        <mo>&mid;</mo>
+                        <mi>n</mi>
+                    </math>
+                    by (2) of Theorem 5. 
+                    &marker;
+                </li>
+            </ul>
+        </li>
+        <li>
+            This assertion follows by induction on 
+            <math><mi>r</mi></math>. 
+            If 
+            <math>
+                <mi>r</mi>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>, 
+            it is obvious. If (2) holds for some 
+            <math>
+                <mi>r</mi>
+                <mo>&ge;</mo>
+                <mn>1</mn>
+            </math>, 
+            let 
+            <math>
+                <mi>p</mi>
+                <mo>&mid;</mo>
+                <mrow>
+                    <msub>
+                        <mi>m</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>m</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>m</mi>
+                        <mi>r</mi>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>m</mi>
+                        <mrow>
+                            <mi>r</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                </mrow>
+            </math>. 
+            Then (1) shows that either 
+            <math>
+                <mi>p</mi>
+                <mo>&mid;</mo>
+                <mrow>
+                    <msub>
+                        <mi>m</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>m</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>m</mi>
+                        <mi>r</mi>
+                    </msub>
+                </mrow>
+            </math>
+            or 
+            <math>
+                <mi>p</mi>
+                <mo>&mid;</mo>
+                <mrow>
+                    <msub>
+                        <mi>m</mi>
+                        <mrow>
+                            <mi>r</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                </mrow>
+            </math>. 
+            In the first case, 
+            <math>
+                <mi>p</mi>
+                <mo>&mid;</mo>
+                <mrow>
+                    <msub>
+                        <mi>m</mi>
+                        <mi>i</mi>
+                    </msub>
+                </mrow>
+            </math> 
+            for some 
+            <math>
+                <mi>i</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true">&comma;</mo>
+                    <mn>2</mn>
+                    <mo separator="true">&comma;</mo>
+                    <mi>&hellip;</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>r</mi>
+                </mrow>
+            </math> 
+            by the induction hypothesis. Hence, in any case, 
+            <math>
+                <mi>p</mi>
+                <mo>&mid;</mo>
+                <mrow>
+                    <msub>
+                        <mi>m</mi>
+                        <mi>i</mi>
+                    </msub>
+                </mrow>
+            </math> 
+            for 
+            <math>
+                <mi>i</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true">&comma;</mo>
+                    <mn>2</mn>
+                    <mo separator="true">&comma;</mo>
+                    <mi>&hellip;</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>r</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mrow>
+                        <mi>r</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </mrow>
+            </math>, 
+            completing the induction.
+            &marker;
+        </li>
+    </ol>
+    <p>
+        Note that Euclid's lemma fails for nonprimes. For example, 
+        <math>
+            <mn>6</mn>
+            <mo>&mid;</mo>
+            <mrow>
+                <mn>3</mn>
+                <mo>&middot;</mo>
+                <mn>4</mn>
+            </mrow>
+        </math>, 
+        but 
+        <math>
+            <mn>6</mn>
+            <mo>&nmid;</mo>
+            <mn>3</mn>
+        </math>
+        and 
+        <math>
+            <mn>6</mn>
+            <mo>&nmid;</mo>
+            <mn>4</mn>
+        </math>. 
+    </p>
+</section>
+
+<section id="prime-factorization" class="theorem">
+    <h4>Theorem 7 &ndash; Prime Factorization Theorem</h4>
+    <p>
+        This is also known as 
+        <i>the fundamental theorem of arithmetic</i>.
+    </p>
+    <ol>
+        <li>
+            Every integer 
+            <math>
+                <mi>n</mi>
+                <mo>&ge;</mo>
+                <mn>2</mn>
+            </math>
+            is a product of (one or more) primes.
+        </li>
+        <li>
+            This factorization is unique up to the order of the factors. 
+            That is, if 
+            <ul>
+                <li>
+                    <math>
+                        <mi>n</mi>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>&InvisibleTimes;</mo>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>&hellip;</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <msub>
+                                <mi>p</mi>
+                                <mi>r</mi>
+                            </msub>
+                        </mrow>
+                    </math>
+                </li>
+                <li>
+                    <math>
+                        <mi>n</mi>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <msub>
+                                <mi>q</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>&InvisibleTimes;</mo>
+                            <msub>
+                                <mi>q</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>&hellip;</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <msub>
+                                <mi>q</mi>
+                                <mi>s</mi>
+                            </msub>
+                        </mrow>
+                    </math>
+                </li>
+            </ul>
+            where 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mi>i</mi>
+                </msub>
+            </math>
+            and 
+            <math>
+                <msub>
+                    <mi>q</mi>
+                    <mi>j</mi>
+                </msub>
+            </math>
+            are primes, then 
+            <math>
+                <mi>r</mi>
+                <mo>&equals;</mo>
+                <mi>s</mi>
+            </math>, 
+            and 
+            <math>
+                <msub>
+                    <mi>q</mi>
+                    <mi>j</mi>
+                </msub>
+            </math>
+            can be relabeled so that 
+            <ul>
+                <li>
+                    <math>
+                        <mrow>
+                            <msub>
+                                <mi>p</mi>
+                                <mi>i</mi>
+                            </msub>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <msub>
+                                <mi>q</mi>
+                                <mi>i</mi>
+                            </msub>
+                        </mrow>
+                        <mo>for all</mo>
+                        <mrow>
+                            <mi>i</mi>
+                            <mo>&equals;</mo>
+                            <mn>1</mn>
+                            <mo separator="true">&comma;</mo>
+                            <mn>2</mn>
+                            <mo separator="true">&comma;</mo>
+                            <mi>&hellip;</mi>
+                            <mo separator="true">&comma;</mo>
+                            <mi>r</mi>
+                        </mrow>
+                    </math>        
+                </li>
+            </ul>
+        </li>
+    </ol>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+    </p>
+    <ol>
+        <li>
+            This assertion follows by induction on 
+            <math><mi>n</mi></math>. 
+            If 
+            <math>
+                <mi>n</mi><mo>&equals;</mo><mn>2</mn>
+            </math>, 
+            it is obvious 
+            because <math><mn>2</mn></math> is a prime.
+            If 
+            <math>
+                <mi>k</mi><mo>&ge;</mo><mn>2</mn>
+            </math>, 
+            we assume inductively that 
+            <math>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>3</mn>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>k</mi>
+            </math>
+            are all products of primes. 
+            Then, the assertion is true if 
+            <math>
+                <mi>k</mi><mo>&plus;</mo><mn>1</mn>
+            </math>
+            is itself prime; otherwise, 
+            let 
+            <math>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>b</mi>
+                </mrow>
+            </math>, 
+            where 
+            <math>
+                <mn>2</mn>
+                <mo>&le;</mo>
+                <mi>a</mi>
+                <mo>&le;</mo>
+                <mi>k</mi>
+            </math>
+            and 
+            <math>
+                <mn>2</mn>
+                <mo>&le;</mo>
+                <mi>b</mi>
+                <mo>&le;</mo>
+                <mi>k</mi>
+            </math>. 
+            Then both 
+            <math><mi>a</mi></math> and <math><mi>b</mi></math>
+            are products of primes by the induction hypothesis, so 
+            <math>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>b</mi>
+                </mrow>
+            </math> 
+            is also a product of primes. 
+            &marker;
+        </li>
+        <li>
+            If (2) fails, let (by the well-ordering principle) 
+            <math>
+                <mi>m</mi>
+                <mo>&ge;</mo>
+                <mn>2</mn>
+            </math> 
+            be the smallest integer with two distinct factorizations into primes:
+            <figure>
+                <math>
+                    <mi>m</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msub>
+                            <mi>p</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo>&InvisibleTimes;</mo>
+                        <msub>
+                            <mi>p</mi>
+                            <mn>2</mn>
+                        </msub>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>&hellip;</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msub>
+                            <mi>p</mi>
+                            <mi>r</mi>
+                        </msub>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo>&InvisibleTimes;</mo>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>2</mn>
+                        </msub>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>&hellip;</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msub>
+                            <mi>q</mi>
+                            <mi>s</mi>
+                        </msub>
+                    </mrow>
+                </math>
+            </figure>
+            Then <math><mi>m</mi></math>
+            is not a prime 
+            (as we assume that 
+            <math>
+                <mi>r</mi>
+                <mo>&ne;</mo>
+                <mi>s</mi>
+            </math>, 
+            which means either 
+            <math><mi>r</mi></math> or <math><mi>s</mi></math>
+            is greater than 1), so 
+            <math>
+                <mi>r</mi>
+                <mo>&ge;</mo>
+                <mn>2</mn>
+            </math>
+            and 
+            <math>
+                <mi>s</mi>
+                <mo>&ge;</mo>
+                <mn>2</mn>
+            </math>. 
+            We have 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&mid;</mo>
+                <mrow>
+                    <msub>
+                        <mi>q</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>q</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>q</mi>
+                        <mi>s</mi>
+                    </msub>
+                </mrow>
+            </math>, 
+            so 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&mid;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mi>j</mi>
+                </msub>
+                <mo>for some</mo>
+                <mi>j</mi>
+            </math>
+            by Euclid's lemma. By relabeling 
+            <math>
+                <msub>
+                    <mi>q</mi>
+                    <mi>j</mi>
+                </msub>
+            </math>, 
+            we may assume that 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&mid;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>1</mn>
+                </msub>
+            </math>. 
+            Then 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>1</mn>
+                </msub>
+            </math>
+            because both are primes, so
+            <math>
+                <mfrac>
+                    <mi>m</mi>
+                    <msub>
+                        <mi>p</mi>
+                        <mn>1</mn>
+                    </msub>
+                </mfrac>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>p</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mi>r</mi>
+                    </msub>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>q</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>q</mi>
+                        <mi>s</mi>
+                    </msub>
+                </mrow>
+            </math>
+            is an integer &mdash; 
+            smaller than <math><mi>m</mi></math> &mdash; 
+            that admits two distinct factorizations into primes. 
+            This result contradicts the choice of 
+            <math><mi>m</mi></math>, and so proves (2). 
+            &marker;
+        </li>
+    </ol>
+</section>
+
+<section class="corollary">
+    <p>
+        <strong>Corollary.</strong>
+        Two integers 
+        <math>
+            <mi>m</mi>
+            <mo>&ge;</mo>
+            <mn>2</mn>
+        </math>
+        and 
+        <math>
+            <mi>n</mi>
+            <mo>&ge;</mo>
+            <mn>2</mn>
+        </math>
+        are relatively prime if and only if no prime divides both 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>. 
+    </p>
+    <p>
+        <i>Proof.</i>
+        Write 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>m</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo fence="true">&rpar;</mo>
+        </math>. 
+    </p>
+    <ol>
+        <li>
+            If 
+            <math>
+                <mi>d</mi>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>, 
+            then any common prime divisor would have to divide 
+            <math><mn>1</mn></math>, so no such common divisor exists. 
+        </li>
+        <li>
+            Conversely, suppose no prime divides both 
+            <math><mi>m</mi></math> and <math><mi>n</mi></math>. 
+            If 
+            <math>
+                <mi>d</mi>
+                <mo>&gt;</mo>
+                <mn>1</mn>
+            </math> 
+            and 
+            <math>
+                <mi>p</mi>
+                <mo>&mid;</mo>
+                <mi>d</mi>
+            </math>
+            where <math><mi>p</mi></math> is a prime, 
+            then 
+            <math>
+                <mi>p</mi>
+                <mo>&mid;</mo>
+                <mi>m</mi>
+            </math>
+            and 
+            <math>
+                <mi>p</mi>
+                <mo>&mid;</mo>
+                <mi>n</mi>
+            </math>, 
+            contrary to our assumption. 
+            So 
+            <math>
+                <mi>d</mi>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>, 
+            that is 
+            <math><mi>m</mi></math> and <math><mi>n</mi></math>
+            are relatively prime. 
+            &marker;
+        </li>
+    </ol>
+    <p>
+        For example, 
+        <math>
+            <mn>60</mn>
+            <mo>&equals;</mo>
+            <mrow>
+                <msup>
+                    <mn>2</mn>
+                    <mn>2</mn>
+                </msup>
+                <mo>&middot;</mo>
+                <mn>3</mn>
+                <mo>&middot;</mo>
+                <mn>5</mn>
+            </mrow>
+        </math>
+        and 
+        <math>
+            <mn>882</mn>
+            <mo>&equals;</mo>
+            <mrow>
+                <mn>2</mn>
+                <mo>&middot;</mo>
+                <msup>
+                    <mn>3</mn>
+                    <mn>2</mn>
+                </msup>
+                <mo>&middot;</mo>
+                <msup>
+                    <mn>7</mn>
+                    <mn>2</mn>
+                </msup>
+            </mrow>
+        </math>. 
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>Theorem 8</h4>
+    <p>
+        Let <math><mi>n</mi></math> 
+        be an integer with prime factorization
+    </p>
+    <figure>
+        <math>
+            <mi>n</mi>
+            <mo>&equals;</mo>
+            <msup>
+                <msub>
+                    <mi>p</mi>
+                    <mn>1</mn>
+                </msub>
+                <msub>
+                    <mi>n</mi>
+                    <mn>1</mn>
+                </msub>
+            </msup>
+            <mo>&InvisibleTimes;</mo>
+            <msup>
+                <msub>
+                    <mi>p</mi>
+                    <mn>2</mn>
+                </msub>
+                <msub>
+                    <mi>n</mi>
+                    <mn>2</mn>
+                </msub>
+            </msup>
+            <mo>&InvisibleTimes;</mo>
+            <mi>&hellip;</mi>
+            <mo>&InvisibleTimes;</mo>
+            <msup>
+                <msub>
+                    <mi>p</mi>
+                    <mi>r</mi>
+                </msub>
+                <msub>
+                    <mi>n</mi>
+                    <mi>r</mi>
+                </msub>
+            </msup>
+        </math>
+    </figure>
+    <p>
+        where 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mi>i</mi>
+            </msub>
+        </math>
+        are distinct primes and 
+        <math>
+            <msub>
+                <mi>n</mi>
+                <mi>i</mi>
+            </msub>
+            <mo>&ge;</mo>
+            <mn>1</mn>
+        </math>
+        for each <math><mi>i</mi></math>. 
+        Then the positive divisors of <math><mi>n</mi></math> 
+        are precisely the integers <math><mi>d</mi></math>
+        of the form:
+    </p>
+    <figure>
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <msup>
+                <msub>
+                    <mi>p</mi>
+                    <mn>1</mn>
+                </msub>
+                <msub>
+                    <mi>d</mi>
+                    <mn>1</mn>
+                </msub>
+            </msup>
+            <mo>&InvisibleTimes;</mo>
+            <msup>
+                <msub>
+                    <mi>p</mi>
+                    <mn>2</mn>
+                </msub>
+                <msub>
+                    <mi>d</mi>
+                    <mn>2</mn>
+                </msub>
+            </msup>
+            <mo>&InvisibleTimes;</mo>
+            <mi>&hellip;</mi>
+            <mo>&InvisibleTimes;</mo>
+            <msup>
+                <msub>
+                    <mi>p</mi>
+                    <mi>r</mi>
+                </msub>
+                <msub>
+                    <mi>d</mi>
+                    <mi>r</mi>
+                </msub>
+            </msup>
+        </math>
+    </figure>
+    <p>
+        where 
+        <math>
+            <mn>0</mn>
+            <mo>&le;</mo>
+            <msub>
+                <mi>d</mi>
+                <mi>i</mi>
+            </msub>
+            <mo>&le;</mo>
+            <msub>
+                <mi>n</mi>
+                <mi>i</mi>
+            </msub>
+        </math>
+        holds for each <math><mi>i</mi></math>. 
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        The prime divisors of <math><mi>d</mi></math>
+        are contained in 
+        <math>
+            <mo fence="true">&lbrace;</mo>
+            <msub>
+                <mi>p</mi>
+                <mn>1</mn>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>p</mi>
+                <mn>2</mn>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>p</mi>
+                <mi>r</mi>
+            </msub>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+        by Euclid's lemma, and <math><mi>d</mi></math>
+        cannot contain a higher power of 
+        <math><msub><mi>p</mi><mi>i</mi></msub></math>
+        than 
+        <math>
+            <msup>
+                <msub>
+                    <mi>p</mi>
+                    <mi>i</mi>
+                </msub>
+                <msub>
+                    <mi>n</mi>
+                    <mi>i</mi>
+                </msub>
+            </msup>
+        </math>
+        by Theorem 7. &marker;
+    </p>
+</section>
+
+<section id="gcd-lcm" class="definition">
+    <h4>GCD and LCM</h4>
+    <p>
+        In much the same way, the prime factorization theorem 
+        provides a simple way to compute the greatest common 
+        divisor of any finite set of positive integers 
+        (rather than just two). 
+        It also provides the “dual” notion, the least common multiple.
+    </p>
+    <p>
+        Let 
+        <math>
+            <msub>
+                <mi>n</mi>
+                <mn>1</mn>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>n</mi>
+                <mn>2</mn>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>n</mi>
+                <mi>r</mi>
+            </msub>
+        </math>
+        be positive integers.
+    </p>
+    <ol>
+        <li>
+            The <strong>greatest common divisor</strong>
+            <math>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <msub>
+                        <mi>n</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo separator="true">&comma;</mo>
+                    <msub>
+                        <mi>n</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo separator="true">&comma;</mo>
+                    <mi>&hellip;</mi>
+                    <mo separator="true">&comma;</mo>
+                    <msub>
+                        <mi>n</mi>
+                        <mi>r</mi>
+                    </msub>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </math>
+            of these integers is the positive common divisor 
+            that is a multiple of every common divisor.
+        </li>
+        <li>
+            The <strong>least common multiple</strong>
+            <math>
+                <mi>lcm</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <msub>
+                        <mi>n</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo separator="true">&comma;</mo>
+                    <msub>
+                        <mi>n</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo separator="true">&comma;</mo>
+                    <mi>&hellip;</mi>
+                    <mo separator="true">&comma;</mo>
+                    <msub>
+                        <mi>n</mi>
+                        <mi>r</mi>
+                    </msub>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </math>
+            of these integers is the positive common multiple 
+            that is a divisor of every common multiple.
+        </li>
+    </ol>
+</section>
+<section class="description">
+    <p>
+        Thus, 
+        <math>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>4</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>6</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>10</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mn>2</mn>
+        </math>
+        and 
+        <math>
+            <mi>lcm</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>4</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>6</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>10</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&equals;</mo>
+            <mn>60</mn>
+        </math>
+        by inspection. 
+        Theorem 9 below shows that the gcd and lcm always exist. 
+        They are uniquely determined in the same way as the gcd of two integers. 
+    </p>
+</section>
+<section class="example">
+    <h4>Example 7</h4>
+    <p>
+        Find 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>12</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>20</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>18</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        and 
+        <math>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <mi>lcm</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>12</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>20</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>18</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>. 
+    </p>
+    <p>
+        <i>Solution.</i>
+        A systematic method involves writing the prime factorizations as follows:
+    </p>
+    <figure>
+        <math>
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mn>12</mn>
+                    </mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <msup>
+                            <mn>2</mn>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>&middot;</mo>
+                        <msup>
+                            <mn>3</mn>
+                            <mn>1</mn>
+                        </msup>
+                        <mo>&middot;</mo>
+                        <msup>
+                            <mn>5</mn>
+                            <mn>0</mn>
+                        </msup>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mn>20</mn>
+                    </mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <msup>
+                            <mn>2</mn>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>&middot;</mo>
+                        <msup>
+                            <mn>3</mn>
+                            <mn>0</mn>
+                        </msup>
+                        <mo>&middot;</mo>
+                        <msup>
+                            <mn>5</mn>
+                            <mn>1</mn>
+                        </msup>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mn>18</mn>
+                    </mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <msup>
+                            <mn>2</mn>
+                            <mn>1</mn>
+                        </msup>
+                        <mo>&middot;</mo>
+                        <msup>
+                            <mn>3</mn>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>&middot;</mo>
+                        <msup>
+                            <mn>5</mn>
+                            <mn>0</mn>
+                        </msup>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </figure>
+    <p>
+        We have 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <msup>
+                <mn>2</mn>
+                <mi>a</mi>
+            </msup>
+            <mo>&middot;</mo>
+            <msup>
+                <mn>3</mn>
+                <mi>b</mi>
+            </msup>
+            <mo>&middot;</mo>
+            <msup>
+                <mn>5</mn>
+                <mi>c</mi>
+            </msup>
+        </math>
+        for some 
+        <math><mi>a</mi></math>, 
+        <math><mi>b</mi></math>, 
+        and 
+        <math><mi>c</mi></math>
+        by Theorem 8. 
+        We have 
+        <math>
+            <mi>a</mi>
+            <mo>&le;</mo>
+            <mn>1</mn>
+        </math>
+        because 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mn>18</mn>
+        </math>, 
+        and 
+        <math>
+            <mi>b</mi>
+            <mo>&equals;</mo>
+            <mi>c</mi>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+        </math>
+        because 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mn>20</mn>
+        </math> 
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mn>12</mn>
+        </math>. 
+        Thus, 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mn>2</mn>
+        </math>
+        is the largest possibility. 
+    </p>
+    <p>
+        Similarly, write the prime factorization of 
+        <math><mi>m</mi></math> as 
+        <math>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <msup>
+                <mn>2</mn>
+                <mi>p</mi>
+            </msup>
+            <mo>&middot;</mo>
+            <msup>
+                <mn>3</mn>
+                <mi>q</mi>
+            </msup>
+            <mo>&middot;</mo>
+            <msup>
+                <mn>5</mn>
+                <mi>r</mi>
+            </msup>
+            <mo>&middot;</mo>
+            <mi>k</mi>
+        </math>, 
+        where 
+        <math>
+            <mi>k</mi>
+            <mo>&ge;</mo>
+            <mn>1</mn>
+        </math>
+        is the factor involving primes (if any) other than 
+        <math><mn>2</mn></math>, 
+        <math><mn>3</mn></math>, or 
+        <math><mn>5</mn></math>. 
+        Then 
+        <math>
+            <mi>p</mi>
+            <mo>&ge;</mo>
+            <mn>2</mn>
+        </math>
+        because 
+        <math>
+            <mn>12</mn>
+            <mo>&mid;</mo>
+            <mi>m</mi>
+        </math>
+        (or because 
+        <math>
+            <mn>20</mn>
+            <mo>&mid;</mo>
+            <mi>m</mi>
+        </math>
+        ), 
+        <math>
+            <mi>q</mi>
+            <mo>&ge;</mo>
+            <mn>2</mn>
+        </math>
+        because 
+        <math>
+            <mn>18</mn>
+            <mo>&mid;</mo>
+            <mi>m</mi>
+        </math>, 
+        and 
+        <math>
+            <mi>r</mi>
+            <mo>&ge;</mo>
+            <mn>1</mn>
+        </math>
+        because 
+        <math>
+            <mn>20</mn>
+            <mo>&mid;</mo>
+            <mi>m</mi>
+        </math>. 
+        The smallest possibility is thus 
+        <math>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <msup>
+                    <mn>2</mn>
+                    <mn>2</mn>
+                </msup>
+                <mo>&middot;</mo>
+                <msup>
+                    <mn>3</mn>
+                    <mn>2</mn>
+                </msup>
+                <mo>&middot;</mo>
+                <msup>
+                    <mn>5</mn>
+                    <mn>1</mn>
+                </msup>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>180</mn>
+        </math>. 
+        &marker;
+    </p>
+</section>
+
+<section class="theorem">
+    <h4>Theorem 9</h4>
+    <p>
+        Let 
+        <math>
+            <mo fence="true">&lbrace;</mo>
+            <mi>a</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>b</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>c</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+        be a finite set of positive integers, and write 
+    </p>
+    <figure>
+        <math>
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mi>a</mi>
+                    </mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <msub>
+                                <mi>a</mi>
+                                <mn>1</mn>
+                            </msub>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <msub>
+                                <mi>a</mi>
+                                <mn>2</mn>
+                            </msub>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>&hellip;</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mi>r</mi>
+                            </msub>
+                            <msub>
+                                <mi>a</mi>
+                                <mi>r</mi>
+                            </msub>
+                        </msup>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mi>b</mi>
+                    </mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mn>1</mn>
+                            </msub>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mn>2</mn>
+                            </msub>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>&hellip;</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mi>r</mi>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mi>r</mi>
+                            </msub>
+                        </msup>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mi>c</mi>
+                    </mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <msub>
+                                <mi>c</mi>
+                                <mn>1</mn>
+                            </msub>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <msub>
+                                <mi>c</mi>
+                                <mn>2</mn>
+                            </msub>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>&hellip;</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mi>r</mi>
+                            </msub>
+                            <msub>
+                                <mi>c</mi>
+                                <mi>r</mi>
+                            </msub>
+                        </msup>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd></mtd>
+                    <mtd class="center-aligned">
+                        <mi>&vellip;</mi>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </figure>
+    <p>
+        where 
+        <math><msub><mi>p</mi><mi>i</mi></msub></math>
+        are primes dividing at least one of 
+        <math>
+            <mi>a</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>b</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>c</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+        </math>, 
+        and where an exponent is zero 
+        if the prime in question does not occur in that number. Then,
+    </p>
+    <figure>
+        <math>
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mi>gcd</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>a</mi>
+                            <mo separator="true">&comma;</mo>
+                            <mi>b</mi>
+                            <mo separator="true">&comma;</mo>
+                            <mi>c</mi>
+                            <mo separator="true">&comma;</mo>
+                            <mi>&hellip;</mi>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                    </mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <msub>
+                                <mi>k</mi>
+                                <mn>1</mn>
+                            </msub>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <msub>
+                                <mi>k</mi>
+                                <mn>2</mn>
+                            </msub>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>&hellip;</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mi>r</mi>
+                            </msub>
+                            <msub>
+                                <mi>k</mi>
+                                <mi>r</mi>
+                            </msub>
+                        </msup>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mi>lcm</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>a</mi>
+                            <mo separator="true">&comma;</mo>
+                            <mi>b</mi>
+                            <mo separator="true">&comma;</mo>
+                            <mi>c</mi>
+                            <mo separator="true">&comma;</mo>
+                            <mi>&hellip;</mi>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                    </mtd>
+                    <mtd>
+                        <mo>&equals;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <msub>
+                                <mi>m</mi>
+                                <mn>1</mn>
+                            </msub>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <msub>
+                                <mi>m</mi>
+                                <mn>2</mn>
+                            </msub>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>&hellip;</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>p</mi>
+                                <mi>r</mi>
+                            </msub>
+                            <msub>
+                                <mi>m</mi>
+                                <mi>r</mi>
+                            </msub>
+                        </msup>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </figure>
+    <p>
+        where 
+        <math>
+            <msub>
+                <mi>k</mi>
+                <mi>i</mi>
+            </msub>
+            <mo>&equals;</mo>
+            <mi>min</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <msub>
+                    <mi>a</mi>
+                    <mi>i</mi>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>b</mi>
+                    <mi>i</mi>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>c</mi>
+                    <mi>i</mi>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        and 
+        <math>
+            <msub>
+                <mi>m</mi>
+                <mi>i</mi>
+            </msub>
+            <mo>&equals;</mo>
+            <mi>max</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <msub>
+                    <mi>a</mi>
+                    <mi>i</mi>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>b</mi>
+                    <mi>i</mi>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>c</mi>
+                    <mi>i</mi>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        for each <math><mi>i</mi></math>.
+    </p>
+</section>
+<section class="corollary">
+    <p>
+        <strong>Corollary.</strong>
+        If 
+        <math><mi>a</mi></math> and <math><mi>b</mi></math>
+        are positive integers, then 
+        <math>
+            <mrow>
+                <mi>lcm</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&middot;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+            </mrow>
+        </math>. 
+    </p>
+    <p>
+        <i>Proof.</i>
+        The assertion follows from Theorem 9 and the fact that, 
+        for integers 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>, 
+        <math>
+            <mrow>
+                <mi>max</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>m</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&plus;</mo>
+            <mrow>
+                <mi>min</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>m</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>m</mi>
+                <mo>&plus;</mo>
+                <mi>n</mi>
+            </mrow>
+        </math>. 
+        &marker;
+    </p>
+    <p>
+        Note that 
+        <math>
+            <mrow>
+                <mi>lcm</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>c</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&middot;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>c</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&ne;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>c</mi>
+            </mrow>
+        </math>
+        can occur. 
+    </p>
+</section>
+
+<section id="euclid-theorem" class="theorem">
+    <h4>
+        Theorem 10 &mdash; Euclid's Theorem
+    </h4>
+    <p>
+        There are infinitely many primes. 
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        Suppose, on the contrary, that there are only 
+        <math><mi>n</mi></math> primes, denoted 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mn>1</mn>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>p</mi>
+                <mn>2</mn>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>p</mi>
+                <mi>n</mi>
+            </msub>
+        </math>. 
+        Then consider the integer 
+        <math>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+            <mo>&plus;</mo>
+            <mrow>
+                <msub>
+                    <mi>p</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <msub>
+                    <mi>p</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <mi>&hellip;</mi>
+                <mo>&InvisibleTimes;</mo>
+                <msub>
+                    <mi>p</mi>
+                    <mi>n</mi>
+                </msub>
+            </mrow>
+        </math>. 
+        Since 
+        <math>
+            <mi>m</mi>
+            <mo>&ge;</mo>
+            <mn>2</mn>
+        </math>, 
+        some prime divides <math><mi>m</mi></math> by Theorem 7. 
+        But if 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mi>i</mi>
+            </msub>
+            <mo>&mid;</mo>
+            <mi>m</mi>
+        </math>, 
+        then 
+        <math>
+            <msub>
+                <mi>p</mi>
+                <mi>i</mi>
+            </msub>
+        </math>
+        divides 
+        <math>
+            <mrow>
+                <mi>m</mi>
+                <mo>&minus;</mo>
+                <mrow>
+                    <msub>
+                        <mi>p</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mi>m</mi>
+                    </msub>
+                </mrow>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+        </math>, 
+        a contradiction. 
+        Hence the assumption that there are only finitely many primes is untenable. 
+        &marker;
+    </p>
+</section>
+
+</body>
+</html>

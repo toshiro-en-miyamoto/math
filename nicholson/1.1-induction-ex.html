@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercises of 1.1 Induction</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>1.1 Induction</h2>
+
+<section class="example">
+    <h4>Exercise 1.1 &ndash; 6</h4>
+    <p>
+        Suppose that <math><mi>n</mi></math> straight lines in the plane 
+        are positioned so that no two are parallel and no three pass through 
+        the same point. Show that they divide the plane into 
+        <math>
+            <mn>1</mn>
+            <mo>&plus;</mo>
+            <mn>&frac12;</mn>
+            <mo lspace="0.2em">&InvisibleTimes;</mo>
+            <mi>n</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>n</mi>
+            <mo>&plus;</mo>
+            <mn>1</mn>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        distinct regions. 
+    </p>
+    <p>
+        <i>Solution.</i>
+        Let 
+        <math>
+            <msub><mi>r</mi><mi>n</mi></msub>
+        </math>
+        be the number of distict regions into which 
+        <math><mi>n</mi></math> lines divide the plane. 
+        Then, we can see 
+        <math>
+            <msub><mi>r</mi><mn>1</mn></msub>
+            <mo>&equals;</mo>
+            <mn>2</mn>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>r</mi><mn>2</mn></msub>
+            <mo>&equals;</mo>
+            <mn>4</mn>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>r</mi><mn>3</mn></msub>
+            <mo>&equals;</mo>
+            <mn>7</mn>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>r</mi><mn>4</mn></msub>
+            <mo>&equals;</mo>
+            <mn>11</mn>
+            <mo separator="true">&comma;</mo>
+            <msub><mi>r</mi><mn>5</mn></msub>
+            <mo>&equals;</mo>
+            <mn>16</mn>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+        </math>. 
+        As we can observe that 
+        the <i>n</i>th line goes across existing 
+        <math>
+            <mi>n</mi>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+        </math>
+        lines, which gives rise to additional 
+        <math><mi>n</mi></math> distinct regions, 
+        the conjecture is that 
+    </p>
+    <figure>
+        <math>
+            <msub><mi>r</mi><mn>1</mn></msub>
+            <mo>&equals;</mo>
+            <mn>2</mn>
+        </math>
+        and <br>
+        <math>
+            <msub><mi>r</mi><mi>n</mi></msub>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>r</mi>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+            <mo>&plus;</mo>
+            <mi>n</mi>
+            <mo>where</mo>
+            <mi>n</mi>
+            <mo>&ge;</mo>
+            <mn>2</mn>
+        </math>
+    </figure>
+    <p>
+        So we will prove that
+    </p>
+    <figure>
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <msub><mi>r</mi><mi>n</mi></msub>
+            <mo fence="true">&rpar;</mo>
+            <mo separator="true" rspace="1em">&colon;</mo>
+            <mrow>
+                <munder>
+                    <munder>
+                        <mrow>
+                            <mn>2</mn>
+                            <mo>&plus;</mo>
+                            <mn>2</mn>
+                            <mo>&plus;</mo>
+                            <mn>3</mn>
+                            <mo>&plus;</mo>
+                            <mn>4</mn>
+                            <mo>&plus;</mo>
+                            <mn>5</mn>
+                            <mo>&plus;</mo>
+                            <mi>&hellip;</mi>
+                            <mo>&plus;</mo>
+                            <mi>n</mi>
+                        </mrow>
+                        <mo>&UnderBrace;</mo>
+                    </munder>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>elements</mo>
+                    </mrow>
+                </munder>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo>&plus;</mo>
+                    <mn>&frac12;</mn>
+                    <mo lspace="0.2em">&InvisibleTimes;</mo>
+                    <mi>n</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>n</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        It is clear that 
+        <math>
+            <msub><mi>r</mi><mn>1</mn></msub>
+        </math>
+        is true because 
+        <math>
+            <mn>2</mn>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+            <mo>&plus;</mo>
+            <mrow>
+                <mn>&frac12;</mn>
+                <mo>&times;</mo>
+                <mn>1</mn>
+                <mo>&times;</mo>
+                <mn>2</mn>
+            </mrow>
+        </math>. 
+        We assume that 
+        <math>
+            <msub><mi>r</mi><mi>k</mi></msub>
+            <mo>where</mo>
+            <mn>2</mn>
+            <mo>&le;</mo>
+            <mi>k</mi>
+            <mo>&le;</mo>
+            <mi>n</mi>
+        </math>, 
+        then we get 
+        <math>
+            <msub>
+                <mi>r</mi>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+        </math>
+        as 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <munder>
+                    <munder>
+                        <mrow>
+                            <mn>2</mn>
+                            <mo>&plus;</mo>
+                            <mn>2</mn>
+                            <mo>&plus;</mo>
+                            <mn>3</mn>
+                            <mo>&plus;</mo>
+                            <mn>4</mn>
+                            <mo>&plus;</mo>
+                            <mn>5</mn>
+                            <mo>&plus;</mo>
+                            <mi>&hellip;</mi>
+                            <mo>&plus;</mo>
+                            <mi>k</mi>
+                        </mrow>
+                        <mo>&UnderBrace;</mo>
+                    </munder>
+                    <mtext>k elements</mtext>
+                </munder>
+                <mo>&plus;</mo>
+                <mo fence="true" stretchy="false">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true" stretchy="false">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <munder>
+                    <munder>
+                        <mrow>
+                            <mn>1</mn>
+                            <mo>&plus;</mo>
+                            <mn>&frac12;</mn>
+                            <mo lspace="0.2em">&InvisibleTimes;</mo>
+                            <mi>k</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>k</mi>
+                                <mo>&plus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&UnderBrace;</mo>                        
+                    </munder>
+                    <msub>
+                        <mi>r</mi>
+                        <mi>k</mi>
+                    </msub>
+                </munder>
+                <mo>&plus;</mo>
+                <mo fence="true" stretchy="false">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true" stretchy="false">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mn>1</mn>
+                <mo>&plus;</mo>
+                <mn>&frac12;</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>2</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        Thus 
+        <math>
+            <msub>
+                <mi>r</mi>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&plus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+        </math>
+        is also true, and induction is completed. 
+        &marker;
+    </p>
+</section>
+
+<section class="example">
+    <h4>Exercise 1.1 &ndash; 9</h4>
+    <p>
+        A straight line segment joining two distinct points on a circle 
+        is called a <i>secant</i>. For 
+        <math>
+            <mi>n</mi><mo>&ge;</mo><mn>1</mn>
+        </math>, 
+        draw <math><mi>n</mi></math> secants with no two identical. 
+        Show that the resulting regions can be unambiguously colored 
+        black and white (where <i>unambiguously</i> means that no two 
+        regions sharing a straight line boundary are of the same color).
+    </p>
+    <p>
+        <i>Solution.</i>
+        It is clear if 
+        <math>
+            <mi>n</mi><mo>&equals;</mo><mn>1</mn>
+        </math>. 
+        Given <math><mi>k</mi></math> secants, we assume all regions 
+        are colored unambiguously. Now add one secant. 
+        On one side of this secant, leave all regions the orignial 
+        color (including the new regions of that side created by 
+        the new secant). On the other side, interchange colors 
+        everywhere (including those regions newly created). 
+        This is an unambiguous coloring. 
+        &marker;
+    </p>
+</section>
+
+</body>
+</html>

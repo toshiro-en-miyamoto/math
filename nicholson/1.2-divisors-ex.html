@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercises of 1.2 Divisors and Prime Factorization</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>Exercises of 1.2 Divisors and Prime Factorization</h2>
+
+<h3>The Greatest Common Divisor</h3>
+
+<section id="division" class="theorem">
+    <h4>Theorem 1 &ndash; Division Algorithm</h4>
+    <p>
+        Let 
+        <math>
+            <mi>n</mi>
+            <mo>&in;</mo>
+            <mi>&integers;</mi>
+        </math>
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&in;</mo>
+            <mi>&naturals;</mi>
+        </math>
+        with 
+        <math>
+            <mi>d</mi>
+            <mo>&gt;</mo>
+            <mn>0</mn>
+        </math>. 
+        Then there exist uniquely determined integers 
+        <math><mi>q</mi></math> and <math><mi>r</mi></math> 
+        such that
+    </p>
+    <figure>
+        <math>
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mi>n</mi>
+                        <mo>&equals;</mo>
+                        <mi>q</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>d</mi>
+                        <mo>&plus;</mo>
+                        <mi>r</mi>
+                    </mtd>
+                    <mtd>
+                        <mtext>and</mtext>
+                    </mtd>
+                    <mtd>
+                        <mn>0</mn>
+                        <mo>&le;</mo>
+                        <mi>r</mi>
+                        <mo>&lt;</mo>
+                        <mi>d</mi>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </figure>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        Let 
+        <math>
+            <mi>X</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mi>n</mi>
+                <mo>&minus;</mo>
+                <mi>t</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </mrow>
+            <mo separator="true">&verbar;</mo>
+            <mrow>
+                <mi>t</mi><mo>&in;</mo><mi>&integers;</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+                <mo>&minus;</mo>
+                <mi>t</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+                <mo>&ge;</mo>
+                <mn>0</mn>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>. 
+        First we show that 
+        <math><mi>X</mi></math> is nonempty. 
+    </p>
+    <ul>
+        <li>
+            If 
+            <math>
+                <mi>n</mi><mo>&ge;</mo><mn>0</mn>
+            </math>, 
+            then 
+            for 
+            <math>
+                <mi>t</mi>
+                <mo>&equals;</mo>
+                <mn>0</mn>
+            </math>, 
+            <math>
+                <mi>n</mi>
+                <mo>&minus;</mo>
+                <mn>0</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+                <mo>&equals;</mo>
+                <mi>n</mi>
+            </math>
+            is in <math><mi>X</mi></math>. 
+        </li>
+        <li>
+            If 
+            <math>
+                <mi>n</mi><mo>&lt;</mo><mn>0</mn>
+            </math>, 
+            then 
+            for 
+            <math>
+                <mi>t</mi>
+                <mo>&equals;</mo>
+                <mi>n</mi>
+            </math>, 
+            <math>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mi>n</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>d</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>1</mn>
+                    <mo>&minus;</mo>
+                    <mi>d</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>
+            is in <math><mi>X</mi></math>
+            (because 
+            <math>
+                <mn>1</mn>
+                <mo>&le;</mo>
+                <mi>d</mi>
+            </math>
+            ). 
+        </li>
+    </ul>
+    <p>
+        Hence <math><mi>X</mi></math> is nonempty. 
+        Since 
+        <math>
+            <mi>X</mi>
+            <mo>&subseteq;</mo>
+            <mi>&naturals;</mi>
+        </math>, 
+        by the well-ordering principle, 
+        we know that <math><mi>X</mi></math> has a smallest member; 
+        call it <math><mi>r</mi></math>. 
+        Then 
+        <math>
+            <mi>r</mi>
+            <mo>&equals;</mo>
+            <mi>n</mi>
+            <mo>&minus;</mo>
+            <mi>q</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>d</mi>
+        </math> 
+        for some <math><mi>q</mi></math>, and 
+        <math>
+            <mi>r</mi><mo>&ge;</mo><mn>0</mn>
+        </math>
+        (because 
+        <math>
+            <mi>r</mi>
+            <mo>&in;</mo>
+            <mi>X</mi>
+        </math>
+        ). 
+        So it remains to show that 
+        <math>
+            <mi>r</mi><mo>&lt;</mo><mi>d</mi>
+        </math>. 
+    </p>
+    <ul>
+        <li>
+            If 
+            <math>
+                <mi>r</mi>
+                <mo>&ge;</mo>
+                <mi>d</mi>
+            </math>, 
+            then 
+            <math>
+                <mn>0</mn>
+                <mo>&le;</mo>
+                <mrow>
+                    <mi>r</mi>
+                    <mo>&minus;</mo>
+                    <mi>d</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mi>q</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>d</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&minus;</mo>
+                    <mi>d</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>q</mi>
+                        <mo>&plus;</mo>
+                        <mi>1</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>d</mi>
+                </mrow>
+            </math>. 
+        </li>
+        <li>
+            This means that 
+            <math>
+                <mi>r</mi>
+                <mo>&minus;</mo>
+                <mi>d</mi>
+            </math>
+            is in <math><mi>X</mi></math>, 
+            contradicting the minimality of <math><mi>r</mi></math>. 
+        </li>
+    </ul>
+    <p>
+        This result proves the existence of 
+        <math><mi>q</mi></math> and <math><mi>r</mi></math>
+        such that 
+        <math>
+            <mi>n</mi>
+            <mo>&equals;</mo>
+            <mi>q</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>d</mi>
+            <mo>&plus;</mo>
+            <mi>r</mi>
+        </math>
+        and 
+        <math>
+            <mn>0</mn>
+            <mo>&le;</mo>
+            <mi>r</mi>
+            <mo>&lt;</mo>
+            <mi>d</mi>
+        </math>. 
+    </p>
+    <p>
+        To complete the proof, we must show that 
+        <math><mi>q</mi></math> and <math><mi>r</mi></math>
+        found above are the only members with these properties. 
+        To prove uniqueness, suppose also that 
+        <math>
+            <mi>n</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>q</mi><mo>&prime;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+                <mo>&plus;</mo>
+                <mi>r</mi><mo>&prime;</mo>
+            </mrow>
+        </math>
+        with 
+        <math>
+            <mn>0</mn>
+            <mo>&le;</mo>
+            <mi>r</mi><mo>&prime;</mo>
+            <mo>&lt;</mo>
+            <mi>d</mi>
+        </math>. 
+        Assume 
+        <math>
+            <mi>r</mi>
+            <mo>&le;</mo>
+            <mi>r</mi><mo>&prime;</mo>
+        </math>
+        (the case 
+        <math>
+            <mi>r</mi><mo>&prime;</mo>
+            <mo>&le;</mo>
+            <mi>r</mi>
+        </math>
+        is similar). Then 
+        <math>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>q</mi>
+                    <mo>&minus;</mo>
+                    <mi>q</mi><mo>&prime;</mo>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>r</mi><mo>&prime;</mo>
+                <mo>&minus;</mo>
+                <mi>r</mi>
+            </mrow>
+        </math>
+        is a nonnegative, integral multiple of 
+        <math><mi>d</mi></math>
+        that is less than 
+        <math><mi>d</mi></math>
+        (because 
+        <math>
+            <mrow>
+                <mi>r</mi><mo>&prime;</mo>
+                <mo>&minus;</mo>
+                <mi>r</mi>
+            </mrow>
+            <mo>&le;</mo>
+            <mi>r</mi><mo>&prime;</mo>
+            <mo>&lt;</mo>
+            <mi>d</mi>
+        </math>). 
+        This can occur only if 
+        <math>
+            <mi>r</mi>
+            <mo>&equals;</mo>
+            <mi>r</mi><mo>&prime;</mo>
+        </math>, 
+        which implies that 
+        <math>
+            <mi>q</mi>
+            <mo>&equals;</mo>
+            <mi>q</mi><mo>&prime;</mo>
+        </math> 
+        (because 
+        <math>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>q</mi>
+                    <mo>&minus;</mo>
+                    <mi>q</mi><mo>&prime;</mo>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+        </math>
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&gt;</mo>
+            <mn>0</mn>
+        </math>
+        ) 
+        and so proves uniqueness. 
+        &marker;
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        <strong>Divisors:</strong>
+        Let 
+        <math>
+            <mi>n</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>d</mi>
+            <mo>&in;</mo>
+            <mi>&integers;</mi>
+        </math>. 
+    </p>
+    <figure>
+        If there exists 
+        <math>
+            <mi>q</mi>
+            <mo>&in;</mo>
+            <mi>&integers;</mi>
+        </math> 
+        such that 
+        <math>
+            <mi>n</mi>
+            <mo>&equals;</mo>
+            <mi>q</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>d</mi>
+        </math>, 
+        then we write 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>n</mi>
+        </math>
+    </figure>
+    <p>
+        <math><mi>d</mi></math> 
+        is called a <i>divisor</i> of 
+        <math><mi>n</mi></math>. 
+    </p>
+
+    <p>
+        <strong>Theorem 2.</strong>
+        Let 
+        <math>
+            <mi>m</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo>and</mo>
+            <mi>d</mi>
+        </math>
+        denote integers.
+    </p>
+    <ol>
+        <li>
+            for all integers <math><mi>n</mi></math>,
+            <math>
+                <mi>n</mi>
+                <mo>&mid;</mo>
+                <mi>n</mi>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>d</mi>
+                        <mo>&mid;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&and;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>m</mi>
+                        <mo>&mid;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&mid;</mo>
+                    <mi>n</mi>
+                </mrow>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>d</mi>
+                        <mo>&mid;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&and;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&mid;</mo>
+                        <mi>d</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&equals;</mo>
+                    <mo>&PlusMinus;</mo>
+                    <mi>n</mi>
+                </mrow>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>d</mi>
+                        <mo>&mid;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&and;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>d</mi>
+                        <mo>&mid;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&mid;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>n</mi>
+                        <mo>&plus;</mo>
+                        <mi>y</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>
+            for all integers 
+            <math><mi>x</mi></math> and <math><mi>y</mi></math>
+        </li>
+    </ol>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+    </p>
+    <ol>
+        <li>
+            If 
+            <math>
+                <mi>d</mi>
+                <mo>&equals;</mo>
+                <mi>n</mi>
+            </math>, 
+            then there exists 
+            <math>
+                <mi>q</mi>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+                <mo>&in;</mo>
+                <mi>&integers;</mi>
+            </math> 
+            such that 
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mi>q</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+            </math>. 
+            Hence 
+            <math>
+                <mi>n</mi>
+                <mo>&mid;</mo>
+                <mi>n</mi>
+            </math>. 
+            &marker;
+        </li>
+        <li>
+            Let 
+            <math>
+                <mi>m</mi>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </math>
+            and 
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <mi>m</mi>
+            </math>
+            for some 
+            <math>
+                <msub>
+                    <mi>q</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo seprator="true">&comma;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&in;</mo>
+                <mi>&integers;</mi>
+            </math>,  
+            then 
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </math>. 
+            Hence 
+            <math>
+                <mi>d</mi>
+                <mo>&mid;</mo>
+                <mi>n</mi>
+            </math>. 
+            &marker;
+        </li>
+        <li>
+            Let 
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </math>
+            and 
+            <math>
+                <mi>d</mi>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+            </math>
+            for some 
+            <math>
+                <msub>
+                    <mi>q</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo seprator="true">&comma;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&in;</mo>
+                <mi>&integers;</mi>
+            </math>, 
+            then 
+            <math>
+                <mi>d</mi>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </math>. 
+            <ul>
+                <li>
+                    If 
+                    <math>
+                        <mi>d</mi>
+                        <mo>&equals;</mo>
+                        <mn>0</mn>
+                    </math>, 
+                    then 
+                    <math>
+                        <mi>n</mi>
+                        <mo>&equals;</mo>
+                        <mn>0</mn>
+                    </math>, 
+                    so 
+                    <math>
+                        <mi>d</mi>
+                        <mo>&equals;</mo>
+                        <mi>n</mi>
+                    </math>.
+                </li>
+                <li>
+                    If 
+                    <math>
+                        <mi>d</mi>
+                        <mo>&ne;</mo>
+                        <mn>0</mn>
+                    </math>, 
+                    then 
+                    <math>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>2</mn>
+                        </msub>
+                        <mo>&InvisibleTimes;</mo>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo>&equals;</mo>
+                        <mn>1</mn>
+                    </math>. 
+                    As 
+                    <math>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo seprator="true">&comma;</mo>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>2</mn>
+                        </msub>
+                        <mo>&in;</mo>
+                        <mi>&integers;</mi>
+                    </math>, 
+                    <math>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo>&equals;</mo>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>2</mn>
+                        </msub>
+                        <mo>&equals;</mo>
+                        <mn>1</mn>
+                    </math>
+                    or 
+                    <math>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo>&equals;</mo>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>2</mn>
+                        </msub>
+                        <mo>&equals;</mo>
+                        <mo>&minus;</mo><mn>1</mn>
+                    </math>, 
+                    and so 
+                    <math>
+                        <mi>d</mi>
+                        <mo>&equals;</mo>
+                        <mo>&PlusMinus;</mo>
+                        <mi>n</mi>
+                    </math>. 
+                    &marker;
+                </li>
+            </ul>
+        </li>
+        <li>
+            Let 
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </math>
+            and 
+            <math>
+                <mi>m</mi>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </math>, 
+            then 
+            <math>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>n</mi>
+                    <mo>&plus;</mo>
+                    <mi>y</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>m</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo>&plus;</mo>
+                        <mi>y</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msub>
+                            <mi>q</mi>
+                            <mn>2</mn>
+                        </msub>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>d</mi>
+                </mrow>
+            </math>, 
+            so 
+            <math>
+                <mi>d</mi>
+                <mo>&mid;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>n</mi>
+                    <mo>&plus;</mo>
+                    <mi>y</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>m</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </math>. 
+            &marker;
+        </li>
+    </ol>
+</section>
+
+<section class="theorem">
+    <h4>Greatest Common Divisors</h4>
+    <p>
+        Let 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        be integers.
+        An integer <math><mi>d</mi></math>
+        is called a <i>greatest common divisor</i> of 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        if: 
+    </p>
+    <ol>
+        <li>
+            <math>
+                <mi>d</mi>
+                <mo>&ge;</mo>
+                <mn>1</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&mid;</mo>
+                    <mi>m</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&and;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>d</mi>
+                    <mo>&mid;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </math>     
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo>&mid;</mo>
+                        <mi>m</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&and;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo>&mid;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&Implies;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo>&mid;</mo>
+                    <mi>d</mi>
+                </mrow>
+            </math>
+        </li>
+    </ol>
+    <p>
+        When it exists we write 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>m</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo fence="true">&rpar;</mo>
+        </math>. 
+    </p>
+
+    <h4>Theorem 3</h4>
+    <p>
+        Let 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        be integers, not both zero. Then 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>m</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>n</mi>
+            <mo fence="true">&rpar;</mo>
+        </math> 
+        exists and 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>m</mi>
+                <mo>&plus;</mo>
+                <mi>y</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+            </mrow>
+        </math>
+        for some integers 
+        <math><mi>x</mi></math> and <math><mi>y</mi></math>. 
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        Let 
+        <math>
+            <mi>X</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>m</mi>
+                <mo>&plus;</mo>
+                <mi>y</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+            </mrow>
+            <mo separator="true">&verbar;</mo>
+            <mrow>
+                <mrow>
+                    <mi>x</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>y</mi>
+                    <mo>&in;</mo>
+                    <mi>&integers;</mi>
+                </mrow>
+                <mo separator="true">&comma;</mo>
+                <mrow>
+                    <mrow>
+                        <mi>x</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>m</mi>
+                        <mo>&plus;</mo>
+                        <mi>y</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>n</mi>
+                    </mrow>
+                    <mo>&ge;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>. 
+        Then <math><mi>X</mi></math> is not empty because 
+        <math>
+            <mrow>
+                <msup><mi>m</mi><mn>2</mn></msup>
+                <mo>&plus;</mo>
+                <msup><mi>n</mi><mn>2</mn></msup>
+            </mrow>
+            <mo>&in;</mo>
+            <mi>X</mi>
+        </math>, 
+        so let <math><mi>d</mi></math>
+        be the smallest member of <math><mi>X</mi></math>
+        (by the well-ordering principle). 
+        Since 
+        <math>
+            <mi>d</mi>
+            <mo>&in;</mo>
+            <mi>X</mi>
+        </math>, 
+        we have 
+        <math>
+            <mi>d</mi>
+            <mo>&ge;</mo>
+            <mn>1</mn>
+        </math>
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>x</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>m</mi>
+                <mo>&plus;</mo>
+                <mi>y</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>n</mi>
+            </mrow>
+        </math>
+        for some integers 
+        <math><mi>x</mi></math> and <math><mi>y</mi></math>. 
+        Also, if 
+        <math>
+            <mi>k</mi>
+            <mo>&mid;</mo>
+            <mi>m</mi>
+        </math>
+        and 
+        <math>
+            <mi>k</mi>
+            <mo>&mid;</mo>
+            <mi>n</mi>
+        </math>, 
+        then 
+        <math>
+            <mrow>
+                <mi>k</mi>
+                <mo>&mid;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>m</mi>
+                    <mo>&plus;</mo>
+                    <mi>y</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>k</mi>
+                <mo>&mid;</mo>
+                <mi>d</mi>
+            </mrow>
+        </math>
+        by Theorem 2. So it remains to show that 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>m</mi>
+        </math>
+        and 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>n</mi>
+        </math>. 
+    </p>
+    <p>
+        To show that 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>m</mi>
+        </math>, 
+        write 
+        <math>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>q</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+                <mo>&plus;</mo>
+                <mi>r</mi>
+            </mrow>
+        </math>
+        where 
+        <math>
+            <mn>0</mn>
+            <mo>&le;</mo>
+            <mi>r</mi>
+            <mo>&lt;</mo>
+            <mi>d</mi>
+        </math>. 
+        Then,
+    </p>
+    <figure>
+        <math>
+            <mi>r</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>m</mi>
+                <mo>&minus;</mo>
+                <mi>q</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>m</mi>
+                <mo>&minus;</mo>
+                <mi>q</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>m</mi>
+                    <mo>&plus;</mo>
+                    <mi>y</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mn>1</mn>
+                        <mo>&minus;</mo>
+                        <mi>q</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>x</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>m</mi>
+                </mrow>
+                <mo>&plus;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mo>&minus;</mo>
+                        <mi>q</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>y</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>n</mi>
+                </mrow>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        Hence, if 
+        <math>
+            <mi>r</mi>
+            <mo>&ge;</mo>
+            <mn>1</mn>
+        </math>, 
+        then 
+        <math>
+            <mi>r</mi>
+            <mo>&in;</mo>
+            <mi>X</mi>
+        </math>
+        and 
+        <math>
+            <mi>r</mi>
+            <mo>&lt;</mo>
+            <mi>d</mi>
+        </math>, 
+        contradicting the choice of <math><mi>d</mi></math>. 
+        So 
+        <math>
+            <mi>r</mi>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+        </math>, 
+        that is, 
+        <math>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <mi>q</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>d</mi>
+        </math>. 
+        Thus, 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>m</mi>
+        </math>. 
+        <math>
+            <mi>d</mi>
+            <mo>&mid;</mo>
+            <mi>n</mi>
+        </math> 
+        is proved similarly. 
+        &marker;
+    </p>
+</section>
+<section class="description">
+    <p>
+        Note that 
+        <math>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>n</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        does not exist if 
+        <math>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <mn>0</mn>
+            <mo>&equals;</mo>
+            <mi>n</mi>
+        </math>, 
+        which explains the requirement in Theorem 3 that 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math> 
+        are not both zero.
+        If <math><mi>k</mi></math> is a non-zero integer, 
+        <math><mi>k</mi></math> divvides zero, which means 
+        all non-zero integers are divisors of zero. 
+        Therefore, all non-zero integers are common divisors of 
+        <math><mn>0</mn></math> and <math><mn>0</mn></math>, 
+        so there is no greatest one. Thus, 
+    </p>
+    <figure>
+        <math>
+            <mi>gcd</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>0</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>0</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        isn’t defined. 
+    </figure>
+    <p>
+        Again, all non-zero integers are divisors of zero. 
+        And the largest divisor of <math><mi>k</mi></math> is 
+        <math><mi>k</mi></math>. 
+        Therefore 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>k</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mn>0</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>gcd</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>0</mn>
+                    <mo separator="true">&comma;</mo>
+                    <mi>k</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mi>k</mi>
+        </math> 
+    </figure>
+</section>
+
+</body>
+</html>

@@ -689,6 +689,151 @@
     </p>
 </section>
 
+<section class="summary">
+    <h4>Summary &ndash; Equivalences</h4>
+    <ul>
+        <li>
+            A <i>relation</i> on a set <math><mi>A</mi></math> is a subset of 
+            <math><mi>A</mi><mo>&times;</mo><mi>A</mi></math>.
+        </li>
+        <li>
+            An <i>equivalence</i> on a set <math><mi>A</mi></math> is 
+            a relation <math><mi>&Tilde;</mi></math> 
+            on <math><mi>A</mi></math> that is: 
+            <ul>
+                <li>
+                    <i>reflexive:</i>
+                    <math>
+                        <mo>&forall;</mo>
+                        <mi>a</mi><mo>&in;</mo><mi>A</mi>
+                        <mo>&comma;</mo>
+                        <mi>a</mi><mo>&Tilde;</mo><mi>a</mi>
+                    </math>
+                </li>
+                <li>
+                    <i>symmetric:</i>
+                    <math>
+                        <mi>a</mi><mo>&Tilde;</mo><mi>b</mi>
+                        <mo>&Implies;</mo>
+                        <mi>b</mi><mo>&Tilde;</mo><mi>a</mi>
+                    </math>
+                </li>
+                <li>
+                    <i>transitive:</i>
+                    <math>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>a</mi><mo>&Tilde;</mo><mi>b</mi>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&and;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>b</mi><mo>&Tilde;</mo><mi>c</mi>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&Implies;</mo>
+                        <mi>a</mi><mo>&Tilde;</mo><mi>c</mi>
+                    </math>
+                </li>
+            </ul>
+            and often written as <math><mi>&equiv;</mi></math>
+            rather than <math><mi>&Tilde;</mi></math>
+        </li>
+        <li>
+            An <i>equivalence class</i> on a set <math><mi>A</mi></math>
+            is a set defined as:
+            <ul>
+                <li>
+                    <math>
+                        <mo fence="true">&lbrack;</mo>
+                        <mi>a</mi>
+                        <mo fence="true">&rbrack;</mo>
+                        <mo>&equals;</mo>
+                        <mo fence="true">&lbrace;</mo>
+                        <mi>x</mi><mo>&in;</mo><mi>A</mi>
+                        <mo separator="true">&verbar;</mo>
+                        <mi>x</mi><mo>&equiv;</mo><mi>a</mi>
+                        <mo fence="true">&rbrace;</mo>
+                    </math>
+                </li>
+            </ul>
+            then
+            <ul>
+                <li>
+                    <math>
+                        <mo>&forall;</mo>
+                        <mi>a</mi><mo>&in;</mo><mi>A</mi>
+                        <mo>&comma;</mo>
+                        <mi>a</mi><mo>&in;</mo>
+                        <mo fence="true">&lbrack;</mo>
+                        <mi>a</mi>
+                        <mo fence="true">&rbrack;</mo>
+                    </math>
+                </li>
+                <li>
+                    <math>
+                        <mrow>
+                            <mo fence="true">&lbrack;</mo>
+                            <mi>a</mi>
+                            <mo fence="true">&rbrack;</mo>
+                            <mo>&equals;</mo>
+                            <mo fence="true">&lbrack;</mo>
+                            <mi>b</mi>
+                            <mo fence="true">&rbrack;</mo>
+                        </mrow>
+                        <mo>&iff;</mo>
+                        <mrow>
+                            <mi>a</mi><mo>&equiv;</mo><mi>b</mi>
+                        </mrow>
+                    </math>
+                </li>
+                <li>
+                    <math>
+                        <mrow>
+                            <mi>a</mi><mo>&in;</mo>
+                            <mo fence="true">&lbrack;</mo>
+                            <mi>b</mi>
+                            <mo fence="true">&rbrack;</mo>
+                        </mrow>
+                        <mo>&Implies;</mo>
+                        <mrow>
+                            <mo fence="true">&lbrack;</mo>
+                            <mi>a</mi>
+                            <mo fence="true">&rbrack;</mo>
+                            <mo>&equals;</mo>
+                            <mo fence="true">&lbrack;</mo>
+                            <mi>b</mi>
+                            <mo fence="true">&rbrack;</mo>
+                        </mrow>
+                    </math>
+                </li>
+                <li>
+                    <math>
+                        <mrow>
+                            <mo fence="true">&lbrack;</mo>
+                            <mi>a</mi>
+                            <mo fence="true">&rbrack;</mo>
+                            <mo>&ne;</mo>
+                            <mo fence="true">&lbrack;</mo>
+                            <mi>b</mi>
+                            <mo fence="true">&rbrack;</mo>
+                        </mrow>
+                        <mo>&Implies;</mo>
+                        <mrow>
+                            <mo fence="true">&lbrack;</mo>
+                            <mi>a</mi>
+                            <mo fence="true">&rbrack;</mo>
+                            <mo>&cap;</mo>
+                            <mo fence="true">&lbrack;</mo>
+                            <mi>b</mi>
+                            <mo fence="true">&rbrack;</mo>
+                            <mo>&equals;</mo>
+                            <mi>&emptyset;</mi>
+                        </mrow>
+                    </math>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
 <!-- ------------------------------------------------------------ -->
 <h3>Partitions</h3>
 
@@ -696,7 +841,7 @@
     <h4>Disjoint</h4>
     <ul>
         <li>
-            two sets 
+            Two sets 
             <math><mi>X</mi></math> and <math><mi>Y</mi></math>
             are called <i>disjoint</i> if 
             <math>
@@ -710,6 +855,305 @@
             if any two (distinct) sets in the family are disjoint.
         </li>
     </ul>
+</section>
+
+<section id="partitions" class="definition">
+    <h4>Partitions</h4>
+    <p>
+        If <math><mi>A</mi></math> is a nonempty set,
+        a family <math><mi>&Pscr;</mi></math> of subsets of <math><mi>A</mi></math> 
+        is called a <i>partition</i> of <math><mi>A</mi></math> if 
+        <ol>
+            <li>
+                no cell is empty, 
+            </li>
+            <li>
+                the cells are pairwise disjoint, and 
+            </li>
+            <li>
+                every element of <i>A</i> belongs to some cell.
+            </li>
+        </ol>
+    </p>
+    <p>
+        The sets in <math><mi>&Pscr;</mi></math> are called 
+        the <i>cells</i> of the partition. 
+    </p>
+</section>
+
+<section class="example">
+    <h4>Example 6</h4>
+    <p>
+        The set 
+        <math>
+            <mi>A</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mn>1</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>3</mn>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+        has five partitions:
+    </p>
+    <figure>
+        <ul>
+            <li>
+                <math>
+                    <mo fence="true">&lbrace;</mo>
+                    <mi>A</mi>
+                    <mo fence="true">&rbrace;</mo>
+                </math>
+                &hellip; one cell
+            </li>
+            <li>
+                <math>
+                    <mo fence="true">&lbrace;</mo>
+                    <mrow>
+                        <mo fence="true">&lbrace;</mo>
+                        <mrow>
+                            <mn>1</mn>
+                            <mo sepearator="true">&comma;</mo>
+                            <mn>2</mn>
+                        </mrow>
+                        <mo fence="true">&rbrace;</mo>
+                        <mo sepearator="true">&comma;</mo>
+                        <mo fence="true">&lbrace;</mo>
+                        <mn>3</mn>
+                        <mo fence="true">&rbrace;</mo>
+                    </mrow>
+                    <mo fence="true">&rbrace;</mo>
+                </math>
+                &hellip; two cells
+            </li>
+            <li>
+                <math>
+                    <mo fence="true">&lbrace;</mo>
+                    <mrow>
+                        <mo fence="true">&lbrace;</mo>
+                        <mrow>
+                            <mn>2</mn>
+                            <mo sepearator="true">&comma;</mo>
+                            <mn>3</mn>
+                        </mrow>
+                        <mo fence="true">&rbrace;</mo>
+                        <mo sepearator="true">&comma;</mo>
+                        <mo fence="true">&lbrace;</mo>
+                        <mn>1</mn>
+                        <mo fence="true">&rbrace;</mo>
+                    </mrow>
+                    <mo fence="true">&rbrace;</mo>
+                </math>
+            </li>
+            <li>
+                <math>
+                    <mo fence="true">&lbrace;</mo>
+                    <mrow>
+                        <mo fence="true">&lbrace;</mo>
+                        <mrow>
+                            <mn>3</mn>
+                            <mo sepearator="true">&comma;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                        <mo fence="true">&rbrace;</mo>
+                        <mo sepearator="true">&comma;</mo>
+                        <mo fence="true">&lbrace;</mo>
+                        <mn>2</mn>
+                        <mo fence="true">&rbrace;</mo>
+                    </mrow>
+                    <mo fence="true">&rbrace;</mo>
+                </math>
+            </li>
+            <li>
+                <math>
+                    <mo fence="true">&lbrace;</mo>
+                    <mrow>
+                        <mo fence="true">&lbrace;</mo>
+                        <mrow>
+                            <mn>1</mn>
+                        </mrow>
+                        <mo fence="true">&rbrace;</mo>
+                        <mo sepearator="true">&comma;</mo>
+                        <mo fence="true">&lbrace;</mo>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                        <mo fence="true">&rbrace;</mo>
+                        <mo sepearator="true">&comma;</mo>
+                        <mo fence="true">&lbrace;</mo>
+                        <mrow>
+                            <mn>3</mn>
+                        </mrow>
+                        <mo fence="true">&rbrace;</mo>
+                    </mrow>
+                    <mo fence="true">&rbrace;</mo>
+                </math>
+                &hellip; three cells
+            </li>
+        </ul>
+    </figure>
+</section>
+
+<section id="partion-theorem" class="theorem">
+    <h4>Theorem 2 &ndash; Partition Theorem</h4>
+    <p>
+        If <math><mi>&equiv;</mi></math> is any equivalence 
+        on a nonempty set <math><mi>A</mi></math>, 
+        the family of all equivalence classes is a partition of 
+        <math><mi>A</mi></math> that affords <math><mi>&equiv;</mi></math>.
+    </p>
+</section>
+
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        The equivalence classes are nonempty and pairwise disjoint by 
+        (1) and (4) of Theorem 1, and every element of <math><mi>A</mi></math> 
+        belongs to some class (the one it generates). 
+        Hence, the equivalence classes are the cells of a partition. 
+    </p>
+    <p>
+        To show that this partition affords <math><mi>&equiv;</mi></math>, 
+        it is enough to show that two elements 
+         <math><mi>a</mi></math> and <math><mi>b</mi></math>
+        are equivalent if and only if they belong to the same equivalence class. 
+        <ol>
+            <li>
+                If 
+                <math>
+                    <mi>a</mi><mo>&equiv;</mo><mi>b</mi>
+                </math>, 
+                then 
+                <math>
+                    <mrow>
+                        <mo fence="true">&lbrack;</mo>
+                        <mi>a</mi>
+                        <mo fence="true">&rbrack;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lbrack;</mo>
+                        <mi>b</mi>
+                        <mo fence="true">&rbrack;</mo>
+                    </mrow>
+                </math>
+                by (2) of Theorem 1, so 
+                <math><mi>a</mi></math> and <math><mi>b</mi></math>
+                belong to this common class. 
+            </li>
+            <li>
+                Conversely, if 
+                <math><mi>a</mi></math> and <math><mi>b</mi></math>
+                belong to class 
+                <math>
+                    <mo fence="true">&lbrack;</mo>
+                    <mi>c</mi>
+                    <mo fence="true">&rbrack;</mo>
+                </math>, 
+                then 
+                <math>
+                    <mrow>
+                        <mo fence="true">&lbrack;</mo>
+                        <mi>a</mi>
+                        <mo fence="true">&rbrack;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lbrack;</mo>
+                        <mi>c</mi>
+                        <mo fence="true">&rbrack;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lbrack;</mo>
+                        <mi>b</mi>
+                        <mo fence="true">&rbrack;</mo>
+                    </mrow>
+                </math>
+                by (3) of Theorem 1, so 
+                <math>
+                    <mi>a</mi><mo>&equiv;</mo><mi>b</mi>
+                </math>. 
+            </li>
+        </ol>
+    </p>
+</section>
+
+<section class="description">
+    <h4>Partitions give rise to equivalence</h4>
+    <p>
+        If <math><mi>&Pscr;</mi></math> is a partition of the nonempty set 
+        <math><mi>A</mi></math>, and if 
+        <math><mi>a</mi></math> and <math><mi>b</mi></math> 
+        are elements of <math><mi>A</mi></math>, we define 
+        <math>
+            <mi>a</mi><mo>&Tilde;</mo><mi>b</mi>
+        </math> 
+        to mean that 
+        <math><mi>a</mi></math> and <math><mi>b</mi></math>
+        are in the same cell of <math><mi>&Pscr;</mi></math>. Then 
+        <ul>
+            <li>
+                because each 
+                <math><mi>a</mi><mo>&in;</mo><mi>A</mi></math>
+                lies in some cell, so 
+                <math><mi>a</mi><mo>&Tilde;</mo><mi>a</mi></math>
+                (reflexive)
+            </li>
+            <li>
+                if 
+                <math><mi>a</mi><mo>&Tilde;</mo><mi>b</mi></math>, 
+                then <math><mi>a</mi></math> and <math><mi>b</mi></math>
+                are in the same cell, so obviously 
+                <math><mi>b</mi><mo>&Tilde;</mo><mi>a</mi></math> 
+                (symmetric) 
+            </li>
+            <li>
+                let 
+                <math><mi>a</mi><mo>&Tilde;</mo><mi>b</mi></math>
+                and 
+                <math><mi>b</mi><mo>&Tilde;</mo><mi>c</mi></math>. 
+                Because <math><mi>b</mi></math> lies in a unique cell, 
+                <math><mi>a</mi></math> and <math><mi>c</mi></math>
+                are in that same cell; that is, 
+                <math><mi>a</mi><mo>&Tilde;</mo><mi>c</mi></math>
+                (transitive) 
+            </li>
+        </ul>
+        Hence, <math><mi>&Tilde;</mi></math> is an equivalence on 
+        <math><mi>A</mi></math>, and we say that it is the equivalence 
+        afforded by the partition. 
+    </p>
+</section>
+
+<section id="quotient-set" class="definition">
+    <h4>Quotient Sets</h4>
+    <p>
+        If <math><mo>&equiv;</mo></math> is an equivalence on <math><mi>A</mi></math>, 
+        the set of all equivalence classes is called the <i>quotient set</i> 
+        and denoted <math><msub><mi>A</mi><mo>&equiv;</mo></msub></math>. 
+    </p>
+    <figure>
+        <math>
+            <msub><mi>A</mi><mo>&equiv;</mo></msub>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mo fence="true">&lbrack;</mo>
+                <mi>a</mi>
+                <mo fence="true">&rbrack;</mo>
+            </mrow>
+            <mo separator="true">&verbar;</mo>
+            <mrow>
+                <mi>a</mi><mo>&in;</mo><mi>A</mi>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>        
+    </figure>
 </section>
 
 </body>
