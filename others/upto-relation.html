@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Up to isomorphism</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+
+<section class="description">
+    <h4>Up to isomorphism</h4>
+    <p>
+        Isomorphic partial orders are explained in [Schumacher 1996] as; 
+    </p>
+    <ul>
+        <li>
+            Suppose that we had not labeled the elements 
+            in the lattice diagrams above. 
+            Then we would have been observing only the 
+            order structure of the set and nothing else. 
+            [...] 
+            The differences between them amounts only to a 
+            <strong>relabeling</strong> of the [elements].
+        </li>
+        <li>
+            Two mathematical structures are called <i>isomorphic</i> 
+            if they are <strong>the same up to</strong>
+            a relabeling of the elements involved 
+            (the same up to <i>isomorphism</i>). 
+        </li>
+    </ul>
+    <p>
+        The fundamental theorem of arithmatic is described as;
+    </p>
+    <ul>
+        <li>
+            in [Schumacher 1996]:
+            Every positive integer can be written as a product of 
+            prime numbers, and 
+            that factorization is <strong>unique up to</strong> 
+            the order of the factors
+        </li>
+        <li>
+            in [Nicholson 2012]: 
+            Every integer n &ge; 2 is a product of (one or more) primes.
+            This factorization is <strong>unique up to</strong>
+            the order of the factors. That is, if
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>p</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mi>r</mi>
+                    </msub>
+                </mrow>
+            </math>
+            and 
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>q</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>q</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>q</mi>
+                        <mi>s</mi>
+                    </msub>
+                </mrow>
+            </math>, 
+            where 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mi>i</mi>
+                </msub>
+            </math>
+            and 
+            <math>
+                <msub>
+                    <mi>q</mi>
+                    <mi>j</mi>
+                </msub>
+            </math>
+            are primes, then 
+            <math>
+                <mi>r</mi>
+                <mo>&equals;</mo>
+                <mi>s</mi>
+            </math>
+            and 
+            <math>
+                <msub>
+                    <mi>q</mi>
+                    <mi>j</mi>
+                </msub>
+            </math>
+            can be <strong>relabeled</strong> so that 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mi>i</mi>
+                </msub>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mi>i</mi>
+                </msub>
+            </math>
+            for all 
+            <math>
+                <mi>i</mi>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>r</mi>
+            </math>. 
+        </li>
+    </ul>
+    <p>
+        [Nicholson 2012] describes the isomorphism as follows:
+    </p>
+    <ul>
+        <li>
+            If 
+            <math><mi>G</mi></math> and <math><mi>H</mi></math>
+            are groups, a mapping 
+            <math>
+                <mi>&sigma;</mi>
+                <mo>&colon;</mo>
+                <mi>G</mi>
+                <mo>&rightarrow;</mo>
+                <mi>H</mi>
+            </math>
+            is called an <strong>isomorphism</strong> if 
+            <math><mi>&sigma;</mi></math> 
+            is a bijection (one-to-one and onto) which is also a homomorphism.
+        </li>
+        <li>
+            if 
+            <math>
+                <mi>&sigma;</mi>
+                <mo>&colon;</mo>
+                <mi>G</mi>
+                <mo>&rightarrow;</mo>
+                <mi>H</mi>
+            </math>
+            is an isomorphism, the group H is just G with the change of notation
+            <math>
+                <mi>g</mi>
+                <mo>&map;</mo>
+                <mi>&sigma;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>g</mi>
+                <mo fence="true">&rpar;</mo>
+            </math>. 
+        </li>
+    </ul>
+    <p>
+        Sakai shows the theorem in [Sakai 2011] as: 
+    </p>
+    <ul>
+        <li>
+            すべての自然数 n &ge; 2 は素数の積に分解され, 
+            その分解は積の順序を除いて一意的である.
+        </li>
+        <li>
+            2通りの素因数分解が得られたとする: 
+            <math>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>p</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>p</mi>
+                        <mi>r</mi>
+                    </msub>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>q</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>q</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>q</mi>
+                        <mi>s</mi>
+                    </msub>
+                </mrow>
+            </math>, 
+            ただし 
+            <math>
+                <msub>
+                    <mi>p</mi>
+                    <mi>i</mi>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>q</mi>
+                    <mi>j</mi>
+                </msub>
+            </math>
+            はすべて素数とする. このとき 
+            <math>
+                <mi>r</mi>
+                <mo>&equals;</mo>
+                <mi>s</mi>
+            </math>
+            であり, 
+            <strong>番号を付け直す</strong>ことにより, 
+            <math>
+                <mrow>
+                    <msub>
+                        <mi>p</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&equals;</mo>
+                    <msub>
+                        <mi>q</mi>
+                        <mn>1</mn>
+                    </msub>
+                </mrow>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+                <mo separator="true">&comma;</mo>
+                <mrow>
+                    <msub>
+                        <mi>p</mi>
+                        <mi>r</mi>
+                    </msub>
+                    <mo>&equals;</mo>
+                    <msub>
+                        <mi>q</mi>
+                        <mi>r</mi>
+                    </msub>
+                </mrow>
+                となる [...]
+            </math>
+        </li>
+    </ul>
+</section>
+
+<section class="description">
+    <h4>Up to an equivalence relation</h4>
+    <p>
+        [wiki/Up_to] gives further examples including  
+    </p>
+    <ul>
+        <li>up to isomorphism</li>
+        <li>up to permutation</li>
+        <li>up to rotation</li>
+    </ul>
+    <p>
+        saying 
+    </p>
+    <ul>
+        <li>
+            Let &Tilde; be an equivalnce relation, and 
+            [<i>a</i>] an equivalence class with respect to &Tilde;, then 
+        </li>
+        <li>
+            <i>b</i> and <i>c</i> are <strong>equal up to</strong> &Tilde; 
+            if <i>b</i> and <i>c</i> are in [<i>a</i>] 
+        </li>
+        <li>
+            <i>x</i>
+            is <strong>unique up to</strong> &Tilde; 
+            if all objects 
+            <i>x</i>
+            under consideration are in the same equivalence class
+        </li>
+    </ul>
+    <p>
+        and 
+    </p>
+    <figure>
+        "there are two different groups of order 4 up to isomorphism"
+    </figure>
+    <p>
+        means that there are two equivalence classes of groups of order 4
+        &mdash; 
+        assuming that one considers groups to be equivalent if they are isomorphic.
+    </p>
+</section>
+</body>
+</html>
