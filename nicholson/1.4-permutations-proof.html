@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Proofs of 1.4 Permutations</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>Proofs of 1.4 Permutations</h2>
+
+<section class="theorem">
+    <p>
+        <strong>Lemma 1.</strong>
+        If 
+        <math>
+            <mi>k</mi>
+            <mo>&in;</mo>
+            <msub>
+                <mi>M</mi>
+                <mi>&sigma;</mi>
+            </msub>
+        </math>, 
+        then 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>k</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&in;</mo>
+            <msub>
+                <mi>M</mi>
+                <mi>&sigma;</mi>
+            </msub>
+        </math>. 
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        Otherwise, 
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mi>k</mi>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        is fixed by <math><mi>&sigma;</mi></math>; 
+        that is, 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>k</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+        But then the fact that <math><mi>&sigma;</mi></math>
+        is one-to-one gives 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>k</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mi>k</mi>
+        </math>
+        (recall that if a mapping 
+        <math><mi>f</mi></math>
+        is one-to-one, 
+        <math>
+            <mrow>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>a</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>b</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+            <mo>&Implies;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo>&equals;</mo>
+                <mi>b</mi>
+            </mrow>
+        </math>
+        ),
+        which is contrary to the hypothesis 
+        <math>
+            <mi>k</mi>
+            <mo>&in;</mo>
+            <msub>
+                <mi>M</mi>
+                <mi>&sigma;</mi>
+            </msub>
+        </math>. 
+        &marker;
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        Two permutations 
+        <math><mi>&sigma;</mi></math> and <math><mi>&tau;</mi></math>
+        are called <strong>disjoint</strong> if no element of 
+        <math><msub><mi>X</mi><mi>n</mi></msub></math>
+        is moved by both; that is, if 
+        <math>
+            <mrow>
+                <msub>
+                    <mi>M</mi>
+                    <mi>&sigma;</mi>
+                </msub>
+                <mo>&cap;</mo>
+                <msub>
+                    <mi>M</mi>
+                    <mi>&tau;</mi>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mi>&emptyset;</mi>
+        </math>. 
+    </p>
+    <p>
+        <strong>Theorem 3.</strong>
+        If 
+        <math><mi>&sigma;</mi></math> and <math><mi>&tau;</mi></math>
+        in 
+        <math>
+            <msub>
+                <mi>S</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        are disjoint, then 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&tau;</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&tau;</mi>
+                <mo>&compfn;</mo>
+                <mi>&sigma;</mi>
+            </mrow>
+        </math>. 
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        For 
+        <math>
+            <mi>k</mi>
+            <mo>&in;</mo>
+            <msub>
+                <mi>X</mi>
+                <mi>n</mi>
+            </msub>
+        </math>, 
+        we must show that 
+        <math>
+            <mrow>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&sigma;</mi>
+                </mrow>
+                <mo fence="true">&lpar;</mo>
+                <mi>k</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&tau;</mi>
+                </mrow>
+                <mo fence="true">&lpar;</mo>
+                <mi>k</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+        Since 
+        <math>
+            <mrow>
+                <msub>
+                    <mi>M</mi>
+                    <mi>&sigma;</mi>
+                </msub>
+                <mo>&cap;</mo>
+                <msub>
+                    <mi>M</mi>
+                    <mi>&tau;</mi>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mi>&emptyset;</mi>
+        </math>
+        by hypothesis, there are three cases: 
+    </p>
+    <ol>
+        <li>
+            <math>
+                <mi>k</mi>
+                <mo>&in;</mo>
+                <msub>
+                    <mi>M</mi>
+                    <mi>&sigma;</mi>
+                </msub>
+            </math>: 
+            Then 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&in;</mo>
+                <msub>
+                    <mi>M</mi>
+                    <mi>&sigma;</mi>
+                </msub>
+            </math>
+            too (by Lemma 1), so neither lies in 
+            <math>
+                <msub>
+                    <mi>M</mi>
+                    <mi>&tau;</mi>
+                </msub>
+            </math>. 
+            Hence, both are fixed by 
+            <math><mi>&tau;</mi></math>, 
+            so 
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>k</mi>
+            </math>
+            and 
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>k</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                        <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>. 
+            Hence, 
+            <math>
+                <mrow>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                    </mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>k</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>k</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                    </mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mi>k</mi>
+                <mo>&in;</mo>
+                <msub>
+                    <mi>M</mi>
+                    <mi>&tau;</mi>
+                </msub>
+            </math>: 
+            This case is analogous to Case 1. 
+        </li>
+        <li>
+            <math>
+                <mi>k</mi>
+                <mo>&notin;</mo>
+                <msub>
+                    <mi>M</mi>
+                    <mi>&sigma;</mi>
+                </msub>
+            </math>
+            and 
+            <math>
+                <mi>k</mi>
+                <mo>&notin;</mo>
+                <msub>
+                    <mi>M</mi>
+                    <mi>&tau;</mi>
+                </msub>
+            </math>: 
+            Then 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>k</mi>
+            </math>
+            and 
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>k</mi>
+            </math>, 
+            so 
+            <math>
+                <mrow>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                    </mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>k</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>k</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                    </mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>k</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>. 
+            &marker;
+        </li>
+    </ol>
+</section>
+
+
+</body>
+</html>
