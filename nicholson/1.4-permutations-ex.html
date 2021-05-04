@@ -1,0 +1,2990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercises of 1.4 Permutations</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+<h2>Exercises of 1.4 Permutations</h2>
+
+<section class="example">
+    <p>
+        <strong>1.</strong>
+        Let 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&equals;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo separator="true">&comma;</mo>
+            <mrow>
+                <mi>&tau;</mi>
+                <mo>&equals;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo separator="true">&comma;</mo>
+            <mrow>
+                <mi>&mu;</mi>
+                <mo>&equals;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        be permutations. Compute:
+    </p>
+    <ol>
+        <li>
+            <math>
+                <mi>&tau;</mi>
+                <mo>&compfn;</mo>
+                <mi>&sigma;</mi>
+            </math>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            <math>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&tau;</mi>
+            </math>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            <math>
+                <msup>
+                    <mi>&tau;</mi>
+                    <mrow>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msup>
+            </math>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            <math>
+                <msup>
+                    <mi>&mu;</mi>
+                    <mrow>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msup>
+            </math>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            <math>
+                <mi>&mu;</mi>
+                <mo>&compfn;</mo>
+                <mi>&tau;</mi>
+                <mo>&compfn;</mo>
+                <msup>
+                    <mi>&sigma;</mi>
+                    <mrow>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msup>
+            </math>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            <math>
+                <msup>
+                    <mi>&mu;</mi>
+                    <mrow>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msup>
+                <mo>&compfn;</mo>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&tau;</mi>
+            </math>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>5</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+    </ol>
+</section>
+
+<section class="example">
+    <p>
+        <strong>2.</strong>
+    </p>
+    <ol>
+        <li>
+            (a) Verify that any two of 
+            <math><mi>&sigma;</mi></math>, 
+            <math><mi>&tau;</mi></math>, and 
+            <math><mi>&mu;</mi></math>
+            commute: 
+            <figure>
+                <math>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&equals;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo separator="true">&comma;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&equals;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo separator="true">&comma;</mo>
+                    <mrow>
+                        <mi>&mu;</mi>
+                        <mo>&equals;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&mu;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mi>&epsilon;</mi>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mrow>
+                        <mi>&mu;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mi>&epsilon;</mi>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mrow>
+                        <mi>&mu;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&mu;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            Do (a) by first verifying that 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&equals;</mo>
+                    <msup>
+                        <mi>&tau;</mi>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+            </math>
+            and 
+            <math>
+                <mrow>
+                    <mi>&mu;</mi>
+                    <mo>&equals;</mo>
+                    <msup>
+                        <mi>&tau;</mi>
+                        <mn>3</mn>
+                    </msup>
+                </mrow>
+            </math>. 
+            <figure>
+                <math>
+                    <msup>
+                        <mi>&tau;</mi>
+                        <mn>2</mn>
+                    </msup>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mi>&sigma;</mi>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <msup>
+                        <mi>&tau;</mi>
+                        <mn>3</mn>
+                    </msup>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mi>&mu;</mi>
+                </math>
+            </figure>
+            <p>
+                Because permuntations are associative (Theorem 2), 
+                we have 
+            </p>
+            <figure>
+                <math>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&mu;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mn>3</mn>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mn>3</mn>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&mu;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mrow>
+                        <mi>&mu;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mn>3</mn>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mn>3</mn>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&mu;</mi>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+    </ol>
+</section>
+
+<section class="example">
+    <p>
+        <strong>3.</strong>
+        Let 
+    </p>
+    <figure>
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>, 
+        <math>
+            <mi>&tau;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        Solve 
+        <math><mi>&chi;</mi></math>
+        in 
+        <math>
+            <msub>
+                <mi>S</mi>
+                <mn>4</mn>
+            </msub>
+        </math>. 
+    </p>
+    <ol>
+        <li>
+            <math>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&chi;</mi>
+                <mo>&equals;</mo>
+                <mi>&tau;</mi>
+            </math>
+            <figure>
+                <math>
+                    <mi>&chi;</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>&sigma;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&chi;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>&sigma;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&chi;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&tau;</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>&sigma;</mi>
+            </math>
+            <figure>
+                <math>
+                    <mi>&chi;</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&chi;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <msup>
+                        <mi>&sigma;</mi>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                    <mo>&compfn;</mo>
+                    <mi>&chi;</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>&tau;</mi>
+            </math>
+            <figure>
+                <math>
+                    <mi>&chi;</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&sigma;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <mi>&chi;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&chi;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&tau;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&sigma;</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>&epsilon;</mi>
+            </math>
+            <figure>
+                <math>
+                    <mi>&chi;</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&chi;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&sigma;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&epsilon;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&sigma;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&chi;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&sigma;</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>&epsilon;</mi>
+            </math>
+            <figure>
+                <math>
+                    <mi>&chi;</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&chi;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&sigma;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <mi>&epsilon;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&sigma;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&chi;</mi>
+                    <mo>&compfn;</mo>
+                    <msup>
+                        <mi>&sigma;</mi>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>&sigma;</mi>
+            </math>
+            <figure>
+                <math>
+                    <mi>&chi;</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&chi;</mi>
+                        <mo>&compfn;</mo>
+                        <msup>
+                            <mi>&sigma;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>&tau;</mi>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&compfn;</mo>
+                        <mi>&epsilon;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&sigma;</mi>
+                    </mrow>
+                </math>
+            </figure>
+            <figure>
+                <math>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mtable>
+                            <mtr>
+                                <mtd><mn>1</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>4</mn></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd><mn>4</mn></mtd>
+                                <mtd><mn>2</mn></mtd>
+                                <mtd><mn>3</mn></mtd>
+                                <mtd><mn>1</mn></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+        </li>
+    </ol>
+</section>
+
+<section class="example">
+    <p>
+        <strong>4.</strong>
+        Suppose that 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>&tau;</mi>
+                <mo>&compfn;</mo>
+                <mi>&sigma;</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>, 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&tau;</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        in 
+        <math>
+            <msub>
+                <mi>S</mi>
+                <mn>5</mn>
+            </msub>
+        </math>. 
+        If 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mn>1</mn>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>2</mn>
+        </math>, 
+        find 
+        <math><mi>&sigma;</mi></math>
+        and 
+        <math><mi>&tau;</mi></math>. 
+    </p>
+    <ul>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+            </math>
+            and
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mn>1</mn>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>5</mn>
+            </math>, 
+            so 
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>2</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>5</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>2</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>5</mn>
+            </math>
+            and 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>2</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mn>2</mn>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>4</mn>
+            </math>,
+            so 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>5</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>4</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>5</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>4</mn>
+            </math>
+            and
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>5</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mn>5</mn>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+            </math>, 
+            so 
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>4</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>4</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+            </math>
+            and 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>4</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mn>4</mn>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>5</mn>
+            </math>,
+            so 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>2</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>5</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>2</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>5</mn>
+            </math>
+            and
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>2</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mn>2</mn>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>3</mn>
+            </math>, 
+            so 
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>5</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>3</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>5</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>3</mn>
+            </math>
+            and 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>5</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mn>5</mn>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>,
+            so 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>3</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>3</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>
+            and
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>3</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&sigma;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mn>3</mn>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>, 
+            so 
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+            </math>
+            and 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mn>1</mn>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+            </math>,
+            so 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>1</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>3</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>4</mn>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mn>4</mn>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>3</mn>
+            </math>
+        </li>
+    </ul>
+    <figure>
+        <math>
+            <mi>&tau;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>, 
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+</section>
+
+<section class="example">
+    <p>
+        <strong>5.</strong>
+        Show that 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>&tau;</mi>
+                <mo>&compfn;</mo>
+                <mi>&sigma;</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>, 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&tau;</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        is impossible for 
+        <math><mi>&sigma;</mi></math>
+        and 
+        <math><mi>&tau;</mi></math>
+        in 
+        <math>
+            <msub>
+                <mi>S</mi>
+                <mn>4</mn>
+            </msub>
+        </math>. 
+    </p>
+    <p>
+        <i>Solution.</i>
+        Let 
+    </p>
+    <figure>
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mi>a</mi></mtd>
+                        <mtd><mi>b</mi></mtd>
+                        <mtd><mi>c</mi></mtd>
+                        <mtd><mi>d</mi></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        then 
+    </p>
+    <figure>
+        <math>
+            <mtable>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>1</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mi>a</mi>
+                    </mtd>
+                    <mtd>&Implies;</mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>&tau;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>a</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>&tau;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>&sigma;</mi>
+                                <mo>&ApplyFunction;</mo>
+                                <mo fence="true">&lpar;</mo>
+                                <mi>1</mi>
+                                <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mn>2</mn>
+                    </mtd>
+                    <mtd>&Implies;</mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>&tau;</mi>
+                                <mo>&ApplyFunction;</mo>
+                                <mo fence="true">&lpar;</mo>
+                                <mi>a</mi>
+                                <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>2</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mi>b</mi>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>2</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mi>b</mi>
+                    </mtd>
+                    <mtd>&Implies;</mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>&tau;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>b</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>&tau;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>&sigma;</mi>
+                                <mo>&ApplyFunction;</mo>
+                                <mo fence="true">&lpar;</mo>
+                                <mi>2</mi>
+                                <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mn>3</mn>
+                    </mtd>
+                    <mtd>&Implies;</mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>&tau;</mi>
+                                <mo>&ApplyFunction;</mo>
+                                <mo fence="true">&lpar;</mo>
+                                <mi>b</mi>
+                                <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>3</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mi>c</mi>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>3</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mi>c</mi>
+                    </mtd>
+                    <mtd>&Implies;</mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>&tau;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>c</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>&tau;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>&sigma;</mi>
+                                <mo>&ApplyFunction;</mo>
+                                <mo fence="true">&lpar;</mo>
+                                <mi>3</mi>
+                                <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mn>4</mn>
+                    </mtd>
+                    <mtd>&Implies;</mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>&tau;</mi>
+                                <mo>&ApplyFunction;</mo>
+                                <mo fence="true">&lpar;</mo>
+                                <mi>c</mi>
+                                <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>4</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mi>d</mi>
+                    </mtd>
+                </mtr>
+                <mtr>
+                    <mtd>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>4</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mi>d</mi>
+                    </mtd>
+                    <mtd>&Implies;</mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>&tau;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>d</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>&tau;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>&sigma;</mi>
+                                <mo>&ApplyFunction;</mo>
+                                <mo fence="true">&lpar;</mo>
+                                <mi>4</mi>
+                                <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mn>1</mn>
+                    </mtd>
+                    <mtd>&Implies;</mtd>
+                    <mtd>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>&tau;</mi>
+                                <mo>&ApplyFunction;</mo>
+                                <mo fence="true">&lpar;</mo>
+                                <mi>d</mi>
+                                <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mrow>
+                            <mi>&sigma;</mi>
+                            <mo>&ApplyFunction;</mo>
+                            <mo fence="true">&lpar;</mo>
+                            <mi>1</mi>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mo>&equals;</mo>
+                        <mi>a</mi>
+                    </mtd>
+                </mtr>
+            </mtable>
+        </math>
+    </figure>
+    <p>
+        thus, 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&tau;</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mi>b</mi>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mi>c</mi>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mi>d</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        is a cycle, a contradiction to the fact that
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&tau;</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>1</mn>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mn>2</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&compfn;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>3</mn>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mn>4</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        is a product of two disjoint cycles. 
+    </p>
+</section>
+
+</body>
+</html>

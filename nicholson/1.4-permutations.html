@@ -1995,7 +1995,7 @@
                     </mrow>
                     <mo fence="true">&rpar;</mo>
                 </mrow>
-                <mo>&InvisibleTimes;</mo>
+                <mo>&compfn;</mo>
                 <mrow>
                     <mo fence="true">&lpar;</mo>
                     <mrow>
@@ -2009,7 +2009,7 @@
                     </mrow>
                     <mo fence="true">&rpar;</mo>
                 </mrow>
-                <mo>&InvisibleTimes;</mo>
+                <mo>&compfn;</mo>
                 <mrow>
                     <mo fence="true">&lpar;</mo>
                     <mrow>
@@ -2028,6 +2028,738 @@
 
 <!-- ---------------------------------------------- -->
 <h3>The Alternating Group</h3>
+
+<section id="transposition" class="definition">
+    <p>
+        <strong>Transpositions:</strong>
+        A cycle of length 2 is called a transposition. Each transposition 
+        <math><mi>&delta;</mi></math>
+        has the form 
+    </p>
+    <figure>
+        <math>
+            <mi>&delta;</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>m</mi>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mi>n</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>where</mo>
+            <mi>m</mi>
+            <mo>&ne;</mo>
+            <mi>n</mi>
+        </math>
+    </figure>
+</section>
+<section class="description">
+    <p>
+        For every transposition 
+        <math><mi>&delta;</mi></math>, 
+        <math>
+            <msup>
+                <mi>&delta;</mi>
+                <mn>2</mn>
+            </msup>
+            <mo>&equals;</mo>
+            <mi>&epsilon;</mi>
+        </math>
+        and 
+        <math>
+            <msup>
+                <mi>&delta;</mi>
+                <mrow>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msup>
+            <mo>&equals;</mo>
+            <mi>&delta;</mi>
+        </math>. 
+        Note, however, that 
+        <math>
+            <mi>&delta;</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>1</mn>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mn>2</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+            <mo>&compfn;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mn>3</mn>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mn>4</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>
+        also satisfies 
+        <math>
+            <msup>
+                <mi>&delta;</mi>
+                <mn>2</mn>
+            </msup>
+            <mo>&equals;</mo>
+            <mi>&epsilon;</mi>
+        </math>
+        and 
+        <math>
+            <msup>
+                <mi>&delta;</mi>
+                <mrow>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msup>
+            <mo>&equals;</mo>
+            <mi>&delta;</mi>
+        </math>, 
+        so these properties do not characterize the transpositions. 
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        <strong>Theorem 6.</strong>
+        Every cycle of length 
+        <math>
+            <mi>r</mi>
+            <mo>&gt;</mo>
+            <mn>1</mn>
+        </math>
+        is a product of 
+        <math>
+            <mi>r</mi>
+            <mo>&minus;</mo>
+            <mn>1</mn>
+        </math>
+        transpositions:
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <msub>
+                        <mi>k</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <msub>
+                        <mi>k</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mi>&hellip;</mi>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <msub>
+                        <mi>k</mi>
+                        <mi>r</mi>
+                    </msub>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <msub>
+                            <mi>k</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <msub>
+                            <mi>k</mi>
+                            <mn>2</mn>
+                        </msub>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>    
+                </mrow>
+                <mo>&compfn;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <msub>
+                            <mi>k</mi>
+                            <mn>2</mn>
+                        </msub>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <msub>
+                            <mi>k</mi>
+                            <mn>3</mn>
+                        </msub>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>    
+                </mrow>
+                <mi>&hellip;</mi>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <msub>
+                            <mi>k</mi>
+                            <mrow>
+                                <mi>r</mi>
+                                <mo>&minus;</mo>
+                                <mn>2</mn>
+                            </mrow>
+                        </msub>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <msub>
+                            <mi>k</mi>
+                            <mrow>
+                                <mi>r</mi>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>    
+                </mrow>
+                <mo>&compfn;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <msub>
+                            <mi>k</mi>
+                            <mrow>
+                                <mi>r</mi>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msub>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <msub>
+                            <mi>k</mi>
+                            <mi>r</mi>
+                        </msub>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>    
+                </mrow>
+            </mrow>
+        </math>
+    </figure>
+</section>
+<section class="description">
+    <p>
+        Hence, every permutation is a product of transpositions
+        because every permutation is a product of cycles by Theorem 5. 
+    </p>
+</section>
+
+<section id="parity" class="definition">
+    <p>
+        <strong>The parity:</strong>
+        Two integers 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        are said to have the same parity if 
+        <math>
+            <mi>m</mi>
+            <mo>&equiv;</mo>
+            <mi>n</mi>
+            <mo>&ApplyFunction;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>mod</mi>
+                <mo>&ApplyFunction;</mo>
+                <mn>2</mn>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>; 
+        equivalently, if 
+        they are both even or both odd. 
+    </p>
+    <p>
+        <strong>The parity of permutations:</strong>
+        A permutation <math><mi>&sigma;</mi></math> is called 
+        <strong>even</strong> or <strong>odd</strong> 
+        accordingly as it can be written in some way 
+        as the product of an even or odd number of transpositions.
+    </p>
+</section>
+<section class="example">
+    <p>
+        <strong>Example 10.</strong>
+        Determine the parity of 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&equals;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>6</mn></mtd>
+                        <mtd><mn>7</mn></mtd>
+                        <mtd><mn>8</mn></mtd>
+                        <mtd><mn>9</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>6</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>7</mn></mtd>
+                        <mtd><mn>8</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>9</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        <i>Solution.</i>
+        The factorization of 
+        <math><mi>&sigma;</mi></math> 
+        into disjoint cycles is 
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>5</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>7</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>2</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>4</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&compfn;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>3</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>6</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>8</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>9</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+        Then, 
+        <math>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>5</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>7</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>2</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>4</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+        is even and 
+        <math>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>3</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>6</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>8</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>9</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+        is odd by Theorem 6, so 
+        <math><mi>&sigma;</mi></math> 
+        is odd (because the sum of an even and an odd integer is odd).
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        <strong>Theorem 7. Parity Theorem.</strong>
+        If a permutation 
+        <math><mi>&sigma;</mi></math> 
+        has two factorizations
+    </p>
+    <figure>
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mi>n</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mo>&hellip;</mo>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mi>m</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mo>&hellip;</mo>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        where each 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mi>i</mi>
+            </msub>
+        </math>
+        and 
+        <math>
+            <msub>
+                <mi>&mu;</mi>
+                <mi>j</mi>
+            </msub>
+        </math>
+        is a transposition, then 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        have the same parity.
+    </p>
+</section>
+<section class="description">
+    <p>
+        In contrast to the factorization into cycles, 
+        factorizations into transpositions are not unique. For example,
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>2</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>3</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&compfn;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>2</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&compfn;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>2</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>5</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&compfn;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>3</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&compfn;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>2</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>4</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>2</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>4</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>5</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>5</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&compfn;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>4</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&compfn;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>2</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        Indeed, any factorization into m transpositions gives rise to 
+        a factorization into 
+        <math>
+            <mi>m</mi>
+            <mo>&plus;</mo>
+            <mn>2</mn>
+        </math>
+        transpositions simply by inserting 
+        <math>
+            <mi>&epsilon;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>2</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&compfn;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mn>1</mn>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mn>2</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+        somewhere. Theorem 7 asserts that 
+        if a permutation can be factored in one way as a product of 
+        an even (or odd) number of transpositions, then 
+        any factorization into transpositions must involve an even 
+        (respectively odd) number of factors.
+    </p>
+</section>
+
+<section id="alternating-group" class="definition">
+    <p>
+        <strong>Alternating groups:</strong>
+        The set 
+        <math>
+            <msub>
+                <mi>A</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        of all <strong>even</strong> permutations in 
+        <math>
+            <msub>
+                <mi>S</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        It is called the alternating group of degree
+        <math><mi>n</mi></math>.
+    </p>
+</section>
+<section class="description">
+    <p>
+        The alternating group of degree
+        <math><mi>n</mi></math>
+        plays an important role in the theory of groups (in Chapter 2). 
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        <strong>Theorem 8.</strong>
+        If 
+        <math>
+            <mi>n</mi>
+            <mo>&ge;</mo>
+            <mn>2</mn>
+        </math>, 
+        the alternating group
+        <math>
+            <msub>
+                <mi>A</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        has the following properties:
+    </p>
+    <ol>
+        <li>
+            <math>
+                <mi>&epsilon;</mi>
+                <mo>&in;</mo>
+                <msub>
+                    <mi>A</mi>
+                    <mi>n</mi>
+                </msub>
+            </math>
+        </li>
+        <li>
+            if 
+            <math><mi>&sigma;</mi></math>
+            is in 
+            <math>
+                <msub>
+                    <mi>A</mi>
+                    <mi>n</mi>
+                </msub>
+            </math>, 
+            then 
+            <math>
+                <msup>
+                    <mi>&sigma;</mi>
+                    <mrow>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msup>
+            </math>
+            is in 
+            <math>
+                <msub>
+                    <mi>A</mi>
+                    <mi>n</mi>
+                </msub>
+            </math>
+        </li>
+        <li>
+            if 
+            <math><mi>&sigma;</mi></math> and <math><mi>&tau;</mi></math>
+            are in 
+            <math>
+                <msub>
+                    <mi>A</mi>
+                    <mi>n</mi>
+                </msub>
+            </math>, 
+            then
+            <math>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&tau;</mi>
+            </math>
+            is in 
+            <math>
+                <msub>
+                    <mi>A</mi>
+                    <mi>n</mi>
+                </msub>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mo fence="true">&verbar;</mo>
+                    <msub>
+                        <mi>A</mi>
+                        <mi>n</mi>
+                    </msub>
+                    <mo fence="true">&verbar;</mo>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mn>&frac12;</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>n</mi>
+                        <mo>&excl;</mo>
+                    </mrow>
+                </mrow>
+            </math>
+        </li>
+    </ol>
+</section>
+<section class="description">
+    <p>
+        A set of permutations is called a <strong>group</strong> 
+        if it contains 
+    </p>
+    <ul>
+        <li>
+            the identity permutation, 
+        </li>
+        <li>
+            the product of any two of its members, and 
+        </li>
+        <li>
+            the inverse of any member.
+        </li>
+    </ul>
+    <p>
+        Hence, 
+        <math>
+            <msub>
+                <mi>S</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        is a group, and the first part of Theorem 8 shows that 
+        <math>
+            <msub>
+                <mi>A</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        is a group.
+    </p>
+</section>
 
 </body>
 </html>

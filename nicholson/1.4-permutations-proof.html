@@ -480,6 +480,2206 @@
     </ol>
 </section>
 
+<section id="cycle-decomposition" class="theorem">
+    <p>
+        <strong>Theorem 5. Cycle Decomposition.</strong>
+        If 
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&ne;</mo>
+            <mi>&epsilon;</mi>
+        </math>
+        is a permutation in 
+        <math>
+            <msub>
+                <mi>S</mi>
+                <mi>n</mi>
+            </msub>
+        </math>, 
+        then 
+        <math><mi>&sigma;</mi></math>
+        is a product of (one or more) disjoint cycles of length at least 2. 
+        This factorization is unique up to the order of the factors.
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof (a).</i>
+        If 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&ne;</mo>
+                <mi>&epsilon;</mi>
+            </mrow>
+        </math>
+        is a permutation in 
+        <math>
+            <msub>
+                <mi>S</mi>
+                <mi>n</mi>
+            </msub>
+        </math>, 
+        we show it is a product of disjoint cycles by induction on 
+        <math>
+            <mrow>
+                <mi>n</mi>
+                <mo>&ge;</mo>
+                <mn>2</mn>
+            </mrow>
+        </math>. 
+        This is clear if 
+        <math>
+            <mrow>
+                <mi>n</mi>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+            </mrow>
+        </math>. 
+        If 
+        <math>
+            <mrow>
+                <mi>n</mi>
+                <mo>&gt;</mo>
+                <mn>2</mn>
+            </mrow>
+        </math>, 
+        assume that the result is true for 
+        <math>
+            <msub>
+                <mi>S</mi>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msub>
+        </math>
+        and let 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&in;</mo>
+                <msub>
+                    <mi>S</mi>
+                    <mi>n</mi>
+                </msub>
+            </mrow>
+        </math>. 
+        If 
+        <math>
+            <mrow>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>n</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>n</mi>
+            </mrow>
+        </math>, 
+        then 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&in;</mo>
+                <msub>
+                    <mi>S</mi>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msub>
+            </mrow>
+        </math> 
+        and we are done. So assume 
+        <math>
+            <mrow>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>n</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&ne;</mo>
+                <mi>n</mi>
+            </mrow>
+        </math>, 
+        and write 
+        <math>
+            <mrow>
+                <mi>m</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msup>
+                        <mi>&sigma;</mi>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>n</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </mrow>
+        </math>. 
+        Then, 
+        <math>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <msup>
+                        <mi>&sigma;</mi>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>n</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&epsilon;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mi>n</mi>
+        </math>, 
+        and 
+        <math>
+            <mi>m</mi>
+            <mo>&ne;</mo>
+            <mi>n</mi>
+        </math>
+        (because 
+        <math>
+            <mrow>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>n</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&ne;</mo>
+                <mi>n</mi>
+            </mrow>
+        </math>
+        ). 
+        We write 
+        <math>
+            <mrow>
+                <mi>&gamma;</mi>
+                <mo>&equals;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>m</mi>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mi>n</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+        and consider 
+        <math>
+            <mrow>
+                <mi>&tau;</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&gamma;</mi>
+                </mrow>
+            </mrow>
+        </math>. 
+        Because 
+        <math>
+            <mrow>
+                <msup>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msup>
+                <mo>&equals;</mo>
+                <mi>&epsilon;</mi>
+            </mrow>
+        </math>, 
+        we have 
+        <math>
+            <mrow>
+                <mi>&tau;</mi>
+                <mo>&compfn;</mo>
+                <mi>&gamma;</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <msup>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msup>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&epsilon;</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mi>&sigma;</mi>
+        </math>. 
+        Moreover, 
+        <math>
+            <mrow>
+                <mi>&tau;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&compfn;</mo>
+                <mi>&gamma;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>n</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&sigma;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>m</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mi>n</mi>
+        </math>, 
+        so 
+        <math>
+            <mrow>
+                <mi>&tau;</mi>
+                <mo>&in;</mo>
+                <msub>
+                    <mi>S</mi>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msub>
+            </mrow>
+        </math>
+        and 
+        <math><mi>&tau;</mi></math>
+        is a product of disjoint cycles by induction. There are two cases:
+    </p>
+    <ol>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>m</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>m</mi>
+            </math>: 
+            In this case, 
+            <math><mi>&gamma;</mi></math> and <math><mi>&tau;</mi></math>
+            are disjoint as 
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>n</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>n</mi>
+            </math>, 
+            and we are done because 
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&equals;</mo>
+                    <mi>&gamma;</mi>
+                    <mo>&compfn;</mo>
+                    <mi>&tau;</mi>
+                </mrow>
+            </math>. 
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mi>m</mi>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&ne;</mo>
+                <mi>m</mi>
+            </math>: 
+            Then 
+            <math><mi>m</mi></math>
+            is moved by (exactly one) cycle factor of 
+            <math><mi>&tau;</mi></math>. 
+            Hence we can write 
+            <math>
+                <mrow>
+                    <mi>&tau;</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&mu;</mi>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>m</mi>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <msub>
+                                <mi>k</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <msub>
+                                <mi>k</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <mi>&hellip;</mi>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <msub>
+                                <mi>k</mi>
+                                <mi>r</mi>
+                            </msub>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </mrow>
+            </math>
+            where 
+            <math><mi>&mu;</mi></math>
+            is a product of disjoint cycles fixing 
+            <math>
+                <mi>m</mi>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>k</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>k</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>k</mi>
+                    <mi>r</mi>
+                </msub>
+            </math> 
+            and also fixing 
+            <math><mi>n</mi></math> 
+            because 
+            <math>
+                <mrow>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&ApplyFunction;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>n</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mi>n</mi>
+                </mrow>
+            </math>. 
+            Finally, it is easy to verify that 
+            <figure>
+                <math>
+                    <mi>&sigma;</mi>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&tau;</mi>
+                        <mo>&compfn;</mo>
+                        <mi>&gamma;</mi>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&mu;</mi>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>m</mi>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <msub>
+                                <mi>k</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <msub>
+                                <mi>k</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <mi>&hellip;</mi>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <msub>
+                                <mi>k</mi>
+                                <mi>r</mi>
+                            </msub>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>m</mi>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <mi>n</mi>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <mi>&mu;</mi>
+                        <mo>&compfn;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>m</mi>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <mi>n</mi>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <msub>
+                                <mi>k</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <msub>
+                                <mi>k</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <mi>&hellip;</mi>
+                            <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                            <msub>
+                                <mi>k</mi>
+                                <mi>r</mi>
+                            </msub>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </math>
+            </figure>
+            which gives 
+            <math><mi>&sigma;</mi></math>
+            as a product of disjoint cycles.
+        </li>
+    </ol>
+    <p>
+        <i>Proof (b).</i>
+        Turning to the uniqueness, suppose that 
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mi>a</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mi>b</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+        </math>
+        are two factorizations into disjoint cycles. 
+        We proceed by induction on 
+        <math>
+            <mrow>
+                <mi>max</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+        If this is 1, then 
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>&delta;</mi>
+                <mn>1</mn>
+            </msub>
+        </math>. 
+        Otherwise, let 
+        <math>
+            <mi>&sigma;</mi>
+            <mo>move</mo>
+            <mi>m</mi>
+        </math>. 
+        Then 
+        <math><mi>m</mi></math>
+        occurs in exactly one 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mi>i</mi>
+            </msub>
+        </math>
+        and exactly one 
+        <math>
+            <msub>
+                <mi>&delta;</mi>
+                <mi>j</mi>
+            </msub>
+        </math>. 
+        By reordering the factors if necessary, assume that 
+        <math><mi>m</mi></math>
+        occurs in 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>1</mn>
+            </msub>
+        </math>
+        and in 
+        <math>
+            <msub>
+                <mi>&delta;</mi>
+                <mn>1</mn>
+            </msub>
+        </math>. 
+        Hence, we can write
+    </p>
+    <ul>
+        <li>
+            <math>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&equals;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <msub>
+                        <mi>k</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <msub>
+                        <mi>k</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mi>&hellip;</mi>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <msub>
+                        <mi>k</mi>
+                        <mi>r</mi>
+                    </msub>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </math>
+        </li>
+        <li>
+            <math>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&equals;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <msub>
+                        <mi>l</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <msub>
+                        <mi>l</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <mi>&hellip;</mi>
+                    <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                    <msub>
+                        <mi>l</mi>
+                        <mi>s</mi>
+                    </msub>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </math>
+        </li>
+    </ul>
+    <p>
+        where 
+        <math>
+            <msub>
+                <mi>k</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>&equals;</mo>
+            <mi>m</mi>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>l</mi>
+                <mn>1</mn>
+            </msub>
+        </math>. 
+        We may assume that 
+        <math>
+            <mi>r</mi>
+            <mo>&le;</mo>
+            <mi>s</mi>
+        </math>. 
+        Then, because 
+        <math>
+            <msub>
+                <mi>k</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>l</mi>
+                <mn>1</mn>
+            </msub>
+        </math>, 
+    </p>
+    <ul>
+        <li>
+            <math>
+                <msub>
+                    <mi>k</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <msub>
+                        <mi>k</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <msub>
+                        <mi>l</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>l</mi>
+                    <mn>2</mn>
+                </msub>
+            </math>
+        </li>
+        <li>
+            <math>
+                <msub>
+                    <mi>k</mi>
+                    <mn>3</mn>
+                </msub>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <msub>
+                        <mi>k</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <msub>
+                        <mi>l</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>l</mi>
+                    <mn>3</mn>
+                </msub>
+            </math>
+        </li>
+        <li>
+            &vellip;
+        </li>
+        <li>
+            <math>
+                <msub>
+                    <mi>k</mi>
+                    <mi>r</mi>
+                </msub>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <msub>
+                        <mi>k</mi>
+                        <mrow>
+                            <mi>r</mi>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <msub>
+                        <mi>l</mi>
+                        <mrow>
+                            <mi>r</mi>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>l</mi>
+                    <mi>r</mi>
+                </msub>
+            </math>
+        </li>
+    </ul>
+    <p>
+        If 
+        <math>
+            <mi>r</mi>
+            <mo>&lt;</mo>
+            <mi>s</mi>
+        </math>, 
+        the next step gives
+    </p>
+    <ul>
+        <li>
+            <math>
+                <msub>
+                    <mi>l</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>k</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <msub>
+                        <mi>k</mi>
+                        <mi>r</mi>
+                    </msub>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <msub>
+                        <mi>l</mi>
+                        <mi>r</mi>
+                    </msub>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>l</mi>
+                    <mrow>
+                        <mi>r</mi>
+                        <mo>&plus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msub>
+            </math>
+        </li>
+    </ul>
+    <p>
+        a contradiction. Thus, 
+        <math>
+            <mi>r</mi>
+            <mo>&equals;</mo>
+            <mi>s</mi>
+        </math>
+        and 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>&delta;</mi>
+                <mn>1</mn>
+            </msub>
+        </math>. 
+        If we write 
+        <math>
+            <mi>&lambda;</mi>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>&delta;</mi>
+                <mn>1</mn>
+            </msub>
+        </math>, 
+        we obtain 
+    </p>
+    <ul>
+        <li>
+            <math>
+                <mi>&sigma;</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mi>a</mi>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <mi>&lambda;</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>&delta;</mi>
+                        <mi>b</mi>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&delta;</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <mi>&lambda;</mi>
+                </mrow>
+            </math>
+        </li>
+    </ul>
+    <p>
+        It follows that 
+    </p>
+    <ul>
+        <li>
+            <math>
+                <mrow>
+                    <mi>&sigma;</mi>
+                    <mo>&compfn;</mo>
+                    <msup>
+                        <mi>&lambda;</mi>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mi>a</mi>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mn>2</mn>
+                    </msub>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msub>
+                        <mi>&delta;</mi>
+                        <mi>b</mi>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&delta;</mi>
+                        <mn>2</mn>
+                    </msub>
+                </mrow>
+            </math>
+        </li>
+    </ul>
+    <p>
+        is a product of 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&minus;</mo>
+                <mn>1</mn>
+            </mrow>
+        </math>
+        (and
+        <math>
+            <mrow>
+                <mi>b</mi>
+                <mo>&minus;</mo>
+                <mn>1</mn>
+            </mrow>
+        </math>
+        )
+        disjoint cycles. By induction, 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&equals;</mo>
+                <mi>b</mi>
+            </mrow>
+        </math>
+        and (after possible reordering) 
+        <math>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mi>i</mi>
+                </msub>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mi>i</mi>
+                </msub>
+            </mrow>
+        </math>
+        for 
+        <math>
+            <mrow>
+                <mi>i</mi>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+                <mo separator="true">&comma;</mo>
+                <mn>3</mn>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>a</mi>
+            </mrow>
+        </math>, 
+        which completes the induction.
+        &marker;
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        <strong>Theorem 7. Parity Theorem.</strong>
+        If a permutation 
+        <math><mi>&sigma;</mi></math> 
+        has two factorizations
+    </p>
+    <figure>
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mi>n</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mo>&hellip;</mo>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mi>m</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mo>&hellip;</mo>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        where each 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mi>i</mi>
+            </msub>
+        </math>
+        and 
+        <math>
+            <msub>
+                <mi>&mu;</mi>
+                <mi>j</mi>
+            </msub>
+        </math>
+        is a transposition, then 
+        <math><mi>m</mi></math> and <math><mi>n</mi></math>
+        have the same parity.
+    </p>
+</section>
+<section class="lemma">
+    <p>
+        <strong>Lemma 2.</strong>
+        Let 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>&ne;</mo>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>2</mn>
+            </msub>
+        </math>
+        be transpositions. If 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>moves</mo>
+            <mi>k</mi>
+        </math>, 
+        transpositions 
+        <math>
+            <msub>
+                <mi>&delta;</mi>
+                <mn>1</mn>
+            </msub>
+        </math>
+        and 
+        <math>
+            <msub>
+                <mi>&lambda;</mi>
+                <mn>2</mn>
+            </msub>
+        </math>
+        exist such that 
+        <math>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&lambda;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+        </math>, 
+        where 
+        <math>
+            <msub>
+                <mi>&delta;</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>fixes</mo>
+            <mi>k</mi>
+        </math>
+        and 
+        <math>
+            <msub>
+                <mi>&lambda;</mi>
+                <mn>2</mn>
+            </msub>
+            <mo>moves</mo>
+            <mi>k</mi>
+        </math>. 
+    </p>
+    <p>
+        <i>Proof of Lemma 2.</i>
+        Let 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>&equals;</mo>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>k</mi>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mi>a</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>. 
+        Because 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>&ne;</mo>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>2</mn>
+            </msub>
+        </math>, 
+        the transposition 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>2</mn>
+            </msub>
+        </math>
+        has one of the forms 
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>k</mi>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mi>b</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>, 
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mi>b</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>, 
+        or 
+        <math>
+            <mo fence="true">&lpar;</mo>
+            <mrow>
+                <mi>b</mi>
+                <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                <mi>c</mi>
+            </mrow>
+            <mo fence="true">&rpar;</mo>
+        </math>, 
+        where 
+        <math>
+            <mi>k</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>a</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>b</mi>
+            <mo separator="true">&comma;</mo>
+            <mo>and</mo>
+            <mi>c</mi>
+        </math>
+        denote distinct integers. In these cases, 
+    </p>
+    <ul>
+        <li>
+            <math>
+                <mrow>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mn>1</mn>
+                    </msub>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>b</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&compfn;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>b</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>k</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&compfn;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>b</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>b</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&compfn;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>a</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>b</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mn>1</mn>
+                    </msub>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>a</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>b</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&compfn;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>b</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&compfn;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>a</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>k</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>b</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>k</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>b</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>b</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&compfn;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>b</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mn>1</mn>
+                    </msub>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>b</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>c</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&compfn;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>k</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>a</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&compfn;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>b</mi>
+                        <mo separator="true" rspace="0.4em">&InvisibleComma;</mo>
+                        <mi>c</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>
+        </li>
+    </ul>
+    <p>
+        Hence the conclusion of Lemma 2 holds in every case. 
+        &marker;
+    </p>
+</section>
+<section class="lemma">
+    <p>
+        <strong>Lemma 3.</strong>
+        If the identity permutation 
+        <math><mi>&epsilon;</mi></math>
+        can be written as a product of 
+        <math>
+            <mrow>
+                <mi>n</mi>
+                <mo>&ge;</mo>
+                <mn>3</mn>
+            </mrow>
+        </math>
+        transpositions, then it can be written as a product of 
+        <math>
+            <mrow>
+                <mi>n</mi>
+                <mo>&minus;</mo>
+                <mn>2</mn>
+            </mrow>
+        </math>
+        transpositions. 
+    </p>
+    <p>
+        <i>Proof of Lemma 3.</i>
+        Let 
+    </p>
+    <figure>
+        <math>
+            <mi>&epsilon;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mi>n</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>4</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>3</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        where 
+        <math>
+            <mrow>
+                <mi>n</mi>
+                <mo>&ge;</mo>
+                <mn>3</mn>
+            </mrow>
+        </math>
+        and 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mi>i</mi>
+            </msub>
+        </math>
+        are transpositions. Suppose that 
+        <math>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>moves</mo>
+            <mi>k</mi>
+        </math>.
+        If 
+        <math>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&equals;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msub>
+            </mrow>
+        </math>, 
+        then 
+        <math>
+            <mrow>
+                <mrow>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&gamma;</mi>
+                        <mn>1</mn>
+                    </msub>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>&epsilon;</mi>
+            </mrow>
+        </math>, 
+        so 
+    </p>
+    <figure>
+        <math>
+            <mi>&epsilon;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mi>n</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>4</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>3</mn>
+                </msub>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        and we are done. 
+        Otherwise, Lemma 2 gives 
+        <math>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&lambda;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+        </math>, 
+        where 
+        <math>
+            <msub>
+                <mi>&delta;</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>fixes</mo>
+            <mi>k</mi>
+        </math>
+        and 
+        <math>
+            <msub>
+                <mi>&lambda;</mi>
+                <mn>2</mn>
+            </msub>
+            <mo>moves</mo>
+            <mi>k</mi>
+        </math>. 
+        Thus, 
+    </p>
+    <figure>
+        <math>
+            <mi>&epsilon;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mi>n</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>4</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>3</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&lambda;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        Again, we are done if 
+        <math>
+            <msub>
+                <mi>&lambda;</mi>
+                <mn>2</mn>
+            </msub>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>&gamma;</mi>
+                <mn>3</mn>
+            </msub>
+        </math>, 
+        so we let 
+        <math>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>3</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&lambda;</mi>
+                    <mn>2</mn>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&lambda;</mi>
+                    <mn>3</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>2</mn>
+                </msub>
+            </mrow>
+        </math>, 
+        where 
+        <math>
+            <msub>
+                <mi>&delta;</mi>
+                <mn>2</mn>
+            </msub>
+            <mo>fixes</mo>
+            <mi>k</mi>
+        </math>
+        and 
+        <math>
+            <msub>
+                <mi>&lambda;</mi>
+                <mn>3</mn>
+            </msub>
+            <mo>moves</mo>
+            <mi>k</mi>
+        </math>. 
+        Hence,
+    </p>
+    <figure>
+        <math>
+            <mi>&epsilon;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mi>n</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>5</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>4</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&lambda;</mi>
+                    <mn>3</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        Continue in this way. 
+        Either we are done at some stage 
+        or we finally arrive at a factorization
+    </p>
+    <figure>
+        <math>
+            <mi>&epsilon;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&lambda;</mi>
+                    <mi>n</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&delta;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        where each 
+        <math>
+            <msub>
+                <mi>&delta;</mi>
+                <mi>i</mi>
+            </msub>
+            <mo>fixes</mo>
+            <mi>k</mi>
+        </math>
+        and 
+        <math>
+            <msub>
+                <mi>&lambda;</mi>
+                <mi>n</mi>
+            </msub>
+            <mo>moves</mo>
+            <mi>k</mi>
+        </math>. 
+        But this cannot happen because, if it did,
+    </p>
+    <figure>
+        <math>
+            <mi>k</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>&epsilon;</mi>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>k</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mrow>
+                    <msub>
+                        <mi>&lambda;</mi>
+                        <mi>n</mi>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&delta;</mi>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&delta;</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&compfn;</mo>
+                    <msub>
+                        <mi>&delta;</mi>
+                        <mn>1</mn>
+                    </msub>
+                </mrow>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>k</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&lambda;</mi>
+                    <mi>n</mi>
+                </msub>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mi>k</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&ne;</mo>
+            <mi>k</mi>
+        </math>
+    </figure>
+    <p>
+        a contradiction. This proves Lemma 3. 
+        &marker;
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <strong>Proof of the Parity Theorem.</strong>
+        Suppose a permutation 
+        <math><mi>&sigma;</mi></math>
+        has two factorizations into transpositions:
+    </p>
+    <figure>
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mi>n</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mi>m</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        We must show that 
+        <math><mi>n</mi></math> and <math><mi>m</mi></math>
+        are both even or both odd. The fact that 
+        <math>
+            <msup>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mi>j</mi>
+                </msub>
+                <mrow>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msup>
+            <mo>&equals;</mo>
+            <msub>
+                <mi>&mu;</mi>
+                <mi>j</mi>
+            </msub>
+        </math>
+        for all <math><mi>j</mi></math> gives 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mi>m</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mi>n</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&gamma;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mi>m</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mi>m</mi>
+                </msub>
+                <mo>&compfn;</mo>
+                <mi>&hellip;</mi>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>&compfn;</mo>
+                <msub>
+                    <mi>&mu;</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+            <mo>&equals;</mo>
+            <mi>&epsilon;</mi>
+        </math>
+    </figure>
+    <p>
+        Hence, it suffices to show that 
+        <math><mi>&epsilon;</mi></math>
+        cannot be written as the product of an odd number of transpositions. 
+        But if 
+        <math><mi>&epsilon;</mi></math>
+        is a product of 
+        <math><mi>p</mi></math>
+        transpositions, where 
+        <math>
+            <mrow>
+                <mi>p</mi>
+                <mo>&ge;</mo>
+                <mn>3</mn>
+            </mrow>
+        </math>
+        is odd, then repeating Lemma 3 gives factorizations into 
+        <math>
+            <mrow>
+                <mi>p</mi>
+                <mo>&minus;</mo>
+                <mn>2</mn>
+            </mrow>
+            <mo separator="true">&comma;</mo>
+            <mrow>
+                <mi>p</mi>
+                <mo>&minus;</mo>
+                <mn>4</mn>
+            </mrow>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+        </math>
+        transpositions. Ultimately we get a factorization of 
+        <math><mi>&epsilon;</mi></math>
+        as one transposition, which is impossible. 
+        &marker;
+    </p>
+</section>
 
 </body>
 </html>
