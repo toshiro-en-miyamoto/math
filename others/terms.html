@@ -588,6 +588,10 @@
         <ruby>
             乗
             <rt>じょう</rt>
+        </ruby>,
+        <ruby>
+            累乗
+            <rt>るいじょう</rt>
         </ruby>
     </td>
     <td>
@@ -795,29 +799,31 @@
                 <mi>n</mi>
             </msup>
             <mo>&equals;</mo>
-            <munderover>
-                <mi>&sum;</mi>
-                <mrow><mi>r</mi><mo>&equals;</mo><mn>0</mn></mrow>
-                <mi>n</mi>
-            </munderover>
-            <mo>&ApplyFunction;</mo>
-            <mo fence="true">&lpar;</mo>
-                <mfrac linethickness="0">
+            <mrow>
+                <munderover>
+                    <mi>&sum;</mi>
+                    <mrow><mi>r</mi><mo>&equals;</mo><mn>0</mn></mrow>
                     <mi>n</mi>
-                    <mi>r</mi>
-                </mfrac>
-            <mo fence="true">&rpar;</mo>
-            <mo lspace="0.2em">&InvisibleTimes;</mo>
-            <msup><mi>x</mi><mi>r</mi></msup>
-            <mo>&InvisibleTimes;</mo>
-            <msup>
-                <mi>y</mi>
-                <mrow>
-                    <mi>n</mi>
-                    <mo>&minus;</mo>
-                    <mi>r</mi>
-                </mrow>
-            </msup>
+                </munderover>
+                <mo>&ApplyFunction;</mo>
+                <mo fence="true">&lpar;</mo>
+                    <mfrac linethickness="0">
+                        <mi>n</mi>
+                        <mi>r</mi>
+                    </mfrac>
+                <mo fence="true">&rpar;</mo>
+                <mo lspace="0.2em">&InvisibleTimes;</mo>
+                <msup><mi>x</mi><mi>r</mi></msup>
+                <mo>&InvisibleTimes;</mo>
+                <msup>
+                    <mi>y</mi>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mi>r</mi>
+                    </mrow>
+                </msup>
+            </mrow>
         </math>
     </td>
 </tr>
@@ -849,12 +855,14 @@
     </td>
     <td>
         <math displaystyle="true">
-            <mo fence="true">&lpar;</mo>
-            <mfrac linethickness="0">
-                <mi>n</mi>
-                <mi>r</mi>
-            </mfrac>
-            <mo fence="true">&rpar;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mfrac linethickness="0">
+                    <mi>n</mi>
+                    <mi>r</mi>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
             <mo>&equals;</mo>
             <mfrac>
                 <mrow><mi>n</mi><mo>&excl;</mo></mrow>
@@ -2389,6 +2397,28 @@
                 <mi>X</mi>
                 <mi>n</mi>
             </msub>
+        </math>, 
+        <math>
+            <mi>&sigma;</mi>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                    <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd><mn>4</mn></mtd>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                    </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
         </math>
     </td>
 </tr>
@@ -2409,7 +2439,20 @@
         </ruby>
     </td>
     <td>
-        &equals; the symmetric group of degree n
+        the set 
+        <math>
+            <msub>
+                <mi>S</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        of all permutations of 
+        <math>
+            <msub>
+                <mi>X</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
     </td>
 </tr>
 <tr>

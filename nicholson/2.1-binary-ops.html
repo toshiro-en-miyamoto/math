@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>2.1 Binary Operations</title>
+    <link rel="stylesheet" href="../math.css" type="text/css">
+</head>
+<body>
+
+<h2>2.1 Binary Operations</h2>
+
+<section id="binary-ops" class="definition">
+    <p>
+        A <strong>binary operation</strong>
+        <math><mo>&lowast;</mo></math>
+        on a set 
+        <math><mi>M</mi></math>
+        is a mapping that assigns 
+    </p>
+    <ul>
+        <li>
+            to each ordered pair 
+            <math>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>a</mi>
+                        <mo separator="true">&comma;</mo>
+                        <mi>b</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+            </math>
+            of elements of 
+            <math><mi>M</mi></math>
+        </li>
+        <li>
+            an element 
+            <math>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&lowast;</mo>
+                    <mi>b</mi>
+                </mrow>
+            </math>
+            of 
+            <math><mi>M</mi></math>
+        </li>
+    </ul>
+</section>
+<section class="description">
+    <p>
+        In this case 
+        <math><mi>M</mi></math>
+        is said to be 
+        <strong>closed</strong>
+        under the binary operation.
+    </p>
+</section>
+<section class="description">
+    <p>
+        Abstract algebra is primarily concerned with the study of operations 
+        analogous to the addition and multiplication of numbers.
+        The addition process for numbers assigns to any ordered pair 
+        <math>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+        of numbers a new number, their sum, denoted 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&plus;</mo>
+                <mi>b</mi>
+            </mrow>
+        </math>. 
+        Similarly, multiplication assigns the product 
+        ab 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+            </mrow>
+        </math>
+        to the pair 
+        <math>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>. 
+    </p>
+</section>
+
+<section id="unity" class="definition">
+    <p>
+        <strong>Unity:</strong>
+        An element 
+        <math>
+            <mrow>
+                <mi>e</mi>
+                <mo>&in;</mo>
+                <mi>M</mi>
+            </mrow>
+        </math>
+        is called a <strong>unity</strong> for 
+        <math><mo>&lowast;</mo></math>
+        if 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&lowast;</mo>
+                <mi>e</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>a</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>e</mi>
+                <mo>&lowast;</mo>
+                <mi>a</mi>
+            </mrow>
+            <mo>for all</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo>&in;</mo>
+                <mi>M</mi>
+            </mrow>
+        </math>
+    </figure>
+</section>
+<section class="description">
+    <p>
+        A binary operation 
+        <math><mo>&lowast;</mo></math>
+        is called 
+        <strong>commutative</strong> if 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&lowast;</mo>
+                <mi>b</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>b</mi>
+                <mo>&lowast;</mo>
+                <mi>a</mi>
+            </mrow>
+            <mo>for all</mo>
+            <mrow>
+                <mrow>
+                    <mi>a</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo>&in;</mo>
+                <mi>M</mi>
+            </mrow>
+        </math>
+    </figure>
+    <p>
+        A binary operation 
+        <math><mo>&lowast;</mo></math>
+        is called 
+        <strong>associative</strong> if 
+    </p>
+    <figure>
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&lowast;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>b</mi>
+                    <mo>&lowast;</mo>
+                    <mi>c</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&lowast;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&lowast;</mo>
+                <mi>c</mi>
+            </mrow>
+            <mo>for all</mo>
+            <mrow>
+                <mrow>
+                    <mi>a</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>b</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mi>c</mi>
+                </mrow>
+                <mo>&in;</mo>
+                <mi>M</mi>
+            </mrow>
+        </math>
+    </figure>
+</section>
+
+<section class="theorem">
+    <p>
+        <strong>Theorem 1.</strong>
+        If a binary operation has a unity, that unity is unique. 
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        If 
+        <math><mi>e</mi></math> and <math><mi>f</mi></math>
+        are both unities, then 
+        <math>
+            <mrow>
+                <mi>f</mi>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>e</mi>
+                    <mo>&lowast;</mo>
+                    <mi>f</mi>
+                </mrow>
+            </mrow>
+        </math>
+        and 
+        <math>
+            <mrow>
+                <mrow>
+                    <mi>e</mi>
+                    <mo>&lowast;</mo>
+                    <mi>f</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mi>e</mi>
+            </mrow>
+        </math>. 
+        So 
+        <math>
+            <mrow>
+                <mi>e</mi>
+                <mo>&equals;</mo>
+                <mi>f</mi>
+            </mrow>
+        </math>. 
+    </p>
+</section>
+
+<section id="monoid" class="definition">
+    <p>
+        <strong>Monoid:</strong>
+        A set 
+        <math><mi>M</mi></math>
+        is called a <strong>monoid</strong> 
+        if a binary operation is defined on 
+        <math><mi>M</mi></math>
+        that 
+    </p>
+    <ul>
+        <li>
+            is associative, and 
+        </li>
+        <li>
+            has an unity. 
+        </li>
+    </ul>
+    <p>
+        If the operation is commutative, we say that 
+        <math><mi>M</mi></math>
+        is a <strong>commutative monoid</strong>.
+    </p>
+</section>
+<section class="description">
+    <p>
+        We say that 
+        <math>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>M</mi>
+                    <mo separator="true">&comma;</mo>
+                    <mo>&lowast;</mo>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+        is a monoid if the operation 
+        <math><mo>&lowast;</mo></math>
+        is to be emphasized.
+    </p>
+</section>
+
+<section class="definition">
+    <p>
+        <strong>Convention.</strong>
+        In dealing with monoids in general, we use 
+        multiplicative notation, and denote the unity by 1.
+    </p>
+    <p>
+        <i>Multiplicative Notation:</i>
+        Here 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&lowast;</mo>
+                <mi>b</mi>
+            </mrow>
+        </math>
+        is written as 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+            </mrow>
+        </math>
+        (or sometimes 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&middot;</mo>
+                <mi>b</mi>
+            </mrow>
+        </math>)
+        and is called the product of 
+        <math><mi>a</mi></math> and <math><mi>b</mi></math>. 
+        The multiplicative unity is denoted 1  
+        (or 
+        <math>
+            <msub>
+                <mn>1</mn>
+                <mi>M</mi>
+            </msub>
+        </math>
+        if the monoid 
+        <math><mi>M</mi></math>
+        must be emphasized).
+    </p>
+</section>
+<section class="description">
+    <p>
+        When discussing monoids in general, we have been using 
+        <math><mo>&lowast;</mo></math>
+        for the binary operation. But algebraists do not do this. 
+        Multiplicative notation is the most popular format among algebraists. 
+        Hence we adopt the convention.
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        <strong>Theorem 2. General Associativity.</strong>
+        Let 
+        <math>
+            <msub>
+                <mi>a</mi>
+                <mn>1</mn>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>a</mi>
+                <mn>2</mn>
+            </msub>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>a</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        be elements of a monoid 
+        <math><mi>M</mi></math>. 
+        If the product 
+        a1a2 img an 
+        <math>
+            <msub>
+                <mi>a</mi>
+                <mn>1</mn>
+            </msub>
+            <mo>&InvisibleTimes;</mo>
+            <msub>
+                <mi>a</mi>
+                <mn>2</mn>
+            </msub>
+            <mo>&InvisibleTimes;</mo>
+            <mi>&hellip;</mi>
+            <mo>&InvisibleTimes;</mo>
+            <msub>
+                <mi>a</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        is formed (in that order), the result is the same 
+        no matter which bracketing is used.
+    </p>
+</section>
+<section class="example">
+    <p>
+        If 
+        <math>
+            <mi>a</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>b</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>c</mi>
+            <mo separator="true">&comma;</mo>
+            <mo>and</mo>
+            <mi>d</mi>
+        </math>
+        are elements in a monoid 
+        <math><mi>M</mi></math>, 
+        there are various ways to form the product 
+        abcd
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>c</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </mrow>
+        </math>
+        &mdash; for example 
+        <math>
+            <mrow>
+                <mo fence="true">&lbrack;</mo>
+                <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>a</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>b</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>c</mi>
+                </mrow>
+                <mo fence="true">&rbrack;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mi>d</mi>
+            </mrow>
+        </math> 
+        and 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lbrack;</mo>
+                <mrow>
+                    <mi>b</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mo fence="true">&lpar;</mo>
+                    <mrow>
+                        <mi>c</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>d</mi>
+                    </mrow>
+                    <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo fence="true">&rbrack;</mo>
+            </mrow>
+        </math>. 
+    </p>
+</section>
+
+<section class="definition">
+    <p>
+        <strong>
+            <math><mi>n</mi></math>th power:
+        </strong>
+        Let 
+        <math><mi>a</mi></math>
+        be an element of a monoid 
+        <math><mi>M</mi></math>. 
+        If 
+        <math>
+            <mi>n</mi>
+            <mo>&ge;</mo>
+            <mn>0</mn>
+        </math>
+        is an integer, inductively define the 
+        <math><mi>n</mi></math>th power 
+        <math>
+            <msup>
+                <mi>a</mi>
+                <mi>n</mi>
+            </msup>
+        </math>
+        of 
+        <math><mi>a</mi></math>
+        as follows:
+    </p>
+    <ul>
+        <li>
+            <math>
+                <msup>
+                    <mi>a</mi>
+                    <mn>1</mn>
+                </msup>
+                <mo>&equals;</mo>
+                <mi>a</mi>
+            </math>
+        </li>
+        <li>
+            <math>
+                <msup>
+                    <mi>a</mi>
+                    <mi>n</mi>
+                </msup>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&middot;</mo>
+                    <msup>
+                        <mi>a</mi>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                </mrow>
+            </math>
+        </li>
+    </ul>
+</section>
+<section class="example">
+    <p>
+        Thus, 
+        <math>
+            <msup>
+                <mi>a</mi>
+                <mn>1</mn>
+            </msup>
+            <mo>&equals;</mo>
+            <mi>a</mi>
+        </math>, 
+        <math>
+            <msup>
+                <mi>a</mi>
+                <mn>2</mn>
+            </msup>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo>&middot;</mo>
+                <mi>a</mi>
+            </mrow>
+        </math>, 
+        <math>
+            <msup>
+                <mi>a</mi>
+                <mn>3</mn>
+            </msup>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>a</mi>
+                <mo>&middot;</mo>
+                <mi>a</mi>
+                <mo>&middot;</mo>
+                <mi>a</mi>
+            </mrow>
+        </math>, 
+        and so on.
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        <strong>Theorem 3. Exponent Laws.</strong>
+        Let 
+        <math><mi>a</mi></math> and <math><mi>b</mi></math>
+        be elements of a monoid 
+        <math><mi>M</mi></math>. 
+    </p>
+    <ol>
+        <li>
+            <math>
+                <mrow>
+                    <mrow>
+                        <msup>
+                            <mi>a</mi>
+                            <mi>n</mi>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <mi>a</mi>
+                            <mi>m</mi>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>a</mi>
+                            <mrow>
+                                <mi>n</mi>
+                                <mo>&plus;</mo>
+                                <mi>m</mi>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                </mrow>
+                <mo>for all</mo>
+                <mrow>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&ge;</mo>
+                        <mn>0</mn>
+                    </mrow>
+                    <mo>and</mo>
+                    <mrow>
+                        <mi>m</mi>
+                        <mo>&ge;</mo>
+                        <mn>0</mn>
+                    </mrow>
+                </mrow>
+            </math>
+        </li>
+        <li>
+            <math>
+                <mrow>
+                    <mrow>
+                        <msup>
+                            <mrow>
+                                <mo fence="true">&lpar;</mo>
+                                <msup>
+                                    <mi>a</mi>
+                                    <mi>n</mi>
+                                </msup>
+                                <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mi>m</mi>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>a</mi>
+                            <mrow>
+                                <mi>n</mi>
+                                <mo>&InvisibleTimes;</mo>
+                                <mi>m</mi>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                </mrow>
+                <mo>for all</mo>
+                <mrow>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&ge;</mo>
+                        <mn>0</mn>
+                    </mrow>
+                    <mo>and</mo>
+                    <mrow>
+                        <mi>m</mi>
+                        <mo>&ge;</mo>
+                        <mn>0</mn>
+                    </mrow>
+                </mrow>
+            </math>
+        </li>
+        <li>
+            If 
+            <math>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>b</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>a</mi>
+                </mrow>
+            </math>, 
+            then 
+            <math>
+                <mrow>
+                    <mrow>
+                        <msup>
+                            <mrow>
+                                <mo fence="true">&lpar;</mo>
+                                <mrow>
+                                    <mi>a</mi>
+                                    <mo>&InvisibleTimes;</mo>
+                                    <mi>b</mi>
+                                </mrow>
+                                <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mi>n</mi>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <mi>a</mi>
+                            <mi>n</mi>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <mi>b</mi>
+                            <mi>n</mi>
+                        </msup>
+                    </mrow>
+                </mrow>
+                <mo>for all</mo>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&ge;</mo>
+                    <mn>0</mn>
+                </mrow>
+            </math>
+        </li>
+    </ol>
+</section>
+
+<section id="inverse" class="definition">
+    <p>
+        <strong>Inverses:</strong>
+        If 
+        <math><mi>a</mi></math>
+        is an element in a monoid 
+        <math><mi>M</mi></math>, 
+        an element 
+        <math><mi>b</mi></math>
+        of 
+        <math><mi>M</mi></math>
+        is called an inverse of 
+        <math><mi>a</mi></math>
+        if 
+        <figure>
+            <math>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo>&equals;</mo>
+                <mn>1</mn>
+                <mo>&equals;</mo>
+                <mrow>
+                    <mi>b</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>a</mi>
+                </mrow>
+            </math>
+        </figure>
+        An element with an inverse is called a <strong>unit</strong>. 
+    </p>
+</section>
+<section class="description">
+    <p>
+        Note that the definition is symmetric in 
+        <math><mi>a</mi></math> and <math><mi>b</mi></math>, 
+        so that 
+        <math><mi>a</mi></math>
+        is an inverse of 
+        <math><mi>b</mi></math>
+        if and only if 
+        <math><mi>b</mi></math>
+        is an inverse of 
+        <math><mi>a</mi></math>.
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        <strong>Theorem 4.</strong>
+        If 
+        <math><mi>M</mi></math>
+        is a monoid and 
+        <math>
+            <mi>a</mi>
+            <mo>&in;</mo>
+            <mi>M</mi>
+        </math>
+        has an inverse in 
+        <math><mi>M</mi></math>, 
+        then that inverse is unique. 
+    </p>
+</section>
+<section class="proof">
+    <p>
+        <i>Proof.</i>
+        If both 
+        <math><mi>b</mi></math>
+        and 
+        <math><mi>b</mi><mo>&prime;</mo></math>
+        are inverses of 
+        <math><mi>a</mi></math>, 
+        then 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>b</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>a</mi>
+            </mrow>
+        </math>
+        and 
+        <math>
+            <mrow>
+                <mi>a</mi>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi><mo>&prime;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mn>1</mn>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>b</mi><mo>&prime;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mi>a</mi>
+            </mrow>
+        </math>. 
+        Hence 
+        <math>
+            <mrow>
+                <mi>b</mi><mo>&prime;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>b</mi><mo>&prime;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mn>1</mn>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mi>b</mi><mo>&prime;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>b</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <mi>b</mi><mo>&prime;</mo>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>a</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mrow>
+                <mn>1</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
+            </mrow>
+            <mo>&equals;</mo>
+            <mi>b</mi>
+        </math>. 
+    </p>
+</section>
+
+<section class="definition">
+    <p>
+        <strong>Multiplicative inverses.</strong>
+        If 
+        <math><mi>a</mi></math>
+        is a unit in a multiplicative monoid, the inverse of 
+        <math><mi>a</mi></math>
+        is denoted 
+        <math>
+            <msup>
+                <mi>a</mi>
+                <mrow>
+                    <mo>&minus;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </msup>
+        </math>. 
+    </p>
+</section>
+<section class="description">
+    <p>
+        If the monoid is additive, the inverse of 
+        <math><mi>a</mi></math>
+        is denoted 
+        <math>
+            <mrow>
+                <mo>&minus;</mo>
+                <mi>a</mi>
+            </mrow>
+        </math>
+        and is called the <strong>negative</strong> of 
+        <math><mi>a</mi></math>. 
+    </p>
+</section>
+<section class="example">
+    <p>
+        <strong>Example 11.</strong>
+        The units in 
+        <math>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                    <msub>
+                        <mi>&integers;</mi>
+                        <mi>n</mi>
+                    </msub>
+                    <mo separator="true">&comma;</mo>
+                    <mi>&middot;</mi>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </math>
+        are the residues 
+        <math>
+            <mover>
+                <mi>a</mi>
+                <mo>&OverBar;</mo>
+            </mover>
+        </math>
+        where 
+        <math><mi>a</mi></math> and <math><mi>n</mi></math>
+        are relatively prime. 
+        (Theorem 5 §1.3)
+    </p>
+    <p>
+        <strong>Example 12.</strong>
+        If 
+        <math>
+            <mi>M</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
+            <mrow>
+                <mi>&alpha;</mi>
+            </mrow>
+            <mo separator="true">&verbar;</mo>
+            <mrow>
+                <mi>&alpha;</mi>
+                <mo separator="true">&colon;</mo>
+                <mi>X</mi>
+                <mo>&rightarrow;</mo>
+                <mi>X</mi>
+                <mo>is a mapping</mo>
+            </mrow>
+            <mo fence="true">&rbrace;</mo>
+        </math>
+        under composition, the units in 
+        <math><mi>M</mi></math>
+        are the bijections (onto and one-to-one mappings). 
+        (See Theorem 6 §0.3.)
+    </p>
+</section>
+
+<section class="theorem">
+    <p>
+        <strong>Theorem 5.</strong>
+        Let 
+        <math>
+            <mi>a</mi>
+            <mo separator="true">&comma;</mo>
+            <mi>b</mi>
+            <mo separator="true">&comma;</mo>
+            <mrow>
+                <msub>
+                    <mi>a</mi>
+                    <mn>1</mn>
+                </msub>
+            </mrow>
+            <mo separator="true">&comma;</mo>
+            <mrow>
+                <msub>
+                    <mi>a</mi>
+                    <mn>2</mn>
+                </msub>
+            </mrow>
+            <mo separator="true">&comma;</mo>
+            <mi>&hellip;</mi>
+            <mo separator="true">&comma;</mo>
+            <mrow>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msub>
+            </mrow>
+            <mo separator="true">&comma;</mo>
+            <msub>
+                <mi>a</mi>
+                <mi>n</mi>
+            </msub>
+        </math>
+        denote elements in a monoid 
+        <math><mi>M</mi></math>. 
+    </p>
+    <ol>
+        <li>
+            <math><mn>1</mn></math>
+            is a unit, and 
+            <math>
+                <mrow>
+                    <msup>
+                        <mn>1</mn>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                    <mo>&equals;</mo>
+                    <mn>1</mn>
+                </mrow>
+            </math>. 
+        </li>
+        <li>
+            If 
+            <math><mi>a</mi></math>
+            is a unit so is 
+            <math>
+                <msup>
+                    <mi>a</mi>
+                    <mrow>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msup>
+            </math>, 
+            and 
+            <math>
+                <mrow>
+                    <msup>
+                        <mrow>
+                            <mo fence="true">&lpar;</mo>
+                            <msup>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mo>&minus;</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                            </msup>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                    <mo>&equals;</mo>
+                    <mi>a</mi>
+                </mrow>
+            </math>. 
+        </li>
+        <li>
+            If 
+            <math><mi>a</mi></math> and <math><mi>b</mi></math>
+            are units so is 
+            <math>
+                <mrow>
+                    <mi>a</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>b</mi>
+                </mrow>
+            </math>, 
+            and 
+            <math>
+                <mrow>
+                    <msup>
+                        <mrow>
+                            <mo fence="true">&lpar;</mo>
+                            <mrow>
+                                <mi>a</mi>
+                                <mo>&InvisibleTimes;</mo>
+                                <mi>b</mi>
+                            </mrow>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                </mrow>
+                <mo>&equals;</mo>
+                <mrow>
+                    <msup>
+                        <mi>b</mi>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                    <mo>&InvisibleTimes;</mo>
+                    <msup>
+                        <mi>a</mi>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                </mrow>
+            </math>. 
+        </li>
+        <li>
+            If 
+            <math>
+                <msub>
+                    <mi>a</mi>
+                    <mn>1</mn>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <mi>&hellip;</mi>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>&minus;</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msub>
+                <mo separator="true">&comma;</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mi>n</mi>
+                </msub>
+            </math>
+            are units, so is 
+            <math>
+                <mrow>
+                    <msub>
+                        <mi>a</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>a</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <mi>&hellip;</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>a</mi>
+                        <mrow>
+                            <mi>n</mi>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msub>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                        <mi>a</mi>
+                        <mi>n</mi>
+                    </msub>
+                </mrow>
+            </math>, 
+            and 
+            <math>
+                <mrow>
+                    <mrow>
+                        <msup>
+                            <mrow>
+                                <mo fence="true">&lpar;</mo>
+                                <mrow>
+                                    <msub>
+                                        <mi>a</mi>
+                                        <mn>1</mn>
+                                    </msub>
+                                    <mo>&InvisibleTimes;</mo>
+                                    <msub>
+                                        <mi>a</mi>
+                                        <mn>2</mn>
+                                    </msub>
+                                    <mo>&InvisibleTimes;</mo>
+                                    <mi>&hellip;</mi>
+                                    <mo>&InvisibleTimes;</mo>
+                                    <msub>
+                                        <mi>a</mi>
+                                        <mrow>
+                                            <mi>n</mi>
+                                            <mo>&minus;</mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </msub>
+                                    <mo>&InvisibleTimes;</mo>
+                                    <msub>
+                                        <mi>a</mi>
+                                        <mi>n</mi>
+                                    </msub>
+                                </mrow>
+                            <mo fence="true">&rpar;</mo>
+                            </mrow>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mrow>
+                        <msup>
+                            <msub>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                            </msub>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mi>n</mi>
+                                    <mo>&minus;</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                            </msub>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>&hellip;</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>a</mi>
+                                <mn>2</mn>
+                            </msub>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                        <mo>&InvisibleTimes;</mo>
+                        <msup>
+                            <msub>
+                                <mi>a</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mrow>
+                                <mo>&minus;</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msup>
+                    </mrow>
+                </mrow>
+            </math>. 
+        </li>
+        <li>
+            If 
+            <math><mi>a</mi></math>
+            is a unit so is 
+            <math>
+                <msup>
+                    <mi>a</mi>
+                    <mi>n</mi>
+                </msup>
+            </math>
+            for any 
+            <math>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>&ge;</mo>
+                    <mn>0</mn>
+                </mrow>
+            </math>, 
+            and 
+            <math>
+                <mrow>
+                    <msup>
+                        <mrow>
+                            <mo fence="true">&lpar;</mo>
+                            <msup>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                            </msup>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mrow>
+                            <mo>&minus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                    </msup>
+                    <mo>&equals;</mo>
+                    <msup>
+                        <mrow>
+                            <mo fence="true">&lpar;</mo>
+                            <msup>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mo>&minus;</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                            </msup>
+                            <mo fence="true">&rpar;</mo>
+                        </mrow>
+                        <mi>n</mi>
+                    </msup>
+                </mrow>
+            </math>.
+        </li>
+    </ol>
+</section>
+
+</body>
+</html>
