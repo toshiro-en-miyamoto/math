@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MathML3 Presentation Markup</title>
+    <link rel="stylesheet" href="dark.css" type="text/css">
+    <link rel="stylesheet" href="indent.css" type="text/css">
+</head>
+<body>
+
+<h1>Indentation</h1>
+<section id="identation" class="description">
+
+<p>
+    <var>E<sub>i</sub></var> =
+    <var>mc<sup>2</sup></var>.
+</p>
+<figure>
+<pre><code>&lt;var>E&lt;sub>i&lt;/sub>&lt;/var> =
+&lt;var>mc&lt;sup>2&lt;/sup>&lt;/var>.
+</code></pre>
+</figure>
+
+<p>
+    <math>
+        <mi> a </mi>
+        <mo> &equals; </mo>
+        <msqrt>
+            <msup>
+                <mi> b </mi>
+                <mn> 2 </mn>
+            </msup>
+            <mi> &plus; </mi>
+            <msup>
+                <mi> c </mi>
+                <mn> 2 </mn>
+            </msup>
+        </msqrt>
+    </math>
+</p>
+
+<figure>
+<pre><code>&lt;math&gt;
+    &lt;mi&gt; a &lt;/mi&gt;
+    &lt;mo&gt; &amp;equals; &lt;/mo&gt;
+    &lt;msqrt&gt;
+        &lt;msup&gt;
+            &lt;mi&gt; b &lt;/mi&gt;
+            &lt;mn&gt; 2 &lt;/mn&gt;
+        &lt;/msup&gt;
+        &lt;mi&gt; &amp;plus; &lt;/mi&gt;
+        &lt;msup&gt;
+            &lt;mi&gt; c &lt;/mi&gt;
+            &lt;mn&gt; 2 &lt;/mn&gt;
+        &lt;/msup&gt;
+    &lt;/msqrt&gt;
+&lt;/math&gt;
+</code></pre>
+</figure>
+
+<aside class="summary">
+<p>
+Text-level semantics:
+</p>
+<ul>
+    <li>the <code>code</code> element</li>
+    <li>the <code>var</code> element</li>
+    <li>the <code>sup</code> and <code>sub</code> elements</li>
+</ul>
+</aside>
+
+</section>
+
+<h1>Color</h1>
+
+<section id="color" class="description">
+
+<p>
+<strong>Strong importance</strong> of its contents is represented by the <code>strong</code> elemet. <em>Stress emphasis</em> of its contents is represented by the <code>em</code> elemet.
+</p>
+<p>
+Anchors:
+    <a href="https://www.w3schools.com/colors/color_tryit.asp?color=MediumOrchid">
+        unvisited (Medium Orchid)
+    </a>,
+    <a href="https://www.w3schools.com/colors/color_tryit.asp?color=CornflowerBlue">
+        visited (Steel Blue)
+    </a>
+</p>
+
+</section>
+
+</body>
+</html>
