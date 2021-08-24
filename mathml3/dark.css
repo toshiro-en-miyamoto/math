@@ -3,7 +3,7 @@ body {
     color: LightGray;
 }
 
-.summary {
+.wrapup {
     background-color: #404040;
 }
 
@@ -20,7 +20,7 @@ strong {
 }
 
 em {
-    color: LimeGreen;
+    color: Aquamarine;
 }
 
 code {
