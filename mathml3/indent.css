@@ -1,0 +1,29 @@
+.description {
+    margin-left: 2em;
+    margin-right: 1em;
+}
+
+.summary {
+    padding: 0.2em 1em;
+    border-radius: 10px;
+}
+
+.numbers {
+    text-align: right;
+}
+
+.text {
+    text-align: left;
+}
+
+h1 {
+    text-decoration: overline;
+}
+
+th, td, mtd, {
+    padding: 0 1em;
+}
+
+code {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
