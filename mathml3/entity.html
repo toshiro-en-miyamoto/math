@@ -256,30 +256,6 @@
     </tr>
 </table>
 
-<h3>Invisible operators:</h3>
-<table>
-    <tr>
-        <th>Reference</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>&amp;ApplyFunction;</td>
-        <td>Function Application</td>
-    </tr>
-    <tr>
-        <td>&amp;InvisibleTimes;</td>
-        <td>Invisible Times</td>
-    </tr>
-    <tr>
-        <td>&amp;InvisibleComma;</td>
-        <td>Invisible Separator</td>
-    </tr>
-    <tr>
-        <td>&amp;#x2064;</td>
-        <td>Invisible Plus (ref is not defined)</td>
-    </tr>
-</table>
-
 <h3>Numbers:</h3>
 <table>
     <tr>
@@ -329,103 +305,211 @@
 <h3>Fractions:</h3>
 <table>
     <tr>
-        <th>Symbol</th>
-        <th>Reference</th>
+        <td>&frac12;</td><td>&amp;frac12;</td>
+        <td></td><td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>&frac12;</td>
-        <td>&amp;frac12;</td>
+        <td>&frac13;</td><td>&amp;frac13;</td>
+        <td>&frac23;</td><td>&amp;frac23</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>&frac13;</td>
-        <td>&amp;frac13;</td>
-    </tr>
-    <tr>
-        <td>&frac23;</td>
-        <td>&amp;frac23;</td>
-    </tr>
-    <tr>
-        <td>&frac14;</td>
-        <td>&amp;frac14;</td>
-    </tr>
-    <tr>
+        <td>&frac14;</td><td>&amp;frac14;</td>
+        <td></td><td></td>
         <td>&frac34;</td>
-        <td>&amp;frac34;</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>&frac15;</td>
-        <td>&amp;frac15;</td>
-    </tr>
-    <tr>
-        <td>&frac25;</td>
-        <td>&amp;frac25;</td>
-    </tr>
-    <tr>
+        <td>&frac15;</td><td>&amp;frac15;</td>
+        <td>&frac25;</td><td>&amp;frac25;</td>
         <td>&frac35;</td>
-        <td>&amp;frac35;</td>
-    </tr>
-    <tr>
         <td>&frac45;</td>
-        <td>&amp;frac45;</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>&frac16;</td>
-        <td>&amp;frac16;</td>
-    </tr>
-    <tr>
+        <td>&frac16;</td><td>&amp;frac16;</td>
+        <td></td><td></td>
+        <td></td>
+        <td></td>
         <td>&frac56;</td>
-        <td>&amp;frac56;</td>
+        <td></td>
     </tr>
     <tr>
-        <td>&frac18;</td>
-        <td>&amp;frac18;</td>
-    </tr>
-    <tr>
+        <td>&frac18;</td><td>&amp;frac18;</td>
+        <td></td><td></td>
         <td>&frac38;</td>
-        <td>&amp;frac38;</td>
-    </tr>
-    <tr>
+        <td></td>
         <td>&frac58;</td>
-        <td>&amp;frac58;</td>
-    </tr>
-    <tr>
         <td>&frac78;</td>
-        <td>&amp;frac78;</td>
     </tr>
 </table>
 
-
-<h3>Miscellaneous mathematical symbols:</h3>
+<h3>Diacritical marks</h3>
 <table>
     <tr>
-        <th>Symbol</th>
-        <th>Reference</th>
+        <th>Mark</th>
+        <th>Entity</th>
         <th>Description</th>
         <th>(ja)</th>
     </tr>
     <tr>
         <td>
-            &excl;
+            <math>
+                <mover>
+                    <mi>X</mi>
+                    <mo>&Hat;</mo>
+                </mover>
+            </math>
         </td>
-        <td>&amp;excl;</td>
-        <td>exclamation mark</td>
-        <td>階乗</td>
+        <td>&amp;Hat;</td>
+        <td>circumflex accent, hat</td>
+        <td>予測値</td>
     </tr>
     <tr>
         <td>
-            &lpar;
+            <math>
+                <mover>
+                    <mi>X</mi>
+                    <mo>&Tilde;</mo>
+                </mover>
+            </math>
         </td>
-        <td>&amp;lpar;</td>
-        <td>left parenthesis</td>
-        <td>かっこ</td>
+        <td>&amp;Tilde;</td>
+        <td>tilde</td>
+        <td></td>
     </tr>
     <tr>
         <td>
-            &rpar;
+            <math>
+                <mover>
+                    <mi>X</mi>
+                    <mo>&OverBar;</mo>
+                </mover>
+            </math>
         </td>
-        <td>&amp;rpar;</td>
-        <td>right parenthesis</td>
-        <td>かっこ</td>
+        <td>&amp;OverBar;</td>
+        <td>overline</td>
+        <td>剰余類、平均値</td>
+    </tr>
+    <tr>
+        <td>
+            <math>
+                <mover>
+                    <mrow>
+                        <mi>X</mi>
+                        <mo>&plus;</mo>
+                        <mi>Y</mi>
+                        <mo>&plus;</mo>
+                        <mi>Z</mi>
+                    </mrow>
+                    <mo>&OverParenthesis;</mo>
+                </mover>
+            </math>
+        </td>
+        <td>&amp;OverParenthesis;</td>
+        <td>top parenthesis</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <math>
+                <munder>
+                    <mrow>
+                        <mi>X</mi>
+                        <mo>&plus;</mo>
+                        <mi>Y</mi>
+                        <mo>&plus;</mo>
+                        <mi>Z</mi>
+                    </mrow>
+                    <mo>&UnderParenthesis;</mo>
+                </munder>
+            </math>
+        </td>
+        <td>&amp;UnderParenthesis;</td>
+        <td>bottom parenthesis</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <math>
+                <mover>
+                    <mrow>
+                        <mi>X</mi>
+                        <mo>&plus;</mo>
+                        <mi>Y</mi>
+                        <mo>&plus;</mo>
+                        <mi>Z</mi>
+                    </mrow>
+                    <mo>&OverBrace;</mo>
+                </mover>
+            </math>
+        </td>
+        <td>&amp;OverBrace;</td>
+        <td>top curly brace</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <math>
+                <munder>
+                    <mrow>
+                        <mi>X</mi>
+                        <mo>&plus;</mo>
+                        <mi>Y</mi>
+                        <mo>&plus;</mo>
+                        <mi>Z</mi>
+                    </mrow>
+                    <mo>&UnderBrace;</mo>
+                </munder>
+            </math>
+        </td>
+        <td>&amp;UnderBrace;</td>
+        <td>bottom curly brace</td>
+        <td></td>
+    </tr>
+</table>
+
+<h3>Invisible operators:</h3>
+<table>
+    <tr>
+        <th>Reference</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>&amp;ApplyFunction;</td>
+        <td>Function Application</td>
+    </tr>
+    <tr>
+        <td>&amp;InvisibleTimes;</td>
+        <td>Invisible Times</td>
+    </tr>
+    <tr>
+        <td>&amp;InvisibleComma;</td>
+        <td>Invisible Separator</td>
+    </tr>
+    <tr>
+        <td>&amp;#x2064;</td>
+        <td>Invisible Plus (ref is not defined)</td>
+    </tr>
+</table>
+
+<h3>Mathematical operators:</h3>
+<table>
+    <tr>
+        <th>Op</th>
+        <th>Entity</th>
+        <th>Description</th>
+        <th>(ja)</th>
     </tr>
     <tr>
         <td>
@@ -437,11 +521,11 @@
     </tr>
     <tr>
         <td>
-            &comma;
+            &minus;
         </td>
-        <td>&amp;comma;</td>
-        <td>comma</td>
-        <td>コンマ</td>
+        <td>&amp;minus;</td>
+        <td>minus sign</td>
+        <td>減算</td>
     </tr>
     <tr>
         <td>
@@ -450,110 +534,6 @@
         <td>(n/a)</td>
         <td>hyphen-minus</td>
         <td>ハイフン (減算ではない)</td>
-    </tr>
-    <tr>
-        <td>
-            &colon;
-        </td>
-        <td>&amp;colon;</td>
-        <td>colon</td>
-        <td>コロン</td>
-    </tr>
-    <tr>
-        <td>
-            &semi;
-        </td>
-        <td>&amp;semi;</td>
-        <td>semicolon</td>
-        <td>セミコロン</td>
-    </tr>
-    <tr>
-        <td>
-            &lt;
-        </td>
-        <td>&amp;lt;</td>
-        <td>less-than sign</td>
-        <td>不等号</td>
-    </tr>
-    <tr>
-        <td>
-            &equals;
-        </td>
-        <td>&amp;equals;</td>
-        <td>equals sign</td>
-        <td>等号</td>
-    </tr>
-    <tr>
-        <td>
-            &gt;
-        </td>
-        <td>&amp;gt;</td>
-        <td>greater-than sign</td>
-        <td>不等号</td>
-    </tr>
-    <tr>
-        <td>
-            &Hat;
-        </td>
-        <td>&amp;Hat;</td>
-        <td>hat</td>
-        <td>ハット</td>
-    </tr>
-    <tr>
-        <td>
-            &lbrack;
-        </td>
-        <td>&amp;lbrack;</td>
-        <td>left square bracket</td>
-        <td>かぎかっこ</td>
-    </tr>
-    <tr>
-        <td>
-            &rbrack;
-        </td>
-        <td>&amp;rbrack;</td>
-        <td>right square bracket</td>
-        <td>かぎかっこ</td>
-    </tr>
-    <tr>
-        <td>
-            &lbrace;
-        </td>
-        <td>&amp;lbrace;</td>
-        <td>left curly bracket</td>
-        <td>波かっこ</td>
-    </tr>
-    <tr>
-        <td>
-            &verbar;
-        </td>
-        <td>&amp;verbar;</td>
-        <td>vertical line</td>
-        <td>垂直線</td>
-    </tr>
-    <tr>
-        <td>
-            &rbrace;
-        </td>
-        <td>&amp;rbrace;</td>
-        <td>right curly bracket</td>
-        <td>波かっこ</td>
-    </tr>
-    <tr>
-        <td>
-            &not;
-        </td>
-        <td>&amp;not;</td>
-        <td>not sign</td>
-        <td>(論理の)否定</td>
-    </tr>
-    <tr>
-        <td>
-            &OverBar;
-        </td>
-        <td>&amp;OverBar;</td>
-        <td>residue class</td>
-        <td>剰余類</td>
     </tr>
     <tr>
         <td>
@@ -589,38 +569,6 @@
     </tr>
     <tr>
         <td>
-            &hellip;
-        </td>
-        <td>&amp;hellip;</td>
-        <td>horizontal ellipsis</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>
-            &prime;
-        </td>
-        <td>&amp;prime;</td>
-        <td>prime</td>
-        <td>ダッシュ</td>
-    </tr>
-    <tr>
-        <td>
-            &Prime;
-        </td>
-        <td>&amp;Prime;</td>
-        <td>double prime</td>
-        <td>二重ダッシュ</td>
-    </tr>
-    <tr>
-        <td>
-            &tprime;
-        </td>
-        <td>&amp;tprime;</td>
-        <td>triple prime</td>
-        <td>三重ダッシュ</td>
-    </tr>
-    <tr>
-        <td>
             &frasl;
         </td>
         <td>&amp;frasl;</td>
@@ -629,187 +577,191 @@
     </tr>
     <tr>
         <td>
-            &rightarrow;
+            &equals;
         </td>
-        <td>&amp;rightarrow;</td>
-        <td>rightwards arrow</td>
-        <td>対応または関数</td>
+        <td>&amp;equals;</td>
+        <td>equals sign</td>
+        <td>等号</td>
     </tr>
     <tr>
         <td>
-            &leftrightarrow;
+            &ne;
         </td>
-        <td>&amp;leftrightarrow;</td>
-        <td>left right arrow</td>
-        <td></td>
+        <td>&amp;ne;</td>
+        <td>not equal to</td>
+        <td>不等号</td>
     </tr>
     <tr>
         <td>
-            &map;
+            &lt;
         </td>
-        <td>&amp;map;</td>
-        <td>rightwards arrow from bar</td>
-        <td>要素の対応</td>
+        <td>&amp;lt;</td>
+        <td>less-than sign</td>
+        <td>不等号</td>
     </tr>
     <tr>
         <td>
-            &Implies;
+            &le;
         </td>
-        <td>&amp;Implies;</td>
-        <td>implies</td>
-        <td>含意</td>
+        <td>&amp;le;</td>
+        <td>less-than or equal to</td>
+        <td>不等号</td>
     </tr>
     <tr>
         <td>
-            &iff;
+            &gt;
         </td>
-        <td>&amp;iff;</td>
-        <td>if and only if</td>
-        <td>(論理の)同値</td>
+        <td>&amp;gt;</td>
+        <td>greater-than sign</td>
+        <td>不等号</td>
     </tr>
     <tr>
         <td>
-            &forall;
+            &ge;
         </td>
-        <td>&amp;forall;</td>
-        <td>for all - universal quantifier</td>
-        <td>全称記号</td>
+        <td>&amp;ge;</td>
+        <td>greater-than or equal to</td>
+        <td>不等号</td>
     </tr>
     <tr>
         <td>
-            &comp;
+            &comma;
         </td>
-        <td>&amp;comp;</td>
-        <td>complement</td>
-        <td>補集合記号</td>
+        <td>&amp;comma;</td>
+        <td>comma</td>
+        <td>コンマ</td>
     </tr>
     <tr>
         <td>
-            &PartialD;
+            &colon;
         </td>
-        <td>&amp;PartialD;</td>
-        <td>partial differential</td>
-        <td>微分記号</td>
+        <td>&amp;colon;</td>
+        <td>colon</td>
+        <td>コロン</td>
     </tr>
     <tr>
         <td>
-            &exist;
+            &verbar;
         </td>
-        <td>&amp;exist;</td>
-        <td>there exists - existential quantifier</td>
-        <td>存在記号</td>
+        <td>&amp;verbar;</td>
+        <td>vertical line</td>
+        <td>垂直線、絶対値</td>
     </tr>
     <tr>
         <td>
-            &emptyset;
+            &semi;
         </td>
-        <td>&amp;emptyset;</td>
-        <td>empty set</td>
-        <td>空集合</td>
+        <td>&amp;semi;</td>
+        <td>semicolon</td>
+        <td>セミコロン</td>
     </tr>
     <tr>
         <td>
-            &in;
+            &hellip;
         </td>
-        <td>&amp;in;</td>
-        <td>element of</td>
-        <td>その集合の要素である</td>
+        <td>&amp;hellip;</td>
+        <td>horizontal ellipsis</td>
+        <td>途中省略</td>
     </tr>
     <tr>
         <td>
-            &notin;
+            &vellip;
         </td>
-        <td>&amp;notin;</td>
-        <td>not an element of</td>
-        <td></td>
+        <td>&amp;vellip;</td>
+        <td>vertical ellipsis</td>
+        <td>途中省略</td>
     </tr>
     <tr>
         <td>
-            &ni;
+            &lpar; 1 &rpar;
         </td>
-        <td>&amp;ni;</td>
-        <td>contains as member</td>
-        <td></td>
+        <td>&amp;lpar; / &amp;rpar;</td>
+        <td>left / right parenthesis</td>
+        <td>かっこ</td>
     </tr>
     <tr>
         <td>
-            &notni;
+            &lbrack; 1 &rbrack;
         </td>
-        <td>&amp;notni;</td>
-        <td>does not contain as member</td>
-        <td></td>
+        <td>&amp;lbrack; / &amp;rbrack;</td>
+        <td>left / right square bracket</td>
+        <td>かぎかっこ</td>
     </tr>
     <tr>
         <td>
-            &Product;
+            &lbrace; 1 &rbrace;
         </td>
-        <td>&amp;Product;</td>
-        <td>n-ary product</td>
-        <td>集合の直積</td>
+        <td>&amp;lbrace; / &amp;rbrace;</td>
+        <td>left / right curly bracket</td>
+        <td>波かっこ</td>
     </tr>
     <tr>
         <td>
-            &Coproduct;
+            &excl;
         </td>
-        <td>&amp;Coproduct;</td>
-        <td>n-ary coproduct</td>
-        <td></td>
+        <td>&amp;excl;</td>
+        <td>exclamation mark</td>
+        <td>階乗</td>
     </tr>
     <tr>
         <td>
-            &sum;
+            &lceil; 2.3 &rceil;
         </td>
-        <td>&amp;sum;</td>
-        <td>n-ary summation</td>
-        <td>総和</td>
+        <td>&amp;lceil; / &amp;rceil;</td>
+        <td>left / right ceiling</td>
+        <td>
+            <math>
+                <mo fence="true">&lceil;</mo>
+                <mn>2.3</mn>
+                <mo fence="true">&rceil;</mo>
+                <mo>&equals;</mo>
+                <mn>3</mn>
+            </math>,
+            <math>
+                <mo fence="true">&lceil;</mo>
+                <mn>&minus;1.5</mn>
+                <mo fence="true">&rceil;</mo>
+                <mo>&equals;</mo>
+                <mn>&minus;1</mn>
+            </math>,
+            <math>
+                <mo fence="true">&lceil;</mo>
+                <mn>3</mn>
+                <mo fence="true">&rceil;</mo>
+                <mo>&equals;</mo>
+                <mn>3</mn>
+            </math>
+        </td>
     </tr>
     <tr>
         <td>
-            &minus;
+            &lfloor; 2.3 &rfloor;
         </td>
-        <td>&amp;minus;</td>
-        <td>minus sign</td>
-        <td>減算</td>
-    </tr>
-    <tr>
+        <td>&amp;lfloor; / &amp;rfloor;</td>
+        <td>left / right floor</td>
         <td>
-            &setminus;
+            <math>
+                <mo fence="true">&lfloor;</mo>
+                <mn>2.3</mn>
+                <mo fence="true">&rfloor;</mo>
+                <mo>&equals;</mo>
+                <mn>2</mn>
+            </math>,
+            <math>
+                <mo fence="true">&lfloor;</mo>
+                <mn>&minus;1.5</mn>
+                <mo fence="true">&rfloor;</mo>
+                <mo>&equals;</mo>
+                <mn>&minus;2</mn>
+            </math>,
+            <math>
+                <mo fence="true">&lfloor;</mo>
+                <mn>3</mn>
+                <mo fence="true">&rfloor;</mo>
+                <mo>&equals;</mo>
+                <mn>3</mn>
+            </math>
         </td>
-        <td>&amp;setminus;</td>
-        <td>set minus</td>
-        <td>(集合の)差演算子</td>
-    </tr>
-    <tr>
-        <td>
-            &lowast;
-        </td>
-        <td>&amp;lowast;</td>
-        <td>asterisk operator</td>
-        <td>抽象的な演算子</td>
-    </tr>
-    <tr>
-        <td>
-            &compfn;
-        </td>
-        <td>&amp;compfn;</td>
-        <td>ring operator</td>
-        <td>関数の合成</td>
-    </tr>
-    <tr>
-        <td>
-            &infin;
-        </td>
-        <td>&amp;infin;</td>
-        <td>infinity</td>
-        <td>無限</td>
-    </tr>
-    <tr>
-        <td>
-            &angrt;
-        </td>
-        <td>&amp;angrt;</td>
-        <td>right angle</td>
-        <td>直角</td>
     </tr>
     <tr>
         <td>
@@ -829,51 +781,19 @@
     </tr>
     <tr>
         <td>
-            &parallel;
+            &sum;
         </td>
-        <td>&amp;parallel;</td>
-        <td>parallel to</td>
-        <td>平行である</td>
+        <td>&amp;sum;</td>
+        <td>n-ary summation</td>
+        <td>総和</td>
     </tr>
     <tr>
         <td>
-            &nparallel;
+            &PartialD;
         </td>
-        <td>&amp;nparallel;</td>
-        <td>not parallel to</td>
-        <td>平行ではない</td>
-    </tr>
-    <tr>
-        <td>
-            &and;
-        </td>
-        <td>&amp;and;</td>
-        <td>logical and</td>
-        <td>論理積、連言</td>
-    </tr>
-    <tr>
-        <td>
-            &or;
-        </td>
-        <td>&amp;or;</td>
-        <td>logical or</td>
-        <td>論理和、選言</td>
-    </tr>
-    <tr>
-        <td>
-            &cap;
-        </td>
-        <td>&amp;cap;</td>
-        <td>intersection</td>
-        <td>集合の共通部分</td>
-    </tr>
-    <tr>
-        <td>
-            &cup;
-        </td>
-        <td>&amp;cup;</td>
-        <td>union</td>
-        <td>和集合</td>
+        <td>&amp;PartialD;</td>
+        <td>partial differential</td>
+        <td>微分記号</td>
     </tr>
     <tr>
         <td>
@@ -885,67 +805,125 @@
     </tr>
     <tr>
         <td>
-            &Tilde;
+            &infin;
         </td>
-        <td>&amp;Tilde;</td>
-        <td>tilde operator, logical not</td>
-        <td>(集合の)関係、(論理の)否定</td>
+        <td>&amp;infin;</td>
+        <td>infinity</td>
+        <td>無限</td>
+    </tr>
+
+    <!-- ******************************************* -->
+    <tr>
+        <th colspan=4>Logic</th>
     </tr>
     <tr>
         <td>
-            &NotTilde;
+            &not;
         </td>
-        <td>&amp;NotTilde;</td>
-        <td>not tilde</td>
-        <td></td>
+        <td>&amp;not;</td>
+        <td>not sign</td>
+        <td>論理の否定</td>
     </tr>
     <tr>
         <td>
-            &Assign;
+            &and;
         </td>
-        <td>&amp;Assign;</td>
-        <td>colon equals</td>
-        <td></td>
+        <td>&amp;and;</td>
+        <td>logical and</td>
+        <td>論理の積、連言</td>
     </tr>
     <tr>
         <td>
-            &ne;
+            &or;
         </td>
-        <td>&amp;ne;</td>
-        <td>not equal to</td>
-        <td>不等号</td>
+        <td>&amp;or;</td>
+        <td>logical or</td>
+        <td>論理の和、選言</td>
     </tr>
     <tr>
         <td>
-            &equiv;
+            &Implies;
         </td>
-        <td>&amp;equiv;</td>
-        <td>identical to</td>
-        <td>同値関係</td>
+        <td>&amp;Implies;</td>
+        <td>implies</td>
+        <td>含意</td>
     </tr>
     <tr>
         <td>
-            &nequiv;
+            &iff;
         </td>
-        <td>&amp;nequiv;</td>
-        <td>not identical to</td>
-        <td></td>
+        <td>&amp;iff;</td>
+        <td>if and only if</td>
+        <td>論理の同値</td>
     </tr>
     <tr>
         <td>
-            &le;
+            &forall;
         </td>
-        <td>&amp;le;</td>
-        <td>less-than or equal to</td>
-        <td>不等号</td>
+        <td>&amp;forall;</td>
+        <td>for all - universal quantifier</td>
+        <td>全称記号</td>
     </tr>
     <tr>
         <td>
-            &ge;
+            &exist;
         </td>
-        <td>&amp;ge;</td>
-        <td>greater-than or equal to</td>
-        <td>不等号</td>
+        <td>&amp;exist;</td>
+        <td>there exists - existential quantifier</td>
+        <td>存在記号</td>
+    </tr>
+    <tr>
+        <td>
+            &marker;
+        </td>
+        <td>&amp;marker;</td>
+        <td>black vertical rectangle</td>
+        <td>証明終わり</td>
+    </tr>
+
+    <!-- ******************************************* -->
+    <tr>
+        <th colspan=4>Set</th>
+    </tr>
+    <tr>
+        <td>
+            &emptyset;
+        </td>
+        <td>&amp;emptyset;</td>
+        <td>empty set</td>
+        <td>空集合</td>
+    </tr>
+    <tr>
+        <td>
+            &in;
+        </td>
+        <td>&amp;in;</td>
+        <td>element of</td>
+        <td>右辺の集合の要素である</td>
+    </tr>
+    <tr>
+        <td>
+            &notin;
+        </td>
+        <td>&amp;notin;</td>
+        <td>not an element of</td>
+        <td>右辺の集合の要素ではない</td>
+    </tr>
+    <tr>
+        <td>
+            &ni;
+        </td>
+        <td>&amp;ni;</td>
+        <td>contains as member</td>
+        <td>右辺の要素を含む</td>
+    </tr>
+    <tr>
+        <td>
+            &notni;
+        </td>
+        <td>&amp;notni;</td>
+        <td>does not contain as member</td>
+        <td>右辺の要素を含まない</td>
     </tr>
     <tr>
         <td>
@@ -1029,127 +1007,189 @@
     </tr>
     <tr>
         <td>
-            &vellip;
+            &cap;
         </td>
-        <td>&amp;vellip;</td>
-        <td>vertical ellipsis</td>
+        <td>&amp;cap;</td>
+        <td>intersection</td>
+        <td>集合の共通部分</td>
+    </tr>
+    <tr>
+        <td>
+            &cup;
+        </td>
+        <td>&amp;cup;</td>
+        <td>union</td>
+        <td>和集合</td>
+    </tr>
+    <tr>
+        <td>
+            &setminus;
+        </td>
+        <td>&amp;setminus;</td>
+        <td>set minus</td>
+        <td>集合の差演算子</td>
+    </tr>
+    <tr>
+        <td>
+            &comp;
+        </td>
+        <td>&amp;comp;</td>
+        <td>complement</td>
+        <td>補集合記号</td>
+    </tr>
+    <tr>
+        <td>
+            &Product;
+        </td>
+        <td>&amp;Product;</td>
+        <td>n-ary product</td>
+        <td>集合の直積</td>
+    </tr>
+    <tr>
+        <td>
+            &Coproduct;
+        </td>
+        <td>&amp;Coproduct;</td>
+        <td>n-ary coproduct</td>
+        <td></td>
+    </tr>
+
+    <!-- ******************************************* -->
+    <tr>
+        <th colspan=4>Algebra</th>
+    </tr>
+    <tr>
+        <td>
+            &Tilde;
+        </td>
+        <td>&amp;Tilde;</td>
+        <td>tilde operator, logical not</td>
+        <td>集合の関係、(論理の否定)</td>
+    </tr>
+    <tr>
+        <td>
+            &NotTilde;
+        </td>
+        <td>&amp;NotTilde;</td>
+        <td>not tilde</td>
         <td></td>
     </tr>
     <tr>
         <td>
-            &lceil;
+            &map;
         </td>
-        <td>&amp;lceil;</td>
-        <td>left ceiling</td>
-        <td>天井関数</td>
+        <td>&amp;map;</td>
+        <td>rightwards arrow from bar</td>
+        <td>要素の対応</td>
     </tr>
     <tr>
         <td>
-            &rceil;
+            &rightarrow;
         </td>
-        <td>&amp;rceil;</td>
-        <td>right ceiling</td>
-        <td>
-            <math>
-                <mo fence="true">&lceil;</mo>
-                <mn>2.3</mn>
-                <mo fence="true">&rceil;</mo>
-                <mo>&equals;</mo>
-                <mn>3</mn>
-            </math>,
-            <math>
-                <mo fence="true">&lceil;</mo>
-                <mn>&minus;1.5</mn>
-                <mo fence="true">&rceil;</mo>
-                <mo>&equals;</mo>
-                <mn>&minus;1</mn>
-            </math>,
-            <math>
-                <mo fence="true">&lceil;</mo>
-                <mn>3</mn>
-                <mo fence="true">&rceil;</mo>
-                <mo>&equals;</mo>
-                <mn>3</mn>
-            </math>
-        </td>
+        <td>&amp;rightarrow;</td>
+        <td>rightwards arrow</td>
+        <td>対応または関数</td>
     </tr>
     <tr>
         <td>
-            &lfloor;
+            &leftrightarrow;
         </td>
-        <td>&amp;lfloor;</td>
-        <td>left floor</td>
-        <td>床関数</td>
-    </tr>
-    <tr>
-        <td>
-            &rfloor;
-        </td>
-        <td>&amp;rfloor;</td>
-        <td>right floor</td>
-        <td>
-            <math>
-                <mo fence="true">&lfloor;</mo>
-                <mn>2.3</mn>
-                <mo fence="true">&rfloor;</mo>
-                <mo>&equals;</mo>
-                <mn>2</mn>
-            </math>,
-            <math>
-                <mo fence="true">&lfloor;</mo>
-                <mn>&minus;1.5</mn>
-                <mo fence="true">&rfloor;</mo>
-                <mo>&equals;</mo>
-                <mn>&minus;2</mn>
-            </math>,
-            <math>
-                <mo fence="true">&lfloor;</mo>
-                <mn>3</mn>
-                <mo fence="true">&rfloor;</mo>
-                <mo>&equals;</mo>
-                <mn>3</mn>
-            </math>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            &OverParenthesis;
-        </td>
-        <td>&amp;OverParenthesis;</td>
-        <td>top parenthesis</td>
+        <td>&amp;leftrightarrow;</td>
+        <td>left right arrow</td>
         <td></td>
     </tr>
     <tr>
         <td>
-            &UnderParenthesis;
+            &lowast;
         </td>
-        <td>&amp;UnderParenthesis;</td>
-        <td>bottom parenthesis</td>
+        <td>&amp;lowast;</td>
+        <td>asterisk operator</td>
+        <td>抽象的な演算子</td>
+    </tr>
+    <tr>
+        <td>
+            &compfn;
+        </td>
+        <td>&amp;compfn;</td>
+        <td>ring operator</td>
+        <td>関数の合成</td>
+    </tr>
+    <tr>
+        <td>
+            &Assign;
+        </td>
+        <td>&amp;Assign;</td>
+        <td>colon equals</td>
         <td></td>
     </tr>
     <tr>
         <td>
-            &OverBrace;
+            &equiv;
         </td>
-        <td>&amp;OverBrace;</td>
-        <td>top curly bracket</td>
-        <td></td>
+        <td>&amp;equiv;</td>
+        <td>identical to</td>
+        <td>同値関係にある</td>
     </tr>
     <tr>
         <td>
-            &UnderBrace;
+            &nequiv;
         </td>
-        <td>&amp;UnderBrace;</td>
-        <td>bottom curly bracket</td>
-        <td></td>
+        <td>&amp;nequiv;</td>
+        <td>not identical to</td>
+        <td>同値関係にない</td>
+    </tr>
+
+    <!-- ******************************************* -->
+    <tr>
+        <th colspan=4>Others</th>
     </tr>
     <tr>
         <td>
-            &marker;
+            &prime;
         </td>
-        <td>&amp;marker;</td>
-        <td>black vertical rectangle</td>
-        <td>(証明終わり)</td>
+        <td>&amp;prime;</td>
+        <td>prime</td>
+        <td>ダッシュ</td>
+    </tr>
+    <tr>
+        <td>
+            &Prime;
+        </td>
+        <td>&amp;Prime;</td>
+        <td>double prime</td>
+        <td>二重ダッシュ</td>
+    </tr>
+    <tr>
+        <td>
+            &tprime;
+        </td>
+        <td>&amp;tprime;</td>
+        <td>triple prime</td>
+        <td>三重ダッシュ</td>
+    </tr>
+    <tr>
+        <td>
+            &angrt;
+        </td>
+        <td>&amp;angrt;</td>
+        <td>right angle</td>
+        <td>直角</td>
+    </tr>
+    <tr>
+        <td>
+            &parallel;
+        </td>
+        <td>&amp;parallel;</td>
+        <td>parallel to</td>
+        <td>平行である</td>
+    </tr>
+    <tr>
+        <td>
+            &nparallel;
+        </td>
+        <td>&amp;nparallel;</td>
+        <td>not parallel to</td>
+        <td>平行ではない</td>
     </tr>
 </table>
 
