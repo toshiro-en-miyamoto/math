@@ -19,9 +19,9 @@
 
 <h3>3.2.3 Identifier <code>&lt;mi&gt;</code></h3>
 <p>
-    Identifiers include function names such as "sin". 
-    Expressions such as "sin x" should be written using 
-    the character U+2061 as shown below; 
+    Identifiers include function names such as "sin".
+    Expressions such as "sin x" should be written using
+    the character U+2061 as shown below;
 </p>
 <figure>
     <math>
@@ -40,7 +40,7 @@
     &lt;/mrow&gt;
 </pre>
 <p>
-    Miscellaneous text that should be treated as a "term" can 
+    Miscellaneous text that should be treated as a "term" can
     also be represented by an <code>mi</code> element, as in:
 </p>
 <figure>
@@ -69,76 +69,92 @@
 <h4>3.2.5.3 Operators</h4>
 <figure>
     <math>
-        <mn>1</mn>
-        <mo>&plus;</mo>
-        <mn>2</mn>
-        <mo>&equals;</mo>
-        <mn>5</mn>
+        <mrow>
+            <mn>1</mn>
+            <mo>&plus;</mo>
+            <mn>2</mn>
+            <mo>&equals;</mo>
+            <mn>5</mn>
+        </mrow>
     </math>
 </figure>
 <pre>
-    &lt;mn&gt;1&lt;/mn&gt;
-    &lt;mo&gt;&amp;plus;&lt;/mo&gt;
-    &lt;mn&gt;2&lt;/mn&gt;
-    &lt;mo&gt;&amp;equals;&lt;/mo&gt;
-    &lt;mn&gt;5&lt;/mn&gt;
+    &lt;mrow&gt;
+        &lt;mn&gt;1&lt;/mn&gt;
+        &lt;mo&gt;&amp;plus;&lt;/mo&gt;
+        &lt;mn&gt;2&lt;/mn&gt;
+        &lt;mo&gt;&amp;equals;&lt;/mo&gt;
+        &lt;mn&gt;5&lt;/mn&gt;
+    &lt;/mrow&gt;
 </pre>
 
 <figure>
     <math>
-        <mo>if</mo><mi>x</mi><mo>is an integer</mo>
+        <mrow>
+            <mo>if</mo>
+            <mi>x</mi>
+            <mo>is an integer</mo>
+        </mrow>
     </math>
 </figure>
 <pre>
-    &lt;mo&gt;if&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;is an integer&lt;/mo&gt;
+    &lt;mrow&gt;
+        &lt;mo&gt;if&lt;/mo&gt;
+        &lt;mi&gt;x&lt;/mi&gt;
+        &lt;mo&gt;is an integer&lt;/mo&gt;
+    &lt;/mrow&gt;
 </pre>
 
 <h4>3.2.5.4 Fences</h4>
 
 <figure>
     <math>
-        <mo fence="true">&lpar;</mo>
         <mrow>
+            <mo fence="true">&lpar;</mo>
             <mi>a</mi>
             <mo>&plus;</mo>
             <mi>b</mi>
-        </mrow>
-        <mo fence="true">&rpar;</mo>
-    </math>
-</figure>
-<pre>
-    &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
-    &lt;mrow&gt;
-        &lt;mi&gt;a&lt;/mi&gt;
-        &lt;mo&gt;&amp;plus;&lt;/mo&gt;
-        &lt;mi&gt;b&lt;/mi&gt;
-    &lt;/mrow&gt;
-    &lt;mo fence="true"&gt;&amp;rpar&lt;/mo&gt;
-</pre>
-
-<figure>
-    <math>
-        <mi>f</mi>
-        <mo>&ApplyFunction;</mo>
-        <mrow>
-            <mo fence="true">&lpar;</mo>
-            <mi>x</mi>
-            <mo separator="true">&comma;</mo>
-            <mi>y</mi>
             <mo fence="true">&rpar;</mo>
         </mrow>
     </math>
 </figure>
-
 <pre>
-    &lt;mi&gt;f&lt;/mi&gt;
-    &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
     &lt;mrow&gt;
         &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
-        &lt;mi&gt;x&lt;/mi&gt;
-        &lt;mo separator="true"&gt;&amp;comma;&lt;/mo&gt;
-        &lt;mi&gt;y&lt;/mi&gt;
+        &lt;mi&gt;a&lt;/mi&gt;
+        &lt;mo&gt;&amp;plus;&lt;/mo&gt;
+        &lt;mi&gt;b&lt;/mi&gt;
         &lt;mo fence="true"&gt;&amp;rpar&lt;/mo&gt;
+    &lt;/mrow&gt;
+</pre>
+
+<figure>
+    <math>
+        <mrow>
+            <mi>f</mi>
+            <mo>&ApplyFunction;</mo>
+            <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mi>x</mi>
+                <mo separator="true">&comma;</mo>
+                <mi>y</mi>
+                <mo fence="true">&rpar;</mo>
+            </mrow>
+        </mrow>
+    </math>
+</figure>
+
+<pre>
+    &lt;mrow&gt;
+        &lt;mi&gt;f&lt;/mi&gt;
+        &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+        &lt;mrow&gt;
+            &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+            &lt;mo separator="true"&gt;&amp;comma;&lt;/mo&gt;
+            &lt;mi&gt;y&lt;/mi&gt;
+            &lt;mo fence="true"&gt;&amp;rpar&lt;/mo&gt;
+        &lt;/mrow&gt;
     &lt;/mrow&gt;
 </pre>
 
@@ -147,103 +163,163 @@
 
 <figure>
     <math>
-        <mi>x</mi>
-        <mo>&InvisibleTimes;</mo>
-        <mi>y</mi>
+        <mrow>
+            <mi>x</mi>
+            <mo>&InvisibleTimes;</mo>
+            <mi>y</mi>
+        </mrow>
     </math>
 </figure>
 <pre>
-    &lt;mi&gt;x&lt;/mi&gt;
-    &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
-    &lt;mi&gt;y&lt;/mi&gt;
+    &lt;mrow&gt;
+        &lt;mi&gt;x&lt;/mi&gt;
+        &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+        &lt;mi&gt;y&lt;/mi&gt;
+    &lt;/mrow&gt;
 </pre>
 
 <h4>3.2.5.8 Stretching of operators, fences and accents</h4>
 
 <figure>
     <math>
-        <mo fence="true">&lpar;</mo>
-        <mfrac>
-            <mi>a</mi>
-            <mi>b</mi>
-        </mfrac>
-        <mo fence="true">&rpar;</mo>
+        <mrow>
+            <mo fence="true">&lpar;</mo>
+            <mfrac>
+                <mi>a</mi>
+                <mi>b</mi>
+            </mfrac>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
     </math>
 </figure>
 <pre>
-    &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
-    &lt;mfrac&gt;
-        &lt;mi&gt;a&lt;/mi&gt;
-        &lt;mi&gt;b&lt;/mi&gt;
-    &lt;/mfrac&gt;
-    &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
+    &lt;math&gt;
+        &lt;mrow&gt;
+            &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
+            &lt;mfrac&gt;
+                &lt;mi&gt;a&lt;/mi&gt;
+                &lt;mi&gt;b&lt;/mi&gt;
+            &lt;/mfrac&gt;
+            &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
+        &lt;/mrow&gt;
+    &lt;/math&gt;
+</pre>
+
+<figure>
+    <math displaystyle="true">
+        <mrow>
+            <mo fence="true">&lpar;</mo>
+            <mfrac>
+                <mi>a</mi>
+                <mi>b</mi>
+            </mfrac>
+            <mo fence="true">&rpar;</mo>
+        </mrow>
+    </math>
+</figure>
+<pre>
+    &lt;math displaystyle="true"&gt;
+        &lt;mrow&gt;
+          &vellip;
+        &lt;/mrow&gt;
+    &lt;/math&gt;
 </pre>
 
 <figure>
     <math>
-        <mi>x</mi>
-        <munder>
-            <mo>&rightarrow;</mo>
-            <mtext>maps to</mtext>
-        </munder>
-        <mi>y</mi>
+        <mrow>
+            <mi>x</mi>
+            <munder>
+                <mo>&rightarrow;</mo>
+                <mtext>maps to</mtext>
+            </munder>
+            <mi>y</mi>
+        </mrow>
     </math>
 </figure>
 <pre>
-    &lt;mi&gt;x&lt;/mi&gt;
-    &lt;munder&gt;
-        &lt;mo&gt;&amp;rightarrow;&lt;/mo&gt;
-        &lt;mtext&gt;maps to&lt;/mtext&gt;
-    &lt;/munder&gt;
-    &lt;mi&gt;y&lt;/mi&gt;
+    &lt;math&gt;
+        &lt;mrow&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+            &lt;munder&gt;
+                &lt;mo&gt;&amp;rightarrow;&lt;/mo&gt;
+                &lt;mtext&gt;maps to&lt;/mtext&gt;
+            &lt;/munder&gt;
+            &lt;mi&gt;y&lt;/mi&gt;
+        &lt;/mrow&gt;
+    &lt;/math&gt;
+</pre>
+
+<figure>
+    <math displaystyle="true">
+        <mrow>
+            <mi>x</mi>
+            <munder>
+                <mo>&rightarrow;</mo>
+                <mtext>maps to</mtext>
+            </munder>
+            <mi>y</mi>
+        </mrow>
+    </math>
+</figure>
+<pre>
+    &lt;math displaystyle="true"&gt;
+        &lt;mrow&gt;
+          &vellip;
+        &lt;/mrow&gt;
+    &lt;/math&gt;
 </pre>
 
 <h4>3.2.6.4 Mixing text and mathematics</h4>
 
 <figure>
     <math>
-        <mo>there exists</mo>
         <mrow>
-            <mi>&delta;</mi>
-            <mo>&gt;</mo>
-            <mn>0</mn>
-        </mrow>
-        <mo>such that</mo>
-        <mrow>
+            <mo>there exists</mo>
             <mrow>
-                <mi>f</mi>
-                <mo>&ApplyFunction;</mo>
-                <mrow>
-                    <mo fence="true">&lpar;</mo>
-                    <mi>x</mi>
-                    <mo fence="true">&rpar;</mo>
-                </mrow>
+                <mi>&delta;</mi>
+                <mo>&gt;</mo>
+                <mn>0</mn>
             </mrow>
-            <mo>&lt;</mo>
-            <mn>1</mn>
+            <mo>such that</mo>
+            <mrow>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>&ApplyFunction;</mo>
+                    <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>x</mi>
+                        <mo fence="true">&rpar;</mo>
+                    </mrow>
+                </mrow>
+                <mo>&lt;</mo>
+                <mn>1</mn>
+            </mrow>
         </mrow>
     </math>
 </figure>
 <pre>
-    &lt;mo&gt;there exists&lt;/mo&gt;
     &lt;mrow&gt;
-        &lt;mi&gt;&amp;delta;&lt;/mi&gt;
-        &lt;mo&gt;&amp;gt;&lt;/mo&gt;
-        &lt;mn&gt;0&lt;/mn&gt;
-    &lt;/mrow&gt;
-    &lt;mo&gt;such that&lt;/mo&gt;
-    &lt;mrow&gt;
+        &lt;mo&gt;there exists&lt;/mo&gt;
         &lt;mrow&gt;
-            &lt;mi&gt;f&lt;/mi&gt;
-            &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
-            &lt;mrow&gt;
-                &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
-                &lt;mi&gt;x&lt;/mi&gt;
-                &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
-            &lt;/mrow&gt;
+            &lt;mi&gt;&amp;delta;&lt;/mi&gt;
+            &lt;mo&gt;&amp;gt;&lt;/mo&gt;
+            &lt;mn&gt;0&lt;/mn&gt;
         &lt;/mrow&gt;
-        &lt;mo&gt;&amp;lt;&lt;/mo&gt;
-        &lt;mn&gt;1&lt;/mn&gt;
+        &lt;mo&gt;such that&lt;/mo&gt;
+        &lt;mrow&gt;
+            &lt;mrow&gt;
+                &lt;mi&gt;f&lt;/mi&gt;
+                &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+                &lt;mrow&gt;
+                    &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
+                    &lt;mi&gt;x&lt;/mi&gt;
+                    &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
+                &lt;/mrow&gt;
+            &lt;/mrow&gt;
+            &lt;mo&gt;&amp;lt;&lt;/mo&gt;
+            &lt;mn&gt;1&lt;/mn&gt;
+        &lt;/mrow&gt;
     &lt;/mrow&gt;
 </pre>
 
@@ -251,50 +327,50 @@
 
 <figure>
     <math>
-        <mo fence="true">&lpar;</mo>
         <mrow>
+            <mo fence="true">&lpar;</mo>
             <mi>a</mi>
             <mo>&plus;</mo>
             <mi>b</mi>
+            <mo fence="true">&rpar;</mo>
         </mrow>
-        <mo fence="true">&rpar;</mo>
     </math>
 </figure>
 <pre>
-    &lt;mo fence="true">&amp;lpar;&lt;/mo&gt;
     &lt;mrow&gt;
+        &lt;mo fence="true">&amp;lpar;&lt;/mo&gt;
         &lt;mi&gt;a&lt;/mi&gt;
         &lt;mo&gt;&amp;plus;&lt;/mo&gt;
         &lt;mi&gt;b&lt;/mi&gt;
+        &lt;mo fence="true">&amp;rpar;&lt;/mo&gt;
     &lt;/mrow&gt;
-    &lt;mo fence="true">&amp;rpar;&lt;/mo&gt;
 </pre>
 
 <figure>
     <math>
-        <mo fence="true">&lbrack;</mo>
         <mrow>
+            <mo fence="true">&lbrack;</mo>
             <mn>0</mn>
             <mo seprarator="true">&comma;</mo>
             <mn>1</mn>
+            <mo fence="true">&rpar;</mo>
         </mrow>
-        <mo fence="true">&rpar;</mo>
     </math>
 </figure>
 <pre>
-    &lt;mo fence="true">&amp;lbrack;&lt;/mo&gt;
     &lt;mrow&gt;
+        &lt;mo fence="true">&amp;lbrack;&lt;/mo&gt;
         &lt;mn&gt;0&lt;/mn&gt;
         &lt;mo seprarator="true"&gt;&amp;comma;&lt;/mo&gt;
         &lt;mn&gt;1&lt;/mn&gt;
+        &lt;mo fence="true">&amp;rpar;&lt;/mo&gt;
     &lt;/mrow&gt;
-    &lt;mo fence="true">&amp;rpar;&lt;/mo&gt;
 </pre>
 
 <figure>
     <math>
-        <mo fence="true">&lbrace;</mo>
         <mrow>
+            <mo fence="true">&lbrace;</mo>
             <mn>0</mn>
             <mo seprarator="true">&comma;</mo>
             <mn>1</mn>
@@ -308,13 +384,13 @@
             <msup><mi>n</mi><mn>2</mn></msup>
             <mo seprarator="true">&comma;</mo>
             <mi>&hellip;</mi>
+            <mo fence="true">&rbrace;</mo>
         </mrow>
-        <mo fence="true">&rbrace;</mo>
     </math>
 </figure>
 <pre>
-    &lt;mo fence="true"&gt;&amp;lbrace;&lt;/mo&gt;
     &lt;mrow&gt;
+        &lt;mo fence="true"&gt;&amp;lbrace;&lt;/mo&gt;
         &lt;mn&gt;0&lt;/mn&gt;
         &lt;mo seprarator="true"&gt;&amp;comma;&lt;/mo&gt;
         &lt;mn&gt;1&lt;/mn&gt;
@@ -328,128 +404,204 @@
         &lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
         &lt;mo seprarator="true"&gt;&amp;comma;&lt;/mo&gt;
         &lt;mi&gt;&amp;hellip;&lt;/mi&gt;
+        &lt;mo fence="true"&gt;&amp;rbrace;&lt;/mo&gt;
     &lt;/mrow&gt;
-    &lt;mo fence="true"&gt;&amp;rbrace;&lt;/mo&gt;
 </pre>
 
 <figure>
     <math>
-        <mi>S</mi>
-        <mo>&equals;</mo>
-        <mo fence="true">&lbrace;</mo>
         <mrow>
-            <mo fence="true">&lpar;</mo>
+            <mi>S</mi>
+            <mo>&equals;</mo>
+            <mo fence="true">&lbrace;</mo>
             <mrow>
+                <mo fence="true">&lpar;</mo>
                 <mi>x</mi>
                 <mo sepearator="true">&comma;</mo>
                 <mi>y</mi>
+                <mo fence="true">&rpar;</mo>
+                <mo>&in;</mo>
+                <msup>
+                    <mi>&reals;</mi>
+                    <mn>2</mn>
+                </msup>
+                <mo separator="true">&verbar;</mo>
+                <msup><mi>x</mi><mn>2</mn></msup>
+                <mo>&plus;</mo>
+                <msup><mi>y</mi><mn>2</mn></msup>
+                <mo>&equals;</mo>
+                <mn>16</mn>
             </mrow>
-            <mo fence="true">&rpar;</mo>
-            <mo>&in;</mo>
-            <msup>
-                <mi>&reals;</mi>
-                <mn>2</mn>
-            </msup>
+            <mo fence="true">&rbrace;</mo>
         </mrow>
-        <mo separator="true">&verbar;</mo>
-        <mrow>
-            <msup><mi>x</mi><mn>2</mn></msup>
-            <mo>&plus;</mo>
-            <msup><mi>y</mi><mn>2</mn></msup>
-            <mo>&equals;</mo>
-            <mn>16</mn>
-        </mrow>
-    <mo fence="true">&rbrace;</mo>
     </math>
 </figure>
 <pre>
-    &lt;mi&gt;S&lt;/mi&gt;
-    &lt;mo&gt;&amp;equals;&lt;/mo&gt;
-    &lt;mo fence="true"&gt;&amp;lbrace;&lt;/mo&gt;
-    &lt;mrow&gt;
-        &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
+    &lt;math&gt;
         &lt;mrow&gt;
-            &lt;mi&gt;x&lt;/mi&gt;
-            &lt;mo sepearator="true"&gt;&amp;comma;&lt;/mo&gt;
-            &lt;mi&gt;y&lt;/mi&gt;
+            &lt;mi&gt;S&lt;/mi&gt;
+            &lt;mo&gt;&amp;equals;&lt;/mo&gt;
+            &lt;mo fence="true"&gt;&amp;lbrace;&lt;/mo&gt;
+            &lt;mrow&gt;
+                &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
+                &lt;mi&gt;x&lt;/mi&gt;
+                &lt;mo sepearator="true"&gt;&amp;comma;&lt;/mo&gt;
+                &lt;mi&gt;y&lt;/mi&gt;
+                &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
+                &lt;mo&gt;&amp;in;&lt;/mo&gt;
+                &lt;msup&gt;
+                    &lt;mi&gt;&amp;reals;&lt;/mi&gt;
+                    &lt;mn&gt;2&lt;/mn&gt;
+                &lt;/msup&gt;
+                &lt;mo separator="true"&gt;&amp;verbar;&lt;/mo&gt;
+                &lt;msup&gt;
+                    &lt;mi&gt;x&lt;/mi&gt;
+                    &lt;mn&gt;2&lt;/mn&gt;
+                &lt;/msup&gt;
+                &lt;mo&gt;&amp;plus;&lt;/mo&gt;
+                &lt;msup&gt;
+                    &lt;mi&gt;y&lt;/mi&gt;
+                    &lt;mn&gt;2&lt;/mn&gt;
+                &lt;/msup&gt;
+                &lt;mo&gt;&amp;equals;&lt;/mo&gt;
+                &lt;mn&gt;16&lt;/mn&gt;
+            &lt;/mrow&gt;
+            &lt;mo fence="true"&gt;&amp;rbrace;&lt;/mo&gt;
         &lt;/mrow&gt;
-        &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
-        &lt;mo&gt;&amp;in;&lt;/mo&gt;
-        &lt;msup&gt;
-            &lt;mi&gt;&amp;reals;&lt;/mi&gt;
-            &lt;mn&gt;2&lt;/mn&gt;
-        &lt;/msup&gt;
-    &lt;/mrow&gt;
-    &lt;mo separator="true"&gt;&amp;verbar;&lt;/mo&gt;
-    &lt;mrow&gt;
-        &lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
-        &lt;mo&gt;&amp;plus;&lt;/mo&gt;
-        &lt;msup&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
-        &lt;mo&gt;&amp;equals;&lt;/mo&gt;
-        &lt;mn&gt;16&lt;/mn&gt;
-    &lt;/mrow&gt;
-    &lt;mo fence="true"&gt;&amp;rbrace;&lt;/mo&gt;
+    &lt;/math&gt;
+</pre>
+
+<h3>3.4.5 Overscript <code>&lt;mover&gt;</code></h3>
+
+<figure>
+    <math>
+        <mover accent="true">
+            <mi>X</mi>
+            <mo>&Hat;</mo>
+        </mover>
+        <mo separator="true">&comma;</mo>
+        <mover accent="true">
+            <mi>Y</mi>
+            <mo>&Tilde;</mo>
+        </mover>
+        <mo separator="true">&comma;</mo>
+        <mover accent="true">
+            <mi>Z</mi>
+            <mo>&OverBar;</mo>
+        </mover>
+    </math>
+</figure>
+<pre>
+    &lt;math&gt;
+        &lt;mover accent="true"&gt;
+            &lt;mi&gt;X&lt;/mi&gt;
+            &lt;mo&gt;&amp;Hat;&lt;/mo&gt;
+        &lt;/mover&gt;
+        &lt;mo separator="true"&gt;&amp;comma;&lt;/mo&gt;
+        &lt;mover accent="true"&gt;
+            &lt;mi&gt;Y&lt;/mi&gt;
+            &lt;mo&gt;&amp;Tilde;&lt;/mo&gt;
+        &lt;/mover&gt;
+        &lt;mo separator="true"&gt;&amp;comma;&lt;/mo&gt;
+        &lt;mover accent="true"&gt;
+            &lt;mi&gt;Z&lt;/mi&gt;
+            &lt;mo&gt;&amp;OverBar;&lt;/mo&gt;
+        &lt;/mover&gt;
+    &lt;/math&gt;
+</pre>
+
+<figure>
+    <math>
+        <mover>
+            <mrow>
+                <mi>X</mi>
+                <mo>&plus;</mo>
+                <mi>Y</mi>
+                <mo>&plus;</mo>
+                <mi>Z</mi>
+            </mrow>
+            <mo>&OverBrace;</mo>
+        </mover>
+    </math>
+</figure>
+<pre>
+    &lt;math&gt;
+        &lt;mover&gt;
+            &lt;mrow&gt;
+                &lt;mi&gt;X&lt;/mi&gt;
+                &lt;mo&gt;&amp;plus;&lt;/mo&gt;
+                &lt;mi&gt;Y&lt;/mi&gt;
+                &lt;mo&gt;&amp;plus;&lt;/mo&gt;
+                &lt;mi&gt;Z&lt;/mi&gt;
+            &lt;/mrow&gt;
+            &lt;mo&gt;&amp;OverBrace;&lt;/mo&gt;
+        &lt;/mover&gt;
+    &lt;/math&gt;
 </pre>
 
 <h3>3.4.6 Underscript-overscript Pair <code>&lt;munderover&gt;</code></h3>
 
 <figure>
     <math>
-        <munderover>
-            <mo>&sum;</mo>
-            <mrow>
-                <mi>k</mi>
-                <mo>&equals;</mo>
-                <mn>1</mn>
-            </mrow>
-            <mi>n</mi>
-        </munderover>
-        <mo>&ApplyFunction;</mo>
         <mrow>
-            <mfrac>
-                <mn>1</mn>
+            <munderover>
+                <mo>&sum;</mo>
                 <mrow>
                     <mi>k</mi>
-                    <mo>&InvisibleTimes;</mo>
-                    <mo fence="true">&lpar;</mo>
+                    <mo>&equals;</mo>
+                    <mn>1</mn>
+                </mrow>
+                <mi>n</mi>
+            </munderover>
+            <mo>&ApplyFunction;</mo>
+            <mrow>
+                <mfrac>
+                    <mn>1</mn>
                     <mrow>
                         <mi>k</mi>
-                        <mo>&plus;</mo>
-                        <mn>1</mn>
+                        <mo>&InvisibleTimes;</mo>
+                        <mo fence="true">&lpar;</mo>
+                        <mrow>
+                            <mi>k</mi>
+                            <mo>&plus;</mo>
+                            <mn>1</mn>
+                        </mrow>
+                        <mo fence="true">&rpar;</mo>
                     </mrow>
-                    <mo fence="true">&rpar;</mo>
-                </mrow>
-            </mfrac>
+                </mfrac>
+            </mrow>
         </mrow>
     </math>
 </figure>
 <pre>
     &lt;math&gt;
-        &lt;munderover&gt;
-            &lt;mo&gt;&amp;sum;&lt;/mo&gt;
-            &lt;mrow&gt;
-                &lt;mi&gt;k&lt;/mi&gt;
-                &lt;mo&gt;&amp;equals;&lt;/mo&gt;
-                &lt;mn&gt;1&lt;/mn&gt;
-            &lt;/mrow&gt;
-            &lt;mi&gt;n&lt;/mi&gt;
-        &lt;/munderover&gt;
-        &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
         &lt;mrow&gt;
-            &lt;mfrac&gt;
-                &lt;mn&gt;1&lt;/mn&gt;
+            &lt;munderover&gt;
+                &lt;mo&gt;&amp;sum;&lt;/mo&gt;
                 &lt;mrow&gt;
                     &lt;mi&gt;k&lt;/mi&gt;
-                    &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
-                    &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
+                    &lt;mo&gt;&amp;equals;&lt;/mo&gt;
+                    &lt;mn&gt;1&lt;/mn&gt;
+                &lt;/mrow&gt;
+                &lt;mi&gt;n&lt;/mi&gt;
+            &lt;/munderover&gt;
+            &lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+            &lt;mrow&gt;
+                &lt;mfrac&gt;
+                    &lt;mn&gt;1&lt;/mn&gt;
                     &lt;mrow&gt;
                         &lt;mi&gt;k&lt;/mi&gt;
-                        &lt;mo&gt;&amp;plus;&lt;/mo&gt;
-                        &lt;mn&gt;1&lt;/mn&gt;
+                        &lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+                        &lt;mo fence="true"&gt;&amp;lpar;&lt;/mo&gt;
+                        &lt;mrow&gt;
+                            &lt;mi&gt;k&lt;/mi&gt;
+                            &lt;mo&gt;&amp;plus;&lt;/mo&gt;
+                            &lt;mn&gt;1&lt;/mn&gt;
+                        &lt;/mrow&gt;
+                        &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
                     &lt;/mrow&gt;
-                    &lt;mo fence="true"&gt;&amp;rpar;&lt;/mo&gt;
-                &lt;/mrow&gt;
-            &lt;/mfrac&gt;
+                &lt;/mfrac&gt;
+            &lt;/mrow&gt;
         &lt;/mrow&gt;
     &lt;/math&gt;
 </pre>
