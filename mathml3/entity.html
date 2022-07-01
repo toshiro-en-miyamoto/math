@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>HTML Character Entities</title>
+    <title>HTML Named character references</title>
 </head>
 <body>
 
-<h2>HTML Character Entities</h2>
+<h1>HTML Character Entities</h1>
 <p>
     <strong>Reference:</strong>
-    <a href="https://dev.w3.org/html5/html-author/charref">
-        Character Entity Reference Chart by W3C
+    <a href="https://html.spec.whatwg.org/multipage/named-characters.html">
+        HTNL Living Standard, 13.5 Named character references
     </a>
     <style>
         table, th, td {
@@ -210,24 +210,28 @@
 <table>
     <tr>
         <th>Sym</th>
+        <th>Unicode</th>
         <th>Entity</th>
         <th>Description</th>
         <th>(ja)</th>
     </tr>
     <tr>
         <td class="center">&naturals;</td>
+        <td>U+2115</td>
         <td>&amp;naturals;</td>
         <td>natural numbers</td>
         <td>自然数</td>
     </tr>
     <tr>
         <td class="center">&primes;</td>
+        <td>U+2119</td>
         <td>&amp;primes;</td>
         <td>primes</td>
         <td>素数</td>
     </tr>
     <tr>
         <td class="center">&integers;</td>
+        <td>U+2124</td>
         <td>&amp;integers;</td>
         <td>integers</td>
         <td>整数</td>
@@ -610,7 +614,7 @@
         <td>
             &lt;
         </td>
-        <td></td>
+        <td>U+003C</td>
         <td>&amp;lt;</td>
         <td>less-than sign</td>
     </tr>
@@ -618,7 +622,7 @@
         <td>
             &le;
         </td>
-        <td></td>
+        <td>U+2264</td>
         <td>&amp;le;</td>
         <td>less-than or equal to</td>
     </tr>
@@ -626,7 +630,7 @@
         <td>
             &gt;
         </td>
-        <td></td>
+        <td>U+003E</td>
         <td>&amp;gt;</td>
         <td>greater-than sign</td>
     </tr>
@@ -634,7 +638,7 @@
         <td>
             &ge;
         </td>
-        <td></td>
+        <td>U+2265</td>
         <td>&amp;ge;</td>
         <td>greater-than or equal to</td>
     </tr>
@@ -711,7 +715,7 @@
         <td>right parenthesis</td>
     </tr>
     <tr>
-        <td>
+        <td class=".left">
             &lbrack;
         </td>
         <td></td>
@@ -719,7 +723,7 @@
         <td>left square bracket</td>
     </tr>
     <tr>
-        <td>
+        <td class=".right">
             &rbrack;
         </td>
         <td></td>
@@ -727,20 +731,20 @@
         <td>right square bracket</td>
     </tr>
     <tr>
-        <td>
+        <td class=".left">
             &LeftDoubleBracket;
         </td>
-        <td></td>
+        <td>U+27E6</td>
         <td>&amp;LeftDoubleBracket;</td>
-        <td>left white bracket, interval</td>
+        <td>math white square bracket, interval</td>
     </tr>
     <tr>
-        <td>
+        <td class=".right">
             &RightDoubleBracket;
         </td>
-        <td></td>
+        <td>U+27E7</td>
         <td>&amp;RightDoubleBracket;</td>
-        <td>right white bracket, interval</td>
+        <td>math white square bracket, interval</td>
     </tr>
     <tr>
         <td>
@@ -932,7 +936,7 @@
         <td>
             &in;
         </td>
-        <td></td>
+        <td>U+2208</td>
         <td>&amp;in;</td>
         <td>element of</td>
     </tr>
@@ -940,7 +944,7 @@
         <td>
             &notin;
         </td>
-        <td></td>
+        <td>U+2209</td>
         <td>&amp;notin;</td>
         <td>not an element of</td>
     </tr>
@@ -948,7 +952,7 @@
         <td>
             &ni;
         </td>
-        <td></td>
+        <td>U+220B</td>
         <td>&amp;ni;</td>
         <td>contains as member</td>
     </tr>
@@ -956,7 +960,7 @@
         <td>
             &notni;
         </td>
-        <td></td>
+        <td>U+220C</td>
         <td>&amp;notni;</td>
         <td>does not contain as member</td>
     </tr>
@@ -1227,6 +1231,7 @@
         <td>not parallel to</td>
     </tr>
 </table>
+
 
 </body>
 </html>
