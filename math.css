@@ -1,8 +1,13 @@
-h2 {
+h1 {
   border-top: 2px solid lightslategray;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
 th, td {
   padding-right: 1em;
+  vertical-align: text-bottom;
 }
 th {
   text-align: left;
