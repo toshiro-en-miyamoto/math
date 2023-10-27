@@ -1,26 +1,24 @@
 h2 {
-    border-top: 2px solid lightslategray;
+  border-top: 2px solid lightslategray;
 }
 th, td {
-    padding-right: 1em;
+  padding-right: 1em;
 }
 th {
-    text-align: left;
+  text-align: left;
 }
 mtd {
-    text-align: left;
+  text-align: left;
 }
 .center-aligned {
-    text-align: center;
+  text-align: center;
 }
 .proposition, .lemma, .corollary, .proof, .example, .description {
-    padding: 0 1.5em;
+  padding: 0 1.5em;
 }
 .summary, .definition, .theorem {
-    margin: 2px 0;
-    padding: 0.2em 1.5em;
-}
-.summary, .definition, .theorem {
-    background-color: lightgrey;
-    border-radius: 10px;
+  margin: 2px 0;
+  padding: 0.2em 1.5em;
+  background-color: lightgrey;
+  border-radius: 10px;
 }
