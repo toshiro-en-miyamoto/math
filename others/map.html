@@ -1,377 +1,546 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <meta charset="UTF-8">
   <title>Map of Mathematics</title>
-  <link rel="stylesheet" href="../math.css" type="text/css">
+  <style>
+    body {
+      margin-left: 1.5rem;
+    }
+    th, td {
+      padding-right: 1.5rem;
+      vertical-align: text-bottom;
+    }
+    th {
+      padding-top: 1rem;
+      text-align: left;
+    }
+    section {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    .definition, .theorem {
+      margin: 2px 0;
+      padding: 0.2em 1.5em;
+      background-color: lightgrey;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-
-<h1>Overview</h1>
-
-<table>
-  <tr>
-    <th>
-      A.
-      <ruby>代数<rp>(</rp><rt>だいすう</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-      </th>
-    <th>
-      Algebra
-    </th>
-  </tr>
-  <tr>
-    <td>
-      1.
-      <ruby>線形<rp>(</rp><rt>せんけい</rt><rp>)</rp></ruby>
-      <ruby>代数<rp>(</rp><rt>だいすう</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Linear Algebra
-    </td>
-  </tr>
-  <tr>
-    <td>
-      2.
-      <ruby>群<rp>(</rp><rt>ぐん</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Group Theory
-    </td>
-  </tr>
-  <tr>
-    <td>
-      3.
-      <ruby>環<rp>(</rp><rt>かん</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Ring Theory
-    </td>
-  </tr>
-  <tr>
-    <td>
-      4.
-      <ruby>体<rp>(</rp><rt>たい</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Field Theory
-    </td>
-  </tr>
-  <tr>
-    <td>
-      5.
-      <ruby>整数<rp>(</rp><rt>せいすう</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Number Theory
-    </td>
-  </tr>
-  <tr>
-    <td>
-      6.
-      <ruby>代数<rp>(</rp><rt>だいすう</rt><rp>)</rp></ruby>
-      <ruby>幾何<rp>(</rp><rt>きか</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Algebraic Geometry
-    </td>
-  </tr>
-  <tr>
-    <td>
-      7.
-      <ruby>数論<rp>(</rp><rt>すうろん</rt><rp>)</rp></ruby>
-      <ruby>幾何<rp>(</rp><rt>きか</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Arithmetic Geometry
-    </td>
-  </tr>
-  <tr>
-    <td>
-      8.
-      <ruby>表現<rp>(</rp><rt>ひょうげん</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Representation Theory
-    </td>
-  </tr>
-  <tr>
-    <th>
-      B.
-      <ruby>幾何<rp>(</rp><rt>きか</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-      </th>
-    <th>
-      Geometry
-    </th>
-  </tr>
-  <tr>
-    <td>
-      9.
-      <ruby>位相<rp>(</rp><rt>いそう</rt><rp>)</rp></ruby>
-      <ruby>空間<rp>(</rp><rt>くうかん</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      General Topology
-    </td>
-  </tr>
-  <tr>
-    <td>
-      10.
-      <ruby>多様体<rp>(</rp><rt>たようたい</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Manifold Theory
-    </td>
-  </tr>
-  <tr>
-    <td>
-      11.
-      <ruby>代数<rp>(</rp><rt>だいすう</rt><rp>)</rp></ruby>
-      トポロジー
-    </td>
-    <td>
-      Algebraic Topology
-    </td>
-  </tr>
-  <tr>
-    <td>
-      12.
-      <ruby>微分<rp>(</rp><rt>びぶん</rt><rp>)</rp></ruby>
-      <ruby>幾何<rp>(</rp><rt>きか</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Differential Geometry
-    </td>
-  </tr>
-  <tr>
-    <td>
-      13.
-      <ruby>微分<rp>(</rp><rt>びぶん</rt><rp>)</rp></ruby>
-      トポロジー
-    </td>
-    <td>
-      Differential Topology
-    </td>
-  </tr>
-  <tr>
-    <th>
-      C.
-      <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-    </th>
-    <th>
-      Analysis
-    </th>
-  </tr>
-  <tr>
-    <td>
-      14.
-      <ruby>微分<rp>(</rp><rt>びぶん</rt><rp>)</rp></ruby>
-      <ruby>積分<rp>(</rp><rt>せきぶん</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Calculus
-    </td>
-  </tr>
-  <tr>
-    <td>
-      15.
-      ベクトル
-      <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Vector Calculus
-    </td>
-  </tr>
-  <tr>
-    <td>
-      16.
-      <ruby>微分<rp>(</rp><rt>びぶん</rt><rp>)</rp></ruby>
-      <ruby>方程式<rp>(</rp><rt>ほうていしき</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Theory of Differential Equations
-    </td>
-  </tr>
-  <tr>
-    <td>
-      17.
-      <ruby>複素<rp>(</rp><rt>ふくそ</rt><rp>)</rp></ruby>
-      <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Complex Analysis
-    </td>
-  </tr>
-  <tr>
-    <td>
-      18.
-      フーリエ
-      <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Fourier Analysis
-    </td>
-  </tr>
-  <tr>
-    <td>
-      19.
-      ルベーグ
-      <ruby>積分<rp>(</rp><rt>せきぶん</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Lebesgue Integration Theory
-    </td>
-  </tr>
-  <tr>
-    <td>
-      20.
-      <ruby>確率<rp>(</rp><rt>かくりつ</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Probability Theory
-    </td>
-  </tr>
-  <tr>
-    <td>
-      21.
-      <ruby>関数<rp>(</rp><rt>かんすう</rt><rp>)</rp></ruby>
-      <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Functional Analysis
-    </td>
-  </tr>
-  <tr>
-    <td>
-      22.
-      <ruby>力学<rp>(</rp><rt>りきがく</rt><rp>)</rp></ruby>
-      <ruby>系<rp>(</rp><rt>けい</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Dynamical Systems
-    </td>
-  </tr>
-  <tr>
-    <th>
-      D.
-      <ruby>数学<rp>(</rp><rt>すうがく</rt><rp>)</rp></ruby>
-      <ruby>基礎<rp>(</rp><rt>きそ</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </th>
-    <th>
-      Foundations of Mathematics
-    </th>
-  </tr>
-  <tr>
-    <td>
-      23.
-      <ruby>数理<rp>(</rp><rt>すうり</rt><rp>)</rp></ruby>
-      <ruby>論理<rp>(</rp><rt>ろんり</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Mathematical Logic
-    </td>
-  </tr>
-  <tr>
-    <td>
-      24.
-      <ruby>集合<rp>(</rp><rt>しゅうごう</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Set Theory
-    </td>
-  </tr>
-  <tr>
-    <td>
-      25.
-      <ruby>圏<rp>(</rp><rt>けん</rt><rp>)</rp></ruby>
-      <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Category Theory
-    </td>
-  </tr>
-  <tr>
-    <th>
-      E.
-      <ruby>応用<rp>(</rp><rt>おうよう</rt><rp>)</rp></ruby>
-      <ruby>数学<rp>(</rp><rt>すうがく</rt><rp>)</rp></ruby>
-    </th>
-    <th>
-      Applied Mathematics
-    </th>
-  </tr>
-  <tr>
-    <td>
-      26.
-      <ruby>理論<rp>(</rp><rt>りろん</rt><rp>)</rp></ruby>
-      <ruby>計算機<rp>(</rp><rt>けいさんき</rt><rp>)</rp></ruby>
-      <ruby>科学<rp>(</rp><rt>かがく</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Theoretical Computer Science
-    </td>
-  </tr>
-  <tr>
-    <td>
-      27.
-      <ruby>数値<rp>(</rp><rt>すうち</rt><rp>)</rp></ruby>
-      <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Numerical Analysis
-    </td>
-  </tr>
-  <tr>
-    <td>
-      28.
-      <ruby>離散<rp>(</rp><rt>りさん</rt><rp>)</rp></ruby>
-      <ruby>数学<rp>(</rp><rt>すうがく</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Discrete Mathematics
-    </td>
-  </tr>
-  <tr>
-    <td>
-      29.
-      <ruby>統計<rp>(</rp><rt>とうけい</rt><rp>)</rp></ruby>
-      <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Statistics
-    </td>
-  </tr>
-  <tr>
-    <td>
-      30.
-      <ruby>暗号<rp>(</rp><rt>あんごう</rt><rp>)</rp></ruby>
-      <ruby>理論<rp>(</rp><rt>りろん</rt><rp>)</rp></ruby>
-    </td>
-    <td>
-      Cryptography
-    </td>
-  </tr>
-</table>
-
+  <h1>Map of the World of Mathematics</h1>
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>
+      代数学、幾何学、解析学、これらが数学の代表的な3分野で、しばしば純粋数学と呼ばれます。それぞれは、さらに細かく様々な研究対象をもち、より小さい分野へと細分化されます。それだけでなく、この3つが互いに融合したような分野も多く存在しています。あくまで大まかなゆるい括りだと思うのがよいでしょう。
+    </p>
+    <p>
+      数学基礎論と応用数学は、数学の中心的な位置にある3分野とは異質な存在ではありますが、数学の基礎を支える分野と、他分野につながっていく分野であり、どちらも数学に必要不可欠であることには間違いありません。
+    </p>
+    <table>
+      <tr>
+        <th>
+          A.
+          <ruby>代数<rp>(</rp><rt>だいすう</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+          </th>
+        <th>
+          Algebra
+        </th>
+      </tr>
+      <tr>
+        <td>
+          1.
+          <ruby>線形<rp>(</rp><rt>せんけい</rt><rp>)</rp></ruby>
+          <ruby>代数<rp>(</rp><rt>だいすう</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Linear Algebra
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2.
+          <ruby>群<rp>(</rp><rt>ぐん</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Group Theory
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3.
+          <ruby>環<rp>(</rp><rt>かん</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Ring Theory
+        </td>
+      </tr>
+      <tr>
+        <td>
+          4.
+          <ruby>体<rp>(</rp><rt>たい</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Field Theory
+        </td>
+      </tr>
+      <tr>
+        <td>
+          5.
+          <ruby>整数<rp>(</rp><rt>せいすう</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Number Theory
+        </td>
+      </tr>
+      <tr>
+        <td>
+          6.
+          <ruby>代数<rp>(</rp><rt>だいすう</rt><rp>)</rp></ruby>
+          <ruby>幾何<rp>(</rp><rt>きか</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Algebraic Geometry
+        </td>
+      </tr>
+      <tr>
+        <td>
+          7.
+          <ruby>数論<rp>(</rp><rt>すうろん</rt><rp>)</rp></ruby>
+          <ruby>幾何<rp>(</rp><rt>きか</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Arithmetic Geometry
+        </td>
+      </tr>
+      <tr>
+        <td>
+          8.
+          <ruby>表現<rp>(</rp><rt>ひょうげん</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Representation Theory
+        </td>
+      </tr>
+      <tr>
+        <th>
+          B.
+          <ruby>幾何<rp>(</rp><rt>きか</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+          </th>
+        <th>
+          Geometry
+        </th>
+      </tr>
+      <tr>
+        <td>
+          9.
+          <ruby>位相<rp>(</rp><rt>いそう</rt><rp>)</rp></ruby>
+          <ruby>空間<rp>(</rp><rt>くうかん</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          General Topology
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10.
+          <ruby>多様体<rp>(</rp><rt>たようたい</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Manifold Theory
+        </td>
+      </tr>
+      <tr>
+        <td>
+          11.
+          <ruby>代数<rp>(</rp><rt>だいすう</rt><rp>)</rp></ruby>
+          トポロジー
+        </td>
+        <td>
+          Algebraic Topology
+        </td>
+      </tr>
+      <tr>
+        <td>
+          12.
+          <ruby>微分<rp>(</rp><rt>びぶん</rt><rp>)</rp></ruby>
+          <ruby>幾何<rp>(</rp><rt>きか</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Differential Geometry
+        </td>
+      </tr>
+      <tr>
+        <td>
+          13.
+          <ruby>微分<rp>(</rp><rt>びぶん</rt><rp>)</rp></ruby>
+          トポロジー
+        </td>
+        <td>
+          Differential Topology
+        </td>
+      </tr>
+      <tr>
+        <th>
+          C.
+          <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+        </th>
+        <th>
+          Analysis
+        </th>
+      </tr>
+      <tr>
+        <td>
+          14.
+          <ruby>微分<rp>(</rp><rt>びぶん</rt><rp>)</rp></ruby>
+          <ruby>積分<rp>(</rp><rt>せきぶん</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Calculus
+        </td>
+      </tr>
+      <tr>
+        <td>
+          15.
+          ベクトル
+          <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Vector Calculus
+        </td>
+      </tr>
+      <tr>
+        <td>
+          16.
+          <ruby>微分<rp>(</rp><rt>びぶん</rt><rp>)</rp></ruby>
+          <ruby>方程式<rp>(</rp><rt>ほうていしき</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Theory of Differential Equations
+        </td>
+      </tr>
+      <tr>
+        <td>
+          17.
+          <ruby>複素<rp>(</rp><rt>ふくそ</rt><rp>)</rp></ruby>
+          <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Complex Analysis
+        </td>
+      </tr>
+      <tr>
+        <td>
+          18.
+          フーリエ
+          <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Fourier Analysis
+        </td>
+      </tr>
+      <tr>
+        <td>
+          19.
+          ルベーグ
+          <ruby>積分<rp>(</rp><rt>せきぶん</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Lebesgue Integration Theory
+        </td>
+      </tr>
+      <tr>
+        <td>
+          20.
+          <ruby>確率<rp>(</rp><rt>かくりつ</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Probability Theory
+        </td>
+      </tr>
+      <tr>
+        <td>
+          21.
+          <ruby>関数<rp>(</rp><rt>かんすう</rt><rp>)</rp></ruby>
+          <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Functional Analysis
+        </td>
+      </tr>
+      <tr>
+        <td>
+          22.
+          <ruby>力学<rp>(</rp><rt>りきがく</rt><rp>)</rp></ruby>
+          <ruby>系<rp>(</rp><rt>けい</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Dynamical Systems
+        </td>
+      </tr>
+      <tr>
+        <th>
+          D.
+          <ruby>数学<rp>(</rp><rt>すうがく</rt><rp>)</rp></ruby>
+          <ruby>基礎<rp>(</rp><rt>きそ</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </th>
+        <th>
+          Foundations of Mathematics
+        </th>
+      </tr>
+      <tr>
+        <td>
+          23.
+          <ruby>数理<rp>(</rp><rt>すうり</rt><rp>)</rp></ruby>
+          <ruby>論理<rp>(</rp><rt>ろんり</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Mathematical Logic
+        </td>
+      </tr>
+      <tr>
+        <td>
+          24.
+          <ruby>集合<rp>(</rp><rt>しゅうごう</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Set Theory
+        </td>
+      </tr>
+      <tr>
+        <td>
+          25.
+          <ruby>圏<rp>(</rp><rt>けん</rt><rp>)</rp></ruby>
+          <ruby>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Category Theory
+        </td>
+      </tr>
+      <tr>
+        <th>
+          E.
+          <ruby>応用<rp>(</rp><rt>おうよう</rt><rp>)</rp></ruby>
+          <ruby>数学<rp>(</rp><rt>すうがく</rt><rp>)</rp></ruby>
+        </th>
+        <th>
+          Applied Mathematics
+        </th>
+      </tr>
+      <tr>
+        <td>
+          26.
+          <ruby>理論<rp>(</rp><rt>りろん</rt><rp>)</rp></ruby>
+          <ruby>計算機<rp>(</rp><rt>けいさんき</rt><rp>)</rp></ruby>
+          <ruby>科学<rp>(</rp><rt>かがく</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Theoretical Computer Science
+        </td>
+      </tr>
+      <tr>
+        <td>
+          27.
+          <ruby>数値<rp>(</rp><rt>すうち</rt><rp>)</rp></ruby>
+          <ruby>解析<rp>(</rp><rt>かいせき</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Numerical Analysis
+        </td>
+      </tr>
+      <tr>
+        <td>
+          28.
+          <ruby>離散<rp>(</rp><rt>りさん</rt><rp>)</rp></ruby>
+          <ruby>数学<rp>(</rp><rt>すうがく</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Discrete Mathematics
+        </td>
+      </tr>
+      <tr>
+        <td>
+          29.
+          <ruby>統計<rp>(</rp><rt>とうけい</rt><rp>)</rp></ruby>
+          <ruby>学<rp>(</rp><rt>がく</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Statistics
+        </td>
+      </tr>
+      <tr>
+        <td>
+          30.
+          <ruby>暗号<rp>(</rp><rt>あんごう</rt><rp>)</rp></ruby>
+          <ruby>理論<rp>(</rp><rt>りろん</rt><rp>)</rp></ruby>
+        </td>
+        <td>
+          Cryptography
+        </td>
+      </tr>
+    </table>
+  </section>
+  <section id="Algebra">
+    <h2>A. 代数学 (Algebra)</h2>
+    <p>
+      数というのは数学の最も基本的な研究対象の１つです。数に対しては
+      <math>
+        <mrow>
+          <mn>1</mn>
+          <mo>&plus;</mo>
+          <mn>1</mn>
+          <mo>&equals;</mo>
+          <mn>2</mn>
+        </mrow>
+        <mo>&comma;</mo>
+      </math>
+      <math>
+        <mrow>
+          <mn>2</mn>
+          <mo>&times;</mo>
+          <mn>3</mn>
+          <mo>&equals;</mo>
+          <mn>6</mn>
+        </mrow>
+      </math>
+      などのような演算を考えることができます。代数学では、数だけでなく、より一般的な要素に対する演算を考えます。そのような演算をもつ集合(代数系)について研究するのが、代数学です。
+    </p>
+    <section id="Linear-Algebra">
+      <h3>1. 線形代数 (Linear Algebra)</h3>
+    </section>
+    <section id="Group-Theory">
+      <h3>2. 群論 (Group Theory)</h3>
+    </section>
+    <section id="Ring-Theory">
+      <h3>3. 環論 (Ring Theory)</h3>
+    </section>
+    <section id="Field-Theory">
+      <h3>4. 体論 (Field Theory)</h3>
+    </section>
+    <section id="Number-Theory">
+      <h3>5. 整数論 (Number Theory)</h3>
+    </section>
+    <section id="Algebraic-Geometry">
+      <h3>6. 代数幾何学 (Algebraic Geometry)</h3>
+    </section>
+    <section id="Arithmetic-Geometry">
+      <h3>7. 数論幾何学 (Arithmetic Geometry)</h3>
+    </section>
+    <section id="Representation-Theory">
+      <h3>8. 表現論 (Representation Theory)</h3>
+    </section>
+  </section>
+  <section id="Geometry">
+    <h2>B. 幾何学 (Geometry)</h2>
+    <p>
+      図形に関する学問は幾何学と呼ばれています。幾何学を意味する geometry の語源は、「土地の測量」に由来していいます。土地という実学的ものから離れて、理想的な図形について研究するのが、現代の数学における幾何学です。
+    </p>
+    <section id="General-Topology">
+      <h3>9. 位相空間論 (General Topology)</h3>
+    </section>
+    <section id="Manifold-Theory">
+      <h3>10. 多様体論 (Manifold Theory)</h3>
+    </section>
+    <section id="Algebraic-Topology">
+      <h3>11. 代数トポロジー (Algebraic Topology)</h3>
+    </section>
+    <section id="Differential-Geometry">
+      <h3>12. 微分幾何学 (Differential Geometry)</h3>
+    </section>
+    <section id="Differential-Topology">
+      <h3>13. 微分トポロジー (Differential Topology)</h3>
+    </section>
+  </section>
+  <section id="Analysis">
+    <h2>C. 解析学 (Analysis)</h2>
+    <p>
+      数と数の対応関係を表すのが関数です。この関数について研究するのが解析学です。微分積分が中心的な役割を果たす解析学は、物理学と互いに影響を及ぼしあいながら発展していきました。
+    </p>
+    <section id="Calculus">
+      <h3>14. 微分積分学 (Calculus)</h3>
+    </section>
+    <section id="Vector-Calculus">
+      <h3>15. ベクトル解析 (Vector Calculus)</h3>
+    </section>
+    <section id="Differential-Equations">
+      <h3>16. 微分方程式論 (Theory of Differential Equations)</h3>
+    </section>
+    <section id="Complex-Analysis">
+      <h3>17. 複素解析学 (Complex Analysis)</h3>
+    </section>
+    <section id="Fourier-Analysis">
+      <h3>18. フーリエ解析 (Fourier Analysis)</h3>
+    </section>
+    <section id="Lebesgue-Integration">
+      <h3>19. ルベーグ積分論 (Lebesgue Integration Theory)</h3>
+    </section>
+    <section id="Probability-Theory">
+      <h3>20. 確率論 (Probability Theory)</h3>
+    </section>
+    <section id="Functional-Analysis">
+      <h3>21. 関数解析学 (Functional Analysis)</h3>
+    </section>
+    <section id="Dynamical-Systems">
+      <h3>22. 力学系 (Dynamical Systems)</h3>
+    </section>
+  </section>
+  <section id="Foundations">
+    <h2>D. 数学基礎論 (Foundations of Mathematics)</h2>
+    <p>
+      数学基礎論は、数学の根幹の部分について研究する分野です。数学において必要不可欠である論理や集合などは、それ自体も研究されています。数学基礎論は「数学に関する数学」だと言えるでしょう。
+    </p>
+    <section id="Mathematical-Logic">
+      <h3>23. 数理論理学 (Mathematical Logic)</h3>
+    </section>
+    <section id="Set-Theory">
+      <h3>24. 集合論 (Set Theory)</h3>
+    </section>
+    <section id="Category-Theory">
+      <h3>25. 圏論 (Category Theory)</h3>
+    </section>
+  </section>
+  <section id="Applied-Mathematics">
+    <h2>E. 応用数学 (Applied Mathematics)</h2>
+    <p>
+      応用数学は、より日常の現象や技術と結びついた数学をいいます。日常の現象を、厳密に定式化し直してから数学的に研究したり、応用技術のための数学的な基礎づけを研究したりすることが挙げられます。
+    </p>
+    <section id="Computer-Science">
+      <h3>26. 理論計算機科学 (Theoretical Computer Science)</h3>
+    </section>
+    <section id="Numerical-Analysis">
+      <h3>27. 数値解析 (Numerical Analysis)</h3>
+    </section>
+    <section id="Discrete-Mathematics">
+      <h3>28. 離散数学 (Discrete Mathematics)</h3>
+    </section>
+    <section id="Statistics">
+      <h3>29. 統計学 (Statistics)</h3>
+    </section>
+    <section id="Cryptography">
+      <h3>30. 暗号理論 (Cryptography)</h3>
+    </section>
+  </section>
 </body>
 </html>
