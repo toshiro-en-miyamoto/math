@@ -406,29 +406,60 @@
     <h2>A. 代数学 (Algebra)</h2>
     <p>
       数というのは数学の最も基本的な研究対象の１つです。数に対しては
-      <math>
-        <mrow>
-          <mn>1</mn>
-          <mo>&plus;</mo>
-          <mn>1</mn>
-          <mo>&equals;</mo>
-          <mn>2</mn>
-        </mrow>
-        <mo>&comma;</mo>
-      </math>
-      <math>
-        <mrow>
-          <mn>2</mn>
-          <mo>&times;</mo>
-          <mn>3</mn>
-          <mo>&equals;</mo>
-          <mn>6</mn>
-        </mrow>
-      </math>
+      <var>1 &plus; 1 &equals; 2; 2 &times; 3 &equals; 6</var>
       などのような演算を考えることができます。代数学では、数だけでなく、より一般的な要素に対する演算を考えます。そのような演算をもつ集合(代数系)について研究するのが、代数学です。
     </p>
     <section id="Linear-Algebra">
       <h3>1. 線形代数 (Linear Algebra)</h3>
+      <dl>
+        <dt>線形代数</dt>
+        <dd>
+          加減法と実数倍の2つの演算が定まった「ベクトル空間」とよばれる代数系を扱う
+        </dd>
+      </dl>
+      <section id="definition-001" class="definition">
+        <p>
+          <strong>定義 1.</strong>
+          関数<var>f</var>が線形であるとは、次の2つが成り立つことをいう。
+          <ol>
+            <li>
+              任意の
+              <var>x&#x2081; <!-- SUBSCRIPT ONE --> </var>,
+              <var>x&#x2082; <!-- SUBSCRIPT TWO --> </var>
+              に対して、
+              <var>
+                f(x&#x2081; + x&#x2082;) = f(x&#x2081;) + f(x&#x2082;)
+              </var>
+            </li>
+            <li>
+              任意の<var>x&#x2081;</var>、実数<var>k</var>に対して、
+              <var>
+                f(kx&#x2081;) = k&middot;f(x&#x2081;)
+              </var>
+            </li>
+          </ol>
+        </p>
+      </section>
+      <section id="definition-006" class="definition">
+        <p>
+          <strong>定義 6.</strong>
+          ベクトル空間からベクトル空間への写像<var>g</var>で、以下を満たすものを線形写像という。
+          <ol>
+            <li>
+              <var>
+                g(x&#x20D1;&#x2081; + x&#x20D1;&#x2082;) =
+                g(x&#x20D1;&#x2081;) + g(x&#x20D1;&#x2082;)
+              </var>
+            </li>
+            <li>
+              実数<var>k</var>に対して、
+              <var>
+                g(kx&#x20D1;) = k &middot; g(x&#x20D1;)
+              </var>
+            </li>
+          </ol>
+        </p>
+      </section>
     </section>
     <section id="Group-Theory">
       <h3>2. 群論 (Group Theory)</h3>
