@@ -22,6 +22,8 @@
     .definition, .theorem {
       margin: 2px 0;
       padding: 0.2em 1.5em;
+    }
+    .definition {
       background-color: lightgrey;
       border-radius: 10px;
     }
@@ -409,6 +411,83 @@
       <var>1 &plus; 1 &equals; 2; 2 &times; 3 &equals; 6</var>
       などのような演算を考えることができます。代数学では、数だけでなく、より一般的な要素に対する演算を考えます。そのような演算をもつ集合(代数系)について研究するのが、代数学です。
     </p>
+
+    <section id="Preliminary">
+      <h3>0. 準備 (Preliminary)</h3>
+      <ul>
+        <li>1.5 Functions, Mayer (2006)</li>
+        <li>2.1 Binary Operations, Mayer (2006)</li>
+      </ul>
+      <section id="Functions" class="definition">
+        <p>
+          <strong>Definition (Functions)</strong>.
+          Let <var>A</var>, <var>B</var> be sets, and let <var>f</var> be a rule that assigns to each element <var>a</var> in <var>A</var> a unique element in <var>B</var>.
+          <figure>
+            f &colon; A &rightarrow; B
+          </figure>
+        </p>
+      </section>
+      <section id="Binary-Operations" class="definition">
+        <p>
+          <strong>Definition (Binary Operations)</strong>.
+          Let <var>A</var> be a set. A binary operation on <var>A</var> is a function,
+          writing <var>a &compfn; b</var> instead of <var>&compfn;(a, b)</var>.
+          <figure>
+            &compfn; &colon; A &times; A &rightarrow; A
+          </figure>
+        </p>
+      </section>
+      <section id="Identity-element" class="definition">
+        <p>
+          <strong>Definition (Identity element)</strong>.
+          Let <var>&compfn;</var> be a binary operation on a set <var>A</var>. An element <var>&escr; &in; A</var> is an identity element for &compfn; (or just an identity for &compfn;) if, for all <var>a &in; A</var>
+          <figure>
+            &escr; &compfn; a = a = a &compfn; &escr;
+          </figure>
+        </p>
+      </section>
+      <section id="Uniquess-of-identities" class="theorem">
+        <p>
+          <strong>Theorem (Uniqueness of identities)</strong>.
+          Let &compfn; be a binary operation on a set <var>A</var>. Suppose that <var>e, f</var> are both identity elements for &compfn;. Then <var>e = f</var>.
+        </p>
+        <section>
+          <p>
+            Proof: Let <var>e, f</var> be identity elements for &compfn;.
+            Since <var>f</var> is an identity of &compfn;,
+            <figure>
+              e = e &compfn; f
+            </figure>
+            Since <var>e</var> is an identity of &compfn;,
+            <figure>
+              e &compfn; f = f
+            </figure>
+            therefore, <var>e = f</var>. &marker;
+          </p>
+        </section>
+      </section>
+      <section id="Inverse" class="definition">
+        <p>
+          <strong>Definition (Inverse)</strong>.
+          Let &compfn; be a binary operation on a set <var>A</var>, and suppose there is an identity element &escr; for &compfn;.
+          Let <var>x</var> be an element of <var>A</var>.
+          We say that an element <var>y</var> of <var>A</var> is an inverse for <var>x</var> under &compfn; if
+          <figure>
+            x &compfn; y = &escr; = y &compfn; x
+          </figure>
+        </p>
+      </section>
+      <section id="Associate-operation" class="definition">
+        <p>
+          <strong>Definition (Associative operation)</strong>.
+          Let &compfn; be a binary operation on a set <var>A</var>. We say that &compfn; is associative if, for all <var>a, b, c &in; A</var>
+          <figure>
+            a &compfn; (b &compfn; c) = (a &compfn; b) &compfn; c,
+          </figure>
+        </p>
+      </section>
+    </section>
+
     <section id="Linear-Algebra">
       <h3>1. 線形代数 (Linear Algebra)</h3>
       <dl>
@@ -572,6 +651,18 @@
     <section id="Cryptography">
       <h3>30. 暗号理論 (Cryptography)</h3>
     </section>
+  </section>
+  <section id="References">
+    <h2>References</h2>
+    <ul>
+      <li>
+        Koga, M. (2023). <i>Map of the World of Mathematics</i>. KADAOKAWA.
+      </li>
+      <li>
+        Mayer, R. A. (2006). <i>Math 112 (Introduction to Analysis)</i>. Reed College. http://people.reed.edu/~mayer/math112.html/
+      </li>
+    </ul>
+  </p>
   </section>
 </body>
 </html>
