@@ -408,84 +408,276 @@
     <h2>A. 代数学 (Algebra)</h2>
     <p>
       数というのは数学の最も基本的な研究対象の１つです。数に対しては
-      <var>1 &plus; 1 &equals; 2; 2 &times; 3 &equals; 6</var>
+      <var>1 + 1 &equals; 2; 2 &times; 3 &equals; 6</var>
       などのような演算を考えることができます。代数学では、数だけでなく、より一般的な要素に対する演算を考えます。そのような演算をもつ集合(代数系)について研究するのが、代数学です。
     </p>
-
     <section id="Preliminary">
       <h3>0. 準備 (Preliminary)</h3>
-      <ul>
-        <li>1.5 Functions, Mayer (2006)</li>
-        <li>2.1 Binary Operations, Mayer (2006)</li>
-      </ul>
-      <section id="Functions" class="definition">
-        <p>
-          <strong>Definition (Functions)</strong>.
-          Let <var>A</var>, <var>B</var> be sets, and let <var>f</var> be a rule that assigns to each element <var>a</var> in <var>A</var> a unique element in <var>B</var>.
-          <figure>
-            f &colon; A &rightarrow; B
-          </figure>
-        </p>
-      </section>
-      <section id="Binary-Operations" class="definition">
-        <p>
-          <strong>Definition (Binary Operations)</strong>.
-          Let <var>A</var> be a set. A binary operation on <var>A</var> is a function,
-          writing <var>a &compfn; b</var> instead of <var>&compfn;(a, b)</var>.
-          <figure>
-            &compfn; &colon; A &times; A &rightarrow; A
-          </figure>
-        </p>
-      </section>
-      <section id="Identity-element" class="definition">
-        <p>
-          <strong>Definition (Identity element)</strong>.
-          Let <var>&compfn;</var> be a binary operation on a set <var>A</var>. An element <var>&escr; &in; A</var> is an identity element for &compfn; (or just an identity for &compfn;) if, for all <var>a &in; A</var>
-          <figure>
-            &escr; &compfn; a = a = a &compfn; &escr;
-          </figure>
-        </p>
-      </section>
-      <section id="Uniquess-of-identities" class="theorem">
-        <p>
-          <strong>Theorem (Uniqueness of identities)</strong>.
-          Let &compfn; be a binary operation on a set <var>A</var>. Suppose that <var>e, f</var> are both identity elements for &compfn;. Then <var>e = f</var>.
-        </p>
-        <section>
+
+      <section id="Preliminary-1">
+        <h4>Functions &ctdot; Mayer (2006), &sect;1.5</h4>
+        <section id="Functions" class="definition">
           <p>
-            Proof: Let <var>e, f</var> be identity elements for &compfn;.
-            Since <var>f</var> is an identity of &compfn;,
+            <strong>Definition (Functions)</strong>.
+            Let <var>A</var>, <var>B</var> be sets, and let <var>f</var> be a rule that assigns to each element <var>a</var> in <var>A</var> a unique element in <var>B</var>.
             <figure>
-              e = e &compfn; f
+              f &colon; A &rightarrow; B
             </figure>
-            Since <var>e</var> is an identity of &compfn;,
-            <figure>
-              e &compfn; f = f
-            </figure>
-            therefore, <var>e = f</var>. &marker;
           </p>
         </section>
       </section>
-      <section id="Inverse" class="definition">
-        <p>
-          <strong>Definition (Inverse)</strong>.
-          Let &compfn; be a binary operation on a set <var>A</var>, and suppose there is an identity element &escr; for &compfn;.
-          Let <var>x</var> be an element of <var>A</var>.
-          We say that an element <var>y</var> of <var>A</var> is an inverse for <var>x</var> under &compfn; if
-          <figure>
-            x &compfn; y = &escr; = y &compfn; x
-          </figure>
-        </p>
+
+      <section id="Preliminary-2">
+        <h4>Binary Operations &ctdot; Mayer (2006), &sect;2.1</h4>
+        <section id="Binary-operations" class="definition">
+          <p>
+            <strong>Definition (Binary operations)</strong>.
+            Let <var>A</var> be a set. A binary operation on <var>A</var> is a function,
+            writing <var>a &compfn; b</var> instead of <var>&compfn;(a, b)</var>.
+            <figure>
+              &compfn; &colon; A &times; A &rightarrow; A
+            </figure>
+          </p>
+        </section>
+        <section id="Identity-element" class="definition">
+          <p>
+            <strong>Definition (Identity element)</strong>.
+            Let <var>&compfn;</var> be a binary operation on a set <var>A</var>. An element <var>&escr; &in; A</var> is an identity element for &compfn; (or just an identity for &compfn;) if, for all <var>a &in; A</var>
+            <figure>
+              &escr; &compfn; a = a = a &compfn; &escr;
+            </figure>
+          </p>
+        </section>
+        <section id="Uniqueness-of-identity" class="theorem">
+          <p>
+            <strong>Theorem (Uniqueness of identities)</strong>.
+            Let &compfn; be a binary operation on a set <var>A</var>. Suppose that <var>e, f</var> are both identity elements for &compfn;. Then <var>e = f</var>.
+            <section>
+              Proof: Let <var>e, f</var> be identity elements for &compfn;. Then
+              <section>
+                <table>
+                  <tr>
+                    <td><var>e = e &compfn; f</var></td>
+                    <td>since <var>f</var> is an identity for &compfn;, and</td>
+                  </tr>
+                  <tr>
+                    <td><var>e &compfn; f = f</var></td>
+                    <td>since <var>e</var> is an identity for &compfn;.</td>
+                  </tr>
+                </table>
+              </section>
+              It follows that <var>e = f</var>. &marker;
+            </section>
+          </p>
+        </section>
+        <section id="Inverse" class="definition">
+          <p>
+            <strong>Definition (Inverse)</strong>.
+            Let &compfn; be a binary operation on a set <var>A</var>, and suppose there is an identity element &escr; for &compfn;.
+            Let <var>x</var> be an element of <var>A</var>.
+            We say that an element <var>y</var> of <var>A</var> is an inverse for <var>x</var> under &compfn; if
+            <figure>
+              x &compfn; y = &escr; = y &compfn; x
+            </figure>
+          </p>
+        </section>
+        <section id="Associative-operation" class="definition">
+          <p>
+            <strong>Definition (Associative operation)</strong>.
+            Let &compfn; be a binary operation on a set <var>A</var>. We say that &compfn; is associative if, for all <var>a, b, c &in; A</var>
+            <figure>
+              a &compfn; (b &compfn; c) = (a &compfn; b) &compfn; c,
+            </figure>
+          </p>
+        </section>
+        <section id="Uniqueness-of-inverse" class="theorem">
+          <p>
+            <strong>Theorem (Uniqueness of inverse)</strong>
+            Let &compfn; be an associative operation on a set <var>A</var>, and suppose that there is an identity &escr; for &compfn;. Let <var>x, y, z &in; A</var>. If <var>y</var> and <var>z</var> are inverses for <var>x</var>, then <var>y = z</var>.
+            <section>
+              Proof: Since <var>y</var> and <var>z</var> are inverses for <var>x</var>,
+              <section>
+                <table>
+                  <tr>
+                    <td>we have</td>
+                    <td><var>y &compfn; x = e = x &compfn; y</var>,</td>
+                  </tr>
+                  <tr>
+                    <td>and</td>
+                    <td><var>z &compfn; x = e = x &compfn; z</var>.</td>
+                  </tr>
+                </table>
+              </section>
+              Hence,
+              <var>
+                y = y &compfn; e = y &compfn; (x &compfn; z)
+                = (y &compfn; x) &compfn; z = e &compfn; z = z
+              </var>. &marker;
+            </section>
+          </p>
+        </section>
+        <section id="Double-inverse-theorem" class="theorem">
+          <p>
+            <strong>Theorem (Double inverse theorem)</strong>
+            Let &compfn; be an associative binary operation on a set <var>A</var>, having an identity element &escr;, and let <var>x &in; A</var>. If <var>x</var> is invertible for &compfn;, let <var>x<sup>-1</sup></var> denote the (unique) inverse for <var>x</var>. Then <var>x<sup>-1</sup></var> is invertible and <var>(x<sup>-1</sup>)<sup>-1</sup> = x</var>.
+            <section>
+              Proof: if <var>y</var> is the inverse for <var>x</var>, then
+              <section>
+                <table>
+                  <tr>
+                    <td><var>y &compfn; x = e = x &compfn; y</var></td>
+                  </tr>
+                </table>
+              </section>
+              But this is exactly the condition for <var>x</var> to be the inverse for <var>y</var>. &marker;
+            </section>
+          </p>
+        </section>
+        <section id="Commutative-operation" class="definition">
+          <p>
+            <strong>Definition (Commutative operation)</strong>
+            Let &compfn; be a binary operation on a set <var>A</var>. We say that &compfn; is commutative if, for all <var>a, b &in; A</var>,
+            <figure>
+              a &compfn; b = b &compfn; a
+            </figure>
+          </p>
+        </section>
       </section>
-      <section id="Associate-operation" class="definition">
-        <p>
-          <strong>Definition (Associative operation)</strong>.
-          Let &compfn; be a binary operation on a set <var>A</var>. We say that &compfn; is associative if, for all <var>a, b, c &in; A</var>
-          <figure>
-            a &compfn; (b &compfn; c) = (a &compfn; b) &compfn; c,
-          </figure>
-        </p>
+
+      <section id="Preliminary-3">
+        <h4>The Field Axioms &ctdot; Mayer (2006), &sect;2.3</h4>
+        <section id="Field" class="definition">
+          <p>
+            <strong>Definition (Field)</strong>
+            A field is a triple <var>(F, +, &middot;)</var> where <var>F</var> is a set, and <var>+</var> and <var>&middot;</var> are binary operations on <var>F</var> (called addition and multiplication respectively) satisfying the following nine conditions.
+          </p>
+          <p>
+            <strong>The Field Axioms</strong>
+            <ol>
+              <li>
+                (<strong>Associatively of addition</strong>)
+                Addition (+) is an associative operation on <var>F</var>. For all <var>x, y, z &in; F</var>,
+                <section>
+                  <table>
+                    <tr>
+                      <td>
+                        x + (y + z) = (x + y) + z
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </li>
+              <li>
+                (<strong>Existence of additive identity</strong>)
+                There is an identity element for addition. This identity is unique and denoted as <var>0</var>. Then, for all <var>x &in; F</var>,
+                <section>
+                  <table>
+                    <tr>
+                      <td>
+                        0 + x = x = x + 0
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </li>
+              <li>
+                (<strong>Existence of additive inverses</strong>)
+                Every element <var>x</var> of <var>F</var> is invertible for addition. The additive inverse for <var>x</var> is unique and denoted as <var>&minus;x</var>. Then, for all <var>x &in; F</var>,
+                <section>
+                  <table>
+                    <tr>
+                      <td>
+                        x + (&minus;x) = 0 = (&minus;x) + x
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </li>
+              <li>
+                (<strong>Commutativity of multiplication</strong>)
+                Multiplication (<var>&middot;</var>) is a commutative operation on <var>F</var>. Then, for all <var>x, y &in; F</var>,
+                <section>
+                  <table>
+                    <tr>
+                      <td>
+                        x &middot; y = y &middot; x
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </li>
+              <li>
+                (<strong>Associativity of multiplication</strong>)
+                Multiplication is an associative operation on <var>F</var>. Then, for all <var>x, y, z &in; F</var>,
+                <section>
+                  <table>
+                    <tr>
+                      <td>
+                        x &middot; (y &middot; z) = (x &middot; y) &middot; z
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </li>
+              <li>
+                (<strong>Existence of multiplicative identity</strong>)
+                There is an identity element for multiplication. This identity is unique and denoted as <var>1</var>. Then, for all <var>x &in; F</var>,
+                <section>
+                  <table>
+                    <tr>
+                      <td>
+                        1 &middot; x = x = x &middot; 1
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </li>
+              <li>
+                (<strong>Existence of multiplicative inverses</strong>)
+                Every element <var>x</var> of <var>F</var> except possibly for <var>0</var> is invertible for multiplication. The multiplicative inverse for <var>x</var> is unique and denoted as <var>x<sup>-1</sup></var>. We do not assume <var>0</var> is not invertible.  Then, for all <var>x &in; F</var>,
+                <section>
+                  <table>
+                    <tr>
+                      <td>
+                        x &middot; x<sup>-1</sup> = 1 = x<sup>-1</sup> &middot; x
+                      </td>
+                      <td>
+                        except for <var>x = 0</var>
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </li>
+              <li>
+                (<strong>Distributive law</strong>)
+                For all <var>x, y, z &in; F</var>,
+                <section>
+                  <table>
+                    <tr>
+                      <td>
+                        x &middot; (y + z) = (x &middot; y) + (x &middot; z)
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </li>
+              <li>
+                (<strong>Zero-one law</strong>)
+                The additive identity and multiplicative identity are distinct; i.e.,
+                <section>
+                  <table>
+                    <tr>
+                      <td>0 &NotEqual; 1</td>
+                    </tr>
+                  </table>
+                </section>
+              </li>
+            </ol>
+            Remark: An additional axiom, Commutativity of addition, is omitted because it can be proved from other axioms.
+          </p>
+        </section>
       </section>
+
     </section>
 
     <section id="Linear-Algebra">
