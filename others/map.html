@@ -553,15 +553,27 @@
           </p>
           <p>
             <strong>The Field Axioms</strong>
-            <ol>
+            <ol start="0">
               <li>
-                (<strong>Associatively of addition</strong>)
-                Addition (+) is an associative operation on <var>F</var>. For all <var>x, y, z &in; F</var>,
+                (<strong>Commutativity of addition</strong>) should have been omitted because it can be proved from other axioms. For all <var>a, b &in; F</var>,
                 <section>
                   <table>
                     <tr>
                       <td>
-                        x + (y + z) = (x + y) + z
+                        a + b = b + a
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </li>
+              <li>
+                (<strong>Associatively of addition</strong>)
+                Addition (+) is an associative operation on <var>F</var>. For all <var>a, b, c &in; F</var>,
+                <section>
+                  <table>
+                    <tr>
+                      <td>
+                        a + (b + c) = (a + b) + c
                       </td>
                     </tr>
                   </table>
@@ -569,12 +581,12 @@
               </li>
               <li>
                 (<strong>Existence of additive identity</strong>)
-                There is an identity element for addition. This identity is unique and denoted as <var>0</var>. Then, for all <var>x &in; F</var>,
+                There is an identity element for addition. This identity is unique and denoted <var>0</var>. Then, for all <var>a &in; F</var>,
                 <section>
                   <table>
                     <tr>
                       <td>
-                        0 + x = x = x + 0
+                        0 + a = a = a + 0
                       </td>
                     </tr>
                   </table>
@@ -582,12 +594,12 @@
               </li>
               <li>
                 (<strong>Existence of additive inverses</strong>)
-                Every element <var>x</var> of <var>F</var> is invertible for addition. The additive inverse for <var>x</var> is unique and denoted as <var>&minus;x</var>. Then, for all <var>x &in; F</var>,
+                Every element <var>a &in; F</var> is invertible for addition. The additive inverse for <var>a</var> is unique and denoted <var>&minus;a</var>.
                 <section>
                   <table>
                     <tr>
                       <td>
-                        x + (&minus;x) = 0 = (&minus;x) + x
+                        a + (&minus;a) = 0 = (&minus;a) + a
                       </td>
                     </tr>
                   </table>
@@ -595,12 +607,12 @@
               </li>
               <li>
                 (<strong>Commutativity of multiplication</strong>)
-                Multiplication (<var>&middot;</var>) is a commutative operation on <var>F</var>. Then, for all <var>x, y &in; F</var>,
+                Multiplication (<var>&middot;</var>) is a commutative operation on <var>F</var>. Then, for all <var>a, b &in; F</var>,
                 <section>
                   <table>
                     <tr>
                       <td>
-                        x &middot; y = y &middot; x
+                        a &middot; b = b &middot; a
                       </td>
                     </tr>
                   </table>
@@ -608,12 +620,12 @@
               </li>
               <li>
                 (<strong>Associativity of multiplication</strong>)
-                Multiplication is an associative operation on <var>F</var>. Then, for all <var>x, y, z &in; F</var>,
+                Multiplication is an associative operation on <var>F</var>. Then, for all <var>a, b, c &in; F</var>,
                 <section>
                   <table>
                     <tr>
                       <td>
-                        x &middot; (y &middot; z) = (x &middot; y) &middot; z
+                        a &middot; (b &middot; c) = (a &middot; b) &middot; c
                       </td>
                     </tr>
                   </table>
@@ -621,12 +633,12 @@
               </li>
               <li>
                 (<strong>Existence of multiplicative identity</strong>)
-                There is an identity element for multiplication. This identity is unique and denoted as <var>1</var>. Then, for all <var>x &in; F</var>,
+                There is an identity element for multiplication. This identity is unique and denoted <var>1</var>. Then, for all <var>a &in; F</var>,
                 <section>
                   <table>
                     <tr>
                       <td>
-                        1 &middot; x = x = x &middot; 1
+                        1 &middot; a = a = a &middot; 1
                       </td>
                     </tr>
                   </table>
@@ -634,15 +646,15 @@
               </li>
               <li>
                 (<strong>Existence of multiplicative inverses</strong>)
-                Every element <var>x</var> of <var>F</var> except possibly for <var>0</var> is invertible for multiplication. The multiplicative inverse for <var>x</var> is unique and denoted as <var>x<sup>-1</sup></var>. We do not assume <var>0</var> is not invertible.  Then, for all <var>x &in; F</var>,
+                Every element <var>a &in; F</var> except possibly for <var>0</var> is invertible for multiplication. The multiplicative inverse for <var>a</var> is unique and denoted <var>a<sup>-1</sup></var>. We do not assume <var>0</var> is not invertible.
                 <section>
                   <table>
                     <tr>
                       <td>
-                        x &middot; x<sup>-1</sup> = 1 = x<sup>-1</sup> &middot; x
+                        a &middot; a<sup>-1</sup> = 1 = a<sup>-1</sup> &middot; a
                       </td>
                       <td>
-                        except for <var>x = 0</var>
+                        except for <var>a = 0</var>
                       </td>
                     </tr>
                   </table>
@@ -650,12 +662,12 @@
               </li>
               <li>
                 (<strong>Distributive law</strong>)
-                For all <var>x, y, z &in; F</var>,
+                For all <var>a, b, c &in; F</var>,
                 <section>
                   <table>
                     <tr>
                       <td>
-                        x &middot; (y + z) = (x &middot; y) + (x &middot; z)
+                        a &middot; (b + c) = (a &middot; b) + (a &middot; c)
                       </td>
                     </tr>
                   </table>
@@ -673,7 +685,6 @@
                 </section>
               </li>
             </ol>
-            Remark: An additional axiom, Commutativity of addition, is omitted because it can be proved from other axioms.
           </p>
         </section>
       </section>
