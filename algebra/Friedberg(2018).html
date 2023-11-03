@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Linear Algebra, Friedberg(2018)</title>
+  <style>
+    body {
+      margin-left: 1.5rem;
+    }
+    th, td {
+      padding-right: 1.5rem;
+      vertical-align: text-bottom;
+    }
+    section, article {
+      margin-top: 1rem;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    article {
+      margin-right: 2rem;
+    }
+    .definition, .theorem {
+      padding: 0.2em 1.5em;
+    }
+    .definition {
+      background-color: lightgrey;
+    }
+  </style>
+</head>
+<body>
+<article>
+<h1>Linear Algebra</h1>
+  <section id="Fields">
+    <h2>Fields (Appendix C)</h2>
+    <section id="definition-field" class="definition">
+      <p>
+        <strong>Definition (Field)</strong>:
+        A field is a set on which two operations <var>+</var> (addition) and &middot; (multiplication) are defined so that, for each pair of elements <var>x</var>, <var>y</var> in <var>F</var>, there are unique elements in <var>F</var>, denoted <var>x+y</var> and <var>x&middot;y</var>, and such that the following conditions hold for all elements <var>a, b, c</var> in <var>F</var>.
+      </p>
+      <p>
+        <table>
+          <caption style="text-align: left;">
+            <strong>The Field Axioms</strong>
+          </caption>
+          <tr>
+            <th></th>
+            <th style="text-align: left;">addition</th>
+            <th style="text-align: left;">multiplication</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>commutativity</td>
+            <td>a+b = b+a</td>
+            <td>a&middot;b = b&middot;a</td>
+            <td>(F1a, F1m)</td>
+          </tr>
+          <tr>
+            <td>associativity</td>
+            <td>(a+b)+c = a+(b+c)</td>
+            <td>(a&middot;b)&middot;c = a&middot;(b&middot;c)</td>
+            <td>(F2a, F2m)</td>
+          </tr>
+          <tr>
+            <td>existence of identity</td>
+            <td>0+a = a</td>
+            <td>1&middot;a = a</td>
+            <td>(F3a, F3m)</td>
+          </tr>
+          <tr>
+            <td>existence of inverse</td>
+            <td>a+(&minus;a) = 0</td>
+            <td>a&middot;a<sup>-1</sup> = 1 (if a&NotEqual;0)</td>
+            <td>(F4a, F4m)</td>
+          </tr>
+          <tr>
+            <td>distributivity of &middot; over +</td>
+            <td colspan="2" style="text-align: center;">
+              a&middot;(b+c) = a&middot;b+a&middot;c
+            </td>
+            <td>(F5)</td>
+          </tr>
+        </table>
+      </p>
+    </section>
+    <section id="cancellation-laws" class="theorem">
+      <p>
+        <strong>Theorem (Cancellation Laws)</strong>:
+        Let <var>F</var> be a field. For all elements <var>a, b, c &in; F</var>,
+        <section>
+          <table>
+            <tr>
+              <td>1.</td>
+              <td>a+b = c+b</td>
+              <td>&Implies;</td>
+              <td>a = c</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>a&middot;b = c&middot;b and b&NotEqual;0</td>
+              <td>&Implies;</td>
+              <td>a = c</td>
+            </tr>
+          </table>
+        </section>
+        Proof:
+        <ol>
+          <li>
+            By F4a, there exists an element <var>&minus;b &in; F</var>.
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    (a+b)+(&minus;b) = (c+b)+(&minus;b)
+                  </td>
+                  <td>by adding (&minus;b) to both sides</td>
+                </tr>
+                <tr>
+                  <td>
+                    a+(b+(&minus;b)) = c+(b+(&minus;b))
+                  </td>
+                  <td>by F2a</td>
+                </tr>
+                <tr>
+                  <td>a+0 = c+0</td>
+                  <td>by F4a</td>
+                </tr>
+                <tr>
+                  <td>a = c</td>
+                  <td>by F3a</td>
+                </tr>
+              </table>
+            </section>
+          </li>
+          <li>
+            By F4m, if <var>b&NotEqual;0</var>, there exists an element <var>b<sup>-1</sup> &in; F</var>. Then, the proof is similar to 1.
+          </li>
+        </ol>
+      </p>
+    </section>
+  </section>
+  <section id="reference">
+    <h2>References</h2>
+    <ul>
+      <li>Friedberg, S.H., et al. (2016). <i>Linear Algebra, 5th Edition</i>. Pearson.</li>
+    </ul>
+  </section>
+</article>
+</body>
+</html>
