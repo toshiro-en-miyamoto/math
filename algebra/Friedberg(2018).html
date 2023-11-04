@@ -46,38 +46,32 @@
             <th></th>
             <th style="text-align: left;">addition</th>
             <th style="text-align: left;">multiplication</th>
-            <th></th>
           </tr>
           <tr>
             <td>commutativity</td>
             <td>a+b = b+a</td>
             <td>a&middot;b = b&middot;a</td>
-            <td>(F1a, F1m)</td>
           </tr>
           <tr>
             <td>associativity</td>
             <td>(a+b)+c = a+(b+c)</td>
             <td>(a&middot;b)&middot;c = a&middot;(b&middot;c)</td>
-            <td>(F2a, F2m)</td>
           </tr>
           <tr>
             <td>existence of identity</td>
             <td>0+a = a</td>
             <td>1&middot;a = a</td>
-            <td>(F3a, F3m)</td>
           </tr>
           <tr>
             <td>existence of inverse</td>
             <td>a+(&minus;a) = 0</td>
             <td>a&middot;a<sup>-1</sup> = 1 (if a&NotEqual;0)</td>
-            <td>(F4a, F4m)</td>
           </tr>
           <tr>
             <td>distributivity of &middot; over +</td>
             <td colspan="2" style="text-align: center;">
               a&middot;(b+c) = a&middot;b+a&middot;c
             </td>
-            <td>(F5)</td>
           </tr>
         </table>
       </p>
@@ -105,7 +99,7 @@
         Proof:
         <ol>
           <li>
-            By F4a, there exists an element <var>&minus;b &in; F</var>.
+            Existence of additive inverse of the field axioms guarantees that there exists an element <var>&minus;b &in; F</var>.
             <section>
               <table>
                 <tr>
@@ -116,25 +110,75 @@
                 </tr>
                 <tr>
                   <td>
-                    a+(b+(&minus;b)) = c+(b+(&minus;b))
+                    a+{b+(&minus;b)} = c+{b+(&minus;b)}
                   </td>
-                  <td>by F2a</td>
+                  <td>by associativity of addition</td>
                 </tr>
                 <tr>
                   <td>a+0 = c+0</td>
-                  <td>by F4a</td>
+                  <td>by existence of additive inverse</td>
                 </tr>
                 <tr>
                   <td>a = c</td>
-                  <td>by F3a</td>
+                  <td>by existence of additive identity</td>
                 </tr>
               </table>
             </section>
           </li>
           <li>
-            By F4m, if <var>b&NotEqual;0</var>, there exists an element <var>b<sup>-1</sup> &in; F</var>. Then, the proof is similar to 1.
+            Existence of multiplicative inverse of the field axioms guarantees that if <var>b&NotEqual;0</var>, there exists an element <var>b<sup>-1</sup> &in; F</var>. Then, the proof is similar to 1.
           </li>
         </ol>
+      </p>
+    </section>
+    <section id="unique-identity-inverse" class="theorem">
+      <p>
+        <strong>Corollary (Unique identities and inverses)</strong>:
+        Let <var>F</var> be a field and <var>a &in; F</var>, then
+        <ul>
+          <li>Additive identity (0) is unique.</li>
+          <li>Additive inverse (<var>&minus;a</var>) is unique.</li>
+          <li>Multiplicative identity (1) is unique.</li>
+          <li>Multiplicative inverse (<var>a<sup>-1</sup></var> if <var>a&NotEqual;0</var>) is unique.</li>
+        </ul>
+        Proof:
+        <ul>
+          <li>
+            Additive identity (0): Suppose that <var>0&prime; &in; F</var> is an additive identity. For all <var>a &in; F</var>,
+            <section>
+              <table>
+                <tr>
+                  <td>0&prime; + a = a</td>
+                  <td>since 0&prime; is an additive identity</td>
+                </tr>
+                <tr>
+                  <td>0&prime; + a = a = 0 + a</td>
+                  <td>since 0 is an additive identity</td>
+                </tr>
+                <tr>
+                  <td>0&prime; = 0</td>
+                  <td>because of the additive cancellation law</td>
+                </tr>
+              </table>
+            </section>
+          </li>
+          <li>
+            Other three proofs are similar.
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section id="substraction-division" class="theorem">
+      <p>
+        <strong>Subtraction</strong> (&minus;) and <strong>division</strong> (&divide; or &frasl;) can be defined in terms of addition and multiplication by using the additive and multiplicative inverses. For all <var>a &in; F</var> and all <var>b&NotEqual;0 &in; F</var>,
+        <ul>
+          <li>a&minus;b = a+(&minus;b)</li>
+          <li>
+            a&divide;b
+            = <sup>a</sup>&frasl;<sub>b</sub>
+            = a&middot;b<sup>-1</sup>
+          </li>
+        </ul>
       </p>
     </section>
   </section>
