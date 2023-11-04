@@ -5,10 +5,10 @@
   <title>Linear Algebra, Friedberg(2018)</title>
   <style>
     body {
-      margin-left: 1.5rem;
+      margin-left: 1.2rem;
     }
     th, td {
-      padding-right: 1.5rem;
+      padding-right: 1.2rem;
       vertical-align: text-bottom;
     }
     section, article {
@@ -20,9 +20,12 @@
       margin-right: 2rem;
     }
     .definition, .theorem {
-      padding: 0.2em 1.5em;
+      padding-right: 1rem;
+      padding-left: 1rem;
     }
     .definition {
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
       background-color: lightgrey;
     }
   </style>
@@ -144,20 +147,23 @@
         Proof:
         <ul>
           <li>
-            Additive identity (0): Suppose that <var>0&prime; &in; F</var> is an additive identity. For all <var>a &in; F</var>,
+            Additive identity (0): Suppose that <var>0&prime; &in; F</var> is an additive identity.
             <section>
               <table>
                 <tr>
-                  <td>0&prime; + a = a</td>
+                  <td>0&prime; + a</td>
+                  <td>= a</td>
                   <td>since 0&prime; is an additive identity</td>
                 </tr>
                 <tr>
-                  <td>0&prime; + a = a = 0 + a</td>
+                  <td></td>
+                  <td>= 0 + a</td>
                   <td>since 0 is an additive identity</td>
                 </tr>
                 <tr>
-                  <td>0&prime; = 0</td>
-                  <td>because of the additive cancellation law</td>
+                  <td colspan="3">
+                    Hence <var>0&prime; = 0</var> because of the additive cancellation law. It follows that the additive identity is unique.
+                  </td>
                 </tr>
               </table>
             </section>
@@ -170,7 +176,7 @@
     </section>
     <section id="substraction-division" class="theorem">
       <p>
-        <strong>Subtraction</strong> (&minus;) and <strong>division</strong> (&divide; or &frasl;) can be defined in terms of addition and multiplication by using the additive and multiplicative inverses. For all <var>a &in; F</var> and all <var>b&NotEqual;0 &in; F</var>,
+        <strong>Subtraction</strong> (&minus;) and <strong>division</strong> (&divide; or &frasl;) can be defined in terms of addition and multiplication by using the additive and multiplicative inverses. Let <var>F</var> be a field. For all <var>a &in; F</var> and all <var>b&NotEqual;0 &in; F</var>,
         <ul>
           <li>a&minus;b = a+(&minus;b)</li>
           <li>
@@ -179,6 +185,95 @@
             = a&middot;b<sup>-1</sup>
           </li>
         </ul>
+      </p>
+    </section>
+    <section id="multiplications" class="theorem">
+      <p>
+        <strong>Corollary (Multiplications)</strong>:
+        Let <var>F</var> be a field. For all <var>a, b &in; F</var>,
+        <ol>
+          <li>a&middot;0 = 0</li>
+          <li>
+            (&minus;a)&middot;b = a&middot;(&minus;b) = &minus;(a&middot;b)
+          </li>
+          <li>(&minus;a)&middot;(&minus;b) = a&middot;b</li>
+        </ol>
+        Proof:
+        <ol>
+          <li>
+            Since
+            <section>
+              <table>
+                <tr>
+                  <td>0+a&middot;0</td>
+                  <td>= a&middot;0</td>
+                  <td>by existence of additive identity</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>= a&middot;(0+0)</td>
+                  <td>since 0 = 0+0</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>= a&middot;0+a&middot;0</td>
+                  <td>by distributivity of &middot; over +</td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    Hence <var>a&middot;0 = 0</var> by the additive cancellation law.
+                  </td>
+                </tr>
+              </table>
+            </section>
+          </li>
+          <li>
+            Since
+            <section>
+              <table>
+                <tr>
+                  <td>a&middot;b+(&minus;a)&middot;b</td>
+                  <td>= {a+(&minus;a)}&middot;b</td>
+                  <td>by distributivity of &middot; over +</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>= 0&middot;b</td>
+                  <td>by existence of additive identity</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>= 0</td>
+                  <td>by corollary 1</td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    Hence <var>(&minus;a)&middot;b = &minus;(a&middot;b)</var> by existence of additive inverse. The proof that <var>a&middot;(&minus;b) = &minus;(a&middot;b)</var> is similar.
+                  </td>
+                </tr>
+              </table>
+            </section>
+          </li>
+          <li>
+            By applying (2) twice,
+            <section>
+              <table>
+                <tr>
+                  <td>(&minus;a)&middot;(&minus;b)</td>
+                  <td>= &minus;{a&middot;(&minus;b)}</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>= &minus;{&minus;(a&middot;b)}</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>= a&middot;b</td>
+                </tr>
+              </table>
+            </section>
+          </li>
+        </ol>
       </p>
     </section>
   </section>
