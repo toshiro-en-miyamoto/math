@@ -19,7 +19,7 @@
     article {
       margin-right: 2rem;
     }
-    .definition, .theorem {
+    .definition, .theorem, .description {
       padding-right: 1rem;
       padding-left: 1rem;
     }
@@ -32,56 +32,70 @@
 </head>
 <body>
 <article>
-<h1>Linear Algebra</h1>
+<h1>Linear Algebra [線形代数]</h1>
   <section id="Fields">
     <h2>Fields (Appendix C)</h2>
     <section id="definition-field" class="definition">
       <p>
-        <strong>Definition (Field)</strong>:
+        <strong>Definition (Field [体])</strong>:
         A field is a set on which two operations <var>+</var> (addition) and &middot; (multiplication) are defined so that, for each pair of elements <var>x</var>, <var>y</var> in <var>F</var>, there are unique elements in <var>F</var>, denoted <var>x+y</var> and <var>x&middot;y</var>, and such that the following conditions hold for all elements <var>a, b, c</var> in <var>F</var>.
-      </p>
-      <p>
-        <table>
-          <caption style="text-align: left;">
-            <strong>The Field Axioms</strong>
-          </caption>
-          <tr>
-            <th></th>
-            <th style="text-align: left;">addition</th>
-            <th style="text-align: left;">multiplication</th>
-          </tr>
-          <tr>
-            <td>commutativity</td>
-            <td>a+b = b+a</td>
-            <td>a&middot;b = b&middot;a</td>
-          </tr>
-          <tr>
-            <td>associativity</td>
-            <td>(a+b)+c = a+(b+c)</td>
-            <td>(a&middot;b)&middot;c = a&middot;(b&middot;c)</td>
-          </tr>
-          <tr>
-            <td>existence of identity</td>
-            <td>0+a = a</td>
-            <td>1&middot;a = a</td>
-          </tr>
-          <tr>
-            <td>existence of inverse</td>
-            <td>a+(&minus;a) = 0</td>
-            <td>a&middot;a<sup>-1</sup> = 1 (if a&NotEqual;0)</td>
-          </tr>
-          <tr>
-            <td>distributivity of &middot; over +</td>
-            <td colspan="2" style="text-align: center;">
-              a&middot;(b+c) = a&middot;b+a&middot;c
-            </td>
-          </tr>
-        </table>
+        <section id="field-axioms">
+          <table>
+            <caption style="text-align: left;">
+              <strong>The Field Axioms</strong> [体の公理]
+            </caption>
+            <tr>
+              <th></th>
+              <th></th>
+              <th style="text-align: left;">addition</th>
+              <th style="text-align: left;">multiplication</th>
+            </tr>
+            <tr>
+              <td>交換則</td>
+              <td>commutativity</td>
+              <td>a+b = b+a</td>
+              <td>a&middot;b = b&middot;a</td>
+            </tr>
+            <tr>
+              <td>結合則</td>
+              <td>associativity</td>
+              <td>(a+b)+c = a+(b+c)</td>
+              <td>(a&middot;b)&middot;c = a&middot;(b&middot;c)</td>
+            </tr>
+            <tr>
+              <td>単位元</td>
+              <td>existence of identity</td>
+              <td>0+a = a</td>
+              <td>1&middot;a = a</td>
+            </tr>
+            <tr>
+              <td>逆元</td>
+              <td>existence of inverse</td>
+              <td>a+(&minus;a) = 0</td>
+              <td>a&middot;a<sup>-1</sup> = 1 (if a&NotEqual;0)</td>
+            </tr>
+            <tr>
+              <td>分配則</td>
+              <td>distributivity of &middot; over +</td>
+              <td colspan="2" style="text-align: center;">
+                a&middot;(b+c) = a&middot;b+a&middot;c
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>zero-one law</td>
+              <td colspan="2" style="text-align: center;">
+                0 &ne; 1
+              </td>
+            </tr>
+          </table>
+        </section>
+        For the zero-one law as an field axiom, refer Mayer (2006).
       </p>
     </section>
     <section id="cancellation-laws" class="theorem">
       <p>
-        <strong>Theorem (Cancellation Laws)</strong>:
+        <strong>Theorem (Cancellation Laws)</strong> [簡約律]:
         Let <var>F</var> be a field. For all elements <var>a, b, c &in; F</var>,
         <section>
           <table>
@@ -129,7 +143,35 @@
             </section>
           </li>
           <li>
-            Existence of multiplicative inverse of the field axioms guarantees that if <var>b&NotEqual;0</var>, there exists an element <var>b<sup>-1</sup> &in; F</var>. Then, the proof is similar to 1.
+            Existence of multiplicative inverse of the field axioms guarantees that if <var>b&NotEqual;0</var>, there exists an element <var>b<sup>-1</sup> &in; F</var>.
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    (a&middot;b)&middot;b<sup>-1</sup>
+                    =
+                    (c&middot;b)&middot;b<sup>-1</sup>
+                  </td>
+                  <td>by multiplying b<sup>-1</sup> to both sides</td>
+                </tr>
+                <tr>
+                  <td>
+                    a&middot;(b&middot;b<sup>-1</sup>)
+                    =
+                    c&middot;(b&middot;b<sup>-1</sup>)
+                  </td>
+                  <td>by associativity of multiplication</td>
+                </tr>
+                <tr>
+                  <td>a&middot;1 = c&middot;1</td>
+                  <td>by existence of multiplicative inverse</td>
+                </tr>
+                <tr>
+                  <td>a = c</td>
+                  <td>by existence of multiplicative identity</td>
+                </tr>
+              </table>
+            </section>
           </li>
         </ol>
       </p>
@@ -276,11 +318,356 @@
         </ol>
       </p>
     </section>
+    <section id="zero-one-law" class="description">
+      <p>
+        <strong>Zero ring</strong>:
+        The zero ring or trivial ring is the unique ring (up to isomorphism) consisting of one element [Wikipedia: Zero ring]. If additive identity <var>0</var> equals multiplicative identity <var>1</var>, then the ring <var>R</var> has only a single element <var>0 = 1</var>, i.e.,
+        <section>
+          <table>
+            <tr>
+              <td>0 = 1</td>
+              <td>&iff;</td>
+              <td>R = {0}</td>
+            </tr>
+          </table>
+        </section>
+        Proof: If <var>0 = 1</var>, for all <var>x &in; R</var>
+        <section>
+          <table>
+            <tr>
+              <td>x</td>
+              <td>= 1&middot;x</td>
+              <td>by existence of multiplicative identity</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= 0&middot;x</td>
+              <td>since 0 = 1</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= 0</td>
+              <td>by corollary (Multiplications, no.1)</td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+  </section>
+  <section id="vector-space">
+    <h2>Vector Spaces [ベクトル空間]</h2>
+    <section id="define-vector-space" class="definition">
+      <p>
+        <strong>Definition (Vector Space)</strong>:
+        A vector space <var>V</var> over a field <var>F</var> consists of a set on which two operations (addition [加法] and scalar multiplication [スカラー倍]) are defined so that:
+        <ul>
+          <li>
+            for each pair of elements <var>x, y &in; V</var>, there is a unique element <var>x+y &in; V</var>, and
+          </li>
+          <li>
+            for each element <var>a &in; F</var>, there is a unique element <var>a&InvisibleTimes;x &in; V</var>,
+          </li>
+        </ul>
+        such that the following conditions hold:
+      </p>
+      <section>
+        <table>
+          <tr>
+            <th></th>
+            <th style="text-align: left;">addition</th>
+            <th style="text-align: left;">scalar multiplication</th>
+          </tr>
+          <tr>
+            <td>commutativity</td>
+            <td>x+y = y+x</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>associativity</td>
+            <td>(x+y)+z = x+(y+z)</td>
+            <td>(ab)x = a(bx)</td>
+          </tr>
+          <tr>
+            <td>existence of identity</td>
+            <td>x+0 = x</td>
+            <td>1x = x</td>
+          </tr>
+          <tr>
+            <td>existence of inverse</td>
+            <td>x+(&minus;x) = 0</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>distributivity</td>
+            <td>a(x+y) = ax+ay</td>
+            <td>(a+b)x=ax+bx</td>
+          </tr>
+        </table>
+      </section>
+      We call:
+      <section>
+        <table>
+          <tr>
+            <th>scalars</th>
+            <td>the elements of the field <var>F</var></td>
+          </tr>
+          <tr>
+            <th>vectors</th>
+            <td>the elements of the vector space <var>V</var></td>
+          </tr>
+        </table>
+      </section>
+    </section>
+    <section id="tuple" class="description">
+      <p>
+        <strong>Notation (n-tuple)</strong>:
+        Let <var>a<sub>1</sub>, a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> be elements of a field <var>F</var>. We call an object of the following form an n-tuple with elements from <var>F</var>:
+        <section>
+          <table>
+            <tr>
+              <td>
+                (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>)
+              </td>
+            </tr>
+          </table>
+        </section>
+        where the following statement holds:
+        <section>
+          <table>
+            <tr>
+              <td>
+                (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>)
+                &equals;
+                (b<sub>1</sub>, b<sub>2</sub>, &hellip;, b<sub>n</sub>)
+              </td>
+              <td>&iff;</td>
+              <td>
+                a<sub>i</sub> = b<sub>i</sub>
+                (for any <var>i</var>, where <var>1 &le; i &le; n</var>)
+              </td>
+            </tr>
+          </table>
+        </section>
+        Recall that two sets <var>A</var> and <var>B</var> are called equal, written <var>A = B</var>, if they contain exactly the same elements. For example,
+        <section>
+          <table>
+            <tr>
+              <td>{1, 2, 3} = {2, 1, 3}</td>
+            </tr>
+          </table>
+        </section>
+        Note that with the n-tuple, the order of elements matters:
+        <section>
+          <table>
+            <tr>
+              <td>(1, 2, 3) &ne; (2, 1, 3)</td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="set-of-tuple" class="description">
+      <p>
+        <strong>Notation (sets of n-tuple)</strong>:
+        The set of all n-tuples with entries from a filed <var>F</var> is denoted by <var>F<sup>n</sup></var>. For example,
+        <section>
+          <table>
+            <tr>
+              <td>
+                Let <var>u</var> be an n-tuple
+                (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>),
+              </td>
+              <td>then</td>
+              <td>
+                u &in; F<sup>n</sup>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Let <var>v</var> be an n-tuple
+                (b<sub>1</sub>, b<sub>2</sub>, &hellip;, b<sub>n</sub>),
+              </td>
+              <td>then</td>
+              <td>
+                v &in; F<sup>n</sup>
+              </td>
+            </tr>
+          </table>
+        </section>
+        <var>F<sup>n</sup></var> is a vector space over <var>F</var> with the operations of coordinative addition and scalar multiplication; that is, if <var>c &in; F</var>, then
+        <section>
+          <table>
+            <tr>
+              <td>
+                u+v =
+                (a<sub>1</sub>+b<sub>1</sub>, a<sub>2</sub>+b<sub>2</sub>,
+                &hellip;, a<sub>n</sub>+b<sub>n</sub>)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                cu = (ca<sub>1</sub>, ca<sub>2</sub>, &hellip;, ca<sub>n</sub>)
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="column-vector" class="description">
+      <p>
+        <strong>Notation (column vector)</strong>:
+        Vectors in <var>F<sup>n</sup></var> may be written as column vectors:
+        <section>
+          <math>
+            <mrow>
+              <mo fence="true">&lpar;</mo>
+              <mtable>
+                <mtr><mtd>
+                  <msub><mi>a</mi><mn>1</mn></msub>
+                </mtd></mtr>
+                <mtr><mtd>
+                  <msub><mi>a</mi><mn>2</mn></msub>
+                </mtd></mtr>
+                <mtr><mtd>
+                  <mo>&vellip;</mo>
+                </mtd></mtr>
+                <mtr><mtd>
+                  <msub><mi>a</mi><mi>n</mi></msub>
+                </mtd></mtr>
+              </mtable>
+              <mo fence="true">&rpar;</mo>
+            </mrow>
+          </math>
+        </section>
+        rather than as row vectors
+        <section>
+          <table>
+            <tr>
+              <td>
+                (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>)
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+  </section>
+  <section id="terminology">
+    <h2>Glossary of terms</h2>
+    <section>
+      <table>
+        <tr>
+          <th style="text-align: left;">en</th>
+          <th style="text-align: left;">ja</th>
+          <th style="text-align: left;">first appeared</th>
+        </tr>
+        <tr>
+          <td>field</td>
+          <td>
+            <ruby>
+              体<rp>(</rp><rt>たい</rt><rp>)</rp>
+            </ruby>
+          </td>
+          <td>Appendix C. Fields</td>
+        </tr>
+        <tr>
+          <td>commutativity</td>
+          <td>
+            <ruby>
+              交換<rp>(</rp><rt>こうかん</rt><rp>)</rp>
+            </ruby>
+            <ruby>
+              則<rp>(</rp><rt>そく</rt><rp>)</rp>
+            </ruby>
+          </td>
+          <td>Appendix C. Fields</td>
+        </tr>
+        <tr>
+          <td>associativity</td>
+          <td>
+            <ruby>
+              結合<rp>(</rp><rt>けつごう</rt><rp>)</rp>
+            </ruby>
+            <ruby>
+              則<rp>(</rp><rt>そく</rt><rp>)</rp>
+            </ruby>
+          </td>
+          <td>Appendix C. Fields</td>
+        </tr>
+        <tr>
+          <td>distributivity</td>
+          <td>
+            <ruby>
+              分配<rp>(</rp><rt>ぶんぱい</rt><rp>)</rp>
+            </ruby>
+            <ruby>
+              則<rp>(</rp><rt>そく</rt><rp>)</rp>
+            </ruby>
+          </td>
+          <td>Appendix C. Fields</td>
+        </tr>
+        <tr>
+          <td>identity element</td>
+          <td>
+            <ruby>
+              単位<rp>(</rp><rt>たんい</rt><rp>)</rp>
+            </ruby>
+            <ruby>
+              元<rp>(</rp><rt>げん</rt><rp>)</rp>
+            </ruby>
+          </td>
+          <td>Appendix C. Fields</td>
+        </tr>
+        <tr>
+          <td>inverse element</td>
+          <td>
+            <ruby>
+              逆<rp>(</rp><rt>ぎゃく</rt><rp>)</rp>
+            </ruby>
+            <ruby>
+              元<rp>(</rp><rt>げん</rt><rp>)</rp>
+            </ruby>
+          </td>
+          <td>Appendix C. Fields</td>
+        </tr>
+        <tr>
+          <td>cancellation law</td>
+          <td>
+            <ruby>
+              簡約<rp>(</rp><rt>かんやく</rt><rp>)</rp>
+            </ruby>
+            <ruby>
+            律<rp>(</rp><rt>りつ</rt><rp>)</rp>
+            </ruby>
+          </td>
+          <td>Appendix C. Fields</td>
+        </tr>
+        <tr>
+          <td>polynomial</td>
+          <td>
+            <ruby>
+              多項<rp>(</rp><rt>たこう</rt><rp>)</rp>
+            </ruby>
+            <ruby>
+              式<rp>(</rp><rt>しき</rt><rp>)</rp>
+            </ruby>
+          </td>
+          <td>&sect;1.2 Vector Spaces</td>
+        </tr>
+      </table>
+    </section>
   </section>
   <section id="reference">
     <h2>References</h2>
     <ul>
-      <li>Friedberg, S.H., et al. (2016). <i>Linear Algebra, 5th Edition</i>. Pearson.</li>
+      <li>
+        Friedberg, S.H., et al. (2016). <i>Linear Algebra, 5th Edition</i>. Pearson.
+      </li>
+      <li>
+        Mayer, R. (2006).
+        <i>Numbers: &sect;2.3 The Field Axioms.</i>
+        http://people.reed.edu/~mayer/math112.html/html1/node16.html.
+      </li>
     </ul>
   </section>
 </article>
