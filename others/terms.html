@@ -18,13 +18,20 @@
     }
     td, th {
       border: 1px solid lightgrey;
-      padding: 1rem 1rem 0.5rem 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
       vertical-align: text-bottom;
     }
     th {
       text-align: left;
       color: whitesmoke;
-      background-color: darkblue;
+      background-color: dimgrey;
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+    }
+    td {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
     }
   </style>
 </head>
@@ -34,9 +41,11 @@
   <p>References:</p>
   <ul>
     <li>Farlow, S. J. (2019). <i>Advanced Mathematics</i>. Wiley.</li>
+    <li>酒井文雄. (2011). <i>大学数学の基礎</i>. 共立出版</li>
   </ul>
   
   <table>
+    <!-- ------------------------------------- -->
     <tr>
       <th colspan="3">Logic and Proofs (&sect;1, Farlow (2019))</th>
     </tr>
@@ -58,17 +67,6 @@
         </ruby>
       </td>
       <td>propositional logic</td>
-    </tr>
-    <tr>
-      <td>infer (&vscr;)</td>
-      <td>
-        <ruby>
-          推測
-          <rt>すいそく</rt>
-        </ruby>
-        する
-      </td>
-      <td>to decide that something is probably true</td>
     </tr>
     <tr>
       <td>logical conjunction</td>
@@ -95,9 +93,8 @@
     <tr>
       <td>negation operator</td>
       <td>
+        <ruby>論理<rt>ろんり</rt></ruby>
         <ruby>否定<rt>ひてい</rt></ruby>
-        <ruby>演算<rt>えんざん</rt></ruby>
-        <ruby>子<rt>し</rt></ruby>
       </td>
       <td>NOT;
         <math><mo>&Tilde;</mo><mi>P</mi></math> or
@@ -114,19 +111,315 @@
         if they have the same truth values
       </td>
     </tr>
-    
+    <tr>
+      <td>implication</td>
+      <td>
+        <ruby>含意<rt>がんい</rt></ruby>
+      </td>
+      <td>
+        with an implication
+        <math><mi>P</mi><mo>&Implies;</mo><mi>Q</mi></math>,
+        we say <math><mi>P</mi></math> implies <math><mi>Q</mi></math>
+      </td>
+    </tr>
+    <tr>
+      <td>sufficient condition</td>
+      <td>
+        <ruby>十分<rt>じゅうぶん</rt></ruby>
+        <ruby>条件<rt>じょうけん</rt></ruby>
+      </td>
+      <td>
+        (<math><mi>A</mi></math> is sufficient for <math><mi>B</mi></math>)
+        &equiv;
+        <math>
+          <mrow>
+            <mo fence="true">(</mo>
+            <mrow><mi>A</mi><mo>&Implies;</mo><mi>B</mi></mrow>
+            <mo fence="true">)</mo>
+          </mrow>
+        </math>
+      </td>
+    </tr>
+    <tr>
+      <td>necessary condition</td>
+      <td>
+        <ruby>必要<rt>ひつよう</rt></ruby>
+        <ruby>条件<rt>じょうけん</rt></ruby>
+      </td>
+      <td>
+        (<math><mi>A</mi></math> is necessary for <math><mi>B</mi></math>)
+        &equiv;
+        <math>
+          <mrow>
+            <mo fence="true">(</mo>
+            <mrow><mi>B</mi><mo>&Implies;</mo><mi>A</mi></mrow>
+            <mo fence="true">)</mo>
+          </mrow>
+        </math>
+      </td>
+    </tr>
+    <tr>
+      <td>biconditional</td>
+      <td>
+        <ruby>必要<rt>ひつよう</rt></ruby>
+        <ruby>十分<rt>じゅうぶん</rt></ruby>
+        <ruby>条件<rt>じょうけん</rt></ruby>
+      </td>
+      <td>
+        (<math><mi>A</mi></math>
+        is necessary and sufficient for <math><mi>B</mi></math>)
+        &equiv;
+        <math>
+          <mrow>
+            <mo fence="true">(</mo>
+            <mrow><mi>A</mi><mo>&iff;</mo><mi>B</mi></mrow>
+            <mo fence="true">)</mo>
+          </mrow>
+        </math>
+      </td>
+    </tr>
+    <tr>
+      <td>predicate logic</td>
+      <td>
+        <ruby>述語<rt>じゅつご</rt></ruby>
+        <ruby>論理<rt>ろんり</rt></ruby>
+      </td>
+      <td>
+        <math>
+          <mrow>
+            <mrow>
+              <mo fence="true">(</mo>
+              <mo>&forall;</mo><mi>x</mi><mo>&in;</mo><mi>&reals;</mi>
+              <mo fence="true">)</mo>
+            </mrow>
+            <mrow>
+              <mo fence="true">(</mo>
+              <mo>&exist;</mo><mi>y</mi><mo>&in;</mo><mi>&reals;</mi>
+              <mo fence="true">)</mo>
+            </mrow>
+            <mrow>
+              <mo fence="true">(</mo>
+              <mi>x</mi><mo>&lt;</mo><mi>y</mi>
+              <mo fence="true">)</mo>
+            </mrow>
+          </mrow>
+        </math>
+      </td>
+    </tr>
+    <tr>
+      <td>proposition</td>
+      <td><ruby>命題<rt>めいだい</rt></ruby></td>
+      <td>a statement that is either true or false</td>
+    </tr>
+    <tr>
+      <td>predicate</td>
+      <td><ruby>述語<rt>じゅつご</rt></ruby></td>
+      <td>
+        <math>
+          <mrow>
+            <mi>P</mi>
+            <mo fence="true">(</mo>
+            <mi>x</mi>
+            <mo fence="true">)</mo>
+          </mrow>
+        </math>
+        becomes a proposition for any choice of
+        <math><mi>x</mi></math>.
+      </td>
+    </tr>
+    <tr>
+      <td>universal quantifier</td>
+      <td>
+        <ruby>全称<rt>ぜんしょう</rt></ruby>
+        <ruby>記号<rt>きごう</rt></ruby>
+      </td>
+      <td>
+        <math>
+          <mrow>
+            <mrow>
+              <mo fence="true">(</mo>
+              <mo>&forall;</mo><mi>x</mi><mo>&in;</mo><mi>U</mi>
+              <mo fence="true">)</mo>
+            </mrow>
+            <mrow>
+              <mi>P</mi>
+              <mo fence="true">(</mo>
+              <mi>x</mi>
+              <mo fence="true">)</mo>
+            </mrow>
+          </mrow>
+        </math>
+        &ctdot;
+        for all (or any) <math><mi>x</mi><mo>&in;</mo><mi>U</mi></math>,
+        <math>
+          <mrow>
+            <mi>P</mi>
+            <mo fence="true">(</mo>
+            <mi>x</mi>
+            <mo fence="true">)</mo>
+          </mrow>
+        </math>
+        is true
+      </td>
+    </tr>
+    <tr>
+      <td>existential quantifier</td>
+      <td>
+        <ruby>
+          存在
+          <rt>そんざい</rt>
+        </ruby>
+        <ruby>
+          記号
+          <rt>きごう</rt>
+        </ruby>
+      </td>
+      <td>
+        <math>
+          <mrow>
+            <mrow>
+              <mo fence="true">(</mo>
+              <mo>&exist;</mo><mi>x</mi><mo>&in;</mo><mi>U</mi>
+              <mo fence="true">)</mo>
+            </mrow>
+            <mrow>
+              <mi>P</mi>
+              <mo fence="true">(</mo>
+              <mi>x</mi>
+              <mo fence="true">)</mo>
+            </mrow>
+          </mrow>
+        </math>
+        &ctdot;
+        there exists an <math><mi>x</mi><mo></math> such that
+        <math>
+          <mrow>
+            <mi>P</mi>
+            <mo fence="true">(</mo>
+            <mi>x</mi>
+            <mo fence="true">)</mo>
+          </mrow>
+        </math>
+        is true
+      </td>
+    </tr>
+    <tr>
+      <td>direct proof</td>
+      <td>
+        <ruby>直接<rt>ちょくせつ</rt></ruby>
+        <ruby>証明<rt>しょうめい</rt></ruby>
+      </td>
+      <td>
+        <math><mi>P</mi><mo>&Implies;</mo><mi>Q</mi></math>
+      </td>
+    </tr>
+    <tr>
+      <td>proof by contrapositive</td>
+      <td>
+        <ruby>対偶<rt>たいぐう</rt></ruby>
+        <ruby>法<rt>ほう</rt></ruby>
+      </td>
+      <td>
+        <math>
+          <mo>&not;</mo><mi>Q</mi><mo>&Implies;</mo><mo>&not;</mo><mi>P</mi>
+        </math>
+      </td>
+    </tr>
+    <tr>
+      <td>proof by contradiction</td>
+      <td>
+        <ruby>背理<rt>はいり</rt></ruby>
+        <ruby>法<rt>ほう</rt></ruby>
+      </td>
+      <td>
+        <math>
+          <mrow>
+            <mrow>
+              <mo fence="true">(</mo>
+              <mrow>
+                <mi>P</mi>
+                <mo>&and;</mo>
+                <mrow><mo>&not;</mo><mi>Q</mi></mrow>
+              </mrow>
+              <mo fence="true">)</mo>
+            </mrow>
+            <mo>&Implies;</mo>
+            <mrow><mo>&not;</mo><mi>P</mi></mrow>
+          </mrow>
+        </math>
+        or
+        <math>
+          <mrow>
+            <mrow>
+              <mo fence="true">(</mo>
+              <mrow>
+                <mi>P</mi>
+                <mo>&and;</mo>
+                <mrow><mo>&not;</mo><mi>Q</mi></mrow>
+              </mrow>
+              <mo fence="true">)</mo>
+            </mrow>
+            <mo>&Implies;</mo>
+            <mi>Q</mi>
+          </mrow>
+        </math>
+      </td>
+    </tr>
+    <tr>
+      <td>axioms</td>
+      <td>
+        <ruby>公理<rt>こうり</rt></ruby>
+      </td>
+      <td>basic assumptions</td>
+    </tr>
+    <tr>
+      <td>theorem</td>
+      <td>
+        <ruby>定理<rt>ていり</rt></ruby>
+      </td>
+      <td>consequences deduced from axioms</td>
+    </tr>
+    <tr>
+      <td>lemma</td>
+      <td><ruby>補題<rt>ほだい</rt></ruby></td>
+      <td>a statement that is proven as an aid in proving a theorem</td>
+    </tr>
+    <tr>
+      <td>corollary</td>
+      <td><ruby>系<rt>けい</rt></ruby></td>
+      <td>a statement which is generally secondary to the theorem</td>
+    </tr>
+    <tr>
+      <td>conjecture</td>
+      <td>
+        <ruby>予想<rt>よそう</rt></ruby>
+      </td>
+      <td>e.g, Goldbach's conjecture</td>
+    </tr>
+    <!-- ------------------------------------- -->
     <tr>
       <th colspan="3">Sets and Counting (&sect;2, Farlow (2019))</th>
     </tr>
     <tr>
+      <td>infer</td>
+      <td>
+        <ruby>推測<rt>すいそく</rt></ruby>する
+      </td>
+      <td>to decide that something is probably true</td>
+    </tr>
+    <!-- ------------------------------------- -->
+    <tr>
       <th colspan="3">Relations (&sect;3, Farlow (2019))</th>
     </tr>
+    <!-- ------------------------------------- -->
     <tr>
       <th colspan="3">Number Systems (&sect;4, Farlow (2019))</th>
     </tr>
+    <!-- ------------------------------------- -->
     <tr>
       <th colspan="3">Topology (&sect;5, Farlow (2019))</th>
     </tr>
+    <!-- ------------------------------------- -->
     <tr>
       <th colspan="3">Algebra (&sect;6, Farlow (2019))</th>
     </tr>
@@ -134,99 +427,21 @@
 </section>
 
 <table>
+  <tr>
+    <td>deduce</td>
+    <td>
+      <ruby>演繹<rt>えんえき</rt></ruby>する</td>
+    <td>to decide that something must be true</td>
+  </tr>
+  <tr>
+    <td>induce</td>
+    <td>
+      <ruby>帰納的<rt>きのうてき</rt></ruby>に
+      <ruby>推論<rt>すいろん</rt></ruby>する
+    </td>
+    <td>&leftrightarrow; deduce</td>
+  </tr>
 
-<tr>
-  <td>definition</td>
-  <td>
-    <ruby>
-      定義
-      <rt>ていぎ</rt>
-    </ruby>
-  </td>
-  <td></td>
-</tr>
-<tr>
-  <td>axioms</td>
-  <td>
-    <ruby>
-      公理
-      <rt>こうり</rt>
-    </ruby>
-  </td>
-  <td>basic assumptions</td>
-</tr>
-<tr>
-  <td>theorem</td>
-  <td>
-    <ruby>
-      定理
-      <rt>ていり</rt>
-    </ruby>
-  </td>
-  <td>consequences deduced from axioms</td>
-</tr>
-<tr>
-  <td>lemma</td>
-  <td>
-    <ruby>
-      補題
-      <rt>ほだい</rt>
-    </ruby>
-  </td>
-  <td></td>
-</tr>
-<tr>
-  <td>corollary</td>
-  <td>
-    <ruby>
-      系
-      <rt>けい</rt>
-    </ruby>
-  </td>
-  <td></td>
-</tr>
-<tr>
-  <td>deduce (&vscr;)</td>
-  <td>
-    <ruby>
-      推論
-      <rt>すいろん</rt>
-    </ruby>
-    &comma;
-    <ruby>
-      演繹
-      <rt>えんえき</rt>
-    </ruby>
-    する
-  </td>
-  <td>to decide that something must be true</td>
-</tr>
-<tr>
-  <td>induce (&vscr;)</td>
-  <td>
-    <ruby>
-      帰納的
-      <rt>きのうてき</rt>
-    </ruby>
-    に
-    <ruby>
-      推論
-      <rt>すいろん</rt>
-    </ruby>
-    する
-  </td>
-  <td>&leftrightarrow; deduce</td>
-</tr>
-<tr>
-  <td>conjecture</td>
-  <td>
-    <ruby>
-      予想
-      <rt>よそう</rt>
-    </ruby>
-  </td>
-  <td>e.g, Goldbach's conjecture</td>
-</tr>
 <tr>
   <td>mathematical induction</td>
   <td>
@@ -555,121 +770,6 @@
       </mrow>
       <mo>&le;</mo>
       <mn>0</mn>
-    </math>
-  </td>
-</tr>
-<tr>
-  <td>predicate</td>
-  <td>
-    <ruby>
-      述語
-      <rt>じゅつご</rt>
-    </ruby>
-  </td>
-  <td>
-    let
-    <math>
-      <mi>P</mi>
-      <mo>&ApplyFunction;</mo>
-      <mrow>
-        <mo fence="true">&lpar;</mo>
-        <mi>x</mi>
-        <mo fence="true">&rpar;</mo>
-      </mrow>
-    </math>
-    be 
-    <math>
-      <msup><mi>x</mi><mn>2</mn></msup>
-      <mo>&minus;</mo>
-      <mn>1</mn>
-      <mo>&equals;</mo>
-      <mn>0</mn>
-    </math>
-    where 
-    <math>
-      <mi>x</mi>
-      <mo>&in;</mo>
-      <mi>&reals;</mi>
-    </math>
-  </td>
-</tr>
-<tr>
-  <td>bound variable</td>
-  <td>
-    <ruby>
-      束縛
-      <rt>そくばく</rt>
-    </ruby>
-    <ruby>
-      変数
-      <rt>へんすう</rt>
-    </ruby>
-  </td>
-  <td>
-    <math>
-      <mo>for all</mo><mi>x</mi>
-      <mo>&in;</mo>
-      <mi>&reals;</mi>
-      <mo>&comma;</mo>
-      <msup><mi>x</mi><mn>2</mn></msup>
-      <mo>&minus;</mo>
-      <mn>1</mn>
-      <mo>&equals;</mo>
-      <mn>0</mn>
-    </math>
-  </td>
-</tr>
-<tr>
-  <td>universal quantifier</td>
-  <td>
-    <ruby>
-      全称
-      <rt>ぜんしょう</rt>
-    </ruby>
-    <ruby>
-      記号
-      <rt>きごう</rt>
-    </ruby>
-  </td>
-  <td>
-    <math>
-      <mo>&forall;</mo><mi>x</mi>
-      <mo>&in;</mo>
-      <mi>&reals;</mi>
-      <mo>&comma;</mo>
-      <msup><mi>x</mi><mn>2</mn></msup>
-      <mo>&minus;</mo>
-      <mn>1</mn>
-      <mo>&equals;</mo>
-      <mn>0</mn>
-      <mo>(for all real numbers x, &hellip;)</mo>
-    </math>
-  </td>
-</tr>
-<tr>
-  <td>existential quantifier</td>
-  <td>
-    <ruby>
-      存在
-      <rt>そんざい</rt>
-    </ruby>
-    <ruby>
-      記号
-      <rt>きごう</rt>
-    </ruby>
-  </td>
-  <td>
-    <math>
-      <mo>&exist;</mo><mi>x</mi>
-      <mo>&in;</mo>
-      <mi>&reals;</mi>
-      <mo>,</mo>
-      <msup><mi>x</mi><mn>2</mn></msup>
-      <mo>&minus;</mo>
-      <mn>1</mn>
-      <mo>&equals;</mo>
-      <mn>0</mn>
-      <mo>(there exists x in &reals; such that &hellip;)</mo>
     </math>
   </td>
 </tr>
