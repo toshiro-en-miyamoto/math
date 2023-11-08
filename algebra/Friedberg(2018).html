@@ -96,7 +96,7 @@
     <section id="cancellation-laws" class="theorem">
       <p>
         <strong>Theorem (Cancellation Laws)</strong> [簡約律]:
-        Let <var>F</var> be a field. For all elements <var>a, b, c &in; F</var>,
+        Let <var>F</var> be a field. For all elements <var>a, b, c, d &in; F</var>,
         <section>
           <table>
             <tr>
@@ -107,7 +107,7 @@
             </tr>
             <tr>
               <td>2.</td>
-              <td>a&middot;b = c&middot;b and b&NotEqual;0</td>
+              <td>a&middot;d = c&middot;d and d&NotEqual;0</td>
               <td>&Implies;</td>
               <td>a = c</td>
             </tr>
@@ -143,22 +143,22 @@
             </section>
           </li>
           <li>
-            Existence of multiplicative inverse of the field axioms guarantees that if <var>b&NotEqual;0</var>, there exists an element <var>b<sup>-1</sup> &in; F</var>.
+            Existence of multiplicative inverse of the field axioms guarantees that if <var>d&NotEqual;0</var>, there exists an element <var>d<sup>-1</sup> &in; F</var>.
             <section>
               <table>
                 <tr>
                   <td>
-                    (a&middot;b)&middot;b<sup>-1</sup>
+                    (a&middot;d)&middot;d<sup>-1</sup>
                     =
-                    (c&middot;b)&middot;b<sup>-1</sup>
+                    (c&middot;d)&middot;d<sup>-1</sup>
                   </td>
-                  <td>by multiplying b<sup>-1</sup> to both sides</td>
+                  <td>by multiplying both sides by d<sup>-1</sup></td>
                 </tr>
                 <tr>
                   <td>
-                    a&middot;(b&middot;b<sup>-1</sup>)
+                    a&middot;(d&middot;d<sup>-1</sup>)
                     =
-                    c&middot;(b&middot;b<sup>-1</sup>)
+                    c&middot;(d&middot;d<sup>-1</sup>)
                   </td>
                   <td>by associativity of multiplication</td>
                 </tr>
@@ -202,12 +202,8 @@
                   <td>= 0 + a</td>
                   <td>since 0 is an additive identity</td>
                 </tr>
-                <tr>
-                  <td colspan="3">
-                    Hence <var>0&prime; = 0</var> because of the additive cancellation law. It follows that the additive identity is unique.
-                  </td>
-                </tr>
               </table>
+              Hence <var>0&prime; = 0</var> by the additive cancellation law.
             </section>
           </li>
           <li>
@@ -261,12 +257,8 @@
                   <td>= a&middot;0+a&middot;0</td>
                   <td>by distributivity of &middot; over +</td>
                 </tr>
-                <tr>
-                  <td colspan="3">
-                    Hence <var>a&middot;0 = 0</var> by the additive cancellation law.
-                  </td>
-                </tr>
               </table>
+              Hence <var>a&middot;0 = 0</var> by the additive cancellation law.
             </section>
           </li>
           <li>
@@ -288,12 +280,8 @@
                   <td>= 0</td>
                   <td>by corollary 1</td>
                 </tr>
-                <tr>
-                  <td colspan="3">
-                    Hence <var>(&minus;a)&middot;b = &minus;(a&middot;b)</var> by existence of additive inverse. The proof that <var>a&middot;(&minus;b) = &minus;(a&middot;b)</var> is similar.
-                  </td>
-                </tr>
               </table>
+              Hence <var>(&minus;a)&middot;b = &minus;(a&middot;b)</var> by existence of additive inverse. The proof that <var>a&middot;(&minus;b) = &minus;(a&middot;b)</var> is similar.
             </section>
           </li>
           <li>
@@ -550,111 +538,6 @@
           </table>
         </section>
       </p>
-    </section>
-  </section>
-  <section id="terminology">
-    <h2>Glossary of terms</h2>
-    <section>
-      <table>
-        <tr>
-          <th style="text-align: left;">en</th>
-          <th style="text-align: left;">ja</th>
-          <th style="text-align: left;">first appeared</th>
-        </tr>
-        <tr>
-          <td>field</td>
-          <td>
-            <ruby>
-              体<rp>(</rp><rt>たい</rt><rp>)</rp>
-            </ruby>
-          </td>
-          <td>Appendix C. Fields</td>
-        </tr>
-        <tr>
-          <td>commutativity</td>
-          <td>
-            <ruby>
-              交換<rp>(</rp><rt>こうかん</rt><rp>)</rp>
-            </ruby>
-            <ruby>
-              則<rp>(</rp><rt>そく</rt><rp>)</rp>
-            </ruby>
-          </td>
-          <td>Appendix C. Fields</td>
-        </tr>
-        <tr>
-          <td>associativity</td>
-          <td>
-            <ruby>
-              結合<rp>(</rp><rt>けつごう</rt><rp>)</rp>
-            </ruby>
-            <ruby>
-              則<rp>(</rp><rt>そく</rt><rp>)</rp>
-            </ruby>
-          </td>
-          <td>Appendix C. Fields</td>
-        </tr>
-        <tr>
-          <td>distributivity</td>
-          <td>
-            <ruby>
-              分配<rp>(</rp><rt>ぶんぱい</rt><rp>)</rp>
-            </ruby>
-            <ruby>
-              則<rp>(</rp><rt>そく</rt><rp>)</rp>
-            </ruby>
-          </td>
-          <td>Appendix C. Fields</td>
-        </tr>
-        <tr>
-          <td>identity element</td>
-          <td>
-            <ruby>
-              単位<rp>(</rp><rt>たんい</rt><rp>)</rp>
-            </ruby>
-            <ruby>
-              元<rp>(</rp><rt>げん</rt><rp>)</rp>
-            </ruby>
-          </td>
-          <td>Appendix C. Fields</td>
-        </tr>
-        <tr>
-          <td>inverse element</td>
-          <td>
-            <ruby>
-              逆<rp>(</rp><rt>ぎゃく</rt><rp>)</rp>
-            </ruby>
-            <ruby>
-              元<rp>(</rp><rt>げん</rt><rp>)</rp>
-            </ruby>
-          </td>
-          <td>Appendix C. Fields</td>
-        </tr>
-        <tr>
-          <td>cancellation law</td>
-          <td>
-            <ruby>
-              簡約<rp>(</rp><rt>かんやく</rt><rp>)</rp>
-            </ruby>
-            <ruby>
-            律<rp>(</rp><rt>りつ</rt><rp>)</rp>
-            </ruby>
-          </td>
-          <td>Appendix C. Fields</td>
-        </tr>
-        <tr>
-          <td>polynomial</td>
-          <td>
-            <ruby>
-              多項<rp>(</rp><rt>たこう</rt><rp>)</rp>
-            </ruby>
-            <ruby>
-              式<rp>(</rp><rt>しき</rt><rp>)</rp>
-            </ruby>
-          </td>
-          <td>&sect;1.2 Vector Spaces</td>
-        </tr>
-      </table>
     </section>
   </section>
   <section id="reference">

@@ -3,27 +3,138 @@
 <head>
   <title>Math Terms</title>
   <style>
-    th {
-      border-top: 2px solid black;
-      border-bottom: 2px solid black;
-      text-align: left;
-      padding-left: 1em;
-      padding-right: 1em;
+    body {
+      margin-left: 1.2rem;
     }
-    td {
-      border-bottom: 1px solid black;
-      padding-left: 1em;
-      padding-right: 1em;
+    section {
+      margin-left: 1rem;
+    }
+    table {
+      border-collapse: collapse;
+      width: auto;
+    }
+    tr:nth-child(even) {
+      background-color: whitesmoke;
+    }
+    td, th {
+      border: 1px solid lightgrey;
+      padding: 1rem 1rem 0.5rem 1rem;
+      vertical-align: text-bottom;
+    }
+    th {
+      text-align: left;
+      color: whitesmoke;
+      background-color: darkblue;
     }
   </style>
 </head>
 <body>
+
+<section id="terms">
+  <p>References:</p>
+  <ul>
+    <li>Farlow, S. J. (2019). <i>Advanced Mathematics</i>. Wiley.</li>
+  </ul>
+  
+  <table>
+    <tr>
+      <th colspan="3">Logic and Proofs (&sect;1, Farlow (2019))</th>
+    </tr>
+    <tr>
+      <td>logic</td>
+      <td>
+        <ruby>
+          論理<rt>ろんり</rt>
+        </ruby>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>proposition</td>
+      <td>
+        <ruby>
+          命題
+          <rt>めいだい</rt>
+        </ruby>
+      </td>
+      <td>propositional logic</td>
+    </tr>
+    <tr>
+      <td>infer (&vscr;)</td>
+      <td>
+        <ruby>
+          推測
+          <rt>すいそく</rt>
+        </ruby>
+        する
+      </td>
+      <td>to decide that something is probably true</td>
+    </tr>
+    <tr>
+      <td>logical conjunction</td>
+      <td>
+        <ruby>論理<rt>ろんり</rt></ruby>
+        <ruby>積<rt>せき</rt></ruby>
+      </td>
+      <td>
+        AND;
+        <math><mrow><mi>P</mi><mo>&and;</mo><mi>Q</mi></mrow></math>
+      </td>
+    </tr>
+    <tr>
+      <td>logical disjunction</td>
+      <td>
+        <ruby>論理<rt>ろんり</rt></ruby>
+        <ruby>和<rt>わ</rt></ruby>
+      </td>
+      <td>
+        OR;
+        <math><mrow><mi>P</mi><mo>&or;</mo><mi>Q</mi></mrow></math>
+      </td>
+    </tr>
+    <tr>
+      <td>negation operator</td>
+      <td>
+        <ruby>否定<rt>ひてい</rt></ruby>
+        <ruby>演算<rt>えんざん</rt></ruby>
+        <ruby>子<rt>し</rt></ruby>
+      </td>
+      <td>NOT;
+        <math><mo>&Tilde;</mo><mi>P</mi></math> or
+        <math><mo>&not;</mo><mi>P</mi></math>
+      </td>
+    </tr>
+    <tr>
+      <td>logically equivalent</td>
+      <td>
+        <ruby>同値<rt>どうち</rt></ruby>
+      </td>
+      <td>
+        <math><mi>P</mi><mo>&equiv;</mo><mi>Q</mi></math>
+        if they have the same truth values
+      </td>
+    </tr>
+    
+    <tr>
+      <th colspan="3">Sets and Counting (&sect;2, Farlow (2019))</th>
+    </tr>
+    <tr>
+      <th colspan="3">Relations (&sect;3, Farlow (2019))</th>
+    </tr>
+    <tr>
+      <th colspan="3">Number Systems (&sect;4, Farlow (2019))</th>
+    </tr>
+    <tr>
+      <th colspan="3">Topology (&sect;5, Farlow (2019))</th>
+    </tr>
+    <tr>
+      <th colspan="3">Algebra (&sect;6, Farlow (2019))</th>
+    </tr>
+  </table>  
+</section>
+
 <table>
-<tr>
-  <th>en</th>
-  <th>ja</th>
-  <th>math</th>
-</tr>
+
 <tr>
   <td>definition</td>
   <td>
@@ -55,16 +166,6 @@
   <td>consequences deduced from axioms</td>
 </tr>
 <tr>
-  <td>proposition</td>
-  <td>
-    <ruby>
-      命題
-      <rt>めいだい</rt>
-    </ruby>
-  </td>
-  <td></td>
-</tr>
-<tr>
   <td>lemma</td>
   <td>
     <ruby>
@@ -83,17 +184,6 @@
     </ruby>
   </td>
   <td></td>
-</tr>
-<tr>
-  <td>infer (&vscr;)</td>
-  <td>
-    <ruby>
-      推測
-      <rt>すいそく</rt>
-    </ruby>
-    する
-  </td>
-  <td>to decide that something is probably true</td>
 </tr>
 <tr>
   <td>deduce (&vscr;)</td>
@@ -467,16 +557,6 @@
       <mn>0</mn>
     </math>
   </td>
-</tr>
-<tr>
-  <td>logic</td>
-  <td>
-    <ruby>
-      論理
-      <rt>ろんり</rt>
-    </ruby>
-  </td>
-  <td></td>
 </tr>
 <tr>
   <td>predicate</td>
