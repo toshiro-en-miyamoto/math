@@ -528,15 +528,94 @@
           </math>
         </section>
         rather than as row vectors
+        <math displaystyle="true">
+          <mrow>
+            <mo fence="true">&lpar;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub><mo>,</mo>
+            <msub><mi>a</mi><mn>2</mn></msub><mo>,</mo>
+            <mi>&hellip;</mi><mo>,</mo>
+            <msub><mi>a</mi><mi>n</mi></msub>
+            <mo fence="true">&rpar;</mo>
+          </mrow>
+        </math>
+      </p>
+    </section>
+    <section id="matrix" class="description">
+      <p>
+        <strong>Notation (matrix)</strong>:
+        An <var>m &times; n</var> matrix with entries from a field <var>F</var> is
         <section>
-          <table>
-            <tr>
-              <td>
-                (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>)
-              </td>
-            </tr>
-          </table>
+          <math displaystyle="true">
+            <mrow>
+              <mo fence="true">&lpar;</mo>
+              <mtable>
+                <mtr>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub>
+                  </mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub>
+                  </mtd>
+                  <mtd><mi>&ctdot;</mi></mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub>
+                  </mtd>
+                </mtr>
+                <mtr>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub>
+                  </mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub>
+                  </mtd>
+                  <mtd><mi>&ctdot;</mi></mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub>
+                  </mtd>
+                </mtr>
+                <mtr>
+                  <mtd><mi>&vellip;</mi></mtd>
+                  <mtd><mi>&vellip;</mi></mtd>
+                  <mtd></mtd>
+                  <mtd><mi>&vellip;</mi></mtd>
+                </mtr>
+                <mtr>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mi>m</mi><mn>1</mn></mrow></msub>
+                  </mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mi>m</mi><mn>2</mn></mrow></msub>
+                  </mtd>
+                  <mtd><mi>&ctdot;</mi></mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mi>m</mi><mi>n</mi></mrow></msub>
+                  </mtd>
+                </mtr>
+              </mtable>
+              <mo fence="true">&rpar;</mo>
+            </mrow>
+          </math>          
         </section>
+        where each entry
+        <var>a<sub>ij</sub> (1 &le; i &le; m, 1 &le; j &le; n)</var>
+        is an element of <var>F</var>.
+        <ul>
+          <li>
+            diagonal entries:
+            <var>a<sub>ij</sub> with <var>i = j</var>
+          </li>
+          <li>
+            <b>i</b>th row:
+            <var>a<sub>i1</sub>, a<sub>i2</sub>, &hellip;, a<sub>in</sub></var>
+          </li>
+          <li>
+            <b>j</b>th column:
+            <var>a<sub>1j</sub>, a<sub>2j</sub>, &hellip;, a<sub>mj</sub></var>
+          </li>
+          <li>
+            zero matrix, denoted <var></var>
+          </li>
+        </ul>
       </p>
     </section>
   </section>
