@@ -7,9 +7,15 @@
     body {
       margin-left: 1.2rem;
     }
+    caption {
+      text-align: left;
+    }
     th, td {
       padding-right: 1.2rem;
       vertical-align: text-bottom;
+    }
+    th {
+      text-align: left;
     }
     section, article {
       margin-top: 1rem;
@@ -19,7 +25,7 @@
     article {
       margin-right: 2rem;
     }
-    .definition, .theorem, .description {
+    .definition, .proposition, .description {
       padding-right: 1rem;
       padding-left: 1rem;
     }
@@ -28,27 +34,30 @@
       padding-bottom: 0.2rem;
       background-color: lightgrey;
     }
+    .center {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 <article>
 <h1>Linear Algebra [線形代数]</h1>
-  <section id="Fields">
+  <section id="fields">
     <h2>Fields (Appendix C)</h2>
     <section id="definition-field" class="definition">
       <p>
-        <strong>Definition (Field [体])</strong>:
+        <strong>Definition (field [体])</strong>:
         A field is a set on which two operations <var>+</var> (addition) and &middot; (multiplication) are defined so that, for each pair of elements <var>x</var>, <var>y</var> in <var>F</var>, there are unique elements in <var>F</var>, denoted <var>x+y</var> and <var>x&middot;y</var>, and such that the following conditions hold for all elements <var>a, b, c</var> in <var>F</var>.
         <section id="field-axioms">
           <table>
-            <caption style="text-align: left;">
-              <strong>The Field Axioms</strong> [体の公理]
+            <caption>
+              <strong>The field axioms</strong> [体の公理]
             </caption>
             <tr>
               <th></th>
               <th></th>
-              <th style="text-align: left;">addition</th>
-              <th style="text-align: left;">multiplication</th>
+              <th>addition</th>
+              <th>multiplication</th>
             </tr>
             <tr>
               <td>交換則</td>
@@ -77,14 +86,14 @@
             <tr>
               <td>分配則</td>
               <td>distributivity of &middot; over +</td>
-              <td colspan="2" style="text-align: center;">
+              <td colspan="2" class="center">
                 a&middot;(b+c) = a&middot;b+a&middot;c
               </td>
             </tr>
             <tr>
               <td></td>
               <td>zero-one law</td>
-              <td colspan="2" style="text-align: center;">
+              <td colspan="2" class="center">
                 0 &ne; 1
               </td>
             </tr>
@@ -93,9 +102,9 @@
         For the zero-one law as an field axiom, refer Mayer (2006).
       </p>
     </section>
-    <section id="cancellation-laws" class="theorem">
+    <section id="cancellation-laws" class="proposition">
       <p>
-        <strong>Theorem (Cancellation Laws)</strong> [簡約律]:
+        <strong>Theorem (cancellation laws)</strong> [簡約律]:
         Let <var>F</var> be a field. For all elements <var>a, b, c, d &in; F</var>,
         <section>
           <table>
@@ -176,9 +185,9 @@
         </ol>
       </p>
     </section>
-    <section id="unique-identity-inverse" class="theorem">
+    <section id="unique-identity-inverse" class="proposition">
       <p>
-        <strong>Corollary (Unique identities and inverses)</strong>:
+        <strong>Corollary (unique identities and inverses)</strong>:
         Let <var>F</var> be a field and <var>a &in; F</var>, then
         <ul>
           <li>Additive identity (0) is unique.</li>
@@ -212,7 +221,7 @@
         </ul>
       </p>
     </section>
-    <section id="substraction-division" class="theorem">
+    <section id="substraction-division" class="proposition">
       <p>
         <strong>Subtraction</strong> (&minus;) and <strong>division</strong> (&divide; or &frasl;) can be defined in terms of addition and multiplication by using the additive and multiplicative inverses. Let <var>F</var> be a field. For all <var>a &in; F</var> and all <var>b&NotEqual;0 &in; F</var>,
         <ul>
@@ -225,9 +234,9 @@
         </ul>
       </p>
     </section>
-    <section id="multiplications" class="theorem">
+    <section id="multiplications-in-fields" class="proposition">
       <p>
-        <strong>Corollary (Multiplications)</strong>:
+        <strong>Corollary (multiplications in fields)</strong>:
         Let <var>F</var> be a field. For all <var>a, b &in; F</var>,
         <ol>
           <li>a&middot;0 = 0</li>
@@ -335,7 +344,7 @@
             <tr>
               <td></td>
               <td>= 0</td>
-              <td>by corollary (Multiplications, no.1)</td>
+              <td>by corollary (multiplications in fields, no.1)</td>
             </tr>
           </table>
         </section>
@@ -346,14 +355,14 @@
     <h2>Vector Spaces [ベクトル空間]</h2>
     <section id="define-vector-space" class="definition">
       <p>
-        <strong>Definition (Vector Space)</strong>:
+        <strong>Definition (vector space)</strong>:
         A vector space <var>V</var> over a field <var>F</var> consists of a set on which two operations (addition [加法] and scalar multiplication [スカラー倍]) are defined so that:
         <ul>
           <li>
             for each pair of elements <var>x, y &in; V</var>, there is a unique element <var>x+y &in; V</var>, and
           </li>
           <li>
-            for each element <var>a &in; F</var>, there is a unique element <var>a&InvisibleTimes;x &in; V</var>,
+            for each element <var>a &in; F</var> and for each element <var>x &in; V</var>, there is a unique element <var>a&InvisibleTimes;x &in; V</var>,
           </li>
         </ul>
         such that the following conditions hold:
@@ -362,8 +371,8 @@
         <table>
           <tr>
             <th></th>
-            <th style="text-align: left;">addition</th>
-            <th style="text-align: left;">scalar multiplication</th>
+            <th>addition</th>
+            <th>scalar multiplication</th>
           </tr>
           <tr>
             <td>commutativity</td>
@@ -392,19 +401,130 @@
           </tr>
         </table>
       </section>
-      We call:
-      <section>
-        <table>
-          <tr>
-            <th>scalars</th>
-            <td>the elements of the field <var>F</var></td>
-          </tr>
-          <tr>
-            <th>vectors</th>
-            <td>the elements of the vector space <var>V</var></td>
-          </tr>
-        </table>
-      </section>
+    </section>
+    <section class="description">
+      <p>
+        We call:
+        <section>
+          <dl>
+            <dt>scalars</dt>
+            <dd>the elements of the field <var>F</var></dd>
+            <dt>vectors</dt>
+            <dd>the elements of the vector space <var>V</var></dd>
+            <dt>zero vector</dt>
+            <dd>
+              <var>0</var>, the additive identity;
+              also appeared in existence of inverse
+            </dd>
+          </dl>        
+        </section>
+      </p>
+    </section>
+    <section id="cancellation-law-vector" class="proposition">
+      <p>
+        <strong>Theorem (cancellation law for vector addition)</strong>:
+        Let <var>V</var> be a vector space, and <var>x, y, z &in; V</var>, then
+        <section>
+          <table>
+            <tr>
+              <td><var>x + z = y + z</var></td>
+              <td>&Implies;</td>
+              <td><var>x = y</var></td>
+            </tr>
+          </table>
+        </section>
+        Proof:
+        There is <var>u &in; V</var> such that <var>z + u = 0</var> (existence of additive inverse), then
+        <section>
+          <table>
+            <tr>
+              <td><var>x</var></td>
+              <td><var>= x + 0</var></td>
+              <td>existence of additive identity</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><var>= x + (z + u)</var></td>
+              <td>since <var>z + u = 0</var></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><var>= (x + z) + u</var></td>
+              <td>associativity of addition</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><var>= (y + z) + u</var></td>
+              <td>since <var>x + z = y + z</var></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><var>= y + (z + u)</var></td>
+              <td>associativity of addition</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><var>= y + 0</var></td>
+              <td>since <var>z + u = 0</var></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><var>= y</var></td>
+              <td>existence of additive identity</td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="unique-zero-vector" class="proposition">
+      <p>
+        <strong>Corollary (unique zero vector)</strong>:
+        The zero vector is unique.
+      </p>
+      <p>
+        Proof: Let <var>V</var> be a vector space, and <var>x &in; V</var>. Suppose that <var>0&prime; &in; V</var> is an zero vector, too. Then,
+        <section>
+          <table>
+            <tr>
+              <td>0&prime; + x</td>
+              <td>= x</td>
+              <td>since 0&prime; is an zero vector</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= 0 + x</td>
+              <td>since 0 is an zero vector</td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                Hence <var>0&prime; = 0</var> by the cancellation law.
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="theorem-scalar-multiplications" class="proposition">
+      <p>
+        <strong>Theorem (scalar multiplications in vector spaces)</strong>:
+        In any vector space <var>V</var> over a field <var>F</var>, the following statements are true:
+        <ol>
+          <li>
+            <var>0&InvisibleTimes;x = 0</var> for each <var>x &in; V</var>
+          </li>
+          <li>
+            <var>
+              (&minus;a)&InvisibleTimes;x
+              = &minus;(a&InvisibleTimes;x)
+              = a&InvisibleTimes;(&minus;x)
+            </var>
+            for each <var>a &in; F</var> and for each <var>x &in; V</var>
+          </li>
+          <li>
+            <var>a&InvisibleTimes;0 = 0</var> for each <var>a &in; F</var>
+          </li>
+        </ol>
+      </p>
     </section>
     <section id="tuple" class="description">
       <p>
@@ -456,8 +576,8 @@
     </section>
     <section id="set-of-tuple" class="description">
       <p>
-        <strong>Notation (sets of n-tuple)</strong>:
-        The set of all n-tuples with entries from a filed <var>F</var> is denoted by <var>F<sup>n</sup></var>. For example,
+        <strong>Notation (a set of n-tuples)</strong>:
+        The set of all n-tuples with entries from a filed <var>F</var> is denoted <strong><var>F<sup>n</sup></var></strong>, e.g.,
         <section>
           <table>
             <tr>
@@ -482,7 +602,7 @@
             </tr>
           </table>
         </section>
-        <var>F<sup>n</sup></var> is a vector space over <var>F</var> with the operations of coordinative addition and scalar multiplication; that is, if <var>c &in; F</var>, then
+        <strong><var>F<sup>n</sup></var> is a vector space over <var>F</var></strong> with the operations of coordinative addition and scalar multiplication; that is, if <var>c &in; F</var>, then
         <section>
           <table>
             <tr>
@@ -543,7 +663,7 @@
     <section id="matrix" class="description">
       <p>
         <strong>Notation (matrix)</strong>:
-        An <var>m &times; n</var> matrix with entries from a field <var>F</var> is
+        An <var>m&times;n</var> matrix with entries from a field <var>F</var> is
         <section>
           <math displaystyle="true">
             <mrow>
@@ -602,7 +722,7 @@
         <ul>
           <li>
             diagonal entries:
-            <var>a<sub>ij</sub> with <var>i = j</var>
+            <var>a<sub>ij</sub> with <var>i=j</var>
           </li>
           <li>
             <b>i</b>th row:
@@ -613,7 +733,113 @@
             <var>a<sub>1j</sub>, a<sub>2j</sub>, &hellip;, a<sub>mj</sub></var>
           </li>
           <li>
-            zero matrix, denoted <var></var>
+            zero matrix, denoted &Oslash;
+          </li>
+          <li>
+            square matrix, if <var>m=n</var>
+          </li>
+        </ul>
+      </p>
+      <p>
+        We denote
+        <ul>
+          <li>matrices by capital letters, e.g. <var>A</var>, and</li>
+          <li>the entry of a matrix <var>A</var> that lies in row <var>i</var> and column <var>j</var> by <var>A<sub>ij</sub></var>.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="set-of-matrices" class="description">
+      <p>
+        <strong>Notation (a set of matrix)</strong>:
+        The set of all <var>m&times;n</var> matrices with each entries from a field <var>F</var> is denoted
+        <strong><var>M<sub>m&times;n</sub>(F)</var></strong>.
+      </p>
+      <p>
+        <strong>
+          <var>M<sub>m&times;n</sub>(F)</var> is vector space over <var>F</var>
+        </strong>
+        with the following operations of matrix addition and scalar multiplication; for
+        <var>A, B &in; M<sub>m&times;n</sub>(F)</var> and <var>c &in; F</var>, and <var>1 &le; i &le; m</var> and <var>1 &le; j &le; n</var>,
+        <section>
+        </section>
+      </p>
+      <section>
+        <math>
+          <mrow>
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <msub>
+                      <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>A</mi><mo>+</mo><mi>B</mi>
+                        <mo fence="true">&rpar;</mo>
+                      </mrow>
+                      <mrow>
+                        <mi>i</mi><mo>&InvisibleComma;</mo><mi>j</mi>
+                      </mrow>
+                    </msub>
+                  </mrow>
+                  <mo>&equals;</mo>
+                  <mrow>
+                    <msub>
+                      <mi>A</mi>
+                      <mrow>
+                        <mi>i</mi><mo>&InvisibleComma;</mo><mi>j</mi>
+                      </mrow>
+                    </msub>
+                    <mo>&plus;</mo>
+                    <msub>
+                      <mi>B</mi>
+                      <mrow>
+                        <mi>i</mi><mo>&InvisibleComma;</mo><mi>j</mi>
+                      </mrow>
+                    </msub>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <msub>
+                      <mrow>
+                        <mo fence="true">&lpar;</mo>
+                        <mi>c</mi>
+                        <mo>&InvisibleTimes;</mo>
+                        <mi>A</mi>
+                        <mo fence="true">&rpar;</mo>
+                      </mrow>
+                      <mrow>
+                        <mi>i</mi><mo>&InvisibleComma;</mo><mi>j</mi>
+                      </mrow>
+                    </msub>
+                  </mrow>
+                  <mo>&equals;</mo>
+                  <mrow>
+                    <mi>c</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msub>
+                      <mi>A</mi>
+                      <mrow>
+                        <mi>i</mi><mo>&InvisibleComma;</mo><mi>j</mi>
+                      </mrow>
+                    </msub>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mrow>
+        </math>
+      </section>
+      <p>
+        The definitions of matrix addition and scalar multiplication in <var>M<sub>m&times;n</sub>(F)</var> are natural extensions of the corresponding operations in <var>F<sup>n</sup></var> and <var>F<sup>m</sup></var>. Let <var>A, B &in; M<sub>m&times;n</sub>(F)</var> and <var>c &in; F</var>, then
+        <ul>
+          <li>
+            <var>A + B</var> is the matrix <var>M<sub>m&times;n</sub>(F)</var> whose <b>i</b>th row vector is the sum of the <b>i</b>th row vectors of <var>A</var> and <var>B</var>, and
+          </li>
+          <li>
+            <var>c&InvisibleTimes;A</var> is the matrix <var>M<sub>m&times;n</sub>(F)</var> whose <b>i</b>th row vector is <var>c</var> times the <b>i</b>th row vector of <var>A</var>.
           </li>
         </ul>
       </p>
