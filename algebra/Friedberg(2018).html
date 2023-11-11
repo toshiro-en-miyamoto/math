@@ -360,11 +360,11 @@
       </p>
     </section>
   </section>
-  <section id="vector-space">
-    <h2>Vector Spaces [ベクトル空間]</h2>
+  <section id="vector-spaces">
+    <h2>Vector Spaces</h2>
     <section id="define-vector-space" class="definition">
       <p>
-        <strong>Definition (vector space)</strong>:
+        <strong>Definition (vector space [ベクトル空間])</strong>:
         A vector space <var>V</var> over a field <var>F</var> consists of a set on which two operations (vector addition and scalar multiplication [スカラー倍]) are defined so that for each scalar <var>a &in; F</var> and for each vector <var>x, y &in; V</var>:
         <ul>
           <li>
@@ -451,47 +451,6 @@
             </tr>
           </table>
         </section>
-        Proof:
-        There is <var>u &in; V</var> such that <var>z + u = 0</var> (existence of additive inverse), then
-        <section>
-          <table>
-            <tr>
-              <td><var>x</var></td>
-              <td><var>= x + 0</var></td>
-              <td>existence of additive identity</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><var>= x + (z + u)</var></td>
-              <td>since <var>z + u = 0</var></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><var>= (x + z) + u</var></td>
-              <td>associativity of addition</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><var>= (y + z) + u</var></td>
-              <td>since <var>x + z = y + z</var></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><var>= y + (z + u)</var></td>
-              <td>associativity of addition</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><var>= y + 0</var></td>
-              <td>since <var>z + u = 0</var></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><var>= y</var></td>
-              <td>existence of additive identity</td>
-            </tr>
-          </table>
-        </section>
       </p>
     </section>
     <section id="unique-zero-vector" class="proposition">
@@ -571,22 +530,6 @@
                 a<sub>i</sub> = b<sub>i</sub>
                 (for any <var>i</var>, where <var>1 &le; i &le; n</var>)
               </td>
-            </tr>
-          </table>
-        </section>
-        Recall that two sets <var>A</var> and <var>B</var> are called equal, written <var>A = B</var>, if they contain exactly the same elements. For example,
-        <section>
-          <table>
-            <tr>
-              <td>{1, 2, 3} = {2, 1, 3}</td>
-            </tr>
-          </table>
-        </section>
-        Note that with the n-tuple, the order of elements matters:
-        <section>
-          <table>
-            <tr>
-              <td>(1, 2, 3) &ne; (2, 1, 3)</td>
             </tr>
           </table>
         </section>
@@ -859,6 +802,24 @@
           <li>
             <var>c&InvisibleTimes;A</var> is the matrix <var>M<sub>m&times;n</sub>(F)</var> whose <b>i</b>th row vector is <var>c</var> times the <b>i</b>th row vector of <var>A</var>.
           </li>
+        </ul>
+      </p>
+    </section>
+  </section>
+  <section id="subspaces">
+    <h2>Subspaces</h2>
+    <section id="define-subspace" class="definition">
+      <p>
+        <strong>Definition (subspace 部分空間)</strong>:
+        A subset of a vector space <var>V</var> over a field <var>F</var> is called a <strong>subspace</strong> of <var>V</var>
+        &mdash;
+        if the subset is a vector space over <var>F</var> with the operations of addition and scalar multiplication defined on <var>V</var>.
+      </p>
+      <p>
+        For any vector space <var>V</var>,
+        <ul>
+          <li><var>V</var> and <var>{0}</var> are subspaces of <var>V</var></li>
+          <li><var>{0}</var> is called a <strong>zero subspace</strong></li>
         </ul>
       </p>
     </section>
