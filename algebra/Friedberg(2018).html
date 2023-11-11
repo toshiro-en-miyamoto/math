@@ -47,11 +47,20 @@
     <section id="definition-field" class="definition">
       <p>
         <strong>Definition (field [体])</strong>:
-        A field is a set on which two operations <var>+</var> (addition) and &middot; (multiplication) are defined so that, for each pair of elements <var>x</var>, <var>y</var> in <var>F</var>, there are unique elements in <var>F</var>, denoted <var>x+y</var> and <var>x&middot;y</var>, and such that the following conditions hold for all elements <var>a, b, c</var> in <var>F</var>.
+        A field <var>F</var> is a set on which two operations (addition and multiplication) are defined so that for each pair of elements <var>x, y &in; F</var>,
+        <ul>
+          <li>
+            there is a unique element <var>x+y &in; F</var>
+          </li>
+          <li>
+            there is a unique element <var>x&middot;y</var>
+          </li>
+        </ul>
+        such that the following conditions hold for all elements <var>a, b, c</var> in <var>F</var>:
         <section id="field-axioms">
           <table>
             <caption>
-              <strong>The field axioms</strong> [体の公理]
+              <strong>Field axioms</strong> [体の公理]
             </caption>
             <tr>
               <th></th>
@@ -125,59 +134,59 @@
         Proof:
         <ol>
           <li>
-            Existence of additive inverse of the field axioms guarantees that there exists an element <var>&minus;b &in; F</var>.
+            There exists an element <var>d &in; F</var> such that <var>b+d = 0</var>.
             <section>
               <table>
                 <tr>
                   <td>
-                    (a+b)+(&minus;b) = (c+b)+(&minus;b)
+                    (a+b)+d = (c+b)+d
                   </td>
-                  <td>by adding (&minus;b) to both sides</td>
+                  <td>by adding <var>d</var> to both sides</td>
                 </tr>
                 <tr>
                   <td>
-                    a+{b+(&minus;b)} = c+{b+(&minus;b)}
+                    a+{b+d} = c+{b+d}
                   </td>
-                  <td>by associativity of addition</td>
+                  <td>associativity of addition</td>
                 </tr>
                 <tr>
                   <td>a+0 = c+0</td>
-                  <td>by existence of additive inverse</td>
+                  <td>since <var>b+d = 0</var></td>
                 </tr>
                 <tr>
                   <td>a = c</td>
-                  <td>by existence of additive identity</td>
+                  <td>existence of additive identity</td>
                 </tr>
               </table>
             </section>
           </li>
           <li>
-            Existence of multiplicative inverse of the field axioms guarantees that if <var>d&NotEqual;0</var>, there exists an element <var>d<sup>-1</sup> &in; F</var>.
+            If <var>d&NotEqual;0</var>, there exists an element <var>e</var> such that <var>d&middot;e = 1</var>.
             <section>
               <table>
                 <tr>
                   <td>
-                    (a&middot;d)&middot;d<sup>-1</sup>
+                    (a&middot;d)&middot;e
                     =
-                    (c&middot;d)&middot;d<sup>-1</sup>
+                    (c&middot;d)&middot;e
                   </td>
-                  <td>by multiplying both sides by d<sup>-1</sup></td>
+                  <td>by multiplying both sides by <var>e</td>
                 </tr>
                 <tr>
                   <td>
-                    a&middot;(d&middot;d<sup>-1</sup>)
+                    a&middot;(d&middot;e)
                     =
-                    c&middot;(d&middot;d<sup>-1</sup>)
+                    c&middot;(d&middot;e)
                   </td>
-                  <td>by associativity of multiplication</td>
+                  <td>associativity of multiplication</td>
                 </tr>
                 <tr>
                   <td>a&middot;1 = c&middot;1</td>
-                  <td>by existence of multiplicative inverse</td>
+                  <td>since <var>d&middot;e = 1</var></td>
                 </tr>
                 <tr>
                   <td>a = c</td>
-                  <td>by existence of multiplicative identity</td>
+                  <td>existence of multiplicative identity</td>
                 </tr>
               </table>
             </section>
@@ -254,7 +263,7 @@
                 <tr>
                   <td>0+a&middot;0</td>
                   <td>= a&middot;0</td>
-                  <td>by existence of additive identity</td>
+                  <td>existence of additive identity</td>
                 </tr>
                 <tr>
                   <td></td>
@@ -264,7 +273,7 @@
                 <tr>
                   <td></td>
                   <td>= a&middot;0+a&middot;0</td>
-                  <td>by distributivity of &middot; over +</td>
+                  <td>distributivity of &middot; over +</td>
                 </tr>
               </table>
               Hence <var>a&middot;0 = 0</var> by the additive cancellation law.
@@ -277,17 +286,17 @@
                 <tr>
                   <td>a&middot;b+(&minus;a)&middot;b</td>
                   <td>= {a+(&minus;a)}&middot;b</td>
-                  <td>by distributivity of &middot; over +</td>
+                  <td>distributivity of &middot; over +</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>= 0&middot;b</td>
-                  <td>by existence of additive identity</td>
+                  <td>existence of additive identity</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>= 0</td>
-                  <td>by corollary 1</td>
+                  <td>corollary 1</td>
                 </tr>
               </table>
               Hence <var>(&minus;a)&middot;b = &minus;(a&middot;b)</var> by existence of additive inverse. The proof that <var>a&middot;(&minus;b) = &minus;(a&middot;b)</var> is similar.
@@ -334,7 +343,7 @@
             <tr>
               <td>x</td>
               <td>= 1&middot;x</td>
-              <td>by existence of multiplicative identity</td>
+              <td>existence of multiplicative identity</td>
             </tr>
             <tr>
               <td></td>
@@ -344,7 +353,7 @@
             <tr>
               <td></td>
               <td>= 0</td>
-              <td>by corollary (multiplications in fields, no.1)</td>
+              <td>corollary (multiplications in fields, no.1)</td>
             </tr>
           </table>
         </section>
@@ -356,67 +365,76 @@
     <section id="define-vector-space" class="definition">
       <p>
         <strong>Definition (vector space)</strong>:
-        A vector space <var>V</var> over a field <var>F</var> consists of a set on which two operations (addition [加法] and scalar multiplication [スカラー倍]) are defined so that:
+        A vector space <var>V</var> over a field <var>F</var> consists of a set on which two operations (vector addition and scalar multiplication [スカラー倍]) are defined so that for each scalar <var>a &in; F</var> and for each vector <var>x, y &in; V</var>:
         <ul>
           <li>
-            for each pair of elements <var>x, y &in; V</var>, there is a unique element <var>x+y &in; V</var>, and
+            there is a unique element <var>x+y &in; V</var>
           </li>
           <li>
-            for each element <var>a &in; F</var> and for each element <var>x &in; V</var>, there is a unique element <var>a&InvisibleTimes;x &in; V</var>,
+            there is a unique element <var>a&InvisibleTimes;x &in; V</var>
           </li>
         </ul>
-        such that the following conditions hold:
+        such that the following conditions hold for each scalar <var>a, b &in; F</var> and for each vector <var>x, y, z &in; V</var>:
+        <section>
+          <table>
+            <caption>
+              <strong>Vector space axioms</strong>
+            </caption>
+            <tr>
+              <th></th>
+              <th>vector addition</th>
+              <th>scalar multiplication</th>
+            </tr>
+            <tr>
+              <td>commutativity</td>
+              <td>x+y = y+x</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>associativity</td>
+              <td>(x+y)+z = x+(y+z)</td>
+              <td>(ab)x = a(bx)</td>
+            </tr>
+            <tr>
+              <td>existence of identity</td>
+              <td>x+0 = x</td>
+              <td>1x = x</td>
+            </tr>
+            <tr>
+              <td>existence of inverse</td>
+              <td>x+(&minus;x) = 0</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>distributivity</td>
+              <td>a(x+y) = ax+ay</td>
+              <td>(a+b)x=ax+bx</td>
+            </tr>
+          </table>
+        </section>
       </p>
-      <section>
-        <table>
-          <tr>
-            <th></th>
-            <th>addition</th>
-            <th>scalar multiplication</th>
-          </tr>
-          <tr>
-            <td>commutativity</td>
-            <td>x+y = y+x</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>associativity</td>
-            <td>(x+y)+z = x+(y+z)</td>
-            <td>(ab)x = a(bx)</td>
-          </tr>
-          <tr>
-            <td>existence of identity</td>
-            <td>x+0 = x</td>
-            <td>1x = x</td>
-          </tr>
-          <tr>
-            <td>existence of inverse</td>
-            <td>x+(&minus;x) = 0</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>distributivity</td>
-            <td>a(x+y) = ax+ay</td>
-            <td>(a+b)x=ax+bx</td>
-          </tr>
-        </table>
-      </section>
     </section>
     <section class="description">
       <p>
         We call:
         <section>
-          <dl>
-            <dt>scalars</dt>
-            <dd>the elements of the field <var>F</var></dd>
-            <dt>vectors</dt>
-            <dd>the elements of the vector space <var>V</var></dd>
-            <dt>zero vector</dt>
-            <dd>
-              <var>0</var>, the additive identity;
-              also appeared in existence of inverse
-            </dd>
-          </dl>        
+          <table>
+            <tr>
+              <th>scalars</th>
+              <td>the elements of the field <var>F</var></td>
+            </tr>
+            <tr>
+              <th>vectors</th>
+              <td>the elements of the vector space <var>V</var></td>
+            </tr>
+            <tr>
+              <th>zero vector</th>
+              <td>
+                <var>0</var>, the additive identity;
+                also appeared in existence of inverse
+              </td>
+            </tr>
+          </table>
         </section>
       </p>
     </section>
