@@ -823,6 +823,197 @@
         </ul>
       </p>
     </section>
+    <section id="subspace-iff" class="proposition">
+      <p>
+        <strong>Theorem (subspace conditions)</strong>:
+        Let <var>V</var> be a vector space and <var>W</var> a subset of <var>V</var>. Then
+        <ul>
+          <li>
+            <var>W</var> is a subspace of <var>V</var>
+          </li>
+        </ul>
+        if and only if
+        <ol start="i">
+          <li>
+            <var>0 &in; W</var>
+          </li>
+          <li>
+            <var>x+y &in; W</var> whenever
+            <var>x &in; W</var> and <var>y &in; W</var>
+          </li>
+          <li>
+            <var>c&InvisibleTimes;x &in; W</var> whenever
+            <var>c &in; F</var> and <var>x &in; W</var>
+          </li>
+        </ol>
+      </p>
+    </section>
+    <section class="proposition">
+      <p>
+        <strong>Corollary (additive inverses)</strong>:
+        <var>W</var> is a subspace of <var>V</var> if
+        <ul>
+          <li>
+            there exists
+            <var>&minus;x &in; W</var> for each <var>x &in; W</var>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Proof: For each <var>x &in; W</var>,
+        <section>
+          <table>
+            <tr>
+              <td>
+                <var>(&minus;1)&InvisibleTimes;x &in; W</var>
+              </td>
+              <td>condition 3</td>
+            </tr>
+            <tr>
+              <td>
+                <var>&minus;x = (&minus;1)&InvisibleTimes;x</var>
+              </td>
+              <td>vector multiplication theorem</td>
+            </tr>
+            <tr>
+              <td colspan="2">Hence, <var>&minus;x &in; W</var></td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="transpose" class="description">
+      <p>
+        <strong>Notation (transpose [転置行列])</strong>:
+        The transpose <var>A<sup>t</sup></var> of an <var>m&times;n</var> matrix <var>A</var> is the <var>n&times;m</var> matrix obtained from <var>A</var> by interchanging the rows with the columns; that is,
+        <section>
+          <math>
+            <mrow>
+              <mrow>
+                <msub>
+                  <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <msup><mi>A</mi><mi>t</mi></msup>
+                    <mo fence="true">&rpar;</mo>
+                  </mrow>
+                  <mrow>
+                    <mi>i</mi><mo>&InvisibleComma;</mo><mi>j</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+              <mo>&equals;</mo>
+              <mrow>
+                <msub>
+                  <mi>A</mi>
+                  <mrow>
+                    <mi>j</mi><mo>&InvisibleComma;</mo><mi>i</mi>
+                  </mrow>
+                </msub>
+              </mrow>
+            </mrow>
+          </math>
+        </section>
+        For example,
+        <section>
+          <math>
+            <mrow>
+              <mrow>
+                <msup>
+                  <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mtable>
+                      <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>&minus;2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd><mn>0</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>&minus;1</mn></mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true">&rpar;</mo>
+                  </mrow>
+                  <mi>t</mi>
+                </msup>
+              </mrow>
+              <mo>&equals;</mo>
+              <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                  <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>0</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>&minus;2</mn></mtd>
+                    <mtd><mn>5</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>3</mn></mtd>
+                    <mtd><mn>&minus;1</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+            </mrow>
+          </math>
+        </section>
+      </p>
+    </section>
+    <section id="symmetric-matrix" class="description">
+      <p>
+        <strong>Symmetric matrix</strong>:
+        A symmetric matrix is a matrix such that
+        <section>
+          <var>A<sup>t</sup> = A</var>
+        </section>
+      </p>
+      <p>
+        For example,
+        <section>
+          <math>
+            <mrow>
+              <mrow>
+                <msup>
+                  <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mtable>
+                      <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true">&rpar;</mo>
+                  </mrow>
+                  <mrow><mi>t</mi></mrow>
+                </msup>
+              </mrow>
+              <mo>&equals;</mo>
+              <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                  <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>2</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>2</mn></mtd>
+                    <mtd><mn>3</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+            </mrow>
+          </math>
+        </section>
+      </p>
+    </section>
   </section>
   <section id="reference">
     <h2>References</h2>
