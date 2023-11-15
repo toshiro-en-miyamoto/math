@@ -562,7 +562,7 @@
             </tr>
           </table>
         </section>
-        <strong><var>F<sup>n</sup></var> is a vector space over <var>F</var></strong> with the operations of coordinative addition and scalar multiplication; that is, if <var>c &in; F</var>, then
+        <var>F<sup>n</sup></var> is a vector space over <var>F</var> with the operations of coordinative addition and scalar multiplication; that is, if <var>c &in; F</var>, then
         <section>
           <table>
             <tr>
@@ -693,8 +693,7 @@
             <var>a<sub>1j</sub>, a<sub>2j</sub>, &hellip;, a<sub>mj</sub></var>
           </li>
           <li>
-            zero matrix: denoted <var>0</var>,
-            where <var>a<sub>ij</sub> = 0</var> for any <var>i</var>, <var>j</var>
+            zero matrix: denoted <var>0</var>, all of its entries are 0
           </li>
           <li>
             square matrix [正方行列]:
@@ -717,10 +716,7 @@
         <var>M<sub>m&times;n</sub>(F)</var>.
       </p>
       <p>
-        <strong>
-          <var>M<sub>m&times;n</sub>(F)</var> is vector space over <var>F</var>
-        </strong>
-        with the following operations of matrix addition and scalar multiplication; for
+        <var>M<sub>m&times;n</sub>(F)</var> is a vector space over <var>F</var> with the following operations of matrix addition and scalar multiplication; for
         <var>A, B &in; M<sub>m&times;n</sub>(F)</var> and <var>c &in; F</var>, and <var>1 &le; i &le; m</var> and <var>1 &le; j &le; n</var>,
         <section>
         </section>
@@ -1228,11 +1224,9 @@
       <p>
         <strong>Theorem (subspace conditions)</strong>:
         Let <var>V</var> be a vector space and <var>W</var> a subset of <var>V</var>. Then
-        <ul>
-          <li>
-            <var>W</var> is a subspace of <var>V</var>
-          </li>
-        </ul>
+        <section>
+          <var>W</var> is a subspace of <var>V</var>
+        </section>
         if and only if
         <ol start="i">
           <li>
@@ -1252,13 +1246,7 @@
     <section class="proposition">
       <p>
         <strong>Corollary (additive inverses)</strong>:
-        <var>W</var> is a subspace of <var>V</var> if
-        <ul>
-          <li>
-            there exists
-            <var>&minus;x &in; W</var> for each <var>x &in; W</var>
-          </li>
-        </ul>
+        Let <var>W</var> be a subspace of <var>V</var>, then there exists <var>&minus;x &in; W</var> for each <var>x &in; W</var>.
       </p>
       <p>
         Proof: For each <var>x &in; W</var>,
@@ -1266,18 +1254,19 @@
           <table>
             <tr>
               <td>
-                <var>(&minus;1)&InvisibleTimes;x &in; W</var>
+                &minus;x
               </td>
-              <td>condition 3</td>
-            </tr>
-            <tr>
               <td>
-                <var>&minus;x = (&minus;1)&InvisibleTimes;x</var>
+                = <var>(&minus;1)&InvisibleTimes;x</var>
               </td>
-              <td>vector multiplication theorem</td>
+              <td>&because; vector multiplication theorem</td>
             </tr>
             <tr>
-              <td colspan="2">Hence, <var>&minus;x &in; W</var></td>
+              <td></td>
+              <td>
+                <var>&in; W</var>
+              </td>
+              <td>&because; subspace condition 3</td>
             </tr>
           </table>
         </section>
@@ -1743,13 +1732,18 @@
             = <var>A<sup>t</sup></var> + <var>B<sup>t</sup></var>
             = <bar>A+B</bar>
           </li>
+          <li>
+            <var>aA &in; W</var>, &because; if <var>A &in; W</var> and <var>a &in; F</var>,
+            <var>(aA)<sup>t</sup></var>
+            = <var>aA<sup>t</sup></var> = <var>aA</var>
+          </li>
         </ol>
       </p>
     </section>
     <section id="upper-triangular" class="description">
       <p>
-        <strong>Upper triangular</strong>:
-        An <var>m&times;n</var> matrix <var>A</var> is called upper triangular if <var>A<sub>ij</sub> = 0</var> whenever <var>i > j</var>. For example,
+        <strong>Upper triangular [上三角行列]</strong>:
+        An <var>m&times;n</var> matrix <var>A</var> is called upper triangular if <var>A<sub>ij</sub> = 0</var> whenever <var>i > j</var>.
         <section>
           <math>
             <mrow>
@@ -1785,8 +1779,8 @@
       </p>
     </section>
     <section id="diagnal-matrix" class="description">
-      <strong>Diagonal matrix</strong>:
-      An <var>m&times;n</var> matrix <var>M</var> is called a diagonal matrix if <var>M<sub>ij</sub> = 0</var> whenever <var>i &ne; j</var>.
+      <strong>Diagonal matrix [対角行列]</strong>:
+      An <var>n&times;n</var> matrix <var>B</var> is called a diagonal matrix if <var>B<sub>ij</sub> = 0</var> whenever <var>i &ne; j</var>.
       <section>
         <math>
           <mrow>
@@ -1816,6 +1810,114 @@
           </mrow>
         </math>
       </section>
+    </section>
+    <section id="diagnonal-subspace" class="description">
+      <p>
+        The set of diagonal matrices <var>W</var> is a subspace of <var>M<sub>n&times;n</sub>(F)</var>.
+        <ol>
+          <li>
+            <var>0 &in; W</var>, because
+            the zero matrix is a diagonal matrix
+          </li>
+          <li>
+            <var>A+B &in; W</var>. Let <var>A, B</var> be diagonal <var>n&times;n</var> matrices, then whenever <var>i &ne; j</var>
+            <section>
+              <var>
+                (A+B)<sub>ij</sub> = A<sub>ij</sub> + B<sub>ij</sub>
+                = 0 + 0 = 0
+              </var>
+            </section>
+          </li>
+          <li>
+            <var>cA &in; W</var>. Let <var>A</var> be a diagonal <var>n&times;n</var> matrix and <var>c &in; F</var>, then whenever <var>i &ne; j</var>
+            <section>
+              <var>
+                (cA)<sub>ij</sub> = cA<sub>ij</sub> = c0 = 0
+              </var>
+            </section>
+          </li>
+        </ol>
+      </p>
+    </section>
+    <section id="polynominal-set-degree" class="description">
+      <p>
+        <strong>
+          Notation (a set of all polynomials with degree <var>&le; n</var>)
+        </strong>:
+        Let <var>n &ge; 0</var>, and let <var>P<sub>n</sub>(F)</var> consist of all polynomials in <var>P(F)</var> having degree <var>&le; n</var>. Then <var>P<sub>n</sub>(F)</var> is a subspace of <var>P(F)</var>.
+        <ol>
+          <li>
+            the zero polynomial <var>&in; P<sub>n</sub>(F)</var>, because it has degree <var>-1</var>, that is <var>-1 &le; n</var>
+          </li>
+          <li>
+            the sum of two polynomials with degrees <var>&le; n</var> is another polynomial of degree <var>&le; n</var>
+          </li>
+          <li>
+            the product of a scalar and a polynomial of degree <var>&le; n</var> is a polynomial of degree <var>&le; n</var>
+          </li>
+        </ol>
+      </p>
+    </section>
+    <section id="sum-of-subspaces" class="definition">
+      <p>
+        <strong>Definition (sum of subsets)</strong>:
+        <var>S<sub>1</sub> + S<sub>2</sub></var>, the sum of non-empty subsets <var>S<sub>1</sub></var> and <var>S<sub>2</sub></var> of a vector space <var>V</var> is the set
+        <section>
+          <var>{x + y : x &in; S<sub>1</sub>, y &in; S<sub>2</sub>}</var>
+        </section>
+      </p>
+      <p>
+        <strong>Definition (direct sum [直和])</strong>:
+        A vector space <var>V</var> is called the direct sum of <var>W<sub>1</sub></var> and <var>W<sub>2</sub></var>
+        <section>
+          <math>
+            <mrow>
+              <mi>V</mi>
+              <mo>&equals;</mo>
+              <mrow>
+                <msub><mi>W</mi><mn>1</mn></msub>
+                <mo>&CirclePlus;</mo>
+                <msub><mi>W</mi><mn>2</mn></msub>
+              </mrow>
+            </mrow>
+          </math>
+        </section>
+        if they are subspaces of <var>V</var> such that
+        <section>
+          <table>
+            <tr>
+              <td>
+                <math>
+                  <mrow>
+                    <mrow>
+                      <msub><mi>W</mi><mn>1</mn></msub>
+                      <mo>&cap;</mo>
+                      <msub><mi>W</mi><mn>2</mn></msub>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mi>&empty;</mi>
+                  </mrow>
+                </math>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <math>
+                  <mrow>
+                    <mrow>
+                      <msub><mi>W</mi><mn>1</mn></msub>
+                      <mo>&plus;</mo>
+                      <msub><mi>W</mi><mn>2</mn></msub>
+                    </mrow>
+                    <mo>&equals;</mo>
+                    <mi>V</mi>
+                  </mrow>
+                </math>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
     </section>
   </section>
   <section id="reference">
