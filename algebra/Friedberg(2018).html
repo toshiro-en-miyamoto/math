@@ -7,9 +7,6 @@
     body {
       margin-left: 1.2rem;
     }
-    caption {
-      text-align: left;
-    }
     th, td {
       padding-right: 1.2rem;
       vertical-align: text-bottom;
@@ -47,23 +44,23 @@
     <section id="definition-field" class="definition">
       <p>
         <strong>Definition (field [体])</strong>:
-        A field <var>F</var> is a set on which two operations (addition and multiplication) are defined so that for each pair of elements <var>x, y</var> &in; <var>F</var>,
+        A field <var>F</var> is a set on which two operations (addition and multiplication) are defined so that for each pair of elements <var>a, b</var> &in; <var>F</var>,
         <ul>
           <li>
             there is a unique element
-            <var>x</var> + <var>y</var> &in; <var>F</var>
+            <var>a</var>+<var>b</var> &in; <var>F</var>
           </li>
           <li>
             there is a unique element
-            <var>x</var> &middot; <var>y</var> &in; <var>F</var>
+            <var>a</var>&middot;<var>b</var> &in; <var>F</var>
           </li>
         </ul>
-        such that the following conditions hold for all elements <var>a, b, c</var> in <var>F</var>:
+        such that the field axioms hold for all elements <var>a, b, c</var> &in; <var>F</var>.
+      </p>
+      <p>
+        <strong>Axiom (Field axioms [体の公理])</strong>:
         <section id="field-axioms">
           <table>
-            <caption>
-              <strong>Field axioms</strong> [体の公理]
-            </caption>
             <tr>
               <th></th>
               <th></th>
@@ -101,16 +98,9 @@
                 a&middot;(b+c) = a&middot;b+a&middot;c
               </td>
             </tr>
-            <tr>
-              <td></td>
-              <td>zero-one law</td>
-              <td colspan="2" class="center">
-                0 &ne; 1
-              </td>
-            </tr>
           </table>
         </section>
-        For the zero-one law as an field axiom, refer Mayer (2006).
+        The zero ring can be avoided by including the zero-one law (0 &ne; 1).
       </p>
     </section>
     <section id="cancellation-laws" class="proposition">
@@ -387,12 +377,12 @@
             there is a unique element <var>ax</var> &in; <var>V</var>
           </li>
         </ul>
-        such that the following conditions hold for each <var>a, b</var> &in; <var>F</var> and for each <var>x, y, z</var> &in; <var>V</var>:
+        such that the vector space axioms hold for each <var>a, b</var> &in; <var>F</var> and for each <var>x, y, z</var> &in; <var>V</var>.
+      </p>
+      <p>
+        <strong>Axiom (vector space axioms)</strong>
         <section>
           <table>
-            <caption>
-              <strong>Vector space axioms</strong>
-            </caption>
             <tr>
               <th></th>
               <th>vector addition</th>
@@ -1358,11 +1348,6 @@
     <ul>
       <li>
         Friedberg, S.H., et al. (2016). <i>Linear Algebra, 5th Edition</i>. Pearson.
-      </li>
-      <li>
-        Mayer, R. (2006).
-        <i>Numbers: &sect;2.3 The Field Axioms.</i>
-        http://people.reed.edu/~mayer/math112.html/html1/node16.html.
       </li>
     </ul>
   </section>
