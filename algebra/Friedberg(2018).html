@@ -34,6 +34,9 @@
     .center {
       text-align: center;
     }
+    .right {
+      text-align: right;
+    }
   </style>
 </head>
 <body>
@@ -1437,6 +1440,175 @@
               </td>
             </tr>
           </table>
+        </section>
+      </p>
+    </section>
+  </section>
+  <section id="linear-combination-equation">
+    <h2>Linear Combinations</h2>
+    <section id="linear-combination" class="definition">
+      <p>
+        <strong>Definition (linear combination)</strong>:
+        Let <var>S</var> be a set of vectors
+        {<var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var>} in a vector space <var>V</var>.
+        Any vector of the form
+        <section>
+          <var>v</var>
+          = <var>a<sub>1</sub>v<sub>1</sub></var>
+          + <var>a<sub>2</sub>v<sub>2</sub></var>
+          + &ctdot;
+          + <var>a<sub>n</sub>v<sub>n</sub></var>
+        </section>
+        for some scalars
+        <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>,
+        is called a linear combination of <var>S</var>.
+      </p>
+    </section>
+    <section id="zero-vector-linear" class="description">
+      Observe that for each <var>v</var> &in; any vector space <var>V</var>,
+      <section>
+        0<var>v</var> = 0
+      </section>
+      Thus the zero vector is a linear combination of any nonempty subset of <var>V</var>.
+    </section>
+    <section id="linear-combination-example2a" class="description">
+      <p>
+        <strong>Example (linear combinations)</strong>:
+        Consider linear combinations of two polynomials
+        <section>
+          <table>
+            <tr>
+              <td>
+                x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9
+              </td>
+            </tr>
+          </table>
+        </section>
+        Case 1:
+        2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6
+        is a linear combination of the polynomials in P<sub>3</sub>(&reals;)
+        <section>
+          <p>
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6
+                  </td>
+                  <td>
+                    = a(x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3)
+                    + b(3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9)
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    = (a&plus;3b)x<sup>3</sup>
+                    + (&minus;2a&minus;5b)x<sup>2</sup>
+                    + (&minus;5a&minus;4b)x + (&minus;3a&minus;9b)
+                  </td>
+                </tr>
+              </table>
+            </section>
+            Thus we are led to the following system of linear equations, adding appropriate multiples of the first equation to the others in order to eliminate <var>a</var>, and adding the appropriate multiples of the second equation to the others yields <var>a</var> and <var>b</var>:
+            <section>
+              <table>
+                <tr class="right">
+                  <td>a+3b =</td><td>2</td>
+                  <td rowspan="4" style="vertical-align: middle;">
+                    &LongRightArrow;
+                  </td>
+                  <td>a+3b =</td><td>2</td>
+                  <td rowspan="4" style="vertical-align: middle;">
+                    &LongRightArrow;
+                  </td>
+                  <td>a =</td><td>&minus;4</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;2a&minus;5b =</td><td>&minus;2</td>
+                  <td>b =</td><td>2</td>
+                  <td>b =</td><td>2</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;5a&minus;4b =</td><td>12</td>
+                  <td>11b =</td><td>22</td>
+                  <td>0 =</td><td>0</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;3a&minus;9b =</td><td>&minus;6</td>
+                  <td>0b =</td><td>0</td>
+                  <td>0 =</td><td>0</td>
+                </tr>
+              </table>
+            </section>
+            Hence 2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6
+            is a linear combinations of the two polynomials:
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6
+                  </td>
+                  <td>
+                    = &minus;4(x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3)
+                    + 2(3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9)
+                  </td>
+                </tr>
+              </table>
+            </section>
+          </p>
+        </section>
+        Case 2:
+        3x<sup>3</sup>&minus;2x<sup>2</sup>&plus;7x&plus;8
+        is not a linear combination of the polynomials
+        <section>
+          <p>
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    3x<sup>3</sup>&minus;2x<sup>2</sup>&plus;7x&plus;8
+                  </td>
+                  <td>
+                    = a(x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3)
+                    + b(3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9)
+                  </td>
+                </tr>
+              </table>
+            </section>
+            Using the preceding technique, we obtain a system of linear equations, and eliminating <var>a</var> as before yields
+            <section>
+              <table>
+                <tr class="right">
+                  <td>a+3b =</td><td>3</td>
+                  <td rowspan="4" style="vertical-align: middle;">
+                    &LongRightArrow;
+                  </td>
+                  <td>a+3b =</td><td>3</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;2a&minus;5b =</td><td>&minus;2</td>
+                  <td>b =</td><td>4</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;5a&minus;4b =</td><td>7</td>
+                  <td>11b =</td><td>22</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;3a&minus;9b =</td><td>8</td>
+                  <td>0 =</td><td>17</td>
+                </tr>
+              </table>
+            </section>
+            But the presence of the inconsistent equation <var>0</var> &equals; <var>17</var> indicates that the system of linear equations has no solution.
+            Hence 3x<sup>3</sup>&minus;2x<sup>2</sup>&plus;7x&plus;8
+            is not a linear combination of the two polynomials.
+          </p>
         </section>
       </p>
     </section>
