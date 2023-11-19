@@ -1448,7 +1448,7 @@
     <h2>Linear Combinations</h2>
     <section id="linear-combination" class="definition">
       <p>
-        <strong>Definition (linear combination)</strong>:
+        <strong>Definition (linear combination [線形結合])</strong>:
         Let <var>S</var> be a set of vectors
         {<var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var>} in a vector space <var>V</var>.
         Any vector of the form
@@ -1610,6 +1610,40 @@
             is not a linear combination of the two polynomials.
           </p>
         </section>
+      </p>
+    </section>
+    <section id="span" class="definition">
+      <p>
+        <strong>Definition (span [線形包])</strong>:
+        Let <var>S</var> be a set of vectors {<var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var>} in a vector space <var>V</var>. The span of <var>S</var>, denoted span(S) or span(<var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var>), is the set consisting of all linear combinations of the vectors in <var>S</var>.
+        <section>
+          span(
+            <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var>
+          ) = {
+            a<sub>1</sub>v<sub>1</sub>
+            + a<sub>2</sub>v<sub>2</sub>
+            + &ctdot;
+            + a<sub>n</sub>v<sub>n</sub>
+          }
+          for a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> &in; F
+        </section>
+      </p>
+    </section>
+    <section id="zero-span" class="description">
+      <p>
+        <strong>Zero span</strong>:
+        For convenience, we define span(0) = {0}.
+      </p>
+    </section>
+    <section id="plane-as-span" class="description">
+      <p>
+        <strong>Example (xy-plane as a span)</strong>:
+        The span of the set{(1,0,0), (0,1,0)} in &reals;<sup>3</sup> consists of all vectors in &reals;<sup>3</sup> that have the form
+        <section>
+          a(1,0,0)+b(0,1,0) = (a,b,0)
+        </section>
+        for some scalars <var>a</var> and <var>b</var>.
+        Thus the span of the set{(1,0,0), (0,1,0)} contains all the points in the xy-plane.
       </p>
     </section>
   </section>
