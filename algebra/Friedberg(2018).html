@@ -359,7 +359,7 @@
             <tr>
               <td></td>
               <td>= 0</td>
-              <td>corollary 1</td>
+              <td>corollary (multiplications in fields) #1</td>
             </tr>
           </table>
         </section>
@@ -890,6 +890,18 @@
         </section>
       </p>
     </section>
+    <section id="zero-vector-space" class="description">
+      <p>
+        <strong>Zero vector space</strong>:
+        Let <var>V</var> = {0} &mdash; the zero vector space &mdash; consist of a single vector <var>0</var>. <var>V</var> is a vector space over a field <var>F</var> with the operations, for each scalar <var>c</var> &in; <var>F</var>:
+        <section>
+          <table>
+            <tr><td>0 + 0 = 0</td></tr>
+            <tr><td>c0 = 0</td></tr>
+          </table>
+        </section>
+      </p>
+    </section>
   </section>
   <section id="subspaces">
     <h2>Subspaces</h2>
@@ -901,11 +913,8 @@
         if the subset is a vector space over <var>F</var> with the operations of addition and scalar multiplication defined on <var>V</var>.
       </p>
       <p>
-        For any vector space <var>V</var>,
-        <ul>
-          <li><var>V</var> and {0} are subspaces of <var>V</var></li>
-          <li>{0} is called a <strong>zero subspace</strong></li>
-        </ul>
+        <var>V</var> is a subspace of <var>V</var>, because <var>V</var> is a vector space with the operations of <var>V</var>.
+            
       </p>
     </section>
     <section id="subspace-conditions" class="proposition">
@@ -923,7 +932,7 @@
                 0 &in; W
               </td>
               <td>
-                a zero vector in <var>W</var>
+                the zero vector is an element of <var>W</var>
               </td>
             </tr>
             <tr>
@@ -946,9 +955,25 @@
         </section>
       </p>
     </section>
-    <section class="proposition">
+    <section id="zero-is-subspace" class="proposition">
       <p>
-        <strong>Corollary (additive inverses)</strong>:
+        <strong>Corollary (zero subspace)</strong>:
+        {0} is a subspace of any vector space <var>V</var> over a field <var>F</var>.
+      </p>
+      <p>
+        Proof: by the definition of the zero vector space, for <var>c</var> &in; <var>F</var>,
+        <section>
+          <table>
+            <tr><td>0 &in; {0}</td></tr>
+            <tr><td>0+0 = 0 &in; {0}</td></tr>
+            <tr><td>c0 = 0 &in; {0}</td></tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="additive-inverse-subspace" class="proposition">
+      <p>
+        <strong>Corollary (additive inverse)</strong>:
         Let <var>W</var> be a subspace of <var>V</var>, then there exists <var>&minus;x</var> &in; <var>W</var> for each <var>x</var> &in; <var>W</var>.
       </p>
       <p>
@@ -1464,14 +1489,20 @@
         is called a linear combination of <var>S</var>.
       </p>
     </section>
-    <section id="zero-vector-linear" class="description">
-      Observe that for each <var>v</var> &in; any vector space <var>V</var>,
-      <section>
-        0<var>v</var> = 0
-      </section>
-      Thus the zero vector is a linear combination of any nonempty subset of <var>V</var>.
+    <section id="zero-vector-linear" class="proposition">
+      <p>
+        <strong>Corollary (zero vector is a linear combination)</strong>:
+        The zero vector is a linear combination of any nonempty subset of <var>V</var>.
+      </p>
+      <p>
+        Proof:
+        Observe that for each <var>v</var> &in; <var>V</var>,
+        <section>
+          0<var>v</var> = 0
+        </section>
+      </p>
     </section>
-    <section id="linear-combination-example2a" class="description">
+    <section id="linear-combination-example2" class="description">
       <p>
         <strong>Example (linear combinations)</strong>:
         Consider linear combinations of two polynomials
@@ -1632,7 +1663,7 @@
     <section id="zero-span" class="description">
       <p>
         <strong>Zero span</strong>:
-        For convenience, we define span(0) = {0}.
+        For convenience, we define span(&empty;) = {0}.
       </p>
     </section>
     <section id="plane-as-span" class="description">
@@ -1644,6 +1675,112 @@
         </section>
         for some scalars <var>a</var> and <var>b</var>.
         Thus the span of the set{(1,0,0), (0,1,0)} contains all the points in the xy-plane.
+      </p>
+    </section>
+    <section id="span-subspace" class="proposition">
+      <p>
+        <strong>Theorem (span is a subspace)</strong>:
+        Let <var>V</var> be a vector space, and <var>S</var> be a subset of <var>V</var>, then
+        <section>
+          <table>
+            <tr><td>span(S) is a subspace of V, and</td></tr>
+            <tr><td>span(S) contains S</td></tr>
+          </table>
+        </section>
+        Proof:
+        <section>
+          <p>
+            span(S = &empty;) is a subspace of <var>V</var> because
+            <section>
+              <p>
+                span(S = &empty;) = {0} by definition, and corollary (zero subspace) shows {0} is a subspace of any vector space.
+              </p>
+            </section>
+            span(S = &empty;) contains <var>S</var> = &empty; because
+            <section>
+              <p>
+                span(S = &empty;) is a set by definition, and &empty; is a subset of every set.
+              </p>
+            </section>
+            span(S &ne; &empty;) is a subspace of <var>V</var> because
+            <section>
+              <p>
+                0 &in; span(S);
+                <section>
+                  <p>
+                    Corollary (zero vector is a linear combination) show that the zero vector is a linear combination of any nonempty subset of <var>V</var>.
+                  </p>
+                </section>
+                span(S) is closed under addition:
+                <section>
+                  <p>
+                    Let <var>x, y</var> &in; span(S). Then there exist vectors <var>u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub></var> and <var>v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub></var> &in; <var>S</var>, and scalars <var>a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>m</sub></var> and <var>b<sub>1</sub>, b<sub>2</sub>, &hellip;, b<sub>n</sub></var> &in; <var>F</var> such that
+                    <section>
+                      <table>
+                        <tr>
+                          <td>
+                            x = a<sub>1</sub>u<sub>1</sub>
+                              + a<sub>2</sub>u<sub>2</sub>
+                              + &hellip;
+                              + a<sub>m</sub>u<sub>m</sub>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            y = b<sub>1</sub>v<sub>1</sub>
+                              + b<sub>2</sub>v<sub>2</sub>
+                              + &hellip;
+                              + b<sub>n</sub>v<sub>n</sub>
+                          </td>
+                        </tr>
+                      </table>
+                    </section>
+                    Then
+                    <section>
+                      x + y
+                      = a<sub>1</sub>u<sub>1</sub>
+                      + a<sub>2</sub>u<sub>2</sub>
+                      + &hellip;
+                      + a<sub>m</sub>u<sub>m</sub>
+                      + b<sub>1</sub>v<sub>1</sub>
+                      + b<sub>2</sub>v<sub>2</sub>
+                      + &hellip;
+                      + b<sub>n</sub>v<sub>n</sub>
+                    </section>
+                    is clearly a linear combination of the vectors in <var>S</var>; so <var>x</var> + <var>y</var> is in span(S).
+                  </p>
+                </section>
+                span(S &ne; &empty;) is closed under scalar multiplication:
+                <section>
+                  <p>
+                    Let <var>x</var> &in; span(S). Then for any scalar <var>c</var>, there exist vectors <var>u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub></var> and scalars <var>a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>m</sub></var> such that
+                    <section>
+                      cx
+                      = (ca<sub>1</sub>)u<sub>1</sub>
+                      + (ca<sub>2</sub>)u<sub>2</sub>
+                      + &hellip;
+                      + (ca<sub>m</sub>)u<sub>m</sub>
+                    </section>
+                    <var>cx</var> is clearly a linear combination of the vectors in <var>S</var>; so <var>cx</var> is in span(S).
+                  </p>
+                </section>
+              </p>
+            </section>
+            span(S &ne; &empty;) contains <var>S</var> because
+            <section>
+              For any <var>v</var> &in; <var>S</var>
+              <section>
+                v = 1v &in; span(S)
+              </section>
+            </section>
+          </p>
+        </section>
+      </p>
+    </section>
+    <section id="subspace-contains-span" class="proposition">
+      <p>
+        <strong>Theorem (subspace contains span)</strong>:
+        Let <var>S</var> be a subset of a vector space <var>V</var>. Any subspace of <var>V</var> that contains <var>S</var> must also contain span(S).
       </p>
     </section>
   </section>
