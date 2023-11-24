@@ -1886,23 +1886,58 @@
     <section id="generate-example3" class="description">
       <p>
         <strong>Example (vectors generate a vector space)</strong>:
-        The vectors (1,1,0), (1,0,1), and (0,1,1) generate &reals;<sup>3</sup> since an arbitrary vector (a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>) in &reals;<sup>3</sup> is a linear combination of the three given vectors:
+        The vectors (1,1,0), (1,0,1), and (0,1,1) generate &reals;<sup>3</sup> since an arbitrary vector (a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>) in &reals;<sup>3</sup> is a linear combination of the three given vectors; in fact, the scalars <var>r</var>, <var>s</var> and <var>t</var> for which
         <section>
           r(1,1,0) + s(1,0,1) + t(0,1,1)
           = (a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>)
         </section>
-        and
-        <ul>
-          <li>
-            r = &frac12; (a<sub>1</sub> + a<sub>2</sub> &minus; a<sub>3</sub>)
-          </li>
-          <li>
-            s = &frac12; (a<sub>1</sub> &minus; a<sub>2</sub> + a<sub>3</sub>)
-          </li>
-          <li>
-            t = &frac12; (&minus;a<sub>1</sub> + a<sub>2</sub> + a<sub>3</sub>)
-          </li>
-        </ul>
+        are
+        <section>
+          <table>
+            <tr>
+              <td>r = &frac12; (a<sub>1</sub> + a<sub>2</sub> &minus; a<sub>3</sub>)</td>
+              <td>s = &frac12; (a<sub>1</sub> &minus; a<sub>2</sub> + a<sub>3</sub>)</td>
+              <td>t = &frac12; (&minus;a<sub>1</sub> + a<sub>2</sub> + a<sub>3</sub>)</td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="subspace-and-span" class="proposition">
+      <p>
+        <strong>Corollary (subspace and span)</strong>:
+        Let <var>V</var> be a vector space, and <var>W</var> a subset of <var>V</var>, then
+        <section>
+          <var>W</var> is a subspace of <var>V</var> &iff; span(W) = <var>W</var>
+        </section>
+        Proof:
+        <section>
+          <p>
+            Since <var>W</var> is a subspace of <var>W</var>, we have span(W) &subset; <var>W</var>
+          </p>
+        </section>
+      </p>
+    </section>
+    <section id="subset-and-span" class="proposition">
+      <p>
+        <strong>Corollary (subset and span)</strong>:
+        Let <var>V</var> be a vector space, and <var>S<sub>1</sub></var> and <var>S<sub>2</sub></var> arbitrary subsets of <var>V</var> such that <var>S<sub>1</sub></var> &subseteq; <var>S<sub>2</sub></var>, then
+        <section>
+          span(S<sub>1</sub>) &subseteq; span(S<sub>2</sub>)
+        </section>
+        Proof:
+        <section>
+          <p>
+            Let <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; <var>S<sub>1</sub></var>, and <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> &in; a field <var>F</var>, then we have <var>v</var> such that
+            <section>
+              v = a<sub>1</sub>v<sub>1</sub> + a<sub>2</sub>v<sub>2</sub> + &ctdot; + a<sub>n</sub>v<sub>n</sub>
+            </section>
+            Because <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; <var>S<sub>2</sub></var> as well, <var>v</var> is a linear combination of <var>S<sub>2</sub></var>, thus span(S<sub>1</sub>) &subset; span(S<sub>2</sub>).
+          </p>
+          <p>
+            If span(S<sub>1</sub>) = <var>V</var>, 
+          </p>
+        </section>
       </p>
     </section>
   </section>
