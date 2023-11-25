@@ -1723,7 +1723,7 @@
     <section id="zero-span" class="description">
       <p>
         <strong>Zero span</strong>:
-        For convenience, we define span(&empty;) = {0}.
+        For convenience, we define span(&empty;) = {0} &mdash; the zero vector space.
       </p>
     </section>
     <section id="plane-as-span" class="description">
@@ -1740,136 +1740,134 @@
     <section id="span-subspace" class="proposition">
       <p>
         <strong>Theorem (span is a subspace)</strong>:
-        Let <var>V</var> be a vector space, <var>S</var> a subset of <var>V</var>, and <var>W</var> a subspace of <var>V</var>, then
+        Let <var>V</var> be a vector space and <var>S</var> &subseteq; <var>V</var>, then
         <section>
           <table>
-            <tr><td>span(S) is a subspace of <var>V</var></td></tr>
+            <tr><td>span(S) is a subspace of <var>V</var>, and</td></tr>
             <tr><td><var>S</var> &subseteq; span(S)</td></tr>
-            <tr>
-              <td>
-                <var>S</var> &subseteq; <var>W</var> &Implies;
-                span(S) &subseteq; <var>W</var>
-              </td>
-            </tr>
           </table>
+        </section>
+        Furthermore, let <var>W</var> be a subspace of <var>V</var>, then
+        <section>
+          <var>S</var> &subseteq; <var>W</var> &Implies;
+          span(S) &subseteq; <var>W</var>
         </section>
         Proof:
         <section>
           <p>
-            Case <var>S</var> = &empty;:
-            <ul>
-              <li>
-                span(S) is a subspace of <var>V</var>, because
-                <section>
-                  span(S = &empty;) = {0} &mdash; the zero vector space &mdash; by definition, which is a subspace of any vector space by the corollary (zero subspace).
-                </section>
-              </li>
-              <li>
-                S &subseteq; span(S), because
-                <section>
-                  span(S) is a set by definition, and <var>S</var> = &empty; is a subset of every set.
-                </section>
-              </li>
-              <li>
-                <var>S</var> &subseteq; <var>W</var> &Implies;
-                span(S) &subseteq; <var>W</var>, because
-                <section>
-                  span(S = &empty;) = {0} &mdash; the zero vector space &mdash; by definition, and any subspace must contain the zero vector.
-                </section>
-              </li>
-            </ul>
-            Case <var>S</var> &ne; &empty;
-            <ul>
-              <li>
-                span(S) is a subspace of <var>V</var>, because
+            Prove that span(S) is a subspace of <var>V</var>.
+            <section>
+              <p>
+                If <var>S</var> = &empty;, span(S = &empty;) = {0} &mdash; the zero vector space &mdash; is a subspace of any vector space by the corollary (zero subspace).
+              </p>
+              <p>
+                0 &in; span(S &ne; &empty;):
                 <section>
                   <p>
-                    0 &in; span(S);
-                    <section>
-                      <p>
-                        Corollary (zero vector is a linear combination) show that the zero vector is a linear combination of any nonempty subset of <var>V</var>.
-                      </p>
-                    </section>
-                    span(S) is closed under addition:
-                    <section>
-                      <p>
-                        Let <var>x, y</var> &in; span(S). Then there exist vectors <var>u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub></var> and <var>v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub></var> &in; <var>S</var>, and scalars <var>a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>m</sub></var> and <var>b<sub>1</sub>, b<sub>2</sub>, &hellip;, b<sub>n</sub></var> &in; <var>F</var> such that
-                        <section>
-                          <table>
-                            <tr>
-                              <td>
-                                x = a<sub>1</sub>u<sub>1</sub>
-                                  + a<sub>2</sub>u<sub>2</sub>
-                                  + &hellip;
-                                  + a<sub>m</sub>u<sub>m</sub>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                y = b<sub>1</sub>v<sub>1</sub>
-                                  + b<sub>2</sub>v<sub>2</sub>
-                                  + &hellip;
-                                  + b<sub>n</sub>v<sub>n</sub>
-                              </td>
-                            </tr>
-                          </table>
-                        </section>
-                        Then
-                        <section>
-                          x + y
-                          = a<sub>1</sub>u<sub>1</sub>
-                          + a<sub>2</sub>u<sub>2</sub>
-                          + &hellip;
-                          + a<sub>m</sub>u<sub>m</sub>
-                          + b<sub>1</sub>v<sub>1</sub>
-                          + b<sub>2</sub>v<sub>2</sub>
-                          + &hellip;
-                          + b<sub>n</sub>v<sub>n</sub>
-                        </section>
-                        is clearly a linear combination of the vectors in <var>S</var>; so <var>x</var> + <var>y</var> is in span(S).
-                      </p>
-                    </section>
-                    span(S) is closed under scalar multiplication:
-                    <section>
-                      <p>
-                        Let <var>x</var> &in; span(S). Then for any scalar <var>c</var>, there exist vectors <var>u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub></var> and scalars <var>a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>m</sub></var> such that
-                        <section>
-                          cx
-                          = (ca<sub>1</sub>)u<sub>1</sub>
-                          + (ca<sub>2</sub>)u<sub>2</sub>
-                          + &hellip;
-                          + (ca<sub>m</sub>)u<sub>m</sub>
-                        </section>
-                        <var>cx</var> is clearly a linear combination of the vectors in <var>S</var>; so <var>cx</var> is in span(S).
-                      </p>
-                    </section>
+                    Corollary (zero vector is a linear combination) show that the zero vector is a linear combination of any nonempty subset of <var>V</var>.
                   </p>
                 </section>
-              </li>
-              <li>
-                S &subseteq; span(S), because
+              </p>
+              <p>
+                span(S &ne; &empty;) is closed under addition:
                 <section>
-                  for any <var>v</var> &in; <var>S</var>, <var>v</var> = <var>1v</var> &in; span(S)
+                  <p>
+                    Let <var>u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub></var>, <var>v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub></var> &in; <var>S</var>, then there exist <var>x, y</var> &in; span(S) such that
+                    <section>
+                      <table>
+                        <tr>
+                          <td>
+                            x = a<sub>1</sub>u<sub>1</sub>
+                              + a<sub>2</sub>u<sub>2</sub>
+                              + &hellip;
+                              + a<sub>m</sub>u<sub>m</sub>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            y = b<sub>1</sub>v<sub>1</sub>
+                              + b<sub>2</sub>v<sub>2</sub>
+                              + &hellip;
+                              + b<sub>n</sub>v<sub>n</sub>
+                          </td>
+                        </tr>
+                      </table>
+                    </section>
+                    for scalars <var>a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>m</sub></var>, <var>b<sub>1</sub>, b<sub>2</sub>, &hellip;, b<sub>n</sub></var>.
+                    Then
+                    <section>
+                      x + y
+                      = a<sub>1</sub>u<sub>1</sub>
+                      + a<sub>2</sub>u<sub>2</sub>
+                      + &hellip;
+                      + a<sub>m</sub>u<sub>m</sub>
+                      + b<sub>1</sub>v<sub>1</sub>
+                      + b<sub>2</sub>v<sub>2</sub>
+                      + &hellip;
+                      + b<sub>n</sub>v<sub>n</sub>
+                    </section>
+                    is a linear combination in <var>S</var>, that is <var>x</var>+<var>y</var> &in; span(S), which follows that span(S) is closed under addition.
+                  </p>
                 </section>
-              </li>
-              <li>
-                <var>S</var> &subseteq; <var>W</var> &Implies;
-                span(S) &subseteq; <var>W</var>, because
+              </p>
+              <p>
+                span(S &ne; &empty;) is closed under scalar multiplication:
                 <section>
-                  Let <var>w</var> &in; span(S), then <var>w</var> has the form
-                  <section>
-                    w = c<sub>1</sub>w<sub>1</sub> + c<sub>2</sub>w<sub>2</sub> + &hellip; + c<sub>k</sub>w<sub>k</sub>
-                  </section>
-                  for some vectors <var>w<sub>1</sub></var>, <var>w<sub>2</sub></var>, &hellip;, <var>w<sub>k</sub></var> &in; <var>S</var> and some scalars <var>c<sub>1</sub></var>, <var>c<sub>2</sub></var>, &hellip;, <var>c<sub>k</sub></var> &in; <var>F</var>.
-                  Since <var>S</var> &subseteq; <var>W</var>, we have
-                  <section>
-                    w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>k</sub> &in; W
-                  </section>
-                  Therefore, <var>w</var> &in; <var>W</var> by the lemma (linear combination in subspace). Because <var>w</var>, an arbitrary vector in span(S), belongs to <var>W</var>, it follows that span(S) &subseteq; <var>W</var>.
-                  &marker;
+                  <p>
+                    Let <var>u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub></var> &in; <var>S</var>, then there exists <var>x</var> &in; span(S) such that
+                    <section>
+                      x = a<sub>1</sub>u<sub>1</sub>
+                      + a<sub>2</sub>u<sub>2</sub>
+                      + &hellip;
+                      + a<sub>m</sub>u<sub>m</sub>
+                    </section>
+                    for scalars <var>a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>m</sub></var>. Then for some scalar <var>c</var>,
+                    <section>
+                      cx
+                      = (ca<sub>1</sub>)u<sub>1</sub>
+                      + (ca<sub>2</sub>)u<sub>2</sub>
+                      + &hellip;
+                      + (ca<sub>m</sub>)u<sub>m</sub>
+                    </section>
+                    is a linear combination of the vectors in <var>S</var>, that is <var>cx</var> &in; span(S), which follows span(S) is closed under scalar multiplication.
+                  </p>
+
                 </section>
-              </li>
-            </ul>
+              </p>
+            </section>
+          </p>
+          <p>
+            Prove that <var>S</var> &in; span(S).
+            <section>
+              <p>
+                If <var>S</var> = &empty;, span(S) is a set by definition, and <var>S</var> = &empty; is a subset of every set.
+                If <var>S</var> &ne; &empty;, for any <var>v</var> &in; S,
+                <section>
+                  v = 1v &in; span(S)
+                </section>
+              </p>
+            </section>
+          </p>
+          <p>
+            Prove that <var>S</var> &subseteq; <var>W</var> &Implies; span(S) &subseteq; <var>W</var>.
+            <section>
+              <p>
+                If <var>S</var> = &empty;, span(S = &empty;) = {0}, the zero vector space. The zero vector must be contained in any subspace, it follows span(S) &subseteq; <var>W</var>.
+              </p>
+              <p>
+                If <var>S</var> &ne; &empty;, then a vector <var>w</var> &in; span(S) has the form
+                <section>
+                  w = c<sub>1</sub>w<sub>1</sub> + c<sub>2</sub>w<sub>2</sub> + &hellip; + c<sub>k</sub>w<sub>k</sub>
+                </section>
+                for some vectors <var>w<sub>1</sub></var>, <var>w<sub>2</sub></var>, &hellip;, <var>w<sub>k</sub></var> &in; <var>S</var> and some scalars <var>c<sub>1</sub></var>, <var>c<sub>2</sub></var>, &hellip;, <var>c<sub>k</sub></var> &in; <var>F</var>.
+                Since <var>S</var> &subseteq; <var>W</var>, we have
+                <section>
+                  w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>k</sub> &in; W
+                </section>
+                Therefore, <var>w</var> &in; <var>W</var> by the lemma (linear combination in subspace). Because <var>w</var>, an arbitrary vector in span(S), belongs to <var>W</var>, it follows that span(S) &subseteq; <var>W</var>.
+                &marker;
+              </p>
+            </section>
           </p>
         </section>
       </p>
@@ -1906,14 +1904,26 @@
     <section id="subspace-and-span" class="proposition">
       <p>
         <strong>Corollary (subspace and span)</strong>:
-        Let <var>V</var> be a vector space, and <var>W</var> a subset of <var>V</var>, then
+        Let <var>V</var> be a vector space and <var>W</var> &subseteq; <var>V</var>. Then
         <section>
           <var>W</var> is a subspace of <var>V</var> &iff; span(W) = <var>W</var>
         </section>
         Proof:
         <section>
           <p>
-            Since <var>W</var> is a subspace of <var>W</var>, we have span(W) &subset; <var>W</var>
+            <var>W</var> is a subspace of <var>V</var> &Implies; span(W) = <var>W</var>:
+            <section>
+              <p>
+                Since <var>W</var> is a subspace of <var>W</var>, we have span(W) &subset; <var>W</var>
+
+              </p>
+            </section>
+            span(W) = <var>W</var> &Implies; <var>W</var> is a subspace of <var>V</var>:
+            <section>
+              <p>
+
+              </p>
+            </section>
           </p>
         </section>
       </p>
@@ -1928,11 +1938,14 @@
         Proof:
         <section>
           <p>
-            Let <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; <var>S<sub>1</sub></var>, and <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> &in; a field <var>F</var>, then we have <var>v</var> such that
+            Let <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; <var>S<sub>1</sub></var>, then some linear combination in span(S<sub>1</sub>)
             <section>
               v = a<sub>1</sub>v<sub>1</sub> + a<sub>2</sub>v<sub>2</sub> + &ctdot; + a<sub>n</sub>v<sub>n</sub>
             </section>
-            Because <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; <var>S<sub>2</sub></var> as well, <var>v</var> is a linear combination of <var>S<sub>2</sub></var>, thus span(S<sub>1</sub>) &subset; span(S<sub>2</sub>).
+            is also a linear combination of <var>S<sub>2</sub></var> because <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; <var>S<sub>2</sub></var> as well, thus
+            <section>
+              span(S<sub>1</sub>) &subset; span(S<sub>2</sub>)
+            </section>
           </p>
           <p>
             If span(S<sub>1</sub>) = <var>V</var>, 
