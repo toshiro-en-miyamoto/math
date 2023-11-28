@@ -1647,7 +1647,7 @@
     <section id="span" class="definition">
       <p>
         <strong>Definition (span [線形包])</strong>:
-        Let <var>S</var> be a set of vectors {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>} in a vector space <var>V</var>. The span of <var>S</var>, denoted span(S) or span(<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>), is the set consisting of all linear combinations of the vectors in <var>S</var>. For some scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> &in; <var>F</var>,
+        Let <var>S</var> be a set of vectors {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>} in a vector space <var>V</var>. The span of <var>S</var>, denoted span(S) or span(v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>), is the set consisting of all linear combinations of the vectors in <var>S</var>. For some scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> &in; <var>F</var>,
         <section>
           span(
             v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>
@@ -1742,7 +1742,18 @@
         <strong>Theorem (span in subspace)</strong>:
         If <var>W</var> is a subspace of vector space <var>V</var> and <var>S</var> is a subset of <var>V</var>, then
         <section>
-          <var>S</var> &subseteq; <var>W</var> &Implies; span(S) &subseteq; <var>W</var>.
+          <table>
+            <tr>
+              <td>
+                <var>S</var> &subseteq; <var>W</var> &Implies; span(S) &subseteq; <var>W</var>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                If <var>W</var> contains <var>S</var>, then <var>W</var> contains span(S)
+              </td>
+            </tr>
+          </table>
         </section>
         Proof:
         <section>
@@ -1768,12 +1779,10 @@
     <section id="span-is-subspace" class="proposition">
       <p>
         <strong>Theorem (span is subspace)</strong>:
-        Let <var>V</var> be a vector space and <var>S</var> a subset of <var>V</var>, then
+        If <var>S</var> is a subset of a vector space <var>V</var>, then
         <section>
-          <table>
-            <tr><td>span(S) is a subspace of <var>V</var>, and</td></tr>
-            <tr><td><var>S</var> &subseteq; span(S)</td></tr>
-          </table>
+          span(S) is a subspace of <var>V</var>, and
+          <var>S</var> &subseteq; span(S)
         </section>
         Proof:
         <section>
@@ -1872,15 +1881,19 @@
         <strong>Example (vectors generate a vector space)</strong>:
         The vectors (1,1,0), (1,0,1), and (0,1,1) generate &reals;<sup>3</sup> since an arbitrary vector (a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>) in &reals;<sup>3</sup> is a linear combination of the three given vectors; in fact, the scalars <var>r</var>, <var>s</var> and <var>t</var> for which
         <section>
-          r(1,1,0) + s(1,0,1) + t(0,1,1)
-          = (a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>)
-        </section>
-        are
-        <section>
           <table>
             <tr>
-              <td>r = &frac12; (a<sub>1</sub> + a<sub>2</sub> &minus; a<sub>3</sub>)</td>
-              <td>s = &frac12; (a<sub>1</sub> &minus; a<sub>2</sub> + a<sub>3</sub>)</td>
+              <td colspan="3">
+                r(1,1,0) + s(1,0,1) + t(0,1,1)
+                = (a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>)
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">are</td>
+            </tr>
+            <tr>
+              <td>r = &frac12; (a<sub>1</sub> + a<sub>2</sub> &minus; a<sub>3</sub>),</td>
+              <td>s = &frac12; (a<sub>1</sub> &minus; a<sub>2</sub> + a<sub>3</sub>),</td>
               <td>t = &frac12; (&minus;a<sub>1</sub> + a<sub>2</sub> + a<sub>3</sub>)</td>
             </tr>
           </table>
@@ -1890,13 +1903,26 @@
     <section id="subspace-and-span" class="proposition">
       <p>
         <strong>Corollary (subspace and span)</strong>:
-        Let <var>V</var> be a vector space and <var>W</var> a subset of <var>V</var>. Then
         <section>
-          a subset <var>W</var> is a subspace of <var>V</var> &iff; span(W) = <var>W</var>
+          <p>
+            a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var> &iff; span(W) = <var>W</var>
+          </p>
         </section>
         Proof:
         <section>
           <p>
+            If a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var>, then by theorem (span in subspace)
+            <section>
+              <table>
+                <tr><td>span(W) &subseteq; <var>W</var>, and</td></tr>
+                <tr><td>naturally <var>W</var> &subseteq; span(W),</td></tr>
+                <tr><td>therefore span(W) = <var>W</var>.</td></tr>
+              </table>
+            </section>
+            If span(W) = <var>W</var>, by theorem (span is subspace),
+            <section>
+              span(W) = <var>W</var> is a subspace.
+            </section>
           </p>
         </section>
       </p>
@@ -1921,7 +1947,7 @@
             </section>
           </p>
           <p>
-            If span(S<sub>1</sub>) = <var>V</var>, 
+            If span(S<sub>1</sub>) = <var>V</var>,
           </p>
         </section>
       </p>
