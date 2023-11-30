@@ -1970,6 +1970,7 @@
         <section>
           a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
         </section>
+        Thus, for a set to be linearly dependent, there must exist a nontrivial representation of <var>0</var> (the zero vector) as a linear combination of vectors in the set.
       </p>
     </section>
     <section id="trivial-representation" class="description">
@@ -1979,7 +1980,7 @@
         <section>
           a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
         </section>
-        if <var>a<sub>1</sub></var> = <var>a<sub>2</sub></var> = &ctdot; = <var>a<sub>n</sub></var> = 0. We call this the trivial representation of the zero vector as a linear combination of  <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var>.
+        if <var>a<sub>1</sub></var> = <var>a<sub>2</sub></var> = &ctdot; = <var>a<sub>n</sub></var> = 0. We call this the trivial representation of <var>0</var> as a linear combination of  <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var>.
       </p>
     </section>
     <section id="linearly-independent" class="definition">
@@ -2107,6 +2108,24 @@
           S &cup; {v} is linearly dependent
           &iff;
           v &in; span(S)
+        </section>
+        Proof:
+        <section>
+          <p>
+            If <var>S</var> &cup; {v} is linearly dependent, then there are vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var> such that <var>av</var> + <var>a<sub>1</sub>u<sub>1</sub></var> + <var>a<sub>2</sub>u<sub>2</sub></var> + &ctdot; + <var>a<sub>n</sub>u<sub>n</sub></var> = 0 for some nonzero scalars <var>a</var>, <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, so
+            <section>
+              v
+              = &minus;1 &frasl; a
+                ( a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> )
+            </section>
+            This shows that <var>v</var> is a linear combination of <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var>, so we have <var>v</var> &in; span(S).
+          </p>
+          <p>
+            If <var>v</var> &in; span(S), then there exist vectors <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>m</sub></var> &in; <var>S</var> and scalars <var>b<sub>1</sub></var>, <var>b<sub>2</sub></var>, &hellip;, <var>b<sub>m</sub></var> such that
+            <section>
+              v = b<sub>1</sub>v<sub>1</sub> + b<sub>2</sub>v<sub>2</sub> + &ctdot; b<sub>m</sub>v<sub>m</sub>
+            </section>
+          </p>
         </section>
       </p>
     </section>
