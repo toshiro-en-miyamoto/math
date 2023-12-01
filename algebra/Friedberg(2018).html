@@ -2121,27 +2121,31 @@
             This shows that <var>v</var> is a linear combination of <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var>, so we have <var>v</var> &in; span(S).
           </p>
           <p>
-            If <var>v</var> &in; span(S), then there exist vectors <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>m</sub></var> &in; <var>S</var> and scalars <var>b<sub>1</sub></var>, <var>b<sub>2</sub></var>, &hellip;, <var>b<sub>m</sub></var>, not all zero, such that
+            If <var>v</var> &in; span(S), then there exist vectors <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>m</sub></var> &in; <var>S</var> and scalars <var>b<sub>1</sub></var>, <var>b<sub>2</sub></var>, &hellip;, <var>b<sub>m</sub></var> such that <var>v</var> = <var>b<sub>1</sub>v<sub>1</sub></var> + <var>b<sub>2</sub>v<sub>2</sub></var> + &ctdot; <var>b<sub>m</sub>v<sub>m</sub></var>, so we have
+            <section>
+              b<sub>1</sub>v<sub>1</sub> + b<sub>2</sub>v<sub>2</sub> + &ctdot; b<sub>m</sub>v<sub>m</sub> + (&minus;1)v = 0
+            </section>
+            Note that because <var>v</var> &notin; <var>S</var>, <var>v</var> &ne; <var>v<sub>i</sub></var> for <var>i</var> = 1, 2, &hellip;, <var>m</var>. Hence the coefficient of <var>v</var> in this linear combination is &minus;1 (i.e., nonzero), the set {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>m</sub>, v} is linearly dependent.
             <section>
               <table>
                 <tr>
                   <td>
-                    v =
-                    b<sub>1</sub>v<sub>1</sub> + b<sub>2</sub>v<sub>2</sub> + &ctdot; b<sub>m</sub>v<sub>m</sub>
+                    because
+                    {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>m</sub>}
+                    &subseteq; S
+                    and v &notin; S
                   </td>
                 </tr>
-                <tr><td>therefore</td></tr>
                 <tr>
                   <td>
-                    b<sub>1</sub>v<sub>1</sub> + b<sub>2</sub>v<sub>2</sub> + &ctdot; b<sub>m</sub>v<sub>m</sub>
-                    + (&minus;1)v
-                    = 0
+                    {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>m</sub>, v}
+                    &subseteq; S &cup; {v}
                   </td>
                 </tr>
               </table>
             </section>
+            Therefore <var>S</var> &cup; {v} is linearly dependent by theorem (sets and linearly dependent). &marker;
           </p>
-          Note that <var>v</var> &ne; <var>v<sub>i</sub></var> for <var>i</var> = 1, 2, &hellip;, <var>m</var> because <var>v</var> &notin; <var>S</var>. Hence the coefficient of <var>v</var>
         </section>
       </p>
     </section>
