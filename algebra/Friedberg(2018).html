@@ -1963,14 +1963,17 @@
   </section>
   <section id="linear-dependence">
     <h2>Linear Dependence and Linear Independence</h2>
-    <section id="linearly-dependent" class="definition">
+    <section id="define-linearly-dependent" class="definition">
       <p>
         <strong>Definition (linearly dependent [線形従属])</strong>:
         A subset <var>S</var> of a vector space <var>V</var> is called linearly dependent if there exist a finite number of distinct vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var> and scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, not all zero, such that
         <section>
           a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
         </section>
-        Thus, for a set to be linearly dependent, there must exist a nontrivial representation of <var>0</var> (the zero vector) as a linear combination of vectors in the set.
+        In other words, for a set to be linearly dependent,
+        <section>
+          there must exist a nontrivial representation of <var>0</var> (the zero vector) as a linear combination of vectors in the set.
+        </section>
       </p>
     </section>
     <section id="trivial-representation" class="description">
@@ -1983,15 +1986,81 @@
         if <var>a<sub>1</sub></var> = <var>a<sub>2</sub></var> = &ctdot; = <var>a<sub>n</sub></var> = 0. We call this the trivial representation of <var>0</var> as a linear combination of  <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var>.
       </p>
     </section>
+    <section id="linearly-dependent-sets" class="proposition">
+      <p>
+        <strong>Theorem (linearly dependent sets)</strong>:
+        A set is linearly dependent if only if at least one of the vectors in the set is expressible as a linear combination of the other vectors in the set.
+      </p>
+      <p>
+        Proof:
+        Let <var>S</var> be a set and <var>W</var> = {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>} &in; <var>S</var>.
+        <section>
+          <p>
+            If <var>S</var> is linearly dependent, then there exist a nontrivial representation of <var>0</var> as a linear combination of vectors in <var>W</var> for some scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, not all zero, such that
+            <section>
+              a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
+            </section>
+            Let <var>a<sub>1</sub></var> be a nonzero scalar, then <var>u<sub>1</sub></var> can be expressed as a linear combination of the other vectors in <var>S</var>:
+            <section>
+              u<sub>1</sub> = &minus;1 &frasl; a<sub>1</sub> (
+                a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
+              )
+            </section>
+            If at least one of the vectors in <var>S</var>, say <var>u<sub>1</sub></var>, is expressible as a linear combination of the other vectors <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</var> for some scalars <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> such that
+            <section>
+              u<sub>1</sub> =
+              a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
+            </section>
+            then from the expression, we have a representation of <var>0</var> as a linear combination of vectors in <var>W</var> &subseteq; <var>S</var> such that
+            <section>
+              0 = (&minus;1)u<sub>1</sub> +
+              a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
+            </section>
+            Because the coefficient of <var>u<sub>1</sub></var> is nonzero, the representation is nontrivial. Thus, <var>S</var> is linear dependent. &marker;
+          </p>
+        </section>
+      </p>
+    </section>
     <section id="linearly-independent" class="definition">
       <p>
         <strong>Definition (linearly independent [線形独立])</strong>:
-        A subset <var>S</var> of a vector space that is not linearly dependent is called linearly independent.
+        A subset <var>S</var> of a vector space that is not linearly dependent is called linearly independent, that is
+        <section>
+          <p>
+            the only representations of <var>0</var> as linear combinations of its vectors are trivial representations.
+          </p>
+        </section>
+      </p>
+    </section>
+    <section id="linearly-independent-sets" class="proposition">
+      <p>
+        <strong>Theorem (linearly independent sets)</strong>:
+        A set <var>S</var> is linearly independent if only if no vector in <var>S</var> is expressible as a linear combination of the other vectors in <var>S</var>.
       </p>
       <p>
-        A set is linearly independent if and only if
+        Proof:
+        Let <var>S</var> = {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>}.
         <section>
-          the only representations of <var>0</var> as linear combinations of its vectors are trivial representations
+          <p>
+            If <var>S</var> is linearly independent, we will prove by contradiction that no vector in <var>S</var> is expressible as a linear combination of the other vectors in <var>S</var>. So suppose that at least one of the vectors in <var>S</var>, say <var>u<sub>1</sub></var>, is expressible as a linear combination of the other vectors <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</var> for some scalars <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> such that
+            <section>
+              u<sub>1</sub> =
+              a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
+            </section>
+            then from the expression, we have a representation of <var>0</var> as a linear combination of vectors in <var>W</var> &subseteq; <var>S</var> such that
+            <section>
+              0 = (&minus;1)u<sub>1</sub> +
+              a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
+            </section>
+            which is a contradiction to the definition of linear independence saying that the only representations of <var>0</var> as linear combinations of vectors in <var>S</var> are trivial representations. Therefore, no vector in <var>S</var> is expressible as a linear combination of the other vectors in <var>S</var>.
+          </p>
+          <p>
+            If no vector in <var>S</var> is expressible as a linear combination of the other vectors in <var>S</var>, we will prove by contradiction that <var>S</var> is linearly independent. So suppose that <var>S</var> is linearly dependent, then from theorem (linearly dependent sets), we know that
+            <section>
+              at least one of the vectors in <var>S</var> must be expressible as a linear combination of the other vectors in the set.
+            </section>
+            This is a contradiction to the hypothesis of this implication. Therefore, <var>S</var> is linearly independent.
+          </p>
         </section>
       </p>
     </section>
@@ -2147,6 +2216,12 @@
             Therefore <var>S</var> &cup; {v} is linearly dependent by theorem (sets and linearly dependent). &marker;
           </p>
         </section>
+      </p>
+    </section>
+    <section id="scalar-multiple-linearly-dependent" class="proposition">
+      <p>
+        <strong>Corollary (scalar multiple linearly dependent)</strong>:
+        Let <var>u</var> and <var>v</var> be distinct vectors in a vector space <var>V</var>. Then {u, v} is linearly dependent if and only if <var>u</var> and <var>v</var> is a multiple of the other.
       </p>
     </section>
   </section>
