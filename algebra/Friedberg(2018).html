@@ -1963,6 +1963,14 @@
   </section>
   <section id="linear-dependence">
     <h2>Linear Dependence and Linear Independence</h2>
+    <section id="intro-linear-dependence" class="description">
+      <p>
+        Let <var>W</var> be a subspace of a vector space <var>V</var>. It is desirable to find a small finite subset <var>S</var> of <var>W</var> that generates <var>W</var>. (&hellip;) The search for this subset is related to the question of whether or not some vector in <var>S</var> is a linear combination of the other vectors in <var>S</var>.
+      </p>
+      <p>
+        Rather than asking whether some vector in <var>S</var> is a linear combination of the other vectors in <var>S</var>, it is more efficient to ask whether the zero vector can be expressed as a linear combination of the vectors in <var>S</var> with coefficients that are not all zero.
+      </p>
+    </section>
     <section id="define-linearly-dependent" class="definition">
       <p>
         <strong>Definition (linearly dependent [線形従属])</strong>:
@@ -1989,9 +1997,10 @@
     <section id="linearly-dependent-sets" class="proposition">
       <p>
         <strong>Theorem (linearly dependent sets)</strong>:
-        A set is linearly dependent if only if at least one of the vectors in the set is expressible as a linear combination of the other vectors in the set.
-      </p>
-      <p>
+        A set is linearly dependent if only if
+        <section>
+          at least one of the vectors in the set is expressible as a linear combination of the other vectors in the set.
+        </section>
         Proof:
         Let <var>S</var> be a set and <var>W</var> = {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>} &in; <var>S</var>.
         <section>
@@ -2028,38 +2037,6 @@
         <section>
           <p>
             the only representations of <var>0</var> as linear combinations of its vectors are trivial representations.
-          </p>
-        </section>
-      </p>
-    </section>
-    <section id="linearly-independent-sets" class="proposition">
-      <p>
-        <strong>Theorem (linearly independent sets)</strong>:
-        A set <var>S</var> is linearly independent if only if no vector in <var>S</var> is expressible as a linear combination of the other vectors in <var>S</var>.
-      </p>
-      <p>
-        Proof:
-        Let <var>S</var> = {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>}.
-        <section>
-          <p>
-            If <var>S</var> is linearly independent, we will prove by contradiction that no vector in <var>S</var> is expressible as a linear combination of the other vectors in <var>S</var>. So suppose that at least one of the vectors in <var>S</var>, say <var>u<sub>1</sub></var>, is expressible as a linear combination of the other vectors <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</var> for some scalars <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> such that
-            <section>
-              u<sub>1</sub> =
-              a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
-            </section>
-            then from the expression, we have a representation of <var>0</var> as a linear combination of vectors in <var>W</var> &subseteq; <var>S</var> such that
-            <section>
-              0 = (&minus;1)u<sub>1</sub> +
-              a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
-            </section>
-            which is a contradiction to the definition of linear independence saying that the only representations of <var>0</var> as linear combinations of vectors in <var>S</var> are trivial representations. Therefore, no vector in <var>S</var> is expressible as a linear combination of the other vectors in <var>S</var>.
-          </p>
-          <p>
-            If no vector in <var>S</var> is expressible as a linear combination of the other vectors in <var>S</var>, we will prove by contradiction that <var>S</var> is linearly independent. So suppose that <var>S</var> is linearly dependent, then from theorem (linearly dependent sets), we know that
-            <section>
-              at least one of the vectors in <var>S</var> must be expressible as a linear combination of the other vectors in the set.
-            </section>
-            This is a contradiction to the hypothesis of this implication. Therefore, <var>S</var> is linearly independent.
           </p>
         </section>
       </p>
@@ -2105,115 +2082,124 @@
         </section>
       </p>
     </section>
-    <section id="importance-linearly-dependence" class="description">
+    <section id="the-smallest-generating-set" class="description">
       <p>
-        <strong>Importance of linear dependence</strong>:
-        Suppose that <var>W</var> is a subspace of a vector space <var>V</var>. It is desirable to find a small finite subset <var>S</var> of <var>W</var> that generates <var>W</var> because the smaller <var>S</var> is, the fewer the number of computations required to represent vectors in <var>W</var> as such linear combinations.
+        <strong>The smallest generating set</strong>:
+        The issue of whether <var>S</var> is the smallest generating set for its span is related to the question of whether <var>S</var> is linearly dependent.
       </p>
       <p>
-        The issue of whether <var>S</var> is the smallest generating set for its span is related to the question of whether <var>S</var> is linearly dependent. Consider the subset <var>S</var> of &reals;<sup>3</sup>
-        <section>
-          <table>
-            <tr>
-              <td colspan="4">
-                S = {u<sub>1</sub>, u<sub>2</sub>, u<sub>3</sub>, u<sub>4</sub>}
-              </td>
-            </tr>
-            <tr>
-              <td colspan="4">
-                where
-              </td>
-            </tr>
-            <tr>
-              <td>u<sub>1</sub> = (2, &minus;1, 4),</td>
-              <td>u<sub>2</sub> = (1, &minus;1, 3),</td>
-              <td>u<sub>3</sub> = (1, 1, &minus;1),</td>
-              <td>u<sub>4</sub> = (1, &minus;2, &minus;1)</td>
-            </tr>
-          </table>
-        </section>
-        In fact, <var>S</var> is linear dependent
-        <section>
-          &minus;2u<sub>1</sub> + 3u<sub>2</sub> + u<sub>3</sub>
-          &minus;0u<sub>4</sub> = 0
-        </section>
-        This equation implies that <var>u<sub>3</sub></var> (or alternatively, <var>u<sub>1</sub></var> or <var>u<sub>2</sub></var>) is a linear combination of the other vectors in <var>S</var>. For example
-        <section>
-          u<sub>3</sub>
-          = 2u<sub>1</sub> &minus; 3u<sub>2</sub> + 0u<sub>4</sub>
-        </section>
-        Therefore every linear combinations of vectors in <var>S</var> can be written as a linear combination of <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var> and <var>u<sub>4</sub></var>
+        Suppose that <var>S</var> is linearly dependent set containing two or more vectors. Then some vector <var>v</var> &in; <var>S</var> can be written as a linear combination of the other vectors in <var>S</var>, and
         <section>
           <table>
             <tr>
               <td>
-                a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + a<sub>3</sub>u<sub>3</sub> + a<sub>4</sub>u<sub>4</sub>
-              </td>
-              <td>
-                = a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub>
-                + a<sub>3</sub>(
-                  2u<sub>3</sub> &minus; 3u<sub>3</sub> + 0u<sub>4</sub> )
-                + a<sub>4</sub>u<sub>4</sub>
+                <var>S</var> is linearly dependent set, then
               </td>
             </tr>
             <tr>
-              <td></td>
               <td>
-                = ( a<sub>1</sub> + 2a<sub>3</sub> )u<sub>1</sub>
-                + ( a<sub>2</sub> &minus; 3a<sub>3</sub>)u<sub>2</sub>
-                + a<sub>4</sub>u<sub>4</sub>
+                the subset obtained by removing some <var>v</var> &in; <var>S</var> has the same span as <var>S</var>.
               </td>
             </tr>
           </table>
         </section>
-        Thus the subset <var>S&prime;</var> = {u<sub>1</sub>, u<sub>2</sub>, u<sub>4</sub>} has the same span as <var>S</var>.
+        It follows that
+        <section>
+          <table>
+            <tr>
+              <td>
+                if no proper subset of <var>S</var> generates the span of <var>S</var>, then
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <var>S</var> must be linearly independent.
+              </td>
+            </tr>
+          </table>
+        </section>
+        Another way to view this statement is given in theorem (linearly dependent span).
       </p>
     </section>
     <section id="linearly-dependent-span" class="proposition">
       <p>
         <strong>Theorem (linearly dependent span)</strong>:
-        Let <var>S</var> be a linearly independent subset of a vector space <var>V</var>, and let <var>v</var> &in; <var>V</var> such that <var>v</var> &notin; <var>S</var>, then
+        Let <var>V</var> be a vector space and
         <section>
-          S &cup; {v} is linearly dependent
-          &iff;
-          v &in; span(S)
+          <table>
+            <tr>
+              <td colspan="3">
+                <var>S</var> &subseteq; <var>V</var>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <var>u</var> &notin; <var>S</var>
+              </td>
+              <td>and</td>
+              <td>
+                <var>u</var> &in; <var>V</var>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <var>S</var> be linearly independent
+              </td>
+            </tr>
+          </table>
+        </section>
+        then
+        <section>
+          <table>
+            <tr>
+              <td>
+                <var>S</var> &cup; {u} is linearly dependent
+              </td>
+              <td>
+                if and only if
+              </td>
+              <td>
+                <var>u</var> &in; span(S)
+              </td>
+            </tr>
+          </table>
         </section>
         Proof:
         <section>
           <p>
-            If <var>S</var> &cup; {v} is linearly dependent, then there are vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var> such that <var>av</var> + <var>a<sub>1</sub>u<sub>1</sub></var> + <var>a<sub>2</sub>u<sub>2</sub></var> + &ctdot; + <var>a<sub>n</sub>u<sub>n</sub></var> = 0 for some nonzero scalars <var>a</var>, <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, so
+            If <var>S</var> &cup; {u} is linearly dependent, then there are vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var> such that <var>au</var> + <var>a<sub>1</sub>u<sub>1</sub></var> + <var>a<sub>2</sub>u<sub>2</sub></var> + &ctdot; + <var>a<sub>n</sub>u<sub>n</sub></var> = 0 for some nonzero scalars <var>a</var>, <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, so
             <section>
-              v
+              u
               = &minus;1 &frasl; a
                 ( a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> )
             </section>
-            This shows that <var>v</var> is a linear combination of <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var>, so we have <var>v</var> &in; span(S).
+            This shows that <var>u</var> is a linear combination of <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var>, so we have <var>u</var> &in; span(S).
           </p>
           <p>
-            If <var>v</var> &in; span(S), then there exist vectors <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>m</sub></var> &in; <var>S</var> and scalars <var>b<sub>1</sub></var>, <var>b<sub>2</sub></var>, &hellip;, <var>b<sub>m</sub></var> such that <var>v</var> = <var>b<sub>1</sub>v<sub>1</sub></var> + <var>b<sub>2</sub>v<sub>2</sub></var> + &ctdot; <var>b<sub>m</sub>v<sub>m</sub></var>, so we have
+            If <var>u</var> &in; span(S), then there exist vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>m</sub></var> &in; <var>S</var> and scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>m</sub></var> such that <var>u</var> = <var>a<sub>1</sub>u<sub>1</sub></var> + <var>a<sub>2</sub>u<sub>2</sub></var> + &ctdot; <var>a<sub>m</sub>u<sub>m</sub></var>, so we have
             <section>
-              b<sub>1</sub>v<sub>1</sub> + b<sub>2</sub>v<sub>2</sub> + &ctdot; b<sub>m</sub>v<sub>m</sub> + (&minus;1)v = 0
+              a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; a<sub>m</sub>u<sub>m</sub> + (&minus;1)u = 0
             </section>
-            Note that because <var>v</var> &notin; <var>S</var>, <var>v</var> &ne; <var>v<sub>i</sub></var> for <var>i</var> = 1, 2, &hellip;, <var>m</var>. Hence the coefficient of <var>v</var> in this linear combination is &minus;1 (i.e., nonzero), the set {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>m</sub>, v} is linearly dependent.
+            Note that because <var>u</var> &notin; <var>S</var>, <var>u</var> &ne; <var>u<sub>i</sub></var> for <var>i</var> = 1, 2, &hellip;, <var>m</var>. Hence the coefficient of <var>u</var> in this linear combination is &minus;1 (i.e., nonzero), the set {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, v} is linearly dependent.
             <section>
               <table>
                 <tr>
                   <td>
                     because
-                    {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>m</sub>}
+                    {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>}
                     &subseteq; S
-                    and v &notin; S
+                    and u &notin; S
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>m</sub>, v}
-                    &subseteq; S &cup; {v}
+                    {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, u}
+                    &subseteq; S &cup; {u}
                   </td>
                 </tr>
               </table>
             </section>
-            Therefore <var>S</var> &cup; {v} is linearly dependent by theorem (sets and linearly dependent). &marker;
+            Therefore <var>S</var> &cup; {u} is linearly dependent by theorem (sets and linearly dependent). &marker;
           </p>
         </section>
       </p>
@@ -2222,6 +2208,33 @@
       <p>
         <strong>Corollary (scalar multiple linearly dependent)</strong>:
         Let <var>u</var> and <var>v</var> be distinct vectors in a vector space <var>V</var>. Then {u, v} is linearly dependent if and only if <var>u</var> and <var>v</var> is a multiple of the other.
+      </p>
+      <p>
+        Proof:
+        <section>
+          <p>
+            If {u, v} is linearly dependent, a nontrivial representation of <var>0</var> as a linear combination for some nonzero scalars <var>a<sub>1</sub></var> and <var>a<sub>2</sub></var> such that
+            <section>
+              a<sub>1</sub>u + a<sub>2</sub>v = 0
+            </section>
+            Because the coefficients are not zero, we have
+            <section>
+              u = (&minus; a<sub>2</sub> &frasl; a<sub>1</sub>) v
+            </section>
+            Thus, <var>u</var> and <var>v</var> is a multiple of the other.
+          </p>
+          <p>
+            If <var>u</var> and <var>v</var> is a multiple of the other, then we have
+            <section>
+              <var>u</var> = <var>av</var>
+            </section>
+            for some scalar <var>a</var>. This equation gives a nontrivial representation of <var>0</var> as a linear combination
+            <section>
+              0 = (&minus;1)u + av
+            </section>
+            Thus, {u, v} is linearly dependent. &marker;
+          </p>
+        </section>
       </p>
     </section>
   </section>
