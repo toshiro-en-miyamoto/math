@@ -190,11 +190,13 @@
                 </tr>
                 <tr>
                   <td>a = c</td>
-                  <td>existence of multiplicative identity</td>
+                  <td>
+                    existence of multiplicative identity
+                    &marker;
+                  </td>
                 </tr>
               </table>
             </section>
-            &marker;
           </li>
         </ol>
       </p>
@@ -337,7 +339,10 @@
                 </tr>
                 <tr>
                   <td></td>
-                  <td>= a&middot;b</td>
+                  <td>
+                    = a&middot;b
+                    &marker;
+                  </td>
                 </tr>
               </table>
             </section>
@@ -345,7 +350,7 @@
         </ol>
       </p>
     </section>
-    <section id="zero-one-law" class="description">
+    <section id="zero-ring" class="description">
       <p>
         <strong>Zero ring</strong>:
         The zero ring, denoted {0} or simply <var>0</var>, consists of the one-element set {0} with the operations + and &middot; defined such that 0+0 = 0 and 0&middot;0 = 0. [Wikipedia: Zero ring]. If additive identity <var>0</var> equals multiplicative identity <var>1</var>, then the ring <var>R</var> has only a single element <var>0</var> = <var>1</var>, i.e.,
@@ -369,7 +374,10 @@
             <tr>
               <td></td>
               <td>= 0</td>
-              <td>corollary (multiplications in fields) #1</td>
+              <td>
+                corollary (multiplications in fields) #1
+                &marker;
+              </td>
             </tr>
           </table>
         </section>
@@ -490,7 +498,10 @@
             <tr>
               <td>0&prime;</td>
               <td>= 0</td>
-              <td>the cancellation law</td>
+              <td>
+                the cancellation law
+                &marker;
+              </td>
             </tr>
           </table>
         </section>
@@ -976,7 +987,7 @@
           <table>
             <tr><td>0 &in; {0}</td></tr>
             <tr><td>0+0 = 0 &in; {0}</td></tr>
-            <tr><td>c0 = 0 &in; {0}</td></tr>
+            <tr><td>c0 = 0 &in; {0} &marker;</td></tr>
           </table>
         </section>
       </p>
@@ -1004,7 +1015,7 @@
               <td>
                 &in; W
               </td>
-              <td>&because; subspace condition 3</td>
+              <td>&because; subspace condition 3 &marker;</td>
             </tr>
           </table>
         </section>
@@ -1118,6 +1129,7 @@
               <td>
                 &because;
                 (cA)<sub>ij</sub> = cA<sub>ij</sub>
+                &marker;
               </td>
             </tr>
           </table>
@@ -1506,10 +1518,8 @@
       </p>
       <p>
         Proof:
-        Observe that for each <var>v</var> &in; <var>V</var>,
-        <section>
-          0<var>v</var> = 0
-        </section>
+        Observe that for each <var>v</var> &in; <var>V</var>, 0<var>v</var> = 0
+        &marker;
       </p>
     </section>
     <section id="linear-combination-example2" class="description">
@@ -1656,7 +1666,7 @@
     <section id="span" class="definition">
       <p>
         <strong>Definition (span [線形包])</strong>:
-        Let <var>S</var> be a set of vectors {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>} in a vector space <var>V</var>. The span of <var>S</var>, denoted span(S) or span(v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>), is the set consisting of all linear combinations of the vectors in <var>S</var>. For some scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> &in; <var>F</var>,
+        Let <var>S</var> be a set of vectors {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>} in a vector space <var>V</var>. The span of <var>S</var>, denoted span(S) or span{ v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> }, is the set consisting of all linear combinations of the vectors in <var>S</var>. For some scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> &in; <var>F</var>,
         <section>
           span(
             v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>
@@ -1869,6 +1879,7 @@
                 If <var>S</var> &ne; &empty;, for any <var>v</var> &in; S,
                 <section>
                   v = 1v &in; span(S)
+                  &marker;
                 </section>
               </p>
             </section>
@@ -2107,6 +2118,7 @@
               </li>
               <li>
                 the second implication is the contrapositive of first implication.
+                &marker;
               </li>
             </ul>
           </p>
@@ -2388,7 +2400,7 @@
             If <var>S</var> contains a single nonzero vector, say <var>S</var> = {u}, then <var>V</var> = span{u}, and {u} is a basis for <var>V</var> = span{u}, because
             <ul>
               <li>
-                {u} &subset; span{u}
+                {u} &subseteq; {u} = <var>S</var>
               </li>
               <li>
                 {u} is linearly independent by corollary (single vector linearly independent)
