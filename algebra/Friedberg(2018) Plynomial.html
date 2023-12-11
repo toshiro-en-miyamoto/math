@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Polynomial in Linear Algebra, Friedberg(2018)</title>
+  <style>
+    body {
+      margin-left: 1.2rem;
+    }
+    th, td {
+      padding-right: 1.2rem;
+      vertical-align: text-bottom;
+    }
+    th {
+      text-align: left;
+    }
+    section, article {
+      margin-top: 1rem;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    article {
+      margin-right: 2rem;
+    }
+    .definition, .proposition, .description {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    .definition {
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      background-color: lightgrey;
+    }
+    .center {
+      text-align: center;
+    }
+    .right {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+<article>
+<h1>Polynomial in Linear Algebra [線形代数における多項式]</h1>
+<section id="polynomial">
+  <h2>Polynomials</h2>
+  <section id="definition-polynomial" class="definition">
+    <p>
+      <strong>Polynomial [多項式]</strong>:
+      A polynomial with coefficients [係数] from a field <var>F</var> is an expression [式] of the form
+      <section>
+        f(x)
+        = a<sub>n</sub>&InvisibleTimes;x<sup>n</sup>
+        + a<sub>n-1</sub>&InvisibleTimes;x<sup>n-1</sup>
+        + &ctdot; + a<sub>1</sub>&InvisibleTimes;x + a<sub>0</sub>
+      </section>
+    </p>
+  </section>
+  <section id="polynomail-degree" class="description">
+    <p>
+      <strong>Degree [次数]</strong>:
+      The degree of a polynomial is defined to the largest exponent of <var>x</var> with a non-zero coefficient.
+    </p>
+  </section>
+  <section id="zero-polynomail" class="description">
+    <p>
+      <strong>Zero polynomial</strong>:
+      A polynomial f(x) is call the zero polynomial if <var>a<sub>i</sub></var> = 0 for 0 &le; <var>i</var> &le; <var>n</var>, that is f(x) = 0. Its degree is defined to be &minus;1.
+    </p>
+  </section>
+  <section id="equal-polynomials" class="description">
+    <p>
+      <strong>Equality of polynomials</strong>:
+      Two polynomials,
+      <section>
+        <table>
+          <tr>
+            <td>
+              f(x)
+              = a<sub>n</sub>&InvisibleTimes;x<sup>n</sup>
+              + a<sub>n-1</sub>&InvisibleTimes;x<sup>n-1</sup>
+              + &ctdot; + a<sub>1</sub>&InvisibleTimes;x + a<sub>0</sub>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              g(x)
+              = b<sub>m</sub>&InvisibleTimes;x<sup>m</sup>
+              + b<sub>m-1</sub>&InvisibleTimes;x<sup>m-1</sup>
+              + &ctdot; + b<sub>1</sub>&InvisibleTimes;x + b<sub>0</sub>
+            </td>
+          </tr>
+        </table>
+      </section>
+      are called equal if <var>m</var> = <var>n</var> and
+      <var>a<sub>i</sub></var> = <var>b<sub>i</sub></var>
+      for <var>i</var> = 0, 1, &hellip;, <var>n</var>.
+    </p>
+  </section>
+  <section id="set-of-polynomials" class="description">
+    <p>
+      <strong>Notation (P(F): a set of polynomials)</strong>:
+      A set of all polynomials with coefficients from a field <var>F</var>, denoted P(F), is a vector space with the two operations &mdash; suppose <var>m</var> &le; <var>n</var>, and <var>b<sub>m+1</sub></var> = <var>b<sub>m+2</sub></var> = &ctdot; = <var>b<sub>n</sub></var> = 0, then
+      <section>
+        <table>
+          <tr>
+            <td>
+              f(x)+g(x)
+              = (a<sub>n</sub>+b<sub>n</sub>)&InvisibleTimes;x<sup>n</sup>
+              + (a<sub>n-1</sub>+b<sub>n-1</sub>)&InvisibleTimes;x<sup>n-1</sup>
+              + &ctdot;
+              + (a<sub>1</sub>+b<sub>1</sub>)&InvisibleTimes;x
+              + (a<sub>0</sub>+b<sub>0</sub>)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              c&InvisibleTimes;f(x)
+              = c&InvisibleTimes;a<sub>n</sub>&InvisibleTimes;x<sup>n</sup>
+              + c&InvisibleTimes;a<sub>n-1</sub>&InvisibleTimes;x<sup>n-1</sup>
+              + &ctdot;
+              + c&InvisibleTimes;a<sub>1</sub>&InvisibleTimes;x
+              + c&InvisibleTimes;a<sub>0</sub>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </p>
+  </section>
+  <section id="define-polynomial-set-degree" class="description">
+    <p>
+      <strong>Notation (P<sub>n</sub>(F): a set of all polynomials with degree <var>&le; n</var>)</strong>:
+      Let <var>n</var> &ge; 0, and let P<sub>n</sub>(F) consist of all polynomials in P(F) having degree &le; <var>n</var>.
+    </p>
+  </section>
+  <section id="polynominal-set-degreeis-subspace" class="proposition">
+    <p>
+      <strong>Proposition (P<sub>n</sub>(F) is a subspace)</strong>:
+      P<sub>n</sub>(F) is a subspace of P(F).
+    </p>
+    <p>
+      Proof: Let <var>p<sub>1</sub>, p<sub>2</sub></var> &in; P<sub>n</sub>(F), and let <var>c</var> &in; <var>F</var>,
+      <section>
+        <table>
+          <tr>
+            <td>zero &in; P<sub>n</sub>(F)</td>
+            <td>
+              &because;
+              the zero polynomial has degree -1 &lt; <var>n</var>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              p<sub>1</sub>+p<sub>2</sub> &in; P<sub>n</sub>(F)
+            </td>
+            <td>
+              &because; p<sub>1</sub>+p<sub>2</sub>
+              is another polynomial of degree &le; <var>n</var>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              cp<sub>1</sub> &in; P<sub>n</sub>(F)
+            </td>
+            <td>
+              &because; cp<sub>1</sub>
+              is another polynomial of degree &le; <var>n</var>
+            </td>
+          </tr>
+        </table>
+      </section>
+      Hence by theorem (subspace conditions), P<sub>n</sub>(F) is a subspace of P(F).
+    </p>
+  </section>
+
+</section>
+<section id="reference">
+  <h2>References</h2>
+  <ul>
+    <li>
+      Friedberg, S.H., et al. (2016). <i>Linear Algebra, 5th Edition</i>. Pearson.
+    </li>
+  </ul>
+</section>
+</article>
+</body>
+</html>
