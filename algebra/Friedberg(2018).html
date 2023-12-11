@@ -459,6 +459,16 @@
         </section>
       </p>
     </section>
+    <section id="zero-in-vector-space" class="proposition">
+      <p>
+        <strong>Proposition (0 in vector space)</strong>:
+        Existence of vector additive identity of the vector space axioms tells:
+        <section>
+          any vector space must contain the zero vector <var>0</var>
+        </section>
+        Hence the empty set &empty; is not a vector space.
+      </p>
+    </section>
     <section id="cancellation-law-vector" class="proposition">
       <p>
         <strong>Theorem 1.1 (cancellation law for vector addition)</strong>:
@@ -766,19 +776,19 @@
             <tr>
               <td>0 &in; W</td>
               <td>
-                <var>W</var> has a zero vector
+                any vector space must contain the zero vector <var>0</var>
               </td>
             </tr>
             <tr>
               <td>x+y &in; W</td>
               <td>
-                <var>W</var> is closed under addition
+                any vector space must be closed under addition
               </td>
             </tr>
             <tr>
               <td>cx &in; W</td>
               <td>
-                <var>W</var> is closed under scalar multiplication
+                any vector space must be closed under scalar multiplication
               </td>
             </tr>
           </table>
@@ -794,7 +804,7 @@
                 <var>W</var> is a vector space with addition and scalar multiplication defined on <var>V</var> by definition of the subspace, hence <var>W</var> is closed under addition and scalar multiplication.
               </li>
               <li>
-                <var>W</var> is a vector space containing an additive identity, say 0&prime;, such that <var>x</var>+0&prime; = <var>x</var> for each <var>x</var> &in; <var>W</var>. But also <var>x</var> + 0 = <var>x</var>, and thus 0&prime; = 0 by the cancellation law for vector addition. Hence 0 &in; <var>W</var>.
+                Let 0&prime; be an additive identity in <var>W</var> such that <var>x</var>+0&prime; = <var>x</var> for each <var>x</var> &in; <var>W</var>. But also <var>x</var>+0 = <var>x</var> in the vector space <var>V</var>, thus 0&prime; = 0 by the cancellation law for vector addition. Hence 0 &in; <var>W</var>.
               </li>
             </ul>
           </p>
@@ -855,19 +865,19 @@
                 <tr>
                   <td>0 &in; W</td>
                   <td>
-                    <var>W</var> has a zero vector
+                    any vector space must contain the zero vector <var>0</var>
                   </td>
                 </tr>
                 <tr>
                   <td>x+y &in; W</td>
                   <td>
-                    <var>W</var> is closed under addition
+                    any vector space must be closed under addition
                   </td>
                 </tr>
                 <tr>
                   <td>cx &in; W</td>
                   <td>
-                    <var>W</var> is closed under scalar multiplication
+                    any vector space must be closed under scalar multiplication
                   </td>
                 </tr>
                 <tr>
@@ -962,7 +972,7 @@
     </section>
     <section id="zero-vector-linear" class="proposition">
       <p>
-        <strong>Corollary (zero vector is a linear combination)</strong>:
+        <strong>Proposition (zero vector is a linear combination)</strong>:
         The zero vector is a linear combination of any nonempty subset of <var>V</var>.
       </p>
       <p>
@@ -1115,16 +1125,15 @@
     <section id="span" class="definition">
       <p>
         <strong>Definition (span [線形包])</strong>:
-        Let <var>S</var> be a set of vectors {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>} in a vector space <var>V</var>. The span of <var>S</var>, denoted span(S) or span{ v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> }, is the set consisting of all linear combinations of the vectors in <var>S</var>. For some scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> &in; <var>F</var>,
+        Let <var>S</var> be a non-empty subset of a vector space <var>V</var>. The span of <var>S</var>, denoted span(S), is the set consisting of all linear combinations of the vectors in <var>S</var>.
+      </p>
+    </section>
+    <section id="span-of-vectors" class="description">
+      <p>
+        <strong>Notation (span of vectors)</strong>:
+        Let <var>S</var> be a set of vectors {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>} in a vector space <var>V</var>, then span(S) can be denoted as
         <section>
-          span(
-            v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>
-          ) = {
-            a<sub>1</sub>v<sub>1</sub>
-            + a<sub>2</sub>v<sub>2</sub>
-            + &ctdot;
-            + a<sub>n</sub>v<sub>n</sub>
-          }
+          span{v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>}
         </section>
       </p>
     </section>
@@ -1153,7 +1162,16 @@
           a<sub>1</sub>w<sub>1</sub> + a<sub>2</sub>w<sub>2</sub> + &hellip; + a<sub>n</sub>w<sub>n</sub> &in; W
         </section>
         Proof:
-        For every <var>i</var> &in; &naturals;, a<sub>i</sub>w<sub>i</sub> &in; <var>W</var> because any subspace is closed under scalar multiplication. In order to prove by induction, break the claim
+        For every <var>i</var> &in; &naturals;,
+        <section>
+          a<sub>i</sub>w<sub>i</sub> &in; <var>W</var>
+        </section>
+        because any subspace is closed under scalar multiplication. So it suffices to prove that
+        <section>
+          &sum; <sub>(i=1,2,&hellip;,n)</sub>
+          a<sub>i</sub>w<sub>i</sub> &in; W
+        </section>
+        In order to prove it by induction, break the claim
         <section>
           <table>
             <tr>
@@ -1165,14 +1183,14 @@
             <tr>
               <td>Inductive claim:</td>
               <td>
-                &sum; <sub>(i=1,2,&hellip;,n)</sub>
+                if &sum; <sub>(i=1,2,&hellip;,n)</sub>
                 a<sub>i</sub>w<sub>i</sub> &in; W
               </td>
             </tr>
             <tr>
               <td></td>
               <td>
-                &Implies;
+                then
                 &sum; <sub>(i=1,2,&hellip;,n,n+1)</sub>
                 a<sub>i</sub>w<sub>i</sub> &in; W
               </td>
@@ -1205,9 +1223,23 @@
         </ul>
       </p>
     </section>
+    <section id="span-contains-spanning-set" class="proposition">
+      <p>
+        <strong>Theorem 1.5 (span contains spanning set)</strong>:
+        Let <var>S</var> be a subset of vector space <var>V</var>, then
+        <section>
+          span(S) is a subspace of <var>V</var> that contains <var>S</var>.
+        </section>
+        Let <var>W</var> be a subspace of <var>V</var> that contains <var>S</var>, then
+        <section>
+          <var>W</var> must also contains span(S).
+        </section>
+        Proof:
+      </p>
+    </section>
     <section id="span-in-subspace" class="proposition">
       <p>
-        <strong>Theorem (span in subspace)</strong>:
+        <strong>Theorem 1.5 (span in subspace)</strong>:
         If <var>W</var> is a subspace of vector space <var>V</var> and <var>S</var> is a subset of <var>V</var>, then
         <section>
           <table>
