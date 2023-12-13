@@ -318,7 +318,7 @@
                 <tr>
                   <td></td>
                   <td>= 0</td>
-                  <td>corollary 1</td>
+                  <td>this corollary 1</td>
                 </tr>
               </table>
             </section>
@@ -375,7 +375,7 @@
               <td></td>
               <td>= 0</td>
               <td>
-                corollary (multiplications in fields) #1
+                Corollary (multiplications in fields) #1
                 &marker;
               </td>
             </tr>
@@ -485,92 +485,100 @@
         Proof:
         By the vector space axiom, we know that there exists an additive inverse, say <var>u</var>, of the vector <var>z</var> such that
         <section>
-          z+u = 0
-        </section>
-        Thus
-        <section>
-          <table>
-            <tr>
-              <td>x</td>
-              <td>= x+0</td>
-              <td><var>0</var> is the additive identity</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= x+(z+u)</td>
-              <td>the additive inverse <var>u</var> of <var>z</var></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= (x+z)+u</td>
-              <td>by additive associativity</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= (y+z)+u</td>
-              <td>by the hypothesis</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= y+(z+u)</td>
-              <td>by additive associativity</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= y+0</td>
-              <td>the additive inverse <var>u</var> of <var>z</var></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= y</td>
-              <td><var>0</var> is the additive identity &marker;</td>
-            </tr>
-          </table>
+          <section>
+            z+u = 0
+          </section>
+          Thus
+          <section>
+            <table>
+              <tr>
+                <td>x</td>
+                <td>= x+0</td>
+                <td><var>0</var> is the additive identity</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= x+(z+u)</td>
+                <td>the additive inverse <var>u</var> of <var>z</var></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= (x+z)+u</td>
+                <td>by additive associativity</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= (y+z)+u</td>
+                <td>by the hypothesis</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= y+(z+u)</td>
+                <td>by additive associativity</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= y+0</td>
+                <td>the additive inverse <var>u</var> of <var>z</var></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= y</td>
+                <td><var>0</var> is the additive identity &marker;</td>
+              </tr>
+            </table>
+          </section>
         </section>
       </p>
     </section>
     <section id="unique-zero-vector" class="proposition">
       <p>
-        <strong>Corollary 1 (unique zero vector)</strong>:
+        <strong>Corollary (1: unique zero vector)</strong>:
         The zero vector is unique.
       </p>
       <p>
-        Proof: Let <var>V</var> be a vector space, and <var>x &in; V</var>. Suppose that <var>0&prime; &in; V</var> is an zero vector, too. Then,
+        Proof:
+        Let <var>V</var> be a vector space, and <var>x &in; V</var>. Suppose that <var>0&prime; &in; V</var> is an zero vector, too. Then,
         <section>
-          <table>
-            <tr>
-              <td>0&prime; + x</td>
-              <td>= x</td>
-              <td>&because; 0&prime; is an zero vector</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= 0 + x</td>
-              <td>&because; 0 is an zero vector</td>
-            </tr>
-            <tr>
-              <td>0&prime;</td>
-              <td>= 0</td>
-              <td>
-                the cancellation law
-                &marker;
-              </td>
-            </tr>
-          </table>
+          <section>
+            <table>
+              <tr>
+                <td>0&prime; + x</td>
+                <td>= x</td>
+                <td>&because; 0&prime; is an zero vector</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= 0 + x</td>
+                <td>&because; 0 is an zero vector</td>
+              </tr>
+              <tr>
+                <td>0&prime;</td>
+                <td>= 0</td>
+                <td>
+                  the cancellation law
+                  &marker;
+                </td>
+              </tr>
+            </table>
+          </section>
         </section>
       </p>
     </section>
     <section id="unique-additive-inverse" class="proposition">
       <p>
-        <strong>Corollary 2 (unique additive inverse)</strong>:
+        <strong>Corollary (2: unique additive inverse)</strong>:
         The additive inverse vector is unique.
       </p>
       <p>
-        Proof: Suppose that for a vector <var>x</var>, there exist two distinct additive inverses. Since the zero vector is unique,
+        Proof:
+        Suppose that for a vector <var>x</var>, there exist two distinct additive inverses. Since the zero vector is unique,
         <section>
-          0 = x+(&minus;x) = x+(&minus;x&prime;)
+          <section>
+            0 = x+(&minus;x) = x+(&minus;x&prime;)
+          </section>
+          Thus &minus;x = &minus;x&prime; by cancellation law for vector addition, it follows that the additive inverse is unique.
         </section>
-        Thus &minus;x = &minus;x&prime; by cancellation law for vector addition, it follows that the additive inverse is unique.
       </p>
     </section>
     <section id="theorem-scalar-multiplications" class="proposition">
@@ -796,20 +804,16 @@
       </p>
       <p>
         Proof:
+        If <var>W</var> is a subspace of <var>V</var>, then
         <section>
-          <p>
-            If <var>W</var> is a subspace of <var>V</var>, then
-            <ul>
-              <li>
-                <var>W</var> is a vector space with addition and scalar multiplication defined on <var>V</var> by definition of the subspace, hence <var>W</var> is closed under addition and scalar multiplication.
-              </li>
-              <li>
-                Let 0&prime; be an additive identity in <var>W</var> such that <var>x</var>+0&prime; = <var>x</var> for each <var>x</var> &in; <var>W</var>. But also <var>x</var>+0 = <var>x</var> in the vector space <var>V</var>, thus 0&prime; = 0 by the cancellation law for vector addition. Hence 0 &in; <var>W</var>.
-              </li>
-            </ul>
-          </p>
-        </section>
-        <section>
+          <ul>
+            <li>
+              <var>W</var> is a vector space with addition and scalar multiplication defined on <var>V</var> by definition of the subspace, hence <var>W</var> is closed under addition and scalar multiplication.
+            </li>
+            <li>
+              Let 0&prime; be an additive identity in <var>W</var> such that <var>x</var>+0&prime; = <var>x</var> for each <var>x</var> &in; <var>W</var>. But also <var>x</var>+0 = <var>x</var> in the vector space <var>V</var>, thus 0&prime; = 0 by the cancellation law for vector addition. Hence 0 &in; <var>W</var>.
+            </li>
+          </ul>
           <p>
             Conversely, recall the vector space axioms.
             <section>
@@ -900,13 +904,12 @@
                 <tr>
                   <td>(&minus;1)x = &minus;x</td>
                   <td>
-                    by theorem (scalar multiplications in vector spaces)
+                    by Theorem (scalar multiplications in vector spaces)
                   </td>
                 </tr>
               </table>
             </section>
-            Thus &minus;x &in; <var>W</var>.
-            Hence <var>W</var> is a subspace of <var>V</var>. &marker;
+            Thus &minus;x &in; <var>W</var>, therefore <var>W</var> is a subspace of <var>V</var>. &marker;
           </p>
         </section>
       </p>
@@ -1136,7 +1139,7 @@
         <strong>Notation (span of vectors)</strong>:
         Let <var>S</var> be a set of vectors {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>} in a vector space <var>V</var>, then span(S) can be denoted as
         <section>
-          span{v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>}
+          span({v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>})
         </section>
       </p>
     </section>
@@ -1188,79 +1191,81 @@
         Proof:
         For every <var>i</var> &in; &naturals;,
         <section>
-          a<sub>i</sub>w<sub>i</sub> &in; <var>W</var>
+          <section>
+            a<sub>i</sub>w<sub>i</sub> &in; <var>W</var>
+          </section>
+          because any subspace is closed under scalar multiplication. So it suffices to prove that
+          <section>
+            &sum; <sub>(i=1,2,&hellip;,n)</sub>
+            a<sub>i</sub>w<sub>i</sub> &in; W
+          </section>
+          In order to prove it by induction, break the claim
+          <section>
+            <table>
+              <tr>
+                <td>Base claim:</td>
+                <td>
+                  a<sub>1</sub>w<sub>1</sub> &in; W
+                </td>
+              </tr>
+              <tr>
+                <td>Inductive claim:</td>
+                <td>
+                  if &sum; <sub>(i=1,2,&hellip;,n)</sub>
+                  a<sub>i</sub>w<sub>i</sub> &in; W
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  then
+                  &sum; <sub>(i=1,2,&hellip;,n,n+1)</sub>
+                  a<sub>i</sub>w<sub>i</sub> &in; W
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = {
+                    (&sum; <sub>(i=1,2,&hellip;,n)</sub>
+                    a<sub>i</sub>w<sub>i</sub>)
+                    +
+                    (a<sub>n+1</sub>w<sub>n+1</sub>)
+                  }
+                  &in; W
+                </td>
+              </tr>
+            </table>
+          </section>
+          The base claim is already proven. The inductive claim holds because
+          <ul>
+            <li>
+              (&sum; <sub>(i=1,2,&hellip;,n)</sub> a<sub>i</sub>w<sub>i</sub>) is a vector of <var>W</var> by the inductive hypothesis,
+            </li>
+            <li>
+              (a<sub>n+1</sub>w<sub>n+1</sub>) is already proven to be a vector of <var>W</var>, and
+            </li>
+            <li>
+              the inductive conclusion holds because any subspace is closed under addition. &marker;
+            </li>
+          </ul>
         </section>
-        because any subspace is closed under scalar multiplication. So it suffices to prove that
-        <section>
-          &sum; <sub>(i=1,2,&hellip;,n)</sub>
-          a<sub>i</sub>w<sub>i</sub> &in; W
-        </section>
-        In order to prove it by induction, break the claim
-        <section>
-          <table>
-            <tr>
-              <td>Base claim:</td>
-              <td>
-                a<sub>1</sub>w<sub>1</sub> &in; W
-              </td>
-            </tr>
-            <tr>
-              <td>Inductive claim:</td>
-              <td>
-                if &sum; <sub>(i=1,2,&hellip;,n)</sub>
-                a<sub>i</sub>w<sub>i</sub> &in; W
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                then
-                &sum; <sub>(i=1,2,&hellip;,n,n+1)</sub>
-                a<sub>i</sub>w<sub>i</sub> &in; W
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                = {
-                  (&sum; <sub>(i=1,2,&hellip;,n)</sub>
-                  a<sub>i</sub>w<sub>i</sub>)
-                  +
-                  (a<sub>n+1</sub>w<sub>n+1</sub>)
-                }
-                &in; W
-              </td>
-            </tr>
-          </table>
-        </section>
-        The base claim is already proven. The inductive claim holds because
-        <ul>
-          <li>
-            (&sum; <sub>(i=1,2,&hellip;,n)</sub> a<sub>i</sub>w<sub>i</sub>) is a vector of <var>W</var> by the inductive hypothesis,
-          </li>
-          <li>
-            (a<sub>n+1</sub>w<sub>n+1</sub>) is already proven to be a vector of <var>W</var>, and
-          </li>
-          <li>
-            the inductive conclusion holds because any subspace is closed under addition. &marker;
-          </li>
-        </ul>
       </p>
     </section>
     <section id="span-and-spanning-set" class="proposition">
       <p>
-        <strong>Theorem 1.5 (span and spanning set)</strong>:
+        <strong>Theorem (1.5: span and spanning set)</strong>:
         The span of any subset <var>S</var> of a vector space <var>V</var> is a subspace of <var>V</var> that contains <var>S</var>. Moreover, any subspace <var>W</var> of <var>V</var> that contains <var>S</var> must also contain the span of <var>S</var>.
       </p>
       <p>
         The proposition can broken into three lemmas;
         <section>
           <dl>
-            <dt>Lemma 1.5.1 (span is subspace)</dt>
+            <dt>Lemma (1.5.1: span is subspace)</dt>
             <dd>span(S) is a subspace of <var>V</var>.</dd>
-            <dt>Lemma 1.5.2 (span contains spanning set)</dt>
+            <dt>Lemma (1.5.2: span contains spanning set)</dt>
             <dd>span(S) &supseteq; S</dd>
-            <dt>Lemma 1.5.3 (spanning set subspace contains span)</dt>
+            <dt>Lemma (1.5.3: spanning set contains span)</dt>
             <dd>W &supseteq; S &Implies; W &supseteq; span(S)</dd>
           </dl>
         </section>
@@ -1271,7 +1276,7 @@
           <dl>
             <dt>span(&empty;) is a subspace of <var>V</var>, because</dt>
             <dd>
-              {0} is a subspace of any vector space by proposition (zero subspace).
+              {0} is a subspace of any vector space by Proposition (zero subspace).
             </dd>
             <dt>span(&empty;) &supseteq; &empty;, because</dt>
             <dd>
@@ -1287,7 +1292,7 @@
     </section>
     <section id="span-is-subspace" class="proposition">
       <p>
-        <strong>Lemma 1.5.1 (span is subspace)</strong>:
+        <strong>Lemma (1.5.1: span is subspace)</strong>:
         Let <var>S</var> be a subset of a vector space <var>V</var>, then
         <section>
           span(S) is a subspace of <var>V</var>.
@@ -1351,7 +1356,7 @@
     </section>
     <section id="span-contains-spanning-set" class="proposition">
       <p>
-        <strong>Lemma 1.5.2 (span contains spanning set)</strong>:
+        <strong>Lemma (1.5.2: span contains spanning set)</strong>:
         Let <var>S</var> be a subset of a vector space <var>V</var>, then
         <section>
           span(S) &supseteq; S
@@ -1365,14 +1370,14 @@
     </section>
     <section id="spanning-set-subspace-contains-span" class="proposition">
       <p>
-        <strong>Lemma 1.5.3 (spanning set subspace contains span)</strong>:
+        <strong>Lemma (1.5.3: spanning set contains span)</strong>:
         Let <var>S</var> be a subset of a vector space <var>V</var>, and let <var>W</var> be a subspace of <var>V</var>, then
         <section>
           W &supseteq; S &Implies; W &supseteq; span(S)
         </section>
         Proof:
+        If <var>S</var> &ne; &empty;, then a vector <var>w</var> &in; span(S) has the form
         <section>
-          If <var>S</var> &ne; &empty;, then a vector <var>w</var> &in; span(S) has the form
           <section>
             w = c<sub>1</sub>w<sub>1</sub> + c<sub>2</sub>w<sub>2</sub> + &hellip; + c<sub>k</sub>w<sub>k</sub>
           </section>
@@ -1381,7 +1386,7 @@
           <section>
             w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>k</sub> &in; W
           </section>
-          Therefore, <var>w</var> &in; <var>W</var> by the lemma (linear combination in subspace). Because <var>w</var>, an arbitrary vector in span(S), belongs to <var>W</var>, it follows that <var>W</var> &supseteq; span(S). &marker;
+          Therefore, <var>w</var> &in; <var>W</var> by Lemma (linear combination in subspace). Because <var>w</var>, an arbitrary vector in span(S), belongs to <var>W</var>, it follows that <var>W</var> &supseteq; span(S). &marker;
         </section>
       </p>
     </section>
@@ -1418,62 +1423,52 @@
         </section>
       </p>
     </section>
-    <section id="subspace-and-span" class="proposition">
+    <section id="spanning-set-spans-itself" class="proposition">
       <p>
-        <strong>Corollary (subspace and span)</strong>:
+        <strong>
+          Proposition (exercise 1.4.12: spanning set spans itself)
+        </strong>:
+        A subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var> if and only if
         <section>
-          <p>
-            a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var> &iff; span(W) = <var>W</var>
-          </p>
+          span(W) = W
         </section>
         Proof:
+        If a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var>, then span(W) = <var>W</var>, because
         <section>
-          <p>
-            If a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var>, then
-            <section>
-              <table>
-                <tr><td>span(W) &subseteq; <var>W</var> by theorem (span in subspace), and</td></tr>
-                <tr><td><var>W</var> &subseteq; span(W) by theorem (span is subspace),</td></tr>
-                <tr><td>therefore span(W) = <var>W</var>.</td></tr>
-              </table>
-            </section>
-            Now we will show a contradiction if span(W) = <var>W</var> but a subset <var>W</var> of a vector space <var>V</var> is NOT a subspace of <var>V</var>. If <var>W</var> &ne; &empty;, then a vector <var>w</var> &in; span(W) has the form
-            <section>
-              w = a<sub>1</sub>w<sub>1</sub> + a<sub>2</sub>w<sub>2</sub> + &ctdot; + a<sub>n</sub>w<sub>n</sub>
-            </section>
-            for some vectors <var>w<sub>1</sub></var>, <var>w<sub>2</sub></var>, &hellip;, <var>w<sub>n</sub></var> &in; <var>W</var> and some scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>. Since span(W) = <var>W</var>,
-            <section>
-              for all <var>w</var>, <var>w</var> &in; <var>W</var>
-            </section>
-            but the subset <var>W</var> is NOT closed under addition and scalar multiplication meaning
-            <section>
-              there exists <var>w</var> such that <var>w</var> &notin; <var>W</var>
-            </section>
-            which is a contradiction. Thus span(W) = <var>W</var> &Implies; a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var>. &marker;
-          </p>
+          <section>
+            <table>
+              <tr>
+                <td>span(W) &supseteq; W</td>
+                <td>by Lemma (span contains spanning set)</td>
+              </tr>
+              <tr>
+                <td>W &supseteq; span(W)</td>
+                <td>by Lemma (spanning set contains span)</td>
+              </tr>
+            </table>
+          </section>
+          Conversely, we know from Lemma (span is subspace) that span(W) is a subspace of <var>V</var> (since W &subseteq; V), hence <var>W</var> is too.
+          &marker;
         </section>
       </p>
     </section>
     <section id="subset-and-span" class="proposition">
       <p>
-        <strong>Corollary (subset and span)</strong>:
+        <strong>Proposition (exercise 1.4.13: subset and span)</strong>:
         Let <var>S<sub>1</sub></var> and <var>S<sub>2</sub></var> be subsets of a vector space <var>V</var>, then
         <section>
-          <var>S<sub>1</sub></var> &subseteq; <var>S<sub>2</sub></var> &Implies;
-          span(S<sub>1</sub>) &subseteq; span(S<sub>2</sub>)
+          if S<sub>1</sub> &subseteq; S<sub>2</sub>,
+          then span(S<sub>1</sub>) &subseteq; span(S<sub>2</sub>)
         </section>
         Proof:
+        Let <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; S<sub>1</sub>, then some linear combination <var>v</var> in span(S<sub>1</sub>)
         <section>
           <p>
-            Let <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; <var>S<sub>1</sub></var>, then some linear combination in span(S<sub>1</sub>)
             <section>
               v = a<sub>1</sub>v<sub>1</sub> + a<sub>2</sub>v<sub>2</sub> + &ctdot; + a<sub>n</sub>v<sub>n</sub>
             </section>
-            is also a linear combination of <var>S<sub>2</sub></var> because <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; <var>S<sub>2</sub></var> as well, thus
-            <section>
-              span(S<sub>1</sub>) &subset; span(S<sub>2</sub>)
-            </section>
-            If <var>S<sub>1</sub></var> = <var>S<sub>2</sub></var>, then span(S<sub>1</sub>) = span(S<sub>2</sub>) is immediate by the definition of span. &marker;
+            is also a linear combination of <var>S<sub>2</sub></var> because <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; S<sub>2</sub>.
+            &marker;
           </p>
         </section>
       </p>
@@ -1496,10 +1491,6 @@
         <section>
           a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
         </section>
-        In other words, for a set to be linearly dependent,
-        <section>
-          there must exist a nontrivial representation of <var>0</var> (the zero vector) as a linear combination of vectors in the set.
-        </section>
       </p>
     </section>
     <section id="trivial-representation" class="description">
@@ -1514,7 +1505,7 @@
     </section>
     <section id="zero-vector-linearly-dependent" class="proposition">
       <p>
-        <strong>Corollary (zero vector linearly dependent)</strong>:
+        <strong>Proposition (zero vector linearly dependent)</strong>:
         Any set that contains the zero vector is linearly dependent.
       </p>
       <p>
@@ -1523,36 +1514,39 @@
     </section>
     <section id="linearly-dependent-sets" class="proposition">
       <p>
-        <strong>Theorem (linearly dependent sets)</strong>:
+        <strong>Proposition (linearly dependent sets)</strong>:
         A set is linearly dependent if only if
         <section>
           at least one of the vectors in the set is expressible as a linear combination of the other vectors in the set.
         </section>
         Proof:
-        Let <var>S</var> be a set and <var>W</var> = {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>} &in; <var>S</var>.
+        Let <var>S</var> be a set and {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>} &in; <var>S</var>.
         <section>
           <p>
-            If <var>S</var> is linearly dependent, then there exist a nontrivial representation of <var>0</var> as a linear combination of vectors in <var>W</var> for some scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, not all zero, such that
+            If <var>S</var> is linearly dependent, then there exist a nontrivial representation of <var>0</var> as a linear combination of vectors in <var>S</var> for some scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, not all zero, such that
             <section>
               a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
             </section>
-            Let <var>a<sub>1</sub></var> be a nonzero scalar, then <var>u<sub>1</sub></var> can be expressed as a linear combination of the other vectors in <var>S</var>:
+            Let <var>a<sub>1</sub></var> be a nonzero scalar, then a vector <var>u<sub>1</sub></var> &in; <var>S</var>
             <section>
               u<sub>1</sub> = &minus;1 &frasl; a<sub>1</sub> (
                 a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
               )
             </section>
-            If at least one of the vectors in <var>S</var>, say <var>u<sub>1</sub></var>, is expressible as a linear combination of the other vectors <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</var> for some scalars <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> such that
+            can be expressed as a linear combination of the other vectors in <var>S</var>.
+          </p>
+          <p>
+            Conversely, if at least one of the vectors in <var>S</var>, say <var>u<sub>1</sub></var>, is expressible as a linear combination of the other vectors <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</var> for some scalars <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> such that
             <section>
               u<sub>1</sub> =
               a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
             </section>
-            then from the expression, we have a representation of <var>0</var> as a linear combination of vectors in <var>W</var> &subseteq; <var>S</var> such that
+            then from the expression, we have a representation of <var>0</var> as a linear combination of vectors in <var>S</var> such that
             <section>
               0 = (&minus;1)u<sub>1</sub> +
               a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
             </section>
-            Because the coefficient of <var>u<sub>1</sub></var> is nonzero, the representation is nontrivial. Thus, <var>S</var> is linear dependent. &marker;
+            Because the coefficient of <var>u<sub>1</sub></var> is nonzero, <var>S</var> is linear dependent. &marker;
           </p>
         </section>
       </p>
@@ -1574,7 +1568,7 @@
     </section>
     <section id="single-vector-linearly-independent" class="proposition">
       <p>
-        <strong>Corollary (single vector linearly independent)</strong>:
+        <strong>Proposition (single vector linearly independent)</strong>:
         Consider a set containing only one nonzero vector <var>v</var>. Then {v} is linearly independent.
       </p>
       <p>
@@ -1583,7 +1577,7 @@
     </section>
     <section id="superset-dependent" class="proposition">
       <p>
-        <strong>Theorem (sets and linearly dependent)</strong>:
+        <strong>Theorem (1.6: superset linearly dependent)</strong>:
         Let <var>S<sub>1</sub></var> and <var>S<sub>2</sub></var> be subsets of a vector space <var>V</var> such that S<sub>1</sub> &subseteq; S<sub>2</sub> &subseteq; V, then
         <section>
           <table>
@@ -1592,6 +1586,24 @@
               <td>&Implies;</td>
               <td>S<sub>2</sub> is linearly dependent</td>
             </tr>
+          </table>
+        </section>
+        Proof:
+        <section>
+          Since <var>S<sub>1</sub></var> is linearly dependent, there exist a finite number of distinct vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S<sub>1</sub></var> and scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, not all zero, such that
+          <section>
+            a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
+          </section>
+          <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S<sub>2</sub></var>, hence <var>S<sub>2</sub></var> is also linear dependent.
+        </section>
+      </p>
+    </section>
+    <section id="subset-independent" class="proposition">
+      <p>
+        <strong>Corollary (subset linearly independent)</strong>:
+        Let <var>S<sub>1</sub></var> and <var>S<sub>2</sub></var> be subsets of a vector space <var>V</var> such that S<sub>1</sub> &subseteq; S<sub>2</sub> &subseteq; V, then
+        <section>
+          <table>
             <tr>
               <td>S<sub>2</sub> is linearly independent</td>
               <td>&Implies;</td>
@@ -1599,28 +1611,16 @@
             </tr>
           </table>
         </section>
-        Proof:
-        <section>
-          <p>
-            Since <var>S<sub>1</sub></var> is linearly dependent, there exist a finite number of distinct vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S<sub>1</sub></var> and scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, not all zero, such that
-            <section>
-              a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
-            </section>
-            Since S<sub>1</sub> &subseteq; S<sub>2</sub>, <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> are also elements of <var>S<sub>2</sub></var>, it follows <var>S<sub>2</sub></var> is linear dependent.
-          </p>
-          <p>
-            The second implication holds because
-            <ul>
-              <li>
-                a subset that is not linearly dependent is linearly independent, and
-              </li>
-              <li>
-                the second implication is the contrapositive of first implication.
-                &marker;
-              </li>
-            </ul>
-          </p>
-        </section>
+        Proof: It holds because
+        <ul>
+          <li>
+            a subset that is not linearly dependent is linearly independent, and
+          </li>
+          <li>
+            the second implication is the contrapositive of first implication.
+            &marker;
+          </li>
+        </ul>
       </p>
     </section>
     <section id="the-smallest-generating-set" class="description">
@@ -1659,20 +1659,15 @@
             </tr>
           </table>
         </section>
-        Another way to view this statement is given in theorem (linearly dependent span).
+        Another way to view this statement is given in Theorem (linearly dependent span).
       </p>
     </section>
     <section id="linearly-dependent-span" class="proposition">
       <p>
-        <strong>Theorem (linearly dependent span)</strong>:
-        Let <var>V</var> be a vector space and
+        <strong>Theorem (1.7: linearly dependent span)</strong>:
+        Let <var>S</var> be a linearly independent subset of a vector space <var>V</var> and
         <section>
           <table>
-            <tr>
-              <td colspan="3">
-                <var>S</var> &subseteq; <var>V</var>
-              </td>
-            </tr>
             <tr>
               <td>
                 <var>u</var> &notin; <var>S</var>
@@ -1682,28 +1677,11 @@
                 <var>u</var> &in; <var>V</var>
               </td>
             </tr>
-            <tr>
-              <td colspan="3">
-                <var>S</var> be linearly independent
-              </td>
-            </tr>
           </table>
         </section>
-        then
+        then <var>S</var> &cup; {u} is linearly dependent if and only if
         <section>
-          <table>
-            <tr>
-              <td>
-                <var>S</var> &cup; {u} is linearly dependent
-              </td>
-              <td>
-                if and only if
-              </td>
-              <td>
-                <var>u</var> &in; span(S)
-              </td>
-            </tr>
-          </table>
+          <var>u</var> &in; span(S)
         </section>
         Proof:
         <section>
@@ -1714,64 +1692,78 @@
               = &minus;1 &frasl; a
                 ( a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> )
             </section>
-            This shows that <var>u</var> is a linear combination of <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var>, so we have <var>u</var> &in; span(S).
+            is a linear combination of vectors in <var>S</var>, it follows that <var>u</var> &in; span(S).
           </p>
           <p>
-            If <var>u</var> &in; span(S), then there exist vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>m</sub></var> &in; <var>S</var> and scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>m</sub></var> such that <var>u</var> = <var>a<sub>1</sub>u<sub>1</sub></var> + <var>a<sub>2</sub>u<sub>2</sub></var> + &ctdot; <var>a<sub>m</sub>u<sub>m</sub></var>, so we have
-            <section>
-              a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; a<sub>m</sub>u<sub>m</sub> + (&minus;1)u = 0
-            </section>
-            Note that because <var>u</var> &notin; <var>S</var>, <var>u</var> &ne; <var>u<sub>i</sub></var> for <var>i</var> = 1, 2, &hellip;, <var>m</var>. Hence the coefficient of <var>u</var> in this linear combination is &minus;1 (i.e., nonzero), the set {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, v} is linearly dependent.
+            Conversely, if <var>u</var> &in; span(S), then there exist vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>m</sub></var> &in; <var>S</var> and scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>m</sub></var>
             <section>
               <table>
                 <tr>
+                  <td>such that</td>
                   <td>
-                    because
-                    {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>}
-                    &subseteq; S
-                    and u &notin; S
+                    <var>u</var>
+                    = <var>a<sub>1</sub>u<sub>1</sub></var>
+                    + <var>a<sub>2</sub>u<sub>2</sub></var> + &ctdot;
+                    + <var>a<sub>m</sub>u<sub>m</sub></var>
                   </td>
                 </tr>
                 <tr>
+                  <td>if follows</td>
                   <td>
-                    {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, u}
-                    &subseteq; S &cup; {u}
+                    0
+                    = a<sub>1</sub>u<sub>1</sub>
+                    + a<sub>2</sub>u<sub>2</sub> + &ctdot;
+                    + a<sub>m</sub>u<sub>m</sub> + (&minus;1)u
                   </td>
                 </tr>
               </table>
             </section>
-            Therefore <var>S</var> &cup; {u} is linearly dependent by theorem (sets and linearly dependent). &marker;
+            Note that <var>u</var> &ne; <var>u<sub>i</sub></var> (<var>i</var> = 1, 2, &hellip;, <var>m</var>), because <var>u</var> &notin; <var>S</var>. And also note that the coefficient of <var>u</var> in this linear combination is &minus;1 (nonzero). Thus {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, u} is linearly dependent, it follows that <var>S</var> &cup; {u} is also linearly dependent by Theorem (linearly dependent span).
+            &marker;
           </p>
         </section>
       </p>
     </section>
     <section id="scalar-multiple-linearly-dependent" class="proposition">
       <p>
-        <strong>Corollary (scalar multiple linearly dependent)</strong>:
-        Let <var>u</var> and <var>v</var> be distinct vectors in a vector space <var>V</var>. Then {u, v} is linearly dependent if and only if <var>u</var> and <var>v</var> is a multiple of the other.
+        <strong>
+          Proposition (exercise 1.5.9: scalar multiple linearly dependent)
+        </strong>:
+        Let <var>u</var> and <var>v</var> be distinct vectors in a vector space <var>V</var>. Then {u, v} is linearly dependent if and only if
+        <section>
+          <var>u</var> and <var>v</var> is a multiple of the other
+        </section>
       </p>
       <p>
         Proof:
         <section>
           <p>
-            If {u, v} is linearly dependent, a nontrivial representation of <var>0</var> as a linear combination for some nonzero scalars <var>a<sub>1</sub></var> and <var>a<sub>2</sub></var> such that
+            If {u, v} is linearly dependent, there exists a nontrivial representation of <var>0</var> as a linear combination for some nonzero scalars <var>a</var> and <var>b</var> such that
             <section>
-              a<sub>1</sub>u + a<sub>2</sub>v = 0
-            </section>
-            Because the coefficients are not zero, we have
-            <section>
-              u = (&minus; a<sub>2</sub> &frasl; a<sub>1</sub>) v
+              <table>
+                <tr>
+                  <td>au + bv = 0</td>
+                  <td>it follows</td>
+                </tr>
+                <tr>
+                  <td>u = (&minus; b &frasl; a) v</td>
+                  <td>because <var>a</var> &ne; 0</td>
+                </tr>
+              </table>
             </section>
             Thus, <var>u</var> and <var>v</var> is a multiple of the other.
-          </p>
-          <p>
-            If <var>u</var> and <var>v</var> is a multiple of the other, then we have
+            Conversely, if <var>u</var> and <var>v</var> is a multiple of the other, then
             <section>
-              <var>u</var> = <var>av</var>
-            </section>
-            for some scalar <var>a</var>. This equation gives a nontrivial representation of <var>0</var> as a linear combination
-            <section>
-              0 = (&minus;1)u + av
+              <table>
+                <tr>
+                  <td>u = av</td>
+                  <td>it follows</td>
+                </tr>
+                <tr>
+                  <td>0 = (&minus;1)u + av</td>
+                  <td>which is nontrivial</td>
+                </tr>
+              </table>
             </section>
             Thus, {u, v} is linearly dependent. &marker;
           </p>
@@ -1853,10 +1845,10 @@
             Conversely let <var>u</var> &in; <var>V</var> is uniquely expressible as a linear combination of vectors of <var>&Beta;</var>. In order to prove by contradiction that <var>&Beta;</var> is a basis for <var>V</var>, suppose that <var>&Beta;</var> is not a basis of <var>V</var>, that is, <var>&Beta;</var> is linearly dependent.
             <ul>
               <li>
-                We know from theorem (sets and linearly dependent) that since <var>&Beta;</var> &subseteq; span(&Beta;) = <var>V</var>, the set <var>V</var> is also linearly dependent.
+                We know from Theorem (sets and linearly dependent) that since <var>&Beta;</var> &subseteq; span(&Beta;) = <var>V</var>, the set <var>V</var> is also linearly dependent.
               </li>
               <li>
-                Hence from theorem (linearly dependent sets), at least one of the vectors in <var>V</var>, say <var>u</var>, is expressible as a linear combination of the other vectors in <var>V</var> &mdash; a contradiction to the hypothesis of this implication.
+                Hence from Theorem (linearly dependent sets), at least one of the vectors in <var>V</var>, say <var>u</var>, is expressible as a linear combination of the other vectors in <var>V</var> &mdash; a contradiction to the hypothesis of this implication.
               </li>
             </ul>
             Hence <var>&Beta;</var> is linearly independent and a basis of <var>V</var>. &marker;
@@ -1901,7 +1893,7 @@
                 {u} &subseteq; {u} = <var>S</var>
               </li>
               <li>
-                {u} is linearly independent by corollary (single vector linearly independent)
+                {u} is linearly independent by Corollary (single vector linearly independent)
               </li>
             </ul>
           </p>
