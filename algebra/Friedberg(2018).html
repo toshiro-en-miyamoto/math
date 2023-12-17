@@ -47,7 +47,7 @@
     <section id="empty-set" class="definition">
       <p>
         <strong>Definition (empty set)</strong>:
-        The empty set, denoted by &empty;, is the set containing no elements. The empty set is a subset of every set.
+        The empty set, denoted &empty;, is a set containing no elements. &empty; is a subset of every set.
       </p>
     </section>
   </section>
@@ -353,23 +353,27 @@
     <section id="zero-ring" class="description">
       <p>
         <strong>Zero ring</strong>:
-        The zero ring, denoted {0} or simply <var>0</var>, consists of the one-element set {0} with the operations + and &middot; defined such that 0+0 = 0 and 0&middot;0 = 0. [Wikipedia: Zero ring]. If additive identity <var>0</var> equals multiplicative identity <var>1</var>, then the ring <var>R</var> has only a single element <var>0</var> = <var>1</var>, i.e.,
-        <section>
-          0 = 1 &Implies;
-          for all <var>r</var> &in; <var>R</var>, <var>r</var> = 0
-        </section>
+        In Ring theory, the zero ring is a set consisting of a single element <var>0</var> with the operations + and &middot; defined such that 0+0 = 0 and 0&middot;0 = 0. [Wikipedia: Zero ring].
+      </p>
+    </section>
+    <section id="if-isentities-equal" class="proposition">
+      <p>
+        <strong>Proposition (zero ring characteristics)</strong>:
+        If the additive identity <var>0</var> equals the multiplicative identity <var>1</var>, then the ring <var>R</var> has only a single element <var>0</var> = <var>1</var>.
+      </p>
+      <p>
         Proof: for all <var>r</var> &in; <var>R</var>,
         <section>
           <table>
             <tr>
               <td>r</td>
               <td>= 1r</td>
-              <td>&because; 1 is multiplicative identity</td>
+              <td>the multiplicative identity 1</td>
             </tr>
             <tr>
               <td></td>
               <td>= 0r</td>
-              <td>&because; 0 = 1</td>
+              <td>the hypothesis</td>
             </tr>
             <tr>
               <td></td>
@@ -436,37 +440,16 @@
             </tr>
           </table>
         </section>
-      </p>
-    </section>
-    <section class="description">
-      <p>
-        We call:
-        <section>
-          <table>
-            <tr>
-              <td>scalars</td>
-              <td>elements of a field</td>
-            </tr>
-            <tr>
-              <td>vectors</td>
-              <td>elements of a vector space</td>
-            </tr>
-            <tr>
-              <td>the zero vector</td>
-              <td><var>0</var>, the vector additive identity</td>
-            </tr>
-          </table>
-        </section>
+        The additive identity, denoted <var>0</var>, is called the zero vector.
       </p>
     </section>
     <section id="zero-in-vector-space" class="proposition">
       <p>
-        <strong>Proposition (0 in vector space)</strong>:
         Existence of vector additive identity of the vector space axioms tells:
-        <section>
-          any vector space must contain the zero vector <var>0</var>
-        </section>
-        Hence the empty set &empty; is not a vector space.
+        <ul>
+          <li>any vector space must contain <var>0</var></li>
+          <li>&empty; is not a vector space</li>
+        </ul>
       </p>
     </section>
     <section id="cancellation-law-vector" class="proposition">
@@ -723,14 +706,35 @@
         </section>
       </p>
     </section>
-    <section id="zero-vector-space" class="description">
+    <section id="zero-vector-space" class="proposition">
       <p>
-        <strong>Zero vector space</strong>:
-        Let <var>V</var> = {0} &mdash; the zero vector space &mdash; consist of a single vector <var>0</var>. <var>V</var> is a vector space over a field <var>F</var>, for each scalar <var>c</var> &in; <var>F</var>:
+        <strong>Proposition (exercise 1.2.11: zero vector space)</strong>:
+        Let <var>V</var> = {0} consist of a single zero vector. Then <var>V</var> is a vector space over a field <var>F</var> (called the zero vector space) with the vector addition and the scalar multiplication operations:
         <section>
           <table>
-            <tr><td>0 + 0 = 0</td></tr>
+            <tr><td>0+0 = 0</td></tr>
             <tr><td>c0 = 0</td></tr>
+          </table>
+        </section>
+        for any scalar <var>c</var> in <var>F</var>.
+      </p>
+      <p>
+        Proof: With the preceding operations, it is immediate
+        <section>
+          <table>
+            <tr>
+              <td>0+0 = 0 &in; {0}</td>
+              <td>closed under vector addition</td>
+            </tr>
+            <tr>
+              <td>c0 = 0 &in; {0}</td>
+              <td>closed under scalar multiplication</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                the vector space axioms hold for {0}
+              </td>
+            </tr>
           </table>
         </section>
       </p>
@@ -741,62 +745,38 @@
     <section id="define-subspace" class="definition">
       <p>
         <strong>Definition (subspace 部分空間)</strong>:
-        A subset of a vector space <var>V</var> over a field <var>F</var> is called a <strong>subspace</strong> of <var>V</var>
-        &mdash;
-        if the subset is a vector space over <var>F</var> with the operations of addition and scalar multiplication defined on <var>V</var>.
+        A subset of a vector space <var>V</var> over a field <var>F</var> is called a subspace of <var>V</var> if the subset is a vector space over <var>F</var> with the operations of addition and scalar multiplication defined on <var>V</var>.
       </p>
-    </section>
-    <section id="vector-space-is-subspace" class="proposition">
-      <p>
-        <strong>Proposition (vector space is subspace)</strong>:
-        <var>V</var> is a subspace of <var>V</var>, because
-        <ul>
-          <li>V &subseteq; V</li>
-          <li>
-            <var>V</var> is a vector space with the operations defined on <var>V</var>.
-          </li>
-        </ul>
-      </p>
-    </section>
-    <section id="zero-subspace" class="proposition">
-      <p>
-        <strong>Proposition (zero subspace)</strong>:
-        {0} is a subspace of any vector space, because
-        <ul>
-          <li>
-            {0} is a subset of any vector space, since any vector space contains <var>0</var>,
-          </li>
-          <li>
-            vector addition and scalar multiplication on <var>0</var> are defined in any vector space.
-          </li>
-        </ul>
     </section>
     <section id="subspace-conditions" class="proposition">
       <p>
         <strong>Theorem 1.3 (subspace conditions)</strong>:
-        Let <var>W</var> be a subset of a vector space <var>V</var>, then
-        <section>
-          <var>W</var> is a subspace of <var>V</var>
-        </section>
-        if and only if the three conditions hold, for some vectors <var>x</var>, <var>y</var> &in; <var>W</var> and a scalar <var>c</var>
+        Let <var>W</var> be a subset of a vector space <var>V</var>, then        <var>W</var> is a subspace of <var>V</var> if and only if the three conditions hold for the operations defined in <var>V</var>. For <var>x</var>, <var>y</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
         <section>
           <table>
             <tr>
+              <td colspan="2"></td>
+              <td>any subspace must</td>
+            </tr>
+            <tr>
+              <td>1:</td>
               <td>0 &in; W</td>
               <td>
-                any vector space must contain the zero vector <var>0</var>
+                contain the zero vector
               </td>
             </tr>
             <tr>
+              <td>2:</td>
               <td>x+y &in; W</td>
               <td>
-                any vector space must be closed under addition
+                be closed under vector addition
               </td>
             </tr>
             <tr>
+              <td>3:</td>
               <td>cx &in; W</td>
               <td>
-                any vector space must be closed under scalar multiplication
+                be closed under scalar multiplication
               </td>
             </tr>
           </table>
@@ -808,10 +788,10 @@
         <section>
           <ul>
             <li>
-              <var>W</var> is a vector space with addition and scalar multiplication defined on <var>V</var> by definition of the subspace, hence <var>W</var> is closed under addition and scalar multiplication.
+              Let 0&prime; be an additive identity in <var>W</var> such that <var>x</var>+0&prime; = <var>x</var> for each <var>x</var> &in; <var>W</var>. But also <var>x</var>+0 = <var>x</var> in the vector space <var>V</var>, thus 0&prime; = 0 by the cancellation law for vector addition. Hence 0 &in; <var>W</var>.
             </li>
             <li>
-              Let 0&prime; be an additive identity in <var>W</var> such that <var>x</var>+0&prime; = <var>x</var> for each <var>x</var> &in; <var>W</var>. But also <var>x</var>+0 = <var>x</var> in the vector space <var>V</var>, thus 0&prime; = 0 by the cancellation law for vector addition. Hence 0 &in; <var>W</var>.
+              <var>W</var> is a vector space with addition and scalar multiplication defined on <var>V</var> by definition of the subspace, hence <var>W</var> is closed under addition and scalar multiplication.
             </li>
           </ul>
           <p>
@@ -863,7 +843,7 @@
                 </tr>
               </table>
             </section>
-            hold for all vectors in the vector space. Therefore, these properties automatically hold for the vectors in any subset. Thus a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var> if and only if the following four properties hold:
+            hold for all vectors in the vector space, hence these properties automatically hold for the vectors in any subset. Thus a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var> if and only if the following four properties hold:
             <section>
               <table>
                 <tr>
@@ -892,7 +872,7 @@
                 </tr>
               </table>
             </section>
-            Since the hypothesis of this implication covers the first three properties, it suffices to prove that the additive inverse of each vector in <var>W</var> lies in <var>W</var>. But if <var>x</var> &in; <var>W</var>, then
+            Since the hypothesis covers the first three properties, it suffices to prove that the additive inverse of each vector in <var>W</var> lies in <var>W</var>. But if <var>x</var> &in; <var>W</var>, then
             <section>
               <table>
                 <tr>
@@ -913,6 +893,31 @@
           </p>
         </section>
       </p>
+    </section>
+    <section id="vector-space-is-subspace" class="proposition">
+      <p>
+        <strong>Proposition (vector space is subspace)</strong>:
+        <var>V</var> is a subspace of <var>V</var>, because
+        <ul>
+          <li>0 &in; V</li>
+          <li>
+            <var>V</var> is a vector space with the operations defined on <var>V</var>.
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section id="zero-subspace" class="proposition">
+      <p>
+        <strong>Proposition (zero subspace)</strong>:
+        {0} is a subspace of any vector space, because
+        <ul>
+          <li>
+            {0} is a subset of any vector space, since any vector space contains <var>0</var>,
+          </li>
+          <li>
+            vector addition and scalar multiplication on <var>0</var> are defined in any vector space.
+          </li>
+        </ul>
     </section>
     <section id="sum-of-subspaces" class="definition">
       <p>
@@ -1002,15 +1007,6 @@
         </section>
       </p>
     </section>
-    <section id="zero-span" class="description">
-      <p>
-        <strong>Zero span</strong>:
-        For convenience, we define
-        <section>
-          span(&empty;) = {0} &mdash; the zero vector space
-        </section>
-      </p>
-    </section>
     <section id="spanning-set" class="description">
       <p>
         <strong>Spanning sets</strong>:
@@ -1029,15 +1025,13 @@
         </section>
       </p>
     </section>
-    <section id="plane-as-span" class="description">
+    <section id="zero-span" class="description">
       <p>
-        <strong>Example (xy-plane as a span)</strong>:
-        The span of the set{(1,0,0), (0,1,0)} in &reals;<sup>3</sup> consists of all vectors in &reals;<sup>3</sup> that have the form
+        <strong>Zero span</strong>:
+        For convenience, we define
         <section>
-          a (1,0,0) + b (0,1,0) = (a,b,0)
+          span(&empty;) = {0} &mdash; the zero vector space
         </section>
-        for some scalars <var>a</var> and <var>b</var>.
-        Thus the span of the set{(1,0,0), (0,1,0)} contains all the points in the xy-plane.
       </p>
     </section>
     <section id="linear-combination-in-subspace" class="proposition">
@@ -1634,32 +1628,44 @@
     <section id="define-basis" class="definition">
       <p>
         <strong>Definition (basis [基底])</strong>:
-        A basis <var>&Beta;</var> for a vector space <var>V</var> is a linearly independent subset of <var>V</var> that generates <var>V</var>. If <var>&Beta;</var> is a basis for <var>V</var>, we also say that the vectors of <var>&Beta;</var> form a basis for <var>V</var>.
+        A subset <var>&Beta;</var> of a vector space <var>V</var> is called a basis for <var>V</var> if
+        <ul>
+          <li><var>&Beta; is linearly independent</var></li>
+          <li>
+            <var>&Beta;</var> generates <var>V</var>
+            &ctdot; i.e., 
+            span(&Beta;) = <var>V</var>
+          </li>
+        </ul>
+        We also say that <var>&Beta;</var> forms a basis for <var>V</var>.
+      </p>
+    </section>
+    <section id="basis-is-building-block" class="description">
+      <p>
+        With a linearly independent generating set &mdash;a basis &mdash; for a vector space, every vector in the vector space can be expressed in one and only one way as a linear combination of the vectors in the basis. This makes linearly independent generating sets the building blocks of vector spaces.
       </p>
     </section>
     <section id="basis-of-zero-vector-space" class="proposition">
       <p>
-        <strong>Corollary (basis of zero vector space)</strong>:
-        The empty set &empty; is the basis for the zero vector space.
+        <strong>Proposition (example 1.6.1: basis of zero vector space)</strong>:
+        The empty set &empty; is a basis for the zero vector space &mdash; {0}.
       </p>
       <p>
         Proof:
-        Recall that the zero vector space is a set {0}. Its sole element is the zero vector.
+        Recall that span(&empty;) = {0} by definition of the zero span.
         <ul>
           <li>
-            The empty set &empty; is linearly independent by definition of linear independence.
+            &empty; is linearly independent by definition of linear independence.
           </li>
           <li>
-            The empty set &empty; is a subset of {0}.
-          <li>
-            The empty set &empty; generates {0} &mdash; span(&empty;) = {0} by definition of the zero span.
+            span(&empty;) = {0} by definition.
           </li>
         </ul>
       </p>
     </section>
     <section id="basis-unique-linear-combination" class="proposition">
       <p>
-        <strong>Theorem (basis unique linear combination)</strong>:
+        <strong>Theorem (1.8: basis unique linear combination)</strong>:
         Let <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> be distinct vectors in a vector space <var>V</var>, then, <var>&Beta;</var> = { <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> } is a basis for <var>V</var> if and only if
         <section>
           each vector <var>u</var> &in; <var>V</var> can be uniquely expressed as a linear combination of vectors of <var>&Beta;</var>.
@@ -1716,31 +1722,31 @@
     </section>
     <section id="finite-spanning-set" class="proposition">
       <p>
-        <strong>Theorem (finite spanning set)</strong>:
+        <strong>Theorem (1.9: finite spanning set)</strong>:
         If a vector space <var>V</var> is generated by a finite set <var>S</var>, then some subset of <var>S</var> is a basis for <var>V</var>. Hence <var>V</var> has a finite basis.
       </p>
       <p>
         Proof:
         <section>
           <p>
-            If <var>S</var> = &empty;, then <var>V</var> = span(&empty;) = {0}, and &empty; is a basis of <var>V</var> = {0}, because
+            If <var>S</var> = &empty;, then <var>S</var>  is a basis of <var>V</var> = {0}, because
             <ul>
               <li>
-                &empty; &subseteq; &empty; = <var>S</var>
+                &empty; is linearly independent by definition
               </li>
               <li>
-                &empty; is linearly independent
+                span(&empty;) = {0} = <var>V</var>
               </li>
             </ul>
           </p>
           <p>
-            If <var>S</var> = {0}, then <var>V</var> = span{0} = {0}, and &empty; is a basis of <var>V</var> = {0}, because
+            If <var>S</var> = {0}, then &empty;, a subset of <var>S</var>, is a basis of <var>V</var> = {0}, because
             <ul>
               <li>
-                &empty; &subset; {0} = <var>S</var>
+                &empty; is linearly independent
               </li>
               <li>
-                &empty; is linearly independent
+                span({0}) = {0} = <var>V</var>
               </li>
             </ul>
           </p>
