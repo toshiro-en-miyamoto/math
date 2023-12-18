@@ -94,14 +94,14 @@
             <tr>
               <td>単位元</td>
               <td>existence of identity</td>
-              <td>0+a = a</td>
-              <td>1&middot;a = a</td>
+              <td>&exist;0 &in; F, 0+a = a</td>
+              <td>&exist;1 &in; F, 1&middot;a = a</td>
             </tr>
             <tr>
               <td>逆元</td>
               <td>existence of inverse</td>
-              <td>a+(&minus;a) = 0</td>
-              <td>a&middot;a<sup>-1</sup> = 1 (if a&NotEqual;0)</td>
+              <td>&exist;(&minus;a) &in; F, a+(&minus;a) = 0</td>
+              <td>&exist;(a<sup>-1</sup>) &in; F, a&middot;a<sup>-1</sup> = 1 (if a&NotEqual;0)</td>
             </tr>
             <tr>
               <td>分配則</td>
@@ -393,7 +393,7 @@
     <section id="define-vector-space" class="definition">
       <p>
         <strong>Definition (vector space [ベクトル空間])</strong>:
-        A vector space <var>V</var> over a field <var>F</var> consists of a set on which two operations (vector addition and scalar multiplication [スカラー倍]) are defined so that for each scalar <var>a</var> &in; <var>F</var> and for each vector <var>x, y</var> &in; <var>V</var>:
+        A vector space <var>V</var> over a field <var>F</var> consists of a set on which two operations (vector addition and scalar multiplication [スカラー倍]) are defined so that
         <ul>
           <li>
             there is a unique element <var>x+y</var> &in; <var>V</var>
@@ -425,12 +425,12 @@
             </tr>
             <tr>
               <td>existence of identity</td>
-              <td>x+0 = x</td>
+              <td>&exist;0 &in; V, x+0 = x</td>
               <td>1x = x</td>
             </tr>
             <tr>
               <td>existence of inverse</td>
-              <td>x+(&minus;x) = 0</td>
+              <td>&exist;(&minus;x) &in; V, x+(&minus;x) = 0</td>
               <td></td>
             </tr>
             <tr>
@@ -709,33 +709,24 @@
     <section id="zero-vector-space" class="proposition">
       <p>
         <strong>Proposition (exercise 1.2.11: zero vector space)</strong>:
-        Let <var>V</var> = {0} consist of a single zero vector. Then <var>V</var> is a vector space over a field <var>F</var> (called the zero vector space) with the vector addition and the scalar multiplication operations:
-        <section>
-          <table>
-            <tr><td>0+0 = 0</td></tr>
-            <tr><td>c0 = 0</td></tr>
-          </table>
-        </section>
-        for any scalar <var>c</var> in <var>F</var>.
+        {0} consists of a single zero vector. {0} is a vector space over a field <var>F</var> (called the zero vector space).
       </p>
       <p>
-        Proof: With the preceding operations, it is immediate
+        Proof: For any scalar <var>c</var> in <var>F</var>,
         <section>
-          <table>
-            <tr>
-              <td>0+0 = 0 &in; {0}</td>
-              <td>closed under vector addition</td>
-            </tr>
-            <tr>
-              <td>c0 = 0 &in; {0}</td>
-              <td>closed under scalar multiplication</td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                the vector space axioms hold for {0}
-              </td>
-            </tr>
-          </table>
+          <section>
+            <table>
+              <tr>
+                <td>0+0 = 0 &in; {0}</td>
+                <td>closed under vector addition</td>
+              </tr>
+              <tr>
+                <td>c0 = 0 &in; {0}</td>
+                <td>closed under scalar multiplication</td>
+              </tr>
+            </table>
+          </section>
+          And it is immediate that the vector space axioms hold for {0}. &marker;
         </section>
       </p>
     </section>
@@ -795,13 +786,18 @@
             </li>
           </ul>
           <p>
-            Conversely, recall the vector space axioms.
+            Conversely, if the three conditions hold, then the vectors in <var>W</var> need to follow the definition of the vector space.
             <section>
               <table>
                 <tr>
                   <th></th>
                   <th>vector addition</th>
                   <th>scalar multiplication</th>
+                </tr>
+                <tr>
+                  <td>closed operations</td>
+                  <td>x+y &in; W</td>
+                  <td>cx &in; W</td>
                 </tr>
                 <tr>
                   <td>commutativity</td>
@@ -815,12 +811,12 @@
                 </tr>
                 <tr>
                   <td>existence of identity</td>
-                  <td>x+0 = x</td>
+                  <td>&exist;0 &in; W, x+0 = x</td>
                   <td>1x = x</td>
                 </tr>
                 <tr>
                   <td>existence of inverse</td>
-                  <td>x+(&minus;x) = 0</td>
+                  <td>&exist;(&minus;x) &in; W, x+(&minus;x) = 0</td>
                   <td></td>
                 </tr>
                 <tr>
@@ -830,49 +826,28 @@
                 </tr>
               </table>
             </section>
-            These properties except for
+            The properties except for
             <section>
               <table>
                 <tr>
-                  <td>x+0 = x</td>
-                  <td>the additive identity</td>
-                </tr>
-                <tr>
-                  <td>x+(&minus;x) = 0</td>
-                  <td>the additive inverse</td>
-                </tr>
-              </table>
-            </section>
-            hold for all vectors in the vector space, hence these properties automatically hold for the vectors in any subset. Thus a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var> if and only if the following four properties hold:
-            <section>
-              <table>
-                <tr>
-                  <td>0 &in; W</td>
-                  <td>
-                    any vector space must contain the zero vector <var>0</var>
-                  </td>
-                </tr>
-                <tr>
+                  <td>closed under vector addition</td>
                   <td>x+y &in; W</td>
-                  <td>
-                    any vector space must be closed under addition
-                  </td>
                 </tr>
                 <tr>
+                  <td>closed under scalar multiplication</td>
                   <td>cx &in; W</td>
-                  <td>
-                    any vector space must be closed under scalar multiplication
-                  </td>
                 </tr>
                 <tr>
-                  <td>x+(&minus;x) = 0</td>
-                  <td>
-                    for each <var>x</var> &in; <var>W</var>, &minus;<var>x</var> &in; <var>W</var>
-                  </td>
+                  <td>existence of the additive identity</td>
+                  <td>&exist;0 &in; W, x+0 = x</td>
+                </tr>
+                <tr>
+                  <td>existence of the additive inverse</td>
+                  <td>&exist;(&minus;x) &in; W, x+(&minus;x) = 0</td>
                 </tr>
               </table>
             </section>
-            Since the hypothesis covers the first three properties, it suffices to prove that the additive inverse of each vector in <var>W</var> lies in <var>W</var>. But if <var>x</var> &in; <var>W</var>, then
+            hold for all vectors in the vector space, because these properties automatically hold for the vectors in any subspace. Since the hypothesis covers the first three properties, it suffices to prove that the additive inverse of each vector in <var>W</var> lies in <var>W</var>. But if <var>x</var> &in; <var>W</var>, then
             <section>
               <table>
                 <tr>
@@ -915,7 +890,7 @@
             {0} is a subset of any vector space, since any vector space contains <var>0</var>,
           </li>
           <li>
-            vector addition and scalar multiplication on <var>0</var> are defined in any vector space.
+            we know from Proposition (zero vector space) that {0} is a vector space.
           </li>
         </ul>
     </section>
