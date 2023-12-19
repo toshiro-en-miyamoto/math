@@ -742,7 +742,7 @@
     <section id="subspace-conditions" class="proposition">
       <p>
         <strong>Theorem 1.3 (subspace conditions)</strong>:
-        Let <var>W</var> be a subset of a vector space <var>V</var>, then        <var>W</var> is a subspace of <var>V</var> if and only if the three conditions hold for the operations defined in <var>V</var>. For <var>x</var>, <var>y</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
+        Let <var>W</var> be a subset of a vector space <var>V</var>, then        <var>W</var> is a subspace of <var>V</var> if and only if the three conditions hold for the operations defined in <var>V</var>. For some <var>x</var>, <var>y</var> &in; <var>W</var> and some <var>c</var> &in; <var>F</var>,
         <section>
           <table>
             <tr>
@@ -964,54 +964,9 @@
         &marker;
       </p>
     </section>
-    <section id="span" class="definition">
-      <p>
-        <strong>Definition (span [線形包])</strong>:
-        The span of a non-empty subset <var>S</var> of a vector space is the set consisting of all linear combinations of the vectors in <var>S</var>, denoted as
-        <section>
-          span(S)
-        </section>
-      </p>
-    </section>
-    <section id="span-of-vectors" class="description">
-      <p>
-        <strong>Notation (span of vectors)</strong>:
-        Let <var>S</var> be a set of vectors {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>} in a vector space <var>V</var>, then span(S) can be denoted as
-        <section>
-          span({v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>})
-        </section>
-      </p>
-    </section>
-    <section id="spanning-set" class="description">
-      <p>
-        <strong>Spanning sets</strong>:
-        Let <var>S</var> be a subset of a vector space <var>V</var>.
-        <section>
-          <table>
-            <tr>
-              <td>If span(S) = <var>V</var>, then</td>
-            </tr>
-            <tr>
-              <td>
-                <var>S</var> is called a spanning set for <var>V</var>.
-              </td>
-            </tr>
-          </table>
-        </section>
-      </p>
-    </section>
-    <section id="zero-span" class="description">
-      <p>
-        <strong>Zero span</strong>:
-        For convenience, we define
-        <section>
-          span(&empty;) = {0} &mdash; the zero vector space
-        </section>
-      </p>
-    </section>
     <section id="linear-combination-in-subspace" class="proposition">
       <p>
-        <strong>Lemma (linear combination in subspace)</strong>:
+        <strong>Proposition (exercise 1.3.20: linear combination in subspace)</strong>:
         If <var>W</var> is a subspace of a vector space <var>V</var> and <var>w<sub>1</sub></var>, <var>w<sub>2</sub></var>, &hellip;, <var>w<sub>n</sub></var> are in <var>W</var>, then for any scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>
         <section>
           a<sub>1</sub>w<sub>1</sub> + a<sub>2</sub>w<sub>2</sub> + &hellip; + a<sub>n</sub>w<sub>n</sub> &in; W
@@ -1077,6 +1032,39 @@
               the inductive conclusion holds because any subspace is closed under addition. &marker;
             </li>
           </ul>
+        </section>
+      </p>
+    </section>
+    <section id="span" class="definition">
+      <p>
+        <strong>Definition (span [線形包])</strong>:
+        The span of a subset <var>S</var> of a vector space is the set consisting of all linear combinations of vectors <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var></var>v<sub>n</sub></var> &in; <var>S</var>, denoted
+        <section>
+          <table>
+            <tr>
+              <td>span(S)</td>
+              <td>or</td>
+              <td>span({v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>})</td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="zero-span" class="description">
+      <p>
+        <strong>Zero span</strong>:
+        For convenience, we define
+        <section>
+          span(&empty;) = {0} &mdash; the zero vector space
+        </section>
+      </p>
+    </section>
+    <section id="spanning-set" class="description">
+      <p>
+        <strong>Spanning sets</strong>:
+        If span(S) = <var>V</var>, then
+        <section>
+          <var>S</var> is called a spanning set for <var>V</var>.
         </section>
       </p>
     </section>
