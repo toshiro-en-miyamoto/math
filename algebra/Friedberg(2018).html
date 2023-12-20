@@ -1068,38 +1068,22 @@
         </section>
       </p>
     </section>
-    <section id="span-and-spanning-set" class="proposition">
+    <section id="span-contains-spanning-set" class="proposition">
       <p>
-        <strong>Theorem (1.5: span and spanning set)</strong>:
-        The span of any subset <var>S</var> of a vector space <var>V</var> is a subspace of <var>V</var> that contains <var>S</var>. Moreover, any subspace <var>W</var> of <var>V</var> that contains <var>S</var> must also contain the span of <var>S</var>.
-      </p>
-      <p>
-        The proposition can broken into three lemmas;
-        <section>
-          <dl>
-            <dt>Lemma (1.5.1: span is subspace)</dt>
-            <dd>span(S) is a subspace of <var>V</var>.</dd>
-            <dt>Lemma (1.5.2: span contains spanning set)</dt>
-            <dd>S &subseteq; span(S)</dd>
-            <dt>Lemma (1.5.3: spanning set contains span)</dt>
-            <dd>S &subseteq; W &Implies; span(S) &subseteq; W</dd>
-          </dl>
-        </section>
-      </p>
-    </section>
-    <section id="span-is-subspace" class="proposition">
-      <p>
-        <strong>Lemma (1.5.1: span is subspace)</strong>:
+        <strong>Lemma (1.5.1: span contains spanning set)</strong>:
         Let <var>S</var> be a subset of a vector space <var>V</var>, then
         <section>
-          span(S) is a subspace of <var>V</var>.
+          span(S) is a subspace of <var>V</var> such that <var>S</var> &subseteq; span(S).
         </section>
       </p>
       <p>
         Proof:
         <section>
           <p>
-            If <var>S</var> = &empty; or {0}, then span(S) = {0}. span(S) is a subspace of <var>V</var>, because {0} is a subspace of any vector space by Proposition (zero subspace).
+            If <var>S</var> = &empty;, then span(S) = {0} by definition, which is a subspace of any vector space by Proposition (zero subspace). It is immediate that &empty; &in; span(S) = {0}.
+          </p>
+          <p>
+            If <var>S</var> = {0}, then it is immediate that span(S) = {0}, which is a subspace of any vector space by Proposition (zero subspace). <var>S</var> &subseteq; span(S) holds because {0} = span(S).
           </p>
           <p>
             If <var>S</var> contains two or more vectors, we prove that subspace conditions hold for span(S). Let <var>x</var>, <var>y</var> &in; span(S).
@@ -1111,7 +1095,7 @@
                 </section>
               </p>
               <p>
-                <var>x</var>+<var>y</var> &in; span(S) holds.
+                <var>x</var>+<var>y</var> &in; span(S) and <var>cx</var> &in; span(S) for any scalar c hold.
                 <section>
                   Since <var>S</var> &ne; &empty;, there exist vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>m</sub></var>, <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; <var>S</var> such that
                   <section>
@@ -1133,59 +1117,44 @@
                   </section>
                   for scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>m</sub></var>, <var>b<sub>1</sub></var>, <var>b<sub>2</sub></var>, &hellip;, <var>b<sub>n</sub></var>. Then
                   <section>
-                    x + y
-                    = a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub>
-                    + &ctdot; + a<sub>m</sub>u<sub>m</sub>
-                    + b<sub>1</sub>v<sub>1</sub> + b<sub>2</sub>v<sub>2</sub>
-                    + &ctdot; + b<sub>n</sub>v<sub>n</sub>
+                    <table>
+                      <tr>
+                        <td>
+                          x + y
+                          = a<sub>1</sub>u<sub>1</sub>
+                          + a<sub>2</sub>u<sub>2</sub>
+                          + &ctdot; + a<sub>m</sub>u<sub>m</sub>
+                          + b<sub>1</sub>v<sub>1</sub>
+                          + b<sub>2</sub>v<sub>2</sub>
+                          + &ctdot; + b<sub>n</sub>v<sub>n</sub>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          cx
+                          = (ca<sub>1</sub>)u<sub>1</sub>
+                          + (ca<sub>2</sub>)u<sub>2</sub> + &ctdot;
+                          + (ca<sub>m</sub>)u<sub>m</sub>
+                        </td>
+                      </tr>
+                    </table>
                   </section>
-                  is a linear combination of the vectors in span(S). Thus span(S) is closed in vector addition.
-                </section>
-              </p>
-              <p>
-                <var>cx</var> &in; span(S) holds for any scalar c.
-                <section>
-                  Similarly,
-                  <section>
-                    cx = (ca<sub>1</sub>)u<sub>1</sub>
-                    + (ca<sub>2</sub>)u<sub>2</sub> + &ctdot;
-                    + (ca<sub>m</sub>)u<sub>m</sub>
-                  </section>
-                  is a linear combination of the vectors in span(S). Thus span(S) is closed in scalar multiplication. &marker;
+                  are linear combinations of the vectors in <var>S</var>, that is <var>x</var>+<var>y</var> &in; span(S) and <var>cx</var> &in; span(S). Thus span(S) is closed under vector addition and scalar multiplication.
                 </section>
               </p>
             </section>
+            When <var>S</var> contains two or more vectors, u = 1u &in; span(S) for any <var>u</var> &in; <var>S</var>, it follows S &subseteq; span(S). &marker;
           </p>
         </section>
       </p>
     </section>
-    <section id="span-contains-spanning-set" class="proposition">
-      <p>
-        <strong>Lemma (1.5.2: span contains spanning set)</strong>:
-        Let <var>S</var> be a subset of a vector space <var>V</var>, then
-        <section>
-          S &subseteq; span(S)
-        </section>
-        Proof:
-        <ul>
-          <li>
-            If <var>S</var> = &empty;, then span(&empty;) = {0}. It is immediate that &empty; &subset; span(S).
-          </li>
-          <li>
-            If <var>S</var> = {0}, then span({0}) = {0}. It is immediate that {0} = span(S).
-          </li>
-          <li>
-            If <var>S</var> contains two or more vectors, then u = 1u &in; span(S) for any <var>u</var> &in; <var>S</var>. &marker;
-          </li>
-        </ul>
-      </p>
-    </section>
     <section id="spanning-set-subspace-contains-span" class="proposition">
       <p>
-        <strong>Lemma (1.5.3: spanning set contains span)</strong>:
+        <strong>Lemma (1.5.2: spanning set contains span)</strong>:
         Let <var>S</var> be a subset of a vector space <var>V</var>, and let <var>W</var> be a subspace of <var>V</var>, then
         <section>
-          S &subseteq; W &Implies; span(S) &subseteq; W
+          If <var>S</var> &subseteq; <var>W</var>, then
+          span(S) &subseteq; <var>W</var>.
         </section>
         Proof:
         <section>
