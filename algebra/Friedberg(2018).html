@@ -71,47 +71,41 @@
       </p>
       <p>
         <strong>Axiom (Field axioms [体の公理])</strong>:
-        <section id="field-axioms">
-          <table>
-            <tr>
-              <th></th>
-              <th></th>
-              <th>addition</th>
-              <th>multiplication</th>
-            </tr>
-            <tr>
-              <td>交換則</td>
-              <td>commutativity</td>
-              <td>a+b = b+a</td>
-              <td>a&middot;b = b&middot;a</td>
-            </tr>
-            <tr>
-              <td>結合則</td>
-              <td>associativity</td>
-              <td>(a+b)+c = a+(b+c)</td>
-              <td>(a&middot;b)&middot;c = a&middot;(b&middot;c)</td>
-            </tr>
-            <tr>
-              <td>単位元</td>
-              <td>existence of identity</td>
-              <td>&exist;0 &in; F, 0+a = a</td>
-              <td>&exist;1 &in; F, 1&middot;a = a</td>
-            </tr>
-            <tr>
-              <td>逆元</td>
-              <td>existence of inverse</td>
-              <td>&exist;(&minus;a) &in; F, a+(&minus;a) = 0</td>
-              <td>&exist;(a<sup>-1</sup>) &in; F, a&middot;a<sup>-1</sup> = 1 (if a&NotEqual;0)</td>
-            </tr>
-            <tr>
-              <td>分配則</td>
-              <td>distributivity of &middot; over +</td>
-              <td colspan="2" class="center">
-                a&middot;(b+c) = a&middot;b+a&middot;c
-              </td>
-            </tr>
-          </table>
-        </section>
+        <table>
+          <tr>
+            <th></th>
+            <th>addition</th>
+            <th>multiplication</th>
+          </tr>
+          <tr>
+            <td>commutativity [交換則]</td>
+            <td>a+b = b+a</td>
+            <td>a&middot;b = b&middot;a</td>
+          </tr>
+          <tr>
+            <td>associativity [結合則]</td>
+            <td>(a+b)+c = a+(b+c)</td>
+            <td>(a&middot;b)&middot;c = a&middot;(b&middot;c)</td>
+          </tr>
+          <tr>
+            <td>identity [単位元]</td>
+            <td>&exist;0 &in; F, 0+a = a</td>
+            <td>&exist;1 &in; F, 1&middot;a = a</td>
+          </tr>
+          <tr>
+            <td>inverse [逆元]</td>
+            <td>&exist;(&minus;a) &in; F, a+(&minus;a) = 0</td>
+            <td>&exist;(a<sup>-1</sup>) &in; F, a&middot;a<sup>-1</sup> = 1 (if a&NotEqual;0)</td>
+          </tr>
+          <tr>
+            <td>distributivity [分配則]</td>
+            <td colspan="2" class="center">
+              a&middot;(b+c) = a&middot;b+a&middot;c
+            </td>
+          </tr>
+        </table>
+      </p>
+      <p>
         The zero ring can be avoided by including the zero-one law (0 &ne; 1).
       </p>
     </section>
@@ -389,6 +383,16 @@
     </section>
   </section>
   <section id="vector-spaces">
+    <h2>Introduction</h2>
+    <section id="parallelogram-law" class="proposition">
+      <p>
+        <strong>Parallelogram law [中線定理] for vector addition</strong>:
+        The sum of two vectors <var>x</var> and <var>y</var> that act at the same point <var>P</var> is
+        <section>
+          the vector beginning at <var>P</var> that is represented by the diagonal [対角線] of parallelogram [平行四辺形] having <var>x</var> and <var>y</var> as adjacent sides [隣接する辺].
+        </section>
+      </p>
+    </section>
     <h2>Vector Spaces</h2>
     <section id="define-vector-space" class="definition">
       <p>
@@ -436,7 +440,7 @@
             <tr>
               <td>distributivity</td>
               <td>a(x+y) = ax+ay</td>
-              <td>(a+b)x=ax+bx</td>
+              <td>(a+b)x = ax+bx</td>
             </tr>
           </table>
         </section>
