@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Polynomial in Linear Algebra, Friedberg(2018)</title>
+  <title>Functions in Linear Algebra, Friedberg(2018)</title>
   <style>
     body {
       margin-left: 1.2rem;
@@ -41,307 +41,322 @@
 </head>
 <body>
 <article>
-<h1>Polynomial in Linear Algebra [線形代数における多項式]</h1>
-<section id="vector-spaces">
-  <h2>Vector Spaces</h2>
-  <section id="polynomial" class="definition">
-    <p>
-      <strong>Polynomial [多項式]</strong>:
-      A polynomial with coefficients [係数] from a field <var>F</var> is an expression [式] of the form
-      <section>
-        f(x)
-        = a<sub>n</sub>&InvisibleTimes;x<sup>n</sup>
-        + a<sub>n-1</sub>&InvisibleTimes;x<sup>n-1</sup>
-        + &ctdot; + a<sub>1</sub>&InvisibleTimes;x + a<sub>0</sub>
-      </section>
-    </p>
+<h1>Function [関数]</h1>
+  <section id="set">
+    <h2>Sets (Appendix A)</h2>
+    <section id="empty-set" class="definition">
+      <p>
+        <strong>Definition (empty set)</strong>:
+        The empty set, denoted &empty;, is a set containing no elements. &empty; is a subset of every set.
+      </p>
+    </section>
   </section>
-  <section id="polynomail-degree" class="description">
-    <p>
-      <strong>Degree [次数]</strong>:
-      The degree of a polynomial is defined to the largest exponent of <var>x</var> with a non-zero coefficient.
-    </p>
+  <section id="functions">
+    <h2>Functions (Appendix B)</h2>
+    <section id="define-function" class="definition">
+      <p>
+        <strong>Definition (function)</strong>:
+        If <var>A</var> and <var>B</var> are sets,
+      </p>
+    </section>
   </section>
-  <section id="zero-polynomail" class="description">
-    <p>
-      <strong>Zero polynomial</strong>:
-      A polynomial f(x) is call the zero polynomial if <var>a<sub>i</sub></var> = 0 for 0 &le; <var>i</var> &le; <var>n</var>, that is f(x) = 0. Its degree is defined to be &minus;1.
-    </p>
-  </section>
-  <section id="equal-polynomials" class="description">
-    <p>
-      <strong>Equality of polynomials</strong>:
-      Two polynomials,
-      <section>
-        <table>
-          <tr>
-            <td>
-              f(x)
-              = a<sub>n</sub>&InvisibleTimes;x<sup>n</sup>
-              + a<sub>n-1</sub>&InvisibleTimes;x<sup>n-1</sup>
-              + &ctdot; + a<sub>1</sub>&InvisibleTimes;x + a<sub>0</sub>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              g(x)
-              = b<sub>m</sub>&InvisibleTimes;x<sup>m</sup>
-              + b<sub>m-1</sub>&InvisibleTimes;x<sup>m-1</sup>
-              + &ctdot; + b<sub>1</sub>&InvisibleTimes;x + b<sub>0</sub>
-            </td>
-          </tr>
-        </table>
-      </section>
-      are called equal if <var>m</var> = <var>n</var> and
-      <var>a<sub>i</sub></var> = <var>b<sub>i</sub></var>
-      for <var>i</var> = 0, 1, &hellip;, <var>n</var>.
-    </p>
-  </section>
-  <section id="set-of-polynomials" class="description">
-    <p>
-      <strong>Notation (P(F): a set of polynomials)</strong>:
-      A set of all polynomials with coefficients from a field <var>F</var>, denoted P(F), is a vector space with the two operations &mdash; suppose <var>m</var> &le; <var>n</var>, and <var>b<sub>m+1</sub></var> = <var>b<sub>m+2</sub></var> = &ctdot; = <var>b<sub>n</sub></var> = 0, then
-      <section>
-        <table>
-          <tr>
-            <td>
-              f(x)+g(x)
-              = (a<sub>n</sub>+b<sub>n</sub>)&InvisibleTimes;x<sup>n</sup>
-              + (a<sub>n-1</sub>+b<sub>n-1</sub>)&InvisibleTimes;x<sup>n-1</sup>
-              + &ctdot;
-              + (a<sub>1</sub>+b<sub>1</sub>)&InvisibleTimes;x
-              + (a<sub>0</sub>+b<sub>0</sub>)
-            </td>
-          </tr>
-          <tr>
-            <td>
-              c&InvisibleTimes;f(x)
-              = c&InvisibleTimes;a<sub>n</sub>&InvisibleTimes;x<sup>n</sup>
-              + c&InvisibleTimes;a<sub>n-1</sub>&InvisibleTimes;x<sup>n-1</sup>
-              + &ctdot;
-              + c&InvisibleTimes;a<sub>1</sub>&InvisibleTimes;x
-              + c&InvisibleTimes;a<sub>0</sub>
-            </td>
-          </tr>
-        </table>
-      </section>
-    </p>
-  </section>
-</section>
-<section id="subspaces">
-  <h2>Subspaces</h2>
-  <section id="define-polynomial-set-degree" class="description">
-    <p>
-      <strong>Notation (P<sub>n</sub>(F): a set of all polynomials with degree <var>&le; n</var>)</strong>:
-      Let <var>n</var> &ge; 0, and let P<sub>n</sub>(F) consist of all polynomials in P(F) having degree &le; <var>n</var>.
-    </p>
-  </section>
-  <section id="polynominal-set-degreeis-subspace" class="proposition">
-    <p>
-      <strong>Proposition (P<sub>n</sub>(F) is a subspace)</strong>:
-      P<sub>n</sub>(F) is a subspace of P(F).
-    </p>
-    <p>
-      Proof: Let <var>p<sub>1</sub>, p<sub>2</sub></var> &in; P<sub>n</sub>(F), and let <var>c</var> &in; <var>F</var>,
-      <section>
+  <section id="polynomials">
+    <h2>Polynomials</h2>
+    <section id="define-polynomial" class="definition">
+      <p>
+        <strong>Polynomial [多項式]</strong>:
+        A polynomial with coefficients [係数] from a field <var>F</var> is an expression [式] of the form
+        <section>
+          f(x)
+          = a<sub>n</sub>&InvisibleTimes;x<sup>n</sup>
+          + a<sub>n-1</sub>&InvisibleTimes;x<sup>n-1</sup>
+          + &ctdot; + a<sub>1</sub>&InvisibleTimes;x + a<sub>0</sub>
+        </section>
+      </p>
+    </section>
+    <section id="polynomail-degree" class="description">
+      <p>
+        <strong>Degree [次数]</strong>:
+        The degree of a polynomial is defined to the largest exponent of <var>x</var> with a non-zero coefficient.
+      </p>
+    </section>
+    <section id="zero-polynomail" class="description">
+      <p>
+        <strong>Zero polynomial</strong>:
+        A polynomial f(x) is call the zero polynomial if <var>a<sub>i</sub></var> = 0 for 0 &le; <var>i</var> &le; <var>n</var>, that is f(x) = 0. Its degree is defined to be &minus;1.
+      </p>
+    </section>
+    <section id="equal-polynomials" class="description">
+      <p>
+        <strong>Equality of polynomials</strong>:
+        Two polynomials,
         <section>
           <table>
             <tr>
-              <td>zero &in; P<sub>n</sub>(F)</td>
               <td>
-                &because;
-                the zero polynomial has degree -1 &lt; <var>n</var>
+                f(x)
+                = a<sub>n</sub>&InvisibleTimes;x<sup>n</sup>
+                + a<sub>n-1</sub>&InvisibleTimes;x<sup>n-1</sup>
+                + &ctdot; + a<sub>1</sub>&InvisibleTimes;x + a<sub>0</sub>
               </td>
             </tr>
             <tr>
               <td>
-                p<sub>1</sub>+p<sub>2</sub> &in; P<sub>n</sub>(F)
-              </td>
-              <td>
-                &because; p<sub>1</sub>+p<sub>2</sub>
-                is another polynomial of degree &le; <var>n</var>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                cp<sub>1</sub> &in; P<sub>n</sub>(F)
-              </td>
-              <td>
-                &because; cp<sub>1</sub>
-                is another polynomial of degree &le; <var>n</var>
+                g(x)
+                = b<sub>m</sub>&InvisibleTimes;x<sup>m</sup>
+                + b<sub>m-1</sub>&InvisibleTimes;x<sup>m-1</sup>
+                + &ctdot; + b<sub>1</sub>&InvisibleTimes;x + b<sub>0</sub>
               </td>
             </tr>
           </table>
         </section>
-        Hence by theorem (subspace conditions), P<sub>n</sub>(F) is a subspace of P(F). &marker;
-      </section>
-    </p>
+        are called equal if <var>m</var> = <var>n</var> and
+        <var>a<sub>i</sub></var> = <var>b<sub>i</sub></var>
+        for <var>i</var> = 0, 1, &hellip;, <var>n</var>.
+      </p>
+    </section>
+    <section id="set-of-polynomials" class="description">
+      <p>
+        <strong>Notation (P(F): a set of polynomials)</strong>:
+        A set of all polynomials with coefficients from a field <var>F</var>, denoted P(F), is a vector space with the two operations &mdash; suppose <var>m</var> &le; <var>n</var>, and <var>b<sub>m+1</sub></var> = <var>b<sub>m+2</sub></var> = &ctdot; = <var>b<sub>n</sub></var> = 0, then
+        <section>
+          <table>
+            <tr>
+              <td>
+                f(x)+g(x)
+                = (a<sub>n</sub>+b<sub>n</sub>)&InvisibleTimes;x<sup>n</sup>
+                + (a<sub>n-1</sub>+b<sub>n-1</sub>)&InvisibleTimes;x<sup>n-1</sup>
+                + &ctdot;
+                + (a<sub>1</sub>+b<sub>1</sub>)&InvisibleTimes;x
+                + (a<sub>0</sub>+b<sub>0</sub>)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                c&InvisibleTimes;f(x)
+                = c&InvisibleTimes;a<sub>n</sub>&InvisibleTimes;x<sup>n</sup>
+                + c&InvisibleTimes;a<sub>n-1</sub>&InvisibleTimes;x<sup>n-1</sup>
+                + &ctdot;
+                + c&InvisibleTimes;a<sub>1</sub>&InvisibleTimes;x
+                + c&InvisibleTimes;a<sub>0</sub>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="define-polynomial-set-degree" class="description">
+      <p>
+        <strong>Notation (P<sub>n</sub>(F): a set of all polynomials with degree <var>&le; n</var>)</strong>:
+        Let <var>n</var> &ge; 0, and let P<sub>n</sub>(F) consist of all polynomials in P(F) having degree &le; <var>n</var>.
+      </p>
+    </section>
+    <section id="polynominal-set-degreeis-subspace" class="proposition">
+      <p>
+        <strong>Proposition (P<sub>n</sub>(F) is a subspace)</strong>:
+        P<sub>n</sub>(F) is a subspace of P(F).
+      </p>
+      <p>
+        Proof: Let <var>p<sub>1</sub>, p<sub>2</sub></var> &in; P<sub>n</sub>(F), and let <var>c</var> &in; <var>F</var>,
+        <section>
+          <section>
+            <table>
+              <tr>
+                <td>zero &in; P<sub>n</sub>(F)</td>
+                <td>
+                  &because;
+                  the zero polynomial has degree -1 &lt; <var>n</var>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  p<sub>1</sub>+p<sub>2</sub> &in; P<sub>n</sub>(F)
+                </td>
+                <td>
+                  &because; p<sub>1</sub>+p<sub>2</sub>
+                  is another polynomial of degree &le; <var>n</var>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  cp<sub>1</sub> &in; P<sub>n</sub>(F)
+                </td>
+                <td>
+                  &because; cp<sub>1</sub>
+                  is another polynomial of degree &le; <var>n</var>
+                </td>
+              </tr>
+            </table>
+          </section>
+          Hence by theorem (subspace conditions), P<sub>n</sub>(F) is a subspace of P(F). &marker;
+        </section>
+      </p>
+    </section>
   </section>
-</section>
-<section id="linear-combinations">
-  <h2>Linear Combinations and Systems of Linear Equations</h2>
-  <section id="systems-of-linear-equations" class="description">
-    <p>
-      <strong>Systems of linear equations [連立一次方程式 | 線型方程式系]</strong>:
-      A system of linear equations consists of two or more linear equations made up of two or more variables such that all equations in the system are considered simultaneously.
-    </p>
-    <p>
-      To find the unique solution [解] to a system of linear equations, we must find a numerical value for each variable in the system that will satisfy all equations in the system at the same time. In order for a linear system to have a unique solution, there must be at least as many equations as there are variables. Even so, this does not guarantee a unique solution.
-      (<a href="https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11%3A_Systems_of_Equations_and_Inequalities/11.01%3A_Systems_of_Linear_Equations_-_Two_Variables" target="_blank">
-        Systems of Linear Equations, LibreTexts Mathematics
-      </a>)
-    </p>
+  <section id="linear-combinations">
+    <h2>Linear Combinations and Systems of Linear Equations</h2>
+    <section id="systems-of-linear-equations" class="description">
+      <p>
+        <strong>
+          Systems of linear equations [連立一次方程式 | 線型方程式系]
+        </strong>:
+        A system of linear equations consists of two or more linear equations made up of two or more variables such that all equations in the system are considered simultaneously.
+      </p>
+      <p>
+        To find the unique solution [解] to a system of linear equations, we must find a numerical value for each variable in the system that will satisfy all equations in the system at the same time. In order for a linear system to have a unique solution, there must be at least as many equations as there are variables. Even so, this does not guarantee a unique solution.
+        (<a href="https://math.libretexts.org/Bookshelves/Algebra/Algebra_and_Trigonometry_1e_(OpenStax)/11%3A_Systems_of_Equations_and_Inequalities/11.01%3A_Systems_of_Linear_Equations_-_Two_Variables" target="_blank">
+        Systems of Linear Equations, LibreTexts Mathematics</a>)
+      </p>
+    </section>
+    <section id="linear-combination-of-polynomials" class="description">
+      <p>
+        <strong>
+          Example (1.4.2: linear combination of polynomials)
+        </strong>:
+        Consider linear combinations of two polynomials
+        <section>
+          <table>
+            <tr>
+              <td>
+                x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9
+              </td>
+            </tr>
+          </table>
+        </section>
+        Case 1:
+        2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6 is a linear combination of the polynomials in P<sub>3</sub>(&reals;)
+        <section>
+          <p>
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6
+                  </td>
+                  <td>
+                    = a(x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3)
+                    + b(3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9)
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    = (a&plus;3b)x<sup>3</sup>
+                    + (&minus;2a&minus;5b)x<sup>2</sup>
+                    + (&minus;5a&minus;4b)x + (&minus;3a&minus;9b)
+                  </td>
+                </tr>
+              </table>
+            </section>
+            Thus we are led to the following system of linear equations, adding appropriate multiples of the first equation to the others in order to eliminate <var>a</var>, and adding the appropriate multiples of the second equation to the others yields <var>a</var> and <var>b</var>:
+            <section>
+              <table>
+                <tr class="right">
+                  <td>a+3b =</td><td>2</td>
+                  <td rowspan="4" style="vertical-align: middle;">
+                    &LongRightArrow;
+                  </td>
+                  <td>a+3b =</td><td>2</td>
+                  <td rowspan="4" style="vertical-align: middle;">
+                    &LongRightArrow;
+                  </td>
+                  <td>a =</td><td>&minus;4</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;2a&minus;5b =</td><td>&minus;2</td>
+                  <td>b =</td><td>2</td>
+                  <td>b =</td><td>2</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;5a&minus;4b =</td><td>12</td>
+                  <td>11b =</td><td>22</td>
+                  <td>0 =</td><td>0</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;3a&minus;9b =</td><td>&minus;6</td>
+                  <td>0b =</td><td>0</td>
+                  <td>0 =</td><td>0</td>
+                </tr>
+              </table>
+            </section>
+            Hence 2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6 is a linear combinations of the two polynomials:
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6
+                  </td>
+                  <td>
+                    = &minus;4(x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3)
+                    + 2(3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9)
+                  </td>
+                </tr>
+              </table>
+            </section>
+          </p>
+        </section>
+        Case 2:
+        3x<sup>3</sup>&minus;2x<sup>2</sup>&plus;7x&plus;8 is not a linear combination of the polynomials
+        <section>
+          <p>
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    3x<sup>3</sup>&minus;2x<sup>2</sup>&plus;7x&plus;8
+                  </td>
+                  <td>
+                    = a(x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3)
+                    + b(3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9)
+                  </td>
+                </tr>
+              </table>
+            </section>
+            Using the preceding technique, we obtain a system of linear equations, and eliminating <var>a</var> as before yields
+            <section>
+              <table>
+                <tr class="right">
+                  <td>a+3b =</td><td>3</td>
+                  <td rowspan="4" style="vertical-align: middle;">
+                    &LongRightArrow;
+                  </td>
+                  <td>a+3b =</td><td>3</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;2a&minus;5b =</td><td>&minus;2</td>
+                  <td>b =</td><td>4</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;5a&minus;4b =</td><td>7</td>
+                  <td>11b =</td><td>22</td>
+                </tr>
+                <tr class="right">
+                  <td>&minus;3a&minus;9b =</td><td>8</td>
+                  <td>0 =</td><td>17</td>
+                </tr>
+              </table>
+            </section>
+            But the presence of the inconsistent equation <var>0</var> &equals; <var>17</var> indicates that the system of linear equations has no solution.
+            Hence 3x<sup>3</sup>&minus;2x<sup>2</sup>&plus;7x&plus;8
+            is not a linear combination of the two polynomials.
+          </p>
+        </section>
+      </p>
+    </section>
   </section>
-  <section id="linear-combination-of-polynomials" class="description">
-    <p>
-      <strong>Example (1.4.2: linear combination of polynomials)</strong>:
-      Consider linear combinations of two polynomials
-      <section>
-        <table>
-          <tr>
-            <td>
-              x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3
-            </td>
-          </tr>
-          <tr>
-            <td>
-              3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9
-            </td>
-          </tr>
-        </table>
-      </section>
-      Case 1:
-      2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6
-      is a linear combination of the polynomials in P<sub>3</sub>(&reals;)
-      <section>
-        <p>
-          <section>
-            <table>
-              <tr>
-                <td>
-                  2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6
-                </td>
-                <td>
-                  = a(x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3)
-                  + b(3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9)
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>
-                  = (a&plus;3b)x<sup>3</sup>
-                  + (&minus;2a&minus;5b)x<sup>2</sup>
-                  + (&minus;5a&minus;4b)x + (&minus;3a&minus;9b)
-                </td>
-              </tr>
-            </table>
-          </section>
-          Thus we are led to the following system of linear equations, adding appropriate multiples of the first equation to the others in order to eliminate <var>a</var>, and adding the appropriate multiples of the second equation to the others yields <var>a</var> and <var>b</var>:
-          <section>
-            <table>
-              <tr class="right">
-                <td>a+3b =</td><td>2</td>
-                <td rowspan="4" style="vertical-align: middle;">
-                  &LongRightArrow;
-                </td>
-                <td>a+3b =</td><td>2</td>
-                <td rowspan="4" style="vertical-align: middle;">
-                  &LongRightArrow;
-                </td>
-                <td>a =</td><td>&minus;4</td>
-              </tr>
-              <tr class="right">
-                <td>&minus;2a&minus;5b =</td><td>&minus;2</td>
-                <td>b =</td><td>2</td>
-                <td>b =</td><td>2</td>
-              </tr>
-              <tr class="right">
-                <td>&minus;5a&minus;4b =</td><td>12</td>
-                <td>11b =</td><td>22</td>
-                <td>0 =</td><td>0</td>
-              </tr>
-              <tr class="right">
-                <td>&minus;3a&minus;9b =</td><td>&minus;6</td>
-                <td>0b =</td><td>0</td>
-                <td>0 =</td><td>0</td>
-              </tr>
-            </table>
-          </section>
-          Hence 2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6
-          is a linear combinations of the two polynomials:
-          <section>
-            <table>
-              <tr>
-                <td>
-                  2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6
-                </td>
-                <td>
-                  = &minus;4(x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3)
-                  + 2(3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9)
-                </td>
-              </tr>
-            </table>
-          </section>
-        </p>
-      </section>
-      Case 2:
-      3x<sup>3</sup>&minus;2x<sup>2</sup>&plus;7x&plus;8
-      is not a linear combination of the polynomials
-      <section>
-        <p>
-          <section>
-            <table>
-              <tr>
-                <td>
-                  3x<sup>3</sup>&minus;2x<sup>2</sup>&plus;7x&plus;8
-                </td>
-                <td>
-                  = a(x<sup>3</sup>&minus;2x<sup>2</sup>&minus;5x&minus;3)
-                  + b(3x<sup>3</sup>&minus;5x<sup>2</sup>&minus;4x&minus;9)
-                </td>
-              </tr>
-            </table>
-          </section>
-          Using the preceding technique, we obtain a system of linear equations, and eliminating <var>a</var> as before yields
-          <section>
-            <table>
-              <tr class="right">
-                <td>a+3b =</td><td>3</td>
-                <td rowspan="4" style="vertical-align: middle;">
-                  &LongRightArrow;
-                </td>
-                <td>a+3b =</td><td>3</td>
-              </tr>
-              <tr class="right">
-                <td>&minus;2a&minus;5b =</td><td>&minus;2</td>
-                <td>b =</td><td>4</td>
-              </tr>
-              <tr class="right">
-                <td>&minus;5a&minus;4b =</td><td>7</td>
-                <td>11b =</td><td>22</td>
-              </tr>
-              <tr class="right">
-                <td>&minus;3a&minus;9b =</td><td>8</td>
-                <td>0 =</td><td>17</td>
-              </tr>
-            </table>
-          </section>
-          But the presence of the inconsistent equation <var>0</var> &equals; <var>17</var> indicates that the system of linear equations has no solution.
-          Hence 3x<sup>3</sup>&minus;2x<sup>2</sup>&plus;7x&plus;8
-          is not a linear combination of the two polynomials.
-        </p>
-      </section>
-    </p>
+  <section id="reference">
+    <h2>References</h2>
+    <ul>
+      <li>
+        Friedberg, S.H., et al. (2018). <i>Linear Algebra, 5th Edition</i>. Pearson.
+      </li>
+    </ul>
   </section>
-</section>
-<section id="reference">
-  <h2>References</h2>
-  <ul>
-    <li>
-      Friedberg, S.H., et al. (2018). <i>Linear Algebra, 5th Edition</i>. Pearson.
-    </li>
-  </ul>
-</section>
 </article>
 </body>
 </html>
