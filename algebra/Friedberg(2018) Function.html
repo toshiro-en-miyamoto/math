@@ -56,7 +56,166 @@
     <section id="define-function" class="definition">
       <p>
         <strong>Definition (function)</strong>:
-        If <var>A</var> and <var>B</var> are sets,
+        If <var>A</var> and <var>B</var> are sets, then a function <var>f</var> from <var>A</var> to <var>B</var>, denoted
+        <section>
+          <table>
+            <tr>
+              <td>f : A &longmapsto; B</td>
+              <td>is a rule that</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>associates each element <var>x</var> in <var>A</var></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>with the one and only element in <var>B</var>, denoted f(x).</td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="function-terms" class="description">
+      <p>
+        <strong>Equality of function</strong>:
+        Two functions
+        <section>
+          <table>
+            <tr>
+              <td>f : A &longmapsto; B</td>
+              <td>and</td>
+              <td>g : A &longmapsto; B</td>
+            </tr>
+          </table>
+        </section>
+        are equal if f(x) = g(x) for all <var>x</var> &in; <var>A</var>.
+      </p>
+      <table>
+        <tr>
+          <th>domain</th>
+          <td>
+            <var>A</var> of <var>f</var> : <var>A</var> &longmapsto; <var>B</var>
+          </td>
+        </tr>
+        <tr>
+          <th>range</th>
+          <td>
+            the set { f(x) : x &in; A }
+          </td>
+        </tr>
+        <tr>
+          <th>one-to-one function</th>
+          <td>if f(x) = f(y) implies <var>x</var> = <var>y</var></td>
+        </tr>
+        <tr>
+          <th>onto functions</th>
+          <td>the range { f(x) : x &in; A } = <var>B</var></td>
+        </tr>
+      </table>
+      <dl>
+        <dt>functions need not be one-to-one</dt>
+        <dd>
+          with <var>x</var> &ne; <var>y</var>, it is allowed that f(x) = f(y)
+        </dd>
+        <dt>functions need not be onto</dt>
+        <dd>
+          in general, the range { f(x) : x &in; A } &subseteq; <var>B</var>
+        </dd>
+      </dl>
+    </section>
+    <section id="composite" class="definition">
+      <p>
+        <strong>Definition (composite)</strong>:
+        Let <var>A</var>, <var>B</var>, and <var>C</var> be sets and
+        <section>
+          <table>
+            <tr>
+              <td>f : A &longmapsto; B</td>
+              <td>and</td>
+              <td>g : B &longmapsto; C</td>
+            </tr>
+          </table>
+        </section>
+        be functions. Then a function composite of <var>g</var> and <var>f</var> is denoted
+        <section>
+          <table>
+            <tr>
+              <td>g&compfn;f : A &longmapsto; C</td>
+              <td>&ctdot;</td>
+              <td>
+                (g&compfn;f)(x) = g(f(x)) for all <var>x</var> &in; <var>A</var>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="composite-example" class="description">
+      <p>
+        For example, let <var>A</var> = <var>B</var> = <var>C</var> = &reals;,
+        <section>
+          <table>
+            <tr>
+              <td>f(x) = sin x</td>
+              <td>and</td>
+              <td>g(x) = x<sup>2</sup>+3</td>
+            </tr>
+          </table>
+        </section>
+        then
+        <section>
+          <table>
+            <tr>
+              <td>g&compfn;f : &reals; &longmapsto; &reals;</td>
+              <td>&ctdot;</td>
+              <td>
+                (g&compfn;f)(x) = (g(f(x))) = (sin x)<sup>2</sup>+3
+              </td>
+            </tr>
+            <tr>
+              <td>f&compfn;g : &reals; &longmapsto; &reals;</td>
+              <td>&ctdot;</td>
+              <td>
+                (f&compfn;g)(x) = (f(g(x))) = sin(x<sup>2</sup>+3)
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="associative-composite" class="proposition">
+      <p>
+        <strong>Proposition (composite associativity)</strong>:
+        Functional composition is associative. Let <var>f</var>, <var>g</var>, and <var>h</var> be functions, then
+        <section>
+          h&compfn;(g&compfn;f) = (h&compfn;g)&compfn;f
+        </section>
+        Proof:
+        We prove that both sides are equal for every input <var>x</var>.
+        <section>
+          <table>
+            <tr>
+              <td>(h&compfn;(g&compfn;f))(x)</td>
+              <td>= h((g&compfn;f)(x))</td>
+              <td>&ctdot; composite of h and g&compfn;f</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= h(g(f(x)))</td>
+              <td>&ctdot; composite of <var>g</var> and <var>f</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= (h&compfn;g)(f(x))</td>
+              <td>&ctdot; h&compfn;g that takes f(x) as input</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= ((h&compfn;g)&compfn;f)(x)</td>
+              <td>&ctdot; composite of h&compfn;g and f</td>
+            </tr>
+          </table>
+        </section>
       </p>
     </section>
   </section>
