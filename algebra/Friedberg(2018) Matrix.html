@@ -78,7 +78,7 @@
   </section>
   <section id="set-of-tuple" class="description">
     <p>
-      <strong>Notation (a set of n-tuples)</strong>:
+      <strong>Notation (F<sup>n</sup> : a set of n-tuples)</strong>:
       A set of all n-tuples with entries from a filed <var>F</var> is denoted F<sup>n</sup>, e.g.,
       <section>
         <table>
@@ -577,36 +577,27 @@
       <strong>Notation (M<sub>m&times;n</sub>(F): a set of matrices)</strong>:
       The set of all <var>m&times;n</var> matrices with each entries from a field <var>F</var> is denoted M<sub>m&times;n</sub>(F).
     </p>
+  </section>
+  <section id="set-of-matrices-vector-space" class="proposition">
     <p>
+      <strong>Proposition (example 2: M<sub>m&times;n</sub>(F) is a vector space)</strong>:
       M<sub>m&times;n</sub>(F) is a vector space over <var>F</var> with the following operations of matrix addition and scalar multiplication; for
       <var>A, B</var> &in; M<sub>m&times;n</sub>(F) and <var>c</var> &in; <var>F</var>, and 1 &le; <var>i</var> &le; <var>m</var> and 1 &le; <var>j</var> &le; <var>n</var>,
       <section>
+        <table>
+          <tr>
+            <td>
+              (A+B)<sub>ij</sub> = A<sub>ij</sub>+B<sub>ij</sub>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              (cA)<sub>ij</sub> = cA<sub>ij</sub>
+            </td>
+          </tr>
+        </table>
       </section>
-    </p>
-    <section>
-      <table>
-        <tr>
-          <td>
-            (A+B)<sub>ij</sub> = A<sub>ij</sub>+B<sub>ij</sub>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            (cA)<sub>ij</sub> = cA<sub>ij</sub>
-          </td>
-        </tr>
-      </table>
-    </section>
-    <p>
-      The definitions of matrix addition and scalar multiplication in M<sub>m&times;n</sub>(F) are natural extensions of the corresponding operations in <var>F<sup>n</sup></var> and <var>F<sup>m</sup></var>. Let <var>A, B</var> &in; M<sub>m&times;n</sub>(F) and <var>c</var> &in; <var>F</var>, then
-      <ul>
-        <li>
-          <var>A + B</var> is the matrix M<sub>m&times;n</sub>(F) whose <b>i</b>th row vector is the sum of the <b>i</b>th row vectors of <var>A</var> and <var>B</var>, and
-        </li>
-        <li>
-          <var>c&InvisibleTimes;A</var> is the matrix M<sub>m&times;n</sub>(F) whose <b>i</b>th row vector is <var>c</var> times the <b>i</b>th row vector of <var>A</var>.
-        </li>
-      </ul>
+      Proof: very similar to the proof of Example 1.
     </p>
   </section>
   <section id="transpose" class="description">
