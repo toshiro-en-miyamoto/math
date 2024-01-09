@@ -218,6 +218,76 @@
         </section>
       </p>
     </section>
+    <section id="set-of-function" class="description">
+      <p>
+        <strong>Notation (example 3: a set of functions)</strong>:
+        Let <var>S</var> be any nonempty set and <var>F</var> be any field, and let &#x1D4D5;(S, F) denote the set of all functions from <var>S</var> to <var>F</var>. 
+        <section>
+          &#x1D4D5;(S, F) = { f : S &longmapsto; F }
+        </section>
+        Two functions <var>f</var> and <var>g</var> in &#x1D4D5;(S, F) are called equal if
+        <section>
+          f(s) = g(s) for each <var>s</var> &in; <var>S</var>
+        </section>
+      </p>
+    </section>
+    <section id="function-in-vector-space" class="proposition">
+      <p>
+        <strong>Proposition (function-sets are a vector space)</strong>:
+        The set &#x1D4D5;(S, F) is a vector space with the operations of addition and scalar multiplication, for <var>f</var>, <var>g</var> &in; &#x1D4D5;(S, F) and <var>c</var> &in; <var>F</var> by, for each <var>s</var> &in; <var>S</var>
+        <section>
+          <table>
+            <tr>
+              <td>(f+g)(s) = f(s)+g(s)</td>
+              <td>&ctdot; (VA)</td>
+            </tr>
+            <tr>
+              <td>(cf)(s) = c(f(s))</td>
+              <td>&ctdot; (SM)</td>
+            </tr>
+          </table>
+        </section>
+        Proof:
+        We show that functions <var>f</var>, <var>g</var>, <var>h</var> &in; &#x1D4D5;(S, F) satisfy vector space axioms. Let <var>a</var>, <var>b</var> &in; <var>F</var>.
+        <section>
+          <table>
+            <tr>
+              <td></td>
+              <th>vector addition</th>
+              <th>scalar multiplication</th>
+            </tr>
+            <tr>
+              <td>commutativity</td>
+              <td>f+g = g+f</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>associativity</td>
+              <td>(f+g)+h = f+(g+h)</td>
+              <td>(ab)f = a(bf)</td>
+            </tr>
+            <tr>
+              <td>existence of identity</td>
+              <td>&exist;0 &in; &#x1D4D5;, f+0 = f</td>
+              <td>1f = f</td>
+            </tr>
+            <tr>
+              <td>existence of inverse</td>
+              <td>&exist;(f<sup>&minus;1</sup>) &in; &#x1D4D5;, f+(f<sup>&minus;1</sup>) = 0</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>distributivity</td>
+              <td>a(f+g) = af+ag</td>
+              <td>(a+b)f = af+bf</td>
+            </tr>
+          </table>
+        </section>
+        <p>
+          Commutativity of vector addition:
+        </p>
+      </p>
+    </section>
   </section>
   <section id="polynomials">
     <h2>Polynomials</h2>
