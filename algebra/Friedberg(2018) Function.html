@@ -218,9 +218,11 @@
         </section>
       </p>
     </section>
-    <section id="set-of-function" class="description">
+    <section id="function-set" class="description">
       <p>
-        <strong>Notation (example 3: a set of functions)</strong>:
+        <strong>
+          Notation (example 3: #x1D4D5;(S, F), a set of functions)
+        </strong>:
         Let <var>S</var> be any nonempty set and <var>F</var> be any field, and let &#x1D4D5;(S, F) denote the set of all functions from <var>S</var> to <var>F</var>. 
         <section>
           &#x1D4D5;(S, F) = { f : S &longmapsto; F }
@@ -231,9 +233,9 @@
         </section>
       </p>
     </section>
-    <section id="function-in-vector-space" class="proposition">
+    <section id="function-set-as-vector-space" class="proposition">
       <p>
-        <strong>Proposition (function-sets are a vector space)</strong>:
+        <strong>Proposition (functions as a vector space)</strong>:
         The set &#x1D4D5;(S, F) is a vector space with the operations of addition and scalar multiplication, for <var>f</var>, <var>g</var> &in; &#x1D4D5;(S, F) and <var>c</var> &in; <var>F</var> by, for each <var>s</var> &in; <var>S</var>
         <section>
           <table>
@@ -285,6 +287,161 @@
         </section>
         <p>
           Commutativity of vector addition:
+          <section>
+            <table>
+              <tr>
+                <td>(f+g)(s)</td>
+                <td>= f(s)+g(s)</td>
+                <td>by definition (VA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= g(s)+f(s)</td>
+                <td>since f(s), g(s) &in; <var>F</var></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= (g+f)(s)</td>
+                <td>by definition (VA)</td>
+              </tr>
+            </table>
+          </section>
+          Associativity of vector addition:
+          <section>
+            <table>
+              <tr>
+                <td>((f+g)+h)(s)</td>
+                <td>= (f+g)(s)+h(s)</td>
+                <td>by definition (VA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= (f(s)+g(s))+h(s)</td>
+                <td>by definition (VA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= f(s)+(g(s)+h(s))</td>
+                <td>since f(s), g(s), h(s) &in; <var>F</var></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= f(s)+(g+h)(s)</td>
+                <td>by definition (VA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= (f+(g+h))(s)</td>
+                <td>by definition (VA)</td>
+              </tr>
+            </table>
+          </section>
+          Associativity of scalar multiplication:
+          <section>
+            <table>
+              <tr>
+                <td>(ab)f(s)</td>
+                <td>= a(bf(s))</td>
+                <td>since a, b, f(s) &in; <var>F</var></td>
+              </tr>
+            </table>
+          </section>
+          Existence of additive identity:
+          <section>
+            <p>
+              Since <var>F</var> is a field, <var>F</var> contains 0, the zero vector. Hence &#x1D4D5; should contain a function that maps an element in <var>S</var> to 0. Let 0(s) denote the function such that 0(s) = 0.
+            </p>
+            <table>
+              <tr>
+                <td>(f+0)(s)</td>
+                <td>= f(s)+0(s)</td>
+                <td>by definition (VA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= f(s)+0</td>
+                <td>since 0(s) = 0</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= f(s)</td>
+                <td>by definition of 0 &in; <var>F</var></td>
+              </tr>
+            </table>
+          </section>
+          Existence of scalar multiplicative identity:
+          <section>
+            <table>
+              <tr>
+                <td>(1f)(s)</td>
+                <td>= 1f(s)</td>
+                <td>by definition (SM)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= f(s)</td>
+                <td>by definition of 1 &in; <var>F</var></td>
+              </tr>
+            </table>
+          </section>
+          Existence of inverse:
+          <section>
+            <p>
+              Since <var>F</var> is a field, <var>F</var> contains both f(s) and an inverse of f(s), denoted &minus;f(s). Hence &#x1D4D5; should contain a function that maps an element <var>s</var> &in; <var>S</var> to &minus;f(s). Let f<sup>&minus;1</sup>(s) denote the function such that f<sup>&minus;1</sup>(s) = &minus;f(s).
+            </p>
+            <table>
+              <tr>
+                <td>(f+(f<sup>&minus;1</sup>))(s)</td>
+                <td>= f(s)+f<sup>&minus;1</sup>(s)</td>
+                <td>by definition (VA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= f(s)+(&minus;f(s))</td>
+                <td>since f<sup>&minus;1</sup>(s) = &minus;f(s)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= 0</td>
+                <td>since &minus;f(s) is an additive inverse of f(s)</td>
+              </tr>
+            </table>
+          </section>
+          Distributivity over vector addition:
+          <section>
+            <table>
+              <tr>
+                <td>(a(f+g))(s)</td>
+                <td>= a(f+g)(s)</td>
+                <td>by definition (SM)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= a(f(s)+g(s))</td>
+                <td>by definition (VA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= af(s)+ag(s)</td>
+                <td>since a, f(s), g(s) &in; <var>F</var></td>
+              </tr>
+            </table>
+          </section>
+          Distributivity over scalar multiplication:
+          <section>
+            <table>
+              <tr>
+                <td>((a+b)f)(s)</td>
+                <td>= (a+b)f(s)</td>
+                <td>by definition (SM), note that (a+b) &in; <var>F</var></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= af(s)+bf(s)</td>
+                <td>since a, b, f(s) &in; <var>F</var></td>
+              </tr>
+            </table>
+          </section>
         </p>
       </p>
     </section>
