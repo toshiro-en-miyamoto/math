@@ -458,18 +458,25 @@
           + a<sub>n-1</sub>&InvisibleTimes;x<sup>n-1</sup>
           + &ctdot; + a<sub>1</sub>&InvisibleTimes;x + a<sub>0</sub>
         </section>
+        The degree [次数] of a polynomial is defined to the largest exponent of <var>x</var> with a non-zero coefficient.
       </p>
     </section>
-    <section id="polynomail-degree" class="description">
-      <p>
-        <strong>Degree [次数]</strong>:
-        The degree of a polynomial is defined to the largest exponent of <var>x</var> with a non-zero coefficient.
-      </p>
-    </section>
-    <section id="zero-polynomail" class="description">
+    <section id="zero-polynomial" class="description">
       <p>
         <strong>Zero polynomial</strong>:
-        A polynomial f(x) is call the zero polynomial if <var>a<sub>i</sub></var> = 0 for 0 &le; <var>i</var> &le; <var>n</var>, that is f(x) = 0. Its degree is defined to be &minus;1.
+        <ul>
+          <li>
+            is a polynomial with a<sub>n</sub>, a<sub>n&minus;1</sub>, &hellip;, a<sub>1</sub>, a<sub>0</sub> = 0
+          </li>
+          <li>that is f(x) = 0</li>
+          <li>its degree is defined to be &minus;1</li>
+        </ul>
+      </p>
+    </section>
+    <section id="degree-zero-polynomial" class="description">
+      <p>
+        <strong>Polynomials with degree zero</strong>:
+        are written in the form f(x) = <var>c</var> for some nonzero scalar <var>c</var>.
       </p>
     </section>
     <section id="equal-polynomials" class="description">
@@ -501,10 +508,35 @@
         for <var>i</var> = 0, 1, &hellip;, <var>n</var>.
       </p>
     </section>
+    <section id="polynomial-as-function" class="definition">
+      <p>
+        <strong>Interpretation (a polynomial as a function)</strong>:
+        With a field <var>F</var> containing infinitely many scalars, we usually regard
+        <section>
+          <table>
+            <tr>
+              <td>
+                a polynomial with coefficients from <var>F</var>
+              </td>
+              <td>as</td>
+              <td>
+                a function: F &longmapsto; F
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
     <section id="set-of-polynomials" class="description">
       <p>
         <strong>Notation (P(F): a set of polynomials)</strong>:
-        A set of all polynomials with coefficients from a field <var>F</var>, denoted P(F), is a vector space with the two operations &mdash; suppose <var>m</var> &le; <var>n</var>, and <var>b<sub>m+1</sub></var> = <var>b<sub>m+2</sub></var> = &ctdot; = <var>b<sub>n</sub></var> = 0, then
+        A set of all polynomials with coefficients from a field <var>F</var> is denoted P(F).
+      </p>
+    </section>
+    <section id="polynomial-set-as-vector-space" class="proposition">
+      <p>
+        <strong>Proposition (P(F) is a vector space)</strong>:
+        P(F) is a vector space with the two operations &mdash; suppose <var>m</var> &le; <var>n</var>, and <var>b<sub>m+1</sub></var> = <var>b<sub>m+2</sub></var> = &ctdot; = <var>b<sub>n</sub></var> = 0, then
         <section>
           <table>
             <tr>
@@ -529,6 +561,7 @@
             </tr>
           </table>
         </section>
+        Proof: similar to the proof of Proposition (functions as a vector space).
       </p>
     </section>
     <section id="define-polynomial-set-degree" class="description">
