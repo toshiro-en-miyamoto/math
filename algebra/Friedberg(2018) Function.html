@@ -221,7 +221,7 @@
     <section id="function-set" class="description">
       <p>
         <strong>
-          Notation (#x1D4D5;(S, F), a set of functions)
+          Notation (&#x1D4D5;(S, F), a set of functions)
         </strong>:
         Let <var>S</var> be any nonempty set and <var>F</var> be any field, and let &#x1D4D5;(S, F) denote the set of all functions from <var>S</var> to <var>F</var>. 
         <section>
@@ -241,11 +241,11 @@
           <table>
             <tr>
               <td>(f+g)(s) = f(s)+g(s)</td>
-              <td>&ctdot; (VA)</td>
+              <td>&ctdot; (FA)</td>
             </tr>
             <tr>
               <td>(cf)(s) = c(f(s))</td>
-              <td>&ctdot; (SM)</td>
+              <td>&ctdot; (FM)</td>
             </tr>
           </table>
         </section>
@@ -292,7 +292,7 @@
               <tr>
                 <td>(f+g)(s)</td>
                 <td>= f(s)+g(s)</td>
-                <td>by definition (VA)</td>
+                <td>by definition (FA)</td>
               </tr>
               <tr>
                 <td></td>
@@ -302,7 +302,7 @@
               <tr>
                 <td></td>
                 <td>= (g+f)(s)</td>
-                <td>by definition (VA)</td>
+                <td>by definition (FA)</td>
               </tr>
             </table>
           </section>
@@ -312,12 +312,12 @@
               <tr>
                 <td>((f+g)+h)(s)</td>
                 <td>= (f+g)(s)+h(s)</td>
-                <td>by definition (VA)</td>
+                <td>by definition (FA)</td>
               </tr>
               <tr>
                 <td></td>
                 <td>= (f(s)+g(s))+h(s)</td>
-                <td>by definition (VA)</td>
+                <td>by definition (FA)</td>
               </tr>
               <tr>
                 <td></td>
@@ -327,12 +327,12 @@
               <tr>
                 <td></td>
                 <td>= f(s)+(g+h)(s)</td>
-                <td>by definition (VA)</td>
+                <td>by definition (FA)</td>
               </tr>
               <tr>
                 <td></td>
                 <td>= (f+(g+h))(s)</td>
-                <td>by definition (VA)</td>
+                <td>by definition (FA)</td>
               </tr>
             </table>
           </section>
@@ -349,13 +349,13 @@
           Existence of additive identity:
           <section>
             <p>
-              Since <var>F</var> is a field, <var>F</var> contains 0, the zero vector. Hence &#x1D4D5; should contain a function that maps an element in <var>S</var> to 0. Let 0(s) denote the function such that 0(s) = 0.
+              Since <var>F</var> is a field, <var>F</var> contains 0, the zero vector. Hence &#x1D4D5; should contain a function that maps an element <var>s</var> &in; <var>S</var> to 0. Let 0(s) denote the function such that 0(s) = 0.
             </p>
             <table>
               <tr>
                 <td>(f+0)(s)</td>
                 <td>= f(s)+0(s)</td>
-                <td>by definition (VA)</td>
+                <td>by definition (FA)</td>
               </tr>
               <tr>
                 <td></td>
@@ -375,7 +375,7 @@
               <tr>
                 <td>(1f)(s)</td>
                 <td>= 1f(s)</td>
-                <td>by definition (SM)</td>
+                <td>by definition (FM)</td>
               </tr>
               <tr>
                 <td></td>
@@ -384,16 +384,16 @@
               </tr>
             </table>
           </section>
-          Existence of inverse:
+          Existence of additive inverse:
           <section>
             <p>
-              Since <var>F</var> is a field, <var>F</var> contains both f(s) and an inverse of f(s), denoted &minus;f(s). Hence &#x1D4D5; should contain a function that maps an element <var>s</var> &in; <var>S</var> to &minus;f(s). Let f<sup>&minus;1</sup>(s) denote the function such that f<sup>&minus;1</sup>(s) = &minus;f(s).
+              Since <var>F</var> is a field, an element f(s) &in; <var>F</var> has its additive inverse in <var>F</var>, denoted &minus;f(s). Hence &#x1D4D5; should contain a function that maps an element <var>s</var> &in; <var>S</var> to &minus;f(s). Let f<sup>&minus;1</sup>(s) denote the function such that f<sup>&minus;1</sup>(s) = &minus;f(s).
             </p>
             <table>
               <tr>
                 <td>(f+(f<sup>&minus;1</sup>))(s)</td>
                 <td>= f(s)+f<sup>&minus;1</sup>(s)</td>
-                <td>by definition (VA)</td>
+                <td>by definition (FA)</td>
               </tr>
               <tr>
                 <td></td>
@@ -413,12 +413,12 @@
               <tr>
                 <td>(a(f+g))(s)</td>
                 <td>= a(f+g)(s)</td>
-                <td>by definition (SM)</td>
+                <td>by definition (FM)</td>
               </tr>
               <tr>
                 <td></td>
                 <td>= a(f(s)+g(s))</td>
-                <td>by definition (VA)</td>
+                <td>by definition (FA)</td>
               </tr>
               <tr>
                 <td></td>
@@ -433,7 +433,7 @@
               <tr>
                 <td>((a+b)f)(s)</td>
                 <td>= (a+b)f(s)</td>
-                <td>by definition (SM), note that (a+b) &in; <var>F</var></td>
+                <td>by definition (FM), note that (a+b) &in; <var>F</var></td>
               </tr>
               <tr>
                 <td></td>
@@ -652,8 +652,8 @@
           <table>
             <tr>
               <td></td>
-              <th>vector &plus;</th>
-              <th>scalar &times;</th>
+              <th>vector addition</th>
+              <th>scalar multiplication</th>
             </tr>
             <tr>
               <td>commutativity</td>
@@ -776,10 +776,8 @@
               <tr>
                 <td>=
                   (a<sub>n</sub>) <sub>n&in;&naturals;</sub> +
-                  (
-                    (b<sub>n</sub>) <sub>n&in;&naturals;</sub> +
-                    (c<sub>n</sub>) <sub>n&in;&naturals;</sub>
-                  )
+                  ((b<sub>n</sub>) <sub>n&in;&naturals;</sub> +
+                  (c<sub>n</sub>) <sub>n&in;&naturals;</sub>)
                 </td>
                 <td>by definition (QA)</td>
               </tr>
@@ -789,59 +787,122 @@
           <section>
             <table>
               <tr>
-                <td>(tu)(a<sub>n</sub>)</td>
-                <td></td>
+                <td>(tu)(a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                <td>= ((tu)a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                <td>by definition (QM)</td>
               </tr>
               <tr>
                 <td></td>
-                <td>= t(ua<sub>n</sub>)</td>
+                <td>= (t(ua<sub>n</sub>)) <sub>n&in;&naturals;</sub></td>
+                <td>
+                  since <var>t</var>, <var>u</var>, a<sub>n</sub> &in; <var>F</var>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= t(ua<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                <td>by definition (QM)</td>
               </tr>
             </table>
           </section>
           Existence of vector additive identity:
           <section>
-            <table>
-              <tr>
-                <td>
-                  &exist;(0<sub>n</sub>) &in; V,
-                  (a<sub>n</sub>)+(0<sub>n</sub>)
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>= (a<sub>n</sub>)</td>
-              </tr>
-            </table>
+            <p>
+              Since <var>F</var> is a field, <var>F</var> contains 0, the zero vector. Hence there should exist a sequence in <var>F</var> that is defined by a function &sigma; : &naturals; &longmapsto; 0 &in; <var>F</var> &mdash; for example, sin(n&pi;) : n &in; &naturals; &longmapsto; 0 &in; &reals;, that is
+              <section>
+                sin(1&pi;), sin(2&pi;), &hellip; = 0, 0, &hellip;
+              </section>
+              Let (0n) <sub>n&in;&naturals;</sub> denote such a sequence, that is
+              (0n) <sub>n&in;&naturals;</sub> = 0, 0, &hellip;
+              <section>
+                <table>
+                  <tr>
+                    <td>
+                      (a<sub>n</sub>) <sub>n&in;&naturals;</sub> +
+                      (0<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                    </td>
+                    <td>= (a<sub>n</sub>+0) <sub>n&in;&naturals;</sub></td>
+                    <td>by definition (QA)</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>= (a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                    <td>since a<sub>n</sub> &in; <var>F</var></td>
+                  </tr>
+                </table>
+              </section>
+            </p>
           </section>
           Existence of scalar multiplicative identity:
           <section>
             <table>
               <tr>
-                <td>1(a<sub>n</sub>)</td>
-                <td></td>
+                <td>1(a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                <td>= (1a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                <td>by definition (QM)</td>
               </tr>
               <tr>
                 <td></td>
-                <td>= (a<sub>n</sub>)</td>
+                <td>= (a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                <td>since a<sub>n</sub> &in; <var>F</var></td>
               </tr>
             </table>
           </section>
           Existence of vector additive inverse:
           <section>
-            <table>
-              <tr>
-                <td>
-                  &exist;(a<sub>n</sub>)<sup>&minus;1</sup>,
-                  (a<sub>n</sub>)+(a<sub>n</sub>)<sup>&minus;1</sup>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>= (0<sub>n</sub>)</td>
-              </tr>
-            </table>
+            <p>
+              Since <var>F</var> is a field, an element a<sub>n</sub> &in; <var>F</var> has its additive inverse in <var>F</var>, denoted &minus;a<sub>n</sub>. Hence provided a function &sigma;(n) = a<sub>n</sub>, there should exist a function : n &longmapsto; &minus;a<sub>n</sub>. Let write the function as &sigma;<sup>&minus;1</sup>(n), then we have a sequence
+              <section>
+                <table>
+                  <tr>
+                    <td>(&minus;a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                    <td>=
+                      &sigma;<sup>&minus;1</sup>(1),
+                      &sigma;<sup>&minus;1</sup>(2), &hellip;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>= &minus;a<sub>1</sub>, &minus;a<sub>2</sub>, &hellip;</td>
+                  </tr>
+                </table>
+              </section>
+              Let write the sequence as
+              (a<sub>n</sub>)<sup>&minus;1</sup><sub>n&in;&naturals;</sub>,
+              then there exists
+              (a<sub>n</sub>)<sup>&minus;1</sup><sub>n&in;&naturals;</sub> such that
+              <section>
+                <table>
+                  <tr>
+                    <td>
+                      (a<sub>n</sub>) <sub>n&in;&naturals;</sub> +
+                      (a<sub>n</sub>)<sup>&minus;1</sup><sub>n&in;&naturals;</sub>
+                    </td>
+                    <td>=
+                      (a<sub>n</sub>) <sub>n&in;&naturals;</sub> +
+                      (&minus;a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                    </td>
+                    <td>by definition of additive inverse</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>=
+                      (a<sub>n</sub>+(&minus;a<sub>n</sub>))
+                      <sub>n&in;&naturals;</sub>
+                    </td>
+                    <td>by definition (QA)</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>= (0<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                    <td>
+                      since
+                      a<sub>n</sub>, &minus;a<sub>n</sub> &in; <var>F</var>
+                    </td>
+                  </tr>
+                </table>
+              </section>
+            </p>
           </section>
           Distributivity over vector addition:
           <section>
