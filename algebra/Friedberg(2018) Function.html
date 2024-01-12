@@ -587,64 +587,94 @@
     <section id="notation-sequence" class="description">
       <p>
         <strong>Notation ((a<sub>n</sub>): sequence)</strong>:
-        A sequence in a field <var>F</var> such that
+        A sequence in a field <var>F</var> is defined by
         <section>
           <table>
             <tr>
-              <td>&sigma; : &naturals; &longmapsto; F</td>
-            </tr>
-            <tr>
+              <td>a function &sigma; : &naturals; &longmapsto; F</td>
+              <td>&ctdot;</td>
               <td>&sigma;(n) = a<sub>n</sub> &in; F</td>
             </tr>
           </table>
         </section>
-        for <var>n</var> = 1, 2, &hellip; is denoted (a<sub>n</sub>).
+        for <var>n</var> &in; &naturals;, denoted
+        (a<sub>n</sub>) <sub>n&in;&naturals;</sub>, that is
+        <section>
+          <table>
+            <tr>
+              <td>(a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+              <td>= &sigma;(1), &sigma;(2), &hellip;</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= a<sub>1</sub>, a<sub>2</sub>, &hellip;</td>
+            </tr>
+          </table>
+        </section>
+        Occasionally denoted (a<sub>n</sub>) if not ambiguous.
       </p>
     </section>
-    <section id="sequence-set-as-vector-space" class="description">
+    <section id="sequence-set-as-vector-space" class="proposition">
       <p>
         <strong>Proposition (example 1.2.5: sequence set as vector space)</strong>:
-        A set <var>V</var> consisting of all the sequence (a<sub>n</sub>) in <var>F</var> is a vector space with the two operations, for (a<sub>n</sub>), (b<sub>n</sub>) &in; <var>V</var> and a scalar <var>c</var> &in; <var>F</var>.
+        Let a set <var>V</var> consist of all sequences in <var>F</var>, then <var>V</var> is a vector space with the two operations, for (a<sub>n</sub>) <sub>n&in;&naturals;</sub>, (b<sub>n</sub>) <sub>n&in;&naturals;</sub> &in; <var>V</var> and a scalar <var>t</var> &in; <var>F</var>
         <section>
           <table>
             <tr>
               <td>
-                (a<sub>n</sub>)+(b<sub>n</sub>) = (a<sub>n</sub>+b<sub>n</sub>)
+                (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + (b<sub>n</sub>) <sub>n&in;&naturals;</sub>
               </td>
-              <td>and</td>
               <td>
-                t(a<sub>n</sub>) = (ta<sub>n</sub>)
+                = (a<sub>n</sub>+b<sub>n</sub>) <sub>n&in;&naturals;</sub>
               </td>
+              <td>
+                = a<sub>1</sub>+b<sub>1</sub>, a<sub>2</sub>+b<sub>2</sub>, &hellip;
+              </td>
+              <td>&ctdot; (QA)</td>
+            </tr>
+            <tr>
+              <td>
+                t(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+              </td>
+              <td>
+                = (ta<sub>n</sub>) <sub>n&in;&naturals;</sub>
+              </td>
+              <td>
+                = ta<sub>1</sub>, ta<sub>2</sub>, &hellip;
+              </td>
+              <td>&ctdot; (QM)</td>
             </tr>
           </table>
         </section>
-        Proof: We show that sequences (a<sub>n</sub>), (b<sub>n</sub>), (c<sub>n</sub>) &in; <var>V</var> satisfy vector space axioms. Let <var>t</var>, <var>u</var> &in; <var>F</var>.
+        Proof: We show that sequences in <var>F</var> satisfy vector space axioms. Let (c<sub>n</sub>) <sub>n&in;&naturals;</sub> &in; <var>V</var>, and <var>u</var> &in; <var>F</var>.
         <section>
           <table>
             <tr>
               <td></td>
-              <th>vector addition</th>
-              <th>scalar multiplication</th>
+              <th>vector &plus;</th>
+              <th>scalar &times;</th>
             </tr>
             <tr>
               <td>commutativity</td>
               <td>
-                (a<sub>n</sub>)+(b<sub>n</sub>) = (b<sub>n</sub>)+(a<sub>n</sub>)
+                (a<sub>n</sub>)+(b<sub>n</sub>)
+                = (b<sub>n</sub>)+(a<sub>n</sub>)
               </td>
               <td></td>
             </tr>
             <tr>
               <td>associativity</td>
               <td>
-                ((a<sub>n</sub>)+(b<sub>n</sub>))+(c<sub>n</sub>) =
-                (a<sub>n</sub>)+((b<sub>n</sub>)+(c<sub>n</sub>))
+                ((a<sub>n</sub>)+(b<sub>n</sub>))+(c<sub>n</sub>)
+                = (a<sub>n</sub>)+((b<sub>n</sub>)+(c<sub>n</sub>))
               </td>
               <td>
                 (tu)(a<sub>n</sub>) = t(ua<sub>n</sub>)
               </td>
             </tr>
             <tr>
-              <td>existence of identity</td>
+              <td>identity</td>
               <td>
                 &exist;(0<sub>n</sub>) &in; V,
                 (a<sub>n</sub>)+(0<sub>n</sub>) = (a<sub>n</sub>)
@@ -652,9 +682,9 @@
               <td>1(a<sub>n</sub>) = (a<sub>n</sub>)</td>
             </tr>
             <tr>
-              <td>existence of inverse</td>
+              <td>inverse</td>
               <td>
-                &exist;(a<sub>n</sub>)<sup>&minus;1</sup>,
+                &exist;(a<sub>n</sub>),
                 (a<sub>n</sub>)+(a<sub>n</sub>)<sup>&minus;1</sup>
                 = (0<sub>n</sub>)
               </td>
@@ -672,6 +702,174 @@
             </tr>
           </table>
         </section>
+        <p>
+          Commutativity of vector addition:
+          <section>
+            <table>
+              <tr>
+                <td>
+                  (a<sub>n</sub>) <sub>n&in;&naturals;</sub> +
+                  (b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>
+                  = (a<sub>n</sub>+b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+              <td>by definition (QA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = (b<sub>n</sub>+a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>since a<sub>n</sub>, b<sub>n</sub> &in; <var>F</var></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = (b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                  + (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QA)</td>
+              </tr>
+            </table>
+          </section>
+          Associativity of vector addition:
+          <section>
+            <table>
+              <tr>
+                <td>
+                  ((a<sub>n</sub>) <sub>n&in;&naturals;</sub> +
+                    (b<sub>n</sub>) <sub>n&in;&naturals;</sub>)
+                  + (c<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  = (a<sub>n</sub>+b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                  + (c<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QA)</td>
+              </tr>
+              <tr>
+                <td>=
+                  ((a<sub>n</sub>+b<sub>n</sub>)+c<sub>n</sub>)
+                  <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QA)</td>
+              </tr>
+              <tr>
+                <td>=
+                  (a<sub>n</sub>+(b<sub>n</sub>+c<sub>n</sub>))
+                  <sub>n&in;&naturals;</sub>
+                </td>
+                <td>
+                  since a<sub>n</sub>, b<sub>n</sub>, c<sub>n</sub> &in; <var>F</var>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  = (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                  + (b<sub>n</sub>+c<sub>n</sub>)  <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QA)</td>
+              </tr>
+              <tr>
+                <td>=
+                  (a<sub>n</sub>) <sub>n&in;&naturals;</sub> +
+                  (
+                    (b<sub>n</sub>) <sub>n&in;&naturals;</sub> +
+                    (c<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                  )
+                </td>
+                <td>by definition (QA)</td>
+              </tr>
+            </table>
+          </section>
+          Associativity of scalar multiplication:
+          <section>
+            <table>
+              <tr>
+                <td>(tu)(a<sub>n</sub>)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= t(ua<sub>n</sub>)</td>
+              </tr>
+            </table>
+          </section>
+          Existence of vector additive identity:
+          <section>
+            <table>
+              <tr>
+                <td>
+                  &exist;(0<sub>n</sub>) &in; V,
+                  (a<sub>n</sub>)+(0<sub>n</sub>)
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= (a<sub>n</sub>)</td>
+              </tr>
+            </table>
+          </section>
+          Existence of scalar multiplicative identity:
+          <section>
+            <table>
+              <tr>
+                <td>1(a<sub>n</sub>)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= (a<sub>n</sub>)</td>
+              </tr>
+            </table>
+          </section>
+          Existence of vector additive inverse:
+          <section>
+            <table>
+              <tr>
+                <td>
+                  &exist;(a<sub>n</sub>)<sup>&minus;1</sup>,
+                  (a<sub>n</sub>)+(a<sub>n</sub>)<sup>&minus;1</sup>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= (0<sub>n</sub>)</td>
+              </tr>
+            </table>
+          </section>
+          Distributivity over vector addition:
+          <section>
+            <table>
+              <tr>
+                <td>t((a<sub>n</sub>)+(b<sub>n</sub>))</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= t(a<sub>n</sub>)+t(a<sub>n</sub>)</td>
+              </tr>
+            </table>
+          </section>
+          Distributivity over scalar multiplication:
+          <section>
+            <table>
+              <tr>
+                <td>(t+u)(a<sub>n</sub>)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= t(a<sub>n</sub>)+u(a<sub>n</sub>)</td>
+              </tr>
+            </table>
+          </section>
+        </p>
       </p>
     </section>
     <section id="polynomial-set-degree" class="description">
