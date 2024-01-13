@@ -564,6 +564,55 @@
         Proof: similar to the proof of Proposition (functions as a vector space).
       </p>
     </section>
+    <section id="polynomial-set-degree" class="description">
+      <p>
+        <strong>Notation (P<sub>n</sub>(F): a set of all polynomials with degree <var>&le; n</var>)</strong>:
+        Let <var>n</var> &ge; 0, and let P<sub>n</sub>(F) consist of all polynomials in P(F) having degree &le; <var>n</var>.
+      </p>
+    </section>
+    <section id="polynominal-set-degree-as-subspace" class="proposition">
+      <p>
+        <strong>Proposition (P<sub>n</sub>(F) is a subspace)</strong>:
+        P<sub>n</sub>(F) is a subspace of P(F).
+      </p>
+      <p>
+        Proof:
+        We show that P<sub>n</sub>(F) meets the subspace conditions. Let <var>p<sub>1</sub>, p<sub>2</sub></var> &in; P<sub>n</sub>(F), and let <var>c</var> &in; <var>F</var>,
+        <section>
+          <section>
+            <table>
+              <tr>
+                <td>0(x) = 0 &in; P<sub>n</sub>(F)</td>
+                <td>
+                  &because;
+                  the zero polynomial has degree -1 &lt; <var>n</var>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  p<sub>1</sub>+p<sub>2</sub> &in; P<sub>n</sub>(F)
+                </td>
+                <td>
+                  &because; p<sub>1</sub>+p<sub>2</sub>
+                  is another polynomial of degree &le; <var>n</var>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  cp<sub>1</sub> &in; P<sub>n</sub>(F)
+                </td>
+                <td>
+                  &because; cp<sub>1</sub> is another polynomial of degree &le; <var>n</var> &marker;
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section>
+      </p>
+    </section>
+  </section>
+  <section id="sequences">
+    <h2>Sequences</h2>
     <section id="define-sequence" class="definition">
       <p>
         <strong>Definition (sequence)</strong>: (WikiPedia)
@@ -611,7 +660,6 @@
             </tr>
           </table>
         </section>
-        Occasionally denoted (a<sub>n</sub>) if not ambiguous.
       </p>
     </section>
     <section id="sequence-set-as-vector-space" class="proposition">
@@ -653,51 +701,78 @@
             <tr>
               <td></td>
               <th>vector addition</th>
-              <th>scalar multiplication</th>
             </tr>
             <tr>
               <td>commutativity</td>
               <td>
-                (a<sub>n</sub>)+(b<sub>n</sub>)
-                = (b<sub>n</sub>)+(a<sub>n</sub>)
+                (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + (b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                = (b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
               </td>
-              <td></td>
             </tr>
             <tr>
               <td>associativity</td>
               <td>
-                ((a<sub>n</sub>)+(b<sub>n</sub>))+(c<sub>n</sub>)
-                = (a<sub>n</sub>)+((b<sub>n</sub>)+(c<sub>n</sub>))
-              </td>
-              <td>
-                (tu)(a<sub>n</sub>) = t(ua<sub>n</sub>)
+                ((a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + (b<sub>n</sub>) <sub>n&in;&naturals;</sub>)
+                + (c<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                = (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + ((b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + (c<sub>n</sub>) <sub>n&in;&naturals;</sub>)
               </td>
             </tr>
             <tr>
               <td>identity</td>
               <td>
-                &exist;(0<sub>n</sub>) &in; V,
-                (a<sub>n</sub>)+(0<sub>n</sub>) = (a<sub>n</sub>)
+                &exist;(0<sub>n</sub>) <sub>n&in;&naturals;</sub> &in; V,
+                (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + (0<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                = (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
               </td>
-              <td>1(a<sub>n</sub>) = (a<sub>n</sub>)</td>
             </tr>
             <tr>
               <td>inverse</td>
               <td>
-                &exist;(a<sub>n</sub>),
-                (a<sub>n</sub>)+(a<sub>n</sub>)<sup>&minus;1</sup>
-                = (0<sub>n</sub>)
+                &exist;(&minus;a<sub>n</sub>) <sub>n&in;&naturals;</sub> &in; V,
+                (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + (&minus;a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                = (0<sub>n</sub>) <sub>n&in;&naturals;</sub>
               </td>
-              <td></td>
             </tr>
             <tr>
               <td>distributivity</td>
               <td>
-                t((a<sub>n</sub>)+(b<sub>n</sub>)) =
-                t(a<sub>n</sub>)+t(a<sub>n</sub>)
+                t((a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + (b<sub>n</sub>) <sub>n&in;&naturals;</sub>)
+                = t(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + t(b<sub>n</sub>) <sub>n&in;&naturals;</sub>
               </td>
+            </tr>
+            <tr>
+              <td></td>
+              <th>scalar multiplication</th>
+            </tr>
+            <tr>
+              <td>associativity</td>
               <td>
-                (t+u)(a<sub>n</sub>) = t(a<sub>n</sub>)+u(a<sub>n</sub>)
+                (tu)(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                = t(ua<sub>n</sub>) <sub>n&in;&naturals;</sub>
+              </td>
+            </tr>
+            <tr>
+              <td>identity</td>
+              <td>
+                1(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                = (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+              </td>
+            </tr>
+            <tr>
+              <td>distributivity</td>
+              <td>
+                (t+u)(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                = t(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + u(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
               </td>
             </tr>
           </table>
@@ -808,7 +883,7 @@
           Existence of vector additive identity:
           <section>
             <p>
-              Since <var>F</var> is a field, <var>F</var> contains 0, the zero vector. Hence there should exist a sequence in <var>F</var> that is defined by a function &sigma; : &naturals; &longmapsto; 0 &in; <var>F</var> &mdash; for example, sin(n&pi;) : n &in; &naturals; &longmapsto; 0 &in; &reals;, that is
+              Since <var>F</var> is a field, <var>F</var> contains 0, the zero vector. Hence there should exist a sequence in <var>V</var> that is defined by a function &sigma; : &naturals; &longmapsto; 0 &in; <var>F</var> &mdash; for example, sin(n&pi;) : n &in; &naturals; &longmapsto; 0 &in; &reals;, that is
               <section>
                 sin(1&pi;), sin(2&pi;), &hellip; = 0, 0, &hellip;
               </section>
@@ -851,14 +926,15 @@
           Existence of vector additive inverse:
           <section>
             <p>
-              Since <var>F</var> is a field, an element a<sub>n</sub> &in; <var>F</var> has its additive inverse in <var>F</var>, denoted &minus;a<sub>n</sub>. Hence provided a function &sigma;(n) = a<sub>n</sub>, there should exist a function : n &longmapsto; &minus;a<sub>n</sub>. Let write the function as &sigma;<sup>&minus;1</sup>(n), then we have a sequence
+              Provided a function &sigma;(n) = a<sub>n</sub>, the element a<sub>n</sub> has its additive inverse in <var>F</var>, denoted &minus;a<sub>n</sub>, since <var>F</var> is a field. It implies that we can define a function  &rho;(n) = &minus;a<sub>n</sub>. Thus there should exist a sequence in <var>V</var> that is defined by the function &rho;. Let denote (&minus;a<sub>n</sub>) <sub>n&in;&naturals;</sub> the sequence, then
               <section>
                 <table>
                   <tr>
-                    <td>(&minus;a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                    <td>
+                      (&minus;a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                    </td>
                     <td>=
-                      &sigma;<sup>&minus;1</sup>(1),
-                      &sigma;<sup>&minus;1</sup>(2), &hellip;
+                      &rho;(1), &rho;(2), &hellip;
                     </td>
                   </tr>
                   <tr>
@@ -867,25 +943,14 @@
                   </tr>
                 </table>
               </section>
-              Let write the sequence as
-              (a<sub>n</sub>)<sup>&minus;1</sup><sub>n&in;&naturals;</sub>,
-              then there exists
-              (a<sub>n</sub>)<sup>&minus;1</sup><sub>n&in;&naturals;</sub> such that
+              Then (&minus;a<sub>n</sub>) <sub>n&in;&naturals;</sub> is an additive inverse of (a<sub>n</sub>) <sub>n&in;&naturals;</sub>;
               <section>
                 <table>
                   <tr>
                     <td>
                       (a<sub>n</sub>) <sub>n&in;&naturals;</sub> +
-                      (a<sub>n</sub>)<sup>&minus;1</sup><sub>n&in;&naturals;</sub>
-                    </td>
-                    <td>=
-                      (a<sub>n</sub>) <sub>n&in;&naturals;</sub> +
                       (&minus;a<sub>n</sub>) <sub>n&in;&naturals;</sub>
                     </td>
-                    <td>by definition of additive inverse</td>
-                  </tr>
-                  <tr>
-                    <td></td>
                     <td>=
                       (a<sub>n</sub>+(&minus;a<sub>n</sub>))
                       <sub>n&in;&naturals;</sub>
@@ -896,8 +961,7 @@
                     <td></td>
                     <td>= (0<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
                     <td>
-                      since
-                      a<sub>n</sub>, &minus;a<sub>n</sub> &in; <var>F</var>
+                      &minus;a<sub>n</sub> is an additive inverse of a<sub>n</sub>
                     </td>
                   </tr>
                 </table>
@@ -908,12 +972,46 @@
           <section>
             <table>
               <tr>
-                <td>t((a<sub>n</sub>)+(b<sub>n</sub>))</td>
-                <td></td>
+                <td>
+                  t((a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                  + (b<sub>n</sub>) <sub>n&in;&naturals;</sub>)
+                </td>
+                <td>
+                  = t(a<sub>n</sub>+b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QA)</td>
               </tr>
               <tr>
                 <td></td>
-                <td>= t(a<sub>n</sub>)+t(a<sub>n</sub>)</td>
+                <td>
+                  = (t(a<sub>n</sub>+b<sub>n</sub>)) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QM)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = (ta<sub>n</sub>+tb<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>
+                  since a<sub>n</sub>, b<sub>n</sub>, <var>t</var> &in; <var>F</var>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = (ta<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                  + (tb<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = t(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                  + t(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QM)</td>
               </tr>
             </table>
           </section>
@@ -921,62 +1019,40 @@
           <section>
             <table>
               <tr>
-                <td>(t+u)(a<sub>n</sub>)</td>
-                <td></td>
+                <td>(t+u)(a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                <td>
+                  = ((t+u)a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QM)</td>
               </tr>
               <tr>
                 <td></td>
-                <td>= t(a<sub>n</sub>)+u(a<sub>n</sub>)</td>
+                <td>
+                  = (ta<sub>n</sub>+ua<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>
+                  since a<sub>n</sub>, <var>t</var>, <var>u</var> &in; <var>F</var>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = (ta<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                  + (ua<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = t(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                  + u(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QM)</td>
               </tr>
             </table>
           </section>
         </p>
-      </p>
-    </section>
-    <section id="polynomial-set-degree" class="description">
-      <p>
-        <strong>Notation (P<sub>n</sub>(F): a set of all polynomials with degree <var>&le; n</var>)</strong>:
-        Let <var>n</var> &ge; 0, and let P<sub>n</sub>(F) consist of all polynomials in P(F) having degree &le; <var>n</var>.
-      </p>
-    </section>
-    <section id="polynominal-set-degree-as-subspace" class="proposition">
-      <p>
-        <strong>Proposition (P<sub>n</sub>(F) is a subspace)</strong>:
-        P<sub>n</sub>(F) is a subspace of P(F).
-      </p>
-      <p>
-        Proof:
-        We show that P<sub>n</sub>(F) meets the subspace conditions. Let <var>p<sub>1</sub>, p<sub>2</sub></var> &in; P<sub>n</sub>(F), and let <var>c</var> &in; <var>F</var>,
-        <section>
-          <section>
-            <table>
-              <tr>
-                <td>0(x) = 0 &in; P<sub>n</sub>(F)</td>
-                <td>
-                  &because;
-                  the zero polynomial has degree -1 &lt; <var>n</var>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  p<sub>1</sub>+p<sub>2</sub> &in; P<sub>n</sub>(F)
-                </td>
-                <td>
-                  &because; p<sub>1</sub>+p<sub>2</sub>
-                  is another polynomial of degree &le; <var>n</var>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  cp<sub>1</sub> &in; P<sub>n</sub>(F)
-                </td>
-                <td>
-                  &because; cp<sub>1</sub> is another polynomial of degree &le; <var>n</var> &marker;
-                </td>
-              </tr>
-            </table>
-          </section>
-        </section>
       </p>
     </section>
   </section>
