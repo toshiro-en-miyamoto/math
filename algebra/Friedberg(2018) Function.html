@@ -244,7 +244,7 @@
               <td>&ctdot; (FA)</td>
             </tr>
             <tr>
-              <td>(cf)(s) = c(f(s))</td>
+              <td>(cf)(s) = cf(s)</td>
               <td>&ctdot; (FM)</td>
             </tr>
           </table>
@@ -257,6 +257,11 @@
               <td></td>
               <th>vector addition</th>
               <th>scalar multiplication</th>
+            </tr>
+            <tr>
+              <td>closed</td>
+              <td>f+g &in; &#x1D4D5;</td>
+              <td>cf &in; &#x1D4D5;</td>
             </tr>
             <tr>
               <td>commutativity</td>
@@ -275,7 +280,10 @@
             </tr>
             <tr>
               <td>existence of inverse</td>
-              <td>&exist;(f<sup>&minus;1</sup>) &in; &#x1D4D5;, f+(f<sup>&minus;1</sup>) = 0</td>
+              <td>
+                &exist;(f<sup>&minus;1</sup>) &in; &#x1D4D5;,
+                f+(f<sup>&minus;1</sup>) = 0
+              </td>
               <td></td>
             </tr>
             <tr>
@@ -286,6 +294,52 @@
           </table>
         </section>
         <p>
+          Closed vector addition:
+          <section>
+            <table>
+              <tr>
+                <td>(f+g)(s)</td>
+                <td>= f(s)+g(s)</td>
+                <td>by definition (FA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>&in; F</td>
+                <td>&because; f(s), g(s) &in; F</td>
+              </tr>
+              <tr>
+                <td colspan="3">hence</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>f+g &in; &#x1D4D5;</td>
+                <td>&because; f+g : S &longmapsto; F</td>
+              </tr>
+            </table>
+          </section>
+          Closed scalar multiplication:
+          <section>
+            <table>
+              <tr>
+                <td>(cf)(s)</td>
+                <td>= cf(s)</td>
+                <td>by definition (FM)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>&in; F</td>
+                <td>&because; c, f(s) &in; F</td>
+              </tr>
+              <tr>
+                <td colspan="3">hence</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>cf &in; &#x1D4D5;</td>
+                <td>&because; cf : S &longmapsto; F</td>
+              </tr>
+            </table>
+          </section>
           Commutativity of vector addition:
           <section>
             <table>
@@ -297,7 +351,7 @@
               <tr>
                 <td></td>
                 <td>= g(s)+f(s)</td>
-                <td>since f(s), g(s) &in; <var>F</var></td>
+                <td>&because; f(s), g(s) &in; <var>F</var></td>
               </tr>
               <tr>
                 <td></td>
@@ -322,7 +376,7 @@
               <tr>
                 <td></td>
                 <td>= f(s)+(g(s)+h(s))</td>
-                <td>since f(s), g(s), h(s) &in; <var>F</var></td>
+                <td>&because; f(s), g(s), h(s) &in; <var>F</var></td>
               </tr>
               <tr>
                 <td></td>
@@ -342,7 +396,7 @@
               <tr>
                 <td>(ab)f(s)</td>
                 <td>= a(bf(s))</td>
-                <td>since a, b, f(s) &in; <var>F</var></td>
+                <td>&because; a, b, f(s) &in; <var>F</var></td>
               </tr>
             </table>
           </section>
@@ -360,7 +414,7 @@
               <tr>
                 <td></td>
                 <td>= f(s)+0</td>
-                <td>since 0(s) = 0</td>
+                <td>&because; 0(s) = 0</td>
               </tr>
               <tr>
                 <td></td>
@@ -398,12 +452,12 @@
               <tr>
                 <td></td>
                 <td>= f(s)+(&minus;f(s))</td>
-                <td>since f<sup>&minus;1</sup>(s) = &minus;f(s)</td>
+                <td>&because; f<sup>&minus;1</sup>(s) = &minus;f(s)</td>
               </tr>
               <tr>
                 <td></td>
                 <td>= 0</td>
-                <td>since &minus;f(s) is an additive inverse of f(s)</td>
+                <td>&because; &minus;f(s) is an additive inverse of f(s)</td>
               </tr>
             </table>
           </section>
@@ -423,7 +477,7 @@
               <tr>
                 <td></td>
                 <td>= af(s)+ag(s)</td>
-                <td>since a, f(s), g(s) &in; <var>F</var></td>
+                <td>&because; a, f(s), g(s) &in; <var>F</var></td>
               </tr>
             </table>
           </section>
@@ -438,7 +492,7 @@
               <tr>
                 <td></td>
                 <td>= af(s)+bf(s)</td>
-                <td>since a, b, f(s) &in; <var>F</var></td>
+                <td>&because; a, b, f(s) &in; <var>F</var></td>
               </tr>
             </table>
           </section>
@@ -469,6 +523,7 @@
             is a polynomial with a<sub>n</sub>, a<sub>n&minus;1</sub>, &hellip;, a<sub>1</sub>, a<sub>0</sub> = 0
           </li>
           <li>that is f(x) = 0</li>
+          <li>denoted f<sub>0</sub>, that is f<sub>0</sub>(x) = 0</li>
           <li>its degree is defined to be &minus;1</li>
         </ul>
       </p>
@@ -515,13 +570,9 @@
         <section>
           <table>
             <tr>
-              <td>
-                a polynomial with coefficients from <var>F</var>
-              </td>
+              <td>a polynomial with coefficients from <var>F</var></td>
               <td>as</td>
-              <td>
-                a function: F &longmapsto; F
-              </td>
+              <td>a function: F &longmapsto; F</td>
             </tr>
           </table>
         </section>
@@ -572,7 +623,9 @@
     </section>
     <section id="polynominal-set-degree-as-subspace" class="proposition">
       <p>
-        <strong>Proposition (P<sub>n</sub>(F) is a subspace)</strong>:
+        <strong>
+          Proposition (example 1.3.1: P<sub>n</sub>(F) is a subspace)
+        </strong>:
         P<sub>n</sub>(F) is a subspace of P(F).
       </p>
       <p>
@@ -582,10 +635,9 @@
           <section>
             <table>
               <tr>
-                <td>0(x) = 0 &in; P<sub>n</sub>(F)</td>
+                <td>f<sub>0</sub> &in; P<sub>n</sub>(F)</td>
                 <td>
-                  &because;
-                  the zero polynomial has degree -1 &lt; <var>n</var>
+                  &because; the zero polynomial f<sub>0</sub> has degree -1 &lt; <var>n</var>
                 </td>
               </tr>
               <tr>
@@ -593,8 +645,7 @@
                   p<sub>1</sub>+p<sub>2</sub> &in; P<sub>n</sub>(F)
                 </td>
                 <td>
-                  &because; p<sub>1</sub>+p<sub>2</sub>
-                  is another polynomial of degree &le; <var>n</var>
+                  &because; p<sub>1</sub>+p<sub>2</sub> is another polynomial of degree &le; <var>n</var>
                 </td>
               </tr>
               <tr>
@@ -703,6 +754,14 @@
               <th>vector addition</th>
             </tr>
             <tr>
+              <td>closed</td>
+              <td>
+                (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                + (b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                &in; V
+              </td>
+            </tr>
+            <tr>
               <td>commutativity</td>
               <td>
                 (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
@@ -754,6 +813,10 @@
               <th>scalar multiplication</th>
             </tr>
             <tr>
+              <td>closed</td>
+              <td>t(a<sub>n</sub>) <sub>n&in;&naturals;</sub> &in; V</td>
+            </tr>
+            <tr>
               <td>associativity</td>
               <td>
                 (tu)(a<sub>n</sub>) <sub>n&in;&naturals;</sub>
@@ -778,6 +841,41 @@
           </table>
         </section>
         <p>
+          Closed vector addition:
+          <section>
+            <table>
+              <tr>
+                <td>
+                  (a<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                  + (b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>
+                  = (a<sub>n</sub>+b<sub>n</sub>) <sub>n&in;&naturals;</sub>
+                </td>
+                <td>by definition (QA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>&in; V</td>
+                <td>&because; a<sub>n</sub>, b<sub>n</sub> &in; F</td>
+              </tr>
+            </table>
+          </section>
+          Closed scalar multiplication:
+          <section>
+            <table>
+              <tr>
+                <td>t(a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                <td>= (ta<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
+                <td>by definition (QM)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>&in; V</td>
+                <td>&because; a<sub>n</sub>, <var>t</var> &in; F</td>
+              </tr>
+            </table>
+          </section>
           Commutativity of vector addition:
           <section>
             <table>
@@ -796,7 +894,9 @@
                 <td>
                   = (b<sub>n</sub>+a<sub>n</sub>) <sub>n&in;&naturals;</sub>
                 </td>
-                <td>since a<sub>n</sub>, b<sub>n</sub> &in; <var>F</var></td>
+                <td>
+                  &because; a<sub>n</sub>, b<sub>n</sub> &in; <var>F</var>
+                </td>
               </tr>
               <tr>
                 <td></td>
@@ -838,7 +938,8 @@
                   <sub>n&in;&naturals;</sub>
                 </td>
                 <td>
-                  since a<sub>n</sub>, b<sub>n</sub>, c<sub>n</sub> &in; <var>F</var>
+                  &because;
+                  a<sub>n</sub>, b<sub>n</sub>, c<sub>n</sub> &in; <var>F</var>
                 </td>
               </tr>
               <tr>
@@ -870,7 +971,8 @@
                 <td></td>
                 <td>= (t(ua<sub>n</sub>)) <sub>n&in;&naturals;</sub></td>
                 <td>
-                  since <var>t</var>, <var>u</var>, a<sub>n</sub> &in; <var>F</var>
+                  &because;
+                  <var>t</var>, <var>u</var>, a<sub>n</sub> &in; <var>F</var>
                 </td>
               </tr>
               <tr>
@@ -919,7 +1021,7 @@
               <tr>
                 <td></td>
                 <td>= (a<sub>n</sub>) <sub>n&in;&naturals;</sub></td>
-                <td>since a<sub>n</sub> &in; <var>F</var></td>
+                <td>&because; a<sub>n</sub> &in; <var>F</var></td>
               </tr>
             </table>
           </section>
@@ -994,7 +1096,8 @@
                   = (ta<sub>n</sub>+tb<sub>n</sub>) <sub>n&in;&naturals;</sub>
                 </td>
                 <td>
-                  since a<sub>n</sub>, b<sub>n</sub>, <var>t</var> &in; <var>F</var>
+                  &because;
+                  a<sub>n</sub>, b<sub>n</sub>, <var>t</var> &in; <var>F</var>
                 </td>
               </tr>
               <tr>
@@ -1031,7 +1134,8 @@
                   = (ta<sub>n</sub>+ua<sub>n</sub>) <sub>n&in;&naturals;</sub>
                 </td>
                 <td>
-                  since a<sub>n</sub>, <var>t</var>, <var>u</var> &in; <var>F</var>
+                  &because;
+                  a<sub>n</sub>, <var>t</var>, <var>u</var> &in; <var>F</var>
                 </td>
               </tr>
               <tr>
