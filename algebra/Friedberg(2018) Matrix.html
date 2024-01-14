@@ -544,10 +544,6 @@
       is an element of <var>F</var>.
       <ul>
         <li>
-          diagonal entries:
-          <var>a<sub>ij</sub> with <var>i</var> = <var>j</var>
-        </li>
-        <li>
           <b>i</b>th row:
           <var>a<sub>i1</sub>, a<sub>i2</sub>, &hellip;, a<sub>in</sub></var>
         </li>
@@ -557,6 +553,10 @@
         </li>
         <li>
           zero matrix: denoted 0, all of its entries are 0
+        </li>
+        <li>
+          diagonal entries:
+          <var>a<sub>ij</sub> with <var>i</var> = <var>j</var>
         </li>
         <li>
           square matrix [正方行列]:
@@ -765,31 +765,30 @@
           </mrow>
         </math>
       </section>
+    </section>
+    <section id="symmetric-matrix-as-subspace" class="proposition">
+      <strong>Proposition (set of symmetric matrices as subspace)</strong>:
       The set <var>W</var> of all symmetric matrices in M<sub>n&times;n</sub>(F) is a subspace of M<sub>n&times;n</sub>(F), because the subspace conditions hold for <var>W</var>. Let <var>A, B</var> &in; <var>W</var> and <var>a</var> &in; <var>F</var>,
       <section>
         <table>
           <tr>
             <td>0 &in; W</td>
             <td>
-              &because; 0<sup>t</sup> = 0
+              &because; 0 = 0<sup>t</sup> &in; W
             </td>
           </tr>
           <tr>
             <td>A+B &in; W</td>
             <td>
-              &because;
-              (A+B)<sup>t</sup>
-              = A<sup>t</sup>+B<sup>t</sup>
-              = A+B
+              &because; A+B = A<sup>t</sup>+B<sup>t</sup>
+              = (A+B)<sup>t</sup> &in; W
             </td>
           </tr>
           <tr>
             <td>aA &in; W</td>
             <td>
-              &because;
-              (aA)<sup>t</sup>
-              = aA<sup>t</sup>
-              = aA
+              &because; aA = aA<sup>t</sup>
+              = (aA)<sup>t</sup> &in; W
             </td>
           </tr>
         </table>
