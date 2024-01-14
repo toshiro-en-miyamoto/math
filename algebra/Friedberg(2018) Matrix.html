@@ -92,26 +92,6 @@
               u &in; F<sup>n</sup>
             </td>
           </tr>
-          <tr>
-            <td>
-              let <var>v</var> =
-              (v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>),
-            </td>
-            <td>then</td>
-            <td>
-              v &in; F<sup>n</sup>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              let <var>w</var> =
-              (w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>n</sub>),
-            </td>
-            <td>then</td>
-            <td>
-              w &in; F<sup>n</sup>
-            </td>
-          </tr>
         </table>
       </section>
     </p>
@@ -119,7 +99,7 @@
   <section id="fn-is-vector-space" class="proposition">
     <p>
       <strong>Proposition (example 1.2.1: F<sup>n</sup> is a vector space)</strong>:
-      F<sup>n</sup> is a vector space over <var>F</var> with the operations of coordinative addition and scalar multiplication; for <var>a</var> &in; <var>F</var>,
+      F<sup>n</sup> is a vector space over <var>F</var> with the operations of vector addition and scalar multiplication; for <var>u</var>, <var>v</var> &in; F<sup>n</sup> and <var>a</var> &in; <var>F</var>,
       <section>
         <table>
           <tr>
@@ -128,23 +108,28 @@
               (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
               &hellip;, u<sub>n</sub>+v<sub>n</sub>)
             </td>
-            <td>&ctdot; (A)</td>
+            <td>&ctdot; (TA)</td>
           </tr>
           <tr>
             <td>
               au = (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)
             </td>
-            <td>&ctdot; (M)</td>
+            <td>&ctdot; (TM)</td>
           </tr>
         </table>
       </section>
-      Proof: We show that n-tuples <var>u</var>, <var>v</var> and <var>w</var> satisfy vector space axioms. Let <var>b</var> &in; <var>F</var>.
+      Proof: We show that n-tuples <var>u</var>, <var>v</var> and <var>w</var> satisfy vector space axioms. Let <var>w</var> &in; F<sup>n</sup> and <var>b</var> &in; <var>F</var>.
       <section>
         <table>
           <tr>
             <th></th>
-            <th>coordinative addition</th>
+            <th>vector addition</th>
             <th>scalar multiplication</th>
+          </tr>
+          <tr>
+            <td>closed</td>
+            <td>u+v &in; F<sup>n</sup></td>
+            <td>au &in; F<sup>n</sup></td>
           </tr>
           <tr>
             <td>commutativity</td>
@@ -172,272 +157,325 @@
             <td>(a+b)u = au+bu</td>
           </tr>
         </table>
-        <p>
-          Commutativity of coordinative addition:
-          <section>
-            <table>
-              <tr>
-                <td>u+v</td>
-                <td>=
-                  (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
-                  &hellip;, u<sub>n</sub>+v<sub>n</sub>)
-                </td>
-                <td>by definition (A)</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>=
-                  (v<sub>1</sub>+u<sub>1</sub>, v<sub>2</sub>+u<sub>2</sub>,
-                  &hellip;, v<sub>n</sub>+u<sub>n</sub>)
-                </td>
-                <td>commutativity of addition in <var>F</var></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>= v+u</td>
-                <td>by definition (A)</td>
-              </tr>
-            </table>
-          </section>
-          Associativity of coordinative addition:
-          <section>
-            <table>
-              <tr>
-                <td>(u+v)+w</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>=
-                  (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
-                  &hellip;, u<sub>n</sub>+v<sub>n</sub>) + w
-                </td>
-                <td>by definition (A)</td>
-              </tr>
-              <tr>
-                <td>=
-                  ((u<sub>1</sub>+v<sub>1</sub>)+w<sub>1</sub>,
-                  (u<sub>2</sub>+v<sub>2</sub>)+w<sub>2</sub>,
-                  &hellip;, (u<sub>n</sub>+v<sub>n</sub>)+w<sub>n</sub>)
-                </td>
-                <td>by definition (A)</td>
-              </tr>
-              <tr>
-                <td>=
-                  (u<sub>1</sub>+(v<sub>1</sub>+w<sub>1</sub>),
-                  u<sub>2</sub>+(v<sub>2</sub>+w<sub>2</sub>),
-                  &hellip;, u<sub>n</sub>+(v<sub>n</sub>+w<sub>n</sub>))
-                </td>
-                <td>associativity of addition in <var>F</var></td>
-              </tr>
-              <tr>
-                <td>= u+(v+w)</td>
-                <td>by definition (A)</td>
-              </tr>
-            </table>
-          </section>
-          Associativity of scalar multiplication:
-          <section>
-            <table>
-              <tr>
-                <td>(ab)u</td>
-                <td>=
-                  ((ab)u<sub>1</sub>, (ab)u<sub>2</sub>,
-                  &hellip;, (ab)u<sub>n</sub>)
-                </td>
-                <td>by definition (M)</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>=
-                  (a(bu<sub>1</sub>), a(bu<sub>2</sub>),
-                  &hellip;, a(bu<sub>n</sub>))
-                </td>
-                <td>associativity of multiplication in <var>F</var></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>=
-                  a(bu<sub>1</sub>, bu<sub>2</sub>,
-                  &hellip;, bu<sub>n</sub>)
-                </td>
-                <td>by definition (M)</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>= a(bu)</td>
-                <td>by definition (M)</td>
-              </tr>
-            </table>
-          </section>
-          Existence of additive identity:
-          <section>
-            <table>
-              <tr>
-                <td colspan="3">
-                  Let 0 = (0, 0, &hellip;, 0) &in; F<sup>n</sup>, then
-                </td>
-              </tr>
-              <tr>
-                <td>u+0</td>
-                <td>=
-                  (u<sub>1</sub>+0, u<sub>2</sub>+0, &hellip;, u<sub>n</sub>+0)
-                </td>
-                <td>
-                  by definition (A)
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>=
-                  (u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>)
-                </td>
-                <td>
-                  0 is additive identity in <var>F</var>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>= u</td>
-                <td>by definition</td>
-              </tr>
-            </table>
-          </section>
-          Existence of multiplicative identity:
-          <section>
-            <table>
-              <tr>
-                <td>1u</td>
-                <td>=
-                  (1u<sub>1</sub>, 1u<sub>2</sub>, &hellip;, 1u<sub>n</sub>)
-                </td>
-                <td>by definition (M)</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>=
-                  (u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>)
-                </td>
-                <td>
-                  1 is multiplicative identity in <var>F</var>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>= u</td>
-                <td>by definition</td>
-              </tr>
-            </table>
-          </section>
-          Existence of additive inverse:
-          <section>
-            <table>
-              <tr>
-                <td colspan="3">
-                  Let &minus;u =
-                  (&minus;u<sub>1</sub>, &minus;u<sub>2</sub>,
-                  &hellip;, &minus;u<sub>n</sub>), then
-                </td>
-              </tr>
-              <tr>
-                <td>u+(&minus;u)</td>
-                <td>
-                  = (u<sub>1</sub>+(&minus;u<sub>1</sub>), 
-                  u<sub>2</sub>+(&minus;u<sub>2</sub>), &hellip;,
-                  u<sub>n</sub>+(&minus;u<sub>n</sub>))
-                </td>
-                <td>by definition (A)</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>= (0, 0, &hellip;, 0)</td>
-                <td>
-                  u<sub>i</sub>+(&minus;u<sub>i</sub>) = 0 in <var>F</var>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>= 0</td>
-                <td>by definition</td>
-              </tr>
-            </table>
-          </section>
-          Distributivity over tuple addition:
-          <section>
-            <table>
-              <tr>
-                <td>a(u+v)</td>
-                <td>=
-                  a(u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
-                  &hellip;, u<sub>n</sub>+v<sub>n</sub>)
-                </td>
-                <td>by definition (A)</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>=
-                  (a(u<sub>1</sub>+v<sub>1</sub>), a(u<sub>2</sub>+v<sub>2</sub>),
-                  &hellip;, a(u<sub>n</sub>+v<sub>n</sub>))
-                </td>
-                <td>by definition (M)</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>=
-                  (au<sub>1</sub>+av<sub>1</sub>, au<sub>2</sub>+av<sub>2</sub>,
-                  &hellip;, au<sub>n</sub>+av<sub>n</sub>)
-                </td>
-                <td>distributivity in <var>F</var></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>
-                  = (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)
-                  + (av<sub>1</sub>, av<sub>2</sub>, &hellip;, av<sub>n</sub>)
-                </td>
-                <td>by definition (A)</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>= au+av</td>
-                <td>by definition (M)</td>
-              </tr>
-            </table>
-          </section>
-          Distributivity over scalar addition:
-          <section>
-            <table>
-              <tr>
-                <td>(a+b)u</td>
-                <td>=
-                  ((a+b)u<sub>1</sub>, (a+b)u<sub>2</sub>,
-                  &hellip;, (a+b)u<sub>n</sub>)
-                </td>
-                <td>by definition (M)</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>=
-                  (au<sub>1</sub>+bu<sub>1</sub>, au<sub>2</sub>+bu<sub>2</sub>,
-                  &hellip;, au<sub>n</sub>+bu<sub>n</sub>)
-                </td>
-                <td>distributivity in <var>F</var></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>
-                  = (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)
-                  + (bu<sub>1</sub>, bu<sub>2</sub>, &hellip;, bu<sub>n</sub>)
-                </td>
-                <td>by definition (A)</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>= au+bu</td>
-                <td>by definition (M)</td>
-              </tr>
-            </table>
-          </section>
-        </p>
+      </section>
+    </p>
+    <p>
+      Closed vector addition:
+      <section>
+        <table>
+          <tr>
+            <td>u+v</td>
+            <td>
+              = (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+              &hellip;, u<sub>n</sub>+v<sub>n</sub>)
+            </td>
+            <td>by definition (TA)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>&in; F<sup>n</sup></td>
+            <td>
+              &because; u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+              &hellip;, u<sub>n</sub>+v<sub>n</sub> &in; <var>F</var>
+            </td>
+          </tr>
+        </table>
+      </section>
+      Closed scalar multiplication:
+      <section>
+        <table>
+          <tr>
+            <td>au</td>
+            <td>= (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)</td>
+            <td>by definition (TM)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>&in; F<sup>n</sup></td>
+            <td>
+              &because; au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>
+              &in; <var>F</var>
+            </td>
+          </tr>
+        </table>
+      </section>
+      Commutativity of vector addition:
+      <section>
+        <table>
+          <tr>
+            <td>u+v</td>
+            <td>=
+              (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+              &hellip;, u<sub>n</sub>+v<sub>n</sub>)
+            </td>
+            <td>by definition (TA)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>=
+              (v<sub>1</sub>+u<sub>1</sub>, v<sub>2</sub>+u<sub>2</sub>,
+              &hellip;, v<sub>n</sub>+u<sub>n</sub>)
+            </td>
+            <td>
+              &because; u<sub>i</sub>, v<sub>i</sub> &in; <var>F</var>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>= v+u</td>
+            <td>by definition (TA)</td>
+          </tr>
+        </table>
+      </section>
+      Associativity of vector addition:
+      <section>
+        <table>
+          <tr>
+            <td>(u+v)+w</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>=
+              (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+              &hellip;, u<sub>n</sub>+v<sub>n</sub>) + w
+            </td>
+            <td>by definition (TA)</td>
+          </tr>
+          <tr>
+            <td>=
+              ((u<sub>1</sub>+v<sub>1</sub>)+w<sub>1</sub>,
+              (u<sub>2</sub>+v<sub>2</sub>)+w<sub>2</sub>,
+              &hellip;, (u<sub>n</sub>+v<sub>n</sub>)+w<sub>n</sub>)
+            </td>
+            <td>by definition (TA)</td>
+          </tr>
+          <tr>
+            <td>=
+              (u<sub>1</sub>+(v<sub>1</sub>+w<sub>1</sub>),
+              u<sub>2</sub>+(v<sub>2</sub>+w<sub>2</sub>),
+              &hellip;, u<sub>n</sub>+(v<sub>n</sub>+w<sub>n</sub>))
+            </td>
+            <td>
+              &because; u<sub>i</sub>, v<sub>i</sub>, w<sub>i</sub>
+              &in; <var>F</var>
+            </td>
+          </tr>
+          <tr>
+            <td>= u+(v+w)</td>
+            <td>by definition (TA)</td>
+          </tr>
+        </table>
+      </section>
+      Associativity of scalar multiplication:
+      <section>
+        <table>
+          <tr>
+            <td>(ab)u</td>
+            <td>=
+              ((ab)u<sub>1</sub>, (ab)u<sub>2</sub>,
+              &hellip;, (ab)u<sub>n</sub>)
+            </td>
+            <td>by definition (TM)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>=
+              (a(bu<sub>1</sub>), a(bu<sub>2</sub>),
+              &hellip;, a(bu<sub>n</sub>))
+            </td>
+            <td>
+              &because; u<sub>i</sub>, <var>a</var>, <var>b</var> &in; <var>F</var>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>=
+              a(bu<sub>1</sub>, bu<sub>2</sub>,
+              &hellip;, bu<sub>n</sub>)
+            </td>
+            <td>by definition (TM)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>= a(bu)</td>
+            <td>by definition (TM)</td>
+          </tr>
+        </table>
+      </section>
+      Existence of additive identity:
+      <section>
+        <table>
+          <tr>
+            <td colspan="3">
+              Let 0 = (0, 0, &hellip;, 0) &in; F<sup>n</sup>, then
+            </td>
+          </tr>
+          <tr>
+            <td>u+0</td>
+            <td>=
+              (u<sub>1</sub>+0, u<sub>2</sub>+0, &hellip;, u<sub>n</sub>+0)
+            </td>
+            <td>
+              by definition (TA)
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>=
+              (u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>)
+            </td>
+            <td>
+              &because; 0 is additive identity in <var>F</var>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>= u</td>
+            <td>by definition</td>
+          </tr>
+        </table>
+      </section>
+      Existence of multiplicative identity:
+      <section>
+        <table>
+          <tr>
+            <td>1u</td>
+            <td>=
+              (1u<sub>1</sub>, 1u<sub>2</sub>, &hellip;, 1u<sub>n</sub>)
+            </td>
+            <td>by definition (TM)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>=
+              (u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>)
+            </td>
+            <td>
+              &because; 1 is multiplicative identity in <var>F</var>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>= u</td>
+            <td>by definition</td>
+          </tr>
+        </table>
+      </section>
+      Existence of additive inverse:
+      <section>
+        <table>
+          <tr>
+            <td colspan="3">
+              Let &minus;u =
+              (&minus;u<sub>1</sub>, &minus;u<sub>2</sub>,
+              &hellip;, &minus;u<sub>n</sub>), then
+            </td>
+          </tr>
+          <tr>
+            <td>u+(&minus;u)</td>
+            <td>
+              = (u<sub>1</sub>+(&minus;u<sub>1</sub>), 
+              u<sub>2</sub>+(&minus;u<sub>2</sub>), &hellip;,
+              u<sub>n</sub>+(&minus;u<sub>n</sub>))
+            </td>
+            <td>by definition (TA)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>= (0, 0, &hellip;, 0)</td>
+            <td>
+              &because; &minus;u<sub>i</sub> is an additive identity of
+              u<sub>i</sub> in <var>F</var>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>= 0</td>
+            <td>by definition</td>
+          </tr>
+        </table>
+      </section>
+      Distributivity over tuple addition:
+      <section>
+        <table>
+          <tr>
+            <td>a(u+v)</td>
+            <td>=
+              a(u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+              &hellip;, u<sub>n</sub>+v<sub>n</sub>)
+            </td>
+            <td>by definition (TA)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>=
+              (a(u<sub>1</sub>+v<sub>1</sub>), a(u<sub>2</sub>+v<sub>2</sub>),
+              &hellip;, a(u<sub>n</sub>+v<sub>n</sub>))
+            </td>
+            <td>by definition (TM)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>=
+              (au<sub>1</sub>+av<sub>1</sub>, au<sub>2</sub>+av<sub>2</sub>,
+              &hellip;, au<sub>n</sub>+av<sub>n</sub>)
+            </td>
+            <td>
+              &because; u<sub>i</sub>, v<sub>i</sub>, <var>a</var>
+              &in; <var>F</var>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              = (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)
+              + (av<sub>1</sub>, av<sub>2</sub>, &hellip;, av<sub>n</sub>)
+            </td>
+            <td>by definition (TA)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>= au+av</td>
+            <td>by definition (TM)</td>
+          </tr>
+        </table>
+      </section>
+      Distributivity over scalar addition:
+      <section>
+        <table>
+          <tr>
+            <td>(a+b)u</td>
+            <td>=
+              ((a+b)u<sub>1</sub>, (a+b)u<sub>2</sub>,
+              &hellip;, (a+b)u<sub>n</sub>)
+            </td>
+            <td>by definition (TM)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>=
+              (au<sub>1</sub>+bu<sub>1</sub>, au<sub>2</sub>+bu<sub>2</sub>,
+              &hellip;, au<sub>n</sub>+bu<sub>n</sub>)
+            </td>
+            <td>
+              &because; u<sub>i</sub>, <var>a</var>, <var>b</var>
+              &in; <var>F</var>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              = (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)
+              + (bu<sub>1</sub>, bu<sub>2</sub>, &hellip;, bu<sub>n</sub>)
+            </td>
+            <td>by definition (TA)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>= au+bu</td>
+            <td>by definition (TM)</td>
+          </tr>
+        </table>
       </section>
     </p>
   </section>
