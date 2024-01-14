@@ -741,25 +741,22 @@
         <section>
           <table>
             <tr>
-              <td colspan="2"></td>
+              <td></td>
               <td>any subspace must</td>
             </tr>
             <tr>
-              <td>1:</td>
               <td>0 &in; W</td>
               <td>
                 contain the zero vector
               </td>
             </tr>
             <tr>
-              <td>2:</td>
               <td>x+y &in; W</td>
               <td>
                 be closed under vector addition
               </td>
             </tr>
             <tr>
-              <td>3:</td>
               <td>cx &in; W</td>
               <td>
                 be closed under scalar multiplication
@@ -771,97 +768,93 @@
       <p>
         Proof:
         If <var>W</var> is a subspace of <var>V</var>, then
+        <ul>
+          <li>
+            Let 0&prime; be an additive identity in <var>W</var> such that <var>x</var>+0&prime; = <var>x</var> for each <var>x</var> &in; <var>W</var>. But also <var>x</var>+0 = <var>x</var> in the vector space <var>V</var>, thus 0&prime; = 0 by the cancellation law for vector addition. Hence 0 &in; <var>W</var>.
+          </li>
+          <li>
+            By definition of the subspace, <var>W</var> is a vector space with addition and scalar multiplication defined on <var>V</var>. Hence <var>W</var> is closed under addition and scalar multiplication.
+          </li>
+        </ul>
+        Conversely, if the three conditions hold, then the vectors in <var>W</var> need to follow the definition of the vector space.
         <section>
-          <ul>
-            <li>
-              Let 0&prime; be an additive identity in <var>W</var> such that <var>x</var>+0&prime; = <var>x</var> for each <var>x</var> &in; <var>W</var>. But also <var>x</var>+0 = <var>x</var> in the vector space <var>V</var>, thus 0&prime; = 0 by the cancellation law for vector addition. Hence 0 &in; <var>W</var>.
-            </li>
-            <li>
-              By definition of the subspace, <var>W</var> is a vector space with addition and scalar multiplication defined on <var>V</var>. Hence <var>W</var> is closed under addition and scalar multiplication.
-            </li>
-          </ul>
-          <p>
-            Conversely, if the three conditions hold, then the vectors in <var>W</var> need to follow the definition of the vector space.
-            <section>
-              <table>
-                <tr>
-                  <th></th>
-                  <th>vector addition</th>
-                  <th>scalar multiplication</th>
-                </tr>
-                <tr>
-                  <td>closed operations</td>
-                  <td>x+y &in; W</td>
-                  <td>cx &in; W</td>
-                </tr>
-                <tr>
-                  <td>commutativity</td>
-                  <td>x+y = y+x</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>associativity</td>
-                  <td>(x+y)+z = x+(y+z)</td>
-                  <td>(ab)x = a(bx)</td>
-                </tr>
-                <tr>
-                  <td>existence of identity</td>
-                  <td>&exist;0 &in; W, x+0 = x</td>
-                  <td>1x = x</td>
-                </tr>
-                <tr>
-                  <td>existence of inverse</td>
-                  <td>&exist;(&minus;x) &in; W, x+(&minus;x) = 0</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>distributivity</td>
-                  <td>a(x+y) = ax+ay</td>
-                  <td>(a+b)x=ax+bx</td>
-                </tr>
-              </table>
-            </section>
-            The properties except for
-            <section>
-              <table>
-                <tr>
-                  <td>closed under vector addition</td>
-                  <td>x+y &in; W</td>
-                </tr>
-                <tr>
-                  <td>closed under scalar multiplication</td>
-                  <td>cx &in; W</td>
-                </tr>
-                <tr>
-                  <td>existence of the additive identity</td>
-                  <td>&exist;0 &in; W, x+0 = x</td>
-                </tr>
-                <tr>
-                  <td>existence of the additive inverse</td>
-                  <td>&exist;(&minus;x) &in; W, x+(&minus;x) = 0</td>
-                </tr>
-              </table>
-            </section>
-            hold for all vectors in the vector space. Since a subspace is a vector space, these properties automatically hold for the vectors in any subspace. But the hypothesis covers the first three properties, it suffices to prove that the additive inverse of each vector in <var>W</var> lies in <var>W</var>. If <var>x</var> &in; <var>W</var>, then
-            <section>
-              <table>
-                <tr>
-                  <td>(&minus;1)x &in; W</td>
-                  <td>
-                    by the third condition <var>cx</var> &in; <var>W</var>
-                  </td>
-                </tr>
-                <tr>
-                  <td>(&minus;1)x = &minus;x</td>
-                  <td>
-                    by Theorem (scalar multiplications in vector spaces)
-                  </td>
-                </tr>
-              </table>
-            </section>
-            Thus &minus;x &in; <var>W</var>, therefore <var>W</var> is a subspace of <var>V</var>. &marker;
-          </p>
+          <table>
+            <tr>
+              <th></th>
+              <th>vector addition</th>
+              <th>scalar multiplication</th>
+            </tr>
+            <tr>
+              <td>closed operations</td>
+              <td>x+y &in; W</td>
+              <td>cx &in; W</td>
+            </tr>
+            <tr>
+              <td>commutativity</td>
+              <td>x+y = y+x</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>associativity</td>
+              <td>(x+y)+z = x+(y+z)</td>
+              <td>(ab)x = a(bx)</td>
+            </tr>
+            <tr>
+              <td>existence of identity</td>
+              <td>&exist;0 &in; W, x+0 = x</td>
+              <td>1x = x</td>
+            </tr>
+            <tr>
+              <td>existence of inverse</td>
+              <td>&exist;(&minus;x) &in; W, x+(&minus;x) = 0</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>distributivity</td>
+              <td>a(x+y) = ax+ay</td>
+              <td>(a+b)x=ax+bx</td>
+            </tr>
+          </table>
         </section>
+        The properties except for
+        <section>
+          <table>
+            <tr>
+              <td>closed under vector addition</td>
+              <td>x+y &in; W</td>
+            </tr>
+            <tr>
+              <td>closed under scalar multiplication</td>
+              <td>cx &in; W</td>
+            </tr>
+            <tr>
+              <td>existence of the additive identity</td>
+              <td>&exist;0 &in; W, x+0 = x</td>
+            </tr>
+            <tr>
+              <td>existence of the additive inverse</td>
+              <td>&exist;(&minus;x) &in; W, x+(&minus;x) = 0</td>
+            </tr>
+          </table>
+        </section>
+        hold for all vectors in the vector space. Since a subspace is a vector space, these properties automatically hold for the vectors in any subspace. But the hypothesis covers the first three properties, it suffices to prove that the additive inverse of each vector in <var>W</var> lies in <var>W</var>. If <var>x</var> &in; <var>W</var>, then
+        <section>
+          <table>
+            <tr>
+              <td>(&minus;1)x &in; W</td>
+              <td>
+                by the third condition <var>cx</var> &in; <var>W</var>
+              </td>
+            </tr>
+            <tr>
+              <td>(&minus;1)x = &minus;x</td>
+              <td>
+                by Theorem (scalar multiplications in vector spaces)
+              </td>
+            </tr>
+          </table>
+        </section>
+        Thus &minus;x &in; <var>W</var>, therefore <var>W</var> is a subspace of <var>V</var>. &marker;
       </p>
     </section>
     <section id="vector-space-is-subspace" class="proposition">

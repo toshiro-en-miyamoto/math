@@ -221,7 +221,7 @@
     <section id="function-set" class="description">
       <p>
         <strong>
-          Notation (&#x1D4D5;(S, F), a set of functions)
+          Notation (&#x1D4D5;(S, F): a set of functions)
         </strong>:
         Let <var>S</var> be any nonempty set and <var>F</var> be any field, and let &#x1D4D5;(S, F) denote the set of all functions from <var>S</var> to <var>F</var>. 
         <section>
@@ -235,7 +235,7 @@
     </section>
     <section id="function-set-as-vector-space" class="proposition">
       <p>
-        <strong>Proposition (example 1.2.3: functions as a vector space)</strong>:
+        <strong>Proposition (example 1.2.3: function sets as vector space)</strong>:
         The set &#x1D4D5;(S, F) is a vector space with the operations of addition and scalar multiplication, for <var>f</var>, <var>g</var> &in; &#x1D4D5;(S, F) and <var>c</var> &in; <var>F</var> by, for each <var>s</var> &in; <var>S</var>
         <section>
           <table>
@@ -403,7 +403,7 @@
           Existence of additive identity:
           <section>
             <p>
-              Since <var>F</var> is a field, <var>F</var> contains 0, the zero vector. Hence &#x1D4D5; should contain a function that maps an element <var>s</var> &in; <var>S</var> to 0. Let 0(s) denote the function such that 0(s) = 0.
+              Since <var>F</var> is a field, <var>F</var> contains 0, the zero vector. Hence &#x1D4D5; should contain a function that maps an element <var>s</var> &in; <var>S</var> to 0. Let 0(s) denote a function such that 0(s) = 0 for all <var>s</var> &in; <var>S</var>.
             </p>
             <table>
               <tr>
@@ -497,6 +497,74 @@
             </table>
           </section>
         </p>
+      </p>
+    </section>
+    <section id="continuous-real-valued-function" class="definition">
+      <p>
+        <strong>Definition (continuous real-valued function)</strong>: (Wikipedia)
+        <ul>
+          <li>
+            A real-valued function is a function whose values are real numbers.
+          </li>
+          <li>
+            A real function is a function from real numbers to real numbers.
+          </li>
+          <li>
+            A continuous function is a function such that a small variation of the argument induces a small variation of the value of the function. This implies there are no abrupt changes in value.
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section id="continuity" class="description">
+      <p>
+        <strong>Continuity</strong>: (Wikipedia)
+        <ul>
+          <li>
+            Continuity is one of the core concepts of calculus and mathematical analysis, where arguments and values of functions are real and complex numbers. The concept has been generalized to functions between metric spaces and between topological spaces. The latter are the most general continuous functions, and their definition is the basis of topology.
+          </li>
+          <li>
+            A real function that is a function from real numbers to real numbers can be represented by a graph in the Cartesian plane; such a function is continuous if, roughly speaking, the graph is a single unbroken curve whose domain is the entire real line.
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section id="set-of-cr-funtions" class="description">
+      <p>
+        <strong>Notation (C(&reals;): set of CR functions)</strong>:
+        Let C(&reals;) the set of all continuous real-valued functions defined on &reals;, that is
+        <section>
+          C(&reals;) =
+          { continuous real-valued function : &reals; &longmapsto; &reals; }
+        </section>
+      </p>
+    </section>
+    <section id="cr-functions-as-subspace" class="proposition">
+      <p>
+        <strong>Proposition (example 1.3.2: C(&reals;) as subspace)</strong>:
+        C(&reals;) is a subspace of the vector space &#x1D4D5;(&reals;, &reals;).
+      </p>
+      <p>
+        Proof: We show that C(&reals;) meets the three conditions of the subspace.
+      </p>
+      <p>
+        0 &in; C(&reals;):
+        <section>
+          <p>
+            The zero vector 0 in &#x1D4D5;(&reals;, &reals;) is the constant function defined by f(x) = 0 for all <var>x</var> &in; &reals;. Since constant functions are continuous, 0 &in; C(&reals;).
+          </p>
+        </section>
+        f+g &in; C(&reals;):
+        <section>
+          <p>
+            Since the sum of two continuous functions (say <var>f</var>, <var>g</var>) is continuous, <var>f</var>+<var>g</var> &in; C(&reals;).
+          </p>
+        </section>
+        xf &in; C(&reals;):
+        <section>
+          <p>
+            Since the product of a real number <var>x</var> and a continuous function <var>f</var> is continuous, <var>xf</var> &in; C(&reals;).
+          </p>
+        </section>
       </p>
     </section>
   </section>
