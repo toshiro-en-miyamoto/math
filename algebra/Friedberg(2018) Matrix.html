@@ -44,9 +44,9 @@
 <h1>Matrices in Linear Algebra [線形代数における行列]</h1>
 <section id="tuples">
   <h2>Tuples</h2>
-  <section id="notation-tuple" class="description">
+  <section id="define-tuple" class="definition">
     <p>
-      <strong>Notation (n-tuple)</strong>:
+      <strong>Definition (n-tuple)</strong>:
       Let a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> be elements of a field <var>F</var>. We call an object of the following form an n-tuple with elements from <var>F</var>:
       <section>
         <table>
@@ -103,6 +103,7 @@
       <section>
         <table>
           <tr>
+            <td>vector addition</td>
             <td>
               u+v =
               (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
@@ -111,6 +112,7 @@
             <td>&ctdot; (TA)</td>
           </tr>
           <tr>
+            <td>scalar multiplication</td>
             <td>
               au = (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)
             </td>
@@ -122,9 +124,9 @@
       <section>
         <table>
           <tr>
-            <th></th>
-            <th>vector addition</th>
-            <th>scalar multiplication</th>
+            <td></td>
+            <td>vector addition</td>
+            <td>scalar multiplication</td>
           </tr>
           <tr>
             <td>closed</td>
@@ -473,7 +475,7 @@
           <tr>
             <td></td>
             <td>= au+bu</td>
-            <td>by definition (TM)</td>
+            <td>by definition (TM) &marker;</td>
           </tr>
         </table>
       </section>
@@ -482,7 +484,7 @@
   <section id="column-vector" class="description">
     <p>
       <strong>Notation (column vector)</strong>:
-      Vectors in <var>F<sup>n</sup></var> may be written as column vectors:
+      Vectors in F<sup>n</sup> may be written as column vectors:
       <section>
         <math>
           <mrow>
@@ -627,14 +629,18 @@
       <section>
         <table>
           <tr>
+            <td>matrix addition</td>
             <td>
               (A+B)<sub>ij</sub> = A<sub>ij</sub>+B<sub>ij</sub>
             </td>
+            <td>&ctdot; (MA)</td>
           </tr>
           <tr>
+            <td>scalar multiplication</td>
             <td>
               (cA)<sub>ij</sub> = cA<sub>ij</sub>
             </td>
+            <td>&ctdot; (MM)</td>
           </tr>
         </table>
       </section>
@@ -697,6 +703,23 @@
       </section>
     </p>
   </section>
+  <section id="diagonal-entries-of-transpose" class="proposition">
+    <p>
+      <strong>Proposition (diagonal entries of transposes)</strong>:
+      Diagonal entries of a matrix <var>A</var> are equal to diagonal entries of transposed matrix A<sup>t</sup>.
+    </p>
+    <p>
+      Proof: From the definition of transpose,
+      <section>
+        <table>
+          <tr>
+            <td>(A<sup>t</sup>)<sub>ii</sub> = A<sub>ii</sub></td>
+            <td>for 1 &le; i &le; min(n,m) &marker;</td>
+          </tr>
+        </table>
+      </section>
+    </p>
+  </section>
   <section id="distributivity-of-transpose" class="proposition">
     <p>
       <strong>Proposition (exercise 1.3.3: distributivity of transposes)</strong>:
@@ -709,26 +732,14 @@
       <section>
         <table>
           <tr>
-            <td>
-              ((aA + bB)<sup>t</sup>)<sub>ij</sub>
-            </td>
-            <td>
-              = (aA + bB)<sub>ji</sub>
-            </td>
-            <td>
-              &because;
-              (A<sup>t</sup>)<sub>ij</sub> = A<sub>ji</sub>
-            </td>
+            <td>((aA + bB)<sup>t</sup>)<sub>ij</sub></td>
+            <td>= (aA + bB)<sub>ji</sub></td>
+            <td>by definition of transpose</td>
           </tr>
           <tr>
             <td></td>
-            <td>
-              = (aA)<sub>ji</sub> + (bB)<sub>ji</sub>
-            </td>
-            <td>
-              &because;
-              (A+B)<sub>ij</sub> = A<sub>ij</sub> + B<sub>ij</sub>
-            </td>
+            <td>= (aA)<sub>ji</sub> + (bB)<sub>ji</sub></td>
+            <td>by definition (MA)</td>
           </tr>
           <tr>
             <td></td>
@@ -736,21 +747,14 @@
               = ((aA)<sup>t</sup>)<sub>ij</sub>
               + ((bB)<sup>t</sup>)<sub>ij</sub>
             </td>
-            <td>
-              &because;
-              (A<sup>t</sup>)<sub>ij</sub> = A<sub>ji</sub>
-            </td>
+            <td>by definition of transpose</td>
           </tr>
           <tr>
             <td></td>
             <td>
               = a(A<sup>t</sup>)<sub>ij</sub> + b(B<sup>t</sup>)<sub>ij</sub>
             </td>
-            <td>
-              &because;
-              (cA)<sub>ij</sub> = cA<sub>ij</sub>
-              &marker;
-            </td>
+            <td>by definition (MM) &marker;</td>
           </tr>
         </table>
       </section>
@@ -759,16 +763,15 @@
   <section id="symmetric-matrix" class="definition">
     <p>
       <strong>Definition (symmetric matrix [対称行列])</strong>:
-      A symmetric matrix is a matrix such that
+      A symmetric matrix is a square matrix such that
       <section>
         <table>
           <tr>
             <td>A<sup>t</sup> = A</td>
             <td>that is</td>
-            <td>(A<sup>t</sup>)<sub>ij</sub> = A<sub>ji</sub> = A<sub>ij</sub></td>
+            <td>(A<sup>t</sup>)<sub>ij</sub> = A<sub>ij</sub></td>
           </tr>
         </table>
-        
       </section>
       For example,
       <section>
@@ -811,6 +814,52 @@
           </mrow>
         </math>
       </section>
+    </section>
+    <section id="adding-transpose-get-symmetric" class="proposition">
+      <p>
+        <strong>Proposition (exercise 1.3.5: adding transpose gets symmetric)</strong>:
+        A+A<sup>t</sup> is symmetric for any square matrix <var>A</var>.
+      </p>
+      <p>
+        Proof:
+        <section>
+          <table>
+            <tr>
+              <td>((A+A<sup>t</sup>)<sup>t</sup>)<sub>ij</sub></td>
+              <td>= (A+A<sup>t</sup>)<sub>ji</sub></td>
+              <td>by definition of transpose</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= A<sub>ji</sub>+(A<sup>t</sup>)<sub>ji</sub></td>
+              <td>by definition (MA)
+            </tr>
+            <tr>
+              <td></td>
+              <td>= A<sub>ji</sub>+A<sub>ij</sub></td>
+              <td>by definition of transpose</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= A<sub>ij</sub>+A<sub>ji</sub></td>
+              <td>
+                &because; A<sub>ji</sub>, A<sub>ij</sub> &in; <var>F</var>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= A<sub>ij</sub>+(A<sup>t</sup>)<sub>ij</sub></td>
+              <td>by definition of transpose</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= (A+A<sup>t</sup>)<sub>ij</sub></td>
+              <td>by definition (MA)</td>
+            </tr>
+          </table>
+          Thus the transpose of A+A<sup>t</sup> is equal to A+A<sup>t</sup>, it follows that A+A<sup>t</sup> is symmetric. &marker;
+        </section>
+      </p>
     </section>
     <section id="symmetric-matrix-as-subspace" class="proposition">
       <p>
@@ -860,10 +909,7 @@
             <tr>
               <td colspan="2"></td>
               <td>= (cA)<sup>t</sup></td>
-              <td>
-                &because; c(A<sup>t</sup>)<sub>ij</sub> = (cA<sup>t</sup>)<sub>ij</sub>
-                by Proposition (M<sub>m&times;n</sub>(F) as vector space)
-              </td>
+              <td>by definition (MM) &marker;</td>
             </tr>
           </table>
         </section>
@@ -948,13 +994,31 @@
         </section>
       </p>
     </section>
+    <section id="diagonals-are-symmetric" class="proposition">
+      <p>
+        <strong>Proposition (exercise 1.3.7: diagonals are symmetric)</strong>:
+        Diagonal matrices are symmetric matrices.
+      </p>
+      <p>
+        Proof: Let <var>A</var> be a diagonal matrix, then
+        <ul>
+          <li>
+            if <var>i</var> &ne; <var>j</var>, by the definition of diagonal matrix, (A<sup>t</sup>)<sub>ij</sub> = A<sub>ji</sub> = 0 = A<sub>ij</sub>
+          </li>
+          <li>
+            if <var>i</var> = <var>j</var>, by Proposition (diagonal entries of transposes), (A<sup>t</sup>)<sub>ij</sub> = A<sub>ij</sub>
+          </li>
+        </ul>
+        Thus, since (A<sup>t</sup>)<sub>ij</sub> = A<sub>ij</sub> for any <var>i</var> and <var>j</var>, diagonal matrices are symmetric. &marker;
+      </p>
+    </section>
     <section id="diagnonal-matrices-as-subspace" class="proposition">
       <p>
         <strong>Proposition (example 1.3.3: diagonal matrices as subspace)</strong>:
         The set of diagonal matrices <var>W</var> is a subspace of M<sub>n&times;n</sub>(F).
       </p>
       <p>
-        Proof: We show that vectors in <var>W</var> meets the three conditions of the subspace. Let <var>A</var>, <var>B</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
+        Proof: Vectors in <var>W</var> meets the subspace conditions; let <var>A</var>, <var>B</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
         <section>
           <table>
             <tr>
@@ -980,7 +1044,7 @@
               <td>
                 &because; whenever <var>i</var> &ne; <var>j</var>,
                 (cA)<sub>ij</sub> = cA<sub>ij</sub> = c0 = 0;
-                thus cA is diagonal
+                thus cA is diagonal &marker;
               </td>
             </tr>
           </table>
@@ -996,17 +1060,74 @@
         </section>
       </p>
     </section>
-    <section class="proposition">
+    <section id="distributivity-of-trace" class="proposition">
       <p>
         <strong>Proposition (exercise 1.3.6: distributivity of trace)</strong>:
-        F any A, B &in; M<sub>n&times;n</sub>(F) and any a, b &in; F,
+        For any A, B &in; M<sub>n&times;n</sub>(F) and any a, b &in; F,
         <section>
           tr(aA+bB) = a tr(A) + b tr(B)
         </section>
         Proof:
+        <section>
+          <table>
+            <tr>
+              <td>(aA+bB)<sub>ii</sub></td>
+              <td>= (aA)<sub>ii</sub>+(bB)<sub>ii</sub></td>
+              <td>by definition (MA)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= aA<sub>ii</sub>+bB<sub>ii</sub></td>
+              <td>by definition (MM)</td>
+            </tr>
+          </table>
+        </section>
+        It follows that
+        <section>
+          <table>
+            <tr>
+              <td colspan="3">tr(aA+bB)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                = (aA+bB)<sub>11</sub> 
+                + (aA+bB)<sub>22</sub> + &ctdot;
+                + (aA+bB)<sub>nn</sub>
+              </td>
+              <td>by definition of trace</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                = aA<sub>11</sub>+bB<sub>11</sub>
+                + aA<sub>22</sub>+bB<sub>22</sub> + &ctdot;
+                + aA<sub>nn</sub>+bB<sub>nn</sub>
+              </td>
+              <td>&because;
+                (aA+bB)<sub>ii</sub> = aA<sub>ii</sub>+bB<sub>ii</sub>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                = a(A<sub>11</sub>+A<sub>22</sub>+&ctdot;+A<sub>nn</sub>)
+                + b(B<sub>11</sub>+B<sub>22</sub>+&ctdot;+B<sub>nn</sub>)
+              </td>
+              <td>
+                &because; A<sub>ii</sub>, B<sub>ii</sub>, a, b &in; F
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= a tr(A) + b tr(B)</td>
+              <td>by definition of trace &marker;</td>
+            </tr>
+          </table>
+        </section>
       </p>
     </section>
-    <section class="proposition">
+    <section id="zero-trace-as-subspace" class="proposition">
       <p>
         <strong>Proposition (example 1.3.4: zero-trace as subspace)</strong>:
         The set of n&times;n matrices having trace equal to zero is a subspace of M<sub>n&times;n</sub>(F).
