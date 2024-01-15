@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Matrix in Linear Algebra, Friedberg(2018)</title>
+  <title>Matrices in Linear Algebra, Friedberg(2018)</title>
   <style>
     body {
       margin-left: 1.2rem;
@@ -41,13 +41,13 @@
 </head>
 <body>
 <article>
-<h1>Matrix in Linear Algebra [線形代数における行列]</h1>
+<h1>Matrices in Linear Algebra [線形代数における行列]</h1>
 <section id="tuples">
   <h2>Tuples</h2>
   <section id="notation-tuple" class="description">
     <p>
       <strong>Notation (n-tuple)</strong>:
-      Let <var>a<sub>1</sub>, a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> be elements of a field <var>F</var>. We call an object of the following form an n-tuple with elements from <var>F</var>:
+      Let a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> be elements of a field <var>F</var>. We call an object of the following form an n-tuple with elements from <var>F</var>:
       <section>
         <table>
           <tr>
@@ -84,7 +84,7 @@
         <table>
           <tr>
             <td>
-              let <var>u</var> =
+              let u =
               (u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>),
             </td>
             <td>then</td>
@@ -96,9 +96,9 @@
       </section>
     </p>
   </section>
-  <section id="fn-is-vector-space" class="proposition">
+  <section id="tuples-as-vector-space" class="proposition">
     <p>
-      <strong>Proposition (example 1.2.1: F<sup>n</sup> is a vector space)</strong>:
+      <strong>Proposition (example 1.2.1: F<sup>n</sup> as a vector space)</strong>:
       F<sup>n</sup> is a vector space over <var>F</var> with the operations of vector addition and scalar multiplication; for <var>u</var>, <var>v</var> &in; F<sup>n</sup> and <var>a</var> &in; <var>F</var>,
       <section>
         <table>
@@ -524,7 +524,7 @@
   <section id="notation-matrix" class="description">
     <p>
       <strong>Notation (matrix)</strong>:
-      An <var>m&times;n</var> matrix with entries from a field <var>F</var> is
+      An m&times;n matrix with entries from a field <var>F</var> is
       <section>
         <math displaystyle="true">
           <mrow>
@@ -578,27 +578,27 @@
         </math>          
       </section>
       where each entry
-      <var>a<sub>ij</sub></var> (1 &le; i &le; m, 1 &le; j &le; n)
+      a<sub>ij</sub> (1 &le; i &le; m, 1 &le; j &le; n)
       is an element of <var>F</var>.
       <ul>
         <li>
           <b>i</b>th row:
-          <var>a<sub>i1</sub>, a<sub>i2</sub>, &hellip;, a<sub>in</sub></var>
+          a<sub>i1</sub>, a<sub>i2</sub>, &hellip;, a<sub>in</sub>
         </li>
         <li>
           <b>j</b>th column:
-          <var>a<sub>1j</sub>, a<sub>2j</sub>, &hellip;, a<sub>mj</sub></var>
+          a<sub>1j</sub>, a<sub>2j</sub>, &hellip;, a<sub>mj</sub>
         </li>
         <li>
           zero matrix: denoted 0, all of its entries are 0
         </li>
         <li>
           diagonal entries:
-          <var>a<sub>ij</sub> with <var>i</var> = <var>j</var>
+          a<sub>ij</sub> with <var>i</var> = <var>j</var>
         </li>
         <li>
           square matrix [正方行列]:
-          <var>n&times;n</var> matrices for any <var>n</var> &ge; 0
+          n&times;n matrices for any <var>n</var> &ge; 0
         </li>
       </ul>
     </p>
@@ -606,23 +606,24 @@
       We denote
       <ul>
         <li>matrices by capital letters, e.g. <var>A</var>, and</li>
-        <li>the entry of a matrix <var>A</var> that lies in row <var>i</var> and column <var>j</var> by <var>A<sub>ij</sub></var>.</li>
+        <li>
+          the entry of a matrix <var>A</var> that lies in row <var>i</var> and column <var>j</var> by A<sub>ij</sub>.
+        </li>
       </ul>
     </p>
   </section>
   <section id="set-of-matrices" class="description">
     <p>
       <strong>Notation (M<sub>m&times;n</sub>(F): a set of matrices)</strong>:
-      The set of all <var>m&times;n</var> matrices with each entries from a field <var>F</var> is denoted M<sub>m&times;n</sub>(F).
+      The set of all m&times;n matrices with each entries from a field <var>F</var> is denoted M<sub>m&times;n</sub>(F).
     </p>
   </section>
-  <section id="set-of-matrices-vector-space" class="proposition">
+  <section id="matrices-as-vector-space" class="proposition">
     <p>
       <strong>
-        Proposition (example 1.2.2: M<sub>m&times;n</sub>(F) is a vector space)
+        Proposition (example 1.2.2: M<sub>m&times;n</sub>(F) as vector space)
       </strong>:
-      M<sub>m&times;n</sub>(F) is a vector space over <var>F</var> with the following operations of matrix addition and scalar multiplication; for
-      <var>A, B</var> &in; M<sub>m&times;n</sub>(F) and <var>c</var> &in; <var>F</var>, and 1 &le; <var>i</var> &le; <var>m</var> and 1 &le; <var>j</var> &le; <var>n</var>,
+      M<sub>m&times;n</sub>(F) is a vector space over <var>F</var> with the following operations of matrix addition and scalar multiplication; for <var>A</var>, <var>B</var> &in; M<sub>m&times;n</sub>(F) and <var>c</var> &in; <var>F</var>, and 1 &le; i &le; m and 1 &le; j &le; n,
       <section>
         <table>
           <tr>
@@ -640,10 +641,10 @@
       Proof: very similar to the proof of Example 1.2.1.
     </p>
   </section>
-  <section id="transpose" class="description">
+  <section id="transpose" class="definition">
     <p>
-      <strong>Notation (transpose [転置行列])</strong>:
-      The transpose <var>A<sup>t</sup></var> of an <var>m&times;n</var> matrix <var>A</var> is the <var>n&times;m</var> matrix obtained from <var>A</var> by interchanging the rows with the columns; that is,
+      <strong>Definition (transpose [転置行列])</strong>:
+      The transpose A<sup>t</sup> of an m&times;n matrix <var>A</var> is the n&times;m matrix obtained from <var>A</var> by interchanging the rows with the columns; that is,
       <section>
         (A<sup>t</sup>)<sub>ij</sub> = A<sub>ji</sub>
       </section>
@@ -698,7 +699,7 @@
   </section>
   <section id="distributivity-of-transpose" class="proposition">
     <p>
-      <strong>Lemma (distributivity of transposes)</strong>:
+      <strong>Proposition (exercise 1.3.3: distributivity of transposes)</strong>:
       Let <var>A, B</var> &in; M<sub>m&times;n</sub>(F) and <var>a, b</var> &in; <var>F</var>, then
       <section>
         (a&InvisibleTimes;A + b&InvisibleTimes;B)<sup>t</sup>
@@ -755,12 +756,19 @@
       </section>
     </p>
   </section>
-  <section id="symmetric-matrix" class="description">
+  <section id="symmetric-matrix" class="definition">
     <p>
-      <strong>Symmetric matrix [対称行列]</strong>:
+      <strong>Definition (symmetric matrix [対称行列])</strong>:
       A symmetric matrix is a matrix such that
       <section>
-        A<sup>t</sup> = A
+        <table>
+          <tr>
+            <td>A<sup>t</sup> = A</td>
+            <td>that is</td>
+            <td>(A<sup>t</sup>)<sub>ij</sub> = A<sub>ji</sub> = A<sub>ij</sub></td>
+          </tr>
+        </table>
+        
       </section>
       For example,
       <section>
@@ -805,235 +813,316 @@
       </section>
     </section>
     <section id="symmetric-matrix-as-subspace" class="proposition">
-      <strong>Proposition (set of symmetric matrices as subspace)</strong>:
-      The set <var>W</var> of all symmetric matrices in M<sub>n&times;n</sub>(F) is a subspace of M<sub>n&times;n</sub>(F), because the subspace conditions hold for <var>W</var>. Let <var>A, B</var> &in; <var>W</var> and <var>a</var> &in; <var>F</var>,
-      <section>
-        <table>
-          <tr>
-            <td>0 &in; W</td>
-            <td>
-              &because; 0 = 0<sup>t</sup> &in; W
-            </td>
-          </tr>
-          <tr>
-            <td>A+B &in; W</td>
-            <td>
-              &because; A+B = A<sup>t</sup>+B<sup>t</sup>
-              = (A+B)<sup>t</sup> &in; W
-            </td>
-          </tr>
-          <tr>
-            <td>aA &in; W</td>
-            <td>
-              &because; aA = aA<sup>t</sup>
-              = (aA)<sup>t</sup> &in; W
-            </td>
-          </tr>
-        </table>
-      </section>
-    </p>
-  </section>
-  <section id="upper-triangular" class="description">
-    <p>
-      <strong>Upper triangular [上三角行列]</strong>:
-      An <var>m&times;n</var> matrix <var>A</var> is called upper triangular if <var>A<sub>ij</sub></var> = 0 whenever <var>i</var> &gt; <var>j</var>.
-      <section>
-        <table>
-          <tr>
-            <td>
-              A =
-              <math>
-                <mrow>
-                  <mo fence="true">&lpar;</mo>
-                  <mtable>
-                    <mtr>
-                      <mtd><mn>1</mn></mtd>
-                      <mtd><mn>2</mn></mtd>
-                      <mtd><mn>3</mn></mtd>
-                      <mtd><mn>4</mn></mtd>
-                    </mtr>
-                    <mtr>
-                      <mtd><mn>0</mn></mtd>
-                      <mtd><mn>5</mn></mtd>
-                      <mtd><mn>6</mn></mtd>
-                      <mtd><mn>7</mn></mtd>
-                    </mtr>
-                    <mtr>
-                      <mtd><mn>0</mn></mtd>
-                      <mtd><mn>0</mn></mtd>
-                      <mtd><mn>8</mn></mtd>
-                      <mtd><mn>9</mn></mtd>
-                    </mtr>
-                  </mtable>
-                  <mo fence="true">&rpar;</mo>
-                </mrow>
-              </math>
-            </td>
-          </tr>
-        </table>
-      </section>
-    </p>
-  </section>
-  <section id="diagnal-matrix" class="description">
-    <strong>Diagonal matrix [対角行列]</strong>:
-    A square matrix <var>A</var> is called a diagonal matrix if <var>A<sub>ij</sub></var> = 0 whenever <var>i</var> &ne; <var>j</var>.
-    <section>
-      <table>
-        <tr>
-          <td>
-            A =
-            <math>
-              <mrow>
-                <mo fence="true">&lpar;</mo>
-                <mtable>
-                  <mtr>
-                    <mtd><mn>3</mn></mtd>
-                    <mtd><mn>0</mn></mtd>
-                    <mtd><mn>0</mn></mtd>
-                  </mtr>
-                  <mtr>
-                    <mtd><mn>0</mn></mtd>
-                    <mtd><mn>&minus;2</mn></mtd>
-                    <mtd><mn>0</mn></mtd>
-                  </mtr>
-                  <mtr>
-                    <mtd><mn>0</mn></mtd>
-                    <mtd><mn>0</mn></mtd>
-                    <mtd><mn>8</mn></mtd>
-                  </mtr>
-                </mtable>
-                <mo fence="true">&rpar;</mo>
-              </mrow>
-            </math>
-          </td>
-        </tr>
-      </table>
+      <p>
+        <strong>Proposition (set of symmetric matrices as subspace)</strong>:
+        The set <var>W</var> of all symmetric matrices in M<sub>n&times;n</sub>(F) is a subspace of M<sub>n&times;n</sub>(F).
+      </p>
+      <p>
+        Proof: We show the subspace conditions hold for <var>W</var>. Let <var>A, B</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
+      </p>
+      <p>
+        <section>
+          <table>
+            <tr>
+              <td colspan="4">0 &in; W:</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>0</td>
+              <td>= 0<sup>t</sup></td>
+              <td>&because; 0<sub>ji</sub> = 0<sub>ij</sub></td>
+            </tr>
+            <tr><td colspan="4">&InvisibleComma;</td></tr>
+            <tr>
+              <td colspan="4">A+B &in; W:</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>A+B</td>
+              <td>= A<sup>t</sup>+B<sup>t</sup></td>
+              <td>by definition of the symmetric matrix</td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+              <td>= (A+B)<sup>t</sup></td>
+              <td>by Proposition (distributivity of transposes)</td>
+            </tr>
+            <tr><td colspan="4">&InvisibleComma;</td></tr>
+            <tr>
+              <td colspan="4">cA &in; W:</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>cA</td>
+              <td>= cA<sup>t</sup></td>
+              <td>by definition of the symmetric matrix</td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+              <td>= (cA)<sup>t</sup></td>
+              <td>
+                &because; c(A<sup>t</sup>)<sub>ij</sub> = (cA<sup>t</sup>)<sub>ij</sub>
+                by Proposition (M<sub>m&times;n</sub>(F) as vector space)
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
     </section>
-  </section>
-  <section id="diagnonal-subspace" class="description">
-    <p>
-      The set of diagonal matrices <var>W</var> is a subspace of M<sub>n&times;n</sub>(F), because the subspace conditions hold for <var>W</var>. Let <var>A, B</var> be diagonal matrices and let <var>c</var> &in; <var>F</var>,
-      <section>
-        <table>
-          <tr>
-            <td>0 &in; W</td>
-            <td>
-              &because; the zero matrix is diagonal
-            </td>
-          </tr>
-          <tr>
-            <td>A+B &in; W</td>
-            <td>
-              &because; whenever <var>i</var> &ne; <var>j</var>,
-              (A+B)<sub>ij</sub>
-              = A<sub>ij</sub> + B<sub>ij</sub>
-              = 0 + 0 = 0
-            </td>
-          </tr>
-          <tr>
-            <td>cA &in; W</td>
-            <td>
-              &because; whenever <var>i</var> &ne; <var>j</var>,
-              (cA)<sub>ij</sub> = cA<sub>ij</sub> = c0 = 0
-            </td>
-          </tr>
-        </table>
-      </section>
-    </p>
-  </section>
-  <section id="skew-matix" class="description">
-    <p>
-      <strong>Skew-symmetric matrix [交代行列]</strong>:
-      A square matrix <var>M</var> is called skew-symmetric if
-      <section>
-        M<sup>t</sup> = &minus;M
-      </section>
-      For example,
-      <section>
-        <table>
-          <tr>
-            <td>
-              M =
-              <math>
-                <mrow>
-                  <mo fence="true">&lpar;</mo>
-                  <mtable>
-                    <mtr>
-                      <mtd>0</mtd>
-                      <mtd>1</mtd>
-                      <mtd>&minus;2</mtd>
-                    </mtr>
-                    <mtr>
-                      <mtd>&minus;1</mtd>
-                      <mtd>0</mtd>
-                      <mtd>3</mtd>
-                    </mtr>
-                    <mtr>
-                      <mtd>2</mtd>
-                      <mtd>&minus;3</mtd>
-                      <mtd>0</mtd>
-                    </mtr>
-                  </mtable>
-                  <mo fence="true">&rpar;</mo>
-                </mrow>
-              </math>
-            </td>
-            <td>
-              M<sup>t</sup> =
-              <math>
-                <mrow>
-                  <mo fence="true">&lpar;</mo>
-                  <mtable>
-                    <mtr>
-                      <mtd>0</mtd>
-                      <mtd>&minus;1</mtd>
-                      <mtd>2</mtd>
-                    </mtr>
-                    <mtr>
-                      <mtd>1</mtd>
-                      <mtd>0</mtd>
-                      <mtd>&minus;3</mtd>
-                    </mtr>
-                    <mtr>
-                      <mtd>&minus;2</mtd>
-                      <mtd>3</mtd>
-                      <mtd>0</mtd>
-                    </mtr>
-                  </mtable>
-                  <mo fence="true">&rpar;</mo>
-                </mrow>
-              </math>
-            </td>
-            <td>
-              &minus;M =
-              <math>
-                <mrow>
-                  <mo fence="true">&lpar;</mo>
-                  <mtable>
-                    <mtr>
-                      <mtd>0</mtd>
-                      <mtd>&minus;1</mtd>
-                      <mtd>2</mtd>
-                    </mtr>
-                    <mtr>
-                      <mtd>1</mtd>
-                      <mtd>0</mtd>
-                      <mtd>&minus;3</mtd>
-                    </mtr>
-                    <mtr>
-                      <mtd>&minus;2</mtd>
-                      <mtd>3</mtd>
-                      <mtd>0</mtd>
-                    </mtr>
-                  </mtable>
-                  <mo fence="true">&rpar;</mo>
-                </mrow>
-              </math>
-            </td>
-          </tr>
-        </table>
-      </section>
-    </p>
+    <section id="upper-triangular" class="description">
+      <p>
+        <strong>Upper triangular [上三角行列]</strong>:
+        An matrix <var>A</var> is called upper triangular if A<sub>ij</sub> = 0 whenever <var>i</var> &gt; <var>j</var>.
+        <section>
+          <table>
+            <tr>
+              <td>
+                A =
+                <math>
+                  <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mtable>
+                      <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>4</mn></mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd><mn>0</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>6</mn></mtd>
+                        <mtd><mn>7</mn></mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd><mn>0</mn></mtd>
+                        <mtd><mn>0</mn></mtd>
+                        <mtd><mn>8</mn></mtd>
+                        <mtd><mn>9</mn></mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true">&rpar;</mo>
+                  </mrow>
+                </math>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="diagnal-matrix" class="definition">
+      <p>
+        <strong>Definition (diagonal matrix [対角行列])</strong>:
+        A square matrix <var>A</var> is called a diagonal matrix if A<sub>ij</sub> = 0 whenever <var>i</var> &ne; <var>j</var>.
+        <section>
+          <table>
+            <tr>
+              <td>
+                A =
+                <math>
+                  <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mtable>
+                      <mtr>
+                        <mtd><mn>3</mn></mtd>
+                        <mtd><mn>0</mn></mtd>
+                        <mtd><mn>0</mn></mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd><mn>0</mn></mtd>
+                        <mtd><mn>&minus;2</mn></mtd>
+                        <mtd><mn>0</mn></mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd><mn>0</mn></mtd>
+                        <mtd><mn>0</mn></mtd>
+                        <mtd><mn>8</mn></mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true">&rpar;</mo>
+                  </mrow>
+                </math>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="diagnonal-matrices-as-subspace" class="proposition">
+      <p>
+        <strong>Proposition (example 1.3.3: diagonal matrices as subspace)</strong>:
+        The set of diagonal matrices <var>W</var> is a subspace of M<sub>n&times;n</sub>(F).
+      </p>
+      <p>
+        Proof: We show that vectors in <var>W</var> meets the three conditions of the subspace. Let <var>A</var>, <var>B</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
+        <section>
+          <table>
+            <tr>
+              <td>0 &in; W</td>
+              <td>
+                &because; whenever <var>i</var> &ne; <var>j</var>,
+                (0)<sub>ij</sub> = 0;
+                thus the zero matrix is diagonal
+              </td>
+            </tr>
+            <tr>
+              <td>A+B &in; W</td>
+              <td>
+                &because; whenever <var>i</var> &ne; <var>j</var>,
+                (A+B)<sub>ij</sub>
+                = A<sub>ij</sub> + B<sub>ij</sub>
+                = 0 + 0 = 0;
+                thus A+B is diagonal
+              </td>
+            </tr>
+            <tr>
+              <td>cA &in; W</td>
+              <td>
+                &because; whenever <var>i</var> &ne; <var>j</var>,
+                (cA)<sub>ij</sub> = cA<sub>ij</sub> = c0 = 0;
+                thus cA is diagonal
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="trace-of-matrix" class="description">
+      <p>
+        <strong>Notation (tr(M): the trace of a square matrix)</strong>:
+        The trace of an n&times;n matrix M, denoted tr(M), is the sum of the diagonal entries of M; that is,
+        <section>
+          tr(M) = M<sub>11</sub> + M<sub>22</sub> + &ctdot; + M<sub>nn</sub>
+        </section>
+      </p>
+    </section>
+    <section class="proposition">
+      <p>
+        <strong>Proposition (exercise 1.3.6: distributivity of trace)</strong>:
+        F any A, B &in; M<sub>n&times;n</sub>(F) and any a, b &in; F,
+        <section>
+          tr(aA+bB) = a tr(A) + b tr(B)
+        </section>
+        Proof:
+      </p>
+    </section>
+    <section class="proposition">
+      <p>
+        <strong>Proposition (example 1.3.4: zero-trace as subspace)</strong>:
+        The set of n&times;n matrices having trace equal to zero is a subspace of M<sub>n&times;n</sub>(F).
+      </p>
+      <p>
+        Proof:
+        <section>
+          <table>
+            <tr>
+              <td>tr(aA+bB)</td>
+              <td>= (aA+bB)<sub>11</sub>+(aA+bB)<sub>22</sub>+&ctdot;+(aA+bB)<sub>nn</sub></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= a tr(A) + b tr(B)</td>
+              <td></td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="skew-matix" class="description">
+      <p>
+        <strong>Skew-symmetric matrix [交代行列]</strong>:
+        A square matrix <var>M</var> is called skew-symmetric if
+        <section>
+          M<sup>t</sup> = &minus;M
+        </section>
+        For example,
+        <section>
+          <table>
+            <tr>
+              <td>
+                M =
+                <math>
+                  <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mtable>
+                      <mtr>
+                        <mtd>0</mtd>
+                        <mtd>1</mtd>
+                        <mtd>&minus;2</mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>&minus;1</mtd>
+                        <mtd>0</mtd>
+                        <mtd>3</mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>2</mtd>
+                        <mtd>&minus;3</mtd>
+                        <mtd>0</mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true">&rpar;</mo>
+                  </mrow>
+                </math>
+              </td>
+              <td>
+                M<sup>t</sup> =
+                <math>
+                  <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mtable>
+                      <mtr>
+                        <mtd>0</mtd>
+                        <mtd>&minus;1</mtd>
+                        <mtd>2</mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>1</mtd>
+                        <mtd>0</mtd>
+                        <mtd>&minus;3</mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>&minus;2</mtd>
+                        <mtd>3</mtd>
+                        <mtd>0</mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true">&rpar;</mo>
+                  </mrow>
+                </math>
+              </td>
+              <td>
+                &minus;M =
+                <math>
+                  <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mtable>
+                      <mtr>
+                        <mtd>0</mtd>
+                        <mtd>&minus;1</mtd>
+                        <mtd>2</mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>1</mtd>
+                        <mtd>0</mtd>
+                        <mtd>&minus;3</mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>&minus;2</mtd>
+                        <mtd>3</mtd>
+                        <mtd>0</mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true">&rpar;</mo>
+                  </mrow>
+                </math>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
   </section>
 </section>
 <section id="reference">
