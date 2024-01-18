@@ -882,6 +882,36 @@
           </li>
         </ul>
     </section>
+    <section id="intersection-as-subspace" class="proposition">
+      <p>
+        <strong>Theorem 1.4 (intersection as subspace)</strong>:
+        Any intersection of subspaces of a vector space <var>V</var> is a subspace of <var>V</var>.
+      </p>
+      <p>
+        Proof: Let <var>C</var> be a collection of any subspaces of <var>V</var>, and let <var>W</var> denote the intersection of subspaces in <var>C</var>, then the subspace conditions hold for <var>W</var>.
+      </p>
+      <p>
+        0 &in; W:
+        <section>
+          <p>
+            Since every subspace contains the zero vector, 0 &in; <var>W</var>.
+          </p>
+        </section>
+        x+y &in; W:
+        <section>
+          <p>
+            Let <var>x</var>, <var>y</var> &in; <var>W</var>, then <var>x</var> and <var>y</var> are contained in each subspace in <var>C</var>. Because each subspace in <var>C</var> is closed under vector addition, it follows that <var>x</var>+<var>y</var> is contained in each subspace in <var>C</var>. Hence <var>x</var>+<var>y</var> is contained in <var>W</var>.
+          </p>
+        </section>
+        <var>ax</var> &in; <var>W</var>:
+        <section>
+          <p>
+            Let <var>x</var> &in; <var>W</var>, then <var>x</var> is contained in each subspace in <var>C</var>. Because each subspace in <var>C</var> is closed under scalar multiplication, it follows that for any scalar <var>a</var> in <var>F</var>, <var>ax</var> is contained in each subspace in <var>C</var>. Hence <var>ax</var> is contained in <var>W</var>.
+          </p>
+        </section>
+      </p>
+    </section>
+
     <section id="sum-of-subspaces" class="definition">
       <p>
         <strong>Definition (sum of subsets)</strong>:
@@ -921,9 +951,9 @@
       </p>
     </section>
   </section>
-  <section id="linear-combination-equation">
+  <section id="linear-combinations">
     <h2>Linear Combinations</h2>
-    <section id="linear-combination" class="definition">
+    <section id="define-linear-combination" class="definition">
       <p>
         <strong>Definition (linear combination [線形結合])</strong>:
         Let <var>S</var> be a set of vectors
