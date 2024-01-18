@@ -906,12 +906,72 @@
         <var>ax</var> &in; <var>W</var>:
         <section>
           <p>
-            Let <var>x</var> &in; <var>W</var>, then <var>x</var> is contained in each subspace in <var>C</var>. Because each subspace in <var>C</var> is closed under scalar multiplication, it follows that for any scalar <var>a</var> in <var>F</var>, <var>ax</var> is contained in each subspace in <var>C</var>. Hence <var>ax</var> is contained in <var>W</var>.
+            Let <var>x</var> &in; <var>W</var>, then <var>x</var> is contained in each subspace in <var>C</var>. Because each subspace in <var>C</var> is closed under scalar multiplication, it follows that for any scalar <var>a</var> in <var>F</var>, <var>ax</var> is contained in each subspace in <var>C</var>. Hence <var>ax</var> is contained in <var>W</var>. &marker;
           </p>
         </section>
       </p>
     </section>
-
+    <section id="union-as-subspace" class="proposition">
+      <p>
+        <strong>Proposition (exercise 1.3.19: union as subspace)</strong>:
+        Let W<sub>1</sub> and W<sub>2</sub> be subspaces of a vector space <var>V</var>, then W<sub>1</sub> &Union; W<sub>2</sub> is a subspace of <var>V</var>
+        <section>
+          <table>
+            <tr>
+              <td>if and only if</td>
+              <td>
+                (W<sub>1</sub> &subseteq; W<sub>2</sub>) &or;
+                (W<sub>2</sub> &subseteq; W<sub>1</sub>)
+              </td>
+            </tr>
+          </table>
+        </section>
+        Proof:
+      </p>
+      <p>
+        <section>
+          <table>
+            <tr>
+              <td colspan="2">
+                &not;{
+                  (W<sub>1</sub> &subseteq; W<sub>2</sub>) &or;
+                  (W<sub>2</sub> &subseteq; W<sub>1</sub>)
+                }
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>=
+                &not;(
+                  &forall;v<sub>1</sub> &in; W<sub>1</sub>,
+                  v<sub>1</sub> &in; W<sub>2</sub>
+                ) &and; &not;(
+                  &forall;v<sub>2</sub> &in; W<sub>2</sub>,
+                  v<sub>2</sub> &in; W<sub>1</sub>
+                )
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>=
+                (
+                  &Exists;v<sub>1</sub> &in; W<sub>1</sub>,
+                  v<sub>1</sub> &notin; W<sub>2</sub>
+                ) &and; (
+                  &Exists;v<sub>2</sub> &in; W<sub>2</sub>,
+                  v<sub>2</sub> &notin; W<sub>1</sub>
+                )
+            </tr>
+          </table>
+        </section>
+      </p>
+      <p>
+        If W<sub>1</sub> &Union; W<sub>2</sub> is a subspace of <var>V</var>,
+      </p>
+      <p>
+          If W<sub>1</sub> &subseteq; W<sub>2</sub> or W<sub>2</sub> &subseteq; W<sub>1</sub>,
+      </p>
+    </section>
     <section id="sum-of-subspaces" class="definition">
       <p>
         <strong>Definition (sum of subsets)</strong>:
