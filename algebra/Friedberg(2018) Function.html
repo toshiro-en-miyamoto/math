@@ -44,10 +44,116 @@
 <h1>Function [関数]</h1>
   <section id="set">
     <h2>Sets (Appendix A)</h2>
-    <section id="empty-set" class="definition">
+    <section id="subset-equal-proper" class="definition">
       <p>
-        <strong>Definition (empty set)</strong>:
+        <strong>Definition (subset)</strong>:
+        A set <var>A</var> is called a subset of a set <var>B</var>, if every element of <var>A</var> is an element of <var>B</var>.
+        <section>
+          <table>
+            <tr>
+              <td>A &subseteq; B</td>
+              <td>&iff;</td>
+              <td>&forall;a &in; A, a &in; B</td>
+            </tr>
+          </table>
+        </section>
+        <strong>Definition (equality)</strong>:
+        Two sets <var>A</var> and <var>B</var> are called equal, if they contains the same elements.
+        <section>
+          <table>
+            <tr>
+              <td>A = B</td>
+              <td>&iff;</td>
+              <td>(A &subseteq; B) &and; (B &subseteq; A)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&iff;</td>
+              <td>
+                (&forall;a &in; A, a &in; B) &and;
+                (&forall;b &in; B, b &in; A)
+              </td>
+            </tr>
+          </table>
+        </section>
+        <strong>Definition (proper subset)</strong>:
+        A set <var>A</var> is called a proper subset of <var>B</var>, if
+        <section>
+          <table>
+            <tr>
+              <td>A &subset; B</td>
+              <td>&iff;</td>
+              <td>(A &subseteq; B) &and; (A &ne; B)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&iff;</td>
+              <td>
+                (&forall;a &in; A, a &in; B ) &and;
+                (&Exists;b &in; B, b &notin; A )
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="empty-set" class="description">
+      <p>
+        <strong>Notation (&empty;: empty set)</strong>:
         The empty set, denoted &empty;, is a set containing no elements. &empty; is a subset of every set.
+      </p>
+    </section>
+    <section id="proper-subset-by-logic" class="proposition">
+      <p>
+        <strong>Proposition (proper subset by logic)</strong>:
+        <section>
+          <table>
+            <tr>
+              <td>A &subset; B</td>
+              <td>&iff;</td>
+              <td>(A &subseteq; B) &and; (A &ne; B)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&iff;</td>
+              <td>
+                (&forall;a &in; A, a &in; B) &and;
+                &not;{
+                  (&forall;a &in; A, a &in; B) &and;
+                  (&forall;b &in; B, b &in; A)
+                }
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&iff;</td>
+              <td>
+                (&forall;a &in; A, a &in; B) &and; {
+                  &not;(&forall;a &in; A, a &in; B) &or;
+                  (&Exists; b &in; B, b &notin; A)
+                }
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&iff;</td>
+              <td>
+                ( false ) &or; {
+                  (&forall;a &in; A, a &in; B) &and;
+                  (&Exists;b &in; B, b &notin; A)
+                }
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&iff;</td>
+              <td>
+                (&forall;a &in; A, a &in; B) &and;
+                (&Exists;b &in; B, b &notin; A)
+              </td>
+            </tr>
+          </table>
+        </section>
       </p>
     </section>
   </section>
