@@ -894,19 +894,19 @@
         0 &in; W:
         <section>
           <p>
-            Since every subspace contains the zero vector, 0 &in; <var>W</var>.
+            Since every subspace contains the zero vector, each subspace in <var>C</var> contains 0. Hence 0 &in; <var>W</var>.
           </p>
         </section>
         x+y &in; W:
         <section>
           <p>
-            Let <var>x</var>, <var>y</var> &in; <var>W</var>, then <var>x</var> and <var>y</var> are contained in each subspace in <var>C</var>. Because each subspace in <var>C</var> is closed under vector addition, it follows that <var>x</var>+<var>y</var> is contained in each subspace in <var>C</var>. Hence <var>x</var>+<var>y</var> is contained in <var>W</var>.
+            Let <var>x</var>, <var>y</var> &in; <var>W</var>, then <var>x</var> and <var>y</var> are contained in each subspace in <var>C</var>. Because each subspace in <var>C</var> is closed under vector addition, it follows that <var>x</var>+<var>y</var> is contained in each subspace in <var>C</var>. Hence <var>x</var>+<var>y</var> &in; <var>W</var>.
           </p>
         </section>
         <var>ax</var> &in; <var>W</var>:
         <section>
           <p>
-            Let <var>x</var> &in; <var>W</var>, then <var>x</var> is contained in each subspace in <var>C</var>. Because each subspace in <var>C</var> is closed under scalar multiplication, it follows that for any scalar <var>a</var> in <var>F</var>, <var>ax</var> is contained in each subspace in <var>C</var>. Hence <var>ax</var> is contained in <var>W</var>. &marker;
+            Let <var>x</var> &in; <var>W</var>, then <var>x</var> is contained in each subspace in <var>C</var>. Because each subspace in <var>C</var> is closed under scalar multiplication, it follows that for any scalar <var>a</var> in <var>F</var>, <var>ax</var> is contained in each subspace in <var>C</var>. Hence <var>ax</var> &in; <var>W</var>. &marker;
           </p>
         </section>
       </p>
@@ -985,37 +985,106 @@
                 <section>
                   <table>
                     <tr>
-                      <td>x = W<sub>1</sub>&setminus;W<sub>2</sub></td>
-                      <td>y = W<sub>2</sub>&setminus;W<sub>1</sub></td>
+                      <td>x &in; W<sub>1</sub>&setminus;W<sub>2</sub></td>
+                      <td>y &in; W<sub>2</sub>&setminus;W<sub>1</sub></td>
                     </tr>
                   </table>
                 </section>
-                On the other hand, <var>P</var> tells x+y &in; W<sub>1</sub> or W<sub>2</sub>, say W<sub>1</sub>. Then
+                On the other hand, <var>P</var> tells x+y &in; W<sub>1</sub> or W<sub>2</sub>, say W<sub>1</sub>. Then since x &in; W<sub>1</sub>&setminus;W<sub>2</sub>,
                 <section>
                   (x+y) &minus; x = y &in; W<sub>1</sub>
                 </section>
-                which is a contradiction to <var>y</var> = W<sub>2</sub>&setminus;W<sub>1</sub>.
+                which is a contradiction to <var>y</var> &in; W<sub>2</sub>&setminus;W<sub>1</sub>.
               </p>
             </section>
           </p>
         </section>
       </p>
       <p>
-          If W<sub>1</sub> &subseteq; W<sub>2</sub> or W<sub>2</sub> &subseteq; W<sub>1</sub>, then (W<sub>1</sub> &Union; W<sub>2</sub>) is W<sub>1</sub> or W<sub>2</sub>, which are subspaces.
+          If W<sub>1</sub> &subseteq; W<sub>2</sub> or W<sub>2</sub> &subseteq; W<sub>1</sub>, then (W<sub>1</sub> &Union; W<sub>2</sub>) is W<sub>1</sub> or W<sub>2</sub>, which are subspaces. &marker;
       </p>
     </section>
-    <section id="sum-of-subspaces" class="definition">
+    <section id="define-sum-of-subspaces" class="definition">
       <p>
         <strong>Definition (sum of subsets)</strong>:
-        The sum of non-empty subsets <var>S<sub>1</sub></var> and <var>S<sub>2</sub></var> of a vector space <var>V</var>, notated <var>S<sub>1</sub></var> + <var>S<sub>2</sub></var>, is the set
+        The sum of non-empty subsets <var>S<sub>1</sub></var> and <var>S<sub>2</sub></var> of a vector space <var>V</var>, is a set such that
         <section>
-          {
-            <var>x</var> + <var>y</var> :
-            <var>x</var> &in; <var>S<sub>1</sub></var>,
-            <var>y</var> &in; <var>S<sub>2</sub></var>
-          }
+          S<sub>1</sub>+S<sub>2</sub> =
+          { x+y : x &in; S<sub>1</sub>, y &in; S<sub>2</sub> }
         </section>
       </p>
+    </section>
+    <section id="elements-of-subset-sum" class="description">
+      <p>
+        <strong>Description (elements of a sum of subsets)</strong>: Let
+        x<sub>1</sub>, x<sub>2</sub>, &hellip;, x<sub>n</sub> &in; S<sub>1</sub> and
+        y<sub>1</sub>, y<sub>2</sub>, &hellip;, y<sub>m</sub> &in; S<sub>2</sub>,
+        then S<sub>1</sub>+S<sub>2</sub> contains elements
+        <section>
+          <table>
+            <tr>
+              <td class="center">x<sub>1</sub>+y<sub>1</sub></td>
+              <td class="center">x<sub>2</sub>+y<sub>1</sub></td>
+              <td class="center">&ctdot;</td>
+              <td class="center">x<sub>n</sub>+y<sub>1</sub></td>
+            </tr>
+            <tr>
+              <td class="center">x<sub>1</sub>+y<sub>2</sub></td>
+              <td class="center">x<sub>2</sub>+y<sub>2</sub></td>
+              <td class="center">&ctdot;</td>
+              <td class="center">x<sub>n</sub>+y<sub>2</sub></td>
+            </tr>
+            <tr>
+              <td class="center">&vellip;</td>
+              <td class="center">&vellip;</td>
+              <td class="center">&vellip;</td>
+              <td class="center">&vellip;</td>
+            </tr>
+            <tr>
+              <td class="center">x<sub>1</sub>+y<sub>m</sub></td>
+              <td class="center">x<sub>2</sub>+y<sub>m</sub></td>
+              <td class="center">&ctdot;</td>
+              <td class="center">x<sub>n</sub>+y<sub>m</sub></td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="subsets-in-sum" class="proposition">
+      <p>
+        <strong>Proposition (exercise 1.3.23: subsets in sum)</strong>:
+        Let W<sub>1</sub> and W<sub>2</sub> be subspaces of a vector space <var>V</var>. Then,
+        <ol>
+          <li>
+            W<sub>1</sub>+W<sub>2</sub> is a subspace of <var>V</var> that contains both W<sub>1</sub> and W<sub>2</sub>.
+          </li>
+          <li>
+            Any subspace of <var>V</var> that contains both W<sub>1</sub> and W<sub>2</sub> must also contain W<sub>1</sub>+W<sub>2</sub>.
+          </li>
+        </ol>
+        Proof-1:
+        <section>
+          <p>
+            W<sub>1</sub>+W<sub>2</sub> is a subspace of V:
+          </p>
+          <section>
+          </section>
+          <p>
+            W<sub>1</sub>+W<sub>2</sub> contains both W<sub>1</sub> and W<sub>2</sub>:
+          </p>
+        </section>
+        Proof-2:
+        <section>
+          <p>
+            Let <var>W</var> be a subspace that contains both W<sub>1</sub> and W<sub>2</sub>.
+          </p>
+          <p>
+            Hence <var>W</var> contains W<sub>1</sub>+W<sub>2</sub>.
+          </p>
+        </section>
+      </p>
+    </section>
+    <section id="define-direct-sum" class="definition">
       <p>
         <strong>Definition (direct sum [直和])</strong>:
         The direct sum of <var>W<sub>1</sub></var> and <var>W<sub>2</sub></var>
@@ -1031,8 +1100,7 @@
                 <var>W<sub>1</sub></var> &cap; <var>W<sub>2</sub></var>
                 = &empty;
               </td>
-            </tr>
-            <tr>
+              <td>and</td>
               <td>
                 <var>W<sub>1</sub></var> &plus; <var>W<sub>2</sub></var>
                 = <var>V</var>
