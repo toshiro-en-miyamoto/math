@@ -914,7 +914,7 @@
     <section id="union-as-subspace" class="proposition">
       <p>
         <strong>Proposition (exercise 1.3.19: union as subspace)</strong>:
-        Let W<sub>1</sub> and W<sub>2</sub> be subspaces of a vector space <var>V</var>, then W<sub>1</sub> &Union; W<sub>2</sub> is a subspace of <var>V</var>
+        Let W<sub>1</sub> and W<sub>2</sub> be subspaces of a vector space <var>V</var>, then (W<sub>1</sub> &Union; W<sub>2</sub>) is a subspace of <var>V</var>
         <section>
           <table>
             <tr>
@@ -929,47 +929,79 @@
         Proof:
       </p>
       <p>
+        If (W<sub>1</sub> &Union; W<sub>2</sub>) is a subspace of <var>V</var>, the subspace conditions hold for (W<sub>1</sub> &Union; W<sub>2</sub>), that is:
         <section>
-          <table>
-            <tr>
-              <td colspan="2">
-                &not;{
-                  (W<sub>1</sub> &subseteq; W<sub>2</sub>) &or;
-                  (W<sub>2</sub> &subseteq; W<sub>1</sub>)
-                }
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>=
-                &not;(
-                  &forall;v<sub>1</sub> &in; W<sub>1</sub>,
-                  v<sub>1</sub> &in; W<sub>2</sub>
-                ) &and; &not;(
-                  &forall;v<sub>2</sub> &in; W<sub>2</sub>,
-                  v<sub>2</sub> &in; W<sub>1</sub>
-                )
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>=
-                (
-                  &Exists;v<sub>1</sub> &in; W<sub>1</sub>,
-                  v<sub>1</sub> &notin; W<sub>2</sub>
-                ) &and; (
-                  &Exists;v<sub>2</sub> &in; W<sub>2</sub>,
-                  v<sub>2</sub> &notin; W<sub>1</sub>
-                )
-            </tr>
-          </table>
+          <p>
+            0 &in; (W<sub>1</sub> &Union; W<sub>2</sub>):
+            <section>
+              <p>
+                Because each subspace contains the zero vector, W<sub>1</sub> contains the zero vector, and so does W<sub>2</sub>. Hence 0 &in; (W<sub>1</sub> &Union; W<sub>2</sub>).
+              </p>
+            </section>
+          </p>
+          <p>
+            ax &in; (W<sub>1</sub> &Union; W<sub>2</sub>):
+            <section>
+              <p>
+                Let <var>x</var> &in; W<sub>1</sub> (or W<sub>2</sub>) and <var>a</var> &in; <var>F</var>. Because W<sub>1</sub> (or W<sub>2</sub>) is a subspace, <var>ax</var> &in; W<sub>1</sub> (or W<sub>2</sub>). Hence <var>ax</var> &in; (W<sub>1</sub> &Union; W<sub>2</sub>).
+              </p>
+            </section>
+          </p>
+          <p>
+            x+y &in; (W<sub>1</sub> &Union; W<sub>2</sub>):
+            <section>
+              <p>
+                Recall that for two statements <var>P</var> and <var>Q</var>, (P &Implies; Q) = &not;(P &and; &not;Q). Therefore, we can prove (P &Implies; Q) by showing a contradiction for (P &and; &not;Q). Let
+                <section>
+                  <table>
+                    <tr>
+                      <td>P</td>
+                      <td>=
+                        x+y &in; (W<sub>1</sub> &Union; W<sub>2</sub>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Q</td>
+                      <td>=
+                        (W<sub>1</sub> &subseteq; W<sub>2</sub>) &or;
+                        (W<sub>2</sub> &subseteq; W<sub>1</sub>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&not;Q</td>
+                      <td>=
+                        (
+                          &Exists;v<sub>1</sub> &in; W<sub>1</sub>,
+                          v<sub>1</sub> &notin; W<sub>2</sub>
+                        ) &and; (
+                          &Exists;v<sub>2</sub> &in; W<sub>2</sub>,
+                          v<sub>2</sub> &notin; W<sub>1</sub>
+                        )
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+                With &not;Q, we can find some <var>x</var> and <var>y</var> such that
+                <section>
+                  <table>
+                    <tr>
+                      <td>x = W<sub>1</sub>&setminus;W<sub>2</sub></td>
+                      <td>y = W<sub>2</sub>&setminus;W<sub>1</sub></td>
+                    </tr>
+                  </table>
+                </section>
+                On the other hand, <var>P</var> tells x+y &in; W<sub>1</sub> or W<sub>2</sub>, say W<sub>1</sub>. Then
+                <section>
+                  (x+y) &minus; x = y &in; W<sub>1</sub>
+                </section>
+                which is a contradiction to <var>y</var> = W<sub>2</sub>&setminus;W<sub>1</sub>.
+              </p>
+            </section>
+          </p>
         </section>
       </p>
       <p>
-        If W<sub>1</sub> &Union; W<sub>2</sub> is a subspace of <var>V</var>,
-      </p>
-      <p>
-          If W<sub>1</sub> &subseteq; W<sub>2</sub> or W<sub>2</sub> &subseteq; W<sub>1</sub>,
+          If W<sub>1</sub> &subseteq; W<sub>2</sub> or W<sub>2</sub> &subseteq; W<sub>1</sub>, then (W<sub>1</sub> &Union; W<sub>2</sub>) is W<sub>1</sub> or W<sub>2</sub>, which are subspaces.
       </p>
     </section>
     <section id="sum-of-subspaces" class="definition">
