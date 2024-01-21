@@ -1019,7 +1019,7 @@
         <strong>Description (elements of a sum of subsets)</strong>: Let
         x<sub>1</sub>, x<sub>2</sub>, &hellip;, x<sub>n</sub> &in; S<sub>1</sub> and
         y<sub>1</sub>, y<sub>2</sub>, &hellip;, y<sub>m</sub> &in; S<sub>2</sub>,
-        then S<sub>1</sub>+S<sub>2</sub> contains elements
+        then the possible elements that S<sub>1</sub>+S<sub>2</sub> contains are
         <section>
           <table>
             <tr>
@@ -1048,11 +1048,29 @@
             </tr>
           </table>
         </section>
+        In fact, the number of elements in S<sub>1</sub>+S<sub>2</sub> is equal to or less than n&times;m. For example, let
+        <section>
+          <table>
+            <tr>
+              <td>S<sub>1</sub> = {1, 3, 5}</td>
+              <td>S<sub>2</sub> = {0, 2, 4}</td>
+            </tr>
+          </table>
+        </section>
+        then the possible elements in S<sub>1</sub>+S<sub>2</sub> are
+        <section>
+          <table>
+            <tr class="right"><td>1</td><td>3</td><td>5</td></tr>
+            <tr class="right"><td>3</td><td>5</td><td>7</td></tr>
+            <tr class="right"><td>5</td><td>7</td><td>9</td></tr>
+          </table>
+        </section>
+        Thus S<sub>1</sub>+S<sub>2</sub> = {1, 3, 5, 7, 9}.
       </p>
     </section>
     <section id="subsets-in-sum" class="proposition">
       <p>
-        <strong>Proposition (exercise 1.3.23: subsets in sum)</strong>:
+        <strong>Proposition (exercise 1.3.23: subspaces in sum)</strong>:
         Let W<sub>1</sub> and W<sub>2</sub> be subspaces of a vector space <var>V</var>. Then,
         <ol>
           <li>
@@ -1064,14 +1082,111 @@
         </ol>
         Proof-1:
         <section>
-          <p>
-            W<sub>1</sub>+W<sub>2</sub> is a subspace of V:
-          </p>
+          <p>0 &in; (W<sub>1</sub>+W<sub>2</sub>):</p>
           <section>
+            <p>
+              Since every subspace contains the zero vector, 0 &in; W<sub>1</sub> and 0 &in; W<sub>2</sub>. By definition of sum, 0+0 &in; (W<sub>1</sub>+W<sub>2</sub>), it follows that 0 &in; (W<sub>1</sub>+W<sub>2</sub>).
+            </p>
           </section>
-          <p>
-            W<sub>1</sub>+W<sub>2</sub> contains both W<sub>1</sub> and W<sub>2</sub>:
-          </p>
+          <p>z<sub>1</sub>+z<sub>2</sub> &in; (W<sub>1</sub>+W<sub>2</sub>):</p>
+          <section>
+            <p>
+              Let x<sub>1</sub>, x<sub>2</sub> &in; W<sub>1</sub>, and y<sub>1</sub>, y<sub>2</sub> &in; W<sub>2</sub>. Then x<sub>1</sub>+x<sub>2</sub> &in; W<sub>1</sub>, and y<sub>1</sub>+y<sub>2</sub> &in; W<sub>2</sub>. Thus by definition of sum of subsets, we have
+              <section>
+                <table>
+                  <tr>
+                    <td>
+                      (x<sub>1</sub>+x<sub>2</sub>) + (y<sub>1</sub>+y<sub>2</sub>)
+                      &in; (W<sub>1</sub>+W<sub>2</sub>)
+                    </td>
+                    <td>&ctdot; (*1)</td>
+                  </tr>
+                </table>
+              </section>
+              But we can find two elements z<sub>1</sub>, z<sub>2</sub> &in; (W<sub>1</sub>+W<sub>2</sub>) such that
+              <section>
+                <table>
+                  <tr>
+                    <td>
+                      z<sub>1</sub> = x<sub>1</sub>+y<sub>1</sub>
+                    </td>
+                    <td>and</td>
+                    <td>
+                      z<sub>2</sub> = x<sub>2</sub>+y<sub>2</sub> 
+                    </td>
+                  </tr>
+                </table>
+              </section>
+              Hence
+              <section>
+                <table>
+                  <tr>
+                    <td>
+                      z<sub>1</sub>+z<sub>2</sub>
+                    </td>
+                    <td>=
+                      (x<sub>1</sub>+y<sub>1</sub>) + (x<sub>2</sub>+y<sub>2</sub>)
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>=
+                      (x<sub>1</sub>+x<sub>2</sub>) + (y<sub>1</sub>+y<sub>2</sub>)
+                    </td>
+                    <td>
+                      &because;
+                      x<sub>1</sub>, x<sub>2</sub>, y<sub>1</sub>, y<sub>2</sub>
+                      &in; V
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      &in; (W<sub>1</sub>+W<sub>2</sub>)
+                    </td>
+                    <td>&because; (*1)</td>
+                  </tr>
+                </table>
+              </section>
+            </p>
+          </section>
+          <p>az &in; (W<sub>1</sub>+W<sub>2</sub>):</p>
+          <section>
+            <p>
+              Let <var>x</var> &in; W<sub>1</sub>, <var>y</var> &in; W<sub>2</sub>, and <var>a</var> be a scalar. Then ax &in; W<sub>1</sub>, and ay &in; W<sub>2</sub>. Thus by definition of of sum of subsets, we have
+              <section>
+                <table>
+                  <tr>
+                    <td>
+                      ax+ay &in; (W<sub>1</sub>+W<sub>2</sub>)
+                    </td>
+                    <td>&ctdot; (*2)</td>
+                  </tr>
+                </table>
+              </section>
+              But we can find an element <var>z</var> &in; (W<sub>1</sub>+W<sub>2</sub>) such that <var>z</var> = x+y. Hence
+              <section>
+                <table>
+                  <tr>
+                    <td>az</td>
+                    <td>= a(x+y)</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>= ax+ay</td>
+                    <td>&because; x, y &in; V, and <var>a</var> is a scalar</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>&in; (W<sub>1</sub>+W<sub>2</sub>)</td>
+                    <td>&because; (*2) &marker;</td>
+                  </tr>
+                </table>
+              </section>
+            </p>
+          </section>
         </section>
         Proof-2:
         <section>
@@ -1090,20 +1205,18 @@
         The direct sum of <var>W<sub>1</sub></var> and <var>W<sub>2</sub></var>
         <section>
           <var>V</var>
-          = <var>W<sub>1</sub></var> &CirclePlus; <var>W<sub>2</sub></var>
+          = <var>W<sub>1</sub></var>&CirclePlus;<var>W<sub>2</sub></var>
         </section>
         is a vector space <var>V</var> if <var>W<sub>1</sub></var> and <var>W<sub>2</sub></var> are subspaces of <var>V</var> such that
         <section>
           <table>
             <tr>
               <td>
-                <var>W<sub>1</sub></var> &cap; <var>W<sub>2</sub></var>
-                = &empty;
+                W<sub>1</sub>&cap;W<sub>2</sub> = &empty;
               </td>
               <td>and</td>
               <td>
-                <var>W<sub>1</sub></var> &plus; <var>W<sub>2</sub></var>
-                = <var>V</var>
+                W<sub>1</sub>+W<sub>2</sub> = V
               </td>
             </tr>
           </table>
@@ -1117,18 +1230,16 @@
       <p>
         <strong>Definition (linear combination [線形結合])</strong>:
         Let <var>S</var> be a set of vectors
-        {<var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var>} in a vector space <var>V</var>.
+        {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>} in a vector space <var>V</var>.
         Any vector of the form
         <section>
-          <var>v</var>
-          = <var>a<sub>1</sub>v<sub>1</sub></var>
-          + <var>a<sub>2</sub>v<sub>2</sub></var>
+          v
+          = a<sub>1</sub>v<sub>1</sub>
+          + a<sub>2</sub>v<sub>2</sub>
           + &ctdot;
-          + <var>a<sub>n</sub>v<sub>n</sub></var>
+          + a<sub>n</sub>v<sub>n</sub>
         </section>
-        for some scalars
-        <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>,
-        is called a linear combination of <var>S</var>.
+        for some scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, is called a linear combination of <var>S</var>.
       </p>
     </section>
     <section id="zero-vector-linear" class="proposition">
@@ -1145,9 +1256,10 @@
     <section id="linear-combination-in-subspace" class="proposition">
       <p>
         <strong>Proposition (exercise 1.3.20: linear combination in subspace)</strong>:
-        If <var>W</var> is a subspace of a vector space <var>V</var> and <var>w<sub>1</sub></var>, <var>w<sub>2</sub></var>, &hellip;, <var>w<sub>n</sub></var> are in <var>W</var>, then for any scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>
+        If <var>W</var> is a subspace of a vector space <var>V</var> and w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>n</sub> are in <var>W</var>, then for any scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>
         <section>
-          a<sub>1</sub>w<sub>1</sub> + a<sub>2</sub>w<sub>2</sub> + &hellip; + a<sub>n</sub>w<sub>n</sub> &in; W
+          a<sub>1</sub>w<sub>1</sub> + a<sub>2</sub>w<sub>2</sub> +
+          &hellip; + a<sub>n</sub>w<sub>n</sub> &in; W
         </section>
         Proof:
         For every <var>i</var> &in; &naturals;,
@@ -1216,7 +1328,7 @@
     <section id="span" class="definition">
       <p>
         <strong>Definition (span [線形包])</strong>:
-        The span of a subset <var>S</var> of a vector space is the set consisting of all linear combinations of vectors <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var></var>v<sub>n</sub></var> &in; <var>S</var>, denoted
+        The span of a subset <var>S</var> of a vector space is the set consisting of all linear combinations of vectors v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> &in; <var>S</var>, denoted
         <section>
           <table>
             <tr>
@@ -1267,15 +1379,15 @@
             If <var>S</var> contains two or more vectors, we prove that subspace conditions hold for span(S). Let <var>x</var>, <var>y</var> &in; span(S).
             <section>
               <p>
-                <var>0</var> &in; span(S) holds.
+                0 &in; span(S) holds.
                 <section>
-                  0x is a linear combination that is, 0x &in; span(S). Since 0x = <var>0</var>, <var>0</var> &in; span(S).
+                  0x is a linear combination that is, 0x &in; span(S). Since 0x = 0, 0 &in; span(S).
                 </section>
               </p>
               <p>
                 <var>x</var>+<var>y</var> &in; span(S) and <var>cx</var> &in; span(S) for any scalar c hold.
                 <section>
-                  Since <var>S</var> &ne; &empty;, there exist vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>m</sub></var>, <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; <var>S</var> such that
+                  Since <var>S</var> &ne; &empty;, there exist vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> &in; <var>S</var> such that
                   <section>
                     <table>
                       <tr>
@@ -1293,7 +1405,7 @@
                       </tr>
                     </table>
                   </section>
-                  for scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>m</sub></var>, <var>b<sub>1</sub></var>, <var>b<sub>2</sub></var>, &hellip;, <var>b<sub>n</sub></var>. Then
+                  for scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>m</sub>, b<sub>1</sub>, b<sub>2</sub>, &hellip;, b<sub>n</sub>. Then
                   <section>
                     <table>
                       <tr>
@@ -1317,7 +1429,7 @@
                       </tr>
                     </table>
                   </section>
-                  are linear combinations of the vectors in <var>S</var>, that is <var>x</var>+<var>y</var> &in; span(S) and <var>cx</var> &in; span(S). Thus span(S) is closed under vector addition and scalar multiplication.
+                  are linear combinations of the vectors in <var>S</var>, that is x+y &in; span(S) and <var>cx</var> &in; span(S). Thus span(S) is closed under vector addition and scalar multiplication.
                 </section>
               </p>
             </section>
@@ -1347,7 +1459,7 @@
             <section>
               w = c<sub>1</sub>w<sub>1</sub> + c<sub>2</sub>w<sub>2</sub> + &hellip; + c<sub>k</sub>w<sub>k</sub>
             </section>
-            for some vectors w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>k</sub> and some scalars <var>c<sub>1</sub></var>, <var>c<sub>2</sub></var>, &hellip;, <var>c<sub>k</sub></var> &in; <var>F</var>.
+            for some vectors w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>k</sub> and some scalars c<sub>1</sub>, c<sub>2</sub>, &hellip;, c<sub>k</sub> &in; <var>F</var>.
             Since <var>S</var> &subseteq; <var>W</var>, we have
             <section>
               w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>k</sub> &in; W
@@ -1422,19 +1534,19 @@
     <section id="subset-and-span" class="proposition">
       <p>
         <strong>Proposition (exercise 1.4.13: subset and span)</strong>:
-        Let <var>S<sub>1</sub></var> and <var>S<sub>2</sub></var> be subsets of a vector space <var>V</var>, then
+        Let S<sub>1</sub> and S<sub>2</sub> be subsets of a vector space <var>V</var>, then
         <section>
           if S<sub>1</sub> &subseteq; S<sub>2</sub>,
           then span(S<sub>1</sub>) &subseteq; span(S<sub>2</sub>)
         </section>
         Proof:
-        Let <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; S<sub>1</sub>, then some linear combination <var>v</var> in span(S<sub>1</sub>)
+        Let v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> &in; S<sub>1</sub>, then some linear combination <var>v</var> in span(S<sub>1</sub>)
         <section>
           <p>
             <section>
               v = a<sub>1</sub>v<sub>1</sub> + a<sub>2</sub>v<sub>2</sub> + &ctdot; + a<sub>n</sub>v<sub>n</sub>
             </section>
-            is also a linear combination of <var>S<sub>2</sub></var> because <var>v<sub>1</sub></var>, <var>v<sub>2</sub></var>, &hellip;, <var>v<sub>n</sub></var> &in; S<sub>2</sub>.
+            is also a linear combination of S<sub>2</sub> because v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> &in; S<sub>2</sub>.
             &marker;
           </p>
         </section>
@@ -1454,7 +1566,7 @@
     <section id="define-linearly-dependent" class="definition">
       <p>
         <strong>Definition (linearly dependent [線形従属])</strong>:
-        A subset <var>S</var> of a vector space <var>V</var> is called linearly dependent if there exist a finite number of distinct vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var> and scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, not all zero, such that
+        A subset <var>S</var> of a vector space <var>V</var> is called linearly dependent if there exist a finite number of distinct vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; <var>S</var> and scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, not all zero, such that
         <section>
           a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
         </section>
@@ -1463,11 +1575,11 @@
     <section id="trivial-representation" class="description">
       <p>
         <strong>Trivial representation</strong>:
-        For any vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var>, we have
+        For any vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>, we have
         <section>
           a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
         </section>
-        if <var>a<sub>1</sub></var> = <var>a<sub>2</sub></var> = &ctdot; = <var>a<sub>n</sub></var> = 0. We call this the trivial representation of <var>0</var> as a linear combination of  <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var>.
+        if a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n</sub> = 0. We call this the trivial representation of 0 as a linear combination of u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>.
       </p>
     </section>
     <section id="zero-vector-linearly-dependent" class="proposition">
@@ -1476,7 +1588,7 @@
         Any set that contains the zero vector is linearly dependent.
       </p>
       <p>
-        Proof: It is immediate that <var>a0</var> = <var>0</var> for any scalar <var>a</var>. Because it is a nontrivial representation of the zero vector as the sole linear combination of vectors in the set, the set is linearly dependent.
+        Proof: It is immediate that a0 = 0 for any scalar <var>a</var>. Because it is a nontrivial representation of the zero vector as the sole linear combination of vectors in the set, the set is linearly dependent.
       </p>
     </section>
     <section id="linearly-dependent-sets" class="proposition">
@@ -1490,11 +1602,11 @@
         Let <var>S</var> be a set and {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>} &in; <var>S</var>.
         <section>
           <p>
-            If <var>S</var> is linearly dependent, then there exist a nontrivial representation of <var>0</var> as a linear combination of vectors in <var>S</var> for some scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, not all zero, such that
+            If <var>S</var> is linearly dependent, then there exist a nontrivial representation of <var>0</var> as a linear combination of vectors in <var>S</var> for some scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, not all zero, such that
             <section>
               a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
             </section>
-            Let <var>a<sub>1</sub></var> be a nonzero scalar, then a vector <var>u<sub>1</sub></var> &in; <var>S</var>
+            Let a<sub>1</sub> be a nonzero scalar, then a vector u<sub>1</sub> &in; <var>S</var>
             <section>
               u<sub>1</sub> = &minus;1 &frasl; a<sub>1</sub> (
                 a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
@@ -1503,7 +1615,7 @@
             can be expressed as a linear combination of the other vectors in <var>S</var>.
           </p>
           <p>
-            Conversely, if at least one of the vectors in <var>S</var>, say <var>u<sub>1</sub></var>, is expressible as a linear combination of the other vectors <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</var> for some scalars <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var> such that
+            Conversely, if at least one of the vectors in <var>S</var>, say u<sub>1</sub>, is expressible as a linear combination of the other vectors u<sub>2</sub>, &hellip;, u<sub>n</sub> for some scalars a<sub>2</sub>, &hellip;, a<sub>n</sub> such that
             <section>
               u<sub>1</sub> =
               a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
@@ -1513,7 +1625,7 @@
               0 = (&minus;1)u<sub>1</sub> +
               a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
             </section>
-            Because the coefficient of <var>u<sub>1</sub></var> is nonzero, <var>S</var> is linear dependent. &marker;
+            Because the coefficient of u<sub>1</sub> is nonzero, <var>S</var> is linear dependent. &marker;
           </p>
         </section>
       </p>
@@ -1545,7 +1657,7 @@
     <section id="superset-dependent" class="proposition">
       <p>
         <strong>Theorem (1.6: superset linearly dependent)</strong>:
-        Let <var>S<sub>1</sub></var> and <var>S<sub>2</sub></var> be subsets of a vector space <var>V</var> such that S<sub>1</sub> &subseteq; S<sub>2</sub> &subseteq; V, then
+        Let S<sub>1</sub> and S<sub>2</sub> be subsets of a vector space <var>V</var> such that S<sub>1</sub> &subseteq; S<sub>2</sub> &subseteq; V, then
         <section>
           <table>
             <tr>
@@ -1557,18 +1669,18 @@
         </section>
         Proof:
         <section>
-          Since <var>S<sub>1</sub></var> is linearly dependent, there exist a finite number of distinct vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S<sub>1</sub></var> and scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, not all zero, such that
+          Since S<sub>1</sub> is linearly dependent, there exist a finite number of distinct vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; S<sub>1</sub> and scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, not all zero, such that
           <section>
             a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
           </section>
-          <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S<sub>2</sub></var>, hence <var>S<sub>2</sub></var> is also linear dependent.
+          u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; S<sub>2</sub>, hence S<sub>2</sub> is also linear dependent.
         </section>
       </p>
     </section>
     <section id="subset-independent" class="proposition">
       <p>
         <strong>Corollary (subset linearly independent)</strong>:
-        Let <var>S<sub>1</sub></var> and <var>S<sub>2</sub></var> be subsets of a vector space <var>V</var> such that S<sub>1</sub> &subseteq; S<sub>2</sub> &subseteq; V, then
+        Let S<sub>1</sub> and S<sub>2</sub> be subsets of a vector space <var>V</var> such that S<sub>1</sub> &subseteq; S<sub>2</sub> &subseteq; V, then
         <section>
           <table>
             <tr>
@@ -1635,24 +1747,20 @@
         <section>
           <table>
             <tr>
-              <td>
-                <var>u</var> &notin; <var>S</var>
-              </td>
+              <td>u &notin; S</td>
               <td>and</td>
-              <td>
-                <var>u</var> &in; <var>V</var>
-              </td>
+              <td>u &in; V</td>
             </tr>
           </table>
         </section>
         then <var>S</var> &cup; {u} is linearly dependent if and only if
         <section>
-          <var>u</var> &in; span(S)
+          u &in; span(S)
         </section>
         Proof:
         <section>
           <p>
-            If <var>S</var> &cup; {u} is linearly dependent, then there are vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> &in; <var>S</var> such that <var>au</var> + <var>a<sub>1</sub>u<sub>1</sub></var> + <var>a<sub>2</sub>u<sub>2</sub></var> + &ctdot; + <var>a<sub>n</sub>u<sub>n</sub></var> = 0 for some nonzero scalars <var>a</var>, <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>n</sub></var>, so
+            If <var>S</var> &cup; {u} is linearly dependent, then there are vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; <var>S</var> such that au + a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0 for some nonzero scalars a, a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, so
             <section>
               u
               = &minus;1 &frasl; a
@@ -1661,16 +1769,16 @@
             is a linear combination of vectors in <var>S</var>, it follows that <var>u</var> &in; span(S).
           </p>
           <p>
-            Conversely, if <var>u</var> &in; span(S), then there exist vectors <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>m</sub></var> &in; <var>S</var> and scalars <var>a<sub>1</sub></var>, <var>a<sub>2</sub></var>, &hellip;, <var>a<sub>m</sub></var>
+            Conversely, if u &in; span(S), then there exist vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub> &in; <var>S</var> and scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>m</sub>
             <section>
               <table>
                 <tr>
                   <td>such that</td>
                   <td>
-                    <var>u</var>
-                    = <var>a<sub>1</sub>u<sub>1</sub></var>
-                    + <var>a<sub>2</sub>u<sub>2</sub></var> + &ctdot;
-                    + <var>a<sub>m</sub>u<sub>m</sub></var>
+                    u
+                    = a<sub>1</sub>u<sub>1</sub>
+                    + a<sub>2</sub>u<sub>2</sub> + &ctdot;
+                    + a<sub>m</sub>u<sub>m</sub>
                   </td>
                 </tr>
                 <tr>
@@ -1684,7 +1792,7 @@
                 </tr>
               </table>
             </section>
-            Note that <var>u</var> &ne; <var>u<sub>i</sub></var> (<var>i</var> = 1, 2, &hellip;, <var>m</var>), because <var>u</var> &notin; <var>S</var>. And also note that the coefficient of <var>u</var> in this linear combination is &minus;1 (nonzero). Thus {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, u} is linearly dependent, it follows that <var>S</var> &cup; {u} is also linearly dependent by Theorem (linearly dependent span).
+            Note that u &ne; u<sub>i</sub> (i = 1, 2, &hellip;, m), because u &notin; <var>S</var>. And also note that the coefficient of <var>u</var> in this linear combination is &minus;1 (nonzero). Thus {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, u} is linearly dependent, it follows that <var>S</var> &cup; {u} is also linearly dependent by Theorem (linearly dependent span).
             &marker;
           </p>
         </section>
@@ -1712,8 +1820,8 @@
                   <td>it follows</td>
                 </tr>
                 <tr>
-                  <td>u = (&minus; b &frasl; a) v</td>
-                  <td>because <var>a</var> &ne; 0</td>
+                  <td>u = (&minus;b &frasl; a) v</td>
+                  <td>because a &ne; 0</td>
                 </tr>
               </table>
             </section>
@@ -1742,16 +1850,15 @@
     <section id="define-basis" class="definition">
       <p>
         <strong>Definition (basis [基底])</strong>:
-        A subset <var>&Beta;</var> of a vector space <var>V</var> is called a basis for <var>V</var> if
+        A subset &Beta; of a vector space <var>V</var> is called a basis for <var>V</var> if
         <ul>
-          <li><var>&Beta; is linearly independent</var></li>
+          <li>&Beta; is linearly independent</li>
           <li>
-            <var>&Beta;</var> generates <var>V</var>
-            &ctdot; i.e., 
-            span(&Beta;) = <var>V</var>
+            &Beta; generates <var>V</var>
+            &ctdot; i.e., span(&Beta;) = <var>V</var>
           </li>
         </ul>
-        We also say that <var>&Beta;</var> forms a basis for <var>V</var>.
+        We also say that &Beta; forms a basis for <var>V</var>.
       </p>
     </section>
     <section id="basis-is-building-block" class="description">
@@ -1780,17 +1887,17 @@
     <section id="basis-unique-linear-combination" class="proposition">
       <p>
         <strong>Theorem (1.8: basis unique linear combination)</strong>:
-        Let <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> be distinct vectors in a vector space <var>V</var>, then, <var>&Beta;</var> = { <var>u<sub>1</sub></var>, <var>u<sub>2</sub></var>, &hellip;, <var>u<sub>n</sub></var> } is a basis for <var>V</var> if and only if
+        Let u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> be distinct vectors in a vector space <var>V</var>, then, &Beta; = { u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> } is a basis for <var>V</var> if and only if
         <section>
-          each vector <var>u</var> &in; <var>V</var> can be uniquely expressed as a linear combination of vectors of <var>&Beta;</var>.
+          each vector <var>u</var> &in; <var>V</var> can be uniquely expressed as a linear combination of vectors of &Beta;.
         </section>
       </p>
       <p>
         Proof:
-        Let <var>V</var> be a vector space generated by <var>&Beta;</var> &mdash; that is, span(&Beta;) = <var>V</var>.
+        Let <var>V</var> be a vector space generated by &Beta; &mdash; that is, span(&Beta;) = <var>V</var>.
         <section>
           <p>
-            Let <var>&Beta;</var> be a basis for <var>V</var>. If <var>u</var> &in; <var>V</var>, then <var>u</var> &in; span(&Beta;) because span(&Beta;) = <var>V</var>. Thus <var>u</var> is a linear combination of the vector of <var>&Beta;</var>. Suppose that
+            Let &Beta; be a basis for <var>V</var>. If <var>u</var> &in; <var>V</var>, then <var>u</var> &in; span(&Beta;) because span(&Beta;) = <var>V</var>. Thus <var>u</var> is a linear combination of the vector of &Beta;. Suppose that
             <section>
               <table>
                 <tr>
@@ -1811,25 +1918,25 @@
             <section>
               0 = (a<sub>1</sub> &minus; b<sub>1</sub>) u<sub>1</sub> + (a<sub>2</sub> &minus; b<sub>2</sub>) u<sub>2</sub> + &ctdot; + (a<sub>n</sub> &minus; b<sub>n</sub>) u<sub>n</sub>
             </section>
-            Since <var>&Beta;</var> is linear independent by definition of the basis, it follows that
+            Since &Beta; is linear independent by definition of the basis, it follows that
             <section>
               (a<sub>1</sub> &minus; b<sub>1</sub>) = (a<sub>2</sub> &minus; b<sub>2</sub>) = &ctdot; = (a<sub>n</sub> &minus; b<sub>n</sub>) = 0
             </section>
             Hence
               a<sub>1</sub> = b<sub>1</sub>, a<sub>2</sub> = b<sub>2</sub>, &hellip;, a<sub>n</sub> = b<sub>n</sub>,
-            and so <var>u</var> &in; <var>V</var> can be uniquely expressed as a linear combination of vectors of <var>&Beta;</var>.
+            and so <var>u</var> &in; <var>V</var> can be uniquely expressed as a linear combination of vectors of &Beta;.
           </p>
           <p>
-            Conversely let <var>u</var> &in; <var>V</var> is uniquely expressible as a linear combination of vectors of <var>&Beta;</var>. In order to prove by contradiction that <var>&Beta;</var> is a basis for <var>V</var>, suppose that <var>&Beta;</var> is not a basis of <var>V</var>, that is, <var>&Beta;</var> is linearly dependent.
+            Conversely let <var>u</var> &in; <var>V</var> is uniquely expressible as a linear combination of vectors of &Beta;. In order to prove by contradiction that &Beta; is a basis for <var>V</var>, suppose that &Beta; is not a basis of <var>V</var>, that is, &Beta; is linearly dependent.
             <ul>
               <li>
-                We know from Theorem (sets and linearly dependent) that since <var>&Beta;</var> &subseteq; span(&Beta;) = <var>V</var>, the set <var>V</var> is also linearly dependent.
+                We know from Theorem (sets and linearly dependent) that since &Beta; &subseteq; span(&Beta;) = <var>V</var>, the set <var>V</var> is also linearly dependent.
               </li>
               <li>
                 Hence from Theorem (linearly dependent sets), at least one of the vectors in <var>V</var>, say <var>u</var>, is expressible as a linear combination of the other vectors in <var>V</var> &mdash; a contradiction to the hypothesis of this implication.
               </li>
             </ul>
-            Hence <var>&Beta;</var> is linearly independent and a basis of <var>V</var>. &marker;
+            Hence &Beta; is linearly independent and a basis of <var>V</var>. &marker;
           </p>
         </section>
       </p>
