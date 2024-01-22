@@ -1091,7 +1091,7 @@
           <p>z<sub>1</sub>+z<sub>2</sub> &in; (W<sub>1</sub>+W<sub>2</sub>):</p>
           <section>
             <p>
-              Let x<sub>1</sub>, x<sub>2</sub> &in; W<sub>1</sub>, and y<sub>1</sub>, y<sub>2</sub> &in; W<sub>2</sub>. Then x<sub>1</sub>+x<sub>2</sub> &in; W<sub>1</sub>, and y<sub>1</sub>+y<sub>2</sub> &in; W<sub>2</sub>. Thus by definition of sum of subsets, we have
+              Let x<sub>1</sub>, x<sub>2</sub> &in; W<sub>1</sub>, and y<sub>1</sub>, y<sub>2</sub> &in; W<sub>2</sub>. Then x<sub>1</sub>+x<sub>2</sub> &in; W<sub>1</sub>, and y<sub>1</sub>+y<sub>2</sub> &in; W<sub>2</sub>, because W<sub>1</sub> and W<sub>2</sub> are subspaces. It follows that by definition of sum of subsets
               <section>
                 <table>
                   <tr>
@@ -1099,25 +1099,10 @@
                       (x<sub>1</sub>+x<sub>2</sub>) + (y<sub>1</sub>+y<sub>2</sub>)
                       &in; (W<sub>1</sub>+W<sub>2</sub>)
                     </td>
-                    <td>&ctdot; (*1)</td>
                   </tr>
                 </table>
               </section>
-              But we can find two elements z<sub>1</sub>, z<sub>2</sub> &in; (W<sub>1</sub>+W<sub>2</sub>) such that
-              <section>
-                <table>
-                  <tr>
-                    <td>
-                      z<sub>1</sub> = x<sub>1</sub>+y<sub>1</sub>
-                    </td>
-                    <td>and</td>
-                    <td>
-                      z<sub>2</sub> = x<sub>2</sub>+y<sub>2</sub> 
-                    </td>
-                  </tr>
-                </table>
-              </section>
-              Hence
+              But we can find two elements z<sub>1</sub>, z<sub>2</sub> &in; (W<sub>1</sub>+W<sub>2</sub>) such that z<sub>1</sub> = x<sub>1</sub>+y<sub>1</sub> and z<sub>2</sub> = x<sub>2</sub>+y<sub>2</sub>. Then
               <section>
                 <table>
                   <tr>
@@ -1140,32 +1125,19 @@
                       &in; V
                     </td>
                   </tr>
-                  <tr>
-                    <td></td>
-                    <td>
-                      &in; (W<sub>1</sub>+W<sub>2</sub>)
-                    </td>
-                    <td>&because; (*1)</td>
-                  </tr>
                 </table>
               </section>
+              Hence z<sub>1</sub>+z<sub>2</sub> &in; (W<sub>1</sub>+W<sub>2</sub>).
             </p>
           </section>
           <p>az &in; (W<sub>1</sub>+W<sub>2</sub>):</p>
           <section>
             <p>
-              Let <var>x</var> &in; W<sub>1</sub>, <var>y</var> &in; W<sub>2</sub>, and <var>a</var> be a scalar. Then ax &in; W<sub>1</sub>, and ay &in; W<sub>2</sub>. Thus by definition of of sum of subsets, we have
+              Let <var>x</var> &in; W<sub>1</sub>, <var>y</var> &in; W<sub>2</sub>, and <var>a</var> be a scalar. Then <var>ax</var> &in; W<sub>1</sub> and <var>ay</var> &in; W<sub>2</sub>, because W<sub>1</sub> and W<sub>2</sub> are subspaces. It follows that by definition of of sum of subsets
               <section>
-                <table>
-                  <tr>
-                    <td>
-                      ax+ay &in; (W<sub>1</sub>+W<sub>2</sub>)
-                    </td>
-                    <td>&ctdot; (*2)</td>
-                  </tr>
-                </table>
+                ax+ay &in; (W<sub>1</sub>+W<sub>2</sub>)
               </section>
-              But we can find an element <var>z</var> &in; (W<sub>1</sub>+W<sub>2</sub>) such that <var>z</var> = x+y. Hence
+              But we can find an element <var>z</var> &in; (W<sub>1</sub>+W<sub>2</sub>) such that <var>z</var> = x+y. Then
               <section>
                 <table>
                   <tr>
@@ -1178,10 +1150,24 @@
                     <td>= ax+ay</td>
                     <td>&because; x, y &in; V, and <var>a</var> is a scalar</td>
                   </tr>
+                </table>
+              </section>
+              Hence <var>az</var> &in; (W<sub>1</sub>+W<sub>2</sub>).
+            </p>
+          </section>
+          (W<sub>1</sub>+W<sub>2</sub>) contains both W<sub>1</sub> and W<sub>2</sub>.
+          <section>
+            <p>
+              Since W<sub>1</sub> and W<sub>2</sub> contain 0, for any element <var>x</var> &in; W<sub>1</sub> and any element <var>y</var> &in; W<sub>2</sub>,
+              <section>
+                <table>
                   <tr>
-                    <td></td>
-                    <td>&in; (W<sub>1</sub>+W<sub>2</sub>)</td>
-                    <td>&because; (*2) &marker;</td>
+                    <td>
+                      x = x+0 &in; (W<sub>1</sub>+W<sub>2</sub>)
+                    </td>
+                    <td>
+                      y = 0+y &in; (W<sub>1</sub>+W<sub>2</sub>)
+                    </td>
                   </tr>
                 </table>
               </section>
