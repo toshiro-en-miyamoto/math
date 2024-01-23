@@ -553,6 +553,98 @@
           </tr>
         </table>
       </section>
+      Proof:
+      We show that (1) W<sub>1</sub> and W<sub>2</sub> are subspaces of F<sup>n</sup>, and (2) W<sub>1</sub> &cap; W<sub>2</sub> = {0} and W<sub>1</sub>+W<sub>2</sub> = F<sup>n</sup>.
+      <section>
+        <p>(1a) W<sub>1</sub> is a subspace:</p>
+        <section>
+          <p>
+            By definition of W<sub>1</sub>, it contains the zero tuple (0, 0, &hellip;, 0) where a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n&minus;1</sub> = 0.
+          </p>
+          <p>
+            Let <var>r</var>, <var>s</var> &in; W<sub>1</sub> such that
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    r =
+                    (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n-1</sub>, 0)
+                  </td>
+                  <td>
+                    s =
+                    (b<sub>1</sub>, b<sub>2</sub>, &hellip;, b<sub>n-1</sub>, 0)
+                  </td>
+                </tr>
+              </table>
+            </section>
+            where a<sub>i</sub> and b<sub>i</sub> are scalars. Then the vector addition(TA) and the scalar multiplication (TM) defined in Proposition (F<sup>n</sup> as a vector space) allow us to have
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    r+s =
+                    (a<sub>1</sub>+b<sub>1</sub>, a<sub>2</sub>+b<sub>2</sub>, &hellip;, a<sub>n-1</sub>+b<sub>n-1</sub>, 0)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    cr =
+                    (ca<sub>1</sub>, ca<sub>2</sub>, &hellip;, ca<sub>n-1</sub>, 0)
+                  </td>
+                </tr>
+              </table>
+            </section>
+            for any scalar <var>c</var>. It is immediate that r+s and cr are tuples contained in W<sub>1</sub>. Hence W<sub>1</sub> is closed under vector addition and scalar multiplication.
+          </p>
+        </section>
+        <p>(1b) W<sub>2</sub> is a subspace:</p>
+        <section>
+          <p>
+            By definition of W<sub>2</sub>, it contains the zero tuple (0, 0, &hellip;, 0) where a<sub>n = 0.
+          </p>
+          <p>
+            Let <var>t</var>, <var>u</var> &in; W<sub>2</sub> such that
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    t = (0, 0, &hellip;, 0, a<sub>n</sub>)
+                  </td>
+                  <td>
+                    u = (0, 0, &hellip;, 0, b<sub>n</sub>)
+                  </td>
+                </tr>
+              </table>
+            </section>
+            where a<sub>n</sub> and b<sub>n</sub> are scalars. Similarly with W<sub>1</sub>,
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    t+u =
+                    (0, 0, &hellip;, 0, a<sub>n</sub>+b<sub>n</sub>)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ct = (0, 0, &hellip;, 0, ca<sub>n</sub>)
+                  </td>
+                </tr>
+              </table>
+            </section>
+            for any scalar <var>c</var>. It is immediate that t+u and ct are tuples contained in W<sub>2</sub>. Hence W<sub>2</sub> is closed under vector addition and scalar multiplication.
+          </p>
+        </section>
+        <p>(2)
+          W<sub>1</sub> &cap; W<sub>2</sub> = {0} and
+          W<sub>1</sub>+W<sub>2</sub> = F<sup>n</sup>:
+          <section>
+            <p>
+              Now we know that W<sub>1</sub> and W<sub>2</sub> are subspaces, hence the zero tuple is contained in both W<sub>1</sub> and W<sub>2</sub>.
+            </p>
+          </section>
+        </p>
+      </section>
     </p>
   </section>
 </section>
