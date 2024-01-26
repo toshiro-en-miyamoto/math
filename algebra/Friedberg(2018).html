@@ -1207,6 +1207,46 @@
         </section>
       </p>
     </section>
+    <section class="proposition">
+      <p>
+        <strong>Proposition (exercise 1.3.30: direct sum as unique vectors)</strong>:
+        Let W<sub>1</sub> and W<sub>2</sub> be subspaces of a vector space <var>V</var>, then for <var>x</var> &in; W<sub>1</sub> and <var>y</var> &in; W<sub>2</sub>
+        <section>
+          <table>
+            <tr>
+              <td>
+                V = W<sum>1</sum>&CirclePlus;W<sub>2</sub>
+              </td>
+              <td>&iff;</td>
+              <td>
+                each vector in V can be uniquely written as x+y
+              </td>
+            </tr>
+          </table>
+        </section>
+        Proof:
+        Let x<sub>1</sub> &in; W<sub>1</sub> and y<sub>1</sub> &in; W<sub>2</sub>.
+        <section>
+          <p>
+            If V = W<sum>1</sum>&CirclePlus;W<sub>2</sub>, then
+            <ul>
+              <li>
+                If x+y = x<sub>1</sub>+y<sub>1</sub> but x&ne;x<sub>1</sub> and y&ne;y<sub>1</sub>, then we have x+(&minus;x<sub>1</sub>) = y<sub>1</sub>+(&minus;y). This is, y<sub>1</sub>+(&minus;y) &in; W<sub>1</sub> since x+(&minus;x<sub>1</sub>) &in; W<sub>1</sub>, a contradiction to (W<sub>1</sub> &cap; W<sub>2</sub>) = {0}.
+              </li>
+              <li>
+                If x+y=x<sub>1</sub>+y, then x=x<sub>1</sub> &mdash; obviously when y=0 , or by Cancellation Law when y&ne;0. Similarly, x+y = x+y<sub>1</sub> &Implies; y=y<sub>1</sub>.
+              </li>
+              <li>
+                Thus, x+y = x<sub>1</sub>+y<sub>1</sub> if and only if x=x<sub>1</sub> and y=y<sub>1</sub> &mdash; each vector in <var>V</var> can be uniquely written as x+y.
+              </li>
+            </ul>
+          </p>
+          <p>
+            If x+y = x<sub>1</sub>+y<sub>1</sub> if and only if x=x<sub>1</sub> and y=y<sub>1</sub>, but let a non-zero vector <var>z</var> &in; (W<sub>1</sub> &cap; W<sub>2</sub>). Then we have two vectors in W<sub>1</sub>+W<sub>2</sub>, z+0 and 0+z. Since z+0 = 0+z = z, each of the two vectors can be written by the other, a contradiction. Thus, (W<sub>1</sub> &cap; W<sub>2</sub>) = {0}. &marker;
+          </p>
+        </section>
+      </p>
+    </section>
   </section>
   <section id="linear-combinations">
     <h2>Linear Combinations</h2>
