@@ -640,7 +640,36 @@
           W<sub>1</sub>+W<sub>2</sub> = F<sup>n</sup>:
           <section>
             <p>
-              Now we know that W<sub>1</sub> and W<sub>2</sub> are subspaces, hence the zero tuple is contained in both W<sub>1</sub> and W<sub>2</sub>.
+              Suppose that there exists a non-zero tuple v = (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>) such that v &in; (W<sub>1</sub> &cap; W<sub>2</sub>). Then by definitions of W<sub>1</sub> and W<sub>2</sub>, a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n</sub> = 0, that is, <var>v</var> is the zero tuple, a contradiction. Therefore, (W<sub>1</sub> &cap; W<sub>2</sub>) doesn't contain non-zero tuples. But since W<sub>1</sub> and W<sub>2</sub> are subspaces, 0 &in; (W<sub>1</sub> &cap; W<sub>2</sub>). Hence, (W<sub>1</sub> &cap; W<sub>2</sub>) = {0}.
+            </p>
+            <p>
+              By definition of W<sub>1</sub> and W<sub>2</sub>, for some scalars a<sub>i</sub> where 1 &le; i &le; n,
+              <section>
+                <table>
+                  <tr>
+                    <td>F<sup>n</sup></td>
+                    <td>= {
+                        (a<sub>1</sub>, a<sub>2</sub>, &hellip;,
+                        a<sub>n-1</sub>, a<sub>n</sub>)
+                      }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>= {
+                        (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n-1</sub>, 0)
+                      + (0, 0, &hellip;, 0, a<sub>n</sub>)
+                      }
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>=
+                      W<sub>1</sub>+W<sub>2</sub> &marker;
+                    </td>
+                  </tr>
+                </table>
+              </section>
             </p>
           </section>
         </p>
