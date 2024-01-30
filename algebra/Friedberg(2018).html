@@ -461,12 +461,10 @@
           </table>
         </section>
         Proof:
-        By the vector space axiom, we know that there exists an additive inverse, say <var>u</var>, of the vector <var>z</var> such that
         <section>
-          <section>
-            z+u = 0
-          </section>
-          Thus
+          <p>
+            By the vector space axiom, we know that there exists an additive inverse, say <var>u</var>, of the vector <var>z</var> such that z+u = 0. Thus
+          </p>
           <section>
             <table>
               <tr>
@@ -516,8 +514,10 @@
       </p>
       <p>
         Proof:
-        Let <var>V</var> be a vector space, and <var>x &in; V</var>. Suppose that <var>0&prime; &in; V</var> is an zero vector, too. Then,
         <section>
+          <p>
+            Let <var>V</var> be a vector space, and <var>x &in; V</var>. Suppose that <var>0&prime; &in; V</var> is an zero vector, too. Then,
+          </p>
           <section>
             <table>
               <tr>
@@ -550,8 +550,10 @@
       </p>
       <p>
         Proof:
-        Suppose that for a vector <var>x</var>, there exist two distinct additive inverses. Since the zero vector is unique,
         <section>
+          <p>
+            Suppose that for a vector <var>x</var>, there exist two distinct additive inverses. Since the zero vector is unique,
+          </p>
           <section>
             0 = x+(&minus;x) = x+(&minus;x&prime;)
           </section>
@@ -914,11 +916,14 @@
     <section id="union-as-subspace" class="proposition">
       <p>
         <strong>Proposition (exercise 1.3.19: union as subspace)</strong>:
-        Let W<sub>1</sub> and W<sub>2</sub> be subspaces of a vector space <var>V</var>, then (W<sub>1</sub> &Union; W<sub>2</sub>) is a subspace of <var>V</var>
+        Let W<sub>1</sub> and W<sub>2</sub> be subspaces of a vector space <var>V</var>, then
         <section>
           <table>
             <tr>
-              <td>if and only if</td>
+              <td>
+                (W<sub>1</sub> &Union; W<sub>2</sub>) is a subspace of V
+              </td>
+              <td>&iff;</td>
               <td>
                 (W<sub>1</sub> &subseteq; W<sub>2</sub>) &or;
                 (W<sub>2</sub> &subseteq; W<sub>1</sub>)
@@ -1261,9 +1266,17 @@
       <p>
         <strong>Proposition (exercise 1.3.31.a: coset as subspace)</strong>:
         <section>
-          <p>
-            v+W is a subspace of <var>V</var> if and only if v &in; W
-          </p>
+          <table>
+            <tr>
+              <td>
+                v+W is a subspace of V
+              </td>
+              <td>&iff;</td>
+              <td>
+                v &in; W
+              </td>
+            </tr>
+          </table>
         </section>
       </p>
       <p>
@@ -1272,13 +1285,13 @@
           <p>v+W is a subspace of V &Implies; v &in; W:</p>
           <section>
             <p>
-              If v &notin; W, then &minus;v &notin; W. It follows that any element in { v+w : w &in; W } can not be the zero vector, a contradiction to that v+W is a subspace of V. Hence v &in; W.
+              If v &notin; W, then &minus;v &notin; W. It follows 0 &notin; { v+w : w &in; W }, a contradiction to that v+W is a subspace of V. Hence v &in; W.
             </p>
           </section>
           <p>v &in; W &Implies; v+W is a subspace of V:</p>
           <section>
             <p>
-              If v &in; W, then &minus;v &in; W. But if v+W is not a subspace of V, then 0 = v+(&minus;v) &notin; v+W, following that &minus;v &notin; W, a contradiction. Therefore v+W is a subspace.
+              If v &in; W, then since W is a subspace of V, v+w &in; W for any w &in; W. Therefore, v+W = W, a subspace of V.
             </p>
           </section>
         </section>
@@ -1304,9 +1317,9 @@
         </section>
       </p>
     </section>
-    <section id="unqie-coset" class="proposition">
+    <section id="coset-equality" class="proposition">
       <p>
-        <strong>Proposition (exercise 1.3.31.b: unique coset)</strong>:
+        <strong>Proposition (exercise 1.3.31.b: coset equality)</strong>:
         With addition and scalar multiplication defined by Definition (coset operations), for v<sub>1</sub>, v<sub>2</sub> &in; V
         <section>
           <table>
@@ -1326,7 +1339,58 @@
           </p>
           <section>
             <p>
-              If v<sub>1</sub>+W = v<sub>2</sub>+W, then v<sub>1</sub>+w = v<sub>2</sub>+w for any w &in; W, that is, v<sub>1</sub> = v<sub>2</sub> by Theorem 1.1 (cancellation law for vector addition).
+              If v<sub>1</sub>+W = v<sub>2</sub>+W, then
+              <section>
+                <table>
+                  <tr>
+                    <td colspan="3">
+                      (&minus;v<sub>2</sub>)+(v<sub>2</sub>+W)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>=
+                      {&minus;v<sub>2</sub>+v<sub>2</sub>+w : w &in; W}
+                    </td>
+                    <td>
+                      by definition of coset
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>= W</td>
+                    <td>is a subspace of V</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>=
+                      (&minus;v<sub>2</sub>)+(v<sub>1</sub>+W)
+                    </td>
+                    <td>
+                      since v<sub>1</sub>+W = v<sub>2</sub>+W
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>=
+                      {&minus;v<sub>2</sub>+v<sub>1</sub>+w : w &in; W}
+                    </td>
+                    <td>
+                      by definition of coset
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>=
+                      (v<sub>1</sub>&minus;v<sub>2</sub>)+W
+                    </td>
+                    <td>
+                      by definition of coset
+                    </td>
+                  </tr>
+                </table>
+              </section>
+              Thus (v<sub>1</sub>&minus;v<sub>2</sub>)+W is a subspace of V, therefore (v<sub>1</sub>&minus;v<sub>2</sub>) &in; W by Proposition (coset as subspace).
             </p>
           </section>
           <p>
@@ -1336,7 +1400,51 @@
           </p>
           <section>
             <p>
-              If v<sub>1</sub>&minus;v<sub>2</sub> &in; W, then v<sub>2</sub>+w = v<sub>2</sub>+(v<sub>1</sub>&minus;v<sub>2</sub>) = v<sub>1</sub>+0.
+              If (v<sub>1</sub>&minus;v<sub>2</sub>) &in; W, then since (v<sub>1</sub>&minus;v<sub>2</sub>)+W = W by Proposition (coset as subspace),
+              <section>
+                <table>
+                  <tr>
+                    <td colspan="3">
+                      v<sub>2</sub>+W
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>=
+                      v<sub>2</sub>+((v<sub>1</sub>&minus;v<sub>2</sub>)+W)
+                    </td>
+                    <td>since
+                      (v<sub>1</sub>&minus;v<sub>2</sub>)+W = W
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>= {
+                      v<sub>2</sub>+((v<sub>1</sub>&minus;v<sub>2</sub>)+w) : w &in; W
+                      }
+                    </td>
+                    <td>
+                      by definition of coset
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>=
+                      { v<sub>1</sub>+w : w &in; W}
+                    </td>
+                    <td>
+                      since v<sub>1</sub>, v<sub>2</sub>, w &in; V
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>= v<sub>1</sub>+W</td>
+                    <td>
+                      by definition of coset
+                    </td>
+                  </tr>
+                </table>
+              </section>
             </p>
           </section>
         </section>
