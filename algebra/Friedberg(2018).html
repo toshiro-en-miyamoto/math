@@ -1291,7 +1291,7 @@
           <p>v &in; W &Implies; v+W is a subspace of V:</p>
           <section>
             <p>
-              If v &in; W, then since W is a subspace of V, v+w &in; W for any w &in; W. Therefore, v+W = W, a subspace of V.
+              If v &in; W, then since W is a subspace of V, v+w &in; W for any w &in; W. Therefore, v+W = W, a subspace of V. &marker;
             </p>
           </section>
         </section>
@@ -1352,9 +1352,7 @@
                     <td>=
                       {&minus;v<sub>2</sub>+v<sub>2</sub>+w : w &in; W}
                     </td>
-                    <td>
-                      by definition of coset
-                    </td>
+                    <td>by Definition (coset)</td>
                   </tr>
                   <tr>
                     <td></td>
@@ -1375,18 +1373,14 @@
                     <td>=
                       {&minus;v<sub>2</sub>+v<sub>1</sub>+w : w &in; W}
                     </td>
-                    <td>
-                      by definition of coset
-                    </td>
+                    <td>by Definition (coset)</td>
                   </tr>
                   <tr>
                     <td></td>
                     <td>=
                       (v<sub>1</sub>&minus;v<sub>2</sub>)+W
                     </td>
-                    <td>
-                      by definition of coset
-                    </td>
+                    <td>by Definition (coset)</td>
                   </tr>
                 </table>
               </section>
@@ -1423,9 +1417,7 @@
                       v<sub>2</sub>+((v<sub>1</sub>&minus;v<sub>2</sub>)+w) : w &in; W
                       }
                     </td>
-                    <td>
-                      by definition of coset
-                    </td>
+                    <td>by Definition (coset)</td>
                   </tr>
                   <tr>
                     <td></td>
@@ -1439,9 +1431,7 @@
                   <tr>
                     <td></td>
                     <td>= v<sub>1</sub>+W</td>
-                    <td>
-                      by definition of coset
-                    </td>
+                    <td>by Definition (coset) &marker;</td>
                   </tr>
                 </table>
               </section>
@@ -1471,12 +1461,14 @@
         <section>
           <table>
             <tr>
+              <td>[1]</td>
               <td colspan="2">
                 (v<sub>1</sub>+W) + (v<sub>2</sub>+W) =
                 (v&prime;<sub>1</sub>+W) + (v&prime;<sub>2</sub>+W)
               </td>
             </tr>
             <tr>
+              <td>[2]</td>
               <td>
                 a(v<sub>1</sub>+W) = a(v&prime;<sub>1</sub>+W)
               </td>
@@ -1484,9 +1476,147 @@
             </tr>
           </table>
         </section>
-        Proof:
+        Proof [1]:
         <section>
-          <p>Oh, yeah.</p>
+          <p>
+            By Proposition (coset equality),
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    v<sub>1</sub>+W = v&prime;<sub>1</sub>+W
+                  </td>
+                  <td>&Implies;</td>
+                  <td>
+                    v<sub>1</sub>&minus;v&prime;<sub>1</sub> &in; W
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    v<sub>2</sub>+W = v&prime;<sub>2</sub>+W
+                  </td>
+                  <td>&Implies;</td>
+                  <td>
+                    v<sub>2</sub>&minus;v&prime;<sub>2</sub> &in; W
+                  </td>
+                </tr>
+              </table>
+            </section>
+            Since <var>W</var> is closed under vector addition,
+            <section>
+              <table>
+                <tr>
+                  <td colspan="3">
+                    (v<sub>1</sub>&minus;v&prime;<sub>1</sub>) +
+                    (v<sub>2</sub>&minus;v&prime;<sub>2</sub>)
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>=
+                    (v<sub>1</sub>+v<sub>2</sub>)
+                    &minus;
+                    (v&prime;<sub>1</sub>+v&prime;<sub>2</sub>)
+                  </td>
+                  <td>
+                    &in; W
+                  </td>
+                </tr>
+              </table>
+            </section>
+            But again by Proposition (coset equality),
+            <section>
+              <table>
+                <tr>
+                  <td>
+                    (v<sub>1</sub>+v<sub>2</sub>)
+                    &minus;
+                    (v&prime;<sub>1</sub>+v&prime;<sub>2</sub>)
+                    &in; W
+                  </td>
+                  <td>&Implies;</td>
+                  <td>
+                    (v<sub>1</sub>+v<sub>2</sub>)+W =
+                    (v&prime;<sub>1</sub>+v&prime;<sub>2</sub>)+W
+                  </td>
+                </tr>
+              </table>
+            </section>
+            Thus we have
+            <section>
+              <table>
+                <tr>
+                  <td colspan="3">
+                    (v<sub>1</sub>+W) + (v<sub>2</sub>+W)
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>=
+                    (v<sub>1</sub>+v<sub>2</sub>)+W
+                  </td>
+                  <td>by Definition (coset operations)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>=
+                    (v&prime;<sub>1</sub>+v&prime;<sub>2</sub>)+W
+                  </td>
+                  <td>by the preceding argument</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>=
+                    (v&prime;<sub>1</sub>+W) + (v&prime;<sub>2</sub>+W)
+                  </td>
+                  <td>by Definition (coset operations)</td>
+                </tr>
+              </table>
+            </section>
+          </p>
+        </section>
+        Proof [2]:
+        <section>
+          <p>
+            If v<sub>1</sub>&minus;v&prime;<sub>1</sub> &in; W, then since <var>W</var> is closed under scalar multiplication,
+            <section>
+              <table>
+                <tr>
+                  <td colspan="2">
+                    a(v<sub>1</sub>&minus;v&prime;<sub>1</sub>)
+                    &in; W
+                  </td>
+                  <td>
+                    since closed under scalar multiplication
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>&Implies;
+                    av<sub>1</sub>&minus;av&prime;<sub>1</sub> &in; W
+                  </td>
+                  <td>since
+                    v<sub>1</sub>, v&prime;<sub>1</sub> &in; V
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  </td>
+                  <td>&Implies;
+                    av<sub>1</sub>+W = av&prime;<sub>1</sub>+W
+                  </td>
+                  <td>by Proposition (coset equality)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>&Implies;
+                    a(v<sub>1</sub>+W) = a(v&prime;<sub>1</sub>+W)
+                  </td>
+                  <td>by Definition (coset operations) &marker;</td>
+                </tr>
+              </table>
+            </section>
+          </p>
         </section>
       </p>
     </section>
