@@ -1255,7 +1255,7 @@
     <section id="define-coset" class="definition">
       <p>
         <strong>Definition (exercise 1.3.31: coset)</strong>:
-        Let <var>W</var> be a subspace of a vector space <var>V</var> over a field <var>F</var>. For any <var>v</var> &in; <var>V</var>, the coset [剰余類] of <var>W</var> containing <var>v</var> is defined as:
+        Let <var>W</var> be a subspace of a vector space <var>V</var> over a field <var>F</var>. For any <var>v</var> &in; <var>V</var>, the coset [コセット] of <var>W</var> containing <var>v</var> is defined as:
         <section>
           {v}+W = { v+w : w &in; W }
         </section>
@@ -1297,21 +1297,45 @@
         </section>
       </p>
     </section>
-    <section id="coset-operations" class="definition">
+    <section id="define-quotient-space" class="definition">
       <p>
-        <strong>Definition (coset operations)</strong>:
-        Addition and scalar multiplication can be defined in the collection S = {v+W : v &in; V} of all cosets of W as follows, for v<sub>1</sub>, v<sub>2</sub> &in; V and for a &in; F:
+        <strong>Definition (quotient space)</strong>:
+        In the collection S = {v+W : v &in; V} &mdash; all cosets of <var>W</var> containing <var>V</var>, addition and scalar multiplication can be defined as;
         <section>
           <table>
             <tr>
               <td>
+                for v<sub>1</sub>, v<sub>2</sub> &in; V,
+              </td>
+              <td>
                 (v<sub>1</sub>+W) + (v<sub>2</sub>+W)
                 = (v<sub>1</sub>+v<sub>2</sub>) + W
               </td>
-              <td>and</td>
+            </tr>
+            <tr>
+              <td>
+                for all v &in; V and a &in; F
+              </td>
               <td>
                 a(v+W) = av+W
               </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+      <p>
+        With the operations, the set <var>S</var> is a vector space, which is called
+        <section>
+          <table>
+            <tr>
+              <td colspan="3">
+                the quotient space [商空間]
+              </td>
+            </tr>
+            <tr>
+              <td>V modulo W</td>
+              <td>&ctdot;</td>
+              <td>denoted, V &frasl; W</td>
             </tr>
           </table>
         </section>
@@ -1320,7 +1344,7 @@
     <section id="coset-equality" class="proposition">
       <p>
         <strong>Proposition (exercise 1.3.31.b: coset equality)</strong>:
-        With addition and scalar multiplication defined by Definition (coset operations), for v<sub>1</sub>, v<sub>2</sub> &in; V
+        With addition and scalar multiplication defined by Definition (quotient space), for v<sub>1</sub>, v<sub>2</sub> &in; V
         <section>
           <table>
             <tr>
@@ -1440,10 +1464,10 @@
         </section>
       </p>
     </section>
-    <section id="well-defined-coset-operations" class="proposition">
+    <section id="well-defined-quotient-space" class="proposition">
       <p>
-        <strong>Proposition (exercise 1.3.31.c: well-defined coset operations)</strong>:
-        Addition and scalar multiplication defined by Definition (coset operations) are well defined, that is, if
+        <strong>Proposition (exercise 1.3.31.c: well-defined quotient space)</strong>:
+        Addition and scalar multiplication defined by Definition (quotient space) are well defined, that is, if
         <section>
           <table>
             <tr>
@@ -1555,7 +1579,7 @@
                   <td>=
                     (v<sub>1</sub>+v<sub>2</sub>)+W
                   </td>
-                  <td>by Definition (coset operations)</td>
+                  <td>by Definition (quotient space)</td>
                 </tr>
                 <tr>
                   <td></td>
@@ -1569,7 +1593,7 @@
                   <td>=
                     (v&prime;<sub>1</sub>+W) + (v&prime;<sub>2</sub>+W)
                   </td>
-                  <td>by Definition (coset operations)</td>
+                  <td>by Definition (quotient space)</td>
                 </tr>
               </table>
             </section>
@@ -1612,11 +1636,142 @@
                   <td>&Implies;
                     a(v<sub>1</sub>+W) = a(v&prime;<sub>1</sub>+W)
                   </td>
-                  <td>by Definition (coset operations) &marker;</td>
+                  <td>by Definition (quotient space) &marker;</td>
                 </tr>
               </table>
             </section>
           </p>
+        </section>
+      </p>
+    </section>
+    <section id="quotient-space-as-vector-space" class="proposition">
+      <p>
+        <strong>
+          Proposition (exercise 1.3.31.d: quotient space as vector space)
+        </strong>:
+        All cosets of <var>W</var> containing <var>V</var>, that is, the set <var>S</var> = { v+W : v &in; V } &mdash; the quotient space <var>V</var> modulo <var>W</var> &mdash; is a vector space with the operations;
+        <section>
+          <table>
+            <tr>
+              <td>
+                for x, y &in; V,
+              </td>
+              <td>
+                (x+W)+(y+W) = (x+y)+W
+              </td>
+            </tr>
+            <tr>
+              <td>
+                for all x &in; V and a &in; F,
+              </td>
+              <td>
+                a(x+W) = ax+W
+              </td>
+            </tr>
+          </table>
+        </section>
+        Proof:
+        <section>
+          <table>
+            <tr>
+              <td rowspan="2">closed</td>
+              <td>vector</td>
+              <td>
+                (x+W)+(y+W) &in; S
+              </td>
+            </tr>
+            <tr>
+              <td>scalar</td>
+              <td>
+                a(x+W) &in; S
+              </td>
+            </tr>
+            <tr>
+              <td>commutative</td>
+              <td>vector</td>
+              <td>
+                (x+W)+(y+W) = (y+W)+(x+W)
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">associative</td>
+              <td>vector</td>
+              <td>
+                {(x+W)+(y+W)}+(z+W) = (x+W)+{(y+W)+(z+W)}
+              </td>
+            </tr>
+            <tr>
+              <td>scalar</td>
+              <td>
+                (ab)(x+W) = a{b(x+W)}
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">the identity</td>
+              <td>vector</td>
+              <td>
+                &Exists;0 &in; S, (x+W)+0 = (x+W)
+              </td>
+            </tr>
+            <tr>
+              <td>scalar</td>
+              <td>
+                1(x+W) = x+W
+              </td>
+            </tr>
+            <tr>
+              <td>the inverse</td>
+              <td>vector</td>
+              <td>
+                &Exists;&minus;(x+W) &in; S, (x+W)+{&minus;(x+W)} = 0
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">distributive</td>
+              <td>vector</td>
+              <td>
+                a{(x+W)+(y+W)} = a(x+W)+a(y+W)
+              </td>
+            </tr>
+            <tr>
+              <td>scalar</td>
+              <td>
+                (a+b)(x+W) = a(x+W)+b(x+W)
+              </td>
+            </tr>
+          </table>
+        </section>
+        <ul>
+          <li>
+            <var>S</var> is closed because <var>V</var> is closed:
+            (x+y) &in; V; ax &in; V.
+          </li>
+          <li>
+            <var>S</var> is commutative because <var>V</var> is commutative:
+            x+y = y+x.
+          </li>
+          <li>
+            <var>S</var> is associative because <var>V</var> is associative:
+            (x+y)+z = x+(y+z); (ab)x = a(bx).
+          </li>
+          <li>
+            0 &in; S: [*1], (x+W)+(0+W) = (x+W)+W = x+W.
+          </li>
+          <li>
+            1(x+W) = x+W: [*1], 1(x+W) = 1x+W = x+W.
+          </li>
+          <li>
+            &minus;(x+W) &in; S: [*1], (x+W)+(&minus;x+W) = {x+(&minus;x)}+W = W.
+          </li>
+          <li>
+            S is vector distributive: [*1], a{(x+W)+(y+W)} = a{(x+y)+W} = a(x+y)+W = (ax+ay)+W = (ax+W)+(ay+W) = a(x+W)+a(y+W).
+          </li>
+          <li>
+            S is scalar distributive: [*1], (a+b)(x+W) = (a+b)x+W = (ax+bx)+W = (ax+W)+(bx+W) = a(x+W)+b(x+W).
+          </li>
+        </ul>
+        <section>
+          *1: by Definition (coset) and Definition (quotient space) &marker;
         </section>
       </p>
     </section>
