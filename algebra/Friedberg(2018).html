@@ -1781,17 +1781,27 @@
     <section id="define-linear-combination" class="definition">
       <p>
         <strong>Definition (linear combination [線形結合])</strong>:
-        Let <var>S</var> be a set of vectors
-        {v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>} in a vector space <var>V</var>.
-        Any vector of the form
+        Let <var>S</var> be a nonempty subset of a vector space <var>V</var>. A vector v &in; V is called
+        <section>
+          a linear combination of vectors of <var>S</var>
+        </section>
+        if there exists a finite number of vectors {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>} &in; <var>S</var> such that
         <section>
           v
-          = a<sub>1</sub>v<sub>1</sub>
-          + a<sub>2</sub>v<sub>2</sub>
+          = a<sub>1</sub>u<sub>1</sub>
+          + a<sub>2</sub>u<sub>2</sub>
           + &ctdot;
-          + a<sub>n</sub>v<sub>n</sub>
+          + a<sub>n</sub>u<sub>n</sub>
         </section>
-        for some scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, is called a linear combination of <var>S</var>.
+        for scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> &in; <var>F</var>. Then we also say that
+        <ul>
+          <li>
+            the vector <var>v</var> is a linear combination of u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>, and
+          </li>
+          <li>
+            a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> are the coefficients of the linear combination.
+          </li>
+        </ul>
       </p>
     </section>
     <section id="zero-vector-linear" class="proposition">
@@ -1883,6 +1893,13 @@
         The span of a subset <var>S</var> of a vector space is the set consisting of all linear combinations of vectors v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> &in; <var>S</var>, denoted
         <section>
           <table>
+            <tr>
+              <td>&lang;S&rang;</td>
+              <td>or</td>
+              <td>
+                &lang;v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub>&rang;
+              </td>
+            </tr>
             <tr>
               <td>span(S)</td>
               <td>or</td>
