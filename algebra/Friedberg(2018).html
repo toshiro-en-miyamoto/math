@@ -2007,53 +2007,33 @@
                 are also linear combinations of the vectors of <var>S</var>, that is, x+y &in; &lang;S&rang; and cx &in; &lang;S&rang;.
               </li>
             </ul>
-            When <var>S</var> contains two or more vectors, u = 1u &in; span(S) for any u &in; S, it follows S &subseteq; span(S). &marker;
+          </p>
+          <p>
+            Observe that u = 1u &in; &lang;S&rang; for any u &in; S, hence [2] S &subseteq; &lang;S&rang;.
+          </p>
+          <p>
+            Lastly, consider again vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub> &in; S, then any vector x &in; &lang;S&rang; has the form of
+            <section>
+              x = a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub>
+                + &ctdot; + a<sub>m</sub>u<sub>m</sub>
+            </section>
+            But if S &subseteq; W, then u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub> &in; W, following that x &in; W by Proposition (linear combination in subspace). Hence x &in; &lang;S&rang; &Implies; x &in; W, that is, [3] &lang;S&rang; &subseteq; W. &marker;
           </p>
         </section>
       </p>
     </section>
-    <section id="spanning-set-subspace-contains-span" class="proposition">
-      <p>
-        <strong>Theorem (1.5.2: spanning set contains span)</strong>:
-        Let <var>S</var> be a subset of a vector space <var>V</var>, and let <var>W</var> be a subspace of <var>V</var>, then
-        <section>
-          If S &subseteq; W, then span(S) &subseteq; W.
-        </section>
-        Proof:
-        <section>
-          <p>
-            If S = &empty;, then it is immediate that &empty; &subset; W and that span(&empty;) = {0} &subseteq; W since any subspace contains the zero vector by Theorem (subspace conditions).
-          </p>
-          <p>
-            If S = {0}, then it is immediate similarly that {0} &subseteq; W and span({0}) = {0} &subseteq; W.
-          </p>
-          <p>
-            If <var>S</var> contains two or more vectors, then let <var>W</var> denote any subspace of <var>V</var> such that S &subseteq; W. If w &in; span(S), then <var>w</var> has the form
-            <section>
-              w = c<sub>1</sub>w<sub>1</sub> + c<sub>2</sub>w<sub>2</sub> + &hellip; + c<sub>k</sub>w<sub>k</sub>
-            </section>
-            for some vectors w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>k</sub> &in; S and some scalars c<sub>1</sub>, c<sub>2</sub>, &hellip;, c<sub>k</sub> &in; F.
-            Since S &subseteq; W,
-            <section>
-              w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>k</sub> &in; W
-            </section>
-            Therefore, w &in; W by Proposition (linear combination in subspace), it follows that span(S) &subseteq; W. &marker;
-          </p>
-        </section>
-      </p>
-    </section>
-    <section id="generate-definition" class="definition">
+    <section id="define-generate" class="definition">
       <p>
         <strong>Definition (generate)</strong>:
-        Let <var>V</var> be a vector space and <var>S</var> a subset of <var>V</var>, then
+        Let <var>S</var> be a subset of a vector space <var>V</var>, then
         <section>
-          if span(S) = V, we say the vectors of S generate (or span) V.
+          if &lang;S&rang; = V, we say the vectors of <var>S</var> generate (or span) <var>V</var>.
         </section>
       </p>
     </section>
     <section id="generate-example3" class="description">
       <p>
-        <strong>Example (vectors generate a vector space)</strong>:
+        <strong>Example (1.4.3: vectors generate a vector space)</strong>:
         The vectors (1,1,0), (1,0,1), and (0,1,1) generate &reals;<sup>3</sup> since an arbitrary vector (a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>) in &reals;<sup>3</sup> is a linear combination of the three given vectors; in fact, the scalars <var>r</var>, <var>s</var> and <var>t</var> for which
         <section>
           <table>
@@ -2082,25 +2062,22 @@
         </strong>:
         A subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var> if and only if
         <section>
-          span(W) = W
+          &lang;W&rang; = W
         </section>
         Proof:
-        If a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var>, then span(W) = <var>W</var>, because
         <section>
+          If a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var>, then &lang;W&rang; = <var>W</var>, because by Proposition (span as subspace)
           <section>
             <table>
               <tr>
-                <td>W &subseteq; span(W)</td>
-                <td>by Lemma (span contains spanning set)</td>
+                <td>W &subseteq; &lang;W&rang;</td>
               </tr>
               <tr>
-                <td>span(W) &subseteq; W</td>
-                <td>by Lemma (spanning set contains span)</td>
+                <td>&lang;W&rang; &subseteq; W</td>
               </tr>
             </table>
           </section>
-          Conversely, we know from Lemma (span is subspace) that span(W) is a subspace of <var>V</var> (since W &subseteq; V), hence <var>W</var> is too.
-          &marker;
+          Conversely, we know from Proposition (span as subspace) that &lang;W&rang; is a subspace of <var>V</var> (since W &subseteq; V), hence <var>W</var> is too. &marker;
         </section>
       </p>
     </section>
