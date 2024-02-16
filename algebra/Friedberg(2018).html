@@ -1918,13 +1918,8 @@
             <tr>
               <td>[1]</td>
               <td>
-                &lang;S&rang; is a subspace of <var>V</var>.
-              </td>
-            </tr>
-            <tr>
-              <td>[2]</td>
-              <td>
-                S &subseteq; &lang;S&rang;
+                &lang;S&rang; is a subspace of <var>V</var>,
+                and S &subseteq; &lang;S&rang;.
               </td>
             </tr>
           </table>
@@ -1933,7 +1928,7 @@
         <section>
           <table>
             <tr>
-              <td>[3]</td>
+              <td>[2]</td>
               <td>
                 S &subseteq; W
               </td>
@@ -1949,7 +1944,7 @@
         Proof:
         <section>
           <p>
-            If S = &empty; or S = {0}, then &lang;S&rang; = {0}. Since {0} is a subspace of any vector space by Proposition (zero subspace), [1] holds for &lang;&empty;&rang; and &lang;0&rang;. It is immediate that [2] holds. Since any subspace contains 0, [3] also holds.
+            If S = &empty; or S = {0}, then &lang;S&rang; = {0}. Since {0} is a subspace of any vector space by Proposition (zero subspace), &lang;S&rang; is a subspace of <var>V</var>. It is immediate that S &subseteq; &lang;S&rang;. Since any subspace contains 0, &lang;S&rang; &subseteq; W.
           </p>
         </section>
         <section>
@@ -1957,8 +1952,7 @@
             If <var>S</var> contains two or more vectors, [1] can be proven by showing that the subspace conditions hold for &lang;S&rang;.
             <ul>
               <li>
-                The zero vector:
-                We know from Proposition (zero vector is a linear combination) that the zero vector is a linear combination of any nonempty subset of <var>V</var>. Hence 0 &in; &lang;S&rang;.
+                0 &in; &lang;S&rang;: We know from Proposition (zero vector is a linear combination) that the zero vector is a linear combination of any nonempty subset of <var>V</var>.
               </li>
               <li>
                 Closed under vector addition and scalar multiplication:
@@ -2006,18 +2000,18 @@
                 </section>
                 are also linear combinations of the vectors of <var>S</var>, that is, x+y &in; &lang;S&rang; and cx &in; &lang;S&rang;.
               </li>
+              <li>
+                Observe that u = 1u &in; &lang;S&rang; for any u &in; S, hence S &subseteq; &lang;S&rang;.
+              </li>
             </ul>
           </p>
           <p>
-            Observe that u = 1u &in; &lang;S&rang; for any u &in; S, hence [2] S &subseteq; &lang;S&rang;.
-          </p>
-          <p>
-            Lastly, consider again vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub> &in; S, then any vector x &in; &lang;S&rang; has the form of
+            For [2], consider vector the x &in; &lang;S&rang; mentioned above,
             <section>
               x = a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub>
                 + &ctdot; + a<sub>m</sub>u<sub>m</sub>
             </section>
-            But if S &subseteq; W, then u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub> &in; W, following that x &in; W by Proposition (linear combination in subspace). Hence x &in; &lang;S&rang; &Implies; x &in; W, that is, [3] &lang;S&rang; &subseteq; W. &marker;
+            But if S &subseteq; W, then u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub> &in; W as well, following that x &in; W by Proposition (linear combination in subspace). Hence x &in; &lang;S&rang; &Implies; x &in; W, that is, &lang;S&rang; &subseteq; W. &marker;
           </p>
         </section>
       </p>
@@ -2060,25 +2054,25 @@
         <strong>
           Proposition (exercise 1.4.12: spanning set spans itself)
         </strong>:
-        A subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var> if and only if
+        Let <var>W</var> be a subset of a vector space <var>V</var>, then
         <section>
-          &lang;W&rang; = W
+          <table>
+            <tr>
+              <td><var>W</var> is a subspace of <var>V</var></td>
+              <td>&iff;</td>
+              <td>&lang;W&rang; = W</td>
+            </tr>
+          </table>
         </section>
         Proof:
-        <section>
-          If a subset <var>W</var> of a vector space <var>V</var> is a subspace of <var>V</var>, then &lang;W&rang; = <var>W</var>, because by Proposition (span as subspace)
-          <section>
-            <table>
-              <tr>
-                <td>W &subseteq; &lang;W&rang;</td>
-              </tr>
-              <tr>
-                <td>&lang;W&rang; &subseteq; W</td>
-              </tr>
-            </table>
-          </section>
-          Conversely, we know from Proposition (span as subspace) that &lang;W&rang; is a subspace of <var>V</var> (since W &subseteq; V), hence <var>W</var> is too. &marker;
-        </section>
+        <ul>
+          <li>
+            By Theorem (span as subspace), W &subseteq; &lang;W&rang;. But the theorem also tells that if <var>W</var> is a subspace of <var>V</var>, then &lang;W&rang; &subseteq; W. Hence, &lang;W&rang; = W.
+          </li>
+          <li>
+            Conversely, we know from the theorem that &lang;W&rang; is a subspace of <var>V</var> such that W &subseteq; &lang;W&rang;. Since &lang;W&rang; = W, the subset <var>W</var> is a subspace too. &marker;
+          </li>
+        </ul>
       </p>
     </section>
     <section id="subset-and-span" class="proposition">
@@ -2086,19 +2080,18 @@
         <strong>Proposition (exercise 1.4.13: subset and span)</strong>:
         Let S<sub>1</sub> and S<sub>2</sub> be subsets of a vector space <var>V</var>, then
         <section>
-          if S<sub>1</sub> &subseteq; S<sub>2</sub>,
-          then span(S<sub>1</sub>) &subseteq; span(S<sub>2</sub>)
+          <table>
+            <td>S<sub>1</sub> &subseteq; S<sub>2</sub></td>
+            <td>&Implies;</td>
+            <td>
+              &lang;S<sub>1</sub>&rang; &subseteq; &lang;S<sub>2</sub>&rang;
+            </td>
+          </table>
         </section>
         Proof:
-        Let v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> &in; S<sub>1</sub>, then some linear combination <var>v</var> in span(S<sub>1</sub>)
+        Let v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> &in; S<sub>1</sub>, then some linear combination <var>v</var> in &lang;S<sub>1</sub>&rang; is also a linear combination of S<sub>2</sub> because v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> &in; S<sub>2</sub>. &marker;
         <section>
-          <p>
-            <section>
-              v = a<sub>1</sub>v<sub>1</sub> + a<sub>2</sub>v<sub>2</sub> + &ctdot; + a<sub>n</sub>v<sub>n</sub>
-            </section>
-            is also a linear combination of S<sub>2</sub> because v<sub>1</sub>, v<sub>2</sub>, &hellip;, v<sub>n</sub> &in; S<sub>2</sub>.
-            &marker;
-          </p>
+          v = a<sub>1</sub>v<sub>1</sub> + a<sub>2</sub>v<sub>2</sub> + &ctdot; + a<sub>n</sub>v<sub>n</sub>
         </section>
       </p>
     </section>
