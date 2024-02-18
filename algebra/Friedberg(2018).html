@@ -2100,16 +2100,19 @@
     <h2>Linear Dependence and Linear Independence</h2>
     <section id="intro-linear-dependence" class="description">
       <p>
-        Let <var>W</var> be a subspace of a vector space <var>V</var>. It is desirable to find a small finite subset <var>S</var> of <var>W</var> that generates <var>W</var>. The search for this subset is to ask
+        Let <var>W</var> be a subspace of a vector space <var>V</var>. It is desirable to find a small finite subset <var>S</var> of <var>W</var> that generates <var>W</var>.
       </p>
-      <ul>
-        <li>
-          whether a vector in <var>S</var> is a linear combination of the other vectors in <var>S</var> (less efficient)
-        </li>
-        <li>
-          whether the zero vector can be expressed as a linear combination of the vectors in <var>S</var> with coefficients that are not all zero (more efficient)
-        </li>
-      </ul>
+    </section>
+    <section id="trivial-representation" class="description">
+      <p>
+        <strong>Term (trivial representation of 0)</strong>:
+        Let <var>S</var> be a subset of a vector space. For any distinct vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; S,
+        <section>
+          a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot;
+          + a<sub>n</sub>u<sub>n</sub> = 0
+        </section>
+        always holds if a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n</sub> = 0. We call this the trivial representation of 0 as a linear combination of u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>.
+      </p>
     </section>
     <section id="define-linearly-dependent" class="definition">
       <p>
@@ -2118,16 +2121,7 @@
         <section>
           a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
         </section>
-      </p>
-    </section>
-    <section id="trivial-representation" class="description">
-      <p>
-        <strong>Trivial representation</strong>:
-        For any vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>, we have
-        <section>
-          a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
-        </section>
-        if a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n</sub> = 0. We call this the trivial representation of 0 as a linear combination of u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>.
+        We call this a nontrivial representation of 0 as a linear combination of u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>.
       </p>
     </section>
     <section id="zero-vector-linearly-dependent" class="proposition">
@@ -2136,18 +2130,18 @@
         Any set that contains the zero vector is linearly dependent.
       </p>
       <p>
-        Proof: It is immediate that a0 = 0 for any scalar <var>a</var>. Because it is a nontrivial representation of the zero vector as the sole linear combination of vectors in the set, the set is linearly dependent.
+        Proof: Because 1&middot;0 = 0 is a nontrivial representation of 0 as a linear combination of vectors in the set.
       </p>
     </section>
     <section id="linearly-dependent-sets" class="proposition">
       <p>
         <strong>Proposition (linearly dependent sets)</strong>:
-        A set is linearly dependent if only if
+        A set <var>S</var> is linearly dependent if only if
         <section>
-          at least one of the vectors in the set is expressible as a linear combination of the other vectors in the set.
+          some vector in <var>S</var> is a linear combination of the other vectors in <var>S</var>
         </section>
         Proof:
-        Let <var>S</var> be a set and {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>} &in; <var>S</var>.
+        Let S = {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>}.
         <section>
           <p>
             If <var>S</var> is linearly dependent, then there exist a nontrivial representation of <var>0</var> as a linear combination of vectors in <var>S</var> for some scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, not all zero, such that
@@ -2160,17 +2154,17 @@
                 a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
               )
             </section>
-            Conversely, if at least one of the vectors in <var>S</var>, say u<sub>1</sub>, is expressible as a linear combination of the other vectors u<sub>2</sub>, &hellip;, u<sub>n</sub> for some scalars a<sub>2</sub>, &hellip;, a<sub>n</sub> such that
+            Conversely, if a vector in <var>S</var>, say u<sub>1</sub>, is a linear combination of the others
             <section>
               u<sub>1</sub> =
               a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
             </section>
-            then from the expression, we have a representation of <var>0</var> as a linear combination of vectors in <var>S</var> such that
+            then we have
             <section>
               0 = (&minus;1)u<sub>1</sub> +
               a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
             </section>
-            Because the coefficient of u<sub>1</sub> is nonzero, <var>S</var> is linear dependent. &marker;
+            This is a nontrivial representation of 0 as a linear combination of vectors in <var>S</var>, because the coefficient of u<sub>1</sub> is nonzero. Hence <var>S</var> is linear dependent. &marker;
           </p>
         </section>
       </p>
@@ -2178,26 +2172,20 @@
     <section id="linearly-independent" class="definition">
       <p>
         <strong>Definition (linearly independent [線形独立])</strong>:
-        A subset <var>S</var> of a vector space that is not linearly dependent is called linearly independent, that is
-        <section>
-          <p>
-            the only representations of the zero vector as linear combinations of its vectors are trivial representations.
-          </p>
-        </section>
-        For convenience, we define that
-        <section>
-          the empty set &empty; is linearly independent.
-        </section>
-        For a set to be linearly dependent, it must be nonempty.
+        A subset <var>S</var> of a vector space that is not linearly dependent is called linearly independent.
+      </p>
+      <p>
+        For convenience, we define that the empty set &empty; is linearly independent. For a set to be linearly dependent, it must be nonempty.
       </p>
     </section>
     <section id="single-vector-linearly-independent" class="proposition">
       <p>
         <strong>Proposition (single vector linearly independent)</strong>:
-        Consider a set containing only one nonzero vector <var>v</var>. Then {v} is linearly independent.
+        Let <var>v</var> be a nonzero vector. Then {v} is linearly independent.
       </p>
       <p>
-        Proof: Since the sole vector <var>v</var> in the set is not zero vector, <var>av</var> = 0 for some scalar <var>a</var> &mdash; the only representation of the zero vector as linear combination of the vector in the set &mdash; holds only when <var>a</var> = 0. Hence the set is linearly independent. &marker;
+        Proof:
+        If {v} is linearly dependent, the sole representation of 0, av = 0 must be nontrivial, that is a &ne; 0 and v = 0, a contradiction. Hence {v} is linearly independent. &marker;
       </p>
     </section>
     <section id="superset-dependent" class="proposition">
@@ -2215,11 +2203,7 @@
         </section>
         Proof:
         <section>
-          Since S<sub>1</sub> is linearly dependent, there exist a finite number of distinct vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; S<sub>1</sub> and scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, not all zero, such that
-          <section>
-            a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
-          </section>
-          But u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; S<sub>2</sub>. Therefore S<sub>2</sub> is also linear dependent.
+          Since S<sub>1</sub> is linearly dependent, there exists a nontrivial representation of 0 as a linear combination of vectors in S<sub>1</sub>. But since S<sub>1</sub> &subseteq; S<sub>2</sub>, the nontrivial representation of 0 is also the one as a linear combination of vectors in S<sub>2</sub>. Hence S<sub>2</sub> is linearly dependent.
         </section>
       </p>
     </section>
@@ -2236,16 +2220,7 @@
             </tr>
           </table>
         </section>
-        Proof: It holds because
-        <ul>
-          <li>
-            a subset that is not linearly dependent is linearly independent, and
-          </li>
-          <li>
-            the second implication is the contrapositive of first implication.
-            &marker;
-          </li>
-        </ul>
+        Proof: It holds because A &Implies; B is equal to &not;B &Implies; &not;A.
       </p>
     </section>
     <section id="the-smallest-generating-set" class="description">
