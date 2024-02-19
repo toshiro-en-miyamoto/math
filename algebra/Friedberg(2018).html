@@ -1828,21 +1828,29 @@
     <section id="linear-combination-in-subspace" class="proposition">
       <p>
         <strong>Proposition (exercise 1.3.20: linear combination in subspace)</strong>:
-        If <var>W</var> is a subspace of a vector space <var>V</var>, then any linear combination of vectors w<sub>1</sub>, w<sub>2</sub>, &hellip;, w<sub>n</sub> &in; W is contained in <var>W</var> &mdash; that is, for scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> &in; F,
+        If <var>W</var> is a subspace of a vector space <var>V</var>, then any linear combination of vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; W is contained in <var>W</var> &mdash; that is, for scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> &in; F,
         <section>
-          a<sub>1</sub>w<sub>1</sub> + a<sub>2</sub>w<sub>2</sub> +
-          &hellip; + a<sub>n</sub>w<sub>n</sub> &in; W
+          <table>
+            <tr>
+              <td>
+                v = a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> +
+                &hellip; + a<sub>n</sub>u<sub>n</sub>
+              </td>
+              <td>where</td>
+              <td> v &in; W</td>
+            </tr>
+          </table>
         </section>
         Proof:
         For every <var>i</var> &in; &naturals;,
         <section>
           <section>
-            a<sub>i</sub>w<sub>i</sub> &in; W
+            a<sub>i</sub>u<sub>i</sub> &in; W
           </section>
           because any subspace is closed under scalar multiplication. So it suffices to prove that
           <section>
             &sum; <sub>(i=1,2,&hellip;,n)</sub>
-            a<sub>i</sub>w<sub>i</sub> &in; W
+            a<sub>i</sub>u<sub>i</sub> &in; W
           </section>
           In order to prove it by induction, break the claim into two claims:
           <section>
@@ -1850,14 +1858,14 @@
               <tr>
                 <td>Base claim:</td>
                 <td>
-                  a<sub>1</sub>w<sub>1</sub> &in; W
+                  a<sub>1</sub>u<sub>1</sub> &in; W
                 </td>
               </tr>
               <tr>
                 <td>Inductive claim:</td>
                 <td>
                   if &sum; <sub>(i=1,2,&hellip;,n)</sub>
-                  a<sub>i</sub>w<sub>i</sub> &in; W
+                  a<sub>i</sub>u<sub>i</sub> &in; W
                 </td>
               </tr>
               <tr>
@@ -1865,7 +1873,7 @@
                 <td>
                   then
                   &sum; <sub>(i=1,2,&hellip;,n,n+1)</sub>
-                  a<sub>i</sub>w<sub>i</sub> &in; W
+                  a<sub>i</sub>u<sub>i</sub> &in; W
                 </td>
               </tr>
               <tr>
@@ -1873,9 +1881,9 @@
                 <td>
                   &iff; {
                     (&sum; <sub>(i=1,2,&hellip;,n)</sub>
-                    a<sub>i</sub>w<sub>i</sub>)
+                    a<sub>i</sub>u<sub>i</sub>)
                     +
-                    (a<sub>n+1</sub>w<sub>n+1</sub>)
+                    (a<sub>n+1</sub>u<sub>n+1</sub>)
                   }
                   &in; W
                 </td>
@@ -1885,10 +1893,10 @@
           The base claim is already proven. The inductive claim holds because
           <ul>
             <li>
-              (&sum; <sub>(i=1,2,&hellip;,n)</sub> a<sub>i</sub>w<sub>i</sub>) is a vector in <var>W</var> by the inductive hypothesis,
+              (&sum; <sub>(i=1,2,&hellip;,n)</sub> a<sub>i</sub>u<sub>i</sub>) is a vector in <var>W</var> by the inductive hypothesis,
             </li>
             <li>
-              (a<sub>n+1</sub>w<sub>n+1</sub>) is already proven to be a vector in <var>W</var>, and
+              (a<sub>n+1</sub>u<sub>n+1</sub>) is already proven to be a vector in <var>W</var>, and
             </li>
             <li>
               the inductive conclusion holds because any subspace is closed under addition. &marker;
