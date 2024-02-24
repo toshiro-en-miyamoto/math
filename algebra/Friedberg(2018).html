@@ -2138,43 +2138,7 @@
         Any set that contains the zero vector is linearly dependent.
       </p>
       <p>
-        Proof: Because 1&middot;0 = 0 is a nontrivial representation of 0 as a linear combination of vectors in the set.
-      </p>
-    </section>
-    <section id="linearly-dependent-sets" class="proposition">
-      <p>
-        <strong>Proposition (linearly dependent sets)</strong>:
-        A set <var>S</var> is linearly dependent if only if
-        <section>
-          some vector in <var>S</var> is a linear combination of the other vectors in <var>S</var>
-        </section>
-        Proof:
-        Let S = {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>}.
-        <section>
-          <p>
-            If <var>S</var> is linearly dependent, then there exist a nontrivial representation of <var>0</var> as a linear combination of vectors in <var>S</var> for some scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, not all zero, such that
-            <section>
-              a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
-            </section>
-            Let a<sub>1</sub> be a nonzero scalar, then u<sub>1</sub> can be expressed as a linear combination of the other vectors in <var>S</var>.
-            <section>
-              u<sub>1</sub> = &minus;1 &frasl; a<sub>1</sub> (
-                a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
-              )
-            </section>
-            Conversely, if a vector in <var>S</var>, say u<sub>1</sub>, is a linear combination of the others
-            <section>
-              u<sub>1</sub> =
-              a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
-            </section>
-            then we have
-            <section>
-              0 = (&minus;1)u<sub>1</sub> +
-              a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub>
-            </section>
-            This is a nontrivial representation of 0 as a linear combination of vectors in <var>S</var>, because the coefficient of u<sub>1</sub> is nonzero. Hence <var>S</var> is linear dependent. &marker;
-          </p>
-        </section>
+        Proof: Because 1&middot;0 = 0 is a nontrivial representation of 0 as a linear combination of vectors in the set. &marker;
       </p>
     </section>
     <section id="linearly-independent" class="definition">
@@ -2193,7 +2157,38 @@
       </p>
       <p>
         Proof:
-        If {v} is linearly dependent, the sole representation of 0, av = 0 must be nontrivial, that is a &ne; 0 and v = 0, a contradiction. Hence {v} is linearly independent. &marker;
+        If {v} is linearly dependent, then av = 0 for some nonzero scalar <var>a</var>. Thus
+        <section>
+          v
+          = (a<sup>&minus;1</sup>a)v = a<sup>&minus;1</sup>(av)
+          = a<sup>&minus;1</sup>0 = 0
+        </section>
+        This is a contradiction. Hence {v} is linearly independent. &marker;
+      </p>
+    </section>
+    <section id="liner-independent-iff-trivial" class="definition">
+      <p>
+        <strong>Definition (linear independent iff trivial)</strong>:
+        A set <var>S</var> is linear independent if and only if
+        <section>
+          the only representation of 0 as linear combinations of its vectors are trivial representations
+        </section>
+        That is, for any distinct vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; S,
+        <section>
+          <table>
+            <tr>
+              <td>if</td>
+              <td>
+                a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot;
+                + a<sub>n</sub>u<sub>n</sub> = 0,
+              </td>
+              <td>then</td>
+              <td>
+                a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n</sub> = 0
+              </td>
+            </tr>
+          </table>
+        </section>
       </p>
     </section>
     <section id="superset-dependent" class="proposition">
@@ -2228,7 +2223,10 @@
             </tr>
           </table>
         </section>
-        Proof: It holds because A &Implies; B is equal to &not;B &Implies; &not;A.
+        Proof:
+        <section>
+          If S<sub>1</sub> is linearly dependent, then by Theorem 1.6, S<sub>2</sub> is also linearly dependent, a contradiction.
+        </section>
       </p>
     </section>
     <section id="the-smallest-generating-set" class="description">
@@ -2289,16 +2287,27 @@
         Proof:
         <section>
           <p>
-            If <var>S</var> &cup; {u} is linearly dependent, then there are vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; <var>S</var> such that au + a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0 for some nonzero scalars a, a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, so
+            If <var>S</var> &cup; {u} is linearly dependent, then there exist distinct vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; <var>S</var> for some nonzero scalars a, a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>
             <section>
-              u
-              = &minus;1 &frasl; a
-                ( a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> )
+              <table>
+                <tr>
+                  <td>such that</td>
+                  <td>
+                    au + a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
+                  </td>
+                </tr>
+                <tr>
+                  <td>it follows</td>
+                  <td>
+                    u = &minus;1 &frasl; a ( a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> )
+                  </td>
+                </tr>
+              </table>
             </section>
-            is a linear combination of vectors in <var>S</var>, it follows that <var>u</var> &in; span(S).
+            Since <var>u</var> is a linear combination of vectors in <var>S</var>, it follows that <var>u</var> &in; span(S).
           </p>
           <p>
-            Conversely, if u &in; span(S), then there exist vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub> &in; <var>S</var> and scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>m</sub>
+            Conversely, if u &in; span(S), then there exist vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub> &in; <var>S</var> for some scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>m</sub>
             <section>
               <table>
                 <tr>
@@ -2321,7 +2330,7 @@
                 </tr>
               </table>
             </section>
-            Note that u &ne; u<sub>i</sub> (i = 1, 2, &hellip;, m), because u &notin; <var>S</var>. And also note that the coefficient of <var>u</var> in this linear combination is &minus;1 (nonzero). Thus {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, u} is linearly dependent, it follows that <var>S</var> &cup; {u} is also linearly dependent by Theorem (linearly dependent span).
+            Note that u &ne; u<sub>i</sub> (i = 1, 2, &hellip;, m), because u &notin; <var>S</var>. And also note that the coefficient of <var>u</var> in this linear combination is &minus;1 (nonzero). Thus {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, u} is linearly dependent. Since {u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>m</sub>, u} &subseteq; <var>S</var> &cup; {u}, by Theorem (superset linearly dependent), <var>S</var> &cup; {u} is also linearly dependent.
             &marker;
           </p>
         </section>
@@ -2341,34 +2350,35 @@
         Proof:
         <section>
           <p>
-            If {u, v} is linearly dependent, there exists a nontrivial representation of <var>0</var> as a linear combination for some nonzero scalars <var>a</var> and <var>b</var> such that
+            If {u, v} is linearly dependent, there exists a nontrivial representation of <var>0</var> as a linear combination for some scalars <var>a</var> and <var>b</var>, but a&ne;0 and/or b&ne;0
             <section>
               <table>
                 <tr>
+                  <td>such that</td>
                   <td>au + bv = 0</td>
-                  <td>it follows</td>
                 </tr>
                 <tr>
+                  <td>it follows</td>
                   <td>u = (&minus;b &frasl; a) v</td>
-                  <td>because a &ne; 0</td>
+                  <td>if a &ne; 0</td>
                 </tr>
               </table>
             </section>
             Thus, <var>u</var> and <var>v</var> is a multiple of the other.
-            Conversely, if <var>u</var> and <var>v</var> is a multiple of the other, then
+            Conversely, if <var>u</var> and <var>v</var> is a multiple of the other, then for some scalar <var>a</var>
             <section>
               <table>
                 <tr>
+                  <td>we have</td>
                   <td>u = av</td>
-                  <td>it follows</td>
                 </tr>
                 <tr>
+                  <td>it follows</td>
                   <td>0 = (&minus;1)u + av</td>
-                  <td>which is nontrivial</td>
                 </tr>
               </table>
             </section>
-            Thus, {u, v} is linearly dependent. &marker;
+            Since this is nontrivial, {u, v} is linearly dependent. &marker;
           </p>
         </section>
       </p>
