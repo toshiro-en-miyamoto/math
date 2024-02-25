@@ -2114,22 +2114,53 @@
     <section id="trivial-representation" class="description">
       <p>
         <strong>Term (trivial representation of 0)</strong>:
-        Let <var>S</var> be a subset of a vector space. For any distinct vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; S,
+        Let <var>S</var> be a subset of a vector space. For any distinct vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; S, the representation of of 0 as a linear combination of the vectors
         <section>
-          a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot;
-          + a<sub>n</sub>u<sub>n</sub> = 0
+          <table>
+            <tr>
+              <td>
+                a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot;
+                + a<sub>n</sub>u<sub>n</sub> = 0
+              </td>
+              <td>always holds</td>
+              <td>
+                if a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n</sub> = 0
+              </td>
+            </tr>
+          </table>
         </section>
-        always holds if a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n</sub> = 0. We call this the trivial representation of 0 as a linear combination of u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>.
+        We call this the trivial representation of 0 as a linear combination of u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>.
+      </p>
+    </section>
+    <section id="nontrivial representation" class="description">
+      <p>
+        <strong>Term (nontrivial representation of 0)</strong>:
+        Let <var>S</var> be a subset of a vector space. For some distinct vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; S, there might exist the representation of of 0 as a linear combination of the vectors and scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, not all zero, such that
+        <section>
+          <table>
+            <tr>
+              <td>
+                a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot;
+                + a<sub>n</sub>u<sub>n</sub> = 0
+              </td>
+              <td>might hold</td>
+              <td>
+                even if
+                a<sub>1</sub>, a<sub>2</sub>, &ctdot;, a<sub>n</sub> are not all 0
+              </td>
+            </tr>
+          </table>
+        </section>
+        We call this a nontrivial representation of 0 as a linear combination of u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>.
       </p>
     </section>
     <section id="define-linearly-dependent" class="definition">
       <p>
         <strong>Definition (linearly dependent [線形従属])</strong>:
-        A subset <var>S</var> of a vector space <var>V</var> is called linearly dependent if there exist a finite number of distinct vectors u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> &in; <var>S</var> and scalars a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>, not all zero, such that
+        Let <var>S</var> be a subset of a vector space.
         <section>
-          a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0
+          <var>S</var> is called linearly dependent if there exists a nontrivial representation of 0 as a linear combination of vectors in the set.
         </section>
-        We call this a nontrivial representation of 0 as a linear combination of u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>.
       </p>
     </section>
     <section id="zero-vector-linearly-dependent" class="proposition">
@@ -2144,9 +2175,16 @@
     <section id="linearly-independent" class="definition">
       <p>
         <strong>Definition (linearly independent [線形独立])</strong>:
-        A subset <var>S</var> of a vector space that is not linearly dependent is called linearly independent.
-      </p>
-      <p>
+        Let <var>S</var> be a subset of a vector space.
+        <section>
+          [1] <var>S</var> that is not linearly dependent is called linearly independent.
+        </section>
+        <section>
+          [2] <var>S</var> is linearly independent if and only if the only representations of 0 as a linear combinations of vectors in <var>S</var> are trivial representations.
+        </section>
+        <section>
+          That is, if a<sub>1</sub>u<sub>1</sub> + a<sub>2</sub>u<sub>2</sub> + &ctdot; + a<sub>n</sub>u<sub>n</sub> = 0 and u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> are linearly independent, then all the scalars a<sub>j</sub> are zero.
+        </section>
         For convenience, we define that the empty set &empty; is linearly independent. For a set to be linearly dependent, it must be nonempty.
       </p>
     </section>
