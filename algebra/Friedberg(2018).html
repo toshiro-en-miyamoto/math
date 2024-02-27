@@ -2360,13 +2360,12 @@
           </math>
         </section>
         Proof:
-        Consider the representation of 0 as a linear combination of vectors in the set.
+        Consider the representation of 0 as a linear combination of vectors in the set. For some scalars <var>a</var> and <var>b</var>,
         <section>
           <section>
             <math>
               <mrow>
-                <msub><mi>a</mi><mn>1</mn></msub>
-                <mo>&InvisibleTimes;</mo>
+                <mi>a</mi>
                 <mo fence="true">&lpar;</mo>
                 <mtable columnalign="right">
                   <mtr>
@@ -2380,10 +2379,9 @@
                 </mtable>
                 <mo fence="true">&rpar;</mo>
               </mrow>
-              <mo>+</mo>
+              <mo>&plus;</mo>
               <mrow>
-                <msub><mi>a</mi><mn>2</mn></msub>
-                <mo>&InvisibleTimes;</mo>
+                <mi>b</mi>
                 <mo fence="true">&lpar;</mo>
                 <mtable columnalign="right">
                   <mtr>
@@ -2419,52 +2417,35 @@
             <table>
               <tr>
                 <td class="right">
-                  &InvisibleTimes;a<sub>1</sub>
-                </td>
-                <td class="center">&minus;</td>
-                <td class="right">
-                  &InvisibleTimes;a<sub>2</sub>
+                  a
+                  &minus; b
                 </td>
                 <td class="center">= 0</td>
               </tr>
               <tr>
                 <td class="right">
-                  &minus;2
-                  &InvisibleTimes;a<sub>1</sub>
-                </td>
-                <td class="center">&plus;</td>
-                <td class="right">
-                  &InvisibleTimes;a<sub>2</sub>
+                  &minus;2a
+                  &plus; b
                 </td>
                 <td class="center">= 0</td>
               </tr>
               <tr>
                 <td class="right">
-                  &minus;
-                  &InvisibleTimes;a<sub>1</sub>
-                </td>
-                <td class="center">&plus;</td>
-                <td class="right">
-                  2
-                  &InvisibleTimes;a<sub>2</sub>
+                  &minus;a
+                  &plus; 2b
                 </td>
                 <td class="center">= 0</td>
               </tr>
               <tr>
                 <td class="right">
-                  4
-                  &InvisibleTimes;a<sub>1</sub>
-                </td>
-                <td class="center">&minus;</td>
-                <td class="right">
-                  4
-                  &InvisibleTimes;a<sub>2</sub>
+                  4a
+                  &minus; 4b
                 </td>
                 <td class="center">= 0</td>
               </tr>
             </table>
           </section>
-          It is immediate that the only solution to the system of linear equations is a<sub>1</sub> = a<sub>2</sub> = 0. That is, the only representation of 0 as a linear combination of vectors in the set is the trivial representation. Hence the set is linearly independent. &marker;
+          Thus a = b = 0 is the only solution to the system of linear equations. That is, the only representation of 0 as a linear combination of vectors in the set is the trivial representation. Hence the set is linearly independent. &marker;
         </section>
       </p>
     </section>
@@ -2475,57 +2456,57 @@
         <section>
           &lbrace;
           &lpar;
-            x<sup>3</sup>+2x<sup>2</sup>
+          x<sup>3</sup>+2x<sup>2</sup>
           &rpar;&comma;
           &lpar;
-            &minus;x<sup>2</sup>+3x
+          &minus;x<sup>2</sup>+3x
           &rpar;&comma;
           &lpar;
-            x<sup>3</sup>&minus;x<sup>2</sup>+2x&minus;1
+          x<sup>3</sup>&minus;x<sup>2</sup>+2x&minus;1
           &rpar;
           &rbrace;
           &in; P<sub>3</sub>(&reals;)
         </section>
         Proof:
-        Consider the representation of 0 as a linear combination of vectors in the set.
+        Consider the representation of 0 as a linear combination of vectors in the set. For some scalars <var>a</var>, <var>b</var>, and <var>c</var>,
         <section>
           <section>
             <table>
               <tr>
                 <td>
-                  a<sub>1</sub>
+                  a
                   &lpar;
-                    x<sup>3</sup>+2x<sup>2</sup>
+                  x<sup>3</sup>+2x<sup>2</sup>
                   &rpar;
                   &plus;
-                  a<sub>2</sub>
+                  b
                   &lpar;
-                    &minus;x<sup>2</sup>+3x
+                  &minus;x<sup>2</sup>+3x
                   &rpar;
                   &plus;
-                  a<sub>3</sub>
+                  c
                   &lpar;
-                    x<sup>3</sup>&minus;x<sup>2</sup>+2x&minus;1
+                  x<sup>3</sup>&minus;x<sup>2</sup>+2x&minus;1
                   &rpar;
                 </td>
               </tr>
               <tr>
                 <td>=
                   &lpar;
-                    a<sub>1</sub> + a<sub>3</sub>
+                  a+c
                   &rpar;
                   x<sup>3</sup>
                   &plus;
                   &lpar;
-                    2a<sub>1</sub> &minus; a<sub>2</sub>
+                  2a&minus;b
                   &rpar;
                   x<sup>2</sup>
                   &plus;
                   &lpar;
-                    3a<sub>2</sub> + 2a<sub>3</sub>
+                  3b+2c
                   &rpar;
                   x
-                  &minus; a<sub>3</sub>
+                  &minus; c
                   = 0
                 </td>
               </tr>
@@ -2536,53 +2517,214 @@
             <table>
               <tr>
                 <td class="right">
-                  a<sub>1</sub>
-                </td>
-                <td class="center"></td>
-                <td class="right"></td>
-                <td class="center">+</td>
-                <td class="right">
-                  a<sub>3</sub>
+                  a
+                  &plus; c
                 </td>
                 <td class="center">= 0</td>
               </tr>
               <tr>
                 <td class="right">
-                  2 &InvisibleTimes;a<sub>1</sub>
-                </td>
-                <td class="center">&minus;</td>
-                <td class="right">
-                  a<sub>2</sub>
-                </td>
-                <td class="center"></td>
-                <td class="right"></td>
-                <td class="center">= 0</td>
-              </tr>
-              <tr>
-                <td class="right"></td>
-                <td class="center"></td>
-                <td class="right">
-                  3 &InvisibleTimes;a<sub>2</sub>
-                </td>
-                <td class="center">+</td>
-                <td class="right">
-                  2 &InvisibleTimes;a<sub>3</sub>
+                  2a
+                  &minus; b
                 </td>
                 <td class="center">= 0</td>
               </tr>
               <tr>
-                <td class="right"></td>
-                <td class="center"></td>
-                <td class="right"></td>
-                <td class="center">&minus;</td>
                 <td class="right">
-                  a<sub>3</sub>
+                  3b
+                  &plus; 2c
+                </td>
+                <td class="center">= 0</td>
+              </tr>
+              <tr>
+                <td class="right">
+                  &minus;c
                 </td>
                 <td class="center">= 0</td>
               </tr>
             </table>
           </section>
-          It is immediate that the only solution to the system of linear equations is a<sub>1</sub> = a<sub>2</sub> = a<sub>3</sub> = 0. That is, the only representation of 0 as a linear combination of vectors in the set is the trivial representation. Hence the set is linearly independent. &marker;
+          Thus a = b = c = 0 is the only solution to the system of linear equations. That is, the only representation of 0 as a linear combination of vectors in the set is the trivial representation. Hence the set is linearly independent. &marker;
+        </section>
+      </p>
+    </section>
+    <section id="ex-1.5.2.(d)" class="description">
+      <p>
+        <strong>Exercise 1.5.2.(d)</strong>:
+        Prove that the set of polynomials is linearly dependent.
+        <section>
+          &lbrace;
+          &lpar;
+          x<sup>3</sup>&minus;x
+          &rpar;&comma;
+          &lpar;
+          2x<sup>2</sup>+4
+          &rpar;&comma;
+          &lpar;
+          &minus;2x<sup>3</sup>+3x<sup>2</sup>+2x+6
+          &rpar;
+          &rbrace;
+          &in; P<sub>3</sub>(&reals;)
+        </section>
+        Proof:
+        Consider the representation of 0 as a linear combination of vectors in the set. For some scalars <var>a</var>, <var>b</var>, and <var>c</var>,
+        <section>
+          <section>
+            <table>
+              <tr>
+                <td>
+                  a
+                  &lpar;
+                  x<sup>3</sup>&minus;x
+                  &rpar;
+                  &plus;
+                  b
+                  &lpar;
+                  2x<sup>2</sup>+4
+                  &rpar;
+                  &plus;
+                  c
+                  &lpar;
+                  &minus;2x<sup>3</sup>+3x<sup>2</sup>+2x+6
+                  &rpar;
+                </td>
+              </tr>
+              <tr>
+                <td>=
+                  &lpar;
+                  a&minus;2c
+                  &rpar;
+                  x<sup>3</sup>
+                  &plus;
+                  &lpar;
+                  2b&plus;3c
+                  &rpar;
+                  x<sup>2</sup>
+                  &plus;
+                  &lpar;
+                  &minus;a+2c
+                  &rpar;
+                  x
+                  &plus;
+                  &lpar;
+                  4b+6c
+                  &rpar;
+                  = 0
+                </td>
+              </tr>
+            </table>
+          </section>
+          For this equation to hold for any <var>x</var>, we have the following system of linear equations:
+          <section>
+            <table>
+              <tr>
+                <td class="right">
+                  a
+                  &minus; 2c
+                </td>
+                <td class="center">= 0</td>
+                <td>&ctdot; (1)</td>
+              </tr>
+              <tr>
+                <td class="right">
+                  2b
+                  &plus; 3c
+                </td>
+                <td class="center">= 0</td>
+                <td>&ctdot; (2)</td>
+              </tr>
+              <tr>
+                <td class="right">
+                  &minus;a
+                  &plus; 2c
+                </td>
+                <td class="center">= 0</td>
+                <td>&ctdot; (3) = &minus;(1)</td>
+              </tr>
+              <tr>
+                <td class="right">
+                  4b
+                  &plus; 6c
+                </td>
+                <td class="center">= 0</td>
+                <td>&ctdot; (4) = 2&times;(2)</td>
+              </tr>
+            </table>
+          </section>
+          Thus a = 4, b = &minus;3, and c = 2 is one of the solutions to the system of linear equations. Or, put another way, there exists a nontrivial representation of 0 as a liner combination of vectors in the set. That is, the set is linearly dependent. &marker;
+        </section>
+      </p>
+    </section>
+    <section id="ex-1.5.2.(e)" class="description">
+      <p>
+        <strong>Exercise 1.5.2.(e)</strong>:
+        Prove that the set of tuples is linearly depended.
+        <section>
+          &lbrace;
+          ( 1, &minus;1, 2 ),
+          ( 1, &minus;2, 1 ),
+          ( 1, 1, 4 )
+          &rbrace;
+          &in; &reals;<sup>3</sup>
+        </section>
+        Proof:
+        Consider the representation of 0 as a linear combination of vectors in the set. For some scalars <var>a</var>, <var>b</var>, and <var>c</var>,
+        <section>
+          <section>
+            a ( 1, &minus;1, 2 ) &plus;
+            b ( 1, &minus;2, 1 ) &plus;
+            c ( 1, 1, 4 )
+            = ( 0, 0, 0 )
+          </section>
+          Then we have
+          <section>
+            <table>
+              <tr>
+                <td class="right">
+                  a
+                  &plus; b
+                  &plus; c
+                </td>
+                <td class="center">= 0</td>
+                <td>&ctdot; (1)</td>
+              </tr>
+              <tr>
+                <td class="right">
+                  &minus;a
+                  &minus; 2b
+                  &plus; c
+                </td>
+                <td class="center">= 0</td>
+                <td>&ctdot; (2)</td>
+              </tr>
+              <tr>
+                <td class="right">
+                  2a
+                  &plus; b
+                  &plus; 4c
+                </td>
+                <td class="center">= 0</td>
+                <td>&ctdot; (3)</td>
+              </tr>
+            </table>
+          </section>
+          By adding appropriate multiples of one equation to the other in order to eliminate a scalar, we have
+          <section>
+            <table>
+              <tr>
+                <td>2a+3b = 0</td>
+                <td>&ctdot; by (1)&minus;(2)</td>
+              </tr>
+              <tr>
+                <td>&minus;b+2c = 0</td>
+                <td>&ctdot;
+                  by (1)+(2)
+                  or (3)&minus;2&times;(1)
+                </td>
+              </tr>
+            </table>
+          </section>
+          It is obvious that a =&minus;3, b = 2, and c = 1 is one of the solutions to the system of linear equations. Or, put another way, there exists a nontrivial representation of 0 as a liner combination of vectors in the set. That is, the set is linearly dependent. &marker;
         </section>
       </p>
     </section>
