@@ -37,11 +37,14 @@
     .right {
       text-align: right;
     }
+    .vertical-middle {
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
 <article>
-<h1>Function [関数]</h1>
+  <h1>Function [関数]</h1>
   <section id="set">
     <h2>Sets (Appendix A)</h2>
     <section id="subset-equal-proper" class="definition">
@@ -1354,7 +1357,7 @@
         <strong>
           Example (1.4.2: linear combination of polynomials)
         </strong>:
-        Consider linear combinations of two polynomials
+        Consider two linear combinations of the polynomials in P<sub>3</sub>(&reals;):
         <section>
           <table>
             <tr>
@@ -1370,7 +1373,7 @@
           </table>
         </section>
         Case 1:
-        2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6 is a linear combination of the polynomials in P<sub>3</sub>(&reals;)
+        2x<sup>3</sup>&minus;2x<sup>2</sup>&plus;12x&minus;6 is a linear combination of the polynomials.
         <section>
           <p>
             <section>
@@ -1399,11 +1402,11 @@
               <table>
                 <tr class="right">
                   <td>a+3b =</td><td>2</td>
-                  <td rowspan="4" style="vertical-align: middle;">
+                  <td rowspan="4" class="vertical-middle">
                     &LongRightArrow;
                   </td>
                   <td>a+3b =</td><td>2</td>
-                  <td rowspan="4" style="vertical-align: middle;">
+                  <td rowspan="4" class="vertical-middle">
                     &LongRightArrow;
                   </td>
                   <td>a =</td><td>&minus;4</td>
@@ -1463,7 +1466,7 @@
               <table>
                 <tr class="right">
                   <td>a+3b =</td><td>3</td>
-                  <td rowspan="4" style="vertical-align: middle;">
+                  <td rowspan="4" class="vertical-middle">
                     &LongRightArrow;
                   </td>
                   <td>a+3b =</td><td>3</td>
@@ -1486,6 +1489,253 @@
             Hence 3x<sup>3</sup>&minus;2x<sup>2</sup>&plus;7x&plus;8
             is not a linear combination of the two polynomials.
           </p>
+        </section>
+      </p>
+    </section>
+  </section>
+  <section id="linearly-dependence">
+    <h2>Linear Dependence and Linear Independence</h2>
+    <section id="ex-1.5.2.(c)" class="description">
+      <p>
+        <strong>Exercise 1.5.2.(c)</strong>:
+        Prove that the set of polynomials is linearly independent.
+        <section>
+          &lbrace;
+          &lpar;
+          x<sup>3</sup>+2x<sup>2</sup>
+          &rpar;&comma;
+          &lpar;
+          &minus;x<sup>2</sup>+3x
+          &rpar;&comma;
+          &lpar;
+          x<sup>3</sup>&minus;x<sup>2</sup>+2x&minus;1
+          &rpar;
+          &rbrace;
+          &in; P<sub>3</sub>(&reals;)
+        </section>
+        Proof:
+        Consider the representation of 0 as a linear combination of vectors in the set. For some scalars <var>a</var>, <var>b</var>, and <var>c</var>,
+        <section>
+          <section>
+            <table>
+              <tr>
+                <td>
+                  a
+                  &lpar;
+                  x<sup>3</sup>+2x<sup>2</sup>
+                  &rpar;
+                  &plus;
+                  b
+                  &lpar;
+                  &minus;x<sup>2</sup>+3x
+                  &rpar;
+                  &plus;
+                  c
+                  &lpar;
+                  x<sup>3</sup>&minus;x<sup>2</sup>+2x&minus;1
+                  &rpar;
+                </td>
+              </tr>
+              <tr>
+                <td>=
+                  &lpar;
+                  a+c
+                  &rpar;
+                  x<sup>3</sup>
+                  &plus;
+                  &lpar;
+                  2a&minus;b
+                  &rpar;
+                  x<sup>2</sup>
+                  &plus;
+                  &lpar;
+                  3b+2c
+                  &rpar;
+                  x
+                  &minus; c
+                  = 0
+                </td>
+              </tr>
+            </table>
+          </section>
+          For this equation to hold for any <var>x</var>, we have the following system of linear equations
+          <section>
+            <table>
+              <tr>
+                <td class="right">
+                  a
+                  &plus; c
+                  = 0
+                </td>
+                <td>&ctdot; (1)</td>
+                <td rowspan="4" class="vertical-middle">
+                  &longrightarrow;
+                </td>
+                <td class="right">
+                  a = 0
+                </td>
+                <td>
+                  &ctdot; because c = 0
+                </td>
+              </tr>
+              <tr>
+                <td class="right">
+                  2a
+                  &minus; b
+                  = 0
+                </td>
+                <td>&ctdot; (2)</td>
+                <td class="right"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="right">
+                  3b
+                  &plus; 2c
+                  = 0
+                </td>
+                <td>&ctdot; (3)</td>
+                <td class="right">
+                  b = 0
+                </td>
+                <td>
+                  &ctdot; because c = 0
+                </td>
+              </tr>
+              <tr>
+                <td class="right">
+                  &minus;c
+                  = 0
+                </td>
+                <td>&ctdot; (4)</td>
+                <td class="right">
+                  c = 0
+                </td>
+                <td></td>
+              </tr>
+            </table>
+          </section>
+          Thus a = b = c = 0 is the only solution to the system of linear equations. That is, the only representation of 0 as a linear combination of vectors in the set is the trivial representation. Hence the set is linearly independent. &marker;
+        </section>
+      </p>
+    </section>
+    <section id="ex-1.5.2.(d)" class="description">
+      <p>
+        <strong>Exercise 1.5.2.(d)</strong>:
+        Prove that the set of polynomials is linearly dependent.
+        <section>
+          &lbrace;
+          &lpar;
+          x<sup>3</sup>&minus;x
+          &rpar;&comma;
+          &lpar;
+          2x<sup>2</sup>+4
+          &rpar;&comma;
+          &lpar;
+          &minus;2x<sup>3</sup>+3x<sup>2</sup>+2x+6
+          &rpar;
+          &rbrace;
+          &in; P<sub>3</sub>(&reals;)
+        </section>
+        Proof:
+        Consider the representation of 0 as a linear combination of vectors in the set. For some scalars <var>a</var>, <var>b</var>, and <var>c</var>,
+        <section>
+          <section>
+            <table>
+              <tr>
+                <td>
+                  a
+                  &lpar;
+                  x<sup>3</sup>&minus;x
+                  &rpar;
+                  &plus;
+                  b
+                  &lpar;
+                  2x<sup>2</sup>+4
+                  &rpar;
+                  &plus;
+                  c
+                  &lpar;
+                  &minus;2x<sup>3</sup>+3x<sup>2</sup>+2x+6
+                  &rpar;
+                </td>
+              </tr>
+              <tr>
+                <td>=
+                  &lpar;
+                  a&minus;2c
+                  &rpar;
+                  x<sup>3</sup>
+                  &plus;
+                  &lpar;
+                  2b&plus;3c
+                  &rpar;
+                  x<sup>2</sup>
+                  &plus;
+                  &lpar;
+                  &minus;a+2c
+                  &rpar;
+                  x
+                  &plus;
+                  &lpar;
+                  4b+6c
+                  &rpar;
+                  = 0
+                </td>
+              </tr>
+            </table>
+          </section>
+          For this equation to hold for any <var>x</var>, we have the following system of linear equations:
+          <section>
+            <table>
+              <tr>
+                <td class="right">
+                  a
+                  &minus; 2c
+                  = 0
+                </td>
+                <td>&ctdot; (1)</td>
+                <td rowspan="4" class="vertical-middle">
+                  &longrightarrow;
+                </td>
+                <td colspan="2">
+                  if c = 2, then a = 4
+                </td>
+              </tr>
+              <tr>
+                <td class="right">
+                  2b
+                  &plus; 3c
+                  = 0
+                </td>
+                <td>&ctdot; (2)</td>
+                <td colspan="2">
+                  if c = 2, then b = &minus;3
+                </td>
+              </tr>
+              <tr>
+                <td class="right">
+                  &minus;a
+                  &plus; 2c
+                  = 0
+                </td>
+                <td>&ctdot; (3)</td>
+                <td class="right">0 = 0</td>
+                <td>&ctdot; by (1)+(3)</td>
+              </tr>
+              <tr>
+                <td class="right">
+                  4b
+                  &plus; 6c
+                  = 0
+                </td>
+                <td>&ctdot; (4)</td>
+                <td class="right">0 = 0</td>
+                <td>&ctdot; by 2*(2)&minus;(4)</td>
+              </tr>
+            </table>
+          </section>
+          Thus a = 4, b = &minus;3, and c = 2 is one of the solutions to the system of linear equations. Or, put another way, there exists a nontrivial representation of 0 as a liner combination of vectors in the set. That is, the set is linearly dependent. &marker;
         </section>
       </p>
     </section>

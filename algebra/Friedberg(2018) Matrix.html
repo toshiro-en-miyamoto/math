@@ -37,1396 +37,1844 @@
     .right {
       text-align: right;
     }
+    .vertical-middle {
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
 <article>
-<h1>Matrices in Linear Algebra [線形代数における行列]</h1>
-<section id="tuples">
-  <h2>Tuples</h2>
-  <section id="define-tuple" class="definition">
-    <p>
-      <strong>Definition (n-tuple)</strong>:
-      Let a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> be elements of a field <var>F</var>. We call an object of the following form an n-tuple with elements from <var>F</var>:
-      <section>
-        <table>
-          <tr>
-            <td>
-              (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>)
-            </td>
-          </tr>
-        </table>
-      </section>
-      where the following statement holds:
-      for any <var>i</var>, where 1 &le; <var>i</var> &le; <var>n</var>
-      <section>
-        <table>
-          <tr>
-            <td>
-              (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>)
-              &equals;
-              (b<sub>1</sub>, b<sub>2</sub>, &hellip;, b<sub>n</sub>)
-            </td>
-            <td>&iff;</td>
-            <td>
-              a<sub>i</sub> = b<sub>i</sub>
-            </td>
-          </tr>
-        </table>
-      </section>
-    </p>
-  </section>
-  <section id="set-of-tuple" class="description">
-    <p>
-      <strong>Notation (F<sup>n</sup> : a set of n-tuples)</strong>:
-      A set of all n-tuples with entries from a filed <var>F</var> is denoted F<sup>n</sup>, e.g.,
-      <section>
-        <table>
-          <tr>
-            <td>
-              let u =
-              (u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>),
-            </td>
-            <td>then</td>
-            <td>
-              u &in; F<sup>n</sup>
-            </td>
-          </tr>
-        </table>
-      </section>
-    </p>
-  </section>
-  <section id="tuples-as-vector-space" class="proposition">
-    <p>
-      <strong>Proposition (example 1.2.1: F<sup>n</sup> as a vector space)</strong>:
-      F<sup>n</sup> is a vector space over <var>F</var> with the operations of vector addition and scalar multiplication; for <var>u</var>, <var>v</var> &in; F<sup>n</sup> and <var>a</var> &in; <var>F</var>,
-      <section>
-        <table>
-          <tr>
-            <td>vector addition</td>
-            <td>
-              u+v =
-              (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
-              &hellip;, u<sub>n</sub>+v<sub>n</sub>)
-            </td>
-            <td>&ctdot; (TA)</td>
-          </tr>
-          <tr>
-            <td>scalar multiplication</td>
-            <td>
-              au = (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)
-            </td>
-            <td>&ctdot; (TM)</td>
-          </tr>
-        </table>
-      </section>
-      Proof: We show that n-tuples <var>u</var>, <var>v</var> and <var>w</var> satisfy vector space axioms. Let <var>w</var> &in; F<sup>n</sup> and <var>b</var> &in; <var>F</var>.
-      <section>
-        <table>
-          <tr>
-            <td></td>
-            <td>vector addition</td>
-            <td>scalar multiplication</td>
-          </tr>
-          <tr>
-            <td>closed</td>
-            <td>u+v &in; F<sup>n</sup></td>
-            <td>au &in; F<sup>n</sup></td>
-          </tr>
-          <tr>
-            <td>commutativity</td>
-            <td>u+v = v+u</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>associativity</td>
-            <td>(u+v)+w = u+(v+w)</td>
-            <td>(ab)u = a(bu)</td>
-          </tr>
-          <tr>
-            <td>existence of identity</td>
-            <td>&exist;0 &in; F<sup>n</sup>, u+0 = u</td>
-            <td>1u = u</td>
-          </tr>
-          <tr>
-            <td>existence of inverse</td>
-            <td>&exist;(&minus;u) &in; F<sup>n</sup>, u+(&minus;u) = 0</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>distributivity</td>
-            <td>a(u+v) = au+av</td>
-            <td>(a+b)u = au+bu</td>
-          </tr>
-        </table>
-      </section>
-    </p>
-    <p>
-      Closed vector addition:
-      <section>
-        <table>
-          <tr>
-            <td>u+v</td>
-            <td>
-              = (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
-              &hellip;, u<sub>n</sub>+v<sub>n</sub>)
-            </td>
-            <td>by definition (TA)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>&in; F<sup>n</sup></td>
-            <td>
-              &because; u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
-              &hellip;, u<sub>n</sub>+v<sub>n</sub> &in; <var>F</var>
-            </td>
-          </tr>
-        </table>
-      </section>
-      Closed scalar multiplication:
-      <section>
-        <table>
-          <tr>
-            <td>au</td>
-            <td>= (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)</td>
-            <td>by definition (TM)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>&in; F<sup>n</sup></td>
-            <td>
-              &because; au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>
-              &in; <var>F</var>
-            </td>
-          </tr>
-        </table>
-      </section>
-      Commutativity of vector addition:
-      <section>
-        <table>
-          <tr>
-            <td>u+v</td>
-            <td>=
-              (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
-              &hellip;, u<sub>n</sub>+v<sub>n</sub>)
-            </td>
-            <td>by definition (TA)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              (v<sub>1</sub>+u<sub>1</sub>, v<sub>2</sub>+u<sub>2</sub>,
-              &hellip;, v<sub>n</sub>+u<sub>n</sub>)
-            </td>
-            <td>
-              &because; u<sub>i</sub>, v<sub>i</sub> &in; <var>F</var>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>= v+u</td>
-            <td>by definition (TA)</td>
-          </tr>
-        </table>
-      </section>
-      Associativity of vector addition:
-      <section>
-        <table>
-          <tr>
-            <td colspan="3">(u+v)+w</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              (u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
-              &hellip;, u<sub>n</sub>+v<sub>n</sub>) + w
-            </td>
-            <td>by definition (TA)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              ((u<sub>1</sub>+v<sub>1</sub>)+w<sub>1</sub>,
-              (u<sub>2</sub>+v<sub>2</sub>)+w<sub>2</sub>,
-              &hellip;, (u<sub>n</sub>+v<sub>n</sub>)+w<sub>n</sub>)
-            </td>
-            <td>by definition (TA)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              (u<sub>1</sub>+(v<sub>1</sub>+w<sub>1</sub>),
-              u<sub>2</sub>+(v<sub>2</sub>+w<sub>2</sub>),
-              &hellip;, u<sub>n</sub>+(v<sub>n</sub>+w<sub>n</sub>))
-            </td>
-            <td>
-              &because; u<sub>i</sub>, v<sub>i</sub>, w<sub>i</sub>
-              &in; <var>F</var>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>= u+(v+w)</td>
-            <td>by definition (TA)</td>
-          </tr>
-        </table>
-      </section>
-      Associativity of scalar multiplication:
-      <section>
-        <table>
-          <tr>
-            <td>(ab)u</td>
-            <td>=
-              ((ab)u<sub>1</sub>, (ab)u<sub>2</sub>,
-              &hellip;, (ab)u<sub>n</sub>)
-            </td>
-            <td>by definition (TM)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              (a(bu<sub>1</sub>), a(bu<sub>2</sub>),
-              &hellip;, a(bu<sub>n</sub>))
-            </td>
-            <td>
-              &because; u<sub>i</sub>, <var>a</var>, <var>b</var> &in; <var>F</var>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              a(bu<sub>1</sub>, bu<sub>2</sub>,
-              &hellip;, bu<sub>n</sub>)
-            </td>
-            <td>by definition (TM)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>= a(bu)</td>
-            <td>by definition (TM)</td>
-          </tr>
-        </table>
-      </section>
-      Existence of additive identity:
-      <section>
-        <table>
-          <tr>
-            <td colspan="3">
-              Let 0 = (0, 0, &hellip;, 0) &in; F<sup>n</sup>, then
-            </td>
-          </tr>
-          <tr>
-            <td>u+0</td>
-            <td>=
-              (u<sub>1</sub>+0, u<sub>2</sub>+0, &hellip;, u<sub>n</sub>+0)
-            </td>
-            <td>
-              by definition (TA)
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              (u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>)
-            </td>
-            <td>
-              &because; 0 is additive identity in <var>F</var>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>= u</td>
-            <td>by definition</td>
-          </tr>
-        </table>
-      </section>
-      Existence of multiplicative identity:
-      <section>
-        <table>
-          <tr>
-            <td>1u</td>
-            <td>=
-              (1u<sub>1</sub>, 1u<sub>2</sub>, &hellip;, 1u<sub>n</sub>)
-            </td>
-            <td>by definition (TM)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              (u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub>)
-            </td>
-            <td>
-              &because; 1 is multiplicative identity in <var>F</var>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>= u</td>
-            <td>by definition</td>
-          </tr>
-        </table>
-      </section>
-      Existence of additive inverse:
-      <section>
-        <table>
-          <tr>
-            <td colspan="3">
-              Let &minus;u =
-              (&minus;u<sub>1</sub>, &minus;u<sub>2</sub>,
-              &hellip;, &minus;u<sub>n</sub>), then
-            </td>
-          </tr>
-          <tr>
-            <td colspan="3">u+(&minus;u)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              = (u<sub>1</sub>+(&minus;u<sub>1</sub>), 
-              u<sub>2</sub>+(&minus;u<sub>2</sub>), &hellip;,
-              u<sub>n</sub>+(&minus;u<sub>n</sub>))
-            </td>
-            <td>by definition (TA)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>= (0, 0, &hellip;, 0)</td>
-            <td>
-              &because; &minus;u<sub>i</sub> is an additive identity of
-              u<sub>i</sub> in <var>F</var>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>= 0</td>
-            <td>by definition</td>
-          </tr>
-        </table>
-      </section>
-      Distributivity over tuple addition:
-      <section>
-        <table>
-          <tr>
-            <td>a(u+v)</td>
-            <td>=
-              a(u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
-              &hellip;, u<sub>n</sub>+v<sub>n</sub>)
-            </td>
-            <td>by definition (TA)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              (a(u<sub>1</sub>+v<sub>1</sub>), a(u<sub>2</sub>+v<sub>2</sub>),
-              &hellip;, a(u<sub>n</sub>+v<sub>n</sub>))
-            </td>
-            <td>by definition (TM)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              (au<sub>1</sub>+av<sub>1</sub>, au<sub>2</sub>+av<sub>2</sub>,
-              &hellip;, au<sub>n</sub>+av<sub>n</sub>)
-            </td>
-            <td>
-              &because; u<sub>i</sub>, v<sub>i</sub>, <var>a</var>
-              &in; <var>F</var>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              = (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)
-              + (av<sub>1</sub>, av<sub>2</sub>, &hellip;, av<sub>n</sub>)
-            </td>
-            <td>by definition (TA)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>= au+av</td>
-            <td>by definition (TM)</td>
-          </tr>
-        </table>
-      </section>
-      Distributivity over scalar addition:
-      <section>
-        <table>
-          <tr>
-            <td>(a+b)u</td>
-            <td>=
-              ((a+b)u<sub>1</sub>, (a+b)u<sub>2</sub>,
-              &hellip;, (a+b)u<sub>n</sub>)
-            </td>
-            <td>by definition (TM)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>=
-              (au<sub>1</sub>+bu<sub>1</sub>, au<sub>2</sub>+bu<sub>2</sub>,
-              &hellip;, au<sub>n</sub>+bu<sub>n</sub>)
-            </td>
-            <td>
-              &because; u<sub>i</sub>, <var>a</var>, <var>b</var>
-              &in; <var>F</var>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              = (au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>)
-              + (bu<sub>1</sub>, bu<sub>2</sub>, &hellip;, bu<sub>n</sub>)
-            </td>
-            <td>by definition (TA)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>= au+bu</td>
-            <td>by definition (TM) &marker;</td>
-          </tr>
-        </table>
-      </section>
-    </p>
-  </section>
-  <section id="column-vector" class="description">
-    <p>
-      <strong>Notation (column vector)</strong>:
-      Vectors in F<sup>n</sup> may be written as column vectors:
-      <section>
-        <math>
-          <mrow>
-            <mo fence="true">&lpar;</mo>
-            <mtable>
-              <mtr><mtd>
-                <msub><mi>a</mi><mn>1</mn></msub>
-              </mtd></mtr>
-              <mtr><mtd>
-                <msub><mi>a</mi><mn>2</mn></msub>
-              </mtd></mtr>
-              <mtr><mtd>
-                <mo>&vellip;</mo>
-              </mtd></mtr>
-              <mtr><mtd>
-                <msub><mi>a</mi><mi>n</mi></msub>
-              </mtd></mtr>
-            </mtable>
-            <mo fence="true">&rpar;</mo>
-          </mrow>
-        </math>
-      </section>
-      rather than as row vectors
-      <math displaystyle="true">
-        <mrow>
-          <mo fence="true">&lpar;</mo>
-          <msub><mi>a</mi><mn>1</mn></msub><mo>,</mo>
-          <msub><mi>a</mi><mn>2</mn></msub><mo>,</mo>
-          <mi>&hellip;</mi><mo>,</mo>
-          <msub><mi>a</mi><mi>n</mi></msub>
-          <mo fence="true">&rpar;</mo>
-        </mrow>
-      </math>
-    </p>
-  </section>
-  <section id="fn-as-direct-sum" class="proposition">
-    <p>
-      <strong>
-        Proposition (exercise 1.3.24: F<sup>n</sup> as a direct sum)
-      </strong>:
-      A set of n-tuples F<sup>n</sup> is the direct sum of subspaces:
-      <section>
-        <table>
-          <tr>
-            <td>
-              W<sub>1</sub> = {
-                (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>)
-                &in; F<sup>n</sup> : a<sub>n</sub> = 0
-              }
-            </td>
-          </tr>
-          <tr>
-            <td>
-              W<sub>2</sub> = {
-                (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>)
-                &in; F<sup>n</sup> : a<sub>1</sub> = a<sub>2</sub> =
-                &ctdot; = a<sub>n&minus;1</sub> = 0
-              }
-            </td>
-          </tr>
-        </table>
-      </section>
-      Proof:
-      We show that (1) W<sub>1</sub> and W<sub>2</sub> are subspaces of F<sup>n</sup>, and (2) W<sub>1</sub> &cap; W<sub>2</sub> = {0} and W<sub>1</sub>+W<sub>2</sub> = F<sup>n</sup>.
-      <section>
-        <p>(1a) W<sub>1</sub> is a subspace:</p>
-        <section>
-          <p>
-            By definition of W<sub>1</sub>, it contains the zero tuple (0, 0, &hellip;, 0) where a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n&minus;1</sub> = 0.
-          </p>
-          <p>
-            Let <var>r</var>, <var>s</var> &in; W<sub>1</sub> such that
-            <section>
-              <table>
-                <tr>
-                  <td>
-                    r =
-                    (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n-1</sub>, 0)
-                  </td>
-                  <td>
-                    s =
-                    (b<sub>1</sub>, b<sub>2</sub>, &hellip;, b<sub>n-1</sub>, 0)
-                  </td>
-                </tr>
-              </table>
-            </section>
-            where a<sub>i</sub> and b<sub>i</sub> are scalars. Then the vector addition(TA) and the scalar multiplication (TM) defined in Proposition (F<sup>n</sup> as a vector space) allow us to have
-            <section>
-              <table>
-                <tr>
-                  <td>
-                    r+s =
-                    (a<sub>1</sub>+b<sub>1</sub>, a<sub>2</sub>+b<sub>2</sub>, &hellip;, a<sub>n-1</sub>+b<sub>n-1</sub>, 0)
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    cr =
-                    (ca<sub>1</sub>, ca<sub>2</sub>, &hellip;, ca<sub>n-1</sub>, 0)
-                  </td>
-                </tr>
-              </table>
-            </section>
-            for any scalar <var>c</var>. It is immediate that r+s and cr are tuples contained in W<sub>1</sub>. Hence W<sub>1</sub> is closed under vector addition and scalar multiplication.
-          </p>
-        </section>
-        <p>(1b) W<sub>2</sub> is a subspace:</p>
-        <section>
-          <p>
-            By definition of W<sub>2</sub>, it contains the zero tuple (0, 0, &hellip;, 0) where a<sub>n = 0.
-          </p>
-          <p>
-            Let <var>t</var>, <var>u</var> &in; W<sub>2</sub> such that
-            <section>
-              <table>
-                <tr>
-                  <td>
-                    t = (0, 0, &hellip;, 0, a<sub>n</sub>)
-                  </td>
-                  <td>
-                    u = (0, 0, &hellip;, 0, b<sub>n</sub>)
-                  </td>
-                </tr>
-              </table>
-            </section>
-            where a<sub>n</sub> and b<sub>n</sub> are scalars. Similarly with W<sub>1</sub>,
-            <section>
-              <table>
-                <tr>
-                  <td>
-                    t+u =
-                    (0, 0, &hellip;, 0, a<sub>n</sub>+b<sub>n</sub>)
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    ct = (0, 0, &hellip;, 0, ca<sub>n</sub>)
-                  </td>
-                </tr>
-              </table>
-            </section>
-            for any scalar <var>c</var>. It is immediate that t+u and ct are tuples contained in W<sub>2</sub>. Hence W<sub>2</sub> is closed under vector addition and scalar multiplication.
-          </p>
-        </section>
-        <p>(2)
-          W<sub>1</sub> &cap; W<sub>2</sub> = {0} and
-          W<sub>1</sub>+W<sub>2</sub> = F<sup>n</sup>:
-          <section>
-            <p>
-              Suppose that there exists a non-zero tuple v = (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub>) such that v &in; (W<sub>1</sub> &cap; W<sub>2</sub>). Then by definitions of W<sub>1</sub> and W<sub>2</sub>, a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n</sub> = 0, that is, <var>v</var> is the zero tuple, a contradiction. Therefore, (W<sub>1</sub> &cap; W<sub>2</sub>) doesn't contain non-zero tuples. But since W<sub>1</sub> and W<sub>2</sub> are subspaces, 0 &in; (W<sub>1</sub> &cap; W<sub>2</sub>). Hence, (W<sub>1</sub> &cap; W<sub>2</sub>) = {0}.
-            </p>
-            <p>
-              By definition of W<sub>1</sub> and W<sub>2</sub>, for some scalars a<sub>i</sub> where 1 &le; i &le; n,
-              <section>
-                <table>
-                  <tr>
-                    <td>F<sup>n</sup></td>
-                    <td>= {
-                        (a<sub>1</sub>, a<sub>2</sub>, &hellip;,
-                        a<sub>n-1</sub>, a<sub>n</sub>)
-                      }
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>= {
-                        (a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n-1</sub>, 0)
-                      + (0, 0, &hellip;, 0, a<sub>n</sub>)
-                      }
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>=
-                      W<sub>1</sub>+W<sub>2</sub> &marker;
-                    </td>
-                  </tr>
-                </table>
-              </section>
-            </p>
-          </section>
-        </p>
-      </section>
-    </p>
-  </section>
-</section>
-<section id="matrices">
-  <h2>Matrices</h2>
-  <section id="define-matrix" class="definition">
-    <p>
-      <strong>Definition (matrix)</strong>:
-      An m&times;n matrix with entries from a field <var>F</var> is
-      <section>
-        <math displaystyle="true">
-          <mrow>
-            <mo fence="true">&lpar;</mo>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <msub><mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub>
-                </mtd>
-                <mtd>
-                  <msub><mi>a</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub>
-                </mtd>
-                <mtd><mi>&ctdot;</mi></mtd>
-                <mtd>
-                  <msub><mi>a</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <msub><mi>a</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub>
-                </mtd>
-                <mtd>
-                  <msub><mi>a</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub>
-                </mtd>
-                <mtd><mi>&ctdot;</mi></mtd>
-                <mtd>
-                  <msub><mi>a</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd><mi>&vellip;</mi></mtd>
-                <mtd><mi>&vellip;</mi></mtd>
-                <mtd></mtd>
-                <mtd><mi>&vellip;</mi></mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <msub><mi>a</mi><mrow><mi>m</mi><mn>1</mn></mrow></msub>
-                </mtd>
-                <mtd>
-                  <msub><mi>a</mi><mrow><mi>m</mi><mn>2</mn></mrow></msub>
-                </mtd>
-                <mtd><mi>&ctdot;</mi></mtd>
-                <mtd>
-                  <msub><mi>a</mi><mrow><mi>m</mi><mi>n</mi></mrow></msub>
-                </mtd>
-              </mtr>
-            </mtable>
-            <mo fence="true">&rpar;</mo>
-          </mrow>
-        </math>          
-      </section>
-      where each entry
-      a<sub>ij</sub> (1 &le; i &le; m, 1 &le; j &le; n)
-      is an element of <var>F</var>.
-      <ul>
-        <li>
-          <b>i</b>th row:
-          a<sub>i1</sub>, a<sub>i2</sub>, &hellip;, a<sub>in</sub>
-        </li>
-        <li>
-          <b>j</b>th column:
-          a<sub>1j</sub>, a<sub>2j</sub>, &hellip;, a<sub>mj</sub>
-        </li>
-        <li>
-          zero matrix: denoted 0, all of its entries are 0
-        </li>
-        <li>
-          diagonal entries:
-          a<sub>ij</sub> with <var>i</var> = <var>j</var>
-        </li>
-        <li>
-          square matrix [正方行列]:
-          n&times;n matrices for any <var>n</var> &ge; 0
-        </li>
-      </ul>
-    </p>
-    <p>
-      We denote
-      <ul>
-        <li>matrices by capital letters, e.g. <var>A</var>, and</li>
-        <li>
-          the entry of a matrix <var>A</var> that lies in row <var>i</var> and column <var>j</var> by A<sub>ij</sub>.
-        </li>
-      </ul>
-    </p>
-  </section>
-  <section id="set-of-matrices" class="description">
-    <p>
-      <strong>Notation (M<sub>m&times;n</sub>(F): a set of matrices)</strong>:
-      The set of all m&times;n matrices with each entries from a field <var>F</var> is denoted M<sub>m&times;n</sub>(F).
-    </p>
-  </section>
-  <section id="matrices-as-vector-space" class="proposition">
-    <p>
-      <strong>
-        Proposition (example 1.2.2: M<sub>m&times;n</sub>(F) as vector space)
-      </strong>:
-      M<sub>m&times;n</sub>(F) is a vector space over <var>F</var> with the following operations of matrix addition and scalar multiplication; for <var>A</var>, <var>B</var> &in; M<sub>m&times;n</sub>(F) and <var>c</var> &in; <var>F</var>, and 1 &le; i &le; m and 1 &le; j &le; n,
-      <section>
-        <table>
-          <tr>
-            <td>matrix addition</td>
-            <td>
-              (A+B)<sub>ij</sub> = A<sub>ij</sub>+B<sub>ij</sub>
-            </td>
-            <td>&ctdot; (MA)</td>
-          </tr>
-          <tr>
-            <td>scalar multiplication</td>
-            <td>
-              (cA)<sub>ij</sub> = cA<sub>ij</sub>
-            </td>
-            <td>&ctdot; (MM)</td>
-          </tr>
-        </table>
-      </section>
-      Proof: very similar to the proof of Proposition (F<sup>n</sup> as a vector space).
-    </p>
-  </section>
-  <section id="transpose" class="definition">
-    <p>
-      <strong>Definition (transpose [転置行列])</strong>:
-      The transpose A<sup>t</sup> of an m&times;n matrix <var>A</var> is the n&times;m matrix obtained from <var>A</var> by interchanging the rows with the columns; that is,
-      <section>
-        (A<sup>t</sup>)<sub>ij</sub> = A<sub>ji</sub>
-      </section>
-      For example,
-      <section>
-        <math>
-          <mrow>
-            <mrow>
-              <msup>
-                <mrow>
-                  <mo fence="true">&lpar;</mo>
-                  <mtable>
-                    <mtr>
-                      <mtd><mn>1</mn></mtd>
-                      <mtd><mn>&minus;2</mn></mtd>
-                      <mtd><mn>3</mn></mtd>
-                    </mtr>
-                    <mtr>
-                      <mtd><mn>0</mn></mtd>
-                      <mtd><mn>5</mn></mtd>
-                      <mtd><mn>&minus;1</mn></mtd>
-                    </mtr>
-                  </mtable>
-                  <mo fence="true">&rpar;</mo>
-                </mrow>
-                <mi>t</mi>
-              </msup>
-            </mrow>
-            <mo>&equals;</mo>
-            <mrow>
-              <mo fence="true">&lpar;</mo>
-              <mtable>
-                <mtr>
-                  <mtd><mn>1</mn></mtd>
-                  <mtd><mn>0</mn></mtd>
-                </mtr>
-                <mtr>
-                  <mtd><mn>&minus;2</mn></mtd>
-                  <mtd><mn>5</mn></mtd>
-                </mtr>
-                <mtr>
-                  <mtd><mn>3</mn></mtd>
-                  <mtd><mn>&minus;1</mn></mtd>
-                </mtr>
-              </mtable>
-              <mo fence="true">&rpar;</mo>
-            </mrow>
-          </mrow>
-        </math>
-      </section>
-    </p>
-  </section>
-  <section id="diagonal-entries-of-transpose" class="proposition">
-    <p>
-      <strong>Proposition (diagonal entries of transposes)</strong>:
-      Diagonal entries of a matrix <var>A</var> are equal to diagonal entries of transposed matrix A<sup>t</sup>.
-    </p>
-    <p>
-      Proof: From the definition of transpose,
-      <section>
-        <table>
-          <tr>
-            <td>(A<sup>t</sup>)<sub>ii</sub> = A<sub>ii</sub></td>
-            <td>for 1 &le; i &le; min(n,m) &marker;</td>
-          </tr>
-        </table>
-      </section>
-    </p>
-  </section>
-  <section id="distributivity-of-transpose" class="proposition">
-    <p>
-      <strong>Proposition (exercise 1.3.3: distributivity of transposes)</strong>:
-      Let <var>A, B</var> &in; M<sub>m&times;n</sub>(F) and <var>a, b</var> &in; <var>F</var>, then
-      <section>
-        (a&InvisibleTimes;A + b&InvisibleTimes;B)<sup>t</sup>
-        = a&InvisibleTimes;A<sup>t</sup> + b&InvisibleTimes;B<sup>t</sup>
-      </section>
-      Proof:
-      <section>
-        <table>
-          <tr>
-            <td>((aA + bB)<sup>t</sup>)<sub>ij</sub></td>
-            <td>= (aA + bB)<sub>ji</sub></td>
-            <td>by definition of transpose</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>= (aA)<sub>ji</sub> + (bB)<sub>ji</sub></td>
-            <td>by definition (MA)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              = ((aA)<sup>t</sup>)<sub>ij</sub>
-              + ((bB)<sup>t</sup>)<sub>ij</sub>
-            </td>
-            <td>by definition of transpose</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              = a(A<sup>t</sup>)<sub>ij</sub> + b(B<sup>t</sup>)<sub>ij</sub>
-            </td>
-            <td>by definition (MM) &marker;</td>
-          </tr>
-        </table>
-      </section>
-    </p>
-  </section>
-  <section id="symmetric-matrix" class="definition">
-    <p>
-      <strong>Definition (symmetric matrix [対称行列])</strong>:
-      A symmetric matrix is a square matrix such that
-      <section>
-        <table>
-          <tr>
-            <td>A<sup>t</sup> = A</td>
-            <td>that is</td>
-            <td>(A<sup>t</sup>)<sub>ij</sub> = A<sub>ij</sub></td>
-          </tr>
-        </table>
-      </section>
-      For example,
-      <section>
-        <math>
-          <mrow>
-            <mrow>
-              <msup>
-                <mrow>
-                  <mo fence="true">&lpar;</mo>
-                  <mtable>
-                    <mtr>
-                      <mtd><mn>1</mn></mtd>
-                      <mtd><mn>2</mn></mtd>
-                    </mtr>
-                    <mtr>
-                      <mtd><mn>2</mn></mtd>
-                      <mtd><mn>3</mn></mtd>
-                    </mtr>
-                  </mtable>
-                  <mo fence="true">&rpar;</mo>
-                </mrow>
-                <mrow><mi>t</mi></mrow>
-              </msup>
-            </mrow>
-            <mo>&equals;</mo>
-            <mrow>
-              <mo fence="true">&lpar;</mo>
-              <mtable>
-                <mtr>
-                  <mtd><mn>1</mn></mtd>
-                  <mtd><mn>2</mn></mtd>
-                </mtr>
-                <mtr>
-                  <mtd><mn>2</mn></mtd>
-                  <mtd><mn>3</mn></mtd>
-                </mtr>
-              </mtable>
-              <mo fence="true">&rpar;</mo>
-            </mrow>
-          </mrow>
-        </math>
-      </section>
-    </section>
-    <section id="adding-transpose-get-symmetric" class="proposition">
+  <h1>Matrices in Linear Algebra [線形代数における行列]</h1>
+  <section id="tuples">
+    <h2>Tuples</h2>
+    <section id="define-tuple" class="definition">
       <p>
-        <strong>Proposition (exercise 1.3.5: adding transpose gets symmetric)</strong>:
-        A+A<sup>t</sup> is symmetric for any square matrix <var>A</var>.
-      </p>
-      <p>
-        Proof:
+        <strong>Definition (n-tuple)</strong>:
+        Let a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> be elements of a field <var>F</var>. We call an object of the following form an n-tuple with elements from <var>F</var>:
         <section>
           <table>
             <tr>
-              <td>((A+A<sup>t</sup>)<sup>t</sup>)<sub>ij</sub></td>
-              <td>= (A+A<sup>t</sup>)<sub>ji</sub></td>
-              <td>by definition of transpose</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= A<sub>ji</sub>+(A<sup>t</sup>)<sub>ji</sub></td>
-              <td>by definition (MA)
-            </tr>
-            <tr>
-              <td></td>
-              <td>= A<sub>ji</sub>+A<sub>ij</sub></td>
-              <td>by definition of transpose</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= A<sub>ij</sub>+A<sub>ji</sub></td>
               <td>
-                &because; A<sub>ji</sub>, A<sub>ij</sub> &in; <var>F</var>
+                ( a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> )
+              </td>
+            </tr>
+          </table>
+        </section>
+        where the following statement holds:
+        for any <var>i</var>, where 1 &le; <var>i</var> &le; <var>n</var>
+        <section>
+          <table>
+            <tr>
+              <td>
+                ( a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> )
+                &equals;
+                ( b<sub>1</sub>, b<sub>2</sub>, &hellip;, b<sub>n</sub> )
+              </td>
+              <td>&iff;</td>
+              <td>
+                a<sub>i</sub> = b<sub>i</sub>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="set-of-tuple" class="description">
+      <p>
+        <strong>Notation (F<sup>n</sup> : a set of n-tuples)</strong>:
+        A set of all n-tuples with entries from a filed <var>F</var> is denoted F<sup>n</sup>, e.g.,
+        <section>
+          <table>
+            <tr>
+              <td>
+                let u =
+                ( u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> ),
+              </td>
+              <td>then</td>
+              <td>
+                u &in; F<sup>n</sup>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="tuples-as-vector-space" class="proposition">
+      <p>
+        <strong>
+          Proposition (example 1.2.1: F<sup>n</sup> as a vector space)
+        </strong>:
+        F<sup>n</sup> is a vector space over <var>F</var> with the operations of vector addition and scalar multiplication; for <var>u</var>, <var>v</var> &in; F<sup>n</sup> and <var>a</var> &in; <var>F</var>,
+        <section>
+          <table>
+            <tr>
+              <td>vector addition</td>
+              <td>
+                u+v = (
+                u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+                &hellip;, u<sub>n</sub>+v<sub>n</sub> )
+              </td>
+              <td>&ctdot; (TA)</td>
+            </tr>
+            <tr>
+              <td>scalar multiplication</td>
+              <td>
+                au = ( 
+                au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub> )
+              </td>
+              <td>&ctdot; (TM)</td>
+            </tr>
+          </table>
+        </section>
+        Proof: We show that n-tuples <var>u</var>, <var>v</var> and <var>w</var> satisfy vector space axioms. Let <var>w</var> &in; F<sup>n</sup> and <var>b</var> &in; <var>F</var>.
+        <section>
+          <table>
+            <tr>
+              <td></td>
+              <td>vector addition</td>
+              <td>scalar multiplication</td>
+            </tr>
+            <tr>
+              <td>closed</td>
+              <td>u+v &in; F<sup>n</sup></td>
+              <td>au &in; F<sup>n</sup></td>
+            </tr>
+            <tr>
+              <td>commutativity</td>
+              <td>u+v = v+u</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>associativity</td>
+              <td>(u+v)+w = u+(v+w)</td>
+              <td>(ab)u = a(bu)</td>
+            </tr>
+            <tr>
+              <td>existence of identity</td>
+              <td>&exist;0 &in; F<sup>n</sup>, u+0 = u</td>
+              <td>1u = u</td>
+            </tr>
+            <tr>
+              <td>existence of inverse</td>
+              <td>&exist;(&minus;u) &in; F<sup>n</sup>, u+(&minus;u) = 0</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>distributivity</td>
+              <td>a(u+v) = au+av</td>
+              <td>(a+b)u = au+bu</td>
+            </tr>
+          </table>
+        </section>
+      </p>
+      <p>
+        Closed vector addition:
+        <section>
+          <table>
+            <tr>
+              <td>u+v</td>
+              <td>= ( 
+                u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+                &hellip;, u<sub>n</sub>+v<sub>n</sub> )
+              </td>
+              <td>by definition (TA)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&in; F<sup>n</sup></td>
+              <td>
+                &because;
+                u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+                &hellip;, u<sub>n</sub>+v<sub>n</sub> &in; <var>F</var>
+              </td>
+            </tr>
+          </table>
+        </section>
+        Closed scalar multiplication:
+        <section>
+          <table>
+            <tr>
+              <td>au</td>
+              <td>= ( 
+                au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub> )
+              </td>
+              <td>by definition (TM)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>&in; F<sup>n</sup></td>
+              <td>
+                &because;
+                au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub>
+                &in; <var>F</var>
+              </td>
+            </tr>
+          </table>
+        </section>
+        Commutativity of vector addition:
+        <section>
+          <table>
+            <tr>
+              <td>u+v</td>
+              <td>= (
+                u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+                &hellip;, u<sub>n</sub>+v<sub>n</sub> )
+              </td>
+              <td>by definition (TA)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= ( 
+                v<sub>1</sub>+u<sub>1</sub>, v<sub>2</sub>+u<sub>2</sub>,
+                &hellip;, v<sub>n</sub>+u<sub>n</sub> )
+              </td>
+              <td>
+                &because; u<sub>i</sub>, v<sub>i</sub> &in; <var>F</var>
               </td>
             </tr>
             <tr>
               <td></td>
-              <td>= A<sub>ij</sub>+(A<sup>t</sup>)<sub>ij</sub></td>
+              <td>= v+u</td>
+              <td>by definition (TA)</td>
+            </tr>
+          </table>
+        </section>
+        Associativity of vector addition:
+        <section>
+          <table>
+            <tr>
+              <td colspan="3">(u+v)+w</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= (
+                u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+                &hellip;, u<sub>n</sub>+v<sub>n</sub> ) + w
+             </td>
+              <td>by definition (TA)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= {
+                ( u<sub>1</sub>+v<sub>1</sub> ) + w<sub>1</sub>,
+                ( u<sub>2</sub>+v<sub>2</sub> ) + w<sub>2</sub>,
+                &hellip;,
+                ( u<sub>n</sub>+v<sub>n</sub> ) + w<sub>n</sub> }
+              </td>
+              <td>by definition (TA)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= {
+                u<sub>1</sub> + ( v<sub>1</sub>+w<sub>1</sub> ),
+                u<sub>2</sub> + ( v<sub>2</sub>+w<sub>2</sub> ),
+                &hellip;,
+                u<sub>n</sub> + ( v<sub>n</sub>+w<sub>n</sub> ) }
+              </td>
+              <td>
+                &because; u<sub>i</sub>, v<sub>i</sub>, w<sub>i</sub>
+                &in; <var>F</var>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= u+(v+w)</td>
+              <td>by definition (TA)</td>
+            </tr>
+          </table>
+        </section>
+        Associativity of scalar multiplication:
+        <section>
+          <table>
+            <tr>
+              <td>(ab)u</td>
+              <td>= (
+                (ab)u<sub>1</sub>, (ab)u<sub>2</sub>,
+                &hellip;, (ab)u<sub>n</sub> )
+              </td>
+              <td>by definition (TM)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= (
+                a(bu<sub>1</sub>), a(bu<sub>2</sub>),
+                &hellip;, a(bu<sub>n</sub>) )
+              </td>
+              <td>
+                &because; u<sub>i</sub>, <var>a</var>, <var>b</var>
+                &in; <var>F</var>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>=
+                a ( bu<sub>1</sub>, bu<sub>2</sub>,
+                &hellip;, bu<sub>n</sub> )
+              </td>
+              <td>by definition (TM)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= a(bu)</td>
+              <td>by definition (TM)</td>
+            </tr>
+          </table>
+        </section>
+        Existence of additive identity:
+        <section>
+          <table>
+            <tr>
+              <td colspan="3">
+                Let 0 = ( 0, 0, &hellip;, 0 ) &in; F<sup>n</sup>, then
+              </td>
+            </tr>
+            <tr>
+              <td>u+0</td>
+              <td>= (
+                u<sub>1</sub>+0, u<sub>2</sub>+0, &hellip;, u<sub>n</sub>+0 )
+              </td>
+              <td>
+                by definition (TA)
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= (
+                u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> )
+              </td>
+              <td>
+                &because; 0 is additive identity in <var>F</var>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= u</td>
+              <td>by definition</td>
+            </tr>
+          </table>
+        </section>
+        Existence of multiplicative identity:
+        <section>
+          <table>
+            <tr>
+              <td>1u</td>
+              <td>= (
+                1u<sub>1</sub>, 1u<sub>2</sub>, &hellip;, 1u<sub>n</sub> )
+              </td>
+              <td>by definition (TM)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= (
+                u<sub>1</sub>, u<sub>2</sub>, &hellip;, u<sub>n</sub> )
+              </td>
+              <td>
+                &because; 1 is multiplicative identity in <var>F</var>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= u</td>
+              <td>by definition</td>
+            </tr>
+          </table>
+        </section>
+        Existence of additive inverse:
+        <section>
+          <table>
+            <tr>
+              <td colspan="3">
+                Let &minus;u = (
+                &minus;u<sub>1</sub>, &minus;u<sub>2</sub>,
+                &hellip;, &minus;u<sub>n</sub> ), then
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">u+(&minus;u)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= (
+                u<sub>1</sub> + (&minus;u<sub>1</sub>), 
+                u<sub>2</sub> + (&minus;u<sub>2</sub>), &hellip;,
+                u<sub>n</sub> + (&minus;u<sub>n</sub>))
+              </td>
+              <td>by definition (TA)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= ( 0, 0, &hellip;, 0 )</td>
+              <td>
+                &because; &minus;u<sub>i</sub> is an additive identity of
+                u<sub>i</sub> in <var>F</var>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= 0</td>
+              <td>by definition</td>
+            </tr>
+          </table>
+        </section>
+        Distributivity over tuple addition:
+        <section>
+          <table>
+            <tr>
+              <td>a(u+v)</td>
+              <td>= a (
+                u<sub>1</sub>+v<sub>1</sub>, u<sub>2</sub>+v<sub>2</sub>,
+                &hellip;, u<sub>n</sub>+v<sub>n</sub> )
+              </td>
+              <td>by definition (TA)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= (
+                a(u<sub>1</sub>+v<sub>1</sub>),
+                a(u<sub>2</sub>+v<sub>2</sub>),
+                &hellip;, a(u<sub>n</sub>+v<sub>n</sub>) )
+              </td>
+              <td>by definition (TM)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= (
+                au<sub>1</sub>+av<sub>1</sub>, au<sub>2</sub>+av<sub>2</sub>,
+                &hellip;, au<sub>n</sub>+av<sub>n</sub> )
+              </td>
+              <td>
+                &because; u<sub>i</sub>, v<sub>i</sub>, <var>a</var>
+                &in; <var>F</var>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                = ( au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub> )
+                + ( av<sub>1</sub>, av<sub>2</sub>, &hellip;, av<sub>n</sub> )
+              </td>
+              <td>by definition (TA)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= au+av</td>
+              <td>by definition (TM)</td>
+            </tr>
+          </table>
+        </section>
+        Distributivity over scalar addition:
+        <section>
+          <table>
+            <tr>
+              <td>(a+b)u</td>
+              <td>= (
+                (a+b)u<sub>1</sub>, (a+b)u<sub>2</sub>,
+                &hellip;, (a+b)u<sub>n</sub> )
+              </td>
+              <td>by definition (TM)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= (
+                au<sub>1</sub>+bu<sub>1</sub>, au<sub>2</sub>+bu<sub>2</sub>,
+                &hellip;, au<sub>n</sub>+bu<sub>n</sub> )
+              </td>
+              <td>
+                &because; u<sub>i</sub>, <var>a</var>, <var>b</var>
+                &in; <var>F</var>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                = ( au<sub>1</sub>, au<sub>2</sub>, &hellip;, au<sub>n</sub> )
+                + ( bu<sub>1</sub>, bu<sub>2</sub>, &hellip;, bu<sub>n</sub> )
+              </td>
+              <td>by definition (TA)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>= au+bu</td>
+              <td>by definition (TM) &marker;</td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="column-vector" class="description">
+      <p>
+        <strong>Notation (column vector)</strong>:
+        Vectors in F<sup>n</sup> may be written as column vectors:
+        <section>
+          <math>
+            <mrow>
+              <mo fence="true">&lpar;</mo>
+              <mtable>
+                <mtr><mtd>
+                  <msub><mi>a</mi><mn>1</mn></msub>
+                </mtd></mtr>
+                <mtr><mtd>
+                  <msub><mi>a</mi><mn>2</mn></msub>
+                </mtd></mtr>
+                <mtr><mtd>
+                  <mo>&vellip;</mo>
+                </mtd></mtr>
+                <mtr><mtd>
+                  <msub><mi>a</mi><mi>n</mi></msub>
+                </mtd></mtr>
+              </mtable>
+              <mo fence="true">&rpar;</mo>
+            </mrow>
+          </math>
+        </section>
+        rather than as row vectors
+        <math displaystyle="true">
+          <mrow>
+            <mo fence="true">&lpar;</mo>
+            <msub><mi>a</mi><mn>1</mn></msub><mo>,</mo>
+            <msub><mi>a</mi><mn>2</mn></msub><mo>,</mo>
+            <mi>&hellip;</mi><mo>,</mo>
+            <msub><mi>a</mi><mi>n</mi></msub>
+            <mo fence="true">&rpar;</mo>
+          </mrow>
+        </math>
+      </p>
+    </section>
+    <section id="fn-as-direct-sum" class="proposition">
+      <p>
+        <strong>
+          Proposition (exercise 1.3.24: F<sup>n</sup> as a direct sum)
+        </strong>:
+        A set of n-tuples F<sup>n</sup> is the direct sum of subspaces:
+        <section>
+          <table>
+            <tr>
+              <td>
+                W<sub>1</sub> = {
+                  ( a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> )
+                  &in; F<sup>n</sup> : a<sub>n</sub> = 0 }
+              </td>
+            </tr>
+            <tr>
+              <td>
+                W<sub>2</sub> = {
+                  ( a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> )
+                  &in; F<sup>n</sup> : a<sub>1</sub> = a<sub>2</sub> =
+                  &ctdot; = a<sub>n&minus;1</sub> = 0
+                }
+              </td>
+            </tr>
+          </table>
+        </section>
+        Proof:
+        We show that (1) W<sub>1</sub> and W<sub>2</sub> are subspaces of F<sup>n</sup>, and (2) W<sub>1</sub> &cap; W<sub>2</sub> = {0} and W<sub>1</sub>+W<sub>2</sub> = F<sup>n</sup>.
+        <section>
+          (1a) W<sub>1</sub> is a subspace:
+          <section>
+            <p>
+              By definition of W<sub>1</sub>, it contains the zero tuple ( 0, 0, &hellip;, 0 ) where a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n&minus;1</sub> = 0.
+            </p>
+            <p>
+              Let <var>r</var>, <var>s</var> &in; W<sub>1</sub> such that
+              <section>
+                <table>
+                  <tr>
+                    <td>r = (
+                      a<sub>1</sub>, a<sub>2</sub>,
+                      &hellip;, a<sub>n-1</sub>, 0 )
+                    </td>
+                    <td>s = (
+                      b<sub>1</sub>, b<sub>2</sub>,
+                      &hellip;, b<sub>n-1</sub>, 0 )
+                    </td>
+                  </tr>
+                </table>
+              </section>
+              where a<sub>i</sub> and b<sub>i</sub> are scalars. Then the vector addition(TA) and the scalar multiplication (TM) defined in Proposition (F<sup>n</sup> as a vector space) allow us to have
+              <section>
+                <table>
+                  <tr>
+                    <td>r+s = (
+                      a<sub>1</sub>+b<sub>1</sub>,
+                      a<sub>2</sub>+b<sub>2</sub>, &hellip;,
+                      a<sub>n-1</sub>+b<sub>n-1</sub>, 0 )
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>cr = (
+                      ca<sub>1</sub>, ca<sub>2</sub>, &hellip;,
+                      ca<sub>n-1</sub>, 0 )
+                    </td>
+                  </tr>
+                </table>
+              </section>
+              for any scalar <var>c</var>. It is immediate that r+s and cr are tuples contained in W<sub>1</sub>. Hence W<sub>1</sub> is closed under vector addition and scalar multiplication.
+            </p>
+          </section>
+          <p>(1b) W<sub>2</sub> is a subspace:</p>
+          <section>
+            <p>
+              By definition of W<sub>2</sub>, it contains the zero tuple ( 0, 0, &hellip;, 0 ) where a<sub>n = 0.
+            </p>
+            <p>
+              Let <var>t</var>, <var>u</var> &in; W<sub>2</sub> such that
+              <section>
+                <table>
+                  <tr>
+                    <td>
+                      t = ( 0, 0, &hellip;, 0, a<sub>n</sub> )
+                    </td>
+                    <td>
+                      u = ( 0, 0, &hellip;, 0, b<sub>n</sub> )
+                    </td>
+                  </tr>
+                </table>
+              </section>
+              where a<sub>n</sub> and b<sub>n</sub> are scalars. Similarly with W<sub>1</sub>,
+              <section>
+                <table>
+                  <tr>
+                    <td>t+u = (
+                      0, 0, &hellip;, 0, a<sub>n</sub>+b<sub>n</sub> )
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      ct = ( 0, 0, &hellip;, 0, ca<sub>n</sub> )
+                    </td>
+                  </tr>
+                </table>
+              </section>
+              for any scalar <var>c</var>. It is immediate that t+u and ct are tuples contained in W<sub>2</sub>. Hence W<sub>2</sub> is closed under vector addition and scalar multiplication.
+            </p>
+          </section>
+          <p>(2)
+            W<sub>1</sub> &cap; W<sub>2</sub> = {0} and
+            W<sub>1</sub>+W<sub>2</sub> = F<sup>n</sup>:
+            <section>
+              <p>
+                Suppose that there exists a non-zero tuple v = ( a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub> ) such that v &in; (W<sub>1</sub> &cap; W<sub>2</sub>). Then by definitions of W<sub>1</sub> and W<sub>2</sub>, a<sub>1</sub> = a<sub>2</sub> = &ctdot; = a<sub>n</sub> = 0, that is, <var>v</var> is the zero tuple, a contradiction. Therefore, (W<sub>1</sub> &cap; W<sub>2</sub>) doesn't contain non-zero tuples. But since W<sub>1</sub> and W<sub>2</sub> are subspaces, 0 &in; (W<sub>1</sub> &cap; W<sub>2</sub>). Hence, (W<sub>1</sub> &cap; W<sub>2</sub>) = {0}.
+              </p>
+              <p>
+                By definition of W<sub>1</sub> and W<sub>2</sub>, for some scalars a<sub>i</sub> where 1 &le; i &le; n,
+                <section>
+                  <table>
+                    <tr>
+                      <td>F<sup>n</sup></td>
+                      <td>= { (
+                        a<sub>1</sub>, a<sub>2</sub>, &hellip;,
+                        a<sub>n&minus;1</sub>, a<sub>n</sub> ) }
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>= {
+                        ( a<sub>1</sub>, a<sub>2</sub>, &hellip;,
+                          a<sub>n&minus;1</sub>, 0 )
+                        + ( 0, 0, &hellip;, 0, a<sub>n</sub> ) }
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>=
+                        W<sub>1</sub>+W<sub>2</sub> &marker;
+                      </td>
+                    </tr>
+                  </table>
+                </section>
+              </p>
+            </section>
+          </p>
+        </section>
+      </p>
+    </section>
+  </section>
+  <section id="matrices">
+    <h2>Matrices</h2>
+    <section id="define-matrix" class="definition">
+      <p>
+        <strong>Definition (matrix)</strong>:
+        An m&times;n matrix with entries from a field <var>F</var> is
+        <section>
+          <math displaystyle="true">
+            <mrow>
+              <mo fence="true">&lpar;</mo>
+              <mtable>
+                <mtr>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub>
+                  </mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>1</mn><mn>2</mn></mrow></msub>
+                  </mtd>
+                  <mtd><mi>&ctdot;</mi></mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub>
+                  </mtd>
+                </mtr>
+                <mtr>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>2</mn><mn>1</mn></mrow></msub>
+                  </mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>2</mn><mn>2</mn></mrow></msub>
+                  </mtd>
+                  <mtd><mi>&ctdot;</mi></mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub>
+                  </mtd>
+                </mtr>
+                <mtr>
+                  <mtd><mi>&vellip;</mi></mtd>
+                  <mtd><mi>&vellip;</mi></mtd>
+                  <mtd></mtd>
+                  <mtd><mi>&vellip;</mi></mtd>
+                </mtr>
+                <mtr>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mi>m</mi><mn>1</mn></mrow></msub>
+                  </mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mi>m</mi><mn>2</mn></mrow></msub>
+                  </mtd>
+                  <mtd><mi>&ctdot;</mi></mtd>
+                  <mtd>
+                    <msub><mi>a</mi><mrow><mi>m</mi><mi>n</mi></mrow></msub>
+                  </mtd>
+                </mtr>
+              </mtable>
+              <mo fence="true">&rpar;</mo>
+            </mrow>
+          </math>          
+        </section>
+        where each entry
+        a<sub>ij</sub> (1 &le; i &le; m, 1 &le; j &le; n)
+        is an element of <var>F</var>.
+        <ul>
+          <li>
+            <b>i</b>th row:
+            a<sub>i1</sub>, a<sub>i2</sub>, &hellip;, a<sub>in</sub>
+          </li>
+          <li>
+            <b>j</b>th column:
+            a<sub>1j</sub>, a<sub>2j</sub>, &hellip;, a<sub>mj</sub>
+          </li>
+          <li>
+            zero matrix: denoted 0, all of its entries are 0
+          </li>
+          <li>
+            diagonal entries:
+            a<sub>ij</sub> with <var>i</var> = <var>j</var>
+          </li>
+          <li>
+            square matrix [正方行列]:
+            n&times;n matrices for any <var>n</var> &ge; 0
+          </li>
+        </ul>
+      </p>
+      <p>
+        We denote
+        <ul>
+          <li>matrices by capital letters, e.g. <var>A</var>, and</li>
+          <li>
+            the entry of a matrix <var>A</var> that lies in row <var>i</var> and column <var>j</var> by A<sub>ij</sub>.
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section id="set-of-matrices" class="description">
+      <p>
+        <strong>
+          Notation (M<sub>m&times;n</sub>(F): a set of matrices)
+        </strong>:
+        The set of all m&times;n matrices with each entries from a field <var>F</var> is denoted M<sub>m&times;n</sub>(F).
+      </p>
+    </section>
+    <section id="matrices-as-vector-space" class="proposition">
+      <p>
+        <strong>
+          Proposition
+          (example 1.2.2: M<sub>m&times;n</sub>(F) as vector space)
+        </strong>:
+        M<sub>m&times;n</sub>(F) is a vector space over <var>F</var> with the following operations of matrix addition and scalar multiplication; for <var>A</var>, <var>B</var> &in; M<sub>m&times;n</sub>(F) and <var>c</var> &in; <var>F</var>, and 1 &le; i &le; m and 1 &le; j &le; n,
+        <section>
+          <table>
+            <tr>
+              <td>matrix addition</td>
+              <td>
+                (A+B)<sub>ij</sub> = A<sub>ij</sub>+B<sub>ij</sub>
+              </td>
+              <td>&ctdot; (MA)</td>
+            </tr>
+            <tr>
+              <td>scalar multiplication</td>
+              <td>
+                (cA)<sub>ij</sub> = cA<sub>ij</sub>
+              </td>
+              <td>&ctdot; (MM)</td>
+            </tr>
+          </table>
+        </section>
+        Proof: very similar to the proof of Proposition (F<sup>n</sup> as a vector space).
+      </p>
+    </section>
+    <section id="transpose" class="definition">
+      <p>
+        <strong>Definition (transpose [転置行列])</strong>:
+        The transpose A<sup>t</sup> of an m&times;n matrix <var>A</var> is the n&times;m matrix obtained from <var>A</var> by interchanging the rows with the columns; that is,
+        <section>
+          (A<sup>t</sup>)<sub>ij</sub> = A<sub>ji</sub>
+        </section>
+        For example,
+        <section>
+          <math>
+            <mrow>
+              <mrow>
+                <msup>
+                  <mrow>
+                    <mo fence="true">&lpar;</mo>
+                    <mtable>
+                      <mtr>
+                        <mtd><mn>1</mn></mtd>
+                        <mtd><mn>&minus;2</mn></mtd>
+                        <mtd><mn>3</mn></mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd><mn>0</mn></mtd>
+                        <mtd><mn>5</mn></mtd>
+                        <mtd><mn>&minus;1</mn></mtd>
+                      </mtr>
+                    </mtable>
+                    <mo fence="true">&rpar;</mo>
+                  </mrow>
+                  <mi>t</mi>
+                </msup>
+              </mrow>
+              <mo>&equals;</mo>
+              <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                  <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>0</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>&minus;2</mn></mtd>
+                    <mtd><mn>5</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>3</mn></mtd>
+                    <mtd><mn>&minus;1</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+            </mrow>
+          </math>
+        </section>
+      </p>
+    </section>
+    <section id="diagonal-entries-of-transpose" class="proposition">
+      <p>
+        <strong>Proposition (diagonal entries of transposes)</strong>:
+        Diagonal entries of a matrix <var>A</var> are equal to diagonal entries of transposed matrix A<sup>t</sup>.
+      </p>
+      <p>
+        Proof: From the definition of transpose,
+        <section>
+          <table>
+            <tr>
+              <td>(A<sup>t</sup>)<sub>ii</sub> = A<sub>ii</sub></td>
+              <td>for 1 &le; i &le; min(n,m) &marker;</td>
+            </tr>
+          </table>
+        </section>
+      </p>
+    </section>
+    <section id="distributivity-of-transpose" class="proposition">
+      <p>
+        <strong>
+          Proposition (exercise 1.3.3: distributivity of transposes)
+        </strong>:
+        Let <var>A, B</var> &in; M<sub>m&times;n</sub>(F) and <var>a, b</var> &in; <var>F</var>, then
+        <section>
+          (a&InvisibleTimes;A + b&InvisibleTimes;B)<sup>t</sup> =
+          a&InvisibleTimes;A<sup>t</sup> + b&InvisibleTimes;B<sup>t</sup>
+        </section>
+        Proof:
+        <section>
+          <table>
+            <tr>
+              <td>((aA + bB)<sup>t</sup>)<sub>ij</sub></td>
+              <td>= (aA + bB)<sub>ji</sub></td>
               <td>by definition of transpose</td>
             </tr>
             <tr>
               <td></td>
-              <td>= (A+A<sup>t</sup>)<sub>ij</sub></td>
+              <td>= (aA)<sub>ji</sub> + (bB)<sub>ji</sub></td>
               <td>by definition (MA)</td>
             </tr>
-          </table>
-          Thus the transpose of A+A<sup>t</sup> is equal to A+A<sup>t</sup>, it follows that A+A<sup>t</sup> is symmetric. &marker;
-        </section>
-      </p>
-    </section>
-    <section id="symmetric-matrix-as-subspace" class="proposition">
-      <p>
-        <strong>Proposition (set of symmetric matrices as subspace)</strong>:
-        The set <var>W</var> of all symmetric matrices in M<sub>n&times;n</sub>(F) is a subspace of M<sub>n&times;n</sub>(F).
-      </p>
-      <p>
-        Proof: We show the subspace conditions hold for <var>W</var>. Let <var>A, B</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
-      </p>
-      <p>
-        <section>
-          <table>
             <tr>
-              <td colspan="4">0 &in; W:</td>
+              <td></td>
+              <td>
+                = ((aA)<sup>t</sup>)<sub>ij</sub>
+                + ((bB)<sup>t</sup>)<sub>ij</sub>
+              </td>
+              <td>by definition of transpose</td>
             </tr>
             <tr>
               <td></td>
-              <td>0</td>
-              <td>= 0<sup>t</sup></td>
-              <td>&because; 0<sub>ji</sub> = 0<sub>ij</sub></td>
-            </tr>
-            <tr><td colspan="4">&InvisibleComma;</td></tr>
-            <tr>
-              <td colspan="4">A+B &in; W:</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>A+B</td>
-              <td>= A<sup>t</sup>+B<sup>t</sup></td>
-              <td>by definition of the symmetric matrix</td>
-            </tr>
-            <tr>
-              <td colspan="2"></td>
-              <td>= (A+B)<sup>t</sup></td>
-              <td>by Proposition (distributivity of transposes)</td>
-            </tr>
-            <tr><td colspan="4">&InvisibleComma;</td></tr>
-            <tr>
-              <td colspan="4">cA &in; W:</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>cA</td>
-              <td>= cA<sup>t</sup></td>
-              <td>by definition of the symmetric matrix</td>
-            </tr>
-            <tr>
-              <td colspan="2"></td>
-              <td>= (cA)<sup>t</sup></td>
+              <td>
+                = a(A<sup>t</sup>)<sub>ij</sub>
+                + b(B<sup>t</sup>)<sub>ij</sub>
+              </td>
               <td>by definition (MM) &marker;</td>
             </tr>
           </table>
         </section>
       </p>
     </section>
-    <section id="upper-triangular" class="description">
+    <section id="symmetric-matrix" class="definition">
       <p>
-        <strong>Upper triangular [上三角行列]</strong>:
-        An matrix <var>A</var> is called upper triangular if A<sub>ij</sub> = 0 whenever <var>i</var> &gt; <var>j</var>.
+        <strong>Definition (symmetric matrix [対称行列])</strong>:
+        A symmetric matrix is a square matrix such that
         <section>
           <table>
             <tr>
-              <td>
-                A =
-                <math>
+              <td>A<sup>t</sup> = A</td>
+              <td>that is</td>
+              <td>(A<sup>t</sup>)<sub>ij</sub> = A<sub>ij</sub></td>
+            </tr>
+          </table>
+        </section>
+        For example,
+        <section>
+          <math>
+            <mrow>
+              <mrow>
+                <msup>
                   <mrow>
                     <mo fence="true">&lpar;</mo>
                     <mtable>
                       <mtr>
                         <mtd><mn>1</mn></mtd>
                         <mtd><mn>2</mn></mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd><mn>2</mn></mtd>
                         <mtd><mn>3</mn></mtd>
-                        <mtd><mn>4</mn></mtd>
-                      </mtr>
-                      <mtr>
-                        <mtd><mn>0</mn></mtd>
-                        <mtd><mn>5</mn></mtd>
-                        <mtd><mn>6</mn></mtd>
-                        <mtd><mn>7</mn></mtd>
-                      </mtr>
-                      <mtr>
-                        <mtd><mn>0</mn></mtd>
-                        <mtd><mn>0</mn></mtd>
-                        <mtd><mn>8</mn></mtd>
-                        <mtd><mn>9</mn></mtd>
                       </mtr>
                     </mtable>
                     <mo fence="true">&rpar;</mo>
                   </mrow>
-                </math>
-              </td>
-            </tr>
-          </table>
+                  <mrow><mi>t</mi></mrow>
+                </msup>
+              </mrow>
+              <mo>&equals;</mo>
+              <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable>
+                  <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>2</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>2</mn></mtd>
+                    <mtd><mn>3</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+            </mrow>
+          </math>
         </section>
-      </p>
+      </section>
+      <section id="adding-transpose-get-symmetric" class="proposition">
+        <p>
+          <strong>
+            Proposition (exercise 1.3.5: adding transpose gets symmetric)
+          </strong>:
+          A+A<sup>t</sup> is symmetric for any square matrix <var>A</var>.
+        </p>
+        <p>
+          Proof:
+          <section>
+            <table>
+              <tr>
+                <td>((A+A<sup>t</sup>)<sup>t</sup>)<sub>ij</sub></td>
+                <td>= (A+A<sup>t</sup>)<sub>ji</sub></td>
+                <td>by definition of transpose</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= A<sub>ji</sub>+(A<sup>t</sup>)<sub>ji</sub></td>
+                <td>by definition (MA)
+              </tr>
+              <tr>
+                <td></td>
+                <td>= A<sub>ji</sub>+A<sub>ij</sub></td>
+                <td>by definition of transpose</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= A<sub>ij</sub>+A<sub>ji</sub></td>
+                <td>
+                  &because; A<sub>ji</sub>, A<sub>ij</sub> &in; <var>F</var>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= A<sub>ij</sub>+(A<sup>t</sup>)<sub>ij</sub></td>
+                <td>by definition of transpose</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= (A+A<sup>t</sup>)<sub>ij</sub></td>
+                <td>by definition (MA)</td>
+              </tr>
+            </table>
+            Thus the transpose of A+A<sup>t</sup> is equal to A+A<sup>t</sup>, it follows that A+A<sup>t</sup> is symmetric. &marker;
+          </section>
+        </p>
+      </section>
+      <section id="symmetric-matrix-as-subspace" class="proposition">
+        <p>
+          <strong>
+            Proposition (set of symmetric matrices as subspace)
+          </strong>:
+          The set <var>W</var> of all symmetric matrices in M<sub>n&times;n</sub>(F) is a subspace of M<sub>n&times;n</sub>(F).
+        </p>
+        <p>
+          Proof: We show the subspace conditions hold for <var>W</var>. Let <var>A, B</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
+          <section>
+            <table>
+              <tr>
+                <td colspan="4">0 &in; W:</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>0</td>
+                <td>= 0<sup>t</sup></td>
+                <td>&because; 0<sub>ji</sub> = 0<sub>ij</sub></td>
+              </tr>
+              <tr><td colspan="4">&InvisibleComma;</td></tr>
+              <tr>
+                <td colspan="4">A+B &in; W:</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>A+B</td>
+                <td>= A<sup>t</sup>+B<sup>t</sup></td>
+                <td>by definition of the symmetric matrix</td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>= (A+B)<sup>t</sup></td>
+                <td>by Proposition (distributivity of transposes)</td>
+              </tr>
+              <tr><td colspan="4">&InvisibleComma;</td></tr>
+              <tr>
+                <td colspan="4">cA &in; W:</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>cA</td>
+                <td>= cA<sup>t</sup></td>
+                <td>by definition of the symmetric matrix</td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>= (cA)<sup>t</sup></td>
+                <td>by definition (MM) &marker;</td>
+              </tr>
+            </table>
+          </section>
+        </p>
+      </section>
+      <section id="upper-triangular" class="description">
+        <p>
+          <strong>Upper triangular [上三角行列]</strong>:
+          An matrix <var>A</var> is called upper triangular if A<sub>ij</sub> = 0 whenever <var>i</var> &gt; <var>j</var>.
+          <section>
+            <table>
+              <tr>
+                <td>
+                  A =
+                  <math>
+                    <mrow>
+                      <mo fence="true">&lpar;</mo>
+                      <mtable>
+                        <mtr>
+                          <mtd><mn>1</mn></mtd>
+                          <mtd><mn>2</mn></mtd>
+                          <mtd><mn>3</mn></mtd>
+                          <mtd><mn>4</mn></mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd><mn>0</mn></mtd>
+                          <mtd><mn>5</mn></mtd>
+                          <mtd><mn>6</mn></mtd>
+                          <mtd><mn>7</mn></mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd><mn>0</mn></mtd>
+                          <mtd><mn>0</mn></mtd>
+                          <mtd><mn>8</mn></mtd>
+                          <mtd><mn>9</mn></mtd>
+                        </mtr>
+                      </mtable>
+                      <mo fence="true">&rpar;</mo>
+                    </mrow>
+                  </math>
+                </td>
+              </tr>
+            </table>
+          </section>
+        </p>
+      </section>
+      <section id="diagnal-matrix" class="definition">
+        <p>
+          <strong>Definition (diagonal matrix [対角行列])</strong>:
+          A square matrix <var>A</var> is called a diagonal matrix if A<sub>ij</sub> = 0 whenever <var>i</var> &ne; <var>j</var>.
+          <section>
+            <table>
+              <tr>
+                <td>
+                  A =
+                  <math>
+                    <mrow>
+                      <mo fence="true">&lpar;</mo>
+                      <mtable>
+                        <mtr>
+                          <mtd><mn>3</mn></mtd>
+                          <mtd><mn>0</mn></mtd>
+                          <mtd><mn>0</mn></mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd><mn>0</mn></mtd>
+                          <mtd><mn>&minus;2</mn></mtd>
+                          <mtd><mn>0</mn></mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd><mn>0</mn></mtd>
+                          <mtd><mn>0</mn></mtd>
+                          <mtd><mn>8</mn></mtd>
+                        </mtr>
+                      </mtable>
+                      <mo fence="true">&rpar;</mo>
+                    </mrow>
+                  </math>
+                </td>
+              </tr>
+            </table>
+          </section>
+        </p>
+      </section>
+      <section id="diagonals-are-symmetric" class="proposition">
+        <p>
+          <strong>
+            Proposition (exercise 1.3.7: diagonals are symmetric)
+          </strong>:
+          Diagonal matrices are symmetric matrices.
+        </p>
+        <p>
+          Proof: Let <var>A</var> be a diagonal matrix, then
+          <ul>
+            <li>
+              if <var>i</var> &ne; <var>j</var>, by the definition of diagonal matrix, (A<sup>t</sup>)<sub>ij</sub> = A<sub>ji</sub> = 0 = A<sub>ij</sub>
+            </li>
+            <li>
+              if <var>i</var> = <var>j</var>, by Proposition (diagonal entries of transposes), (A<sup>t</sup>)<sub>ij</sub> = A<sub>ij</sub>
+            </li>
+          </ul>
+          Thus, since (A<sup>t</sup>)<sub>ij</sub> = A<sub>ij</sub> for any <var>i</var> and <var>j</var>, diagonal matrices are symmetric. &marker;
+        </p>
+      </section>
+      <section id="diagnonal-matrices-as-subspace" class="proposition">
+        <p>
+          <strong>
+            Proposition (example 1.3.3: diagonal matrices as subspace)
+          </strong>:
+          The set of diagonal matrices <var>W</var> is a subspace of M<sub>n&times;n</sub>(F).
+        </p>
+        <p>
+          Proof: Vectors in <var>W</var> meet the subspace conditions; let <var>A</var>, <var>B</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
+          <section>
+            <table>
+              <tr>
+                <td>0 &in; W</td>
+                <td>
+                  &because; whenever <var>i</var> &ne; <var>j</var>,
+                  (0)<sub>ij</sub> = 0;
+                  thus the zero matrix is diagonal
+                </td>
+              </tr>
+              <tr>
+                <td>A+B &in; W</td>
+                <td>
+                  &because; whenever <var>i</var> &ne; <var>j</var>,
+                  (A+B)<sub>ij</sub>
+                  = A<sub>ij</sub> + B<sub>ij</sub>
+                  = 0 + 0 = 0;
+                  thus A+B is diagonal
+                </td>
+              </tr>
+              <tr>
+                <td>cA &in; W</td>
+                <td>
+                  &because; whenever <var>i</var> &ne; <var>j</var>,
+                  (cA)<sub>ij</sub> = cA<sub>ij</sub> = c0 = 0;
+                  thus cA is diagonal &marker;
+                </td>
+              </tr>
+            </table>
+          </section>
+        </p>
+      </section>
+      <section id="trace-of-matrix" class="description">
+        <p>
+          <strong>Notation (tr(M): the trace of a square matrix)</strong>:
+          The trace of an n&times;n matrix M, denoted tr(M), is the sum of the diagonal entries of M; that is,
+          <section>
+            tr(M) = M<sub>11</sub> + M<sub>22</sub> + &ctdot; + M<sub>nn</sub>
+          </section>
+        </p>
+      </section>
+      <section id="distributivity-of-trace" class="proposition">
+        <p>
+          <strong>
+            Proposition (exercise 1.3.6: distributivity of trace)
+          </strong>:
+          For any A, B &in; M<sub>n&times;n</sub>(F) and any a, b &in; F,
+          <section>
+            tr(aA+bB) = a tr(A) + b tr(B)
+          </section>
+          Proof:
+          <section>
+            <table>
+              <tr>
+                <td>(aA+bB)<sub>ii</sub></td>
+                <td>= (aA)<sub>ii</sub>+(bB)<sub>ii</sub></td>
+                <td>by definition (MA)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= aA<sub>ii</sub>+bB<sub>ii</sub></td>
+                <td>by definition (MM)</td>
+              </tr>
+            </table>
+          </section>
+          It follows that
+          <section>
+            <table>
+              <tr>
+                <td colspan="3">tr(aA+bB)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = (aA+bB)<sub>11</sub> 
+                  + (aA+bB)<sub>22</sub> + &ctdot;
+                  + (aA+bB)<sub>nn</sub>
+                </td>
+                <td>by definition of trace</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = aA<sub>11</sub>+bB<sub>11</sub>
+                  + aA<sub>22</sub>+bB<sub>22</sub> + &ctdot;
+                  + aA<sub>nn</sub>+bB<sub>nn</sub>
+                </td>
+                <td>&because;
+                  (aA+bB)<sub>ii</sub> = aA<sub>ii</sub>+bB<sub>ii</sub>
+                  (see above)
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  = a(A<sub>11</sub>+A<sub>22</sub>+&ctdot;+A<sub>nn</sub>)
+                  + b(B<sub>11</sub>+B<sub>22</sub>+&ctdot;+B<sub>nn</sub>)
+                </td>
+                <td>
+                  &because; A<sub>ii</sub>, B<sub>ii</sub>, a, b &in; F
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>= a tr(A) + b tr(B)</td>
+                <td>by definition of trace &marker;</td>
+              </tr>
+            </table>
+          </section>
+        </p>
+      </section>
+      <section id="zero-trace-as-subspace" class="proposition">
+        <p>
+          <strong>
+            Proposition (example 1.3.4: zero-trace as subspace)
+          </strong>:
+          Let <var>W</var> the set of n&times;n matrices having trace equal to zero, then <var>W</var> is a subspace of M<sub>n&times;n</sub>(F).
+        </p>
+        <p>
+          Proof: Vectors in <var>W</var> meet the subspace conditions; let <var>A</var>, <var>B</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
+          <section>
+            <table>
+              <tr>
+                <td colspan="3">0 &in; W:</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>tr(0) = 0+0+&ctdot;+0 = 0</td>
+                <td>by definition of the zero matrix</td>
+              </tr>
+              <tr><td>&InvisibleComma;</td></tr>
+              <tr>
+                <td colspan="3">A+B &in; W:</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>tr(A+B) = tr(A) + tr(B) = 0+0 = 0</td>
+                <td>by Proposition (distributivity of trace)</td>
+              </tr>
+              <tr><td>&InvisibleComma;</td></tr>
+              <tr>
+                <td colspan="3">cA &in; W</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>tr(cA) = c tr(A) = c0 = 0</td>
+                <td>by Proposition (distributivity of trace)</td>
+              </tr>
+            </table>
+          </section>
+        </p>
+      </section>
+      <section id="skew-matix" class="description">
+        <p>
+          <strong>Skew-symmetric matrix [交代行列]</strong>:
+          A square matrix <var>M</var> is called skew-symmetric if
+          <section>
+            M<sup>t</sup> = &minus;M
+          </section>
+          For example,
+          <section>
+            <table>
+              <tr>
+                <td>
+                  M =
+                  <math>
+                    <mrow>
+                      <mo fence="true">&lpar;</mo>
+                      <mtable>
+                        <mtr>
+                          <mtd>0</mtd>
+                          <mtd>1</mtd>
+                          <mtd>&minus;2</mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>&minus;1</mtd>
+                          <mtd>0</mtd>
+                          <mtd>3</mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>2</mtd>
+                          <mtd>&minus;3</mtd>
+                          <mtd>0</mtd>
+                        </mtr>
+                      </mtable>
+                      <mo fence="true">&rpar;</mo>
+                    </mrow>
+                  </math>
+                </td>
+                <td>
+                  M<sup>t</sup> =
+                  <math>
+                    <mrow>
+                      <mo fence="true">&lpar;</mo>
+                      <mtable>
+                        <mtr>
+                          <mtd>0</mtd>
+                          <mtd>&minus;1</mtd>
+                          <mtd>2</mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>1</mtd>
+                          <mtd>0</mtd>
+                          <mtd>&minus;3</mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>&minus;2</mtd>
+                          <mtd>3</mtd>
+                          <mtd>0</mtd>
+                        </mtr>
+                      </mtable>
+                      <mo fence="true">&rpar;</mo>
+                    </mrow>
+                  </math>
+                </td>
+                <td>
+                  &minus;M =
+                  <math>
+                    <mrow>
+                      <mo fence="true">&lpar;</mo>
+                      <mtable>
+                        <mtr>
+                          <mtd>0</mtd>
+                          <mtd>&minus;1</mtd>
+                          <mtd>2</mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>1</mtd>
+                          <mtd>0</mtd>
+                          <mtd>&minus;3</mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>&minus;2</mtd>
+                          <mtd>3</mtd>
+                          <mtd>0</mtd>
+                        </mtr>
+                      </mtable>
+                      <mo fence="true">&rpar;</mo>
+                    </mrow>
+                  </math>
+                </td>
+              </tr>
+            </table>
+          </section>
+        </p>
+      </section>
     </section>
-    <section id="diagnal-matrix" class="definition">
+  </section>
+  <section id="linearly-dependence">
+    <h2>Linear Dependence and Linear Independence</h2>
+    <section id="ex-1.5.2.(e)" class="description">
       <p>
-        <strong>Definition (diagonal matrix [対角行列])</strong>:
-        A square matrix <var>A</var> is called a diagonal matrix if A<sub>ij</sub> = 0 whenever <var>i</var> &ne; <var>j</var>.
+        <strong>Exercise 1.5.2.(e)</strong>:
+        Prove that the set of tuples is linearly depended.
         <section>
-          <table>
-            <tr>
-              <td>
-                A =
-                <math>
-                  <mrow>
-                    <mo fence="true">&lpar;</mo>
-                    <mtable>
-                      <mtr>
-                        <mtd><mn>3</mn></mtd>
-                        <mtd><mn>0</mn></mtd>
-                        <mtd><mn>0</mn></mtd>
-                      </mtr>
-                      <mtr>
-                        <mtd><mn>0</mn></mtd>
-                        <mtd><mn>&minus;2</mn></mtd>
-                        <mtd><mn>0</mn></mtd>
-                      </mtr>
-                      <mtr>
-                        <mtd><mn>0</mn></mtd>
-                        <mtd><mn>0</mn></mtd>
-                        <mtd><mn>8</mn></mtd>
-                      </mtr>
-                    </mtable>
-                    <mo fence="true">&rpar;</mo>
-                  </mrow>
-                </math>
-              </td>
-            </tr>
-          </table>
-        </section>
-      </p>
-    </section>
-    <section id="diagonals-are-symmetric" class="proposition">
-      <p>
-        <strong>Proposition (exercise 1.3.7: diagonals are symmetric)</strong>:
-        Diagonal matrices are symmetric matrices.
-      </p>
-      <p>
-        Proof: Let <var>A</var> be a diagonal matrix, then
-        <ul>
-          <li>
-            if <var>i</var> &ne; <var>j</var>, by the definition of diagonal matrix, (A<sup>t</sup>)<sub>ij</sub> = A<sub>ji</sub> = 0 = A<sub>ij</sub>
-          </li>
-          <li>
-            if <var>i</var> = <var>j</var>, by Proposition (diagonal entries of transposes), (A<sup>t</sup>)<sub>ij</sub> = A<sub>ij</sub>
-          </li>
-        </ul>
-        Thus, since (A<sup>t</sup>)<sub>ij</sub> = A<sub>ij</sub> for any <var>i</var> and <var>j</var>, diagonal matrices are symmetric. &marker;
-      </p>
-    </section>
-    <section id="diagnonal-matrices-as-subspace" class="proposition">
-      <p>
-        <strong>Proposition (example 1.3.3: diagonal matrices as subspace)</strong>:
-        The set of diagonal matrices <var>W</var> is a subspace of M<sub>n&times;n</sub>(F).
-      </p>
-      <p>
-        Proof: Vectors in <var>W</var> meet the subspace conditions; let <var>A</var>, <var>B</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
-        <section>
-          <table>
-            <tr>
-              <td>0 &in; W</td>
-              <td>
-                &because; whenever <var>i</var> &ne; <var>j</var>,
-                (0)<sub>ij</sub> = 0;
-                thus the zero matrix is diagonal
-              </td>
-            </tr>
-            <tr>
-              <td>A+B &in; W</td>
-              <td>
-                &because; whenever <var>i</var> &ne; <var>j</var>,
-                (A+B)<sub>ij</sub>
-                = A<sub>ij</sub> + B<sub>ij</sub>
-                = 0 + 0 = 0;
-                thus A+B is diagonal
-              </td>
-            </tr>
-            <tr>
-              <td>cA &in; W</td>
-              <td>
-                &because; whenever <var>i</var> &ne; <var>j</var>,
-                (cA)<sub>ij</sub> = cA<sub>ij</sub> = c0 = 0;
-                thus cA is diagonal &marker;
-              </td>
-            </tr>
-          </table>
-        </section>
-      </p>
-    </section>
-    <section id="trace-of-matrix" class="description">
-      <p>
-        <strong>Notation (tr(M): the trace of a square matrix)</strong>:
-        The trace of an n&times;n matrix M, denoted tr(M), is the sum of the diagonal entries of M; that is,
-        <section>
-          tr(M) = M<sub>11</sub> + M<sub>22</sub> + &ctdot; + M<sub>nn</sub>
-        </section>
-      </p>
-    </section>
-    <section id="distributivity-of-trace" class="proposition">
-      <p>
-        <strong>Proposition (exercise 1.3.6: distributivity of trace)</strong>:
-        For any A, B &in; M<sub>n&times;n</sub>(F) and any a, b &in; F,
-        <section>
-          tr(aA+bB) = a tr(A) + b tr(B)
+          &lbrace;
+          ( 1, &minus;1, 2 ),
+          ( 1, &minus;2, 1 ),
+          ( 1, 1, 4 )
+          &rbrace;
+          &in; &reals;<sup>3</sup>
         </section>
         Proof:
+        Consider the representation of 0 as a linear combination of vectors in the set. For some scalars <var>a</var>, <var>b</var>, and <var>c</var>,
         <section>
-          <table>
-            <tr>
-              <td>(aA+bB)<sub>ii</sub></td>
-              <td>= (aA)<sub>ii</sub>+(bB)<sub>ii</sub></td>
-              <td>by definition (MA)</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= aA<sub>ii</sub>+bB<sub>ii</sub></td>
-              <td>by definition (MM)</td>
-            </tr>
-          </table>
-        </section>
-        It follows that
-        <section>
-          <table>
-            <tr>
-              <td colspan="3">tr(aA+bB)</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                = (aA+bB)<sub>11</sub> 
-                + (aA+bB)<sub>22</sub> + &ctdot;
-                + (aA+bB)<sub>nn</sub>
-              </td>
-              <td>by definition of trace</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                = aA<sub>11</sub>+bB<sub>11</sub>
-                + aA<sub>22</sub>+bB<sub>22</sub> + &ctdot;
-                + aA<sub>nn</sub>+bB<sub>nn</sub>
-              </td>
-              <td>&because;
-                (aA+bB)<sub>ii</sub> = aA<sub>ii</sub>+bB<sub>ii</sub>
-                (see above)
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                = a(A<sub>11</sub>+A<sub>22</sub>+&ctdot;+A<sub>nn</sub>)
-                + b(B<sub>11</sub>+B<sub>22</sub>+&ctdot;+B<sub>nn</sub>)
-              </td>
-              <td>
-                &because; A<sub>ii</sub>, B<sub>ii</sub>, a, b &in; F
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>= a tr(A) + b tr(B)</td>
-              <td>by definition of trace &marker;</td>
-            </tr>
-          </table>
-        </section>
-      </p>
-    </section>
-    <section id="zero-trace-as-subspace" class="proposition">
-      <p>
-        <strong>Proposition (example 1.3.4: zero-trace as subspace)</strong>:
-        Let <var>W</var> the set of n&times;n matrices having trace equal to zero, then <var>W</var> is a subspace of M<sub>n&times;n</sub>(F).
-      </p>
-      <p>
-        Proof: Vectors in <var>W</var> meet the subspace conditions; let <var>A</var>, <var>B</var> &in; <var>W</var> and <var>c</var> &in; <var>F</var>,
-        <section>
-          <table>
-            <tr>
-              <td colspan="3">0 &in; W:</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>tr(0) = 0+0+&ctdot;+0 = 0</td>
-              <td>by definition of the zero matrix</td>
-            </tr>
-            <tr><td>&InvisibleComma;</td></tr>
-            <tr>
-              <td colspan="3">A+B &in; W:</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>tr(A+B) = tr(A) + tr(B) = 0+0 = 0</td>
-              <td>by Proposition (distributivity of trace)</td>
-            </tr>
-            <tr><td>&InvisibleComma;</td></tr>
-            <tr>
-              <td colspan="3">cA &in; W</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>tr(cA) = c tr(A) = c0 = 0</td>
-              <td>by Proposition (distributivity of trace)</td>
-            </tr>
-          </table>
+          <section>
+            a ( 1, &minus;1, 2 ) &plus;
+            b ( 1, &minus;2, 1 ) &plus;
+            c ( 1, 1, 4 )
+            = ( 0, 0, 0 )
+          </section>
+          Then we have
+          <section>
+            <table>
+              <tr>
+                <td class="right">
+                  a
+                  &plus; b
+                  &plus; c
+                  = 0
+                </td>
+                <td>&ctdot; (1)</td>
+                <td rowspan="3" class="vertical-middle">
+                  &longrightarrow;
+                </td>
+                <td colspan="2">
+                  if b = 2 and c = 1, then a = &minus;3
+                </td>
+              </tr>
+              <tr>
+                <td class="right">
+                  &minus;a
+                  &minus; 2b
+                  &plus; c
+                  = 0
+                </td>
+                <td>&ctdot; (2)</td>
+                <td class="right">
+                  &minus;b
+                  &plus; 2c
+                  = 0
+                </td>
+                <td>
+                  &ctdot; by (1)+(2)
+                </td>
+              </tr>
+              <tr>
+                <td class="right">
+                  2a
+                  &plus; b
+                  &plus; 4c
+                  = 0
+                </td>
+                <td>&ctdot; (3)</td>
+                <td class="right">
+                  b
+                  &minus; 2c
+                  = 0
+                </td>
+                <td>
+                  &ctdot; by 2&times;(1)&plus;(3)
+                </td>
+              </tr>
+            </table>
+          </section>
+          Thus a =&minus;3, b = 2, and c = 1 is one of the solutions to the system of linear equations. Or, put another way, there exists a nontrivial representation of 0 as a liner combination of vectors in the set. That is, the set is linearly dependent. &marker;
         </section>
       </p>
     </section>
-    <section id="skew-matix" class="description">
+    <section id="ex-1.5.2.(f)" class="description">
       <p>
-        <strong>Skew-symmetric matrix [交代行列]</strong>:
-        A square matrix <var>M</var> is called skew-symmetric if
+        <strong>Exercise 1.5.2.(f)</strong>:
+        Prove that the set of tuples is linearly independent.
         <section>
-          M<sup>t</sup> = &minus;M
+          &lbrace;
+          ( 1, &minus;1, 2 )
+          &comma;
+          ( 2, 0, 1 )
+          &comma;
+          ( &minus;1, 2, &minus;1 )
+          &rbrace;
+          &in; &reals;<sup>3</sup>
         </section>
-        For example,
+        Proof:
+        Consider the representation of 0 as a linear combination of vectors in the set. For some scalars <var>a</var>, <var>b</var> and <var>c</var>,
         <section>
-          <table>
-            <tr>
-              <td>
-                M =
-                <math>
-                  <mrow>
-                    <mo fence="true">&lpar;</mo>
-                    <mtable>
-                      <mtr>
-                        <mtd>0</mtd>
-                        <mtd>1</mtd>
-                        <mtd>&minus;2</mtd>
-                      </mtr>
-                      <mtr>
-                        <mtd>&minus;1</mtd>
-                        <mtd>0</mtd>
-                        <mtd>3</mtd>
-                      </mtr>
-                      <mtr>
-                        <mtd>2</mtd>
-                        <mtd>&minus;3</mtd>
-                        <mtd>0</mtd>
-                      </mtr>
-                    </mtable>
-                    <mo fence="true">&rpar;</mo>
-                  </mrow>
-                </math>
-              </td>
-              <td>
-                M<sup>t</sup> =
-                <math>
-                  <mrow>
-                    <mo fence="true">&lpar;</mo>
-                    <mtable>
-                      <mtr>
-                        <mtd>0</mtd>
-                        <mtd>&minus;1</mtd>
-                        <mtd>2</mtd>
-                      </mtr>
-                      <mtr>
-                        <mtd>1</mtd>
-                        <mtd>0</mtd>
-                        <mtd>&minus;3</mtd>
-                      </mtr>
-                      <mtr>
-                        <mtd>&minus;2</mtd>
-                        <mtd>3</mtd>
-                        <mtd>0</mtd>
-                      </mtr>
-                    </mtable>
-                    <mo fence="true">&rpar;</mo>
-                  </mrow>
-                </math>
-              </td>
-              <td>
-                &minus;M =
-                <math>
-                  <mrow>
-                    <mo fence="true">&lpar;</mo>
-                    <mtable>
-                      <mtr>
-                        <mtd>0</mtd>
-                        <mtd>&minus;1</mtd>
-                        <mtd>2</mtd>
-                      </mtr>
-                      <mtr>
-                        <mtd>1</mtd>
-                        <mtd>0</mtd>
-                        <mtd>&minus;3</mtd>
-                      </mtr>
-                      <mtr>
-                        <mtd>&minus;2</mtd>
-                        <mtd>3</mtd>
-                        <mtd>0</mtd>
-                      </mtr>
-                    </mtable>
-                    <mo fence="true">&rpar;</mo>
-                  </mrow>
-                </math>
-              </td>
-            </tr>
-          </table>
+          <section>
+            a ( 1, &minus;1, 2 )
+            &plus;
+            b ( 2, 0, 1 )
+            &plus;
+            c ( &minus;1, 2, &minus;1 )
+            = &lpar; 0, 0, 0 &rpar;
+          </section>
+          Then we have
+          <section>
+            <table>
+              <tr>
+                <td class="right">
+                  a + 2b &minus;c = 0
+                </td>
+                <td>&ctdot; (1)</td>
+                <td rowspan="3" class="vertical-middle">
+                  &longrightarrow;
+                </td>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <td class="right">
+                  &minus;a + 2c = 0
+                </td>
+                <td>&ctdot; (2)</td>
+                <td class="right">
+                  2b + c = 0
+                </td>
+                <td>&ctdot; (4) = (1)+(2)</td>
+              </tr>
+              <tr>
+                <td class="right">
+                  2a + b &minus; c = 0
+                </td>
+                <td>&ctdot; (3)</td>
+                <td class="right">
+                  3b &minus; 3c = 0
+                </td>
+                <td>&ctdot; (5) = 2&times;(1)&minus;(3)</td>
+              </tr>
+            </table>
+          </section>
+          By 3&times;(4) + (5), we have 9b = 0. Thus a = b = c = 0 is the only solution to the system of linear equations. That is, the only representation of 0 as a linear combination of vectors in the set is the trivial representation. Hence the set is linearly independent. &marker;
+        </section>
+      </p>
+    </section>
+    <section id="ex-1.5.2.(a)" class="description">
+      <p>
+        <strong>Exercise 1.5.2.(a)</strong>:
+        Prove that the set is linearly dependent.
+        <section>
+          <math>
+            <mrow>
+              <mo fence="true">&lbrace;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mtable columnalign="right">
+                  <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>&minus;3</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>&minus;2</mn></mtd>
+                    <mtd><mn>4</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+                <mo separator="true">,</mo>
+                <mo fence="true">&lpar;</mo>
+                <mtable columnalign="right">
+                  <mtr>
+                    <mtd><mn>&minus;2</mn></mtd>
+                    <mtd><mn>6</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>4</mn></mtd>
+                    <mtd><mn>&minus;8</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              <mo fence="true">&rbrace;</mo>
+            </mrow>
+            <mo>&in;</mo>
+            <mrow>
+              <msub>
+                <mi>M</mi>
+                <mrow><mn>2</mn><mo>&times;</mo><mn>2</mn></mrow>
+              </msub>
+              <mo fence="true">&lpar;</mo>
+              <mi>&reals;</mi>
+              <mo fence="true">&rpar;</mo>
+            </mrow>
+          </math>
+        </section>
+        Proof:
+        It is immediate that
+        <section>
+          <section>
+            <math>
+              <mrow>
+                <mn>2</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mtable columnalign="right">
+                  <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>&minus;3</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>&minus;2</mn></mtd>
+                    <mtd><mn>4</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+              <mo>+</mo>
+              <mrow>
+                <mn>1</mn>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mtable columnalign="right">
+                  <mtr>
+                    <mtd><mn>&minus;2</mn></mtd>
+                    <mtd><mn>6</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>4</mn></mtd>
+                    <mtd><mn>&minus;8</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+              <mo>=</mo>
+              <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable columnalign="right">
+                  <mtr>
+                    <mtd><mn>0</mn></mtd>
+                    <mtd><mn>0</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>0</mn></mtd>
+                    <mtd><mn>0</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+            </math>
+          </section>
+          That is, the representation of 0 as a linear combination of vectors in the set is nontrivial. Hence the set is linearly dependent. &marker;
+        </section>
+      </p>
+    </section>
+    <section id="ex-1.5.2.(b)" class="description">
+      <p>
+        <strong>Exercise 1.5.2.(b)</strong>:
+        Prove that the set is linearly independent.
+        <section>
+          <math>
+            <mrow>
+              <mo fence="true">&lbrace;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mtable columnalign="right">
+                  <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>&minus;2</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>&minus;1</mn></mtd>
+                    <mtd><mn>4</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+                <mo separator="true">,</mo>
+                <mo fence="true">&lpar;</mo>
+                <mtable columnalign="right">
+                  <mtr>
+                    <mtd><mn>&minus;1</mn></mtd>
+                    <mtd><mn>1</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>2</mn></mtd>
+                    <mtd><mn>&minus;4</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              <mo fence="true">&rbrace;</mo>
+            </mrow>
+            <mo>&in;</mo>
+            <mrow>
+              <msub>
+                <mi>M</mi>
+                <mrow><mn>2</mn><mo>&times;</mo><mn>2</mn></mrow>
+              </msub>
+              <mo fence="true">&lpar;</mo>
+              <mi>&reals;</mi>
+              <mo fence="true">&rpar;</mo>
+            </mrow>
+          </math>
+        </section>
+        Proof:
+        Consider the representation of 0 as a linear combination of vectors in the set. For some scalars <var>a</var> and <var>b</var>,
+        <section>
+          <section>
+            <math>
+              <mrow>
+                <mi>a</mi>
+                <mo fence="true">&lpar;</mo>
+                <mtable columnalign="right">
+                  <mtr>
+                    <mtd><mn>1</mn></mtd>
+                    <mtd><mn>&minus;2</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>&minus;1</mn></mtd>
+                    <mtd><mn>4</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+              <mo>&plus;</mo>
+              <mrow>
+                <mi>b</mi>
+                <mo fence="true">&lpar;</mo>
+                <mtable columnalign="right">
+                  <mtr>
+                    <mtd><mn>&minus;1</mn></mtd>
+                    <mtd><mn>1</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>2</mn></mtd>
+                    <mtd><mn>&minus;4</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+              <mo>=</mo>
+              <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mtable columnalign="right">
+                  <mtr>
+                    <mtd><mn>0</mn></mtd>
+                    <mtd><mn>0</mn></mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd><mn>0</mn></mtd>
+                    <mtd><mn>0</mn></mtd>
+                  </mtr>
+                </mtable>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+            </math>
+          </section>
+          Then we have
+          <section>
+            <table>
+              <tr>
+                <td class="right">
+                  a
+                  &minus; b
+                  = 0
+                </td>
+                <td>&ctdot; (1)</td>
+                <td rowspan="4" class="vertical-middle">
+                  &longrightarrow;
+                </td>
+                <td class="right">
+                  a = 0
+                </td>
+                <td>
+                  &ctdot; because b = 0
+                </td>
+              </tr>
+              <tr>
+                <td class="right">
+                  &minus;2a
+                  &plus; b
+                  = 0
+                </td>
+                <td>&ctdot; (2)</td>
+                <td class="right">
+                  &minus;b = 0
+                </td>
+                <td>
+                  &ctdot; by 2&times;(1)+(2)
+                </td>
+              </tr>
+              <tr>
+                <td class="right">
+                  &minus;a
+                  &plus; 2b
+                  = 0
+                </td>
+                <td>&ctdot; (3)</td>
+                <td class="right">
+                  b = 0
+                </td>
+                <td>
+                  &ctdot; by (1)+(3)
+                </td>
+              </tr>
+              <tr>
+                <td class="right">
+                  4a
+                  &minus; 4b
+                  = 0
+                </td>
+                <td>&ctdot; (4)</td>
+                <td class="right">
+                  0 = 0
+                </td>
+                <td>
+                  &ctdot; by 4&times;(1)&minus;(4)
+                </td>
+              </tr>
+            </table>
+          </section>
+          Thus a = b = 0 is the only solution to the system of linear equations. That is, the only representation of 0 as a linear combination of vectors in the set is the trivial representation. Hence the set is linearly independent. &marker;
         </section>
       </p>
     </section>
   </section>
-</section>
-<section id="reference">
-  <h2>References</h2>
-  <ul>
-    <li>
-      Friedberg, S.H., et al. (2018). <i>Linear Algebra, 5th Edition</i>. Pearson.
-    </li>
-  </ul>
-</section>
+  <section id="reference">
+    <h2>References</h2>
+    <ul>
+      <li>
+        Friedberg, S.H., et al. (2018). <i>Linear Algebra, 5th Edition</i>. Pearson.
+      </li>
+    </ul>
+  </section>
 </article>
 </body>
 </html>
