@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Discrete Mathematics and Combinatorics, Sengadir(2008)</title>
+  <style>
+    body {
+      margin-left: 1.2rem;
+    }
+    th, td {
+      padding-right: 1.2rem;
+      vertical-align: text-bottom;
+    }
+    th {
+      text-align: left;
+    }
+    section, article {
+      margin-top: 1rem;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    article {
+      margin-right: 2rem;
+    }
+    .definition, .proposition, .description {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    .definition {
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      background-color: lightgrey;
+    }
+    .center {
+      text-align: center;
+    }
+    .right {
+      text-align: right;
+    }
+    .vertical-middle {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<article>
+<h1>4. Counting Principles</h1>
+  <section id="fundamental">
+    <h2>4.1. A Fundamental Counting Principle</h2>
+    <section class="definition">
+      <p>
+        <strong>Fundamental Counting Principle</strong>:
+        Consider an activity consisting of <var>k</var> independent subtasks. Assume that
+        <ul>
+          <li>task₁ can be performed in m₁ ways,</li>
+          <li>task₂ can be performed in m₂ ways,</li>
+          <li>&vellip;</li>
+          <li>task<sub>k</sub> can be performed in m<sub>k</sub> ways.</li>
+        </ul>
+        Then this activity can be completed in
+        m₁ &times; m₂ &times; &ctdot; &times; m<sub>k</sub>
+        different number of ways.
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Example 4.2</strong>:
+        Find the number of all possible six-digit numbers that can be formed by using 2, 6, 8 and 9.
+      </p>
+      <p>
+        Solution:
+        <section>
+          <p>
+            <ul>
+              <li>The unit place can be filled by any of the four given digits,</li>
+              <li>the tenth place can be filled by any of the four given digits,</li>
+              <li>&vellip;</li>
+              <li>and so on upto the hundred-thousandth place.</li>
+            </ul>
+            Hence, the required answer is 4<sup>6</sup>.
+          </p>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Example 4.7</strong>:
+        Show that the number of ways of placing <var>n</var> distinct objects into <var>m</var> boxes is m<sup>n</sup>.
+      </p>
+      <p>
+        Solution:
+        <section>
+          <p>
+            <ul>
+              <li>The first object go into any one of the <var>m</var> boxes. Clearly, there are <var>m</var> ways of doing this.</li>
+              <li>Similarly, the second object can also be placed in any of the <var>m</var> boxes and so on.</li>
+            </ul>
+            Hence, the required answer is m<sup>n</sup>.
+          </p>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Note</strong>:
+        If we think of the place as boxes and the digits as objects, the answer is 6<sup>4</sup>. What's wrong?
+      </p>
+    </section>
+    <section class="definition">
+      <p>
+        <strong>Proposition 4.1</strong>:
+        Let <var>A</var> and <var>B</var> be finite sets with |A| = n and |B| = m. Then the number of all functions <var>f</var> : A &rightarrow; B is m<sup>n</sup>.
+      </p>
+      <p>
+        Proof:
+        <section>
+          <p>
+            Let A = {x₁, x₂, &ctdot;, x<sub>n</sub>}. Then
+            <ul>
+              <li>f(x₁) can be defined in <var>m</var> possible ways</li>
+              <li>f(x₂) can be defined in <var>m</var> possible ways</li>
+              <li>&vellip;</li>
+              <li>f(x<sub>n</sub>) can be defined in <var>m</var> possible ways</li>
+            </ul>
+          </p>
+          Thus, the number of all possible functions is m<sup>n</sup>.
+        </section>
+      </p>
+      <p>
+        <strong>Definition (function)</strong>:
+        A function, <var>f</var> : A &rightarrow; B, is a rule that associates each element <var>x</var> in <var>A</var> with an element in <var>B</var>, denoted f(x). It demands that
+        <ul>
+          <li>if x₁ = x₂ then f(x₁) = f(x₂), and</li>
+          <li>for all element x &in; A there exists f(x) such that f(x) &in; B</li>
+        </ul>
+        Note that
+        <ul>
+          <li>even if f(x₁) = f(x₂), it is allowed that x₁ &ne; x₂</li>
+          <li>the range { f(x) : x &in; A } can be a proper subset of <var>B</var></li>
+        </ul>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Functional solution to example 4.7</strong>:
+        Consider one specific distribution of the <var>n</var> objects into <var>m</var> distinct boxes.
+        <ul>
+          <li>Think of a relation from objects to boxes. Because each object is placed in one of boxes, a function <var>f</var> : <var>objects</var> &rightarrow; <var>boxes</var> can be defined.</li>
+          <li>Think of a relation from boxes to objects. Some boxes can be empty, meaning that some boxes are not related to objects. Hence, the relation cannot be a function.</li>
+        </ul>
+        Thus, the number of all possible <var>f</var> : <var>objects</var> &rightarrow; <var>boxes</var> = m<sup>n</sup> is the required answer.
+      </p>
+      <p>
+        <strong>Functional solution to example 4.2</strong>:
+        Consider a six-digit number that can be formed by using 2, 6, 8 and 9.
+        <ul>
+          <li>Think of a relation from digits to places. Some digits may not appear in some number (e.g., 226688), meaning that some digits are not related to places. Hence, the relation cannot be a function.</li>
+          <li>Think of a relation from places to digits. Because each place is filled with one of digits, a function <var>f</var> : <var>places</var> &rightarrow; <var>digits</var> can be defined.</li>
+        </ul>
+        Thus, the number of all possible <var>f</var> : <var>places</var> &rightarrow; <var>digits</var> = 4<sup>6</sup> is the required answer.
+      </p>
+    </section>
+  </section>
+</article>
+</body>
+</html>
