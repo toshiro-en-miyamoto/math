@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Discrete Mathematics and Combinatorics, Sengadir(2008)</title>
+  <title>Discrete Mathematics and Combinatorics, Sengadir (2008)</title>
   <style>
     body {
       margin-left: 1.2rem;
@@ -130,13 +130,13 @@
         <strong>Definition (function)</strong>:
         A function, <var>f</var> : A &rightarrow; B, is a rule that associates each element <var>x</var> in <var>A</var> with an element in <var>B</var>, denoted f(x). It demands that
         <ul>
-          <li>if x₁ = x₂ then f(x₁) = f(x₂), and</li>
-          <li>for all element x &in; A there exists f(x) such that f(x) &in; B</li>
+          <li>if x₁ = x₂ then f(x₁) = f(x₂)</li>
+          <li>for all x &in; A there exists f(x) such that f(x) &in; B</li>
         </ul>
         Note that
         <ul>
-          <li>even if f(x₁) = f(x₂), it is allowed that x₁ &ne; x₂</li>
-          <li>the range { f(x) : x &in; A } can be a proper subset of <var>B</var></li>
+          <li>even if f(x₁) = f(x₂), x₁ is not necessarily equal to x₂</li>
+          <li>there exists y &in; B such that y &notin; { f(x) : x &in; A }</li>
         </ul>
       </p>
     </section>
@@ -158,6 +158,132 @@
           <li>Think of a relation from places to digits. Because each place is filled with one of digits, a function <var>f</var> : <var>places</var> &rightarrow; <var>digits</var> can be defined.</li>
         </ul>
         Thus, the number of all possible <var>f</var> : <var>places</var> &rightarrow; <var>digits</var> = 4<sup>6</sup> is the required answer.
+      </p>
+    </section>
+  </section>
+  <section id="arrangements">
+    <h2>4.1.1. Arrangements</h2>
+    <section class="description">
+      <p>In how many ways can three objects be arranged in some order? Let us call these objects as <var>a</var>, <var>b</var>, <var>c</var>. We can arrange them as <var>abc</var>, <var>acb</var>, <var>bac</var>, <var>bca</var>, <var>cab</var>, <var>cba</var>. These are all the possible ways and hence three objects can be arranged in six different ways.</p>
+    </section>
+    <section class="definition">
+      <p>
+        <strong>Proposition 4.2</strong>:
+        <var>r</var> objects can be arranged in <var>r!</var> ways.
+      </p>
+      <p>
+        Proof:
+        <section>
+          <p>Imagine an array of <var>r</var> boxes. Consider the filling of each of the <var>r</var> boxes as a subtask.</p>
+          <ul>
+            <li>We can place any of the <var>r</var> objects in the first box. Thus, the number of ways of completing this first task is <var>r</var>.</li>
+            <li>Now we are left with <var>r</var> &minus; 1 objects. So the second box can be filled in <var>r</var> &minus; 1 ways.</li>
+          </ul>
+          <p>Thus, by using the counting principle of the previous section, the number of different arrangements of <var>r</var> things is r &times; (r &minus; 1) &times; &ctdot; &times; 1 = r!.</p>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>We consider problems involving special boxes into which only certain special objects can be placed. Consider a row of <var>r</var> boxes. Assume that</p>
+      <ul>
+        <li>only m₁ of the objects can be placed in the first box, after which</li>
+        <li>only m₂ of the remaining objects can be placed in the second box, and lastly</li>
+        <li>only m<sub>r</sub> of the remaining objects can be placed in the <var>r</var> th box.</li>
+      </ul>
+      <p>The number of arrangements is m₁ &times; m₂ &times; &ctdot; &times; m<sub>r</sub>.</p>
+    </section>
+  </section>
+  <section id="permutations-combinations">
+    <h2>4.2. Permutations and Combinations</h2>
+    <section class="definition">
+      <p>
+        <strong>Definition (permutation)</strong>:
+        Let there be <var>n</var> objects. The number of ways of <i>choosing and arranging</i> <var>r</var> objects out of the <var>n</var> objects is called the permutation of <var>r</var> objects out of <var>n</var>, denoted <sup>n</sup>P<sub>r</sub>.
+      </p>
+      <p>
+        <strong>Proposition 4.3</strong>:
+        <section>
+          <sup>n</sup>P<sub>r</sub>
+          = n(n &minus; 1)(n &minus; 2)&ctdot;(n &minus; r + 1)
+          = n! &divide; (n &minus; r)!
+        </section>
+        Proof:
+        <section>
+          <p>Consider an array of <var>r</var> boxes. We can place</p>
+          <ul>
+            <li>any of the <var>n</var> &minus; 0 objects in the first box</li>
+            <li>any of the remaining <var>n</var> &minus; 1 objects in the second box</li>
+            <li>&vellip;</li>
+            <li>any of the remaining <var>n</var> &minus; <var>r</var> + 1 objects in the <var>r</var> th box</li>
+          </ul>
+          <p>
+            Hence, the number of ways this can be achieved is
+            n(n &minus; 1)(n &minus; 2)&ctdot;(n &minus; r + 1).
+          </p>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Example 4.18</strong>:
+        Consider five-letter words that can be formed using nine letters A, B, &ctdot;, I without repetition. How many of them contain A and I?
+      </p>
+      <p>
+        Solution:
+        <section>
+          <ul>
+            <li>First, we shall allot two places out of five to A and I. This can be done in <sup>5</sup>P<sub>2</sub> ways.</li>
+            <li>Next, we shall fill the remaining three places with seven letters B, C, &ctdot; H without repetition. This can be done in <sup>7</sup>P<sub>3</sub>.</li>
+          </ul>
+          <p>
+            Hence, the required answer is
+            <sup>5</sup>P<sub>2</sub> &times; <sup>7</sup>P<sub>3</sub>.
+          </p>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Example 4.19</strong>:
+        <ul>
+          <li>In how many ways can five letters be chosen from nine letters A, B, &ctdot;, I?</li>
+          <li>How many of them contain A and I?</li>
+        </ul>
+        In Example 4.18, the order in which the letters appear is important. But in this example, letters are just selected without any consideration for the order. We need the idea of <i>combination</i>.
+      </p>
+    </section>
+    <section class="definition">
+      <p>
+        <strong>Definition (combination)</strong>:
+        Let there be <var>n</var> objects. The number of ways of choosing <var>r</var> objects out of <var>n</var> objects is called the combination of <var>r</var> objects out of <var>n</var> objects, denoted <sup>n</sup>C<sub>r</sub>.
+      </p>
+      <p>
+        <strong>Proposition 4.4</strong>:
+        <section>
+          <sup>n</sup>C<sub>r</sub> = <sup>n</sup>P<sub>r</sub> &divide; r!
+        </section>
+        Proof:
+        <section>
+          <p>
+            Recall that
+          </p>
+          <ul>
+            <li>we can arrange <var>r</var> objects in r! ways</li>
+            <li>the number of ways of choosing and arranging <var>r</var> objects out of <var>n</var> objects is <sup>n</sup>P<sub>r</sub></li>
+          </ul>
+          <p>
+            Thus, the number of ways of choosing <var>r</var> objects out of <var>n</var> objects is <sup>n</sup>P<sub>r</sub> &divide; r!
+          </p>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Example 4.19</strong>:
+        <section>
+          <p>In how many ways can five letters be chosen from nine letters A, B, &ctdot;, I? &mdash; It is the number of ways of choosing five out of nine = <sup>9</sup>C<sub>5</sub>.</p>
+          <p>How many of them contain A and I? &mdash; If our choice must include both A and I, then we need to choose only three out of seven = <sup>7</sup>C<sub>3</sub>.</p>
+        </section>
       </p>
     </section>
   </section>
