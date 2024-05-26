@@ -265,14 +265,14 @@
         Proof:
         <section>
           <p>
-            Recall that
+            Choosing and arranging <var>r</var> objects out of <var>n</var> objects consists of two subtasks:
+            <ul>
+              <li>choosing <var>r</var> objects out of <var>n</var> objects &mdash; in <sup>n</sup>C<sub>r</sub> ways</li>
+              <li>arranging <var>r</var> objects &mdash; in r! ways</li>
+            </ul>
           </p>
-          <ul>
-            <li>we can arrange <var>r</var> objects in r! ways</li>
-            <li>the number of ways of choosing and arranging <var>r</var> objects out of <var>n</var> objects is <sup>n</sup>P<sub>r</sub></li>
-          </ul>
           <p>
-            Thus, the number of ways of choosing <var>r</var> objects out of <var>n</var> objects is <sup>n</sup>P<sub>r</sub> &divide; r!
+            Thus, <sup>n</sup>P<sub>r</sub> = <sup>n</sup>C<sub>r</sub> &times; r!.
           </p>
         </section>
       </p>
@@ -284,6 +284,681 @@
           <p>In how many ways can five letters be chosen from nine letters A, B, &ctdot;, I? &mdash; It is the number of ways of choosing five out of nine = <sup>9</sup>C<sub>5</sub>.</p>
           <p>How many of them contain A and I? &mdash; If our choice must include both A and I, then we need to choose only three out of seven = <sup>7</sup>C<sub>3</sub>.</p>
         </section>
+      </p>
+    </section>
+  </section>
+  <section id="permutation-identical-objects">
+    <h2>4.2.2. Permutation of Identical Objects</h2>
+    <section class="description">
+      <p>
+        Consider nine-digit numbers that are formed by two 4's, three 6's and four 8's, such as 446668888. How many distinct numbers can we have?
+      </p>
+      <p>
+        Method 1a:
+        <ul>
+          <li>Choose two places for two 4's out of the nine places &mdash; in <sup>9</sup>C<sub>2</sub>.</li>
+          <li>Choose three places for three 6's out of the remaining seven places &mdash; in <sup>7</sup>C<sub>3</sub>.</li>
+          <li>Choose four places for four 8's out of the remaining four places &mdash; in <sup>4</sup>C<sub>4</sub>.</li>
+          <li>
+            Hence, the answer is
+            <math>
+              <mrow>
+                <mrow>
+                  <mo fence="true">&lpar;</mo>
+                  <mfrac>
+                    <mrow>
+                      <mn>9</mn>
+                      <mo>&times;</mo>
+                      <mn>8</mn>
+                    </mrow>
+                    <mrow>
+                      <mn>2</mn>
+                      <mo>&times;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </mfrac>
+                  <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&InvisibleTimes;</mo>
+                <mrow>
+                  <mo fence="true">&lpar;</mo>
+                  <mfrac>
+                    <mrow>
+                      <mn>7</mn>
+                      <mo>&times;</mo>
+                      <mn>6</mn>
+                      <mo>&times;</mo>
+                      <mn>5</mn>
+                    </mrow>
+                    <mrow>
+                      <mn>3</mn>
+                      <mo>&times;</mo>
+                      <mn>2</mn>
+                      <mo>&times;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </mfrac>
+                  <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&InvisibleTimes;</mo>
+                <mrow>
+                  <mo fence="true">&lpar;</mo>
+                  <mfrac>
+                    <mrow>
+                      <mn>4</mn>
+                      <mo>&times;</mo>
+                      <mn>3</mn>
+                      <mo>&times;</mo>
+                      <mn>2</mn>
+                      <mo>&times;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                    <mrow>
+                      <mn>4</mn>
+                      <mo>&times;</mo>
+                      <mn>3</mn>
+                      <mo>&times;</mo>
+                      <mn>2</mn>
+                      <mo>&times;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </mfrac>
+                  <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>=</mo>
+                <mn>1,260</mn>
+                <mo>distinct numbers.</mo>
+              </mrow>
+            </math>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Method 1b:
+        <ul>
+          <li>Choose four places for two 8's out of the nine places &mdash; in <sup>9</sup>C<sub>4</sub>.</li>
+          <li>Choose three places for three 6's out of the remaining five places &mdash; in <sup>5</sup>C<sub>3</sub>.</li>
+          <li>Choose two places for three 2's out of the remaining two places &mdash; in <sup>2</sup>C<sub>2</sub>.</li>
+          <li>
+            Hence, the answer is
+            <math>
+              <mrow>
+                <mrow>
+                  <mo fence="true">&lpar;</mo>
+                  <mfrac>
+                    <mrow>
+                      <mn>9</mn>
+                      <mo>&times;</mo>
+                      <mn>8</mn>
+                      <mo>&times;</mo>
+                      <mn>7</mn>
+                      <mo>&times;</mo>
+                      <mn>6</mn>
+                    </mrow>
+                    <mrow>
+                      <mn>4</mn>
+                      <mo>&times;</mo>
+                      <mn>3</mn>
+                      <mo>&times;</mo>
+                      <mn>2</mn>
+                      <mo>&times;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </mfrac>
+                  <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&InvisibleTimes;</mo>
+                <mrow>
+                  <mo fence="true">&lpar;</mo>
+                  <mfrac>
+                    <mrow>
+                      <mn>5</mn>
+                      <mo>&times;</mo>
+                      <mn>4</mn>
+                      <mo>&times;</mo>
+                      <mn>3</mn>
+                    </mrow>
+                    <mrow>
+                      <mn>3</mn>
+                      <mo>&times;</mo>
+                      <mn>2</mn>
+                      <mo>&times;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </mfrac>
+                  <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>&InvisibleTimes;</mo>
+                <mrow>
+                  <mo fence="true">&lpar;</mo>
+                  <mfrac>
+                    <mrow>
+                      <mn>2</mn>
+                      <mo>&times;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                    <mrow>
+                      <mn>2</mn>
+                      <mo>&times;</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </mfrac>
+                  <mo fence="true">&rpar;</mo>
+                </mrow>
+                <mo>=</mo>
+                <mn>1,260</mn>
+                <mo>distinct numbers.</mo>
+              </mrow>
+            </math>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Methods 2:
+        <ul>
+          <li>Think of 4's, 6's and 8's as nine distinct objects: 4&#x2081;, 4&#x2082;, 6&#x2081;, 6&#x2082;, 6&#x2083;, 8&#x2081;, 8&#x2082;, 8&#x2083;, 8&#x2084;. Then the objects can be arranged in <sup>9</sup>P<sub>9</sub> ways (= 9!).</li>
+          <li>We must no distinguish two 4's. But among the arrangements, we counted the identical nine-digit numbers <sup>2</sup>P<sub>2</sub> times (= 2!).</li>
+          <li>We must not distinguish three 6's. But among the arrangements, we counted the identical nine-digit numbers <sup>3</sup>P<sub>3</sub> times (= 3!).</li>
+          <li>We must not distinguish four 8's. But among the arrangements, we counted the identical nine-digit numbers <sup>4</sup>P<sub>4</sub> times (= 4!).</li>
+          <li>
+            Hence, the answer is
+            <math>
+              <mrow>
+                <mfrac>
+                  <mrow>
+                    <mn>9</mn><mo>!</mo>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn><mo>!</mo>
+                    <mo>&times;</mo>
+                    <mn>3</mn><mo>!</mo>
+                    <mo>&times;</mo>
+                    <mn>4</mn><mo>!</mo>
+                  </mrow>
+                </mfrac>
+                <mo>=</mo>
+                <mn>1,260</mn>
+                <mo>distinct numbers.</mo>
+              </mrow>
+            </math>
+          </li>
+        </ul>
+      </p>
+      <p>As you can see the three methods yield the correct answer. The last method is based on the idea of <i>permutation of identical objects</i>.</p>
+    </section>
+    <section class="definition">
+      <p>
+        <strong>Proposition 4.6</strong>:
+        In a collection there are m₁ identical articles of type 1, m₂ articles of type 2 and so on upto m<sub>k</sub> articles of type <var>k</var>. The number of permutation of this collection is
+        <section>
+          <math>
+            <mrow>
+              <mfrac>
+                <mrow>
+                  <mo fence="true">&lpar;</mo>
+                  <msub><mi>m</mi><mn>1</mn></msub>
+                  <mo>+</mo>
+                  <msub><mi>m</mi><mn>2</mn></msub>
+                  <mo>+</mo>
+                  <mo>&ctdot;</mo>
+                  <mo>+</mo>
+                  <msub><mi>m</mi><mi>k</mi></msub>
+                  <mo fence="true">&rpar;</mo>
+                  <mo>!</mo>
+                </mrow>
+                <mrow>
+                  <msub><mi>m</mi><mn>1</mn></msub>
+                  <mo>&times;</mo>
+                  <msub><mi>m</mi><mn>2</mn></msub>
+                  <mo>&times;</mo>
+                  <mo>&ctdot;</mo>
+                  <mo>&times;</mo>
+                  <msub><mi>m</mi><mi>k</mi></msub>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Example 4.33</strong>:
+        A hotel has six single rooms, six double rooms, and four three-bed rooms (30 beds in total). In how many ways can 30 persons be accommodated in this hotel?
+      </p>
+      <p>
+        Solution 1: using the method 1
+        <ul>
+          <li>For single rooms, six persons out of 30 persons can be chosen and arranged &mdash; in <sup>30</sup>P<sub>6</sub> ways.</li>
+          <li>
+            For double rooms:
+            <ul>
+              <li>two persons out of the remaining 24 persons can be chosen for the 1st double room &mdash; in <sup>24</sup>C<sub>2</sub> ways.</li>
+              <li>two persons out of the remaining 22 persons can be chosen for the 2nd double room &mdash; in <sup>22</sup>C<sub>2</sub> ways.</li>
+              <li><sup>20</sup>C<sub>2</sub> for 3rd, <sup>18</sup>C<sub>2</sub> for 4th, <sup>16</sup>C<sub>2</sub> for 5th, and <sup>14</sup>C<sub>2</sub> for 6th.</li>
+            </ul>
+          </li>
+          <li>
+            For three-bed rooms:
+            <ul>
+              <li>three persons out of the remaining 12 persons can be chosen for the 1st three-bed room &mdash; in <sup>12</sup>C<sub>3</sub> ways.</li>
+              <li>three persons out of the remaining 9 persons can be chosen for the 2nd three-bed room &mdash; in <sup>9</sup>C<sub>3</sub> ways.</li>
+              <li><sup>6</sup>C<sub>3</sub> for the 3rd and <sup>3</sup>C<sub>3</sub> for the 4th.</li>
+            </ul>
+          </li>
+          <li>
+            Thus, the required answer is
+            <math>
+              <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mrow>
+                  <mn>30</mn><mo>&middot;</mo>
+                  <mn>29</mn><mo>&middot;</mo>
+                  <mn>28</mn><mo>&middot;</mo>
+                  <mn>27</mn><mo>&middot;</mo>
+                  <mn>26</mn><mo>&middot;</mo>
+                  <mn>25</mn>
+                </mrow>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>24</mn><mo>&middot;</mo>
+                    <mn>23</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>22</mn><mo>&middot;</mo>
+                    <mn>21</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>20</mn><mo>&middot;</mo>
+                    <mn>19</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>18</mn><mo>&middot;</mo>
+                    <mn>17</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>16</mn><mo>&middot;</mo>
+                    <mn>15</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>14</mn><mo>&middot;</mo>
+                    <mn>13</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>12</mn><mo>&middot;</mo>
+                    <mn>11</mn><mo>&middot;</mo>
+                    <mn>10</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>3</mn><mo>&middot;</mo>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>9</mn><mo>&middot;</mo>
+                    <mn>8</mn><mo>&middot;</mo>
+                    <mn>7</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>3</mn><mo>&middot;</mo>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>6</mn><mo>&middot;</mo>
+                    <mn>5</mn><mo>&middot;</mo>
+                    <mn>4</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>3</mn><mo>&middot;</mo>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+                <mo>&InvisibleTimes;</mo>
+                <mo fence="true">&lpar;</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>3</mn><mo>&middot;</mo>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>3</mn><mo>&middot;</mo>
+                    <mn>2</mn><mo>&middot;</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+                <mo fence="true">&rpar;</mo>
+              </mrow>
+            </math>
+            <ul>
+              <li>=
+                <math>
+                  <mrow>
+                    <mrow>
+                      <mmultiscripts>
+                        <mi>P</mi>
+                        <mn>6</mn><none/>
+                        <mprescripts/>
+                        <mn>30</mn><none/>
+                      </mmultiscripts>
+                    </mrow>
+                    <mo>&middot;</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mmultiscripts>
+                            <mi>P</mi>
+                            <mn>2</mn><none/>
+                            <mprescripts/>
+                            <mn>24</mn><none/>
+                          </mmultiscripts>
+                        </mrow>
+                        <mrow><mn>2</mn><mo>!</mo></mrow>
+                      </mfrac>
+                    </mrow>
+                    <mo>&middot;</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mmultiscripts>
+                            <mi>P</mi>
+                            <mn>2</mn><none/>
+                            <mprescripts/>
+                            <mn>22</mn><none/>
+                          </mmultiscripts>
+                        </mrow>
+                        <mrow><mn>2</mn><mo>!</mo></mrow>
+                      </mfrac>
+                    </mrow>
+                    <mo>&middot;</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mmultiscripts>
+                            <mi>P</mi>
+                            <mn>2</mn><none/>
+                            <mprescripts/>
+                            <mn>20</mn><none/>
+                          </mmultiscripts>
+                        </mrow>
+                        <mrow><mn>2</mn><mo>!</mo></mrow>
+                      </mfrac>
+                    </mrow>
+                    <mo>&middot;</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mmultiscripts>
+                            <mi>P</mi>
+                            <mn>2</mn><none/>
+                            <mprescripts/>
+                            <mn>18</mn><none/>
+                          </mmultiscripts>
+                        </mrow>
+                        <mrow><mn>2</mn><mo>!</mo></mrow>
+                      </mfrac>
+                    </mrow>
+                    <mo>&middot;</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mmultiscripts>
+                            <mi>P</mi>
+                            <mn>2</mn><none/>
+                            <mprescripts/>
+                            <mn>16</mn><none/>
+                          </mmultiscripts>
+                        </mrow>
+                        <mrow><mn>2</mn><mo>!</mo></mrow>
+                      </mfrac>
+                    </mrow>
+                    <mo>&middot;</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mmultiscripts>
+                            <mi>P</mi>
+                            <mn>2</mn><none/>
+                            <mprescripts/>
+                            <mn>14</mn><none/>
+                          </mmultiscripts>
+                        </mrow>
+                        <mrow><mn>2</mn><mo>!</mo></mrow>
+                      </mfrac>
+                    </mrow>
+                    <mo>&middot;</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mmultiscripts>
+                            <mi>P</mi>
+                            <mn>3</mn><none/>
+                            <mprescripts/>
+                            <mn>12</mn><none/>
+                          </mmultiscripts>
+                        </mrow>
+                        <mrow><mn>3</mn><mo>!</mo></mrow>
+                      </mfrac>
+                    </mrow>
+                    <mo>&middot;</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mmultiscripts>
+                            <mi>P</mi>
+                            <mn>3</mn><none/>
+                            <mprescripts/>
+                            <mn>9</mn><none/>
+                          </mmultiscripts>
+                        </mrow>
+                        <mrow><mn>3</mn><mo>!</mo></mrow>
+                      </mfrac>
+                    </mrow>
+                    <mo>&middot;</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mmultiscripts>
+                            <mi>P</mi>
+                            <mn>3</mn><none/>
+                            <mprescripts/>
+                            <mn>6</mn><none/>
+                          </mmultiscripts>
+                        </mrow>
+                        <mrow><mn>3</mn><mo>!</mo></mrow>
+                      </mfrac>
+                    </mrow>
+                    <mo>&middot;</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <mmultiscripts>
+                            <mi>P</mi>
+                            <mn>3</mn><none/>
+                            <mprescripts/>
+                            <mn>3</mn><none/>
+                          </mmultiscripts>
+                        </mrow>
+                        <mrow><mn>3</mn><mo>!</mo></mrow>
+                      </mfrac>
+                    </mrow>
+                  </mrow>
+                </math>
+              </li>
+              <li>=
+                <math>
+                  <mrow>
+                    <mfrac>
+                      <mrow>
+                        <mn>30</mn><mo>!</mo>
+                      </mrow>
+                      <mrow>
+                        <mn>2</mn><mo>!</mo>
+                        <mo>&middot;</mo>
+                        <mn>2</mn><mo>!</mo>
+                        <mo>&middot;</mo>
+                        <mn>2</mn><mo>!</mo>
+                        <mo>&middot;</mo>
+                        <mn>2</mn><mo>!</mo>
+                        <mo>&middot;</mo>
+                        <mn>2</mn><mo>!</mo>
+                        <mo>&middot;</mo>
+                        <mn>2</mn><mo>!</mo>
+                        <mo>&middot;</mo>
+                        <mn>3</mn><mo>!</mo>
+                        <mo>&middot;</mo>
+                        <mn>3</mn><mo>!</mo>
+                        <mo>&middot;</mo>
+                        <mn>3</mn><mo>!</mo>
+                        <mo>&middot;</mo>
+                        <mn>3</mn><mo>!</mo>
+                      </mrow>
+                    </mfrac>
+                  </mrow>
+                </math>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Solution 2: using the method 2
+        <ul>
+          <li>
+            We shall denote
+            <ul>
+              <li>six single rooms by Sa, Sb, Sc, Sd, Se, Sf</li>
+              <li>six double rooms by Da, Db, Dc, Dd, De, Df</li>
+              <li>four three-bed rooms by Ta, Tb, Tc, Td</li>
+            </ul>
+          </li>
+          <li>
+            We shall denote beds by
+            <ul>
+              <li>Sa&#x2081; | Sb&#x2081; | Sc&#x2081; | Sd&#x2081; | Se&#x2081; | Sf&#x2081;</li>
+              <li>Da&#x2081;, Da&#x2082; | Db&#x2081;, Db&#x2082; | Dc&#x2081;, Dc&#x2082; | Dd&#x2081;, Dd&#x2082; | De&#x2081;, De&#x2082; | Df&#x2081;, Df&#x2082;</li>
+              <li>Ta&#x2081;, Ta&#x2082;, Ta&#x2083; | Tb&#x2081;, Tb&#x2082;, Tb&#x2083; | Tc&#x2081;, Tc&#x2082;, Tc&#x2083; | Td&#x2081;, Td&#x2082;, Td&#x2083;</li>
+            </ul>
+          </li>
+          <li>The 30 beds can be arranged for 30 persons in 30! ways.</li>
+          <li>
+            For double rooms,
+            <ul>
+              <li>the beds Da&#x2081; and Da&#x2082; are in the room Da, so these must not be distinguished for this solution. But among the arrangement, we counted the beds <sup>2</sup>P<sub>2</sub> times.</li>
+              <li>The same goes for Db, Dc, Dd, De, Df.</li>
+            </ul>
+          </li>
+          <li>
+            For three-bed rooms,
+            <ul>
+              <li>the beds Ta&#x2081;, Ta&#x2082;, Ta&#x2083; are in the room Ta, so these must not be distinguished for this solution. But among the arrangement, we counted the beds <sup>3</sup>P<sub>3</sub> times.</li>
+              <li>The same goes for Tb, Tc, Td.</li>
+            </ul>
+          </li>
+          <li>
+            Thus, the required answer is
+            <math>
+              <mrow>
+                <mfrac>
+                  <mrow>
+                    <mn>30</mn><mo>!</mo>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn><mo>!</mo>
+                    <mo>&middot;</mo>
+                    <mn>2</mn><mo>!</mo>
+                    <mo>&middot;</mo>
+                    <mn>2</mn><mo>!</mo>
+                    <mo>&middot;</mo>
+                    <mn>2</mn><mo>!</mo>
+                    <mo>&middot;</mo>
+                    <mn>2</mn><mo>!</mo>
+                    <mo>&middot;</mo>
+                    <mn>2</mn><mo>!</mo>
+                    <mo>&middot;</mo>
+                    <mn>3</mn><mo>!</mo>
+                    <mo>&middot;</mo>
+                    <mn>3</mn><mo>!</mo>
+                    <mo>&middot;</mo>
+                    <mn>3</mn><mo>!</mo>
+                    <mo>&middot;</mo>
+                    <mn>3</mn><mo>!</mo>
+                  </mrow>
+                </mfrac>
+              </mrow>
+            </math>
+          </li>
+        </ul>
       </p>
     </section>
   </section>
