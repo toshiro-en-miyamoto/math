@@ -52,7 +52,7 @@
         <strong>Fundamental Counting Principle</strong>:
         Consider an activity consisting of <var>k</var> independent subtasks. Assume that
         <ul>
-          <li>task₁ can be performed in m₁ ways,</li>
+          <li>task&#x2081; can be performed in m₁ ways,</li>
           <li>task₂ can be performed in m₂ ways,</li>
           <li>&vellip;</li>
           <li>task<sub>k</sub> can be performed in m<sub>k</sub> ways.</li>
@@ -130,12 +130,12 @@
         <strong>Definition (function)</strong>:
         A function, <var>f</var> : A &rightarrow; B, is a rule that associates each element <var>x</var> in <var>A</var> with an element in <var>B</var>, denoted f(x). It demands that
         <ul>
-          <li>if x₁ = x₂ then f(x₁) = f(x₂)</li>
+          <li>x₁ = x₂ implies f(x₁) = f(x₂)</li>
           <li>for all x &in; A there exists f(x) such that f(x) &in; B</li>
         </ul>
         Note that
         <ul>
-          <li>even if f(x₁) = f(x₂), x₁ is not necessarily equal to x₂</li>
+          <li>even if f(x₁) = f(x₂), it is not necessarily that x₁ = x₂</li>
           <li>there exists y &in; B such that y &notin; { f(x) : x &in; A }</li>
         </ul>
       </p>
@@ -456,7 +456,7 @@
       <p>
         Methods 2:
         <ul>
-          <li>Think of 4's, 6's and 8's as nine distinct objects: 4&#x2081;, 4&#x2082;, 6&#x2081;, 6&#x2082;, 6&#x2083;, 8&#x2081;, 8&#x2082;, 8&#x2083;, 8&#x2084;. Then the objects can be arranged in <sup>9</sup>P<sub>9</sub> ways (= 9!).</li>
+          <li>Think of 4's, 6's and 8's as nine distinct objects: 4₁, 4₂, 6₁, 6₂, 6₃, 8₁, 8₂, 8₃, 8₄. Then the objects can be arranged in <sup>9</sup>P<sub>9</sub> ways (= 9!).</li>
           <li>We must no distinguish two 4's. But among the arrangements, we counted the identical nine-digit numbers <sup>2</sup>P<sub>2</sub> times (= 2!).</li>
           <li>We must not distinguish three 6's. But among the arrangements, we counted the identical nine-digit numbers <sup>3</sup>P<sub>3</sub> times (= 3!).</li>
           <li>We must not distinguish four 8's. But among the arrangements, we counted the identical nine-digit numbers <sup>4</sup>P<sub>4</sub> times (= 4!).</li>
@@ -905,23 +905,23 @@
           <li>
             We shall denote beds by
             <ul>
-              <li>Sa&#x2081; | Sb&#x2081; | Sc&#x2081; | Sd&#x2081; | Se&#x2081; | Sf&#x2081;</li>
-              <li>Da&#x2081;, Da&#x2082; | Db&#x2081;, Db&#x2082; | Dc&#x2081;, Dc&#x2082; | Dd&#x2081;, Dd&#x2082; | De&#x2081;, De&#x2082; | Df&#x2081;, Df&#x2082;</li>
-              <li>Ta&#x2081;, Ta&#x2082;, Ta&#x2083; | Tb&#x2081;, Tb&#x2082;, Tb&#x2083; | Tc&#x2081;, Tc&#x2082;, Tc&#x2083; | Td&#x2081;, Td&#x2082;, Td&#x2083;</li>
+              <li>Sa₁ | Sb₁ | Sc₁ | Sd₁ | Se₁ | Sf₁</li>
+              <li>Da₁, Da₂ | Db₁, Db₂ | Dc₁, Dc₂ | Dd₁, Dd₂ | De₁, De₂ | Df₁, Df₂</li>
+              <li>Ta₁, Ta₂, Ta₃ | Tb₁, Tb₂, Tb₃ | Tc₁, Tc₂, Tc₃ | Td₁, Td₂, Td₃</li>
             </ul>
           </li>
           <li>The 30 beds can be arranged for 30 persons in 30! ways.</li>
           <li>
             For double rooms,
             <ul>
-              <li>the beds Da&#x2081; and Da&#x2082; are in the room Da, so these must not be distinguished for this solution. But among the arrangement, we counted the beds <sup>2</sup>P<sub>2</sub> times.</li>
+              <li>the beds Da₁ and Da₂ are in the room Da, so these must not be distinguished for this solution. But among the arrangement, we counted the beds <sup>2</sup>P<sub>2</sub> times.</li>
               <li>The same goes for Db, Dc, Dd, De, Df.</li>
             </ul>
           </li>
           <li>
             For three-bed rooms,
             <ul>
-              <li>the beds Ta&#x2081;, Ta&#x2082;, Ta&#x2083; are in the room Ta, so these must not be distinguished for this solution. But among the arrangement, we counted the beds <sup>3</sup>P<sub>3</sub> times.</li>
+              <li>the beds Ta₁, Ta₂, Ta₃ are in the room Ta, so these must not be distinguished for this solution. But among the arrangement, we counted the beds <sup>3</sup>P<sub>3</sub> times.</li>
               <li>The same goes for Tb, Tc, Td.</li>
             </ul>
           </li>
@@ -959,6 +959,63 @@
             </math>
           </li>
         </ul>
+      </p>
+    </section>
+  </section>
+  <section id="applications-permutations-combinations">
+    <h2>4.3. Applications of Permutations and Combinations</h2>
+    <section class="definition">
+      <p>
+        <strong>Proposition 4.7</strong>:
+        Let <var>A</var> and <var>B</var> be finite sets with |A| = <var>n</var> and |B| = <var>m</var>, and <var>n</var> &le; <var>m</var>. The number of all one-to-one functions from <var>A</var> to <var>B</var> is
+        m(m &minus; 1)(m &minus; 2)&ctdot;(m &minus; n + 1) = <sup>m</sup>P<sub>n</sub>.
+      </p>
+      <p>
+        Proof:
+        <section>
+          <p>
+            Let <var>A</var> = {x&#x2081;, x&#x2082;, &ctdot;, x<sub>n</sub>}. f(x&#x2081;) can be defined in <var>m</var> possible ways. Since for a one-to-one function, f(x&#x2081;) &ne; f(x&#x2082;), f(x&#x2082;) can be defined in <var>m</var> &minus; 1 possible ways and so on. Thus, the number of all possible functions =
+            m(m &minus; 1)(m &minus; 2)&ctdot;(m &minus; n + 1) = <sup>m</sup>P<sub>n</sub>.
+          </p>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Proposition 4.8</strong>:
+        The number of binary sequences with <var>p</var> 1's and <var>q</var> 0's is
+        <math>
+          <mrow>
+            <mfrac>
+              <mrow>
+                <mo fence="true">&lpar;</mo>
+                <mi>p</mi><mo>+</mo><mi>q</mi>
+                <mo fence="true">&rpar;</mo>
+                <mo>!</mo>
+              </mrow>
+              <mrow>
+                <mi>p</mi><mo>!</mo>
+                <mo>&middot;</mo>
+                <mi>q</mi><mo>!</mo>
+              </mrow>
+            </mfrac>
+          </mrow>
+        </math>
+      </p>
+      <p>Proof: Apply Proposition 4.6.</p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Proposition 4.9</strong>:
+        The number of binary sequences with <var>p</var> 1's and <var>q</var> 0's such that no two 0's are together is <sup>p+1</sup>C<sub>q</sub>.
+      </p>
+      <p>
+        Proof:
+        <section>
+          <p>
+            First, arrange the <var>p</var> 1's. The 0's can be placed in the <var>p</var> &minus; 1 gaps, or at the beginning or at the end. Thus, total number of places is <var>p</var> + 1. The, the required number is <sup>p+1</sup>C<sub>q</sub>.
+          </p>
+        </section>
       </p>
     </section>
   </section>
