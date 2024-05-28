@@ -964,7 +964,7 @@
   </section>
   <section id="applications-permutations-combinations">
     <h2>4.3. Applications of Permutations and Combinations</h2>
-    <section class="definition">
+    <section class="description">
       <p>
         <strong>Proposition 4.7</strong>:
         Let <var>A</var> and <var>B</var> be finite sets with |A| = <var>n</var> and |B| = <var>m</var>, and <var>n</var> &le; <var>m</var>. The number of all one-to-one functions from <var>A</var> to <var>B</var> is
@@ -1013,8 +1013,37 @@
         Proof:
         <section>
           <p>
-            First, arrange the <var>p</var> 1's. The 0's can be placed in the <var>p</var> &minus; 1 gaps, or at the beginning or at the end. Thus, total number of places is <var>p</var> + 1. The, the required number is <sup>p+1</sup>C<sub>q</sub>.
+            First, arrange the <var>p</var> 1's. The 0's can be placed in the <var>p</var> &minus; 1 gaps, or at the beginning or at the end. Thus, total number of places is <var>p</var> + 1. Then, we shall choose two places out of the <var>p</var> + 1 places. Hence, the required number is <sup>p+1</sup>C<sub>q</sub>.
           </p>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Proposition 4.11</strong>:
+        The number of ways of distributing <var>n</var> identical objects in <var>k</var> distinct boxes is <sup>n+k&minus;1</sup>C<sub>k&minus;1</sub>.
+      </p>
+      <p>
+        Preliminary thought:
+        <section>
+          <p>Suppose there are 4 identical balls to be distributed among 3 distinct boxes. Let the boxes be denoted <var>A</var>, <var>B</var> and <var>C</var>, then the distribution can be done in 15 ways as follows:</p>
+          <section>
+            <table>
+              <thead>
+                <tr><th><th>A<th>B<th>C<th>:<th>A<th>B<th>C<th>:<th>A<th>B<th>C
+              <tbody>
+                <tr><th>4&times;0&times;0
+                  <td>4<td>0<td>0<td> <td>0<td>4<td>0<td> <td>0<td>0<td>4
+                <tr><th rowspan="2">3&times;1&times;0
+                  <td>0<td>3<td>1<td> <td>3<td>0<td>1<td> <td>3<td>1<td>0
+                <tr>
+                  <td>0<td>1<td>3<td> <td>1<td>0<td>3<td> <td>1<td>3<td>0
+                <tr><th>2&times;2&times;0
+                  <td>0<td>2<td>2<td> <td>2<td>0<td>2<td> <td>2<td>2<td>0
+                <tr><th>2&times;1&times;1
+                  <td>2<td>1<td>1<td> <td>1<td>2<td>1<td> <td>1<td>1<td>2
+            </table>
+          </section>
         </section>
       </p>
     </section>
