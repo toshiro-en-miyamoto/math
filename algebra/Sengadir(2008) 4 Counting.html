@@ -1050,19 +1050,62 @@
         <a href="https://brilliant.org/wiki/identical-objects-into-distinct-bins/">
           Stars and Bars Approach
         </a>:
-        Imagine the 4 objects in a line, shown here as stars:
         <section>
-          <table>
-            <tr><td>_<td>&#x2605;<td>_<td>&#x2605;<td>_<td>&#x2605;<td>_<td>&#x2605;<td>_
-          </table>
+          <p>
+            Imagine the 4 objects in a line, shown here as stars:
+            <section>
+              <table>
+                <tr class="center">
+                  <td>&#x0020;
+                  <td>&#x2605;
+                  <td>&#x0020;
+                  <td>&#x2605;
+                  <td>&#x0020;
+                  <td>&#x2605;
+                  <td>&#x0020;
+                  <td>&#x2605;
+                  <td>&#x0020;
+                </tr>
+              </table>
+            </section>
+            The objects can be divided into bins by placing a bar either between the stars or at the ends. Placing 1 bar creates 2 distinct groups. Placing the bar at one of the ends will create a group with 0 stars. Placing 2 bars will create 3 distinct groups, and placing bars next to each other creates a group with 0 stars.
+            <section>
+              <table>
+                <tr class="center">
+                  <td>&#x0020;
+                  <td>&#x2605;
+                  <td>|
+                  <td>&#x2605;
+                  <td>&#x0020;
+                  <td>&#x2605;
+                  <td>|
+                  <td>&#x2605;
+                  <td>&#x0020;
+                </tr>
+                <tr class="center">
+                  <td>&#x0020;
+                  <td>&#x2605;
+                  <td>||
+                  <td>&#x2605;
+                  <td>&#x0020;
+                  <td>&#x2605;
+                  <td>&#x0020;
+                  <td>&#x2605;
+                  <td>&#x0020;
+                </tr>
+              </table>
+            </section>
+            Back to the problem of distributing 4 identical objects among 3 distinct groups. Modeled as stars and bars, there will be 4 stars and 2 bars. There are 4 + 2 = 6 things that need to be placed, and 2 of those placements are chosen for the bars. Thus there are <sup>6</sup>C<sub>2</sub> = 15 possible distributions of 4 identical objects among 3 distinct groups.
+          </p>
         </section>
-        The objects can be divided into bins by placing a bar either between the stars or at the ends. Placing 1 bar creates 2 distinct groups. Placing the bar at one of the ends will create a group with 0 stars. Placing 2 bars will create 3 distinct groups, and placing bars next to each other creates a group with 0 stars.
+        Proof:
         <section>
-          <table>
-            <tr><td>_<td>&#x2605;<td>|<td>&#x2605;<td>_<td>&#x2605;<td>|<td>&#x2605;<td>_
-            <tr><td>_<td>&#x2605;<td>||<td>&#x2605;<td>_<td>&#x2605;<td>_<td>&#x2605;<td>_
-          </table>
+          <p>
+            In general, there are <var>n</var> stars and <var>k</var> &minus; 1 bars that divide them into <var>k</var> distinct groups. There are a total of <var>n</var> + <var>k</var> &minus; 1 things that will be placed, and <var>k</var> &minus;1 of those placements are chosen fro the bars. The stars will be put in the remaining placements. Thus, there are <sup>n+k&minus;1</sup>C<sub>k&minus;1</sub> possible placements of the bars.
+
+          </p>
         </section>
+      </p>
     </section>
   </section>
 </article>
