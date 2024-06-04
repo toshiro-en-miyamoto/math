@@ -1026,7 +1026,7 @@
       <p>
         Preliminary thought:
         <section>
-          <p>Suppose there are 4 identical balls to be distributed among 3 distinct boxes. Let the boxes be denoted <var>A</var>, <var>B</var> and <var>C</var>, then the distribution can be done in 15 ways as follows:</p>
+          <p>Suppose there are 4 identical objects to be distributed among 3 distinct boxes. Let the boxes be denoted <var>A</var>, <var>B</var> and <var>C</var>, then the distribution can be done in 15 ways as follows:</p>
           <section>
             <table>
               <thead>
@@ -1068,7 +1068,7 @@
                 </tr>
               </table>
             </section>
-            The objects can be divided into bins by placing a bar either between the stars or at the ends. Placing 1 bar creates 2 distinct groups. Placing the bar at one of the ends will create a group with 0 stars. Placing 2 bars will create 3 distinct groups, and placing bars next to each other creates a group with 0 stars.
+            The objects can be divided into boxes by placing a bar either between the stars or at the ends. Placing 1 bar creates 2 distinct groups. Placing the bar at one of the ends will create a group with 0 stars. Placing 2 bars will create 3 distinct groups, and placing bars next to each other creates a group with 0 stars.
             <section>
               <table>
                 <tr class="center">
@@ -1101,8 +1101,73 @@
         Proof:
         <section>
           <p>
-            In general, there are <var>n</var> stars and <var>k</var> &minus; 1 bars that divide them into <var>k</var> distinct groups. There are a total of <var>n</var> + <var>k</var> &minus; 1 things that will be placed, and <var>k</var> &minus;1 of those placements are chosen fro the bars. The stars will be put in the remaining placements. Thus, there are <sup>n+k&minus;1</sup>C<sub>k&minus;1</sub> possible placements of the bars.
+            In general, there are <var>n</var> stars and <var>k</var> &minus; 1 bars that divide them into <var>k</var> distinct groups. There are a total of <var>n</var> + <var>k</var> &minus; 1 things that will be placed, and <var>k</var> &minus;1 of those placements are chosen for the bars. The stars will be put in the remaining placements. Thus, there are <sup>n+k&minus;1</sup>C<sub>k&minus;1</sub> possible placements of the bars.
 
+          </p>
+        </section>
+        Example 4.35:
+        <section>
+          <p>
+            There is an unlimited supply of apples, oranges and bananas. You are free to take any number of any of the three kinds but the total must be exactly 10. The number of choices is <sup>10+3&minus;1</sup>C<sub>3&minus;1</sub>.
+          </p>
+          <p>
+            Let us pretend that each type of fruit represents a box. If you choose three apples, four oranges and three bananas, then this is similar to placing three objects in the apple box, four in the orange box and three in the banana box.
+          </p>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Proposition 4.13</strong>:
+        The number of ways of distributing <var>n</var> identical objects in <var>k</var> distinct non-empty boxes, with <var>n</var> &ge; <var>k</var>, is <sup>n&minus;1</sup>C<sub>k&minus;1</sub>.
+      </p>
+      <p>
+        Proof:
+        <section>
+          <p>
+            Modeled as stars and bars, <var>k</var> &minus; 1 bars divide stars into <var>k</var> groups. In contrast to Proposition 4.11, however, each group must not be empty. Therefore, the locations where bars can be placed are limited such that:
+            <ul>
+              <li>bars cannot be placed at the ends</li>
+              <li>two or more bars cannot be placed at the same location</li>
+            </ul>
+            It follows that:
+            <ul>
+              <li>the number of potential locations for bars is <var>n</var> &minus; 1</li>
+              <li><var>k</var> &minus; 1 locations shall be chosen out of <var>n</var> &minus; 1</li>
+            </ul>
+            Hence, the required answer is <sup>n&minus;1</sup>C<sub>k&minus;1</sub>.
+          </p>
+        </section>
+      </p>
+    </section>
+    <section class="description">
+      <p>
+        <strong>Example 4.38</strong>:
+        Find the number of staircase paths from (2, 5) to (8, 9).
+      </p>
+      <p>
+        Proof:
+        <section>
+          <p>
+            Let steps <var>R</var> and <var>U</var> such that:
+            <ul>
+              <li>R: from (x, y) to (x + 1, y)</li>
+              <li>U: from (x, y) to (x, y + 1)</li>
+            </ul>
+            Now to reach (8, 9) from (2, 5), we have to move 8 &minus; 2 = 6 units horizontally and 9 &minus; 5 = 4 units vertically. Thus, with every staircase path, we can associate a sequence of R's and U's consisting of six R's and four U's, for example R-R-R-U-U-R-R-R-U-U. Hence, the required answer if the number of permutations of six R's and four U's, which is given by
+            <math>
+              <mrow>
+                <mfrac>
+                  <mrow><mn>10</mn><mo>!</mo></mrow>
+                  <mrow>
+                    <mrow><mn>6</mn><mo>!</mo></mrow>
+                    <mo>&middot;</mo>
+                    <mrow><mn>4</mn><mo>!</mo></mrow>
+                  </mrow>
+                </mfrac>
+              </mrow>
+            </math>.
+            (Refer to Proposition 4.6)
           </p>
         </section>
       </p>
