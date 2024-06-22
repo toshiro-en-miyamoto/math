@@ -35,9 +35,9 @@ $$
 $$
 \begin{aligned}
 \sum_{i=1}^{k+1}i
-& = \left(\sum_{i=1}^{k}i\right) +(k+1) \\[2em]
-& = \frac{k(k+1)}{2}+k+1 \\[1em]
-& = \frac{k(k+1)+2(k+1)}{2} \\[1em]
+& = \left(\sum_{i=1}^{k}i\right) +(k+1) \\
+& = \frac{k(k+1)}{2}+k+1 \\
+& = \frac{k(k+1)+2(k+1)}{2} \\
 & = \frac{(k+1)(k+2)}{2}
 \end{aligned}
 $$
@@ -84,8 +84,8 @@ $$
 ### Calculus
 
 $$
-\int u \frac{dv}{dx}\,dx=uv-\int \frac{du}{dx}v\,dx \\[1em]
-f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \\[1em]
+\int u \frac{dv}{dx}\,dx=uv-\int \frac{du}{dx}v\,dx \\
+f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \\
 \oint \vec{F} \cdot d\vec{s}=0
 $$
 
@@ -141,12 +141,15 @@ $$
 
 $$
 \begin{aligned}
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\[1em]
-\nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\[0.5em]
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\[1em]
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\
+\nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
 \nabla \cdot \vec{\mathbf{B}} & = 0
 \end{aligned}
 $$
+
+> Note:
+> KaTeX supports `\\[1em]`, but MathJax does not.
 
 ### Statistics
 
@@ -195,6 +198,8 @@ $$
 
 $$
 S (\omega)=\frac{\alpha g^2}{\omega^5} \,
-e ^{\left[-0.74\bigl\{\frac{\omega U_\omega 19.5}{g}\bigr\}^{-4}\right]}
+e ^{\left[-0.74\Bigl\{\frac{\omega U_\omega 19.5}{g}\Bigr\}^{-4}\right]}
 $$
 
+> Note:
+> KaTeX supports `\bigl`, but MathJax does not.
