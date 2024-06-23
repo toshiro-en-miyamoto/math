@@ -14,6 +14,73 @@ Mathematical expressions rendering is available in GitHub Issues, GitHub Discuss
 
 VS Code's built-in [Markdown preview](https://code.visualstudio.com/docs/languages/markdown#_math-formula-rendering) renders math equations using [KaTeX](https://katex.org/).
 
+## LaTeX mathematic
+
+Refer to
+- [Wikibooks LaTeX Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics). Retrieved 2024 June.
+- American Mathematical Society, LaTeX Project. *User's Guide for the `amsmath` Package*, Version 2.1 [PDF](http://www.ams.org/arc/tex/amsmath/amsldoc.pdf). 2020 February. Retrieved 2024 June 23.
+- Math Vault. *Complete List of Mathematical Symbols* [PDF](https://mathvault.ca/wp-content/uploads/Comprehensive-List-of-Mathematical-Symbols.pdf). Retrieve 2024 June.
+
+### Symbols
+
+The following is a set of symbols that can be accessed directly from the keyboard:
+
+$$
+\begin{matrix}
++ & - & = & ! & / & ( & ) & [ & ] & < & > & | & ' & : & *
+\end{matrix}
+$$
+
+### Greek letters
+
+| Symbol | Script | : | Symbol | Script |
+|:------:|--------|:-:|:------:|--------|
+| $A, \alpha$ | `A`, `\alpha` |:| $N, \nu$ | `N`, `\nu` |
+| $B, \beta$ | `B`, `\beta` |:| $\Xi, \xi$ | `\Xi`, `\xi` |
+| $\Gamma, \gamma$ | `\Gamma`, `\gamma` |:| $O, o$ | `O`, `o` |
+| $\Delta, \delta$ | `\Delta`, `\delta` |:| $\Pi, \pi, \varpi$ | `\Pi`, `\pi`, `\varpi` |
+| $E, \epsilon, \varepsilon$ | `E`, `\epsilon`, `\varepsilon` |:| $P, \rho, \varrho$ | `P`, `\rho`, `\varrho` |
+| $Z, \zeta$ | `Z`, `\zeta` |:| $\Sigma, \sigma, \varsigma$ | `\Sigma`, `\sigma`, `\varsigma` |
+| $H, \eta$ | `H`, `\eta` |:| $T, \tau$ | `T`, `\tau` |
+| $\Theta, \theta, \vartheta$ | `\Theta`, `\theta`, `\vartheta` |:| $Y, \Upsilon, \upsilon$ | `Y`, `\Upsilon`, `\upsilon` |
+| $I, \iota$ | `I`, `\iota` |:| $\Phi, \phi, \varphi$ | `\Phi`, `\phi`, `\varphi` |
+| $K, \kappa, \varkappa$ | `K`, `\kappa`, `\varkappa` |:| $X, \chi$ | `X`, `\chi` |
+| $\Lambda, \lambda$ | `\Lambda`, `\lambda` |:| $\Psi, \psi$ | `\Psi`, `\psi` |
+| $M, \mu$ | `M`, `\mu` |:| $\Omega, \omega$ | `\Omega`, `\omega` |
+
+### Operators
+
+An operator is a function that is written as a word: e.g. trigonometric functions (`sin`, `cos`, `tan`), logarithms and exponential (`log`, `exp`), limits (`lim`), as well as trace and determinant (`tr`, `det`).
+
+| Symbol | Script | : | Symbol | Script | : | Symbol | Script |
+|:------:|--------|:-:|:------:|--------|:-:|:------:|--------|
+| $sin$ | `\sin` |:| $arcsin$ | `\arcsin` |:| $sinh$ | `\sinh` |
+| $cos$ | `\cos` |:| $arccos$ | `\arccos` |:| $cosh$ | `\cosh` |
+| $tan$ | `\tan` |:| $arctan$ | `\arctan` |:| $tanh$ | `\tanh` |
+| $cot$ | `\cot` |:| $arccot$ | `\arccot` |:| $coth$ | `\coth` |
+
+For certain operators such as `limits`, the subscript is placed underneath the operator:
+
+- $\lim_{x \to \infty} \exp(-x) = 0$
+  ```
+  $\lim_{x \to \infty} \exp(-x) = 0$
+  ```
+- $\lim\limits_{x \to \infty} \exp(-x) = 0$
+  ```
+  $\lim\limits_{x \to \infty} \exp(-x) = 0$
+  ```
+
+For the modular operator there are two commands:
+
+- $a \mod b$
+  ```
+  $a \mod b$
+  ```
+- $x \equiv a \pmod{b}$
+  ```
+  $x \equiv a \pmod{b}$
+  ```
+
 ## KaTeX and MathJax comparison
 
 KaTeX and MathJax 3 handle all the expressions on [this page](https://www.intmath.com/cg5/katex-mathjax-comparison.php).
@@ -59,8 +126,10 @@ followed by some text.
 ### Greek letters
 
 $$
-\Gamma\ \Delta\ \Theta\ \Lambda\ \Xi\ \Pi\ \Sigma\ \Upsilon\ \Phi\ \Psi\ \Omega \\
-\alpha\ \beta\ \gamma\ \delta\ \epsilon\ \zeta\ \eta\ \theta\ \iota\ \kappa\ \lambda\ \mu\ \nu\ \xi\ \omicron\ \pi\ \rho\ \sigma\ \tau\ \upsilon\ \phi\ \chi\ \psi\ \omega\ \varepsilon\ \vartheta\ \varpi\ \varrho\ \varsigma\ \varphi
+\begin{gather*}
+\Gamma\ \Delta\ \Theta\ \Lambda\ \Xi\ \Pi\ \Sigma\ \Upsilon\ \Phi\ \Psi\ \Omega\ \\
+\alpha\ \beta\ \gamma\ \delta\ \epsilon\ \zeta\ \eta\ \theta\ \iota\ \kappa\ \lambda\ \mu\ \nu\ \xi\ \omicron\ \pi\ \rho\ \sigma\ \tau\ \upsilon\ \phi\ \chi\ \psi\ \omega\ \varepsilon\ \vartheta\ \varpi\ \varrho\ \varsigma\ \varphi\
+\end{gather*}
 $$
 
 ### Arrows
