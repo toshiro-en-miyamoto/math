@@ -1,18 +1,32 @@
-# Writing mathematical expressions
+# Writing math in Markdown
 
-## About writing mathematical expressions on GitHub
+Keep in mind that your mathematics is part of a Markdown document, so you need to be aware of the special characters used by Markdown as part of its markup.
 
-Use Markdown to display mathematical expressions [on GitHub](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions).
+**GitHub** is [moving toward](https://github.blog/2017-03-14-a-formal-spec-for-github-markdown/) the CommonMark specification.
 
-To enable clear communication of mathematical expressions, GitHub supports LaTeX formatted math within Markdown. For more information, see [LaTeX/Mathematics](http://en.wikibooks.org/wiki/LaTeX/Mathematics) in Wikibooks.
+- In order to fully specify the version of Markdown we use at GitHub (known as GFM), we had to [formally define](https://github.github.com/gfm/) the syntax and semantics of these features &hellip;
+- To ensure that the rendered Markdown in our website is fully compliant with the [CommonMark spec](https://spec.commonmark.org/), the new backend implementation for GitHun Flavored Markdown or GFM parsing on GitHub is based on `cmark` &hellip;
+- From [2022-05-19](https://github.blog/2022-05-19-math-support-in-markdown/), you can use the `$` and `$$` delimiters natively in Markdown on GitHub to insert math expressions in TeX and LaTeX style syntax. This content is then rendered using the `MathJax` library.
 
-GitHub's math rendering capability uses MathJax; an open source, JavaScript-based display engine. MathJax supports a wide range of LaTeX macros, and several useful accessibility extensions. For more information, see [the MathJax documentation](http://docs.mathjax.org/en/latest/input/tex/index.html#tex-and-latex-support) and [the MathJax Accessibility Extensions Documentation](https://mathjax.github.io/MathJax-a11y/docs/#reader-guide).
+**VS Code**
 
-Mathematical expressions rendering is available in GitHub Issues, GitHub Discussions, pull requests, wikis, and Markdown files.
+- [targets](https://code.visualstudio.com/docs/languages/markdown) the CommonMark Markdown specification using the `markdown-it` library, according to its document [site]()
+- its built-in [Markdown preview](https://code.visualstudio.com/docs/languages/markdown#_math-formula-rendering) renders math equations using [KaTeX](https://katex.org/)
 
-## Math formula rendering with VS Code
 
-VS Code's built-in [Markdown preview](https://code.visualstudio.com/docs/languages/markdown#_math-formula-rendering) renders math equations using [KaTeX](https://katex.org/).
+**Jupyter Notebook** interfaces use
+
+- `marked.js` JavaScript library for [rendering markdown](https://nbformat.readthedocs.io/en/latest/markup.html) &mdash; as of 2024 June, this supports CommonMark version 0.31 and GitHub Flavored Markdown version 0.29
+- [MathJax](http://docs.mathjax.org/) for [typesetting math](https://jupyterbook.org/en/stable/content/math.html) in your HTML book build
+
+Thus, mathematical expression renderers include:
+
+- **MathJax**: A JavaScript display engine for mathematics.
+  - [the MathJax documentation](http://docs.mathjax.org/en/latest/input/tex/index.html#tex-and-latex-support)
+  - [the MathJax Accessibility Extensions Documentation](https://mathjax.github.io/MathJax-a11y/docs/#reader-guide)
+- **KaTeX**: The fastest math typesetting library for the web.
+  - [Supported Functions](https://katex.org/docs/supported)
+  - [Common Issues](https://katex.org/docs/issues)
 
 ## LaTeX mathematic
 
@@ -29,6 +43,13 @@ $$
 \begin{matrix}+ & - & = & ! & / & ( & ) & [ & ] & < & > & | & ' & : & *
 \end{matrix}
 $$
+
+> Note: As stated by Example 281 ofLike a hyphen (`-`), GitHub Markdown also interprets a plus (`+`) at the beginning of a line as an list item:
+> ```
+> -foo
+> -bar
+> +baz
+> ```
 
 ### Greek letters
 
