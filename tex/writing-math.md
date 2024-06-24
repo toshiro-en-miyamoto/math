@@ -26,8 +26,7 @@ Refer to
 The following is a set of symbols that can be accessed directly from the keyboard:
 
 $$
-\begin{matrix}
-+ & - & = & ! & / & ( & ) & [ & ] & < & > & | & ' & : & *
+\begin{matrix}+ & - & = & ! & / & ( & ) & [ & ] & < & > & | & ' & : & *
 \end{matrix}
 $$
 
