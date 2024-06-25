@@ -16,8 +16,9 @@ Keep in mind that your mathematics is part of a Markdown document, so you need t
 
 **Jupyter Notebook** interfaces use
 
-- `marked.js` JavaScript library for [rendering markdown](https://nbformat.readthedocs.io/en/latest/markup.html) &mdash; as of 2024 June, this supports CommonMark version 0.31 and GitHub Flavored Markdown version 0.29
-- [MathJax](http://docs.mathjax.org/) for [typesetting math](https://jupyterbook.org/en/stable/content/math.html) in your HTML book build
+- [Jupyter Notebook Markdown](https://jupyterbook.org/en/stable/file-types/markdown.html) is an extension of a flavour of Markdown called CommonMark Markdown.
+- Jupyter Book also supports a more fully-featured version of Markdown called [MyST Markdown](https://mystmd.org/).
+- [MathJax](http://docs.mathjax.org/) for [typesetting math](https://jupyterbook.org/en/stable/content/math.html) in your HTML book build.
 
 Thus, mathematical expression renderers include:
 
@@ -28,7 +29,7 @@ Thus, mathematical expression renderers include:
   - [Supported Functions](https://katex.org/docs/supported)
   - [Common Issues](https://katex.org/docs/issues)
 
-## LaTeX mathematic
+## LaTeX Mathematical Expressions
 
 Refer to
 - [Wikibooks LaTeX Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics). Retrieved 2024 June.
