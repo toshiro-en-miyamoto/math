@@ -29,6 +29,28 @@ Thus, mathematical expression renderers include:
   - [Supported Functions](https://katex.org/docs/supported)
   - [Common Issues](https://katex.org/docs/issues)
 
+Install JupyterLab:
+
+```bash
+$ sudo apt update && sudo apt install python3-pip
+$ which pip
+/usr/bin/pip
+
+$ pip install jupyterlab
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+
+```
+
 ## LaTeX Mathematical Expressions
 
 Refer to
