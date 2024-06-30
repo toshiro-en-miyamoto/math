@@ -1,4 +1,4 @@
-# Writing math in Markdown
+# Writing Math in Markdown
 
 Keep in mind that your mathematics is part of a Markdown document, so you need to be aware of the special characters used by Markdown as part of its markup.
 
@@ -29,50 +29,74 @@ Thus, mathematical expression renderers include:
   - [Supported Functions](https://katex.org/docs/supported)
   - [Common Issues](https://katex.org/docs/issues)
 
-Install JupyterLab:
-
-```bash
-$ sudo apt update && sudo apt install python3-pip
-$ which pip
-/usr/bin/pip
-
-$ pip install jupyterlab
-error: externally-managed-environment
-
-× This environment is externally managed
-╰─> To install Python packages system-wide, try apt install
-    python3-xyz, where xyz is the package you are trying to
-    install.
-    
-    If you wish to install a non-Debian-packaged Python package,
-    create a virtual environment using python3 -m venv path/to/venv.
-    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-    sure you have python3-full installed.
-
-```
-
-## LaTeX Mathematical Expressions
-
 Refer to
 - [Wikibooks LaTeX Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics). Retrieved 2024 June.
 - American Mathematical Society, LaTeX Project. *User's Guide for the `amsmath` Package*, Version 2.1 [PDF](http://www.ams.org/arc/tex/amsmath/amsldoc.pdf). 2020 February. Retrieved 2024 June 23.
 - Math Vault. *Complete List of Mathematical Symbols* [PDF](https://mathvault.ca/wp-content/uploads/Comprehensive-List-of-Mathematical-Symbols.pdf). Retrieve 2024 June.
+- [CommonMark Spec 0.31.2](https://spec.commonmark.org/0.31.2/)
+- Getting to Grip with LaTex &mdash; [Part 1](https://www.andy-roberts.net/latex/mathematics_1/) and [Part 2](https://www.andy-roberts.net/latex/mathematics_2/)
+- Warbrick and Rivera. *Essential LaTeX* [PDF](https://us.mirrors.cicku.me/ctan/info/latex-essential/ess2e.pdf). 2014. Retrieved 2024 June.
+- David Carlisle. *Summary of mathematical symbols available in LaTeX* [PDF](http://mirrors.ctan.org/info/symbols/math/maths-symbols.pdf), version 3.4. Retrieved 2024 June.
 
-### Symbols
+## Letters and Notations
 
-The following is a set of symbols that can be accessed directly from the keyboard:
+### Symbols on Keyboards
 
-$$
-\begin{matrix}+ & - & = & ! & / & ( & ) & [ & ] & < & > & | & ' & : & *
-\end{matrix}
-$$
+- The 15 characters **can be** accessed directly from the keyboard [Wikibooks LaTeX Mathematics]:
+  ```
+  + - = ! / ( ) [ ] < > | ' : *
+  ```
+- The 10 characters **should not** appear as part of your text, because if they do LaTeX will confused. [3.1. Running Text, Warbrick and Rivera, 2014]
+  ```
+  # $ % & ~ _ ^ \ { }
+  ```
+- The 15 characters **appear* without escaping according to [Carlisle v 3.4]:
+  ```
+  + - = < > : , ; . | ( ) [ ] /
+  ```
 
-> Note: As stated by Example 281 ofLike a hyphen (`-`), GitHub Markdown also interprets a plus (`+`) at the beginning of a line as an list item:
-> ```
-> -foo
-> -bar
-> +baz
-> ```
+| Symbol | ASCII | Symbol name | Markdown | Math in LaTeX | Note |
+|:--:|:-:|---|---|---|:-:|
+| !  | 0x21 | exclamation mark     | embedded image   | | can be |
+| "  | 0x22 | quotation mark       | link title       | ams font size |
+| #  | 0x23 | number sign          | heading          | command param | should not |
+| $  | 0x24 | dollar sign          |                  | begin math    | should not |
+| %  | 0x25 | percent sign         |                  | comment       | should not |
+| &  | 0x26 | ampersand            |                  | table column  | should not |
+| '  | 0x27 | apostrophe           | link title       | | can be |
+| (  | 0x28 | left parenthesis     | link title       | | can be |
+| )  | 0x29 | right parenthesis    |                  | | can be |
+| *  | 0x2A | asterisk             | emphasis, list   | | can be |
+| +  | 0x2B | plus sign            | list             | | can be |
+| ,  | 0x2C | comma                |                  | | appear |
+| -  | 0x2D | hyphen               | list             | | can be |
+| .  | 0x2E | full stop            |                  | | appear |
+| /  | 0x2F | solidus              |                  | | can be |
+| :  | 0x3A | colon                | link destination | | can be |
+| ;  | 0x3B | semicolon            |                  | | appear |
+| <  | 0x3C | less-than sign       | link destination | | can be |
+| =  | 0x3D | equal sign           |                  | | can be |
+| >  | 0x3E | greater-than sign    | block quotes     | | can be |
+| ?  | 0x3F | question mark        |                  | ??? |
+| @  | 0x40 | commercial at        |                  | ??? |
+| [  | 0x5B | left square bracket  | link text        | | can be |
+| \  | 0x5C | reverse solidus      | hard line break  | command, esc  | should not |
+| ]  | 0x5D | right square bracket |                  | | can be |
+| ^  | 0x5E | circumflex accent    |                  | power         | should not |
+| _  | 0x5F | low line             | emphasis         | index         | should not |
+| `  | 0x60 | grave accent         | code span        | ??? |
+| {  | 0x7B | left curly bracket   |                  | parameter     | should not |
+| \| | 0x7C | vertical line        | table            | | can be |
+| }  | 0x7D | right curly bracket  |                  | parameter     | should not |
+| ~  | 0x7E | tilde                |                  | ???           | should not |
+
+Your mathematics expressions in TeX are part of a Markdown document. For example, like a hyphen (`-`), Markdown also interprets a plus (`+`) at the beginning of a line as an list item:
+
+```
+-foo
+-bar
++baz
+```
 
 ### Greek letters
 
@@ -91,9 +115,67 @@ $$
 | $\Lambda, \lambda$ | `\Lambda`, `\lambda` |:| $\Psi, \psi$ | `\Psi`, `\psi` |
 | $M, \mu$ | `M`, `\mu` |:| $\Omega, \omega$ | `\Omega`, `\omega` |
 
-### Operators
+### Arrows
+
+| Symbol | Script | : | Symbol | Script |
+|:------:|--------|:-:|:------:|--------|
+| $\gets$ | `\gets` | : | $\to$ | `\to` |
+| $\mapsto$ | `\mapsto` | : | $\longmapsto$ | `\longmapsto` |
+| $\leftarrow$ | `\leftarrow` | : | $\Leftarrow$ | `\Leftarrow` |
+| $\rightarrow$ | `\rightarrow` | : | $\Rightarrow$ | `\Rightarrow` |
+| $\longleftarrow$ | `\longleftarrow` | : | $\Longleftarrow$ | `\Longleftarrow` |
+| $\longrightarrow$ | `\longrightarrow` | : | $\Longrightarrow$ | `\Longrightarrow` |
+| $\leftrightarrow$ | `\leftrightarrow` | : | $\Leftrightarrow$ | `\Leftrightarrow` |
+| $\longleftrightarrow$ | `\longleftrightarrow` | : | $\Longleftrightarrow$ | `\Longleftrightarrow` |
+| $\rightleftharpoons$ | `\rightleftharpoons` | : | $\leadsto$ | `\leadsto` |
+| $\leftharpoonup$ | `\leftharpoonup` | : | $\rightharpoonup$ | `\rightharpoonup` |
+| $\leftharpoondown$ | `\leftharpoondown` | : | $\rightharpoondown$ | `\rightharpoondown` |
+| $\hookleftarrow$ | `\hookleftarrow` | : | $\hookrightarrow$ | `\hookrightarrow` |
+| $\nearrow$ | `\nearrow` | : | $\searrow$ | `\searrow` |
+| $\swarrow$ | `\swarrow` | : | $\nwarrow$ | `\nwarrow` |
+| $\uparrow$ | `\uparrow` | : | $\Uparrow$ | `\Uparrow` |
+| $\downarrow$ | `\downarrow` | : | $\Downarrow$ | `\Downarrow` |
+| $\updownarrow$ | `\updownarrow` | : | $\Updownarrow$ | `\Updownarrow` |
+| $\ldots$ | `\ldots` | : | $\cdots$ | `\cdots` |
+| $\ddots$ | `\ddots` | : | $\vdots$ | `\vdots` |
+
+### Other constructions
+
+| Symbol | Script | : | Symbol | Script |
+|:------:|--------|:-:|:------:|--------|
+| $\vec{a}$ | `\vec{a}` | : | $\bar{a}$ | `\bar{a}` |
+| $\dot{a}$ | `\dot{a}` | : | $\ddot{a}$ | `\ddot{a}` |
+| $\tilde{a}$ | `\tilde{a}` | : | $\hat{a}$ | `\hat{a}` |
+| $\acute{a}$ | `\acute{a}` | : | $\grave{a}$ | `\grave{a}` |
+| $\breve{a}$ | `\breve{a}` | : | $\check{a}$ | `\check{a}` |
+| $\widetilde{abc}$ | `\widetilde{abc}` | : | $\widehat{abc}$ | `\widehat{abc}` |
+| $\overleftarrow{abc}$ | `\overleftarrow{abc}` | : | $\overrightarrow{abc}$ | `\overrightarrow{abc}` |
+| $\overline{abc}$ | `\overline{abc}` | : | $\underline{abc}$ | `\underline{abc}` |
+| $\overbrace{abc}$ | `\overbrace{abc}` | : | $\underbrace{abc}$ | `\underbrace{abc}` |
+
+## Fundamental Mathematical Operators
 
 An operator is a function that is written as a word: e.g. trigonometric functions (`sin`, `cos`, `tan`), logarithms and exponential (`log`, `exp`), limits (`lim`), as well as trace and determinant (`tr`, `det`).
+
+### Arithmetic Operators
+
+| Symbol | Script | : | Symbol | Script |
+|:------:|--------|:-:|:------:|--------|
+| $=$ | `=` | : | $\neq$ | `\neq` |
+| $<$ | `<` | : | $>$ | `>` |
+| $\leq$ | `\leq` | : | $\geq$ | `\geq` |
+| $+$ | `+` | : | $-$ | `-` |
+| $\pm$ | `\pm` | : | $\mp$ | `\mp` |
+| $\times$ | `\times` | : | $\cdot$ | `\cdot` |
+| $\div$ | `\div` | : | $$ | `` |
+| $$ | `` | : | $$ | `` |
+| $$ | `` | : | $$ | `` |
+| $$ | `` | : | $$ | `` |
+| $$ | `` | : | $$ | `` |
+| $$ | `` | : | $$ | `` |
+
+
+### Trigonometric Functions
 
 | Symbol | Script | : | Symbol | Script | : | Symbol | Script |
 |:------:|--------|:-:|:------:|--------|:-:|:------:|--------|
@@ -165,26 +247,6 @@ $$
 And here is some in-line math:
 $k_{n+1} = n^2 + k_n^2 - k_{n-1}$,
 followed by some text.
-
-### Greek letters
-
-$$
-\begin{gather*}
-\Gamma\ \Delta\ \Theta\ \Lambda\ \Xi\ \Pi\ \Sigma\ \Upsilon\ \Phi\ \Psi\ \Omega\ \\
-\alpha\ \beta\ \gamma\ \delta\ \epsilon\ \zeta\ \eta\ \theta\ \iota\ \kappa\ \lambda\ \mu\ \nu\ \xi\ \omicron\ \pi\ \rho\ \sigma\ \tau\ \upsilon\ \phi\ \chi\ \psi\ \omega\ \varepsilon\ \vartheta\ \varpi\ \varrho\ \varsigma\ \varphi\
-\end{gather*}
-$$
-
-### Arrows
-
-$$
-\gets\ \to\ \leftarrow\ \rightarrow\ \uparrow\ \Uparrow\ \downarrow\ \Downarrow\ \updownarrow\ \Updownarrow \\
-\Leftarrow\ \Rightarrow\ \leftrightarrow\ \Leftrightarrow\
-\mapsto\ \hookleftarrow \\
-\leftharpoonup\ \leftharpoondown\ \rightleftharpoons\ \longleftarrow\ \Longleftarrow\ \longrightarrow \\
-\Longrightarrow\ \longleftrightarrow\ \Longleftrightarrow\ \longmapsto\ \hookrightarrow\ \rightharpoonup \\
-\rightharpoondown\ \leadsto\ \nearrow\ \searrow\ \swarrow\ \nwarrow
-$$
 
 ### Symbols
 
