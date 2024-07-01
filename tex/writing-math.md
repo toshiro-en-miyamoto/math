@@ -50,7 +50,7 @@ Refer to
   ```
   # $ % & ~ _ ^ \ { }
   ```
-- The 15 characters **appear* without escaping according to [Carlisle v 3.4]:
+- The 15 characters **appear** without escaping according to [Carlisle v 3.4]:
   ```
   + - = < > : , ; . | ( ) [ ] /
   ```
@@ -152,28 +152,60 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\overleftarrow{abc}$ | `\overleftarrow{abc}` | : | $\overrightarrow{abc}$ | `\overrightarrow{abc}` |
 | $\overline{abc}$ | `\overline{abc}` | : | $\underline{abc}$ | `\underline{abc}` |
 | $\overbrace{abc}$ | `\overbrace{abc}` | : | $\underbrace{abc}$ | `\underbrace{abc}` |
+| $\vert \, \vert$ | `\,` | : | $\vert \quad \vert$ | `\quad` |
+| $\vert \; \vert$ | `\;` | : | $\vert \qquad \vert$ | `\qquad` |
 
-## Fundamental Mathematical Operators
+## Elemental Mathematical Operators
 
 An operator is a function that is written as a word: e.g. trigonometric functions (`sin`, `cos`, `tan`), logarithms and exponential (`log`, `exp`), limits (`lim`), as well as trace and determinant (`tr`, `det`).
 
 ### Arithmetic Operators
 
-| Symbol | Script | : | Symbol | Script |
-|:------:|--------|:-:|:------:|--------|
-| $=$ | `=` | : | $\neq$ | `\neq` |
-| $<$ | `<` | : | $>$ | `>` |
-| $\leq$ | `\leq` | : | $\geq$ | `\geq` |
-| $+$ | `+` | : | $-$ | `-` |
-| $\pm$ | `\pm` | : | $\mp$ | `\mp` |
-| $\times$ | `\times` | : | $\cdot$ | `\cdot` |
-| $\div$ | `\div` | : | $$ | `` |
-| $$ | `` | : | $$ | `` |
-| $$ | `` | : | $$ | `` |
-| $$ | `` | : | $$ | `` |
-| $$ | `` | : | $$ | `` |
-| $$ | `` | : | $$ | `` |
+| Symbol | Usage | Script | Explanation
+|:------:|:-----:|--------|-------------
+| $=$ | $a=b$ | `a=b` | equal to
+| $\neq$ | $a \neq b$ | `a \neq b` | not equal to
+| $\approx$ | $a \approx b$ | `a \approx b` | approximately equal to
+| $<$ | $a<b$ | `a<b` | less than
+| $\ll$ | $a \ll b$ | `a \ll b` | much smaller than
+| $>$ | $a>b$ | `a>b` | greater than
+| $\gg$ | $a \gg b$ | `a \gg b` | much bigger than
+| $\leq$ | $a \leq b$ | `a \leq b` | less than or equal to
+| $\geq$ | $a \geq b$ | `a \geq b` | greater than or equal to
+| $\leqq$ | $a \leqq b$ | `a \leqq b` | less than or equal to
+| $\geqq$ | $a \geqq b$ | `a \geqq b` | greater than or equal to
+| $\vert \quad \vert$ | $\vert x \vert$ | `\vert x \vert` | absolute value
+| $[\quad]$ | $[x]$ | `[x]` | floor function
+| $\lfloor \quad \rfloor$ | $\lfloor x \rfloor$ | `\lfloor x \rfloor` | floor function
+| $\lceil \quad \rceil$ | $\lceil x \rceil$ | `\lceil x \rceil` | ceiling function
 
+| Symbol | Usage | Script | Explanation
+|:------:|:-----:|--------|-------------
+| $+$ | $a+b$ | `a+b` | addition
+| $-$ | $a-b$ | `a-b` | subtraction
+| $-$ | $-a$ | `-a` | unary minus
+| $\pm$ | $a \pm b$ | `a \pm b` | plus or minus
+| $\mp$ | $a \mp b$ | `a \mp b` | minus or plus
+| $\times$ | $a \times b$ | `a \times b` | multiplication
+| $\cdot$ | $a \cdot b$ | `a \cdot b` | multiplication
+| $\div$ | $a \div b$ | `a \div b` | division
+| $/$ | $a/b$ | `a/b` | division
+| $:$ | $a:b$ | `a:b` | ratio
+|  | $\frac{a}{b}$ | `\frac{a}{b}` | fraction
+|  | $2^3=8$ | `2^3=8` | power
+| $\sqrt{}$ | $\sqrt{x}$ | `\sqrt{x}` | square root
+| $\sqrt{}$ | $\sqrt[n]{x}$ | `\sqrt[n]{x}` | *n*th root
+| $!$ | $k!$ | `k!` | factorial
+| $( \quad )$ | $\binom{n}{k}$ | `\binom{n}{k}` | combination
+| $P$ | $^{n}P_{k}$ | `^{n}P_{k}` | permutation
+
+### Basic Mathematical Constants
+
+| Symbol | Usage | Script | Explanation
+|:------:|:-----:|--------|-------------
+| $\pi$ | $2 \pi r$ | `2 \pi r` | Pi, Archimedes' constant
+| $e$ | $x \mapsto e^x$ | `x \mapsto e^x` | Euler's number
+| $i$ | $i=\sqrt{-1}$ | `i=\sqrt{-1}` | the imaginary unit
 
 ### Trigonometric Functions
 
