@@ -30,13 +30,20 @@ Thus, mathematical expression renderers include:
   - [Common Issues](https://katex.org/docs/issues)
 
 Refer to
+- [CommonMark Spec 0.31.2](https://spec.commonmark.org/0.31.2/)
 - [Wikibooks LaTeX Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics). Retrieved 2024 June.
 - American Mathematical Society, LaTeX Project. *User's Guide for the `amsmath` Package*, Version 2.1 [PDF](http://www.ams.org/arc/tex/amsmath/amsldoc.pdf). 2020 February. Retrieved 2024 June 23.
-- Math Vault. *Complete List of Mathematical Symbols* [PDF](https://mathvault.ca/wp-content/uploads/Comprehensive-List-of-Mathematical-Symbols.pdf). Retrieve 2024 June.
-- [CommonMark Spec 0.31.2](https://spec.commonmark.org/0.31.2/)
 - Getting to Grip with LaTex &mdash; [Part 1](https://www.andy-roberts.net/latex/mathematics_1/) and [Part 2](https://www.andy-roberts.net/latex/mathematics_2/)
 - Warbrick and Rivera. *Essential LaTeX* [PDF](https://us.mirrors.cicku.me/ctan/info/latex-essential/ess2e.pdf). 2014. Retrieved 2024 June.
 - David Carlisle. *Summary of mathematical symbols available in LaTeX* [PDF](http://mirrors.ctan.org/info/symbols/math/maths-symbols.pdf), version 3.4. Retrieved 2024 June.
+
+Relevant Unicode ranges include:
+- 2100–214F: Unicode Letter-like Symbols
+- 2190–21FF: Unicode Arrows
+- 2200–22FF: Unicode Mathematical Operators
+- 27C0–27EF: Unicode Miscellaneous Mathematical Symbols–A
+- 2980–29FF: Unicode Miscellaneous Mathematical Symbols–B
+- 2A00–2AFF: Unicode Supplementary Mathematical Operators
 
 ## Letters and Notations
 
@@ -155,9 +162,7 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\vert \, \vert$ | `\,` | : | $\vert \quad \vert$ | `\quad` |
 | $\vert \; \vert$ | `\;` | : | $\vert \qquad \vert$ | `\qquad` |
 
-## Elemental Mathematical Operators
-
-An operator is a function that is written as a word: e.g. trigonometric functions (`sin`, `cos`, `tan`), logarithms and exponential (`log`, `exp`), limits (`lim`), as well as trace and determinant (`tr`, `det`).
+## Elemental Mathematical Symbols
 
 ### Arithmetic Operators
 
@@ -206,6 +211,28 @@ An operator is a function that is written as a word: e.g. trigonometric function
 | $\pi$ | $2 \pi r$ | `2 \pi r` | Pi, Archimedes' constant
 | $e$ | $x \mapsto e^x$ | `x \mapsto e^x` | Euler's number
 | $i$ | $i=\sqrt{-1}$ | `i=\sqrt{-1}` | the imaginary unit
+
+## Mathematical Symbols by Subject
+
+- Carol Schumacher. *Chapter Zero*. Addison-Wesley. 1996
+- Math Vault. *Complete List of Mathematical Symbols* [PDF](https://mathvault.ca/wp-content/uploads/Comprehensive-List-of-Mathematical-Symbols.pdf). Retrieve 2024 June.
+
+### Logic
+
+| Symbol | Usage | Script | Explanation
+|:------:|:-----:|--------|-------------
+| $\lnot$ | $\lnot P$ | `\lnot P` | logical NOT, negation
+| $\land$ | $P \land Q$ | `P \land Q` | logical AND, conjunction
+| $\lor$ | $P \lor Q$ | `P \lor Q` | logical OR, disjunction
+| $\rightarrow$ | $P \rightarrow Q$ | `P \rightarrow Q` | if-then, implication
+| $\Rightarrow$ | $P \Rightarrow Q$ | `P \Rightarrow Q` | if-then, implication
+| $\Longrightarrow$ | $P \Longrightarrow Q$ | `P \Longrightarrow Q` | if-then, implication
+| $\implies$ | $P \implies Q$ | `P \implies Q` | if-then, implication
+| $\leftrightarrow$ | $P \leftrightarrow Q$ | `P \leftrightarrow Q` | if and only if, equivalence
+| $\Leftrightarrow$ | $P \Leftrightarrow Q$ | `P \Leftrightarrow Q` | if and only if, equivalence
+| $\Longleftrightarrow$ | $P \Longleftrightarrow Q$ | `P \Longleftrightarrow Q` | if and only if, equivalence
+| $\iff$ | $P \iff Q$ | `P \iff Q` | if and only if, equivalence
+
 
 ### Trigonometric Functions
 
