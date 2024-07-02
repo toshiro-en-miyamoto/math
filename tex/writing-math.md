@@ -53,6 +53,7 @@ Relevant Unicode ranges include:
   ```
   + - = ! / ( ) [ ] < > | ' : *
   ```
+  GitHub turns out to be unable to render `$a<b$` properly. Use `\lt` instead `<`.
 - The 10 characters **should not** appear as part of your text, because if they do LaTeX will confused. [3.1. Running Text, Warbrick and Rivera, 2014]
   ```
   # $ % & ~ _ ^ \ { }
@@ -185,9 +186,7 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\lfloor \quad \rfloor$ | $\lfloor x \rfloor$ | `\lfloor x \rfloor` | floor function
 | $\lceil \quad \rceil$ | $\lceil x \rceil$ | `\lceil x \rceil` | ceiling function
 
-$a < b$
-
-> Note: GitHub is unable to render `$a<b$`.
+> Note: GitHub is unable to render `$a<b$`. Use `\lt` command.
 
 | Symbol | Usage | Script | Explanation
 |:------:|:-----:|--------|-------------
