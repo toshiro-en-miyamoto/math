@@ -172,7 +172,7 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $=$ | $a=b$ | `a=b` | equal to
 | $\neq$ | $a \neq b$ | `a \neq b` | not equal to
 | $\approx$ | $a \approx b$ | `a \approx b` | approximately equal to
-| $<$ | $a<b$ | `a<b` | less than
+| $\lt$ | $a \lt b$ | `a \lt b` | less than
 | $\ll$ | $a \ll b$ | `a \ll b` | much smaller than
 | $>$ | $a>b$ | `a>b` | greater than
 | $\gg$ | $a \gg b$ | `a \gg b` | much bigger than
