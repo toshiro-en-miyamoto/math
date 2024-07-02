@@ -161,7 +161,7 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\overbrace{abc}$ | `\overbrace{abc}` | : | $\underbrace{abc}$ | `\underbrace{abc}` |
 | $\vert \quad \vert$ | `\quad` | : | $\vert \qquad \vert$ | `\qquad` |
 
-> Note: GitHub can not render `\,`, `\:`, and `\;`.
+> Note: GitHub is unable to render `$\,$`, `$\:$`, and `$\;$`.
 
 ## Elemental Mathematical Symbols
 
@@ -185,7 +185,9 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\lfloor \quad \rfloor$ | $\lfloor x \rfloor$ | `\lfloor x \rfloor` | floor function
 | $\lceil \quad \rceil$ | $\lceil x \rceil$ | `\lceil x \rceil` | ceiling function
 
-$a<b$
+$a < b$
+
+> Note: GitHub is unable to render `$a<b$`.
 
 | Symbol | Usage | Script | Explanation
 |:------:|:-----:|--------|-------------
