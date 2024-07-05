@@ -228,15 +228,43 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\lnot$ | $\lnot P$ | `\lnot P` | logical NOT, negation
 | $\land$ | $P \land Q$ | `P \land Q` | logical AND, conjunction
 | $\lor$ | $P \lor Q$ | `P \lor Q` | logical OR, disjunction
-| $\rightarrow$ | $P \rightarrow Q$ | `P \rightarrow Q` | if-then, implication
+| $\oplus$ | $P \oplus Q$ | `P \oplus Q$` | exclusive OR
 | $\Rightarrow$ | $P \Rightarrow Q$ | `P \Rightarrow Q` | if-then, implication
-| $\Longrightarrow$ | $P \Longrightarrow Q$ | `P \Longrightarrow Q` | if-then, implication
 | $\implies$ | $P \implies Q$ | `P \implies Q` | if-then, implication
-| $\leftrightarrow$ | $P \leftrightarrow Q$ | `P \leftrightarrow Q` | if and only if, equivalence
 | $\Leftrightarrow$ | $P \Leftrightarrow Q$ | `P \Leftrightarrow Q` | if and only if, equivalence
-| $\Longleftrightarrow$ | $P \Longleftrightarrow Q$ | `P \Longleftrightarrow Q` | if and only if, equivalence
 | $\iff$ | $P \iff Q$ | `P \iff Q` | if and only if, equivalence
+| $\forall$ | $\forall a$ | `\forall a` | universal quantifier
+| $\exists$ | $\exists a$ | `\exists a` | existential quantifier
+| $\therefore$ | $\therefore$ | `\therefore` | therefore
+| $\because$ | $\because$ | `\because` | because
+| $\blacksquare$ | $\blacksquare$ | `\blacksquare` | Q.E.D., end of proof
 
+### Sets
+
+| Symbol | Usage | Script | Explanation
+|:------:|:-----:|--------|-------------
+| $\emptyset$ | $\emptyset$ | `\emptyset` | empty set
+| $\varnothing$ | $\varnothing$ | `\varnothing` | empty set
+| $\{ \quad \}$ | $\{a, b, \ldots \}$ | `\{a, b, \ldots \}` | set builder
+| $\mid$ | $\{a \mid P(a)\}$ | `\{a \mid T(a)\}` | set builder
+| $\colon$ | $\{a \colon P(a)\}$ | `\{a \colon P(a)\}` | set builder
+| $\in$ | $a \in A$ | `a \in A` | $a$ is an element of $A$
+| $\ni$ | $A \ni a$ | `A \ni a$` | $a$ is an element of $A$
+| $\notin$ | $a \notin A$ | `a \notin A` | $a$ is not an element of $A$
+| $\notni$ | $A \notni a$ | `A \notni a` | $a$ is not an element of $A$
+| $\cup$ | $A \cup B$ | `A \cup B` | union
+| $\cap$ | $A \cap B$ | `A \cap B` | intersection
+| $\setminus$ | $A \setminus B$ | `A \setminus B` | difference
+| $\times$ | $A \times B$ | `A \times B` | Cartesian product
+| $A^C$ | $A^C$ | `A^C` | complement
+| $\bar{A}$ | $\bar{A}$ | `\bar{A}` | complement
+| $\mathcal{P}$ | $\mathcal{P}(A)$ | `\mathcal{P}(A)` | power set
+| $\subseteq$ | $A \subseteq B$ | `A \subseteq B` | subset
+| $\subset$ | $A \subset B$ | `A \subset B` | (proper) subset
+| $\subsetneq$ | $A \subsetneq B$ | `A \subsetneq B` | proper subset
+| $\supseteq$ | $A \supseteq B$ | `A \supseteq B` | superset
+| $\supset$ | $A \supset B$ | `A \supset B` | (proper) superset
+| $\supsetneq$ | $A \supsetneq B$ | `A \supsetneq B` | proper superset
 
 ### Trigonometric Functions
 
