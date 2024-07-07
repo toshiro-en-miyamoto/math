@@ -260,7 +260,7 @@ Pi product: $\displaystyle\prod_{i=1}^{n}\,i
 | $\in$ | $a \in A$ | `a \in A` | $a$ is an element of $A$
 | $\ni$ | $A \ni a$ | `A \ni a$` | $a$ is an element of $A$
 | $\notin$ | $a \notin A$ | `a \notin A` | $a$ is not an element of $A$
-| $\notni$ | $A \notni a$ | `A \notni a` | $a$ is not an element of $A$
+| $\not\ni$ | $A \not\ni a$ | `A \not\ni a` | $a$ is not an element of $A$
 | $\cup$ | $A \cup B$ | `A \cup B` | union
 | $\cap$ | $A \cap B$ | `A \cap B` | intersection
 | $\setminus$ | $A \setminus B$ | `A \setminus B` | difference
