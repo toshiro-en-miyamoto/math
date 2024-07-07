@@ -160,9 +160,8 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\overleftarrow{abc}$ | `\overleftarrow{abc}` | : | $\overrightarrow{abc}$ | `\overrightarrow{abc}` |
 | $\overline{abc}$ | `\overline{abc}` | : | $\underline{abc}$ | `\underline{abc}` |
 | $\overbrace{abc}$ | `\overbrace{abc}` | : | $\underbrace{abc}$ | `\underbrace{abc}` |
-| $\vert \quad \vert$ | `\quad` | : | $\vert \qquad \vert$ | `\qquad` |
-
-> Note: GitHub is unable to render `$\,$`, `$\:$`, and `$\;$`.
+| $\vert\, \vert$ | `\,` | : | $\vert \quad \vert$ | `\quad` |
+| $\vert\; \vert$ | `\;` | : | $\vert \qquad \vert$ | `\qquad` |
 
 ## Elemental Mathematical Symbols
 
@@ -182,7 +181,6 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\leqq$ | $a \leqq b$ | `a \leqq b` | less than or equal to
 | $\geqq$ | $a \geqq b$ | `a \geqq b` | greater than or equal to
 | $\vert \quad \vert$ | $\vert x \vert$ | `\vert x \vert` | absolute value
-| $[\quad]$ | $[x]$ | `[x]` | floor function
 | $\lfloor \quad \rfloor$ | $\lfloor x \rfloor$ | `\lfloor x \rfloor` | floor function
 | $\lceil \quad \rceil$ | $\lceil x \rceil$ | `\lceil x \rceil` | ceiling function
 
@@ -207,6 +205,17 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $!$ | $k!$ | `k!` | factorial
 | $( \quad )$ | $\binom{n}{k}$ | `\binom{n}{k}` | combination
 | $P$ | $^{n}P_{k}$ | `^{n}P_{k}` | permutation
+
+Summation: $\displaystyle\sum_{i=1}^{10}\,i = 1+2+\ldots+10= 55$
+```
+\displaystyle\sum_{i=1}^{10}\,i = 55
+```
+
+Pi product: $\displaystyle\prod_{i=1}^{n}\,i
+  = 1\times 2\times\ldots\times (n-1)\times n = n!$
+```
+\displaystyle\prod_{i=1}^{n}\,i = n!
+```
 
 ### Basic Mathematical Constants
 
@@ -233,8 +242,8 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\implies$ | $P \implies Q$ | `P \implies Q` | if-then, implication
 | $\Leftrightarrow$ | $P \Leftrightarrow Q$ | `P \Leftrightarrow Q` | if and only if, equivalence
 | $\iff$ | $P \iff Q$ | `P \iff Q` | if and only if, equivalence
-| $\forall$ | $\forall a$ | `\forall a` | universal quantifier
-| $\exists$ | $\exists a$ | `\exists a` | existential quantifier
+| $\forall$ | $\forall x\, P(x)$ | `\forall x\, P(x)` | universal quantifier
+| $\exists$ | $\exists x\, P(x)$ | `\exists x\, P(x)` | existential quantifier
 | $\therefore$ | $\therefore$ | `\therefore` | therefore
 | $\because$ | $\because$ | `\because` | because
 | $\blacksquare$ | $\blacksquare$ | `\blacksquare` | Q.E.D., end of proof
@@ -265,6 +274,45 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\supseteq$ | $A \supseteq B$ | `A \supseteq B` | superset
 | $\supset$ | $A \supset B$ | `A \supset B` | (proper) superset
 | $\supsetneq$ | $A \supsetneq B$ | `A \supsetneq B` | proper superset
+
+Let $A$ be an arbitrary indexing set. Then
+
+- $\displaystyle\bigcup_{a \in A}{B_{a}} = \{x : x \in B_{a} \text{ for some } a \in A\}$ is called the union over $a \in A$ of the $B_{a}$'s.
+  ```
+  \displaystyle\bigcup_{a \in A}{B_{a}}
+  ```
+- $\displaystyle\bigcap_{a \in A}{B_{a}} = \{x : x \in B_{a} \text{ for all } a \in B\}$ is called the intersection over $a \in A$ of the $B_{a}$'s.
+  ```
+  \displaystyle\bigcap_{a \in A}{B_{a}}
+  ```
+
+| Symbol | Usage | Script | Explanation
+|:------:|:-----:|--------|-------------
+| $\mathbb{N}$ | $n \in \mathbb{N}$ | `\mathbb{N}` | the natural numbers
+| $\mathbb{Z}$ | $i \in \mathbb{Z}$ | `\mathbb{Z}` | the integers
+| $\mathbb{Q}$ | $a \in \mathbb{Q}$ | `\mathbb{Q}` | the rational numbers
+| $\mathbb{R}$ | $x \in \mathbb{R}$ | `\mathbb{R}` | the real numbers
+| $\mathbb{C}$ | $a \in \mathbb{C}$ | `\mathbb{C}` | the complex numbers
+
+### Relations, Orderings and Functions
+
+| Symbol | Usage | Script | Explanation
+|:------:|:-----:|--------|-------------
+| $\sim$ | $a \sim b$ | `a \sim b` | $a$ is related to $b$
+| $\preceq$ | $a \preceq b$ | `a \preceq b` | $a$ is a predecessor of $b$
+| $\prec$ | $a \prec b$ | `a \prec b` | $a$ is a predecessor of $b$
+| $\succeq$ | $a \succeq b$ | `a \succeq b` | $a$ is a successor of $b$
+| $\succ$ | $a \succ b$ | `a \succ b` | $a$ is a successor of $b$
+| $\ast$ | $a \ast b$ | `a \ast b` | a general operation
+| $[\quad]$ | $[a]$ | `[a]` | the equivalence class of $a$
+| $/$ | $M/\sim$ | `M/\sim` | the quotient set of $M$ by the equivalence relation $\sim$
+| $\to$ | $f:A \to B$ | `f:A \to B` | a function from $A$ to $B$
+| $\mapsto$ | $f:x \mapsto y$ | `x \mapsto y` | $x$ maps to $y$ under the function $f$
+| $f()$ | $f(a_1)=f(a_2)$ | `f(a_1)=f(a_2)` | the image of $a$ under the function $f$
+| $\mathcal{Dom}$ | $\mathcal{Dom}(f)$ | `\mathcal{Dom}(f)` | the domain of the function $f$
+| $\mathcal{Ran}$ | $\mathcal{Ran}(f)$ | `\mathcal{Ran}(f)` | the range of the function $f$
+| $f^{-1}$ | $f^{-1}:B \to A$ | `f^{-1}:B \to A` | the inverse of the function $f$
+| $\circ$ | $g \circ f$ | `g \circ f` | the composition of functions $f$ and $g$
 
 ### Trigonometric Functions
 
