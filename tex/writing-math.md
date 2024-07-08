@@ -160,8 +160,10 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\overleftarrow{abc}$ | `\overleftarrow{abc}` | : | $\overrightarrow{abc}$ | `\overrightarrow{abc}` |
 | $\overline{abc}$ | `\overline{abc}` | : | $\underline{abc}$ | `\underline{abc}` |
 | $\overbrace{abc}$ | `\overbrace{abc}` | : | $\underbrace{abc}$ | `\underbrace{abc}` |
-| $\vert\, \vert$ | `\,` | : | $\vert \quad \vert$ | `\quad` |
-| $\vert\; \vert$ | `\;` | : | $\vert \qquad \vert$ | `\qquad` |
+| $\vert \thinspace \vert$ | `\thinspace` | : | $\vert \quad \vert$ | `\quad` |
+| $\vert \thickspace \vert$ | `\thickspace` | : | $\vert \qquad \vert$ | `\qquad` |
+
+> Note: GitHub cannot render abbreviated commands for space such as `\,`, `\:`, and `\;`.
 
 ## Elemental Mathematical Symbols
 
@@ -206,15 +208,15 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $( \quad )$ | $\binom{n}{k}$ | `\binom{n}{k}` | combination
 | $P$ | $^{n}P_{k}$ | `^{n}P_{k}` | permutation
 
-Summation: $\displaystyle\sum_{i=1}^{10}\,i = 1+2+\ldots+10= 55$
+Summation: $\displaystyle\sum_{i=1}^{10} i = 1+2+\ldots+10= 55$
 ```
-\displaystyle\sum_{i=1}^{10}\,i = 55
+\displaystyle\sum_{i=1}^{10}i = 55
 ```
 
-Pi product: $\displaystyle\prod_{i=1}^{n}\,i
+Pi product: $\displaystyle\prod_{i=1}^{n}i
   = 1\times 2\times\ldots\times (n-1)\times n = n!$
 ```
-\displaystyle\prod_{i=1}^{n}\,i = n!
+\displaystyle\prod_{i=1}^{n}i = n!
 ```
 
 ### Basic Mathematical Constants
@@ -242,8 +244,8 @@ Pi product: $\displaystyle\prod_{i=1}^{n}\,i
 | $\implies$ | $P \implies Q$ | `P \implies Q` | if-then, implication
 | $\Leftrightarrow$ | $P \Leftrightarrow Q$ | `P \Leftrightarrow Q` | if and only if, equivalence
 | $\iff$ | $P \iff Q$ | `P \iff Q` | if and only if, equivalence
-| $\forall$ | $\forall x\, P(x)$ | `\forall x\, P(x)` | universal quantifier
-| $\exists$ | $\exists x\, P(x)$ | `\exists x\, P(x)` | existential quantifier
+| $\forall$ | $\forall x\thinspace P(x)$ | `\forall x\thinspace P(x)` | universal quantifier
+| $\exists$ | $\exists x\thinspace P(x)$ | `\exists x\thinspace P(x)` | existential quantifier
 | $\therefore$ | $\therefore$ | `\therefore` | therefore
 | $\because$ | $\because$ | `\because` | because
 | $\blacksquare$ | $\blacksquare$ | `\blacksquare` | Q.E.D., end of proof
@@ -397,8 +399,8 @@ $$
 ### Calculus
 
 $$
-\int u \frac{dv}{dx}\,dx=uv-\int \frac{du}{dx}v\,dx \\
-f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \\
+\int u \frac{dv}{dx}\thinspace dx=uv-\int \frac{du}{dx}v\thinspace dx \\
+f(x) = \int_{-\infty}^\infty \hat f(\xi)\thinspace e^{2 \pi i \xi x} \\
 \oint \vec{F} \cdot d\vec{s}=0
 $$
 
@@ -454,9 +456,9 @@ $$
 
 $$
 \begin{aligned}
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\
+\nabla \times \vec{\mathbf{B}} -\thinspace \frac1c\thinspace \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\
 \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+\nabla \times \vec{\mathbf{E}}\thinspace +\thinspace \frac1c\thinspace \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
 \nabla \cdot \vec{\mathbf{B}} & = 0
 \end{aligned}
 $$
@@ -510,6 +512,6 @@ $$
 $$
 
 $$
-S (\omega)=\frac{\alpha g^2}{\omega^5} \,
+S (\omega)=\frac{\alpha g^2}{\omega^5} \thinspace
 e ^{\left[-0.74 \{ \frac{\omega U_\omega 19.5}{g} \} ^{-4} \right]}
 $$
