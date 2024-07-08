@@ -444,7 +444,7 @@ $$
 $$
 
 > Note:
-> KaTeX supports `\\[1em]`, but MathJax does not.
+> GitHub does not support `\\[1em]`.
 
 ### Statistics
 
@@ -493,5 +493,7 @@ $$
 
 $$
 S (\omega)=\frac{\alpha g^2}{\omega^5} \thinspace
-e ^{\left[-0.74 \{ \frac{\omega U_\omega 19.5}{g} \} ^{-4} \right]}
+e ^{\left[-0.74 \left(\frac{\omega U_\omega 19.5}{g} \right) ^{-4} \right]}
 $$
+
+> Note: GitHub cannot render `^{ ... \left{ ... \right} }`.
