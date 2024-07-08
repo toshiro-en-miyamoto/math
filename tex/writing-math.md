@@ -5,7 +5,7 @@ Keep in mind that your mathematics is part of a Markdown document, so you need t
 **GitHub** is [moving toward](https://github.blog/2017-03-14-a-formal-spec-for-github-markdown/) the CommonMark specification.
 
 - In order to fully specify the version of Markdown we use at GitHub (known as GFM), we had to [formally define](https://github.github.com/gfm/) the syntax and semantics of these features &hellip;
-- To ensure that the rendered Markdown in our website is fully compliant with the [CommonMark spec](https://spec.commonmark.org/), the new backend implementation for GitHun Flavored Markdown or GFM parsing on GitHub is based on `cmark` &hellip;
+- To ensure that the rendered Markdown in our website is fully compliant with the [CommonMark spec](https://spec.commonmark.org/), the new backend implementation for GitHub Flavored Markdown or GFM parsing on GitHub is based on `cmark` &hellip;
 - From [2022-05-19](https://github.blog/2022-05-19-math-support-in-markdown/), you can use the `$` and `$$` delimiters natively in Markdown on GitHub to insert math expressions in TeX and LaTeX style syntax. This content is then rendered using the `MathJax` library.
 
 **VS Code**
@@ -161,9 +161,8 @@ Your mathematics expressions in TeX are part of a Markdown document. For example
 | $\overline{abc}$ | `\overline{abc}` | : | $\underline{abc}$ | `\underline{abc}` |
 | $\overbrace{abc}$ | `\overbrace{abc}` | : | $\underbrace{abc}$ | `\underbrace{abc}` |
 | $\vert \thinspace \vert$ | `\thinspace` | : | $\vert \quad \vert$ | `\quad` |
-| $\vert \thickspace \vert$ | `\thickspace` | : | $\vert \qquad \vert$ | `\qquad` |
 
-> Note: GitHub cannot render abbreviated commands for space such as `\,`, `\:`, and `\;`.
+> Note: GitHub cannot render `\thickspace` and abbreviated commands for space such as `\,`, `\:`, and `\;`.
 
 ## Elemental Mathematical Symbols
 
@@ -383,19 +382,6 @@ $$
 \quad \text{ for }\lvert q\rvert < 1.
 $$
 
-### Inline math
-
-And here is some in-line math:
-$k_{n+1} = n^2 + k_n^2 - k_{n-1}$,
-followed by some text.
-
-### Symbols
-
-$$
-\surd\ \barwedge\ \veebar\ \odot\ \oplus\ \otimes\ \oslash\ \circledcirc\ \boxdot\ \bigtriangleup \\
-\bigtriangledown\ \dagger\ \diamond\ \star\ \triangleleft\ \triangleright\ \angle\ \infty\ \prime\ \triangle
-$$
-
 ### Calculus
 
 $$
@@ -422,12 +408,6 @@ $$
 \frac{\partial X}{\partial u} & \frac{\partial Y}{\partial u} & 0 \\
 \frac{\partial X}{\partial v} & \frac{\partial Y}{\partial v} & 0
 \end{vmatrix}
-$$
-
-### Accents
-
-$$
-\hat{x}\ \vec{x}\ \ddot{x}
 $$
 
 ### Stretchy brackets
