@@ -218,6 +218,22 @@ Pi product: $\displaystyle\prod_{i=1}^{n}i
 \displaystyle\prod_{i=1}^{n}i = n!
 ```
 
+| Symbol | Usage | Script | Explanation
+|:------:|:-----:|--------|-------------
+| $e$ | $e^{x+y}$ | `e^{x+y}` | natural exponent
+| $\log$ | $\log_2{x}$ | `\log_2{x}` | general logarithm
+| $\ln$ | $\ln{x}$ | `\ln{x}` | natural logarithm
+| $\sin$ | $\sin{\theta}$ | `\sin{\theta}` | sine function
+| $\cos$ | $\cos{\theta}$ | `\cos{\theta}` | cosine function
+| $\tan$ | $\tan{\theta}$ | `\tan{\theta}` | tangent function
+
+| Symbol | Script | : | Symbol | Script | : | Symbol | Script |
+|:------:|--------|:-:|:------:|--------|:-:|:------:|--------|
+| $sin$ | `\sin` |:| $arcsin$ | `\arcsin` |:| $sinh$ | `\sinh` |
+| $cos$ | `\cos` |:| $arccos$ | `\arccos` |:| $cosh$ | `\cosh` |
+| $tan$ | `\tan` |:| $arctan$ | `\arctan` |:| $tanh$ | `\tanh` |
+| $cot$ | `\cot` |:| $arccot$ | `\arccot` |:| $coth$ | `\coth` |
+
 ### Basic Mathematical Constants
 
 | Symbol | Usage | Script | Explanation
@@ -315,14 +331,7 @@ Let $A$ be an arbitrary indexing set. Then
 | $f^{-1}$ | $f^{-1}:B \to A$ | `f^{-1}:B \to A` | the inverse of the function $f$
 | $\circ$ | $g \circ f$ | `g \circ f` | the composition of functions $f$ and $g$
 
-### Trigonometric Functions
-
-| Symbol | Script | : | Symbol | Script | : | Symbol | Script |
-|:------:|--------|:-:|:------:|--------|:-:|:------:|--------|
-| $sin$ | `\sin` |:| $arcsin$ | `\arcsin` |:| $sinh$ | `\sinh` |
-| $cos$ | `\cos` |:| $arccos$ | `\arccos` |:| $cosh$ | `\cosh` |
-| $tan$ | `\tan` |:| $arctan$ | `\arctan` |:| $tanh$ | `\tanh` |
-| $cot$ | `\cot` |:| $arccot$ | `\arccot` |:| $coth$ | `\coth` |
+## To be retouched
 
 For certain operators such as `limits`, the subscript is placed underneath the operator:
 
