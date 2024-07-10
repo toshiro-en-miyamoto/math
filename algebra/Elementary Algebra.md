@@ -13,7 +13,7 @@ References:
 
 Algebra is a lot like arithmetic but deals with symbolic variables in addition to numbers. Very often these include $x$, $y$, and/or $z$, especially for *unknown* quantities which is often your job to solve for. Earlier letters of the alphabet such as $a$, $b$, $c$ are often used for *constants*, quantities whose values are determined by assumed conditions before you solve a particular problem. [blinder]
 
-代数学(algebra)は数論(arithmetic)とよく似ているが、代数学は数だけでなく記号変数(symbolic variables)を扱う。変数とはこれから解こうとする「値が分かっていない」数である。変数を表す記号には、$x \cdot y \cdot z \thinspace$など、アルファベットの終わりの文字が使われることが多い。「定数」(constants)、すなわちある条件を仮定すれば問題を解く前にその値が決められる数には、$a \cdot b \cdot c \thinspace$など、アルファベットの始まりの文字が使われることが多い。
+代数学(algebra)は数論(arithmetic)とよく似ているが、代数学は数だけでなく記号変数(symbolic variables)を扱う。変数とはこれから解こうとする「値が分かっていない」数である。変数を表す記号には、$x$, $y$, $z$ など、アルファベットの終わりの文字が使われることが多い。「定数」(constants)、すなわちある条件を仮定すれば問題を解く前にその値が決められる数には、$a$, $b$, $c$ など、アルファベットの始まりの文字が使われることが多い。
 
 The fundamental entity in algebra is an *equation*, consisting of two quantities connected by an equal sign. [blinder]
 
@@ -21,7 +21,7 @@ The fundamental entity in algebra is an *equation*, consisting of two quantities
 
 ## Powers (冪乗:べき乗)
 
-*Exponentiation* is a mathematical operation, written as $b^n$, involving two numbers, the *base* $b$ and the *exponent* or *power* $n$, and pronounced as "$b$ raised to the power of $n$". [wiki/Exponentiation]
+*Exponentiation* is a mathematical operation, written as $b^n$, involving two numbers, the *base* $b$ and the *exponent* or *power* $n$, and pronounced as &mdash; $b$ raised to the power of $n$. [wiki/Exponentiation]
 
 数学における冪乗（べきじょう、べき乗、英: 独: 仏: exponentiation）あるいは冪演算（べきえんざん）は、底 (てい、英: base) および冪指数 (べきしすう、英: exponent) と呼ばれる二つの数に対して定まる数学的算法で、その結果は冪 (べき、英: power) と呼ばれる。[wiki/冪乗]
 
