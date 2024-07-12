@@ -68,6 +68,7 @@ $$
 $$
 
 The equation (1) leads to another theorem:
+
 $$
 \begin{aligned}
 \log_a{x^n} & = \log_a{x \cdot x \cdots x} & \quad (n \text{ times}) \\
