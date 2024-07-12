@@ -86,21 +86,19 @@ $$
 $$
 
 Logarithms to the base 10 are called *common logarithms*. [blinder]
+With common logarithms, the base 10 is often omitted:
+
+$$
+\log_{}{1000} = 3
+$$
 
 底を10とする対数を常用対数(common logarithms)と呼ぶ。
 
-Of more fundamental mathematical significance are logarithms to the base `e = 2.71828...`, known as *natural logarithms*. [blinder]
+Of more fundamental mathematical significance are logarithms to the base $e=2.71828\ldots$, known as *natural logarithms*. [blinder] 
+The number $e=2.71828\ldots$ is called Euler's number, and $\log_e{x}$ is often denoted $\ln{x}$.
 
-底を`e = 2.71828...`とする対数は数学上の基本的重要性を持っており、自然対数(natural logarithms)と呼ぶ。
+$$
+\frac{d}{dx} \ln{x} = \frac{1}{x}
+$$
 
-```
-log₂1    =  0
-log₂2    =  1
-log₂4    =  2
-log₂8    =  3
-log₂16   =  4
-log₂128  =  7   7 bits: [0, 127]
-log₂256  =  8   1 byte: [0, 255]
-log₂1024 = 10
-log₂4096 = 12
-```
+底をオイラー数 $e=2.71828\ldots$ とする対数は数学上の基本的重要性を持っており、自然対数(natural logarithms)と呼ぶ。
