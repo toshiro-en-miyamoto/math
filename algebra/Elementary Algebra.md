@@ -70,7 +70,7 @@ $$
 The equation (1) leads to another theorem:
 $$
 \begin{aligned}
-\log_a{x^n} & = \log_a{x \cdot x \cdot \quad \cdots \quad \cdot x} & \quad (n \text{ times}) \\
+\log_a{x^n} & = \log_a{x \cdot x \cdots x} & \quad (n \text{ times}) \\
 & = \log_a{x} + \log_a{x} + \cdots + \log_a{x} & \quad (n \text{ times}) \\
 & = n \times \log_a{x}
 \end{aligned}
