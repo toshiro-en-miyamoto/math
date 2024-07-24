@@ -1,8 +1,8 @@
 # Counting Principles
 
-- T. Sengadir. &sect; 4 Counting Principles, *Discrete Mathematics and Combinatorics*. Pearson India. 2008
+- T. Sengadir. &sect;4 Counting Principles, *Discrete Mathematics and Combinatorics*. Pearson India. 2008
 
-## A Fundamental Counting Principle
+## 4.1. A Fundamental Counting Principle
 
 **Fundamental Counting Principle**:
 Consider an activity consisting of $k$ independent subtasks. Assume that
@@ -57,4 +57,25 @@ A function, $f:A \to B$, is a rule that associates each element $x$ in $A$ with 
 Note that
 
 - even if $f(x_1) = f(x_2)$, it is not necessarily that $x_1 = x_2$
-- there exists $y \in B$ such that $y \notin \{f(x):x \in A\}$
+- there exists $y \in B$ such that $y \notin \{f(x):x \in A\} = \mathcal{Range}(f)$
+
+**Functional solution to example 4.7**:
+Consider one specific distribution of the $n$ objects into $m$ distinct boxes.
+
+- Think of a relation from objects to boxes. Because each object is placed in one of boxes, a function $f:objects \to boxes$ can be defined.
+- Think of a relation from boxes to objects. Some boxes can be empty, meaning that some boxes are not related to objects. Hence, the relation cannot be a function.
+
+Thus, the required answer is the number of all possible $f:objects \to boxes = m^n$.
+
+**Functional solution to example 4.2**:
+Consider a six-digit number that can be formed by using 2, 6, 8 and 9.
+
+- Think of a relation from digits to places. Some digits may not appear in some number (e.g., 226688), meaning that some digits are not related to places. Hence, the relation cannot be a function.
+- Think of a relation from places to digits. Because each place is filled with one of the digits, a function $f:places \to digit$ can be define.
+
+Thus, the required answer is the number of all possible $f:places \to digits = 4^6$.
+
+## 4.1.1. Arrangements
+
+In how many ways can three objects be arranged in some order? Let use call there objects as $\{a, b, c\}$. We can arrange them as $\{abc, acb, bac, bca, cab, cba\}$. These are all the possible ways and hence three objects can be arranged in six different ways.
+
