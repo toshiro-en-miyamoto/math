@@ -106,6 +106,78 @@ Imagine an array of $r$ boxes. Consider filling each of the $r$ boxes as a subta
 - We can place any of the $r$ objects in the first box. Thus, the number of ways of completing this first task is $r$.
 - Now we are left with $r-1$ objects. So the second box can be filled in  $r-1$ ways.
 
-Thus, by using the couting principle of the previous section, the number of different arrangements of $r$ things is $r \times (r-1) \times \cdots \times 2 \times 1 = r!$.
+Thus, by using the counting principle of the previous section, the number of different arrangements of $r$ things is $r \times (r-1) \times \cdots \times 2 \times 1 = r!$.
 
 </article>
+
+We consider problems involving special boxes into which only certain special objects can be placed. Consider a row of $r$ boxes. Assume that
+
+- only $m_1$ of the objects can be placed in the first box, after which
+- only $m_2$ of the remaining objects can be placed in the second box, and lastly
+- only $m_r$ of the remaining objects can be placed in the $r$ th box.
+
+The number of arrangements is $m_1 \times m_2 \times \cdots \times m_r$.
+
+## 4.2. Permutations and Combinations
+
+<article class="definition">
+
+**Definition (permutation)**:
+Let there be $n$ objects. The number of ways of *choosing and arranging* objects out of the $n$ objects is called the permutation of $r$ objects out of $n$, denoted $^{n}P_r$.
+
+**Proposition 4.3**:
+$$
+^{n}P_r = n(n-1)(n-2) \cdots (n-r+1) = \frac{n!}{(n-r)!}
+$$
+
+Consider an array of $r$ boxes. We can place
+
+- any of the $n$ objects in the first box
+- any of the remaining $n-1$ objects in the second box
+- &vellip;
+- any of the remaining $n-r+1$ objects in the $r$ th box
+
+Hence, the number of ways this can achieved is $\displaystyle \frac{n!}{(n-r)!}$.
+
+</article>
+
+**Example 4.18**:
+Consider five-letter words that can be formed using nine letters A, B, &hellip;, I without repetition? How many of them contain A and I?
+
+- First, we shall allot two places out of five to A and I. This can be done in $^{5}P_2$ ways.
+- Next, we shall fill the remaining three places with seven letters B, C, &hellip;, H without repetition. This can be done in $^{7}P_3$.
+
+Hence, the required answer is $^{5}P_2 \times ^{7}P_3$.
+
+**Example 4.19**:
+
+- In how many ways can five letters be chosen from nine letters A, B, &hellip;, I?
+- How many of them contain A and I?
+
+In Example 4.18, the order in which the letters appear is important. But in Example 4.19, letters are just selected without any consideration for the order. We need the idea of *combination*.
+
+<article class="definition">
+
+**Definition (combination)**:
+Let there be $n$ objects. The number of ways of choosing $r$ objects out of $n$ objects is called the combination of $r$ objects out of $n$ objects, denoted $^{n}C_r$.
+
+**Proposition 4.4**:
+
+Choosing and arranging $r$ objects out of $n$ objects consists of two subtasks:
+
+- choosing $r$ objects out of $n$ objects &mdash; in $^{n}C_r$ ways
+- arranging $r$ objects &mdash; in $r!$ ways
+
+Thus,
+$^{n}P_r = ^{n}C_r \times r!$, therefore
+
+$$
+^{n}C_r = \frac{^{n}P_r }{r!}
+$$
+
+</article>
+
+**Example 4.19**:
+
+- In how many ways can five letters be chosen from nine letters A, B, &hellip;, I? It is the number of ways of choosing five out of nine &mdash; $^{9}C_5$.
+- How many of them contain A and I? If our choice must include both A and I, then we need to choose only three out of seven &mdash; $^{7}C_3$.
