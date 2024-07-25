@@ -1,8 +1,19 @@
+<style>
+  .definition, .proposition {
+    padding: 1rem 1rem 0.2rem 1rem;
+    border-style: solid;
+    border-color: lightgrey;
+    margin-bottom: 2rem;
+  }
+</style>
+
 # Counting Principles
 
 - T. Sengadir. &sect;4 Counting Principles, *Discrete Mathematics and Combinatorics*. Pearson India. 2008
 
 ## 4.1. A Fundamental Counting Principle
+
+<article class="proposition">
 
 **Fundamental Counting Principle**:
 Consider an activity consisting of $k$ independent subtasks. Assume that
@@ -13,6 +24,8 @@ Consider an activity consisting of $k$ independent subtasks. Assume that
 - $task_k$ can be performed in $m_m$ ways
 
 Then this activity can be completed in $m_1 \times m_2 \times \cdots \times m_k$ different number of ways.
+
+</article>
 
 **Example 4.2**:
 Find the number of all possible six-digit numbers that can be formed by using 2, 6, 8 and 9.
@@ -34,6 +47,8 @@ Hence, the required answer is $m^n$.
 
 **Note**:
 If we think of the place as boxes and the digits as objects, the answer is $6^4$. What's wrong?
+
+<article class="proposition">
 
 **Proposition 4.1**:
 Let $A$ and $B$ be finite sets with $|A|=n$ and $|B|=m$. Then the number of all function $f:A \to B$ is $m^n$.
@@ -59,6 +74,8 @@ Note that
 - even if $f(x_1) = f(x_2)$, it is not necessarily that $x_1 = x_2$
 - there exists $y \in B$ such that $y \notin \{f(x):x \in A\} = \mathcal{Range}(f)$
 
+</article>
+
 **Functional solution to example 4.7**:
 Consider one specific distribution of the $n$ objects into $m$ distinct boxes.
 
@@ -79,3 +96,16 @@ Thus, the required answer is the number of all possible $f:places \to digits = 4
 
 In how many ways can three objects be arranged in some order? Let use call there objects as $\{a, b, c\}$. We can arrange them as $\{abc, acb, bac, bca, cab, cba\}$. These are all the possible ways and hence three objects can be arranged in six different ways.
 
+<article class="proposition">
+
+**Proposition 4.2**:
+$r$ objects can be arranged in $r!$ ways.
+
+Imagine an array of $r$ boxes. Consider filling each of the $r$ boxes as a subtask.
+
+- We can place any of the $r$ objects in the first box. Thus, the number of ways of completing this first task is $r$.
+- Now we are left with $r-1$ objects. So the second box can be filled in  $r-1$ ways.
+
+Thus, by using the couting principle of the previous section, the number of different arrangements of $r$ things is $r \times (r-1) \times \cdots \times 2 \times 1 = r!$.
+
+</article>
