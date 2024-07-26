@@ -126,9 +126,8 @@ The number of arrangements is $m_1 \times m_2 \times \cdots \times m_r$.
 Let there be $n$ objects. The number of ways of *choosing and arranging* objects out of the $n$ objects is called the permutation of $r$ objects out of $n$, denoted $^{n}P_r$.
 
 **Proposition 4.3**:
-$$
-^{n}P_r = n(n-1)(n-2) \cdots (n-r+1) = \frac{n!}{(n-r)!}
-$$
+
+$$^{n}P_r = n(n-1)(n-2) \cdots (n-r+1) = \frac{n!}{(n-r)!}$$
 
 Consider an array of $r$ boxes. We can place
 
@@ -171,9 +170,7 @@ Choosing and arranging $r$ objects out of $n$ objects consists of two subtasks:
 Thus,
 $^{n}P_r = ^{n}C_r \times r!$, therefore
 
-$$
-^{n}C_r = \frac{^{n}P_r }{r!}
-$$
+$\displaystyle ^{n}C_r = \frac{^{n}P_r }{r!}$
 
 </article>
 
