@@ -232,7 +232,7 @@ Using the method 1:
   - for the room #`1`, three person out of `12` can be chosen in $^{12}C_3$ ways;
   - for the room #`2`, three out of `9` &mdash; in $^{9}C_3$ ways;
   - for the room #`3`, three out of `6` &mdash; in $^{6}C_3$ ways;
-  - for the room #`4`, three out of `3` &mdash; in $^{3}C_3 = 1$ way.
+  - for the room #`4`, three out of `3` &mdash; in $^{3}C_3$ way.
 - Thus, the required answer is
 
 $$
