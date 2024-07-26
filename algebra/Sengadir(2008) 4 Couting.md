@@ -171,8 +171,8 @@ Proof: Choosing and arranging $r$ objects out of $n$ objects consists of two sub
 - choosing $r$ objects out of $n$ objects &mdash; in $^{n}C_r$ ways
 - arranging $r$ objects &mdash; in $r!$ ways
 
-Thus,
-$^{n}P_r = ^{n}C_r \times r!$, therefore $^{n}C_r = ^{n}P_r  \div r!$. &blk14;
+Thus, $^{n}P_r = ^{n}C_r \times r!$.
+Therefore $^{n}C_r = ^{n}P_r  \div r!$. &blk14;
 
 </article>
 
@@ -180,3 +180,106 @@ $^{n}P_r = ^{n}C_r \times r!$, therefore $^{n}C_r = ^{n}P_r  \div r!$. &blk14;
 
 - In how many ways can five letters be chosen from nine letters A, B, &hellip;, I? It is the number of ways of choosing five out of nine &mdash; $^{9}C_5$.
 - How many of them contain A and I? If our choice must include both A and I, then we need to choose only three out of seven &mdash; $^{7}C_3$.
+
+## 4.2.2. Permutation of Identical Objects
+
+Consider nine-digit numbers that are formed by two 4's, three 6's and four 8's, such as 446668888. How many distinct numbers can we have?
+
+Method 1:
+
+- Choose two places from two 4's out of the nine place &mdash; $^{9}C_2$.
+- Choose three places for three 6's out of the remaining seven places &mdash; $^{7}C_3$.
+- Choose four places for four 8's out of the remaining seven places &mdash; $^{4}C_4 = 1$.
+- Hence, the answer is $\displaystyle \left(\frac{9 \times 8}{2 \times 1}\right) \left(\frac{7 \times 6 \times 5}{3 \times 2 \times 1}\right) = 1,260$ distinct numbers.
+
+Method 2:
+
+- Think of 4's, 6's and 8's as nine distinct objects: $4_1, 4_2, 6_1, 6_2, 6_3, 8_1, 8_2, 8_3, 8_4$. Then, the objects can be arranged in $^{9}P_9 = 9!$ ways.
+- We must not distinguish two 4's, three 6's and four 8's. But among the arrangements, we counted the identical nine-digit numbers
+  - $^{2}P_2 = 2!$ times for two 4's
+  - $^{3}P_3 = 3!$ times for three 6's
+  - $^{4}P_4 = 4!$ times for four 8's
+- Hence, the answer is $\displaystyle \frac{9!}{2! \times 3! \times 4!} = 1,260$ distinct numbers.
+
+As you can see the two methods yield the correct answer. The method 2 is based on the idea of *permutation of identical objects*.
+
+<article class="proposition">
+
+**Proposition 4.6**:
+In a collection there are $m_1$ identical articles of type 1, $m_2$ articles of type 2 and so on, up to $m_k$ articles of type $k$.
+
+$$
+\frac{(m_1 + m_2 + \cdots + m_k)!}{m_1 \cdot m_2 \cdots m_k}
+$$
+
+</article>
+
+**Example 4.33**:
+A hotel has six single rooms, six double rooms, and four three-bed rooms (30 beds in total). In how many ways can 30 persons be accommodated in this hotel?
+
+Using the method 1:
+
+- For single rooms,
+  - six persons out of 30 persons can be chosen and arranged in $^{30}P_6$ ways.
+- For double rooms,
+  - for the room #`1`, two persons out of `24` can be chosen in $^{24}C_2$ ways;
+  - for the room #`2`, two out of `22` &mdash; in $^{22}C_2$ ways;
+  - for the room #`3`, two out of `20` &mdash; in $^{20}C_2$ ways;
+  - for the room #`4`, two out of `18` &mdash; in $^{18}C_2$ ways;
+  - for the room #`5`, two out of `16` &mdash; in $^{16}C_2$ ways;
+  - for the room #`6`, two out of `14` &mdash; in $^{14}C_2$ ways.
+- For three-bed room,
+  - for the room #`1`, three person out of `12` can be chosen in $^{12}C_3$ ways;
+  - for the room #`2`, three out of `9` &mdash; in $^{9}C_3$ ways;
+  - for the room #`3`, three out of `6` &mdash; in $^{6}C_3$ ways;
+  - for the room #`4`, three out of `3` &mdash; in $^{3}C_3 = 1$ way.
+- Thus, the required answer is
+
+$$
+\begin{aligned}
+\text{answer } & =
+\left(30 \cdot 29 \cdot 28 \cdot 27 \cdot 26 \cdot 25\right) \\
+& \times
+\left(\frac{24 \cdot 23}{2!}\right)
+\left(\frac{22 \cdot 21}{2!}\right)
+\left(\frac{20 \cdot 19}{2!}\right)
+\left(\frac{18 \cdot 17}{2!}\right)
+\left(\frac{16 \cdot 15}{2!}\right)
+\left(\frac{14 \cdot 13}{2!}\right) \\
+& \times
+\left(\frac{12 \cdot 11 \cdot 10}{3!}\right)
+\left(\frac{9 \cdot 8 \cdot 7}{3!}\right)
+\left(\frac{6 \cdot 5 \cdot 4}{3!}\right)
+\left(\frac{3 \cdot 2 \cdot 1}{3!}\right) \\
+& =
+\frac{30!}{2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 3! \cdot 3! \cdot 3! \cdot 3!}
+\end{aligned}
+$$
+
+Using the method 2:
+
+- We shall denote rooms:
+  - six single rooms $S_a, S_b, S_c, S_d, S_e, S_f$,
+  - six double rooms $D_a, D_b, D_c, D_d, D_e, D_f$,
+  - four three-bed rooms $T_a, T_b, T_c, T_d$.
+- We shall denote beds:
+  - $S_{a1}, S_{b1}, S_{c1}, S_{d1}, S_{e1}, S_{f1}$,
+  - $D_{a1},D_{a2}, D_{b1},D_{b2}, D_{c1},D_{c2}, D_{d1},D_{d2}, D_{e1},D_{e2}, D_{f1},D_{f2}$,
+  - $T_{a1},T_{a2},T_{a3}, T_{b1},T_{b2},T_{b3}, T_{c1},T_{c2},T_{c3}, T_{d1},T_{d2}, T_{d3},$
+- The 30 beds can be arranged for 30 persons in 30! ways.
+- For double beds, the arrangements must exclude duplicated counts:
+  - the beds $D_{a1}$ and $D_{a2}$ are in the room $D_a$, and these must not be distinguished;
+  - for $D_a$, we counted the beds $^{2}P_2 = 2!$ times;
+  - the same goes with $D_b, D_c, D_d, D_e, D_f$.;
+  - thus, for double rooms, we counted $2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 2!$ times.
+- For three-bed room:
+  - the beds $T_{a1}, T_{a2}$ and $T_{a3}$ are in the room $T_a$, and these must not be distinguished;
+  - for $T_a$, we counted the beds $^{3}P_3 = 3!$ times;
+  - the same goes with $T_b, T_c, T_d$;
+  - thus, for three-bed rooms we counted $3! \cdot 3! \cdot 3! \cdot 3!$ times.
+
+Thus, the required answer is
+
+$$
+\frac{30!}{2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 3! \cdot 3! \cdot 3! \cdot 3!}
+$$
