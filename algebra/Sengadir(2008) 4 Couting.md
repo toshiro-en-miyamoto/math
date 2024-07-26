@@ -61,7 +61,7 @@ Let $A=\{x_1, x_2, \cdots, x_n\}$. Then
 - &vellip;
 - $f(x_n)$ can be defined in $m$ possible ways
 
-Thus, the number of all possible functions is $m^n$.
+Thus, the number of all possible functions is $m^n$. &blk14;
 
 **Definition (function)**:
 A function, $f:A \to B$, is a rule that associates each element $x$ in $A$ with an element in $B$, denoted $f(x)$. It demands that
@@ -101,12 +101,12 @@ In how many ways can three objects be arranged in some order? Let use call there
 **Proposition 4.2**:
 $r$ objects can be arranged in $r!$ ways.
 
-Imagine an array of $r$ boxes. Consider filling each of the $r$ boxes as a subtask.
+Proof: Imagine an array of $r$ boxes. Consider filling each of the $r$ boxes as a subtask.
 
 - We can place any of the $r$ objects in the first box. Thus, the number of ways of completing this first task is $r$.
 - Now we are left with $r-1$ objects. So the second box can be filled in  $r-1$ ways.
 
-Thus, by using the counting principle of the previous section, the number of different arrangements of $r$ things is $r \times (r-1) \times \cdots \times 2 \times 1 = r!$.
+Thus, by using the counting principle of the previous section, the number of different arrangements of $r$ things is $r \times (r-1) \times \cdots \times 2 \times 1 = r!$. &blk14;
 
 </article>
 
@@ -129,14 +129,14 @@ Let there be $n$ objects. The number of ways of *choosing and arranging* objects
 
 $$^{n}P_r = n(n-1)(n-2) \cdots (n-r+1) = \frac{n!}{(n-r)!}$$
 
-Consider an array of $r$ boxes. We can place
+Proof: Consider an array of $r$ boxes. We can place
 
 - any of the $n$ objects in the first box
 - any of the remaining $n-1$ objects in the second box
 - &vellip;
 - any of the remaining $n-r+1$ objects in the $r$ th box
 
-Hence, the number of ways this can achieved is $\displaystyle \frac{n!}{(n-r)!}$.
+Hence, the number of ways this can achieved is $\displaystyle \frac{n!}{(n-r)!}$. &blk14;
 
 </article>
 
@@ -162,15 +162,17 @@ Let there be $n$ objects. The number of ways of choosing $r$ objects out of $n$ 
 
 **Proposition 4.4**:
 
-Choosing and arranging $r$ objects out of $n$ objects consists of two subtasks:
+$$
+^{n}C_r = \frac{^{n}P_r}{r!}
+$$
+
+Proof: Choosing and arranging $r$ objects out of $n$ objects consists of two subtasks:
 
 - choosing $r$ objects out of $n$ objects &mdash; in $^{n}C_r$ ways
 - arranging $r$ objects &mdash; in $r!$ ways
 
 Thus,
-$^{n}P_r = ^{n}C_r \times r!$, therefore
-
-$\displaystyle ^{n}C_r = \frac{^{n}P_r }{r!}$
+$^{n}P_r = ^{n}C_r \times r!$, therefore $^{n}C_r = ^{n}P_r  \div r!$. &blk14;
 
 </article>
 
