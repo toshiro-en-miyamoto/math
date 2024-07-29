@@ -306,9 +306,7 @@ where
 Thus, the required answer is
 
 $$
-\frac{((6 \times 1) + (6 \times 2) + (4 \times 3))!}{(6 \times 1!) \times (6 \times 2!) \times (4 \times 3!)}
-=
-\frac{30!}{2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 3! \cdot 3! \cdot 3! \cdot 3!}
+\frac{(6 \cdot 1 + 6 \cdot 2 + 4 \cdot 3)!}{(6 \cdot 1!) \cdot (6 \cdot 2!) \cdot (4 \cdot 3!)} = \frac{30!}{2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 3! \cdot 3! \cdot 3! \cdot 3!}
 $$
 
 ## 4.3. Applications of Permutations and Combinations
