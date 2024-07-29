@@ -206,10 +206,10 @@ As you can see the two methods yield the correct answer. The method 2 is based o
 <article class="proposition">
 
 **Proposition 4.6**:
-In a collection there are $m_1$ identical articles of type 1, $m_2$ articles of type 2 and so on, up to $m_k$ articles of type $k$.
+In a collection there are $m_1$ identical articles of type 1, $m_2$ articles of type 2 and so on, up to $m_k$ articles of type $k$. The number of permutations of this collection is
 
 $$
-\frac{(m_1 + m_2 + \cdots + m_k)!}{m_1 \cdot m_2 \cdots m_k}
+\frac{(m_1 + m_2 + \cdots + m_k)!}{m_1! \times m_2! \times \cdots \times m_k!}
 $$
 
 </article>
@@ -267,7 +267,7 @@ Using the method 2:
   - $D_{a1},D_{a2}, D_{b1},D_{b2}, D_{c1},D_{c2}, D_{d1},D_{d2}, D_{e1},D_{e2}, D_{f1},D_{f2}$,
   - $T_{a1},T_{a2},T_{a3}, T_{b1},T_{b2},T_{b3}, T_{c1},T_{c2},T_{c3}, T_{d1},T_{d2}, T_{d3},$
 - The 30 beds can be arranged for 30 persons in 30! ways.
-- For double beds, the arrangements must exclude duplicated counts:
+- For double rooms, the arrangements must exclude duplicated counts:
   - the beds $D_{a1}$ and $D_{a2}$ are in the room $D_a$, and these must not be distinguished;
   - for $D_a$, we counted the beds $^{2}P_2 = 2!$ times;
   - the same goes with $D_b, D_c, D_d, D_e, D_f$.;
@@ -283,3 +283,47 @@ Thus, the required answer is
 $$
 \frac{30!}{2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 3! \cdot 3! \cdot 3! \cdot 3!}
 $$
+
+This is what you get by applying Proposition 4.6
+
+$$
+\frac{(m_1 + m_2 + \cdots + m_k)!}{m_1! \times m_2! \times \cdots \times m_k!}
+$$
+
+where
+
+- six single rooms have distinct beds, hence
+  - $m_1 = m_2 = m_3 = m_4 = m_5 = m_6 = 1$;
+- a double room has two identical beds, hence
+  - let $m_7$ be the number of beds in $D_a$, which leads to $m_7=2$, and
+  - the same goes for $D_b, D_c, D_d, D_e, D_f$, thus
+  - $m_7 = m_8 = m_9 = m_{10} = m_{11} = m_{12} =2$;
+- a three-bed room has three identical beds, hence
+  - let $m_{13} be the number of beds in $T_a$, which leads to $m_{13}=3$, and
+  - the same goes for $T_b, T_c, T_d$, thus
+  - $m_{13} = m_{14} = m{15} = m_{16} = 3$;
+
+Thus, the required answer is
+
+$$
+\frac{ \{ (6 \times 1) + (6 \times 2) + (4 \times 3) \}!}{(6 \times 1!) \times (6 \times 2!) \times (4 \times 3!)}
+=
+\frac{30!}{2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 2! \cdot 3! \cdot 3! \cdot 3! \cdot 3!}
+$$
+
+## 4.3. Applications of Permutations and Combinations
+
+<article class="proposition">
+
+**Proposition 4.7**:
+Let $A$ and $B$ be finite sets with $|A|=n$ and $|B|=m$, and $n \leq m$. The number of all one-to-one functions from $A$ to $B$ is $m(m-1)(m-2)\cdots(m-n+1)=^{m}P_n$.
+
+Proof: Let $A=\{x_1, x_2,\cdots,x_n\}$.
+
+- $f(x_1)$ can be defined in $m$ possible ways.
+- $f(x_2)$ can be defined in $m-1$ possible ways because $f(x_2) \neq f(x_1)$ for a one-to-one function.
+- &vellip;
+- $f(x_n)$ can be defined in $m-n+1$ possible ways because $f(x_n)\neq \cdots \neq f(x_2)  \neq f(x_1)$ for a one-to-one function.
+
+Thus, the number of all possible functions is $^{m}P_n$.
+</article>
