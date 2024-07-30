@@ -323,5 +323,26 @@ Proof: Let $A=\{x_1, x_2,\cdots,x_n\}$.
 - &vellip;
 - $f(x_n)$ can be defined in $m-n+1$ possible ways because $f(x_n)\neq \cdots \neq f(x_2)  \neq f(x_1)$ for a one-to-one function.
 
-Thus, the number of all possible functions is $^{m}P_n$.
+Thus, the number of all possible functions is $^{m}P_n$. &blk14;
+
 </article>
+
+**Proposition 4.8**:
+The number of binary sequence with $p$ 1's and $q$ 0's is
+
+$$
+\frac{(p+q)!}{p! \cdot q!}
+$$
+
+Proof: Apply Proposition 4.6. &blk14;
+
+**Proposition 4.9**:
+The number of binary sequence with $p$ 1's and $q$ 0's such that no two 0's are together is
+
+$$
+^{p+1}C_q
+$$
+
+Proof:
+First, arrange the $p$ 1's. The 0's can be placed in the $p-1$ gaps, or at the beginning or at the end. Thus total number of places is $p+1$. Then, we shall choose 
+
