@@ -344,5 +344,5 @@ $$
 $$
 
 Proof:
-First, arrange the $p$ 1's. The 0's can be placed in the $p-1$ gaps, or at the beginning or at the end. Thus total number of places is $p+1$. Then, we shall choose 
+First, arrange the $p$ 1's. The 0's can be placed in the $p-1$ gaps, or at the beginning or at the end. Thus total number of places is $p+1$. Then, we shall choose $q$ places out of the $p+1$ places. Hence, the required number is $^{p+1}C_q$.
 
