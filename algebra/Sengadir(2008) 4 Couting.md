@@ -1,9 +1,11 @@
 <style>
-  .definition, .proposition {
+  .indent, .definition, .proposition {
     padding: 1rem 1rem 0.2rem 1rem;
+  }
+  .definition, .proposition {
     border-style: solid;
     border-color: lightgrey;
-    margin-bottom: 2rem;
+    margin: 2rem 0 2rem 0;
   }
 </style>
 
@@ -13,7 +15,7 @@
 
 ## 4.1. A Fundamental Counting Principle
 
-<article class="proposition">
+<section class="proposition">
 
 **Fundamental Counting Principle**:
 Consider an activity consisting of $k$ independent subtasks. Assume that
@@ -25,7 +27,7 @@ Consider an activity consisting of $k$ independent subtasks. Assume that
 
 Then this activity can be completed in $m_1 \times m_2 \times \cdots \times m_k$ different number of ways.
 
-</article>
+</section>
 
 **Example 4.2**:
 Find the number of all possible six-digit numbers that can be formed by using 2, 6, 8 and 9.
@@ -48,7 +50,7 @@ Hence, the required answer is $m^n$.
 **Note**:
 If we think of the place as boxes and the digits as objects, the answer is $6^4$. What's wrong?
 
-<article class="proposition">
+<section class="proposition">
 
 **Proposition 4.1**:
 Let $A$ and $B$ be finite sets with $|A|=n$ and $|B|=m$. Then the number of all function $f:A \to B$ is $m^n$.
@@ -74,7 +76,7 @@ Note that
 - even if $f(x_1) = f(x_2)$, it is not necessarily that $x_1 = x_2$
 - there exists $y \in B$ such that $y \notin \{f(x):x \in A\} = \mathcal{Range}(f)$
 
-</article>
+</section>
 
 **Functional solution to example 4.7**:
 Consider one specific distribution of the $n$ objects into $m$ distinct boxes.
@@ -96,7 +98,7 @@ Thus, the required answer is the number of all possible $f:places \to digits = 4
 
 In how many ways can three objects be arranged in some order? Let use call there objects as $\{a, b, c\}$. We can arrange them as $\{abc, acb, bac, bca, cab, cba\}$. These are all the possible ways and hence three objects can be arranged in six different ways.
 
-<article class="proposition">
+<section class="proposition">
 
 **Proposition 4.2**:
 $r$ objects can be arranged in $r!$ ways.
@@ -108,7 +110,7 @@ Proof: Imagine an array of $r$ boxes. Consider filling each of the $r$ boxes as 
 
 Thus, by using the counting principle of the previous section, the number of different arrangements of $r$ things is $r \times (r-1) \times \cdots \times 2 \times 1 = r!$. &blk14;
 
-</article>
+</section>
 
 We consider problems involving special boxes into which only certain special objects can be placed. Consider a row of $r$ boxes. Assume that
 
@@ -120,7 +122,7 @@ The number of arrangements is $m_1 \times m_2 \times \cdots \times m_r$.
 
 ## 4.2. Permutations and Combinations
 
-<article class="definition">
+<section class="definition">
 
 **Definition (permutation)**:
 Let there be $n$ objects. The number of ways of *choosing and arranging* objects out of the $n$ objects is called the permutation of $r$ objects out of $n$, denoted $^{n}P_r$.
@@ -138,7 +140,7 @@ Proof: Consider an array of $r$ boxes. We can place
 
 Hence, the number of ways this can achieved is $\displaystyle \frac{n!}{(n-r)!}$. &blk14;
 
-</article>
+</section>
 
 **Example 4.18**:
 Consider five-letter words that can be formed using nine letters A, B, &hellip;, I without repetition? How many of them contain A and I?
@@ -155,7 +157,7 @@ Hence, the required answer is $^{5}P_2 \times ^{7}P_3$.
 
 In Example 4.18, the order in which the letters appear is important. But in Example 4.19, letters are just selected without any consideration for the order. We need the idea of *combination*.
 
-<article class="definition">
+<section class="definition">
 
 **Definition (combination)**:
 Let there be $n$ objects. The number of ways of choosing $r$ objects out of $n$ objects is called the combination of $r$ objects out of $n$ objects, denoted $^{n}C_r$.
@@ -174,7 +176,7 @@ Proof: Choosing and arranging $r$ objects out of $n$ objects consists of two sub
 Thus, $^{n}P_r = ^{n}C_r \times r!$.
 Therefore $^{n}C_r = ^{n}P_r  \div r!$. &blk14;
 
-</article>
+</section>
 
 **Example 4.19**:
 
@@ -203,16 +205,16 @@ Method 2:
 
 As you can see the two methods yield the correct answer. The method 2 is based on the idea of *permutation of identical objects*.
 
-<article class="proposition">
+<section class="proposition">
 
 **Proposition 4.6**:
-In a collection there are $m_1$ identical articles of type 1, $m_2$ articles of type 2 and so on, up to $m_k$ articles of type $k$. The number of permutations of this collection is
+In a collection there are $m_1$ identical objects of type 1, $m_2$ objects of type 2 and so on, up to $m_k$ objects of type $k$. The number of permutations of this collection is
 
 $$
 \frac{(m_1 + m_2 + \cdots + m_k)!}{m_1! \times m_2! \times \cdots \times m_k!}
 $$
 
-</article>
+</section>
 
 **Example 4.33**:
 A hotel has six single rooms, six double rooms, and four three-bed rooms (30 beds in total). In how many ways can 30 persons be accommodated in this hotel?
@@ -311,7 +313,7 @@ $$
 
 ## 4.3. Applications of Permutations and Combinations
 
-<article class="proposition">
+<section class="proposition">
 
 **Proposition 4.7**:
 Let $A$ and $B$ be finite sets with $|A|=n$ and $|B|=m$, and $n \leq m$. The number of all one-to-one functions from $A$ to $B$ is $m(m-1)(m-2)\cdots(m-n+1)=^{m}P_n$.
@@ -325,7 +327,7 @@ Proof: Let $A=\{x_1, x_2,\cdots,x_n\}$.
 
 Thus, the number of all possible functions is $^{m}P_n$. &blk14;
 
-</article>
+</section>
 
 **Proposition 4.8**:
 The number of binary sequence with $p$ 1's and $q$ 0's is
@@ -344,5 +346,86 @@ $$
 $$
 
 Proof:
-First, arrange the $p$ 1's. The 0's can be placed in the $p-1$ gaps, or at the beginning or at the end. Thus total number of places is $p+1$. Then, we shall choose $q$ places out of the $p+1$ places. Hence, the required number is $^{p+1}C_q$.
+First, arrange the $p$ 1's. The 0's can be placed in the $p-1$ gaps, or at the beginning or at the end. Thus total number of places is $p+1$. Then, we shall choose $q$ places out of the $p+1$ places. Hence, the required number is $^{p+1}C_q$. &blk14;
 
+<section class="proposition">
+
+**Proposition 4.11**:
+The number of ways of distributing $n$ identical objects in $k$ distinct boxes is $^{n+k-1}C_{k-1}$.
+
+</section>
+
+Preliminary thought:
+Suppose there are four identical objects to be distributed among three distinct boxes. Let the boxes to be denoted $A$, $B$ and $C$, then the distribution can be done in 15 ways as follows:
+
+|       | A | B | C | : | A | B | C | : | A | B | C |
+|:-----:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 4:0:0 | 4 | 0 | 0 |   | 0 | 4 | 0 |   | 0 | 0 | 4 |
+| 3:1:0 | 0 | 3 | 1 |   | 3 | 0 | 1 |   | 3 | 1 | 0 |
+|       | 0 | 1 | 3 |   | 1 | 0 | 3 |   | 1 | 3 | 0 |
+| 2:2:0 | 0 | 2 | 2 |   | 2 | 0 | 2 |   | 2 | 2 | 0 |
+| 2:1:1 | 2 | 1 | 1 |   | 1 | 2 | 1 |   | 1 | 1 | 2 |
+
+<section class="proposition">
+
+**Stars and Bars Approach** for Proposition 4.11:
+Imagine the four objects in a line, shown here as stars. The objects can be divided into boxes by placing a bar either between the stars or at the ends.
+
+|   |   |   |   |   |   |   |   |   |   |   |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|   |   | ★ |   | ★ |   | ★ |   | ★ |   |   |   
+
+Placing one bar creates two distinct groups. Placing the bar at one of the ends will create a group with zero stars.
+
+|   |   |   |   |   |   |   |   |   |   |   |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|   |   | ★ |   | ★ |   | ★ | ¦ | ★ |   |   |
+|   |   | ★ |   | ★ |   | ★ |   | ★ | ¦ | ∅ |
+
+Placing two bars will create three distinct groups, and placing bars next to each other creates a group with zero stars.
+
+|   |   |   |   |   |   |   |   |   |   |   |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|   |   | ★ |   | ★ | ¦ | ★ | ¦ | ★ |   |   |
+|   |   | ★ |   | ★ |   | ★ |¦ ¦| ★ |   |   |
+
+Back to the problem of distributing four identical objects three distinct groups. Modeled as stars and bars, there will be four stars and two bars. Three are $4+2=6$ things that need to be placed, and two of those placements are chosen for the bars. Thus, there are $^6C_2=15$ possible distributions of four identical objects among three three distinct groups.
+
+Proof:
+In general, there are $n$ stars and $k-1$ bars that divide them into $k$ distinct groups. There are a total of $n+k-1$ things that will be placed, and $k-1$ of those placements are chosen for the bars. The stars will be put in the remaining placements. Thus, there are $^{n+k-1}C_{k-1}$ possible placements of the bars. &blk14;
+
+</section>
+
+**Example 4.35**:
+There is an unlimited supply of apples, oranges and bananas. You are free to take any number of any of the three kinds but the total must be exactly 10. The number of choices is $^{10+3-1}C_{3-1}$.
+
+<section class="proposition">
+
+**Proposition 4.13**:
+The number of ways of distributing $n$ identical objects in $k$ distinct non-empty boxes, with $n \geq k$, is $^{n-1}C_{k-1}$.
+
+Proof:
+Modeled as stars and bars, $k-1$ bars divide stars into $k$ groups. In contrast to Proposition 4.11, however, each group must not be empty. Therefore, the locations where bars can be placed are limited such that:
+
+- bars cannot be placed at the ends
+- two or more bars cannot be placed at the same location
+
+It follows that
+
+- the number of potential locations for bars is $n-1$
+- $k-1$ locations shall be chosen out of $n-1$
+
+Hence, the required answer is $^{n-1}C_{k-1}$. &blk14;
+
+</section>
+
+**Example 4.38**:
+Find the number of staircase paths from (2, 5) to (8, 9).
+
+Let steps *R* and *U* such that:
+
+- *R*: from $(x, y)$ to $(x+1, y)$
+- *U*: from $(x, y)$ to $(x, y+1)$
+
+Now to reach (8, 9) from (2, 5), we have to move six unites horizontally and four units vertically. Thus, with every staircase path, we can associate a sequence of *R*'s and *U*'s consisting of six *R*'s and four *U*'s, for example *R*-*R*-*R*-*U*-*U*-*R*-*R*-*R*-*U*-*U*. Hence, the required answer is the number of permutations of six *R*'s and four *U*U's, which is given by
+$\displaystyle\frac{10!}{6! \cdot 4!}$ (refer to Proposition 4.6).
