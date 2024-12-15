@@ -218,6 +218,21 @@ Pi product: $\displaystyle\prod_{i=1}^{n}i
 \displaystyle\prod_{i=1}^{n}i = n!
 ```
 
+Integral Calculus:
+
+- $\displaystyle \int u \frac{dv}{dx}\thinspace dx=uv-\int \frac{du}{dx}v\thinspace dx$
+  ```
+  \displaystyle \int u \frac{dv}{dx}\thinspace dx=uv-\int \frac{du}{dx}v\thinspace dx
+  ```
+- $\displaystyle f(x) = \int_{-\infty}^\infty \hat f(\xi)\thinspace e^{2 \pi i \xi x}$
+  ```
+  \displaystyle f(x) = \int_{-\infty}^\infty \hat f(\xi)\thinspace e^{2 \pi i \xi x}
+  ```
+- $\displaystyle \left[ -\cos{\theta} \right]_0^\pi = 2$
+  ```
+  \displaystyle \left[ -\cos{\theta} \right]_0^\pi = 2
+  ```
+
 | Symbol | Usage | Script | Explanation
 |:------:|:-----:|--------|-------------
 | $e$ | $e^{x+y}$ | `e^{x+y}` | natural exponent
@@ -391,11 +406,16 @@ $$
 \quad \text{ for }\lvert q\rvert < 1.
 $$
 
-### Calculus
+### Integral Calculus
 
 $$
-\int u \frac{dv}{dx}\thinspace dx=uv-\int \frac{du}{dx}v\thinspace dx \\
-f(x) = \int_{-\infty}^\infty \hat f(\xi)\thinspace e^{2 \pi i \xi x} \\
+\int u \frac{dv}{dx}\thinspace dx=uv-\int \frac{du}{dx}v\thinspace dx
+$$
+
+$$
+f(x) = \int_{-\infty}^\infty \hat f(\xi)\thinspace e^{2 \pi i \xi x} $$
+
+$$
 \oint \vec{F} \cdot d\vec{s}=0
 $$
 
